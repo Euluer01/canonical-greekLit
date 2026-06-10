@@ -44,18 +44,6 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <refsDecl n="CTS">
-            <cRefPattern n="verse"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-               <p>This pointer pattern extracts chapter and verse</p>
-            </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-               <p>This pointer pattern extracts chapter</p>
-            </cRefPattern>
-         </refsDecl>
          <refsDecl>
                 <!--<refState delim=" " unit="book"/>-->
             <refState delim=":" unit="chapter"/>
@@ -68,13 +56,15 @@
             </refsDecl>-->
          <refsDecl n="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n"/>
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
+                  <citeStructure unit="verse" delim="." match="div[@type='verse']" use="@n"/>
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+            <catRef scheme="#perseus-genre" target="#prose-chapter-verse"/>
          </textClass>
          <langUsage>
             <language ident="eng">English</language>
