@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -40,19 +39,13 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
                <p>This pointer pattern extracts book and chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="chapter" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts book and chapter</p>
             </cRefPattern>
-            <cRefPattern n="book"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts book</p>
             </cRefPattern>
          </refsDecl>
@@ -65,7 +58,7 @@
                <p>Perseus OCR in house AbbyyFR; single pass proofreading</p>
             </correction>
          </editorialDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
@@ -2509,7 +2502,7 @@
                      <q>I am going away, but you shall send these within j the walls, according as any is worthy to dwell there. s But consider their sticks carefully and thus let them go, but look carefully. See to it that none pass you,</q> he said, <q>but if anyone pass you, I will test them at the altar.</q> When he had said this to the shepherd he departed.</p>
                </div>
                <div n="6" type="section">
-                  <p>And after the angel had departed the shepherd said to me: <q>Let us take the sticks of all of them, and plant them to see if some <pb xml:id="p.195"/> &#x2028;of them will be able to live.</q> I said to him: <q>Sir, how can these dry things live?</q>
+                  <p>And after the angel had departed the shepherd said to me: <q>Let us take the sticks of all of them, and plant them to see if some <pb xml:id="p.195"/>  of them will be able to live.</q> I said to him: <q>Sir, how can these dry things live?</q>
                   </p>
                </div>
                <div n="7" type="section">

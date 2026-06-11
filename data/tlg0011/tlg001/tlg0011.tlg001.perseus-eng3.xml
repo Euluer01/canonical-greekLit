@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -46,9 +45,7 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts lines</p>
             </cRefPattern>
          </refsDecl>
@@ -59,7 +56,7 @@
             </cRefPattern>
             
          </refsDecl>-->
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="line" delim="." match=".//l" use="@n"/>
             </citeStructure>
@@ -77,16 +74,16 @@
       <revisionDesc>
          <change when="2017-01-25" who="Lisa Cerrato">improvements to markup; change log, etc.</change>
          <change when="2016-01-14" who="TDBuck">Hookified</change>
-         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory&#x2028;&#x2028;</change>
-         <change when="2013-06-30" who="gcrane">the card divs had had a line range but there was a problem with this, so we just have the start line in the n attribute.&#x2028;&#x2028;</change>
-         <change when="2009-12-08" who="rsingh04">moved more xml files around based on copyright status&#x2028;&#x2028;</change>
-         <change when="2006-02-10" who="packel">places/dates now actually tagged&#x2028;&#x2028;</change>
-         <change when="2005-08-01" who="packel">removed stray item tags&#x2028;&#x2028;</change>
+         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory  </change>
+         <change when="2013-06-30" who="gcrane">the card divs had had a line range but there was a problem with this, so we just have the start line in the n attribute.  </change>
+         <change when="2009-12-08" who="rsingh04">moved more xml files around based on copyright status  </change>
+         <change when="2006-02-10" who="packel">places/dates now actually tagged  </change>
+         <change when="2005-08-01" who="packel">removed stray item tags  </change>
          <change when="2005-07-25" who="packel">Converted to XML</change>
          <change when="2004-04-21" who="mimno">added card 1s</change>
          <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
          <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
-         <change when="2000-02-15" who="amahoney">use n attribute on sp element to carry over the speaker name when&#x2028;the speech is interrupted by a card break;  this also requires that&#x2028;the card break at the end come after the close of the sp, not within&#x2028;&#x2028;</change>
+         <change when="2000-02-15" who="amahoney">use n attribute on sp element to carry over the speaker name when the speech is interrupted by a card break;  this also requires that the card break at the end come after the close of the sp, not within  </change>
          <change when="2000-02-08" who="amahoney">bring up to P3</change>
          <change when="2000-02-08" who="amahoney">markup</change>
          <change when="1995-06-01" who="Lisa Cerrato">Added missing speaker tags for cards which had none.</change>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -50,18 +49,14 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])"
-                         n="line">
+            <cRefPattern matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])" n="line">
                <p>This pointer pattern extracts epigram and line</p>
             </cRefPattern>
-            <cRefPattern matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"
-                         n="epigram">
+            <cRefPattern matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" n="epigram">
                <p>This pointer pattern epigram</p>
             </cRefPattern>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="line" delim="." match="l" use="@n"/>
             </citeStructure>

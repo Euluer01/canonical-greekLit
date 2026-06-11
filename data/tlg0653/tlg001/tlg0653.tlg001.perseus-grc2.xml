@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -53,13 +52,11 @@
 <state unit="line"/>
 </refsDecl>-->
          <refsDecl n="CTS">
-            <cRefPattern n="line"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
                <p>This pointer pattern extracts line.</p>
             </cRefPattern>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="line" delim="." match="l" use="@n"/>
             </citeStructure>
@@ -67,12 +64,7 @@
       </encodingDesc>
       <encodingDesc>
          <p>The rend="displayNum" attribute on the lb tags is used to indicate that line numbers on the line breaks are intended for display</p>
-         <refsDecl n="CTS">
-            <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim="." match="l" use="@n"/>
-            </citeStructure>
-         </refsDecl>
-      </encodingDesc>
+         </encodingDesc>
       <profileDesc>
          <textClass>
             <catRef scheme="#perseus-genre" target="#verse-stichic"/>

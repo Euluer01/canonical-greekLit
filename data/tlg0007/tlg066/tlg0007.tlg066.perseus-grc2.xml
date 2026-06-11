@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -55,14 +54,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -70,7 +65,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -104,10 +99,7 @@
                <p> ἐν δὲ συγκλήτῳ πολλὰ δημοτικὰ καὶ φιλάνθρωπα διαλεχθείς, ὃν μὲν αὐτὸς ὑπατεύειν χρόνον ἤμελλε, τούτου μέρος ἔνειμεν Οὐεργινίῳ Ῥούφῳ, τοῖς δὲ ἀποδεδειγμένοις ὑπὸ Νέρωνος ἢ Γάλβα πᾶσιν ἐτήρησε τὰς ὑπατείας. ἱερωσύναις δὲ τοὺς καθʼ ἡλικίαν προήκοντας ἢ δόξαν ἐκόσμησε.</p>
             </div>
             <div n="3" type="section">
-               <p> τοῖς δὲ <pb n="paris.1624.1067"/> ἐπὶ Νέρωνος φυγοῦσι καὶ κατελθοῦσιν ἐπὶ Γάλβα συγκλητικοῖς πᾶσιν ἀπέδωκεν ὅσα μὴ πεπραμένα τῶν κτημάτων ἑκάστου<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> τοῖς δὲ <pb n="paris.1624.1067"/> ἐπὶ Νέρωνος φυγοῦσι καὶ κατελθοῦσιν ἐπὶ Γάλβα συγκλητικοῖς πᾶσιν ἀπέδωκεν ὅσα μὴ πεπραμένα τῶν κτημάτων ἑκάστου<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἑκάστου</foreign> Coraës and Bekker, after Stephanus, for the <foreign xml:lang="grc">ἕκαστον</foreign> of the MSS.: <foreign xml:lang="grc">ἑκάστων</foreign>.</note> ἐξεύρισκεν. ὅθεν οἱ πρῶτοι καὶ κράτιστοι πεφρικότες πρότερον ὡς <pb n="p.278"/> οὐκ ἀνδρός, ἀλλά τινος ἢ Ποινῆς ἢ παλαμναίου δαίμονος ἄφνω τοῖς πράγμασιν ἐπιπεπτωκότος, ἡδίους ἐγένοντο ταῖς ἐλπίσι πρὸς τὴν ἠγεμονίαν ὥσπερ διαμειδιῶσαν.</p>
             </div>
          </div>
@@ -178,10 +170,7 @@
                   <milestone unit="para"/>αὐτὸς μὲν οὖν ἐν Βριξίλλῳ, πόλει τῆς Ἰταλίας <pb n="p.288"/> περὶ τὸν Ἠριδανὸν ἀπελείφθη, στρατηγοὺς δὲ τῶν δυνάμεων ἐξέπεμψε Μάριόν τε Κέλσον καὶ <pb n="paris.1624.1069"/> Σουητώνιον Παυλῖνον ἔτι τε Γάλλον καὶ Σπουρίναν, ἄνδρας ἐνδόξους, χρήσασθαι δὲ μὴ δυνηθέντας ἐπὶ τῶν πραγμάτων ὡς προῃροῦντο τοῖς ἑαυτῶν λογισμοῖς διʼ ἀταξίαν καὶ θρασύτητα τῶν στρατιωτῶν.</p>
             </div>
             <div n="4" type="section">
-               <p> οὐ γὰρ ἠξίουν ἑτέρων ἀκούειν, ὡς παρʼ αὑτῶν τοῦ αὐτοκράτορος τὸ ἄρχειν ἔχοντος. ἦν μὲν οὖν οὐδὲ τὰ τῶν πολεμίων ὑγιαίνοντα παντάπασιν οὐδὲ χειροήθη τοῖς ἡγεμόσιν, ἀλλʼ ἔμπληκτα καὶ σοβαρὰ διὰ τὴν αὐτὴν αἰτίαν. οὐ μὴν ἀλλʼ ἐκείνοις ἐμπειρία γε παρῆν τοῦ μάχεσθαι καὶ τὸ κάμνειν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> οὐ γὰρ ἠξίουν ἑτέρων ἀκούειν, ὡς παρʼ αὑτῶν τοῦ αὐτοκράτορος τὸ ἄρχειν ἔχοντος. ἦν μὲν οὖν οὐδὲ τὰ τῶν πολεμίων ὑγιαίνοντα παντάπασιν οὐδὲ χειροήθη τοῖς ἡγεμόσιν, ἀλλʼ ἔμπληκτα καὶ σοβαρὰ διὰ τὴν αὐτὴν αἰτίαν. οὐ μὴν ἀλλʼ ἐκείνοις ἐμπειρία γε παρῆν τοῦ μάχεσθαι καὶ τὸ κάμνειν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τὸ κάμνειν</foreign> Bekker, after Coraës: <foreign xml:lang="grc">τοῦ κάμνειν</foreign>.</note> ἐθάδες ὄντες οὐκ ἔφευγον, </p>
             </div>
             <div n="5" type="section">
@@ -395,10 +384,7 @@
          </div>
          <div n="18" type="chapter">
             <div n="1" type="section">
-               <p> τὰ μὲν οὖν ἄλλα καιρὸν οἰκεῖον ἔχει λεχθῆναι· κρύψαντες δὲ τῇ γῇ τὰ λείψανα τοῦ Ὄθωνος οὔτε μεγέθει σήματος οὔτʼ ἐπιγραφῆς <pb n="paris.1624.1075"/> ὄγκῳ τὸν τάφον ἐποίησαν ἐπίφθονον. εἶδον δὲ ἐν Βριξίλλῳ γενόμενος καὶ μνῆμα μέτριον καὶ <pb n="p.318"/> τὴν ἐπιγραφὴν οὕτως ἔχουσαν, εἰ μεταφρασθείη· <q>δηλώσει<note anchored="true"
-                           place="unspecified"
-                           resp="editor"
-                           xml:lang="eng">
+               <p> τὰ μὲν οὖν ἄλλα καιρὸν οἰκεῖον ἔχει λεχθῆναι· κρύψαντες δὲ τῇ γῇ τὰ λείψανα τοῦ Ὄθωνος οὔτε μεγέθει σήματος οὔτʼ ἐπιγραφῆς <pb n="paris.1624.1075"/> ὄγκῳ τὸν τάφον ἐποίησαν ἐπίφθονον. εἶδον δὲ ἐν Βριξίλλῳ γενόμενος καὶ μνῆμα μέτριον καὶ <pb n="p.318"/> τὴν ἐπιγραφὴν οὕτως ἔχουσαν, εἰ μεταφρασθείη· <q>δηλώσει<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                         <foreign xml:lang="grc">Δηλώσει</foreign> Bekker adopts <foreign xml:lang="grc">Δαίμοσι</foreign>, the correction of Lobeck.</note> Μάρκου Ὄθωνος.</q>
                </p>
             </div>

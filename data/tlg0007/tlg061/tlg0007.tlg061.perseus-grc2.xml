@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -54,14 +53,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -69,7 +64,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -109,10 +104,7 @@
                <p>ὥστε καὶ τοὺς ἀπεχθανομένους αὐτῷ διὰ τὴν ἐπὶ Καίσαρα συνωμοσίαν, εἰ μέν τι γενναῖον ἡ πρᾶξις ἤνεγκε, Βρούτῳ προσάπτειν, τὰ δυσχερέστερα δὲ τῶν γεγονότων τρέπειν εἰς Κάσσιον, οἰκεῖον μέν ὄντα Βρούτου καὶ φίλον, ἁπλοῦν δὲ τῷ τρόπῳ καὶ καθαρὸν οὐχ ὁμοίως.</p>
             </div>
             <div n="5" type="section">
-               <p>Σερβιλία δὲ ἡ μήτηρ ἀνέφερε τὸ γένος εἰς Ἀάλαν<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>Σερβιλία δὲ ἡ μήτηρ ἀνέφερε τὸ γένος εἰς Ἀάλαν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">Ἀάλαν</foreign> Cobet: <foreign xml:lang="grc">Ἄλαν.</foreign>
                   </note>  Σερβίλιον, ὃς Μαιλίου Σπορίου τυραννίδα κατασκευαζομένου καὶ ταράττοντος τὸν δῆμον ἐγχειρίδιον λαβὼν ὑπὸ μάλης προῆλθεν εἰς ἀγοράν καὶ παραστὰς τῷ ἀνδρὶ πλησίον, ὡς ἐντυγχάνειν <pb n="p.128"/>τι μέλλων καὶ διαλέγεσθαι, προσνεύσαντα πατὰξας ἀπέκτεινε. </p>
             </div>
@@ -175,10 +167,7 @@
                <p>ἐπεὶ δὲ τὰ πράγματα διέστη Πομπηΐου καί Καίσαρος ἐξενεγκαμένων τὰ ὅπλα καί τῆς ἡγεμονίας ταραχθείσης, ἐπίδοξος μὲν ἦν αἱρήσεσθαι τὰ Καίσαρος· ὁ γὰρ πατὴρ αὐτοῦ διὰ τὸν Πομπήϊον ἐτεθνήκει πρότερον· </p>
             </div>
             <div n="2" type="section">
-               <p>ἀξιῶν δὲ τὰ κοινὰ τῶν ἰδίων ἐπίπροσθεν ποιεῖσθαι καί τὴν Πομπηΐου νομίζων ὑπόθεσιν βελτίονα πρὸς τὸν πόλεμον εἶναι τῆς τοῦ Καίσαρος<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>ἀξιῶν δὲ τὰ κοινὰ τῶν ἰδίων ἐπίπροσθεν ποιεῖσθαι καί τὴν Πομπηΐου νομίζων ὑπόθεσιν βελτίονα πρὸς τὸν πόλεμον εἶναι τῆς τοῦ Καίσαρος<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">τῆς τοῦ Καίσαρος</foreign> Lentz: <foreign xml:lang="grc">τοῦ Καίσαρος.</foreign>
                   </note>  ἐκείνῳ προσέθετο.</p>
             </div>
@@ -232,10 +221,7 @@
                <p>ἀλλὰ Πομπήϊον μὲν, ὥσπερ εἴκασε Βροῦτος, Αἰγύπτῳ προσβαλόντα τὸ πεπρωμένον ἐδέξατο. Καίσαρα δὲ καὶ πρὸς Κάσσιον ἐπράϋνε Βροῦτος. </p>
             </div>
             <div n="6" type="section">
-               <p>καὶ δὴ καὶ τῷτῶν Λιβύων βασιλεῖ προηγορῶν μὲν ἡττᾶτο τοῦ μεγέθους τῶν κατηγοριῶν, δεόμενος δὲ καὶ παραιτούμενος περὶ τούτου<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>καὶ δὴ καὶ τῷτῶν Λιβύων βασιλεῖ προηγορῶν μὲν ἡττᾶτο τοῦ μεγέθους τῶν κατηγοριῶν, δεόμενος δὲ καὶ παραιτούμενος περὶ τούτου<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">περὶ τούτου</foreign> transposed by Bekker, after Vögelin, to the following sentence, between <foreign xml:lang="grc">αὐτοῦ</foreign> and <foreign xml:lang="grc">λέγοντος</foreign> (<gloss>as soon as he heard him speaking in his behalf</gloss>).</note>  πολλὴν αὐτῷ διέσωσε τῆς ἀρχῆς,</p>
             </div>
             <div n="7" type="section">
@@ -353,10 +339,7 @@
             <div n="4" type="section">
                <p>
                   <q rend="merge"/>φήσαντος δὲ τοῦ Βρούτου μὴ παριέναι, <q>τί οὖν,</q> εἶπεν ὁ Κάσσιος, <q>ἂν καλῶσιν ἡμᾶς;</q>
-                  <q>ἐμὸν ἔργον,</q> ἔφη ὁ Βροῦτος, <q>ἤδη τὸ μὴ σιωπᾶν, ἀλλʼ ἀμύνειν τῇ πατρίδι<note resp="editor"
-                           place="unspecified"
-                           anchored="true"
-                           xml:lang="eng">
+                  <q>ἐμὸν ἔργον,</q> ἔφη ὁ Βροῦτος, <q>ἤδη τὸ μὴ σιωπᾶν, ἀλλʼ ἀμύνειν τῇ πατρίδι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                         <foreign xml:lang="grc">ἀμύνειν τῇ πατρίδι</foreign> Letnz, comparing Appian, <title>B.C.</title> ii. 113: <foreign xml:lang="grc">ἀμύνειν.</foreign>
                      </note> καὶ προαποθνῄσκειν τῆς ἐλευθερίας.</q>
                </p>
@@ -1038,10 +1021,7 @@
             </div>
             <div n="3" type="section">
                <p>
-                  <q rend="merge">κηρῷ μὲν γὰρ ἔοικεν<note resp="editor"
-                           place="unspecified"
-                           anchored="true"
-                           xml:lang="eng">
+                  <q rend="merge">κηρῷ μὲν γὰρ ἔοικεν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                         <foreign xml:lang="grc">ἔοικεν</foreign> Bekker adopts the early anonymous correction to <foreign xml:lang="grc">ἔχωθεν</foreign> (<gloss>on wax the impression is outside, but the soul, etc.</gloss>).</note>  ἡ τύπωσις, ψυχῇ δʼ ἀνθρώπου, τὸ πλαττόμενον καὶ τὸ πλάττον ἐχούσῃ τὸ αὐτό, ῥᾷστα ποικίλλειν αὑτὴν <pb n="p.208"/>καὶ σχηματίζειν διʼ ἑαυτῆς ὑπάρχει.</q>
                </p>
             </div>
@@ -1155,10 +1135,7 @@
             </div>
             <div n="8" type="section">
                <p>
-                  <q rend="merge">νυνὶ δʼ <pb n="p.216"/>ἀλλοῖος ἐν ταῖς τύχαις γίνομαι· καὶ θεοῦ καλῶς τὰ παρόντα μὴ βραβεύσαντος οὐ δέομαι πάλιν ἄλλας ἐλπίδας ἐξελέγχειν καὶ παρασκευάς, ἀλλʼ ἀπαλλάξομαι τὴν Τύχην ἐπαινῶν· Μαρτίαις<note resp="editor"
-                           place="unspecified"
-                           anchored="true"
-                           xml:lang="eng">
+                  <q rend="merge">νυνὶ δʼ <pb n="p.216"/>ἀλλοῖος ἐν ταῖς τύχαις γίνομαι· καὶ θεοῦ καλῶς τὰ παρόντα μὴ βραβεύσαντος οὐ δέομαι πάλιν ἄλλας ἐλπίδας ἐξελέγχειν καὶ παρασκευάς, ἀλλʼ ἀπαλλάξομαι τὴν Τύχην ἐπαινῶν· Μαρτίαις<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                         <foreign xml:lang="grc">ἐπαινῶν· Μαρτίαις</foreign> Coraës and Bekker have <foreign xml:lang="grc">ἐπαινῶν ὅτι</foreign> (<gloss>because</gloss>) <foreign xml:lang="grc">Μαρτίαις κτλ.,</foreign> after Reiske.</note>  εἰδοῖς δοὺς τῇ πατρίδι τὸν ἐμαυτοῦ βίον ἄλλον ἔζησα διʼ ἐκείνην ἐλεύθερον καὶ ἔνδοξον.</q>
                </p>
             </div>
@@ -1206,10 +1183,7 @@
          </div>
          <div n="42" type="chapter">
             <div n="1" type="section">
-               <p>οἱ δὲ μὴκυκλωσάμενοι τοὺς Καίσαρος, ἀλλὰ συμπεσόντες, ῥᾳδίως μὲν ἀπἐτρέψαντο τεταραγμένους, καὶ διέφθειραν ἐν χερσὶν<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>οἱ δὲ μὴκυκλωσάμενοι τοὺς Καίσαρος, ἀλλὰ συμπεσόντες, ῥᾳδίως μὲν ἀπἐτρέψαντο τεταραγμένους, καὶ διέφθειραν ἐν χερσὶν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">χερσὶν</foreign> conjectured by Sintenis and Bekker: <foreign xml:lang="grc">χερσῖν.</foreign>
                   </note> τρία τάγματα, καὶ συνεισέπεσον εἰς τὸ στρατόπεδον τοῖς φεύγουσιν ὑπὸ ῥύμης τοῦ κρατεῖν συνενεχθέντες, μεθʼ ἑαυτῶν ἔχοντες τὸν Βροῦτον· </p>
             </div>
@@ -1301,10 +1275,7 @@
                <p>Βρούτῳ δὲ τῶν στρατοπέδων ἑκατέρου σαλεύοντος ἐπισφαλῶς τὸ μὲν γὰρ αὐτοῦ καταπεπλησμένον αἰχμαλώτων ἐδεῖτο φυλακῆς ἀκριβοῦς, τὸ δὲ Κασσίου τὴν μεταβολὴν τοῦ ἄρχοντος οὐ ῥᾳδίως ἔφερεν, ἀλλὰ καὶ φθόνου <pb n="p.228"/>τι καὶ μίσους ἡττημένοις ἐνῆν αὐτοῖς πρὸς τὸ νενικηκός, ὁπλίσαι μὲν ἔδοξε τὸ στράτευμα, μάχης δʼ ἀπέσχετο.</p>
             </div>
             <div n="4" type="section">
-               <p>τῶν δʼ αἰχμαλώτων τὸ μὲν δουλικὸν πλῆθος ἐνειλούμενον ὑπόπτως τοῖς ὅπλοις ἐκέλευσεν ἀναιρεθῆναι, τῶν δʼ ἐλευθέρων τοὺς μὲν ἀπέλυε φάσκων ὑπὸ τῶν πολεμίων μᾶλλον ἡλωκέναι αὐτοὺς<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>τῶν δʼ αἰχμαλώτων τὸ μὲν δουλικὸν πλῆθος ἐνειλούμενον ὑπόπτως τοῖς ὅπλοις ἐκέλευσεν ἀναιρεθῆναι, τῶν δʼ ἐλευθέρων τοὺς μὲν ἀπέλυε φάσκων ὑπὸ τῶν πολεμίων μᾶλλον ἡλωκέναι αὐτοὺς<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">αὐτοὺς</foreign> bracketed by Sintenis<hi rend="super">2</hi>.</note>  καὶ παρʼ ἐκείνοις αἰχμαλώτους εἶναι καὶ δούλους, παρʼ αὑτῷ δʼ ἐλευθέρους καὶ πολίτας· </p>
             </div>
             <div n="5" type="section">

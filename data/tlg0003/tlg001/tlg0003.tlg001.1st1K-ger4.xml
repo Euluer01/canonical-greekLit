@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -40,20 +39,16 @@
             <p>The source text has no paragraphs and no page numbers. All book, chapter, citation data was added manually as well. There are, however, dashes ('—') to mark chapter breaks in the Greek.</p>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="Chapter"
-                         matchPattern="(\\w+).(\\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\']/tei:div[@n=\'$2\'])">
+            <cRefPattern n="Chapter" matchPattern="(\\w+).(\\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\']/tei:div[@n=\'$2\'])">
                <p>This pointer pattern extracts Book and Chapter</p>
             </cRefPattern>
-            <cRefPattern n="Book"
-                         matchPattern="(\\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\'])">
+            <cRefPattern n="Book" matchPattern="(\\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\'])">
                <p>This pointer pattern extracts Book</p>
             </cRefPattern>
          </refsDecl>
          <p>This text is quickly corrected OCR output. The following text is encoded in accordance with EpiDoc standards and with the
                 CTS/CITE Architecture.</p>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">

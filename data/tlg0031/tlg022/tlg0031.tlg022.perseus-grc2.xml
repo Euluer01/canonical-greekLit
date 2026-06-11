@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -44,8 +43,7 @@
                      <date>1882-1892</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/details/newtestamentinor00west_0/page/330/mode/2up"
-                    n="1892">Internet Archive</ref>
+               <ref target="https://archive.org/details/newtestamentinor00west_0/page/330/mode/2up" n="1892">Internet Archive</ref>
                <ref target="https://archive.org/details/newtestamentino00west" n="1882">Internet Archive</ref>
             </biblStruct>
          </sourceDesc>
@@ -64,7 +62,7 @@
             <refState delim=":" unit="chapter"/>
             <refState unit="verse"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="verse" delim="." match="div[@type='verse']" use="@n"/>

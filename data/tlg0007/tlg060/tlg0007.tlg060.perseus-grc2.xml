@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -54,14 +53,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -69,7 +64,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -120,10 +115,7 @@
                <p>ὃ δὲ πάντων θαυμασιώτατον, ὅτι καὶ τὸ δαιμόνιον ἀμφοτέροις ὑπεδήλωσε τὴν τελευτήν, ὁμοίως ἑκατέρῳ φάσματος εἰς ὄψιν οὐκ εὐμενοῦς παραγενομένου. </p>
             </div>
             <div n="4" type="section">
-               <p>καίτοι λόγος τίς ἐστι τῶν ἀναιρούντων τὰ τοιαῦτα, μηδενὶ ἂν νοῦν ἔχοντι προσπεσεῖν φάντασμα δαίμονος μηδὲ εἴδωλον, Ἀλλὰ παιδάρια καὶ γύναια καὶ παραφόρους διʼ ἀσθένειαν ἀνθρώπους ἔν τινι πλάνῳ ψυχῆς ἢ δυσκρασίᾳ σώματος γενομένους δόξας ἐφέλκεσθαι κενὰς καὶ ἀλλοκότους, δαίμονα πονηρὸν ἐν αὑτοῖς τὴν δεισιδαιμονίαν<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>καίτοι λόγος τίς ἐστι τῶν ἀναιρούντων τὰ τοιαῦτα, μηδενὶ ἂν νοῦν ἔχοντι προσπεσεῖν φάντασμα δαίμονος μηδὲ εἴδωλον, Ἀλλὰ παιδάρια καὶ γύναια καὶ παραφόρους διʼ ἀσθένειαν ἀνθρώπους ἔν τινι πλάνῳ ψυχῆς ἢ δυσκρασίᾳ σώματος γενομένους δόξας ἐφέλκεσθαι κενὰς καὶ ἀλλοκότους, δαίμονα πονηρὸν ἐν αὑτοῖς τὴν δεισιδαιμονίαν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">τὴν δεισιδαιμονίαν</foreign> Coraës and Bekker, instead of the <foreign xml:lang="grc">εἶναι δεισιδαιμονίαν</foreign> of the MSS.: <foreign xml:lang="grc">δεισιδαιμονίαν</foreign>.</note> ἔχοντας. </p>
             </div>
             <div n="5" type="section">
@@ -182,10 +174,7 @@
          </div>
          <div n="5" type="chapter">
             <div n="1" type="section">
-               <p>γενομένης δὲ τῆς συνουσίας αὐτοῖς τὸ μὲν ὅλον περὶ ἀνδρὸς ἀρετῆς, πλείστων δὲ περὶ ἀνδρείας διαπορηθέντων, ὡς πάντας<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>γενομένης δὲ τῆς συνουσίας αὐτοῖς τὸ μὲν ὅλον περὶ ἀνδρὸς ἀρετῆς, πλείστων δὲ περὶ ἀνδρείας διαπορηθέντων, ὡς πάντας<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">πάντας</foreign> Coraës and Bekker, after Reiske: <foreign xml:lang="grc">πάντα</foreign>.</note> μᾶλλον ὁ Πλάτων ἢ τοὺς τυράννους ἀπέφαινεν ἀνδρείους, ἐκ δὲ τούτου τραπόμενος περὶ δικαιοσύνης ἐδίδασκεν ὡς μακάριος μὲν ὁ τῶν δικαίων, ἄθλιος δὲ ὁ τῶν ἀδίκων βίος, </p>
             </div>
             <div n="2" type="section">
@@ -234,10 +223,7 @@
                   <milestone unit="para" resp="editor"/>οὐ μὴν ἀλλὰ συλλόγου πρώτου τῶν φίλων γενομένου παρὰ τὸν νέον Διονύσιον οὕτω διελέχθη περὶ τῶν συμφερόντων πρὸς τὸν καιρὸν ὁ <pb n="p.14"/> Δίων ὥστε τοὺς ἄλλους ἅπαντας τῇ μὲν φρονήσει παῖδας ἀποδεῖξαι, τῇ δὲ παρρησίᾳ δούλους τῆς τυραννίδος ἀγεννῶς καὶ περιφόβως τὰ πολλὰ πρὸς χάριν τῷ μειρακίῳ συμβουλεύοντας, </p>
             </div>
             <div n="5" type="section">
-               <p>μάλιστα δὲ αὐτοὺς ἐξέπληξε τὸν ἀπὸ Καρχηδόνος κίνδυνον ἐπικρεμάμενον τῇ ἀρχῇ δεδοικότας, ὑποσχόμενος, εἰ μὲν εἰρήνης δέοιτο Διονύσιος, πλεύσας εὐθὺς εἰς Λιβύην ὡς ἄριστα διαθήσεσθαι τὸν πόλεμον, εἰ δὲ πολεμεῖν προθυμοῖτο, θρέψειν αὐτὸς ἰδίοις τέλεσι καὶ παρέξειν εἰς τὸν πόλεμον αὐτῷ πεντήκοντα τριήρεις εὖ πλεούσας.<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>μάλιστα δὲ αὐτοὺς ἐξέπληξε τὸν ἀπὸ Καρχηδόνος κίνδυνον ἐπικρεμάμενον τῇ ἀρχῇ δεδοικότας, ὑποσχόμενος, εἰ μὲν εἰρήνης δέοιτο Διονύσιος, πλεύσας εὐθὺς εἰς Λιβύην ὡς ἄριστα διαθήσεσθαι τὸν πόλεμον, εἰ δὲ πολεμεῖν προθυμοῖτο, θρέψειν αὐτὸς ἰδίοις τέλεσι καὶ παρέξειν εἰς τὸν πόλεμον αὐτῷ πεντήκοντα τριήρεις εὖ πλεούσας.<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">εὖ πλεούσας</foreign> van Herwerden: <foreign xml:lang="grc">πλεούσας</foreign>.</note>
                </p>
             </div>
@@ -290,10 +276,7 @@
                <p>φύσει γὰρ οὐ γεγόνει τῶν φαυλοτάτων τυράννων ὁ Διονύσιος, ἀλλʼ ὁ πατὴρ, δεδοικώς μὴ φρονήματος μεταλαβὼν καὶ συγγενόμενος νοῦν ἔχουσιν ἀνθρώποις ἐπιβουλεύσειεν αὐτῷ καὶ παρέλοιτο τὴν ἀρχήν, ἐφρούρει κατάκλειστον οἴκοι, διʼ ἐρημίαν ὁμιλίας ἑτέρας καὶ ἀπειρίᾳ πραγμάτων, ὥς φασιν, ἁμάξια καὶ λυχνίας καὶ δίφρους ξυλίνους καὶ τραπέζας τεκταινόμενον.</p>
             </div>
             <div n="3" type="section">
-               <p>οὕτω γὰρ ἦν ἄπιστος καὶ πρὸς ἅπαντας ἀνθρώπους ὕποπτος καὶ προβεβλημένος διὰ φόβον ὁ πρεσβύτερος Διονύσιος ὥστε μηδὲ τῆς κεφαλῆς τὰς τρίχας ἀφελεῖν<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>οὕτω γὰρ ἦν ἄπιστος καὶ πρὸς ἅπαντας ἀνθρώπους ὕποπτος καὶ προβεβλημένος διὰ φόβον ὁ πρεσβύτερος Διονύσιος ὥστε μηδὲ τῆς κεφαλῆς τὰς τρίχας ἀφελεῖν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">ἀφελεῖν</foreign> Bekker, after Coraës, has <foreign xml:lang="grc">ἀφαιρεῖν</foreign>.</note> κουρικαῖς μαχαίραις, ἀλλὰ τῶν πλαστῶν τις ἐπιφοιτῶν ἄνθρακι τὴν κόμην περιέκαιεν. </p>
             </div>
             <div n="4" type="section">
@@ -433,10 +416,7 @@
                <p>Πλάτωνα δὲ Διονύσιος εὐθὺς μὲν εἰς τὴν ἀκρόπολιν μετέστησεν, ἔντιμον αὐτῷ σχήματι <pb n="p.32"/> ξενίας φιλανθρώπου φρουρὰν μηχανησάμενος, ὡς μὴ συμπλέοι Δίωνι μάρτυς ὧν ἠδίκητο. </p>
             </div>
             <div n="2" type="section">
-               <p>χρόνῳ δὲ καὶ συνδιαιτήσει, καθάπερ ψαύειν ἀνθρώπου θηρίον, ἐθισθεὶς ὑπομένειν τήν τε<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>χρόνῳ δὲ καὶ συνδιαιτήσει, καθάπερ ψαύειν ἀνθρώπου θηρίον, ἐθισθεὶς ὑπομένειν τήν τε<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">ὑπομένειν τήν τε</foreign> Schenkl: <foreign xml:lang="grc">ὑπομένειν τε τὴν</foreign>.</note> ὁμιλίαν αὐτοῦ καὶ τὸν λόγον, ἠράσθη τυραννικὸν ἔρωτα, μόνος ἀξιῶν ὑπὸ Πλάτωνος ἀντερᾶσθαι καὶ θαυμάζεσθαι μάλιστα πάντων, ἕτοιμος ὢν ἐπιτρέπειν τὰ πράγματα καὶ τὴν τυραννίδα μὴ προτιμῶντι τὴν πρὸς Δίωνα φιλίαν τῆς πρὸς αὐτόν, </p>
             </div>
             <div n="3" type="section">
@@ -515,10 +495,7 @@
                <p>πολλαὶ δʼ ἀφίκοντο πρὸς Δίωνα παρὰ τῆς ἀδελφῆς καὶ γυναικὸς ἐπισκήψεις, δεῖσθαι Πλάτωνος ὑπακοῦσαι Διονυσίῳ καὶ μὴ πρόφασιν παρασχεῖν. </p>
             </div>
             <div n="9" type="section">
-               <p>οὕτω <pb n="p.38"/> μὲν δή φησιν ὁ Πλάτων ἐλθεῖν τὸ τρίτον εἰς τὸν πορθμὸν τὸν περὶ Σκύλλαν,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>οὕτω <pb n="p.38"/> μὲν δή φησιν ὁ Πλάτων ἐλθεῖν τὸ τρίτον εἰς τὸν πορθμὸν τὸν περὶ Σκύλλαν,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">Σκύλλαν</foreign> as in Plato, <title>Epist.</title> vii. p. 346; Coraës retains the <foreign xml:lang="grc">Σικελίαν</foreign> of the MSS.</note>
                   <quote rend="blockquote">ὄφρʼ ἔτι τὴν ὀλοὴν ἀναμετρήσειε Χάρυβδιν.</quote>
                </p>
@@ -820,10 +797,7 @@
                <p>ταῦτα Διονύσιος ἐπῄνει, καὶ πάλιν ἔπεμπε πρέσβεις κελεύων ἥκειν τινὰς εἰς τὴν ἀκρόπολιν τῶν Συρακουσίων, οἷς τὰ μὲν πείθων, τὰ δὲ πειθόμενος διαλέξεται περὶ τῶν κοινῇ συμφερόντων, </p>
             </div>
             <div n="4" type="section">
-               <p>ἐπέμφθησαν οὖν ἄνδρες πρὸς αὐτὸν οὓς Δίων ἐδοκίμασε. καὶ λόγος πολὺς ἐκ τῆς ἄκρας εἰς τούς Συρακουσίους κατῄει Διονύσιον ἀφήσειν τὴν τυραννίδα καὶ μᾶλλον ἑαυτοῦ ποιήσεσθαι<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>ἐπέμφθησαν οὖν ἄνδρες πρὸς αὐτὸν οὓς Δίων ἐδοκίμασε. καὶ λόγος πολὺς ἐκ τῆς ἄκρας εἰς τούς Συρακουσίους κατῄει Διονύσιον ἀφήσειν τὴν τυραννίδα καὶ μᾶλλον ἑαυτοῦ ποιήσεσθαι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">ποιήσεσθαι</foreign> a correction by Sintenis of the MSS. <foreign xml:lang="grc">ποιήσασθαι</foreign>, which Coraës omits and Bekker brackets.</note> χάριν ἢ Δίωνος.</p>
             </div>
             <div n="5" type="section">
@@ -840,10 +814,7 @@
                <p>καὶ γίνεται περὶ αὐτὸν ὀξεῖα καὶ δεινὴ μάχη, γινωσκόμενον οὐχ ἧττον ὑπὸ τῶν πολεμίων ἢ τῶν φίλων· ὥρμησαν γὰρ ἅμα πάντες ἐμβοήσαντες. </p>
             </div>
             <div n="9" type="section">
-               <p>ὁ δʼ ἦν μὲν ἤδη βαρύτερος διʼ ἡλικίαν ἢ κατὰ τοιούτους ἀγῶνας, ἀλκῇ δὲ καὶ θυμῷ τούς<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>ὁ δʼ ἦν μὲν ἤδη βαρύτερος διʼ ἡλικίαν ἢ κατὰ τοιούτους ἀγῶνας, ἀλκῇ δὲ καὶ θυμῷ τούς<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">τοὺς</foreign> the article is suggested by Sintenis.</note> προσφερομένους ὑφιστάμενος καὶ ἀνακόπτων τιτρώσκεται λόγχῃ τὴν χεῖρα, πρὸς δὲ τὰ ἄλλα βέλη καὶ τὰς ἐκ χειρὸς πληγὰς μόλις ὁ θώραξ ἤρκεσε διὰ τῆς ἀσπίδος δόρασι πολλοῖς καὶ λόγχαις τυπτόμενος ὧν κατακλασθέντων κατέπεσεν ὁ Δίων. </p>
             </div>
             <div n="10" type="section">
@@ -1181,10 +1152,7 @@
                <p>ἐπεὶ δὲ ταῦτα παρασκευασάμενος καὶ τοῖς θεοῖς προσευξάμενος ὤφθη διὰ τῆς πόλεως ἄγων ἐπὶ τοὺς πολεμίους, κραυγῇ καὶ χαρὰ καὶ πολὺς ἀλαλαγμὸς εὐχαῖς ὁμοῦ καὶ παρακλήσεσι μεμιγμένος ἐγίνετο παρὰ τῶν Συρακουσίων, τὸν μὲν Δίωνα σωτῆρα καὶ θεὸν ἀποκαλούντων, τοὺς δὲ ξένους ἀδελφοὺς καὶ πολίτας. </p>
             </div>
             <div n="2" type="section">
-               <p>οὐδεὶς δὲ φίλαυτος οὕτως<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>οὐδεὶς δὲ φίλαυτος οὕτως<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">φίλαυτος οὕτως</foreign> Coraës, after Reiske (<foreign xml:lang="grc">οὕτως φίλαυτος</foreign> Bekker): <foreign xml:lang="grc">φίλαυτος</foreign>.</note> ἦν καὶ φιλόψυχος παρὰ τὸν τότε καιρόν ὃς οὐ μᾶλλον ὑπὲρ μόνου Δίωνος ἢ τῶν ἄλλων ἁπάντων ἀγωνιῶν ἐφαίνετο, πρώτου πρὸς τὸν κίνδυνον πορευομένου διʼ αἵματος καὶ πυρὸς καὶ νεκρῶν πολλῶν κειμένων ἐν ταῖς πλατείαις. </p>
             </div>
             <div n="3" type="section">

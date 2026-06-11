@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -61,14 +60,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -76,7 +71,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -141,20 +136,14 @@
                <p> νέων δέ, ὡς ἔοικεν, ἀνδρῶν ἐπιφάνεια καὶ τιμὴ τὰς μὲν ἐλαφρῶς φιλοτίμους φύσεις πρωιαίτερον παραγενομένη σβέννυσι, καὶ ἀποπίμπλησι ταχὺ τὸ διψῶδες αὐτῶν καὶ ἁψίκορον τὰ δʼ ἐμβριθῆ καὶ βέβαια φρονήματα αὔξουσιν αἱ τιμαὶ καὶ λαμπρύνουσιν ὥσπερ ὑπὸ πνεύματος ἐγειρόμενα πρὸς τὸ φαινόμενον καλόν, οὐ γὰρ ὡς μισθὸν ἀπολαμβάνοντες, ἀλλʼ ὡς ἐνέχυρον διδόντες αἰσχύνονται τὴν δόξαν καταλιπεῖν καὶ μὴ τοῖς αὐτοῖς ἔργοις ὑπερβαλέσθαι.</p>
             </div>
             <div n="2" type="section">
-               <p> τοῦτο παθὼν καὶ ὁ Μάρκιος αὐτὸς αὑτῷ ζῆλον ἀνδραγαθίας προὔθηκε, καινός τε ἀεὶ βουλόμενος εἶναι ταῖς πράξεσιν ἀριστείαις ἀριστείας συνῆπτε καὶ λάφυρα λαφύροις ἐπέφερε, καὶ τοῖς προτέροις ἀεὶ τοὺς ὑστέρους ἡγεμόνας εἶχε περὶ τῆς ἐκείνου τιμῆς ἐρίζοντας, καὶ μαρτυρίας ὑπερβαλέσθαι.<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p> τοῦτο παθὼν καὶ ὁ Μάρκιος αὐτὸς αὑτῷ ζῆλον ἀνδραγαθίας προὔθηκε, καινός τε ἀεὶ βουλόμενος εἶναι ταῖς πράξεσιν ἀριστείαις ἀριστείας συνῆπτε καὶ λάφυρα λαφύροις ἐπέφερε, καὶ τοῖς προτέροις ἀεὶ τοὺς ὑστέρους ἡγεμόνας εἶχε περὶ τῆς ἐκείνου τιμῆς ἐρίζοντας, καὶ μαρτυρίας ὑπερβαλέσθαι.<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">καὶ μαρτυρίας ὑπερβαλέσθαι</foreign> bracketed by Bekker.</note> πολλῶν γέ τοι τότε Ῥωμαίοις ἀγώνων καὶ πολέμων γενομένων, ἐξ οὐδενὸς ἀστεφάνωτος ἦλθεν οὐδʼ ἀγέραστος.</p>
             </div>
             <div n="3" type="section">
                <p>ἦν δὲ τοῖς μὲν ἄλλοις ἡ δόξα τῆς ἀρετῆς τέλος, ἐκείνῳ δὲ τῆς δόξης ἡ τῆς μητρὸς εὐφροσύνη, τὸ <pb n="p.126"/> γὰρ ἐκείνην ἐπαινούμενον ἀκοῦσαι καὶ στεφανούμενον ἰδεῖν καὶ περιβαλεῖν δακρύουσαν ὑφʼ ἡδονῆς ἐντιμότατον αὑτὸν ἐνόμιζε ποιεῖν καὶ μακαριώτατον. τοῦτο δʼ ἀμέλει καὶ τὸν Ἐπαμεινώνδαν φασὶν ἐξομολογήσασθαι τὸ πάθος, εὐτυχίαν ποιούμενον αὑτοῦ μεγίστην ὅτι τὴν ἐν Λεύκτροις στρατηγίαν αὐτοῦ καὶ νίκην ὁ πατὴρ καὶ ἡ μήτηρ ἔτι ζῶντες ἐπεῖδον.</p>
             </div>
             <div n="4" type="section">
-               <p> ἀλλʼ ἐκεῖνος μὲν ἀμφοτέρων ἀπέλαυσε τῶν γονέων συνηδομένων καὶ συνευημερούντων, Μάρκιος δὲ τῇ μητρὶ καὶ τὰς τοῦ πατρὸς ὀφείλειν χάριτας οἰόμενος οὐκ ἐνεπίμπλατο τὴν Οὐολουμνίαν εὐφραίνων καὶ τιμῶν, ἀλλὰ καὶ γυναῖκα βουλομένης καὶ δεομένης ἐκείνης,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p> ἀλλʼ ἐκεῖνος μὲν ἀμφοτέρων ἀπέλαυσε τῶν γονέων συνηδομένων καὶ συνευημερούντων, Μάρκιος δὲ τῇ μητρὶ καὶ τὰς τοῦ πατρὸς ὀφείλειν χάριτας οἰόμενος οὐκ ἐνεπίμπλατο τὴν Οὐολουμνίαν εὐφραίνων καὶ τιμῶν, ἀλλὰ καὶ γυναῖκα βουλομένης καὶ δεομένης ἐκείνης,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">δεομένης ἐκείνης</foreign> with M<hi rend="superscript">a</hi>: <foreign xml:lang="grc">δεομένης</foreign>.</note> ἔγημε καὶ τὴν οἰκίαν ᾤκει γενομένων παίδων ὁμοῦ μετὰ τῆς μητρός.</p>
             </div>
          </div>
@@ -264,10 +253,7 @@
                <p> ωι καὶ μάλιστα δῆλόν ἐστιν ὅτι τῶν ὀνομάτων ἴδιον ἦν ὁ Γάϊος, τὸ δὲ δεύτερον οἰκίας ἢ γένους κοινὸν ὁ Μάρκιος, τῷ δὲ τρίτῳ ὕστερον ἐχρήσαντο πράξεώς τινος ἢ τύχης ἢ ἰδέας ἢ ἀρετῆς ἐπιθέτῳ, καθάπερ Ἕλληνες ἐτίθεντο πράξεώς μὲν ἐπώνυμον τὸν Σωτῆρα καὶ τὸν Καλλίνικον, ἰδέας δὲ τὸν Φύσκωνα καὶ τὸν Γρυπόν, ἀρετῆς δὲ τὸν Εὐεργέτην καὶ τὸν Φιλάδελφον, εὐτυχίας δὲ τὸν Εὐδαίμονα τῷ δευτέρῳ τῶν Βάττων.</p>
             </div>
             <div n="3" type="section">
-               <p> ἐνίοις δὲ τῶν βασιλέων καὶ σκώμματα παρέσχεν ἐπικλήσεις, ὡς Ἀντιγόνῳ τὸν Δώσωνα καὶ Πτολεμαίῳ τὸν Λάθυρον. ἐπὶ πλέον δὲ τῷ γένει τούτῳ καὶ Ῥωμαῖοι κέχρηνται, Διαδήματόν τινα τῶν Μετέλλων καλέσαντες, ὅτι πολὺν χρόνον ἕλκος ἔχων περιενόστει διαδεδεμένος<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p> ἐνίοις δὲ τῶν βασιλέων καὶ σκώμματα παρέσχεν ἐπικλήσεις, ὡς Ἀντιγόνῳ τὸν Δώσωνα καὶ Πτολεμαίῳ τὸν Λάθυρον. ἐπὶ πλέον δὲ τῷ γένει τούτῳ καὶ Ῥωμαῖοι κέχρηνται, Διαδήματόν τινα τῶν Μετέλλων καλέσαντες, ὅτι πολὺν χρόνον ἕλκος ἔχων περιενόστει διαδεδεμένος<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">διαδεδεμένος</foreign> with M<hi rend="superscript">a</hi>: <foreign xml:lang="grc">περιδεδεμένος</foreign>.</note> τὸ μέτωπον, ἕτερον δὲ Κέλερα σπεύσαντα μεθʼ ἡμέρας ὀλίγας τῆς τοῦ πατρὸς τελευτῆς ἐπιταφίους μονομάχων ἀγῶνας παρασχεῖν, τὸ τάχος καὶ τὴν ὀξύτητα τῆς παρασκευῆς θαυμάσαντες.</p>
             </div>
             <div n="4" type="section">
@@ -588,24 +574,15 @@
                <p> ἐδέξατο μὲν οὖν εἰς τὸ στρατόπεδον τοὺς ἄνδρας, ἄλλο δʼ οὐδὲν ἔδωκεν οὐδʼ ἔπραξεν οὐδʼ εἶπε μαλακώτερον, ἀλλʼ ἐφʼ οἷς πρότερον <pb n="p.196"/> ἐκέλευε ποιεῖσθαι τὰς διαλύσεις ἢ δέχεσθαι τὸν πόλεμον. ἐπανελθόντων οὖν τῶν ἱερέων ἔδοξεν ἀτρεμοῦντας ἐν τῇ πόλει τὰ τείχη φυλάττειν καὶ προσβάλλοντας ἀποκρούεσθαι τοὺς πολεμίους, </p>
             </div>
             <div n="3" type="section">
-               <p> ἐν τῷ χρόνῳ μάλιστα καὶ τοῖς ἀπὸ τῆς τύχης παραλόγοις τιθεμένοις τὰς ἐλπίδας, ἐπεὶ διʼ αὑτῶν γε σωτήριον οὐδὲν ἠπίσταντο πράττοντες, ἀλλὰ ταραχὴ καὶ πτοία καὶ φήμη πονηρὰ τὴν πόλιν κατεῖχεν, ἄχρι οὗ συνέβη τι πρᾶγμα τῷ πολλάκις ὑφʼ Ὁμήρου λεγομένῳ,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">τῷ <gap reason="lost"/> λεγομένῳ</foreign> Coraës and Bekker, after Reiske (Amyot): <foreign xml:lang="grc">τῶν <gap reason="lost"/> λεγομένων</foreign>.</note> μὴ τάνυ δὲ πείθοντι<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p> ἐν τῷ χρόνῳ μάλιστα καὶ τοῖς ἀπὸ τῆς τύχης παραλόγοις τιθεμένοις τὰς ἐλπίδας, ἐπεὶ διʼ αὑτῶν γε σωτήριον οὐδὲν ἠπίσταντο πράττοντες, ἀλλὰ ταραχὴ καὶ πτοία καὶ φήμη πονηρὰ τὴν πόλιν κατεῖχεν, ἄχρι οὗ συνέβη τι πρᾶγμα τῷ πολλάκις ὑφʼ Ὁμήρου λεγομένῳ,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                     <foreign xml:lang="grc">τῷ <gap reason="lost"/> λεγομένῳ</foreign> Coraës and Bekker, after Reiske (Amyot): <foreign xml:lang="grc">τῶν <gap reason="lost"/> λεγομένων</foreign>.</note> μὴ τάνυ δὲ πείθοντι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">πείθοντι</foreign> Bekker, after Reiske: <foreign xml:lang="grc">πεῖθον</foreign>.</note> τοὺς πολλούς, ὅμοιον.</p>
             </div>
             <div n="4" type="section">
                <p>λέγοντος γὰρ αὐτοῦ καὶ ἀναφωνοῦντος ἐπὶ ταῖς μεγάλαις πράξεσι καὶ παραλόγοις· <quote rend="blockquote">τῷ δʼ ἄρʼ ἐπὶ φρεσὶ θῆκε θεὰ γλαυκῶπις Ἀθήνη·</quote> καὶ τὸ <quote rend="blockquote">
                      <l>ἀλλά τις ἀθανάτων τρέψεν φρένας, ὅς γʼ ἐνὶ θυμῷ </l>
                      <l>δήμου θῆκε φάτιν·</l>
-                  </quote> καὶ τὸ <quote rend="blockquote">ἤ τι ὀϊσσάμενος ἢ καὶ θεὸς ὣς ἐκέλευε·</quote> καταφρονοῦσιν ὡς ἀδυνάτοις πράγμασι καὶ μυθεύμασιν ἀπίστοις τὸν ἑκάστου λογισμὸν τῆς προαιρέσεως ἄπιστον<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+                  </quote> καὶ τὸ <quote rend="blockquote">ἤ τι ὀϊσσάμενος ἢ καὶ θεὸς ὣς ἐκέλευε·</quote> καταφρονοῦσιν ὡς ἀδυνάτοις πράγμασι καὶ μυθεύμασιν ἀπίστοις τὸν ἑκάστου λογισμὸν τῆς προαιρέσεως ἄπιστον<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">ἄπιστον</foreign> Bekker has <foreign xml:lang="grc">ἀκρατῆ</foreign> (<gloss>powerless to determine</gloss>).</note> καθιστάντος.</p>
             </div>
             <div n="5" type="section">

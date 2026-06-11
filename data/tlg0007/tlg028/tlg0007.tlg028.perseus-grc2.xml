@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -56,14 +55,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -71,7 +66,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -252,10 +247,7 @@
                </p>
             </div>
             <div n="4" type="section">
-               <p> τὸν δὲ Τίτον φιλοτιμούμενον πρὸς τοὺς Ἕλληνας οὐ μετρίως παρώξυνε τὰ τοιαῦτα, διὸ καὶ τὰ ὑπόλοιπα τῶν πραγμάτων ἔπραττε καθʼ ἑαυτόν, ἐλάχιστα φροντίζων τῶν Αἰτωλῶν. οἱ δὲ ἤχθοντο, καὶ προσδεξαμένου λόγους αὐτοῦ καὶ πρεσβείαν ἐπὶ συμβάσεσι παρὰ τοῦ Μακεδόνος, τοῦτο ἐκεῖνοι<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> τὸν δὲ Τίτον φιλοτιμούμενον πρὸς τοὺς Ἕλληνας οὐ μετρίως παρώξυνε τὰ τοιαῦτα, διὸ καὶ τὰ ὑπόλοιπα τῶν πραγμάτων ἔπραττε καθʼ ἑαυτόν, ἐλάχιστα φροντίζων τῶν Αἰτωλῶν. οἱ δὲ ἤχθοντο, καὶ προσδεξαμένου λόγους αὐτοῦ καὶ πρεσβείαν ἐπὶ συμβάσεσι παρὰ τοῦ Μακεδόνος, τοῦτο ἐκεῖνοι<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τοῦτο ἐκεῖνοι</foreign> Coraës, with the MSS.: <foreign xml:lang="grc">τοῦτο ἐκεῖνο</foreign> after Reiske.</note> περιϊόντες ἐπὶ τὰς ἄλλας πόλεις ἐβόων, πωλεῖσθαι τὴν εἰρήνην Φιλίππῳ, παρὸν ἐκκόψαι τὸν πόλεμον ἄρδην καὶ ἀνελεῖν ἀρχὴν ὑφʼ ἧς πρώτης ἐδουλώθη τὸ Ἑλληνικόν.</p>
             </div>
             <div n="5" type="section">
@@ -338,17 +330,11 @@
             </div>
             <div n="7" type="section">
                <p> ἀνέθηκε δὲ καὶ χρυσοῦν τῷ Ἀπόλλωνι στέφανον ἐπιγράψας. <quote rend="blockquote">
-                     <l>τόνδε τοι ἀμβροσίοισιν ἐπὶ πλοκάμοισιν ἔοικε<note anchored="true"
-                              place="unspecified"
-                              resp="editor"
-                              xml:lang="eng">
+                     <l>τόνδε τοι ἀμβροσίοισιν ἐπὶ πλοκάμοισιν ἔοικε<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                            <foreign xml:lang="grc">ἔοικε</foreign> an anonymous correction adopted by Sintenis<hi rend="superscript">2</hi> and Blass; Coraës and Bekker retain the vulgate <foreign xml:lang="grc">ἔθηκε</foreign>.</note>
                      </l>
                      <l>κεῖσθαι, Λατοΐδα, χρυσοφαῆ στέφανον, </l>
-                     <l>ὃν<note anchored="true"
-                              place="unspecified"
-                              resp="editor"
-                              xml:lang="eng">
+                     <l>ὃν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                            <foreign xml:lang="grc">ὃν</foreign> Bekker corrects to <foreign xml:lang="grc">ὅς</foreign>, after Jacobs.</note> πόρεν Αἰνεαδᾶν ταγὸς μέγας. ἀλλʼ, </l>
                      <l>ἑκάεργε, </l>
                      <l>ἀλκᾶς τῷ θείῳ κῦδος ὄπαζε Τίτῳ.</l>
@@ -357,10 +343,7 @@
             </div>
             <div n="8" type="section">
                <p>
-                  <milestone unit="para"/>τῇ δʼ οὖν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+                  <milestone unit="para"/>τῇ δʼ οὖν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">δ’ οὖν</foreign> Bekker and Blass: <foreign xml:lang="grc">γοῦν</foreign>.</note> Κορινθίων πόλει πρὸς τοὺς Ἕλληνας τὸ αὐτὸ δὶς ἤδη συμβέβηκε· καὶ γὰρ Τίτος ἐν Κορίνθῳ τότε καὶ Νέρων αὖθις καθʼ ἡμᾶς ἐν Κορίνθῳ παραπλησίως Ἰσθμίων ἀγομένων τοὺς Ἕλληνας ἐλευθέρους καὶ αὐτονόμους ἀφῆκαν, ὁ μὲν διὰ κήρυκος, ὡς εἴρηται, Νέρων δὲ αὐτὸς ἐπὶ τῆς ἀγορᾶς ἀπὸ βήματος ἐν τῷ πλήθει δημηγορήσας. ἀλλὰ ταῦτα μὲν ὕστερον.</p>
             </div>
          </div>
@@ -397,10 +380,7 @@
                <p> ἐπεὶ δὲ ὁ Ἀντίοχος εἰς τὴν Ἑλλάδα ναυσὶ πολλαῖς καὶ στρατῷ περαιωθεὶς ἀφίστη τὰς πόλεις καὶ διεστασίαζεν, Αἰτωλῶν αὐτῷ συνεπιλαμβανομένων καὶ πάλαι διακειμένων πρὸς <pb n="p.364"/> τὸν Ῥωμαίων δῆμον ἐχθρῶς καὶ πολεμικῶς, ὑπόθεσιν τοῦ πολέμου καὶ πρόφασιν διδόντων ἐλευθεροῦν τοὺς Ἕλληνας οὐδὲν δεομένους (ἐλεύθεροι γὰρ ἦσαν), </p>
             </div>
             <div n="2" type="section">
-               <p> ἀλλʼ εὐπρεπεστέρας αἰτίας ἀπορίᾳ τῷ καλλίστῳ τῶν ὀνομάτων χρῆσθαι διδασκόντων, καὶ σφόδρα δείσαντες οἱ Ῥωμαῖοι τὴν ἀνάστασιν καὶ δόξαν αὐτοῦ τῆς δυνάμεως, στρατηγὸν μὲν ὕπατον τοῦ πολέμου Μάνιον Ἀκίλιον κατέπεμψαν, πρεσβευτὴν δὲ Τίτον διὰ τοὺς Ἕλληνας, ὧν τοὺς μὲν εὐθὺς ὀφθεὶς ἐποίησε βεβαιοτέρους, τοὺς δὲ ἀρχομένους νοσεῖν ὥσπερ τι<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ἀλλʼ εὐπρεπεστέρας αἰτίας ἀπορίᾳ τῷ καλλίστῳ τῶν ὀνομάτων χρῆσθαι διδασκόντων, καὶ σφόδρα δείσαντες οἱ Ῥωμαῖοι τὴν ἀνάστασιν καὶ δόξαν αὐτοῦ τῆς δυνάμεως, στρατηγὸν μὲν ὕπατον τοῦ πολέμου Μάνιον Ἀκίλιον κατέπεμψαν, πρεσβευτὴν δὲ Τίτον διὰ τοὺς Ἕλληνας, ὧν τοὺς μὲν εὐθὺς ὀφθεὶς ἐποίησε βεβαιοτέρους, τοὺς δὲ ἀρχομένους νοσεῖν ὥσπερ τι<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ὥσπερ τι</foreign> Coraës, Bekker, and Blass, after Stephanus: <foreign xml:lang="grc">ὥσπερ τις</foreign>.</note> ἐν καιρῷ φάρμακον ἐνδιδοὺς τὴν πρὸς αὑτὸν εὔνοιαν ἔστησε καὶ διεκώλυσεν ἐξαμαρτεῖν.</p>
             </div>
             <div n="3" type="section">
@@ -439,10 +419,7 @@
          </div>
          <div n="17" type="chapter">
             <div n="1" type="section">
-               <p> ἦσαν δὲ καὶ παρά τῶν ἄλλων Ἑλλήνων<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ἦσαν δὲ καὶ παρά τῶν ἄλλων Ἑλλήνων<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τῶν ἄλλων Ἑλλήνων</foreign> Coraës and Blass, after Bryan: <foreign xml:lang="grc">τῶν Ἑλλήνων</foreign>.</note> τιμαὶ πρέπουσαι, καὶ τὸ τὰς τιμὰς ἀληθινὰς ποιοῦν, εὔνοια θαυμαστὴ διʼ ἐπιείκειαν ἤθους, καὶ γὰρ εἴ τισιν ἐκ πραγμάτων ἢ φιλοτιμίας ἕνεκα, καθάπερ Φιλοποίμενι καὶ πάλιν Διοφάνει στρατηγοῦντι τῶν Ἀχαιῶν, προσέκρουσεν, οὐκ ἦν βαρὺς οὐδʼ εἰς ἔργα διατείνων ὁ θυμός, ἀλλʼ ἐν λόγῳ παρρησίαν τινὰ πολιτικὴν ἔχοντι παυόμενος.</p>
             </div>
             <div n="2" type="section">
@@ -453,10 +430,7 @@
                <p> ἐπεὶ δὲ Δεινοκράτης ὁ Μεσσήνιος ἐν Ῥώμῃ παρά πότον μεθυσθεὶς ὠρχήσατο λαβὼν ἱμάτιον γυναικεῖον, τῇ δʼ ὑστεραίᾳ τὸν Τίτον ἠξίου βοηθεῖν αὐτῷ διανοουμένῳ τὴν Μεσσήνην ἀφιστάναι τῶν Ἀχαιῶν, ταῦτα μὲν ἔφη σκέψεσθαι, θαυμάζειν δὲ ἐκεῖνον, εἰ τηλικαύταις ἐπικεχειρηκὼς πράξεσιν ὀρχεῖσθαι δύναται παρά πότον καὶ ᾄδειν.</p>
             </div>
             <div n="4" type="section">
-               <p> πρὸς δὲ τοὺς Ἀχαιούς τῶν παρά Ἀντιόχου πρέσβεων πλῆθος τι<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> πρὸς δὲ τοὺς Ἀχαιούς τῶν παρά Ἀντιόχου πρέσβεων πλῆθος τι<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">πλῆθος τι</foreign> Coraës and Bekker have <foreign xml:lang="grc">πλῆθος τε</foreign>, after Bryan.</note> τῆς βασιλικῆς στρατιᾶς καταλεγόντων καὶ καταριθμουμένων πολλὰς προσηγορίας, ὁ Τίτος ἔφη δειπνοῦντος αὐτοῦ παρά τῷ ξένῳ καὶ μεμφομένου τὸ πλῆθος τῶν κρεῶν καὶ θαυμάζοντος πόθεν οὕτω ποικίλης ἀγορᾶς εὐπόρησεν, εἰπεῖν τὸν ξένον, ὡς ὕεια πάντα ἐστί τῇ σκευασίᾳ, διαφέροντα καὶ τοῖς ἡδύσμασι.</p>
             </div>
             <div n="5" type="section">
@@ -530,10 +504,7 @@
                <p> καί τὴν Ἀφρικανοῦ Σκηπίωνος ἐκτιθέντες πρᾳότητα καί μεγαλοψυχίαν ἔτι μᾶλλον ἐθαύμαζον, ὡς ἀήττητον ὄντα καί φοβερὸν ἐν Λιβύῃ καταπολεμήσας Ἀννίβαν οὔτε ἐξήλασεν <pb n="paris.1624.381"/> οὔτε ἐξῃτήσατο παρὰ τῶν πολιτῶν, ἀλλὰ καί πρὸ τῆς μάχης εἰς λόγους ἐλθὼν ἐδεξιώσατο καί μετὰ τὴν μάχην σπενδόμενος οὐδὲν ἐπετόλμησεν οὐδʼ ἐπενέβη τῇ τύχῃ τοῦ ἀνδρός.</p>
             </div>
             <div n="3" type="section">
-               <p>λέγεται δὲ αὖθις ἐν Ἐφέσῳ συμβαλεῖν αὐτούς· καί πρῶτον μὲν ἐν τῷ συμπεριπατεῖν τοῦ Ἀννίβου τὴν προσήκουσαν ἐν ἀξιώματι τάξιν ἐκεἰνῳ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>λέγεται δὲ αὖθις ἐν Ἐφέσῳ συμβαλεῖν αὐτούς· καί πρῶτον μὲν ἐν τῷ συμπεριπατεῖν τοῦ Ἀννίβου τὴν προσήκουσαν ἐν ἀξιώματι τάξιν ἐκεἰνῳ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἐκείνῳ</foreign> Coraës and Bekker, after Reiske: <foreign xml:lang="grc">εἶναι</foreign>. Blass corrects to <foreign xml:lang="grc">προήκουσαν ἐν ἀ. τάξιν</foreign>.</note> προλαβόντος ἀνέχεσθαι καί περιπατεῖν ἀφελῶς τὸν Ἀφρικανόν, ἔπειτα λόγου περὶ στρατηγῶν ἐμπεσόντος καί τοῦ Ἀννίβου κράτιστον ἀποφηναμένου γεγονέναι τῶν στρατηγῶν Ἀλέξανδρον, εἶτα Πύρρον, τρίτον δὲ αὑτόν, ἡσυχῇ μειδιάσαντα τὸν Ἀφρικανὸν εἰπεῖν, <q>τί δʼ, εἰ μή σε ἐγὼ νενικήκειν;</q>
                </p>
             </div>

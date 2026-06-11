@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -56,14 +55,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -71,7 +66,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -122,10 +117,7 @@
                <p>ἠναγκάσθη δὲ ἀγορανομῶν δίκην ἀβούλητον εἰσενεγκεῖν. ἦν γὰρ αὐτῷ παῖς ὁμώνυμος ἐν ὥρᾳ, τὴν ὄψιν ἐκπρεπής, οὐχ ἧττον δὲ τῷ σωφρονεῖν καὶ πεπαιδεῦσθαι περίβλεπτος ὑπὸ τῶν πολιτῶν τούτῳ Καπετωλῖνος ὁ τοῦ Μαρκέλλου συνάρχων, ἀσελγὴς ἀνὴρ καὶ θρασύς, ἐρῶν λόγους προσήνεγκε. τοῦ δὲ παιδὸς τὸ μὲν πρῶτον αὐτοῦ καθʼ ἑαυτὸν ἀποτριψαμένου τὴν πεῖραν, ὡς δὲ αὖθις ἐπεχείρησε κατειπόντος πρὸς τὸν πατέρα, βαρέως ἐνεγκὼν ὁ Μάρκελλος προσήγγειλε τῇ βουλῇ τὸν ἄνθρωπον.</p>
             </div>
             <div n="4" type="section">
-               <p>ὁ δὲ πολλὰς μὲν ἀποδράσεις καὶ <pb n="paris.1624.299"/> παραγραφὰς ἐμηχανᾶτο, τοὺς δημάρχους ἐπικαλούμενος, ἐκείνων δὲ μὴ προσδεχομένων τὴν ἐπίκλησιν ἀρνήσει τὴν αἰτίαν ἔφευγε, καὶ μάρτυρος οὐδενὸς τῶν λόγων γεγονότος ἔδοξε μεταπέμπεσθαι τὸν παῖδα τῇ βουλῇ, παραγενομένου δʼ ἰδόντες ἐρύθημα καὶ δάκρυον καὶ μεμιγμένον ἀπαύστῳ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ὁ δὲ πολλὰς μὲν ἀποδράσεις καὶ <pb n="paris.1624.299"/> παραγραφὰς ἐμηχανᾶτο, τοὺς δημάρχους ἐπικαλούμενος, ἐκείνων δὲ μὴ προσδεχομένων τὴν ἐπίκλησιν ἀρνήσει τὴν αἰτίαν ἔφευγε, καὶ μάρτυρος οὐδενὸς τῶν λόγων γεγονότος ἔδοξε μεταπέμπεσθαι τὸν παῖδα τῇ βουλῇ, παραγενομένου δʼ ἰδόντες ἐρύθημα καὶ δάκρυον καὶ μεμιγμένον ἀπαύστῳ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἀπαύστῳ</foreign> Bekker corrects to <foreign xml:lang="grc">ἀπλάστῳ</foreign> (<gloss>unfeigned</gloss>), after Emperius.</note> τῷ θυμουμένῳ τὸ αἰδούμενον, οὐδενὸς <pb n="p.440"/> ἄλλου δεηθέντες τεκμηρίου κατεψηφίσαντο καὶ χρήμασιν ἐζημίωσαν Καπετωλῖνον, ἐξ ὧν ὁ Μάρκελλος ἀργυρᾶ λοιβεῖα ποιησάμενος τοῖς θεοῖς καθιέρωσεν.</p>
             </div>
          </div>
@@ -140,10 +132,7 @@
                <p>ἐξ ἐκείνου δὲ καὶ θέμενοι νόμον ἀτελεῖς εἶναι στρατείας τοὺς ἱερέας, πλὴν εἰ μὴ Γαλατικὸς πάλιν ἐπέλθοι πόλεμος. ἐδήλου δὲ καὶ τὸν φόβον αὐτῶν ἥ τε παρασκευὴ μυριάδες γὰρ ἐν ὅπλοις ἅμα τοσαῦται Ῥωμαίων οὔτε πρότερον οὔτε ὕστερον γενέσθαι λέγονται καὶ τὰ περὶ τὰς θυσίας <pb n="p.442"/> καινοτομούμενα· </p>
             </div>
             <div n="4" type="section">
-               <p>βαρβαρικὸν μὲν γὰρ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>βαρβαρικὸν μὲν γὰρ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">μὲν γὰρ</foreign> Bekker, after Coraës: <foreign xml:lang="grc">μέν</foreign>.</note> οὐδὲν οὐδʼ ἔκφυλον ἐπιτηδεύοντες, ἀλλʼ ὡς ἔνι μάλιστα ταῖς δόξαις Ἑλληνικῶς διακείμενοι καὶ πρᾴως πρὸς τὰ θεῖα, τότε τοῦ πολέμου συμπεσόντος ἠναγκάσθησαν εἶξαι λογίοις τισὶν ἐκ τῶν Σιβυλλείων, καὶ δύο μὲν Ἕλληνας, ἄνδρα καὶ γυναῖκα, δύο δὲ Γαλάτας ὁμοίως ἐν τῇ καλουμένῃ βοῶν ἀγορᾷ κατορύξαι ζῶντας, οἷς ἔτι καὶ νῦν ἐν τῷ Νοεμβρίῳ μηνὶ δρῶσιν Ἕλλησι καὶ Γαλάταις ἀπορρήτους καὶ ἀθεάτους ἱερουργίας.</p>
             </div>
          </div>
@@ -231,10 +220,7 @@
                <p>καίτοι φασὶν ἐν τοῖς ὑπομνήμασι Νομᾶν Πομπίλιον καὶ πρώτων ὀπιμίων καὶ δευτέρων καὶ τρίτων μνημονεύειν, τὰ μὲν πρῶτα ληφθέντα τῷ Φερετρίῳ Διῒ κελεύοντα καθιεροῦν, τὰ δεύτερα δὲ τῷ Ἄρει, τὰ δὲ τρίτα τῷ Κυρίνῳ, καὶ λαμβάνειν γέρας ἀσσάρια τριακόσια τὸν <pb n="p.456"/> πρῶτον, τὸν δὲ δεύτερον διακόσια, τὸν δὲ τρίτον ἑκατόν, ὁ μέντοι πολὺς οὗτος ἐπικρατεῖ λόγος, ὡς ἐκείνων μόνων ὀπιμίων ὄντων, ὅσα καὶ παρατάξεως οὔσης καὶ πρῶτα καὶ στρατηγοῦ στρατηγὸν ἀνελόντος. περὶ μὲν οὖν τούτων ἐπὶ τοσοῦτον.</p>
             </div>
             <div n="6" type="section">
-               <p>οἱ δὲ Ῥωμαῖοι τὴν νίκην ἐκείνην καὶ τοῦ πολέμου τὴν κατάλυσιν οὕτως ὑπερηγάπησαν ὥστε καὶ τῷ Πυθίῳ χρυσοῦν κρατῆρα ἀπὸ λιτρῶν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>οἱ δὲ Ῥωμαῖοι τὴν νίκην ἐκείνην καὶ τοῦ πολέμου τὴν κατάλυσιν οὕτως ὑπερηγάπησαν ὥστε καὶ τῷ Πυθίῳ χρυσοῦν κρατῆρα ἀπὸ λιτρῶν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἀπὸ λιτρῶν</foreign> Sintenis<hi rend="superscript">1</hi>, Coraës and Bekker: <foreign xml:lang="grc">ἀπὸ λύτρων</foreign>.</note>
                   <gap reason="lost"/> εἷς Δελφοὺς ἀποστεῖλαι χαριστήριον, καὶ τῶν λαφύρων ταῖς τε συμμαχίσι μεταδοῦναι πόλεσι λαμπρῶς, καὶ πρὸς Ἱέρωνα πολλὰ πέμψαι, τὸν Συρακουσίων βασιλέα, φίλον ὄντα καὶ σύμμαχον.</p>
             </div>
@@ -247,10 +233,7 @@
                <p>πρῶτον μὲν ὁ Μάρκελλος ἀπὸ τῶν νεῶν ἔπεμψε τῇ πόλει φυλακὴν πεντακοσίους καὶ χιλίους ἄνδρας, ἔπειτα δόγμα τῆς βουλῆς δεξάμενος εἰς Κανύσιον παρῆλθε, καὶ τοὺς ἐκεῖ συνειλεγμένους παραλαβὼν ἐξήγαγε τῶν ἐρυμάτων ὡς οὐ προησόμενος τὴν χώραν. Ῥωμαίοις δὲ τῶν ἡγεμονικῶν καὶ δυνατῶν ἀνδρῶν οἱ μὲν ἐτεθνήκεσαν ἐν ταῖς μάχαις, Φαβίου δὲ Μαξίμου τοῦ πλεῖστον ἔχοντος ἀξίωμα πίστεως καὶ συνέσεως, τὸ λίαν ἀπηκριβωμένον ἐν τοῖς ὑπὲρ τοῦ μὴ παθεῖν λογισμοῖς ὡς ἀργὸν ἐπὶ τὰς πράξεις καὶ ἄτολμον ᾐτιῶντο· </p>
             </div>
             <div n="3" type="section">
-               <p>καὶ νομίζοντες <pb n="p.458"/> ἀποχρῶντα τοῦτον ἔχειν πρὸς ἀσφάλειαν, οὐ διαρκῆ δὲ πρὸς ἄμυναν στρατηγόν, ἐπὶ τὸν Μάρκελλον ἀφεώρων,<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>καὶ νομίζοντες <pb n="p.458"/> ἀποχρῶντα τοῦτον ἔχειν πρὸς ἀσφάλειαν, οὐ διαρκῆ δὲ πρὸς ἄμυναν στρατηγόν, ἐπὶ τὸν Μάρκελλον ἀφεώρων,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἀφεώρων</foreign> Coraës and Bekker have <foreign xml:lang="grc">κατέφευγον</foreign> (<gloss>took refuge</gloss>), after Stephanus.</note> καὶ τὸ θαρραλέον αὐτοῦ καὶ δραστήριον πρὸς τὴν ἐκείνου κεραννύντες καὶ ἁρμόττοντες εὐλάβειαν καὶ πρόνοιαν, ποτὲ μὲν ἀμφοτέρους ἅμα χειροτονοῦντες ὑπάτους, ποτὲ δὲ ἐν μέρει, τὸν μὲν ὕπατον, τὸν δὲ ἀνθύπατον, ἐξέπεμπον.</p>
             </div>
             <div n="4" type="section">
@@ -297,10 +280,7 @@
                <p>οὐ μέντοι τὴν στρατείαν ἔφυγεν, ἀλλʼ ἀνθύπατος ἀναγορευθεὶς καὶ πάλιν πρὸς Νῶλαν ἐπανελθὼν εἰς τὸ στρατόπεδον κακῶς ἐποίει τοὺς ᾑρημένους τὰ τοῦ Φοίνικος, ὡς δὲ ὀξεῖαν ἐπʼ αὐτὸν θέμενος βοήθειαν ἐκεῖνος ἧκε, προκαλουμένῳ μὲν ἐκ παρατάξεως οὐκ ἠβουλήθη διαγωνίσασθαι, τρέψαντι δὲ τὸ πλεῖστον ἐφʼ ἁρπαγὴν τοῦ στρατοῦ καὶ μηκέτι προσδεχομένῳ μάχην ἐπεξῆλθε, διαδοὺς δόρατα τῶν ναυμάχων μεγάλα τοῖς πεζοῖς, καὶ διδάξας πόρρωθεν συντηροῦσι παίειν τοὺς Καρχηδονίους, ἀκοντιστὰς μὲν οὐκ ὄντας αἰχμαῖς δὲ χρωμένους ἐκ χειρὸς βραχείαις.</p>
             </div>
             <div n="3" type="section">
-               <p>διὸ καὶ δοκοῦσι τότε δεῖξαι τὰ νῶτα Ῥωμαίοις ὅσοι συνέβαλον καὶ φυγὴν ἀπροφάσιστον φυγεῖν, ἀποβαλόντες ἐξ ἑαυτῶν νεκροὺς μὲν γενομένους πεντακισχιλίους, αἰχμαλώτους δὲ ἑξακοσίους,<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>διὸ καὶ δοκοῦσι τότε δεῖξαι τὰ νῶτα Ῥωμαίοις ὅσοι συνέβαλον καὶ φυγὴν ἀπροφάσιστον φυγεῖν, ἀποβαλόντες ἐξ ἑαυτῶν νεκροὺς μὲν γενομένους πεντακισχιλίους, αἰχμαλώτους δὲ ἑξακοσίους,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">αἰχμαλώτους δὲ ἑξακοσίους</foreign> added to the text by Sintenis and Bekker, after Livy, xxiii. 46, 4.</note> καὶ τῶν ἐλεφάντων τέσσαρας μὲν πεσόντας, δύο δὲ ζωοὺς ἁλόντας. ὃ δʼ ἦν μέγιστον, ἡμέρᾳ τρίτῃ μετὰ τὴν μάχην ἱππεῖς Ἰβήρων καὶ Νομάδων μιγάδες αὐτομολοῦσιν ὑπὲρ τοὺς τριακοσίους, οὔπω πρότερον Ἀννίβα τοῦτο παθόντος, ἀλλʼ ἐκ ποικίλων καὶ πολυτρόπων συνηρμοσμένον ἐθνῶν <pb n="p.466"/> βαρβαρικὸν στράτευμα πλεῖστον χρόνον ἐν μιᾷ γνώμῃ διαφυλάξαντος. οὗτοι μὲν οὖν πιστοὶ παρέμειναν εἰς ἅπαν αὐτῷ τε τῷ Μαρκέλλῳ καὶ τοῖς μετʼ αὐτὸν στρατηγοῖς.</p>
             </div>
          </div>
@@ -324,10 +304,7 @@
          </div>
          <div n="14" type="chapter">
             <div n="1" type="section">
-               <p>τότε δʼ ἐν Σικελίᾳ πρῶτον μὲν ἀδικηθεὶς ὑπὸ Ἱπποκράτους στρατηγοῦ στρατηγοῦ, ὃς Καρχηδονίοις χαριζόμενος καὶ τυραννίδα κτώμενος αὑτῷ πολλοὺς διέφθειρε Ῥωμαίων πρὸς Λεοντίνοις, εἷλε<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>τότε δʼ ἐν Σικελίᾳ πρῶτον μὲν ἀδικηθεὶς ὑπὸ Ἱπποκράτους στρατηγοῦ στρατηγοῦ, ὃς Καρχηδονίοις χαριζόμενος καὶ τυραννίδα κτώμενος αὑτῷ πολλοὺς διέφθειρε Ῥωμαίων πρὸς Λεοντίνοις, εἷλε<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">εἷλε</foreign> with Reiske and Coraës: <gap reason="lost"/>
                      <foreign xml:lang="grc">καὶ εἷλε</foreign>, the lacuna to be filled from Livy xxiv. 30, 1.</note> τὴν τῶν Λεοντίνων πόλιν κατὰ κράτος, καὶ Λεοντίνους μὲν οὐκ ἠδίκησε, τῶν δὲ αὐτομόλων ὅσους ἔλαβε μαστιγώσας ἀπέκτεινε.</p>
             </div>
@@ -368,25 +345,13 @@
                <p>πολλάκις δὲ μετέωρος ἐξαρθεῖσα ναῦς ἀπὸ τῆς θαλάσσης δεῦρο κἀκεῖσε περιδινουμένη καὶ κρεμαμένη θέαμα φρικῶδες ἦν, μέχρι οὗ τῶν ἀνδρῶν ἀπορριφέντων καὶ διασφενδονηθέντων κενὴ προσπέσοι τοῖς τείχεσιν ἢ περι· ολίσθοι τῆς λαβῆς ἀνείσης. ἣν δὲ ὁ Μάρκελλος ἀπὸ τοῦ ζεύγματος ἐπῆγε μηχανήν, σαμβύκη μὲν ἐκαλεῖτο διʼ ὁμοιότητά τινα σχήματος πρὸς τὸ μουσικὸν ὄργανον, </p>
             </div>
             <div n="4" type="section">
-               <p>ἔτι δὲ ἄπωθεν αὐτῆς προσφερομένης πρὸς τὸ τεῖχος ἐξήλατο λίθος <pb n="p.476"/> δεκατάλαντος ὁλκήν, εἶτα ἕτερος ἐπὶ τούτῳ καὶ τρίτος, ὧν οἱ μὲν αὐτῇ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">αὐτῇ</foreign> Bekker, after Coraës: <foreign xml:lang="grc">αὐτῆς</foreign> (<gloss>of the engine itself</gloss>).</note> ἐμπεσόντες μεγάλῳ κτύπῳ καὶ κλύδωνι τῆς μηχανῆς τήν τε βάσιν συνηλόησαν καὶ τὸ γόμφωμα διέσεισαν καὶ διέσπασαν τοῦ ζεύγματος, ὥστε<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ἔτι δὲ ἄπωθεν αὐτῆς προσφερομένης πρὸς τὸ τεῖχος ἐξήλατο λίθος <pb n="p.476"/> δεκατάλαντος ὁλκήν, εἶτα ἕτερος ἐπὶ τούτῳ καὶ τρίτος, ὧν οἱ μὲν αὐτῇ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
+                     <foreign xml:lang="grc">αὐτῇ</foreign> Bekker, after Coraës: <foreign xml:lang="grc">αὐτῆς</foreign> (<gloss>of the engine itself</gloss>).</note> ἐμπεσόντες μεγάλῳ κτύπῳ καὶ κλύδωνι τῆς μηχανῆς τήν τε βάσιν συνηλόησαν καὶ τὸ γόμφωμα διέσεισαν καὶ διέσπασαν τοῦ ζεύγματος, ὥστε<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ὥστε</foreign> before this word Sintenis<hi rend="superscript">2</hi> and Bekker assume a lacuna in the text, comparing Polybius, viii. 7, fin.</note> τὸν Μάρκελλον ἀπορούμενον αὐτόν τε ταῖς ναυσὶν ἀποπλεῖν κατὰ τάχος καὶ τοῖς πεζοῖς ἀναχώρησιν παρεγγυῆσαι.</p>
             </div>
             <div n="5" type="section">
-               <p>βουλευομένοις δὲ ἔδοξεν αὐτοῖς ἔτι νυκτὸς, ἂν δύνωνται, προσμῖξαι τοῖς τείχεσι· τοὺς γὰρ τόνους, οἷς χρῆσθαι τὸν Ἀρχιμήδην, ῥύμην ἔχοντας ὑπερπετεῖς ποιήσεσθαι τὰς τῶν βελῶν ἀφέσεις, ἐγγύθεν δὲ καὶ τελέως ἀπράκτους εἶναι διάστημα τῆς πληγῆς οὐκ ἐχούσης. ὁ δʼ ἦν, ὡς ἔοικεν, ἐπὶ ταῦτα πάλαι παρεσκευασμένος ὀργάνων τε συμμέτρους πρὸς πᾶν διάστημα κινήσεις καὶ βέλη βραχέα, καὶ διὰ τὸ τεῖχος<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">τὸ τεῖχος, ὄντων</foreign> added to the text by Sintenis, who compares Polybius viii. 7, 6.</note> οὐ μεγάλων, πολλῶν δὲ καὶ συνεχῶν τρημάτων ὄντων,<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>βουλευομένοις δὲ ἔδοξεν αὐτοῖς ἔτι νυκτὸς, ἂν δύνωνται, προσμῖξαι τοῖς τείχεσι· τοὺς γὰρ τόνους, οἷς χρῆσθαι τὸν Ἀρχιμήδην, ῥύμην ἔχοντας ὑπερπετεῖς ποιήσεσθαι τὰς τῶν βελῶν ἀφέσεις, ἐγγύθεν δὲ καὶ τελέως ἀπράκτους εἶναι διάστημα τῆς πληγῆς οὐκ ἐχούσης. ὁ δʼ ἦν, ὡς ἔοικεν, ἐπὶ ταῦτα πάλαι παρεσκευασμένος ὀργάνων τε συμμέτρους πρὸς πᾶν διάστημα κινήσεις καὶ βέλη βραχέα, καὶ διὰ τὸ τεῖχος<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
+                     <foreign xml:lang="grc">τὸ τεῖχος, ὄντων</foreign> added to the text by Sintenis, who compares Polybius viii. 7, 6.</note> οὐ μεγάλων, πολλῶν δὲ καὶ συνεχῶν τρημάτων ὄντων,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τὸ τεῖχος, ὄντων</foreign> added to the text by Sintenis, who compares Polybius viii. 7, 6.</note> οἱ σκορπίοι βραχύτονοι μέν, ἐγγύθεν δὲ πλῆξαι παρεστήκεσαν ἀόρατοι τοῖς πολεμίοις.</p>
             </div>
          </div>
@@ -400,14 +365,8 @@
          </div>
          <div n="17" type="chapter">
             <div n="1" type="section">
-               <p>οὐ μὴν ἀλλʼ ὁ Μάρκελλος ἀπέφυγέ τε καὶ τοὺς σὺν ἑαυτῷ σκώπτων τεχνίτας καὶ μηχανοποιοὺς ἔλεγεν <q>οὐ παυσόμεθα πρὸς τὸν γεωμετρικὸν τοῦτον Βριάρεων πολεμοῦντες, ὃς ταῖς μὲν ναυσὶν<note anchored="true"
-                           place="unspecified"
-                           resp="editor"
-                           xml:lang="eng">
-                        <foreign xml:lang="grc">ταῖς μὲν ναυσὶν <gap reason="lost"/> ῥαπίζων</foreign> an early anonymous correction of the MSS. <foreign xml:lang="grc">τὰς μὲν ναῦς ἡμῶν καθίζων πρὸς τὴν θάλασσαν παίζων</foreign>, adopted by Bekker. Cf. Polybius, viii. 8, 6.</note> ἡμῶν κυαθίζει ἐκ τῆς θαλάσσης, τὴν δὲ σαμβύκην ῥαπίζων<note anchored="true"
-                           place="unspecified"
-                           resp="editor"
-                           xml:lang="eng">
+               <p>οὐ μὴν ἀλλʼ ὁ Μάρκελλος ἀπέφυγέ τε καὶ τοὺς σὺν ἑαυτῷ σκώπτων τεχνίτας καὶ μηχανοποιοὺς ἔλεγεν <q>οὐ παυσόμεθα πρὸς τὸν γεωμετρικὸν τοῦτον Βριάρεων πολεμοῦντες, ὃς ταῖς μὲν ναυσὶν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
+                        <foreign xml:lang="grc">ταῖς μὲν ναυσὶν <gap reason="lost"/> ῥαπίζων</foreign> an early anonymous correction of the MSS. <foreign xml:lang="grc">τὰς μὲν ναῦς ἡμῶν καθίζων πρὸς τὴν θάλασσαν παίζων</foreign>, adopted by Bekker. Cf. Polybius, viii. 8, 6.</note> ἡμῶν κυαθίζει ἐκ τῆς θαλάσσης, τὴν δὲ σαμβύκην ῥαπίζων<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                         <foreign xml:lang="grc">ταῖς μὲν ναυσὶν <gap reason="lost"/> ῥαπίζων</foreign> an early anonymous correction of the MSS. <foreign xml:lang="grc">τὰς μὲν ναῦς ἡμῶν καθίζων πρὸς τὴν θάλασσαν παίζων</foreign>, adopted by Bekker. Cf. Polybius, viii. 8, 6.</note> μετʼ αἰσχύνης ἐκβέβληκε, τοὺς δὲ μυθικοὺς ἑκατόγχειρας ὑπεραίρει τοσαῦτα βάλλων ἅμα βέλη καθʼ ἡμῶν;</q>
                </p>
             </div>
@@ -421,17 +380,11 @@
                <p>μηθὲν ἐθελῆσαι σύγγραμμα περὶ τούτων ἀπολιπεῖν, ἀλλὰ τὴν περὶ τὰ μηχανικὰ πραγματείαν καὶ πᾶσαν ὅλως τέχνην χρείας ἐφαπτομένην <pb n="p.480"/> ἀγεννῆ καὶ βάναυσον ἡγησάμενος, εἰς ἐκεῖνα καταθέσθαι μόνα τὴν αὐτοῦ φιλοτιμίαν οἷς τὸ καλὸν καὶ περιττὸν ἀμιγὲς τοῦ ἀναγκαίου πρόσεστιν, ἀσύγκριτα μὲν ὄντα τοῖς ἄλλοις, ἔριν δὲ παρέχοντα πρὸς τὴν ὕλην τῇ ἀποδείξει, τῆς μὲν τὸ μέγεθος καὶ τὸ κάλλος, τῆς δὲ τὴν ἀκρίβειαν καὶ τὴν δύναμιν ὑπερφυῆ παρεχομένης· </p>
             </div>
             <div n="5" type="section">
-               <p>οὐ γὰρ ἔστιν ἐν γεωμετρίᾳ χαλεπωτέρας καὶ βαρυτέρας ὑποθέσεις ἐν ἁπλουστέροις λαβεῖν καὶ καθαρωτέροις στοιχείοις γραφομένας, καὶ τοῦθʼ οἱ μὲν εὐφυΐᾳ τοῦ ἀνδρὸς προσάπτουσιν, οἱ δὲ ὑπερβολῇ τινι πόνου νομίζουσιν ἀπόνως πεποιημένῳ καὶ ῥᾳδίως ἕκαστον ἐοικὸς γεγονέναι· ζητῶν μὲν γὰρ οὐκ ἄν τις εὕροι διʼ αὐτοῦ τὴν ἀπόδειξιν, ἅμα δὲ τῇ μαθήσει παρίσταται δόξα τοῦ κἂν αὐτὸν εὑρεῖν οὕτω λείαν ὁδὸν ἄγει<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>οὐ γὰρ ἔστιν ἐν γεωμετρίᾳ χαλεπωτέρας καὶ βαρυτέρας ὑποθέσεις ἐν ἁπλουστέροις λαβεῖν καὶ καθαρωτέροις στοιχείοις γραφομένας, καὶ τοῦθʼ οἱ μὲν εὐφυΐᾳ τοῦ ἀνδρὸς προσάπτουσιν, οἱ δὲ ὑπερβολῇ τινι πόνου νομίζουσιν ἀπόνως πεποιημένῳ καὶ ῥᾳδίως ἕκαστον ἐοικὸς γεγονέναι· ζητῶν μὲν γὰρ οὐκ ἄν τις εὕροι διʼ αὐτοῦ τὴν ἀπόδειξιν, ἅμα δὲ τῇ μαθήσει παρίσταται δόξα τοῦ κἂν αὐτὸν εὑρεῖν οὕτω λείαν ὁδὸν ἄγει<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἄγει</foreign> Bekker, after Bryan: <foreign xml:lang="grc">ἄγειν</foreign>.</note> καὶ ταχεῖαν ἐπὶ τὸ δεικνύμενον.</p>
             </div>
             <div n="6" type="section">
-               <p>οὔκουν οὐδὲ ἀπιστῆσαι τοῖς περὶ αὐτοῦ λεγομένοις ἐστίν, ὡς ὑπʼ οἰκείας δή τινος καὶ συνοίκου θελγόμενος ἀεὶ σειρῆνος ἐλέληστο καὶ σίτου<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>οὔκουν οὐδὲ ἀπιστῆσαι τοῖς περὶ αὐτοῦ λεγομένοις ἐστίν, ὡς ὑπʼ οἰκείας δή τινος καὶ συνοίκου θελγόμενος ἀεὶ σειρῆνος ἐλέληστο καὶ σίτου<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">καὶ σίτου</foreign> Bekker has <foreign xml:lang="grc">πότου καὶ σίτου</foreign> (<gloss>food and drink</gloss>), a suggestion of Coraës.</note> καὶ θεραπείας σώματος ἐξέλειπε, βίᾳ δὲ πολλάκις ἑλκόμενος ἐπʼ ἄλειμμα καὶ λουτρόν, ἐν ταῖς ἐσχάραις ἔγραφε σχήματα τῶν γεωμετρικῶν, καὶ τοῦ σώματος ἀληλιμμένου διῆγε τῷ δακτύλῳ γραμμάς, ὑπὸ ἡδονῆς μεγάλης κάτοχος ὢν καὶ μουσόληπτος ἀληθῶς.</p>
             </div>
             <div n="7" type="section">
@@ -511,10 +464,7 @@
                   <q>ἀπολείπωμεν</q> γὰρ ἔφη, <q>τοὺς θεοὺς τούτους τοῖς Ταραντίνοις κεχολωμένους.</q> Μάρκελλον δʼ ᾐτιῶντο πρῶτον μὲν ὡς ἐπίφθονον ποιοῦντα τὴν πόλιν, οὐ μόνον ἀνθρώπων, ἀλλὰ καὶ θεῶν οἷον αἰχμαλώτων ἀγομένων ἐν αὐτῇ καὶ πομπευομένων, ἔπειτα ὅτι τὸν δῆμον εἰθισμένον πολεμεῖν ἢ γεωργεῖν, </p>
             </div>
             <div n="5" type="section">
-               <p>τρυφῆς δὲ καὶ ῥᾳθυμίας ἄπειρον ὄντα καὶ κατὰ τὸν Εὐριπίδειον Ἡρακλέα, <quote rend="blockquote">φαῦλον, ἄκομψον, τὰ μέγιστʼ ἀγαθόν,<note anchored="true"
-                           place="unspecified"
-                           resp="editor"
-                           xml:lang="eng">
+               <p>τρυφῆς δὲ καὶ ῥᾳθυμίας ἄπειρον ὄντα καὶ κατὰ τὸν Εὐριπίδειον Ἡρακλέα, <quote rend="blockquote">φαῦλον, ἄκομψον, τὰ μέγιστʼ ἀγαθόν,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                         <foreign xml:lang="grc">μέγιστ’ ἀγαθόν</foreign> with Coraës, as in the <title>Cimon</title>, iv. 4: <foreign xml:lang="grc">μέγιστά τε ἀγαθόν</foreign>.</note>
                   </quote>
                   <pb n="p.494"/> σχολῆς ἐνέπλησε καὶ λαλιᾶς περὶ τεχνῶν καὶ τεχνιτῶν, ἀστεϊζόμενον καὶ διατρίβοντα πρὸς τούτῳ πολὺ μέρος τῆς ἡμέρας, οὐ μὴν ἀλλὰ τούτοις ἐσεμνύνετο καὶ πρὸς τοὺς Ἕλληνας, ὡς τὰ καλὰ καὶ θαυμαστὰ τῆς Ἑλλάδος οὐκ ἐπισταμένους τιμᾶν καὶ θαυμάζειν Ῥωμαίους διδάξας.</p>
@@ -522,10 +472,7 @@
          </div>
          <div n="22" type="chapter">
             <div n="1" type="section">
-               <p>ἐνισταμένων δὲ τῶν ἐχθρῶν τῷ Μαρκέλλῳ πρὸς τὸν θρίαμβον, ἐπεὶ καὶ πράξεις τινὲς ὑπολιπεῖς ἦσαν ἔτι περὶ Σικελίαν καὶ φθόνον εἶχεν ὁ τρίτος θρίαμβος, συνεχώρησεν αὐτὸς<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ἐνισταμένων δὲ τῶν ἐχθρῶν τῷ Μαρκέλλῳ πρὸς τὸν θρίαμβον, ἐπεὶ καὶ πράξεις τινὲς ὑπολιπεῖς ἦσαν ἔτι περὶ Σικελίαν καὶ φθόνον εἶχεν ὁ τρίτος θρίαμβος, συνεχώρησεν αὐτὸς<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">αὐτός</foreign> Coraës and Bekker, following Stephanus, have <foreign xml:lang="grc">αὐτοῖς</foreign> (<gloss>agreed with them</gloss>).</note> τὸν μὲν ἐντελῆ καὶ μέγαν εἰς τὸ Ἀλβανὸν ὄρος ἐξελάσαι, τὸν δὲ ἐλάττω καταγαγεῖν εἰς τὴν πόλιν, ὃν εὔαν Ἕλληνες, ὄβαν δὲ Ῥωμαῖοι καλοῦσι.</p>
             </div>
             <div n="2" type="section">
@@ -570,18 +517,9 @@
                <p>τοὐντεῦθεν ἤδη τρέπεται πρὸς Ἀννίβαν. καὶ τῶν ἄλλων ὑπάτων καὶ ἡγεμόνων σχεδὸν ἁπάντων μετὰ τὰ ἐν Κάνναις ἑνὶ στρατηγήματι τῷ φυγομαχεῖν χρωμένων ἐπὶ τὸν ἄνδρα, παρατάττεσθαι δὲ καὶ συμπλέκεσθαι μηδενὸς τολμῶντος, αὐτὸς ἐπὶ τὴν ἐναντίαν ὥρμησεν ὁδόν, </p>
             </div>
             <div n="2" type="section">
-               <p>οἰόμενος τῷ δοκοῦντι καταλύειν Ἀννίβαν χρόνῳ πρότερον ἐκτριβεῖσαν ὑπʼ ἐκείνου<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">ὑπ’ ἐκείνου, ἔχειν</foreign> bracketed by Bekker.</note> λήσεσθαι τὴν Ἰταλίαν, καὶ τὸν Φάβιον ἀεὶ τῆς ἀσφαλείας ἐχόμενον οὐ καλῶς ἔχειν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">ὑπ’ ἐκείνου, ἔχειν</foreign> bracketed by Bekker.</note> ἰᾶσθαι τὸ νόσημα τῆς <pb n="p.502"/> πατρίδος, περιμένοντα τῇ ῥώμῃ μαραινομένῃ συναποσβῆναι τὸν πόλεμον, ὥσπερ ἰατρῶν τοὺς ἀτόλμους καὶ δειλοὺς πρὸς τὰ βοηθήματα, τῆς νόσου παρακμὴν τὴν τῆς δυνάμεως<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>οἰόμενος τῷ δοκοῦντι καταλύειν Ἀννίβαν χρόνῳ πρότερον ἐκτριβεῖσαν ὑπʼ ἐκείνου<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
+                     <foreign xml:lang="grc">ὑπ’ ἐκείνου, ἔχειν</foreign> bracketed by Bekker.</note> λήσεσθαι τὴν Ἰταλίαν, καὶ τὸν Φάβιον ἀεὶ τῆς ἀσφαλείας ἐχόμενον οὐ καλῶς ἔχειν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
+                     <foreign xml:lang="grc">ὑπ’ ἐκείνου, ἔχειν</foreign> bracketed by Bekker.</note> ἰᾶσθαι τὸ νόσημα τῆς <pb n="p.502"/> πατρίδος, περιμένοντα τῇ ῥώμῃ μαραινομένῃ συναποσβῆναι τὸν πόλεμον, ὥσπερ ἰατρῶν τοὺς ἀτόλμους καὶ δειλοὺς πρὸς τὰ βοηθήματα, τῆς νόσου παρακμὴν τὴν τῆς δυνάμεως<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τὴν τῆς δυνάμεως</foreign> Bekker, after Coraës: <foreign xml:lang="grc">τῆς δυνάμεως</foreign>.</note> ἐξανάλωσιν ἡγουμένους.</p>
             </div>
             <div n="3" type="section">
@@ -602,10 +540,7 @@
          </div>
          <div n="25" type="chapter">
             <div n="1" type="section">
-               <p>ἐπεὶ δὲ ἐλθὼν ἀπὸ τῆς Σικελίας ὁ τοῦ Μαρκέλλου συνάρχων ἕτερον ἐβούλετο λαβεῖν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ἐπεὶ δὲ ἐλθὼν ἀπὸ τῆς Σικελίας ὁ τοῦ Μαρκέλλου συνάρχων ἕτερον ἐβούλετο λαβεῖν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">λαβεῖν</foreign> Bekker has <foreign xml:lang="grc">λέγειν</foreign>, after Coraës.</note> δικτάτορα, καὶ βιασθῆναι παρὰ γνώμην μὴ βουλόμενος ἐξέπλευσε νυκτὸς εἰς Σικελίαν, οὕτως ὁ μὲν δῆμος ὠνόμασε δικτάτορα Κόϊντον Φούλβιον, ἡ βουλὴ δʼ ἔγραψε Μαρκέλλῳ κελεύουσα τοῦτον εἰπεῖν. ὁ δὲ πεισθεὶς ἀνεῖπε καὶ συνεπεκύρωσε τοῦ δήμου τὴν γνώμην, αὐτὸς δὲ πάλιν ἀνθύπατος <pb n="p.506"/> εἰς τοὐπιὸν ἀπεδείχθη.</p>
             </div>
             <div n="2" type="section">

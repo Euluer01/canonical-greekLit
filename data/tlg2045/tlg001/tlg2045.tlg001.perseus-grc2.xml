@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -54,34 +53,24 @@
                   </imprint>
                   <biblScope unit="volume">1-3</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/nonnosdionysiaca0001unse/page/n7/mode/2up"
-                    n="V1">Internet Archive</ref>
-               <ref target="https://archive.org/details/dionysiaca01nonnuoft/page/n59/mode/2up"
-                    n="V1">Internet Archive</ref>
+               <ref target="https://archive.org/details/nonnosdionysiaca0001unse/page/n7/mode/2up" n="V1">Internet Archive</ref>
+               <ref target="https://archive.org/details/dionysiaca01nonnuoft/page/n59/mode/2up" n="V1">Internet Archive</ref>
                <!-- note blurry edition -->
-               <ref target="https://archive.org/details/dionysiaca0002nonn/page/n5/mode/2up"
-                    n="V2">Internet Archive</ref>
-               <ref target="https://archive.org/details/dionysiaca02nonnuoft/page/n17/mode/2up"
-                    n="V2">Internet Archive</ref>
+               <ref target="https://archive.org/details/dionysiaca0002nonn/page/n5/mode/2up" n="V2">Internet Archive</ref>
+               <ref target="https://archive.org/details/dionysiaca02nonnuoft/page/n17/mode/2up" n="V2">Internet Archive</ref>
                <!-- note blurry edition -->
-               <ref target="https://archive.org/details/dionysiaca0003nonn/page/n17/mode/2up"
-                    n="V3">Internet Archive</ref>
-               <ref target="https://archive.org/details/dionysiaca03nonnuoft/page/n17/mode/2up"
-                    n="V3">Internet Archive</ref>
+               <ref target="https://archive.org/details/dionysiaca0003nonn/page/n17/mode/2up" n="V3">Internet Archive</ref>
+               <ref target="https://archive.org/details/dionysiaca03nonnuoft/page/n17/mode/2up" n="V3">Internet Archive</ref>
                <!-- note blurry edition -->
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
                <p>This pointer pattern extracts book and line.</p>
             </cRefPattern>
-            <cRefPattern n="book"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts book.</p>
             </cRefPattern>
          </refsDecl>
@@ -93,7 +82,7 @@
             <refState unit="book" delim="."/>
             <refState unit="line"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="line" delim="." match="l" use="@n"/>

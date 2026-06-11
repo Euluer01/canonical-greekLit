@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -48,9 +47,7 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts section</p>
             </cRefPattern>
          </refsDecl>
@@ -62,7 +59,7 @@
                 <refState unit="text"/>
                 <refState unit="page"/>
             </refsDecl>-->
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
             </citeStructure>
@@ -113,8 +110,7 @@
                         τί οὖν δή ἐστιν ἅττα εἶπεν ὁ ἀνὴρ πρὸ τοῦ θανάτου; καὶ πῶς ἐτελεύτα;
                             ἡδέως γὰρ ἂν ἐγὼ ἀκούσαιμι. καὶ γὰρ οὔτε <del status="unremarkable">τῶν
                                 πολιτῶν</del>
-                  <name type="ethnic"
-                        key="0011394:*flia/sios:ethnic:masc/neut:gen 0011394:*flia/sios:ethnic:fem:gen">Φλειασίων</name> οὐδεὶς πάνυ τι ἐπιχωριάζει τὰ νῦν <placeName key="0361602:*)aqh=nai:place:nn:acc">Ἀθήναζε</placeName>, οὔτε τις
+                  <name type="ethnic" key="0011394:*flia/sios:ethnic:masc/neut:gen 0011394:*flia/sios:ethnic:fem:gen">Φλειασίων</name> οὐδεὶς πάνυ τι ἐπιχωριάζει τὰ νῦν <placeName key="0361602:*)aqh=nai:place:nn:acc">Ἀθήναζε</placeName>, οὔτε τις
                             ξένος ἀφῖκται χρόνου συχνοῦ <milestone unit="section" resp="Stephanus" n="57b"/>ἐκεῖθεν
                             ὅστις ἂν ἡμῖν σαφές τι ἀγγεῖλαι οἷός τ’ ἦν περὶ τούτων, πλήν γε δὴ ὅτι
                             φάρμακον πιὼν ἀποθάνοι·  τῶν δὲ ἄλλων οὐδὲν εἶχεν φράζειν.</said>
@@ -899,8 +895,7 @@
                             ἔφη, ὦ <persName key="0003865:*simmi/as:person:masc:voc 0003865:*simmi/as:person:masc:gen">Σιμμία</persName> τε καὶ <persName key="0006391:*ke/bhs:person:masc:nom">Κέβης</persName>, ἀπολογοῦμαι,
                             ὡς εἰκότως ὑμᾶς τε ἀπολείπων καὶ τοὺς ἐνθάδε δεσπότας οὐ <milestone unit="section" n="69e"/>χαλεπῶς φέρω οὐδ’ ἀγανακτῶ, ἡγούμενος κἀκεῖ
                             οὐδὲν ἧττον ἢ ἐνθάδε δεσπόταις τε ἀγαθοῖς ἐντεύξεσθαι καὶ ἑταίροις·  <del status="unremarkable">τοῖς δὲ πολλοῖς ἀπιστίαν παρέχει</del>· εἴ τι
-                            οὖν ὑμῖν πιθανώτερός εἰμι ἐν τῇ ἀπολογίᾳ ἢ τοῖς <name type="ethnic"
-                        key="0360214:*)aqhnai=os:ethnic:masc/neut:gen 0360214:*)aqhnai=os:ethnic:fem:gen 0017075:*)aqh/naios:group:masc:gen 0000001:*)aqh/naion:noclass:neut:gen 0000001:*)aqh/naia:noclass:neut:gen">Ἀθηναίων</name> δικασταῖς, εὖ ἂν ἔχοι.</said>
+                            οὖν ὑμῖν πιθανώτερός εἰμι ἐν τῇ ἀπολογίᾳ ἢ τοῖς <name type="ethnic" key="0360214:*)aqhnai=os:ethnic:masc/neut:gen 0360214:*)aqhnai=os:ethnic:fem:gen 0017075:*)aqh/naios:group:masc:gen 0000001:*)aqh/naion:noclass:neut:gen 0000001:*)aqh/naia:noclass:neut:gen">Ἀθηναίων</name> δικασταῖς, εὖ ἂν ἔχοι.</said>
             </p>
          </div>
          <div resp="perseus" n="70" type="section">
@@ -1751,8 +1746,7 @@
                             ἐγὼ δὲ καὶ αὐτὸς ἡγοῦμαι ὁμόδουλός τε εἶναι τῶν κύκνων καὶ ἱερὸς τοῦ
                             αὐτοῦ θεοῦ, καὶ οὐ χεῖρον ἐκείνων τὴν μαντικὴν ἔχειν παρὰ τοῦ δεσπότου,
                             οὐδὲ δυσθυμότερον αὐτῶν τοῦ βίου ἀπαλλάττεσθαι. ἀλλὰ τούτου γ’ ἕνεκα
-                            λέγειν τε χρὴ καὶ ἐρωτᾶν ὅτι ἂν βούλησθε, ἕως ἂν <name type="ethnic"
-                        key="0360214:*)aqhnai=os:ethnic:masc/neut:gen 0360214:*)aqhnai=os:ethnic:fem:gen 0017075:*)aqh/naios:group:masc:gen 0000001:*)aqh/naion:noclass:neut:gen 0000001:*)aqh/naia:noclass:neut:gen">Ἀθηναίων</name> ἐῶσιν ἄνδρες ἕνδεκα. <milestone ed="P" unit="para"/>καλῶς, ἔφη, λέγεις, ὁ <persName key="0003865:*simmi/as:person:masc:nom">Σιμμίας</persName>· καὶ ἐγώ
+                            λέγειν τε χρὴ καὶ ἐρωτᾶν ὅτι ἂν βούλησθε, ἕως ἂν <name type="ethnic" key="0360214:*)aqhnai=os:ethnic:masc/neut:gen 0360214:*)aqhnai=os:ethnic:fem:gen 0017075:*)aqh/naios:group:masc:gen 0000001:*)aqh/naion:noclass:neut:gen 0000001:*)aqh/naia:noclass:neut:gen">Ἀθηναίων</name> ἐῶσιν ἄνδρες ἕνδεκα. <milestone ed="P" unit="para"/>καλῶς, ἔφη, λέγεις, ὁ <persName key="0003865:*simmi/as:person:masc:nom">Σιμμίας</persName>· καὶ ἐγώ
                             τέ σοι ἐρῶ ὃ 
                         <milestone unit="section" resp="Stephanus" n="85c"/>
                      ἀπορῶ, καὶ αὖ ὅδε, ᾗ οὐκ ἀποδέχεται τὰ εἰρημένα. ἐμοὶ γὰρ δοκεῖ, ὦ
@@ -1990,8 +1984,7 @@
                     
                         
                         καὶ ἔγωγ’ ἄν, εἰ σὺ εἴην καί με διαφεύγοι ὁ λόγος, ἔνορκον ἂν ποιησαίμην
-                            ὥσπερ <name type="ethnic"
-                        key="0059158:*)argei=os:ethnic:masc:nom/voc 0010461:*)argei=os:place:masc:nom/voc 0000796:*)argei=os:group:masc:nom/voc">Ἀργεῖοι</name>, μὴ πρότερον κομήσειν, πρὶν ἂν νικήσω ἀναμαχόμενος
+                            ὥσπερ <name type="ethnic" key="0059158:*)argei=os:ethnic:masc:nom/voc 0010461:*)argei=os:place:masc:nom/voc 0000796:*)argei=os:group:masc:nom/voc">Ἀργεῖοι</name>, μὴ πρότερον κομήσειν, πρὶν ἂν νικήσω ἀναμαχόμενος
                             τὸν <persName key="0003865:*simmi/as:person:masc:gen">Σιμμίου</persName>
                             τε καὶ κέβητος λόγον. <milestone ed="P" unit="para"/>ἀλλ᾽, ἦν δ’ ἐγώ,
                             πρὸς δύο λέγεται οὐδ’ ὁ <persName key="0067594:*(hraklh=s:person:masc:nom">Ἡρακλῆς</persName> οἷός τε
@@ -2329,8 +2322,7 @@
                         
                         ἁρμονίαν τινὰ φάναι εἶναι·  οὔτε γὰρ ἄν, ὡς ἔοικεν, <persName key="0095973:*(/omhros:person:masc:dat">Ὁμήρῳ</persName> θείῳ ποιητῇ
                             ὁμολογοῖμεν οὔτε αὐτοὶ ἡμῖν αὐτοῖς. <milestone ed="P" unit="para"/>ἔχει
-                            οὕτως, ἔφη. <milestone ed="P" unit="para"/>εἶεν δή, ἦ δ’ ὃς ὁ <persName key="0048728:*swkra/ths:person:masc:nom 0048728:*swkra/ths:group:masc:nom/voc 0048728:*swkra/ths:group:masc:acc 0000001:*swkrate/w:noclass:nn:nom">Σωκράτης</persName>, τὰ μὲν <persName key="0003054:*(armoni/a:person:fem:gen 0003054:*(armoni/a:group:fem:acc">Ἁρμονίας</persName> ἡμῖν τῆς <name type="ethnic"
-                        key="0070803:*qhbai=os:ethnic:fem:gen 0000001:*qhbaiko/s:noclass:fem:gen">Θηβαϊκῆς</name> ἵλεά πως, ὡς ἔοικε, μετρίως γέγονεν·  τί δὲ δὴ τὰ
+                            οὕτως, ἔφη. <milestone ed="P" unit="para"/>εἶεν δή, ἦ δ’ ὃς ὁ <persName key="0048728:*swkra/ths:person:masc:nom 0048728:*swkra/ths:group:masc:nom/voc 0048728:*swkra/ths:group:masc:acc 0000001:*swkrate/w:noclass:nn:nom">Σωκράτης</persName>, τὰ μὲν <persName key="0003054:*(armoni/a:person:fem:gen 0003054:*(armoni/a:group:fem:acc">Ἁρμονίας</persName> ἡμῖν τῆς <name type="ethnic" key="0070803:*qhbai=os:ethnic:fem:gen 0000001:*qhbaiko/s:noclass:fem:gen">Θηβαϊκῆς</name> ἵλεά πως, ὡς ἔοικε, μετρίως γέγονεν·  τί δὲ δὴ τὰ
                                 <persName key="0011840:*ka/dmos:person:masc:gen 0000768:*ka/dmos:place:masc:gen">Κάδμου</persName>, ἔφη, ὦ <persName key="0006391:*ke/bhs:person:masc:nom">Κέβης</persName>, πῶς
                             ἱλασόμεθα καὶ τίνι λόγῳ; <milestone ed="P" unit="para"/>σύ μοι δοκεῖς,
                             ἔφη ὁ <persName key="0006391:*ke/bhs:person:masc:nom">Κέβης</persName>,
@@ -2550,8 +2542,7 @@
                             μέλη, καὶ διὰ ταύτην τὴν αἰτίαν συγκαμφθεὶς ἐνθάδε κάθημαι·  καὶ αὖ περὶ
                             τοῦ διαλέγεσθαι ὑμῖν ἑτέρας τοιαύτας αἰτίας λέγοι, φωνάς τε καὶ ἀέρας
                             καὶ ἀκοὰς καὶ ἄλλα μυρία <milestone unit="section" resp="Stephanus" n="98e"/>τοιαῦτα
-                            αἰτιώμενος, ἀμελήσας τὰς ὡς ἀληθῶς αἰτίας λέγειν, ὅτι, ἐπειδὴ <name type="ethnic"
-                        key="0360214:*)aqhnai=os:ethnic:masc/neut:dat 0017075:*)aqh/naios:group:masc:dat 0000001:*)aqh/naion:noclass:neut:dat 0000001:*)aqh/naia:noclass:neut:dat">Ἀθηναίοις</name> ἔδοξε βέλτιον εἶναι ἐμοῦ καταψηφίσασθαι, διὰ ταῦτα
+                            αἰτιώμενος, ἀμελήσας τὰς ὡς ἀληθῶς αἰτίας λέγειν, ὅτι, ἐπειδὴ <name type="ethnic" key="0360214:*)aqhnai=os:ethnic:masc/neut:dat 0017075:*)aqh/naios:group:masc:dat 0000001:*)aqh/naion:noclass:neut:dat 0000001:*)aqh/naia:noclass:neut:dat">Ἀθηναίοις</name> ἔδοξε βέλτιον εἶναι ἐμοῦ καταψηφίσασθαι, διὰ ταῦτα
                             δὴ καὶ ἐμοὶ βέλτιον αὖ δέδοκται ἐνθάδε καθῆσθαι, καὶ δικαιότερον
                             παραμένοντα ὑπέχειν τὴν δίκην ἣν ἂν κελεύσωσιν·  ἐπεὶ νὴ τὸν κύνα, ὡς
                             ἐγᾦμαι, πάλαι ἂν <milestone unit="page" resp="Stephanus" n="99"/>
@@ -2559,8 +2550,7 @@
                     
                         
                         ταῦτα τὰ νεῦρα καὶ τὰ ὀστᾶ ἢ περὶ <placeName key="0042237:*me/gara:place:neut:nom/voc/acc">Μέγαρα</placeName> ἢ
-                                <name type="ethnic"
-                        key="0047884:*boiwto/s:ethnic:masc:acc 0000470:*boiwto/s:group:masc:acc">Βοιωτοὺς</name> ἦν, ὑπὸ δόξης φερόμενα τοῦ βελτίστου, εἰ μὴ
+                                <name type="ethnic" key="0047884:*boiwto/s:ethnic:masc:acc 0000470:*boiwto/s:group:masc:acc">Βοιωτοὺς</name> ἦν, ὑπὸ δόξης φερόμενα τοῦ βελτίστου, εἰ μὴ
                             δικαιότερον ᾤμην καὶ κάλλιον εἶναι πρὸ τοῦ φεύγειν τε καὶ ἀποδιδράσκειν
                             ὑπέχειν τῇ πόλει δίκην ἥντιν’ ἂν τάττῃ.</said>
             </p>
@@ -3177,8 +3167,7 @@
                 <milestone unit="section" resp="Stephanus" n="109b"/>
                     
                         
-                        τοὺς μέχρι <name type="group"
-                        key="0020320:*(hra/kleios:group:masc/neut:gen 0020320:*(hra/kleios:group:masc/fem/neut:gen 0020320:*(hra/kleios:group:fem:gen">Ἡρακλείων</name> στηλῶν ἀπὸ <persName key="0001000:*fa/sis:person:fem:gen">Φάσιδος</persName> ἐν σμικρῷ
+                        τοὺς μέχρι <name type="group" key="0020320:*(hra/kleios:group:masc/neut:gen 0020320:*(hra/kleios:group:masc/fem/neut:gen 0020320:*(hra/kleios:group:fem:gen">Ἡρακλείων</name> στηλῶν ἀπὸ <persName key="0001000:*fa/sis:person:fem:gen">Φάσιδος</persName> ἐν σμικρῷ
                             τινι μορίῳ, ὥσπερ περὶ τέλμα μύρμηκας ἢ βατράχους περὶ τὴν θάλατταν
                             οἰκοῦντας, καὶ ἄλλους ἄλλοθι πολλοὺς ἐν πολλοῖσι τοιούτοις τόποις
                             οἰκεῖν. εἶναι γὰρ πανταχῇ περὶ τὴν γῆν πολλὰ κοῖλα καὶ παντοδαπὰ καὶ τὰς
@@ -3436,8 +3425,7 @@
                             ἐμβάλλει κατωτέρω τοῦ <persName key="0001053:*ta/rtaros:person:fem:gen 0001000:*ta/rtaros:place:fem:gen 0000001:*tartaro/w:noclass:nn:gen">Ταρτάρου</persName>· οὗτος δ’ ἐστὶν ὃν ἐπονομάζουσιν <placeName key="0001000:*puriflege/qwn:place:masc:acc">Πυριφλεγέθοντα</placeName>, οὗ καὶ οἱ ῥύακες ἀποσπάσματα ἀναφυσῶσιν
                             ὅπῃ ἂν τύχωσι τῆς γῆς. τούτου δὲ αὖ καταντικρὺ ὁ τέταρτος ἐκπίπτει εἰς
                             τόπον πρῶτον δεινόν τε καὶ ἄγριον, ὡς λέγεται, χρῶμα δ’ ἔχοντα ὅλον οἷον
-                            ὁ <milestone unit="section" resp="Stephanus" n="113c"/>κυανός, ὃν δὴ ἐπονομάζουσι <name type="noclass"
-                        key="0000001:*stu/gios:noclass:neut:nom/voc/acc 0000001:*stu/gios:noclass:masc:acc 0000001:*stu/gios:noclass:masc/fem:acc">Στύγιον</name>, καὶ τὴν λίμνην ἣν ποιεῖ ὁ ποταμὸς ἐμβάλλων,
+                            ὁ <milestone unit="section" resp="Stephanus" n="113c"/>κυανός, ὃν δὴ ἐπονομάζουσι <name type="noclass" key="0000001:*stu/gios:noclass:neut:nom/voc/acc 0000001:*stu/gios:noclass:masc:acc 0000001:*stu/gios:noclass:masc/fem:acc">Στύγιον</name>, καὶ τὴν λίμνην ἣν ποιεῖ ὁ ποταμὸς ἐμβάλλων,
                                 <placeName key="0005334:*stu/c:place:fem:acc 0002246:*stu/c:person:fem:acc">Στύγα</placeName>· ὁ δ’ ἐμπεσὼν ἐνταῦθα καὶ δεινὰς δυνάμεις λαβὼν
                             ἐν τῷ ὕδατι, δὺς κατὰ τῆς γῆς, περιελιττόμενος χωρεῖ ἐναντίος τῷ
                                 <placeName key="0001000:*puriflege/qwn:place:masc:dat">Πυριφλεγέθοντι</placeName> καὶ ἀπαντᾷ ἐν τῇ <name type="noclass" key="0000001:*)axerousia/s:noclass:fem:dat">Ἀχερουσιάδι</name> λίμνῃ

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -56,14 +55,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -71,7 +66,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -272,10 +267,7 @@
 μόνῳ πυνθανόμενοι παρὰ τῶν συγγεγονότων τὸ ἦθος αὐτοῦ.</p>
             </div>
             <div n="2" type="section">
-               <p>λέγεται δὲ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>λέγεται δὲ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">δὲ</foreign> Coraës and Bekker read <foreign xml:lang="grc">γὰρ</foreign> with one (inferior) MS.</note>  ὁ Σερτώριος οὔτε ὑφʼ 
 ἡδονῆς οὔτε ὑπὸ δέους εὐάλωτος γενέσθαι, φύσει δὲ
 ἀνέκπληκτος ὢν παρὰ τὰ δεινά καὶ μέτριος εὐτυχίαν ἐνεγκεῖν· καὶ πρὸς μὲν εὐθυμαχίαν οὐδενὸς ἀτολμότερος τῶν καθʼ ἑαυτὸν ἡγεμόνων, ὅσα δὲ κλωπείας ἐν πολέμοις ἔργα καὶ πλεονεξίας περὶ τόπους ἐχυροὺς καὶ διαβάσεις τάχους δεομένας ἀπάτης τε καὶ ψευδῶν ἐν δέοντι, σοφιστὴς δεινότατος. <pb n="paris.1624.573"/>
@@ -320,10 +312,7 @@
             <div n="3" type="section">
                <p>ἀλλʼ ὅμως ἀσθενὴς οὕτω καὶ μικρὸς ἀρξάμενος οὐ μόνον ἐθνῶν ἐκράτησε μεγάλων καὶ πόλεις εἷλε πολλάς, ἀλλὰ καὶ τῶν ἀντιστρατήγων Κότταν μὲν ἐν τῷ περὶ τὴν Μελλαρίαν πορθμῷ κατεναυμάχησε, Φουφίδιον δὲ τὸν ἄρχοντα τῆς Βαιτικῆς περὶ τὸν Βαῖτιν ἐτρέψατο 
 <pb n="paris.1624.574"/> δισχιλίους ἀποκτείνας Ῥωμαίων, Δομίτιον δὲ 
-Λεύκιον<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+Λεύκιον<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">Λεύκιον</foreign> the conjecture of Sint.<hi rend="superscript">2</hi>, after Amyot, for the MS. <foreign xml:lang="grc">καὶ Λούσιον</foreign>; Reiske, followed by Sint.<hi rend="superscript">1</hi> and Bekker, read <foreign xml:lang="grc">Καλουίσιον</foreign>.</note> 
 ἀνθύπατον ὄντα τῆς ἑτέρας Ἰβηρίας διὰ τοῦ ταμίου καταγωνισάμενος, </p>
             </div>
@@ -429,10 +418,7 @@
 χρώμενος ἀπειλαῖς ὁρᾷ τῆς γῆς ἐκείνης κονιορτὸν 
 ἄνω πολὺν ὑπὸ πνεύματος ἐπʼ αὐτούς φερόμενον. 
 τέτραπται μὲν γὰρ, ὡς ἔφην, τὰ σπήλαια πρὸς 
-βορέαν, ὁ δὲ ἀπὸ τῆς ἄρκτου πνέων<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+βορέαν, ὁ δὲ ἀπὸ τῆς ἄρκτου πνέων<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">πνέων</foreign> Van Herwerden: <foreign xml:lang="grc">ῥέων</foreign>.</note>  ἄνεμος, 
 Καικίαν ἔνιοι καχοῦσιν, ἐπέχει μάλιστα καὶ πλεῖστός ἐστι τῶν ἐκεῖ πνευμάτων, ἐξ ὑγρῶν πεδίων καὶ νιφοβόλων συμφυσώμενος ὀρῶν· τότε δὲ καὶ θέρους ἀκμάζοντος ἰσχύων καὶ τρεφόμενος τῇ τῶν ὑπαρκτίων ἀνέσει πάγων ἥδιστος ἐπέπνει καὶ κατεῖχεν αὐτούς τε καὶ βοτὰ διʼ ἡμέρας ἀναψύχων.</p>
             </div>
@@ -486,10 +472,7 @@
 ἄλλους ἡγεμόνας· ἐκ δὲ ὧν ἐπηνωρθοῦτο τὰς 
 ἥττας μᾶλλον ἐθαυμάζετο νικώντων τῶν ἀντιστρατήγων, 
 οἷον ἐν τῇ περὶ Σούκρωνι μάχῃ πρός 
-Πομπήϊον, καὶ πάλιν ἐν τῇ περὶ Τουρίαν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+Πομπήϊον, καὶ πάλιν ἐν τῇ περὶ Τουρίαν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">Τουρίαν</foreign> Sintenis<hi rend="superscript">2</hi>, after Ukert; Sintenis<hi rend="superscript">1</hi>, Coraës and Bekker have <foreign xml:lang="grc">Τουττίαν</foreign>. The MSS. reading is uncertain.</note>  πρός 
 τε τοῦτον ὁμοῦ καὶ Μέτελλον.</p>
             </div>
@@ -679,10 +662,7 @@
                <p>καὶ ταχὺ συντριβεὶς ὑπʼ αὐτοῦ καὶ γενόμενος αἰχμάλωτος οὐδὲ τὴν ἐσχάτην ὑπέμεινε συμφορὰν ἡγεμονικῶς, ἀλλὰ τῶν Σερτωρίου γραμμάτων κύριος γεγονώς ὑπισχνεῖτο Πομπηΐῳ δείξειν ὑπατικῶν ἀνδρῶν καὶ μέγιστον ἐν Ῥώμῃ δυναμένων αὐτογράφους ἐπιστολάς, καλούντων Σερτώριον εἰς Ἰταλίαν, ὡς πολλῶν ποθούντων τὰ παρόντα κινῆσαι καὶ μεταβαλεῖν τὴν πολιτείαν.</p>
             </div>
             <div n="3" type="section">
-               <p>ἔργον οὖν ὁ Πομπήϊος οὐ νέας φρενός, ἀλλʼ εὖ μάλα βεβηκυίας καὶ κατηρτυμένης ἐργασάμενος μεγάλων ἀπήλλαξε τὴν Ῥώμην φόβων καὶ νεωτερισμῶν, τὰς μὲν γὰρ ἐπιστολὰς ἐκείνας καὶ τὰ γράμματα τοῦ Σερτωρίου συναγαγὼν ἅπαντα κατέκαυσεν οὔτε αὐτὸς ἀναγνοὺς<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ἔργον οὖν ὁ Πομπήϊος οὐ νέας φρενός, ἀλλʼ εὖ μάλα βεβηκυίας καὶ κατηρτυμένης ἐργασάμενος μεγάλων ἀπήλλαξε τὴν Ῥώμην φόβων καὶ νεωτερισμῶν, τὰς μὲν γὰρ ἐπιστολὰς ἐκείνας καὶ τὰ γράμματα τοῦ Σερτωρίου συναγαγὼν ἅπαντα κατέκαυσεν οὔτε αὐτὸς ἀναγνοὺς<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">αὐτὸς ἀναγνοὺς</foreign> Naber: <foreign xml:lang="grc">ἀναγνούς</foreign>.</note>  οὔτε ἐάσας ἕτερον· αὐτὸν δὲ τὸν 
 Περπένναν κατὰ τάχος ἀνεῖλε, φοβηθεὶς μὴ τῶν ὀνομάτων ἐξενεχθέντων πρός τινας ἀποστάσεις καὶ ταραχαὶ γένωνται. <pb n="p.74"/>
                </p>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -51,14 +50,10 @@
             <p>The text was entered in the Philippines. Basic SGML tagging by EM </p>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
                <p>This pointer pattern extracts poem and line.</p>
             </cRefPattern>
-            <cRefPattern n="poem"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts poem.</p>
             </cRefPattern>
          </refsDecl>
@@ -66,7 +61,7 @@
             <refState unit="book"/>
             <refState unit="poem"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="line" delim="." match="l" use="@n"/>
             </citeStructure>
@@ -99,11 +94,7 @@
                <title xml:lang="eng">Ode 15</title>
                <title>Ἀν]τηνορίδαι [ἢ Ἑλένη]ς Ἀπαίτησις</title>
             </head>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 30</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 30</note>
             <milestone n="str. 1" unit="strophe"/>
             <l n="1" part="N">Ἀντήνορος] ἀντιθέου</l>
             <l n="2" part="N">!!!!!!]ρ̣α̣κ̣ο̣ι̣τ̣ις Ἀθάνας πρόσπολος,</l>
@@ -120,26 +111,14 @@
             <l n="12" part="N">¯ ˘ ¯ ¯ ¯ ˘ ¯ ¯]δ̣ων τυχόντες</l>
             <l n="13" part="N">¯ ˘ ˘ ¯ ˘ ˘ ¯ ¯ ¯ ˘ ˘ ¯] σὺν θεοῖς</l>
             <l n="14" part="N">¯ ˘ ¯ ¯ ¯ ˘ ¯ ¯ ¯ ˘ ¯]ους</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Text"
-                  resp="Perseus">7 lines are lost.</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Text" resp="Perseus">7 lines are lost.</note>
             <milestone n="str. 2" unit="strophe"/>
             <l n="22" part="N">¯ ¯ ˘˘ ¯ ˘˘ ¯</l>
             <l n="23" part="N">¯ ¯ ˘˘ ¯ μεσονύ]κτιος κέαρ</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Text"
-                  resp="Perseus">12 lines are lost.</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Text" resp="Perseus">12 lines are lost.</note>
             <milestone n="ep. 2" unit="strophe"/>
             <l n="36" part="N">¯ ¯ ˘ ¯ ¯ ¯ ˘˘ ¯ ˘˘ ¯</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 31</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 31</note>
             <l n="37" part="N">ἆγον, πατὴρ δʼ εὔβουλος ἥρως</l>
             <l n="38" part="N">πάντα σάμαινεν Πριάμῳ βασιλεῖ</l>
             <l n="39" part="N">παίδεσσί τε μῦθον Ἀχαιῶν.</l>
@@ -185,11 +164,7 @@
             <l n="6" part="N">!!!!! ἀ]γάλλεται ἢ δολιχαύχενι κύκνῳ,</l>
             <l n="7" part="N">ὀπὶ ἁ]δεΐᾳ φρένα τερπόμενος,</l>
             <l n="8" part="N">!!!!!!]δʼ ἵκῃ παιηόνων</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 32</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 32</note>
             <l n="9" part="N">ἄνθεα πεδοιχνεῖν,</l>
             <l n="10" part="N">Πύθιʼ Ἄπολλον,</l>
             <l n="11" part="N">τόσα χοροὶ Δελφῶν</l>
@@ -233,11 +208,7 @@
             <l n="5" part="N">τηλαυγέϊ γὰρ [ἐν] φάρεϊ</l>
             <l n="6" part="N"> βορήϊαι πίτνον αὖραι</l>
             <l n="7" part="N"> κλυτᾶς ἕκατι π[ο]λεμαίγιδος Ἀθάνας·</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 33</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 33</note>
             <l n="8" part="N">κνίσεν τε Μίνωϊ κέαρ</l>
             <l n="9" part="N"> ἱμεράμπυκος θεᾶς</l>
             <l n="10" part="N">Κύπριδος αἰνὰ δῶρα·</l>
@@ -273,11 +244,7 @@
             <l n="39" part="N">τῶ σε, πολέμαρχε Κνωσίων,</l>
             <l n="40" part="N">κέλομαι πολύστονον</l>
             <l n="41" part="N">ἐρύκεν ὕβριν· οὐ γὰρ ἂν θελοι-</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 34</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 34</note>
             <l n="42" part="N">μʼ ἀμβρότου ἐραννὸν Ἀοῦς</l>
             <l n="43" part="N"> ἰδεῖν φάος, ἐπεί τινʼ ἠϊθ <seg type="sling" part="N">έω</seg> ν </l>
             <l n="44" part="N">σὺ δαμάσειας ἀέκον-</l>
@@ -316,11 +283,7 @@
             <l n="75" part="N">μὲν βλέπεις σαφῆ Διὸς</l>
             <l n="76" part="N">δῶρα· σὺ δʼ ὄρνυʼ ἐς βα-</l>
             <l n="77" part="N"> ρύβρομον πέλαγος· Κρονίδας</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 35</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 35</note>
             <l n="78" part="N">δέ τοι πατὴρ ἄναξ τελεῖ</l>
             <l n="79" part="N">Ποσειδὰν ὑπέρτατον</l>
             <l n="80" part="N">κλέος χθόνα κατʼ ἠΰδενδρον.</l>
@@ -359,11 +322,7 @@
             <l n="112" part="N">ἅ νιν ἀμφέβαλεν αἰόλαν πορφύραν,</l>
             <milestone n="ep. 2" unit="strophe"/>
             <l n="113" part="N">κόμαισί τʼ ἐπέθηκεν οὔλαις</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 36</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 36</note>
             <l n="114" part="N"> ἀμεμφέα πλόκον,</l>
             <l n="115" part="N">τόν ποτέ ϝοι ἐν γάμῳ</l>
             <l n="116" part="N">δῶκε δόλιος Ἀφροδίτα ῥόδοις ἐρεμνόν.</l>
@@ -416,11 +375,7 @@
             <sp>
                <speaker>Αἰγεύς</speaker>
                <l n="16" part="N">νέ]ον ἦλθεν δολιχὰν ἀμείψας</l>
-               <note anchored="true"
-                     place="inline"
-                     xml:lang="eng"
-                     type="Papyr"
-                     resp="Perseus">Column 37</note>
+               <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 37</note>
                <l n="17" part="N"> κᾶρυξ ποσὶν Ἰσθμίαν κέλευθον·</l>
                <l n="18" part="N">ἄφατα δʼ ἔργα λέγει κραταιοῦ</l>
                <l n="19" part="N"> φωτός· τὸν ὑπέρβιόν τʼ ἔπεφνεν</l>
@@ -462,11 +417,7 @@
                <l n="47" part="N"> λέγει, περὶ φαιδίμοισι δʼ ὤμοις</l>
                <l n="48" part="N"> ξίφος ἔχειν <add>ἐλεφαντόκωπον</add> · </l>
                <l n="49" part="N"> ξεστοὺς δὲ δύʼ ἐν χέρεσσʼ ἄκοντας</l>
-               <note anchored="true"
-                     place="inline"
-                     xml:lang="eng"
-                     type="Papyr"
-                     resp="Perseus">Column 38</note>
+               <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 38</note>
                <l n="50" part="N">κηὔτυκτον κυνέαν Λάκαι-</l>
                <l n="51" part="N"> ναν κρατὸς πέρι πυρσοχαίτου·</l>
                <l n="52" part="N"> στέρνοις τε πορφύρ <seg type="sling" part="N">εο</seg> ν </l>
@@ -514,11 +465,7 @@
             <l n="25" part="N">φυλάσσεν· οὐδὲ Μαίας</l>
             <l n="26" part="N">υἱὸς δύνατʼ οὔτε κατʼ εὐ-</l>
             <l n="27" part="N"> φεγγέας ἁμέρας λαθεῖν νιν</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Papyr"
-                  resp="Perseus">Column 39</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Papyr" resp="Perseus">Column 39</note>
             <l n="28" part="N"> οὔτε νύκτας ἁγν[άς.</l>
             <l n="29" part="N">εἴτʼ οὖν γένετʼ ἐ[ν ˘¯˘¯˘</l>
             <l n="30" part="N">ποδαρκέʼ ἄγγελο[ν Διὸς</l>
@@ -563,11 +510,7 @@
             <l n="9" part="N">ἵππους τέ ϝοι ἰσαν[έμους</l>
             <l n="10" part="N">Πλευρῶνʼ ἐς ἐϋκτ[ιμέναν</l>
             <l n="11" part="N">χρυσάσπιδος υἱὸ[ν Ἄρηος</l>
-            <note anchored="true"
-                  place="inline"
-                  xml:lang="eng"
-                  type="Text"
-                  resp="Perseus">The rest is lost.</note>
+            <note anchored="true" place="inline" xml:lang="eng" type="Text" resp="Perseus">The rest is lost.</note>
          </div>
       </body>
    </text>

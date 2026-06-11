@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -53,14 +52,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -68,7 +63,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -147,14 +142,8 @@
             </div>
             <div n="3" type="section">
                <p>
-                  <milestone unit="para"/>ἐπεὶ δʼ αὐτῷ Σύλλας τε προσηγγέλθη τεθνηκώς, καὶ τὸ σῶμα τοῖς γυμνασίοις ἀναρρωννύμενον εἰς ἕξιν ἐβάδιζε νεανικήν, ἥ τε φωνὴ λαμβάνουσα πλάσιν ἡδεῖα μὲν πρὸς ἀκοὴν ἐτέθραπτο,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
-                     <foreign xml:lang="grc">ἐτέθραπτο</foreign> the words<foreign xml:lang="grc">καὶ πολλή</foreign> (<hi rend="italics">and full</hi>) which follow this verb in the MSS. are deleted by Gudeman as contradictory to iii. 5 and due to the double<foreign xml:lang="grc">πολλὰ</foreign> below.</note> μετρίως δὲ πρὸς τὴν ἕξιν ἥρμοστο τοῦ σώματος, πολλὰ μὲν τῶν ἀπὸ Ῥώμης φίλων γραφόντων καὶ δεομένων, πολλὰ δʼ Ἀντιόχου παρακελευομένου τοῖς κοινοῖς ἐπιβαλεῖν πράγμασιν, αὖθις ὥσπερ ὄργανον ἐξηρτύετο<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+                  <milestone unit="para"/>ἐπεὶ δʼ αὐτῷ Σύλλας τε προσηγγέλθη τεθνηκώς, καὶ τὸ σῶμα τοῖς γυμνασίοις ἀναρρωννύμενον εἰς ἕξιν ἐβάδιζε νεανικήν, ἥ τε φωνὴ λαμβάνουσα πλάσιν ἡδεῖα μὲν πρὸς ἀκοὴν ἐτέθραπτο,<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
+                     <foreign xml:lang="grc">ἐτέθραπτο</foreign> the words<foreign xml:lang="grc">καὶ πολλή</foreign> (<hi rend="italics">and full</hi>) which follow this verb in the MSS. are deleted by Gudeman as contradictory to iii. 5 and due to the double<foreign xml:lang="grc">πολλὰ</foreign> below.</note> μετρίως δὲ πρὸς τὴν ἕξιν ἥρμοστο τοῦ σώματος, πολλὰ μὲν τῶν ἀπὸ Ῥώμης φίλων γραφόντων καὶ δεομένων, πολλὰ δʼ Ἀντιόχου παρακελευομένου τοῖς κοινοῖς ἐπιβαλεῖν πράγμασιν, αὖθις ὥσπερ ὄργανον ἐξηρτύετο<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">ἐξηρτύετο</foreign> Graux, after Madvig:<foreign xml:lang="grc">ἐξήρτυε</foreign>.</note> τὸν ῥητορικὸν λόγον καὶ ἀνεκίνει τὴν πολιτικὴν δύναμιν, αὑτόν τε ταῖς μελέταις διαπονῶν καὶ τοὺς ἐπαινουμένους μετιὼν ῥήτορας. </p>
             </div>
             <div n="4" type="section">
@@ -177,10 +166,7 @@
                   <milestone unit="para"/>λέγεται δὲ καὶ αὐτὸς οὐδὲν ἧττον νοσήσας τοῦ Δημοσθένους πρὸς τὴν ὑπόκρισιν, τοῦτο μὲν <pb n="p.94"/> Ῥωσκίῳ τῷ κωμῳδῷ, τοῦτο δʼ Αἰσώπῳ τῷ τραγῳδῷ προσέχειν ἐπιμελῶς. τόν δʼ Αἴσωπον τοῦτον ἱστοροῦσιν ὑποκρινόμενον ἐν θεάτρῳ τόν περὶ τῆς τιμωρίας τοῦ Θυέστου βουλευόμενον Ἀτρέα, τῶν ὑπηρετῶν τινος ἄφνω παραδραμόντος, ἔξω τῶν ἑαυτοῦ λογισμῶν διὰ τὸ πάθος ὄντα τῷ σκήπτρῳ πατάξαι καὶ ἀνελεῖν. </p>
             </div>
             <div n="4" type="section">
-               <p>οὐ μικρὰ δὲ πρὸς τὸ πείθειν ὑπῆρχεν ἐκ τοῦ ὑποκρίνεσθαι ῥοπὴ τῷ Κικέρωνι. καὶ τούς γε τῷ βοᾶν μεγάλα χρωμένους<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>οὐ μικρὰ δὲ πρὸς τὸ πείθειν ὑπῆρχεν ἐκ τοῦ ὑποκρίνεσθαι ῥοπὴ τῷ Κικέρωνι. καὶ τούς γε τῷ βοᾶν μεγάλα χρωμένους<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">μεγάλα χρωμένους</foreign> MSS., Sintenis<hi rend="superscript">1</hi>, and Bekker; Sintenis<hi rend="superscript">2</hi> adopts Cobet’s<foreign xml:lang="grc">μεγαλαυχουμένους</foreign> (<hi rend="italics">boasting loudly of</hi>);<foreign xml:lang="grc">μεγάλα βοᾶν χρωμένους</foreign> Graux with M<hi rend="superscript">a</hi>
                   </note> ῥήτορας ἐπισκώπτων ἔλεγε διʼ ἀσθένειαν ἐπὶ τὴν κραυγὴν ὥσπερ χωλοὺς ἐφʼ ἵππον πηδᾶν. ἡ δὲ περὶ τὰ σκώμματα καὶ τὴν παιδιὰν ταύτην εὐτραπελία δικανικὸν μὲν ἐδόκει καὶ γλαφυρὸν, χρώμενος δʼ αὐτῇ κατακόρως πολλοὺς ἐλύπει καὶ κακοηθείας ἐλάμβανε δόξαν. </p>
             </div>
@@ -222,10 +208,7 @@
                </p>
             </div>
             <div n="6" type="section">
-               <p>τοῦ δὲ ῥήτορος Ὁρτησίου τὴν μὲν εὐθεῖαν τῷ Βέρρῃ συνειπεῖν μὴ τολμήσαντος, ἐν δὲ τῷ τιμήματι πεισθέντος παραγενέσθαι καὶ λαβόντος <pb n="p.100"/> ἐλεφαντίνην Σφίγγα μισθόν, εἶπέ τι πλαγίως ὁ Κικέρων πρὸς αὐτόν τοῦ δὲ φήσαντος αἰνιγμάτων λύσεως ἀπείρως ἔχειν, <q>καὶ μὴν ἐπὶ τῆς οἰκίας</q> ἔφη,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>τοῦ δὲ ῥήτορος Ὁρτησίου τὴν μὲν εὐθεῖαν τῷ Βέρρῃ συνειπεῖν μὴ τολμήσαντος, ἐν δὲ τῷ τιμήματι πεισθέντος παραγενέσθαι καὶ λαβόντος <pb n="p.100"/> ἐλεφαντίνην Σφίγγα μισθόν, εἶπέ τι πλαγίως ὁ Κικέρων πρὸς αὐτόν τοῦ δὲ φήσαντος αἰνιγμάτων λύσεως ἀπείρως ἔχειν, <q>καὶ μὴν ἐπὶ τῆς οἰκίας</q> ἔφη,<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">οἰκιας, ἔφη, τὴν</foreign> Graux with M<hi rend="superscript">a</hi>: <foreign xml:lang="grc">οἰκίας τήν</foreign>.</note>
                   <q>τὴν Σφίγγα ἔχεις.</q>
                </p>
@@ -248,10 +231,7 @@
          </div>
          <div n="9" type="chapter">
             <div n="1" type="section">
-               <p>στρατηγίαν δὲ μετιόντων ἅμα σὺν αὐτῷ πολλῶν καὶ μεγάλων πρῶτος ἁπάντων ἀνηγορεύθη· καὶ τὰς κρίσεις ἔδοξε καθαρῶς καὶ καλῶς βραβεῦσαι. λέγεται δὲ καὶ Λικίννιος Μᾶκερ, ἀνὴρ καὶ καθʼ αὑτὸν ἰσχύων ἐν τῇ πόλει μέγα καὶ Κράσσῳ χρώμενος βοηθῷ, κρινόμενος κλοπῆς ἐπʼ αὐτοῦ,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>στρατηγίαν δὲ μετιόντων ἅμα σὺν αὐτῷ πολλῶν καὶ μεγάλων πρῶτος ἁπάντων ἀνηγορεύθη· καὶ τὰς κρίσεις ἔδοξε καθαρῶς καὶ καλῶς βραβεῦσαι. λέγεται δὲ καὶ Λικίννιος Μᾶκερ, ἀνὴρ καὶ καθʼ αὑτὸν ἰσχύων ἐν τῇ πόλει μέγα καὶ Κράσσῳ χρώμενος βοηθῷ, κρινόμενος κλοπῆς ἐπʼ αὐτοῦ,<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">ἐπ’ αὐτοῦ</foreign> Cobet’s correction of the MS.<foreign xml:lang="grc">ὑπ’ αὐτοῦ</foreign>, adopted by Sintenis<hi rend="superscript">2</hi>. So Graux with M<hi rend="superscript">a</hi>.</note> τῇ δυνάμει καὶ σπουδῇ πεποιθώς, </p>
             </div>
             <div n="2" type="section">
@@ -461,17 +441,11 @@
          </div>
          <div n="22" type="chapter">
             <div n="1" type="section">
-               <p>ἐχώρει δὲ μετὰ τῆς βουλῆς ἐπὶ τοὺς ἄνδρας, οὐκ ἐν ταὐτῷ δὲ πάντες ἦσαν, ἄλλος δʼ ἄλλον ἐφύλαττε τῶν στρατηγῶν, καὶ πρῶτον ἐκ Παλατίου παραλαβὼν τὸν Λέντλον ἦγε διὰ τῆς ἱερᾶς ὁδοῦ καὶ τῆ;ς ἀγορᾶς μέσης, τῶν μὲν ἡγεμονικωτάτων ἀνδρῶν κύκλῳ περιεσπειραμένων καὶ δορυφορούντων, τοῦ δὲ δήμου φρίττοντος τὰ δρώμενα καὶ παριόντος σιωπῇ,<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>ἐχώρει δὲ μετὰ τῆς βουλῆς ἐπὶ τοὺς ἄνδρας, οὐκ ἐν ταὐτῷ δὲ πάντες ἦσαν, ἄλλος δʼ ἄλλον ἐφύλαττε τῶν στρατηγῶν, καὶ πρῶτον ἐκ Παλατίου παραλαβὼν τὸν Λέντλον ἦγε διὰ τῆς ἱερᾶς ὁδοῦ καὶ τῆ;ς ἀγορᾶς μέσης, τῶν μὲν ἡγεμονικωτάτων ἀνδρῶν κύκλῳ περιεσπειραμένων καὶ δορυφορούντων, τοῦ δὲ δήμου φρίττοντος τὰ δρώμενα καὶ παριόντος σιωπῇ,<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">παριόντος</foreign> Bekker and Graux adopt the<foreign xml:lang="grc">παριέντος</foreign> (<hi rend="italics">acquiescing</hi>) of Coraës.</note> μάλιστα δὲ τῶν νέων, ὥσπερ ἱεροῖς τισι πατρίοις ἀριστοκρατικῆς τινος ἐξουσίας τελεῖσθαι μετὰ φόβου καὶ θάμβους δοκούντων. </p>
             </div>
             <div n="2" type="section">
-               <p>διελθὼν δὲ τὴν ἀγορὰν καὶ γενόμενος πρὸς τῷ δεσμωτηρίῳ παρέδωκε τὸν Λέντλον τῷ δημίῳ καὶ προσέταξεν ἀνελεῖν εἶθʼ ἑξῆς τὸν Κέθηγον, καὶ οὕτω τῶν ἄλλων ἕκαστον καταγαγὼν ἀπέκτεινεν. ὁρῶν δὲ πολλοὺς ἔτι τῶν ἀπὸ τῆς συνωμοσίας<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>διελθὼν δὲ τὴν ἀγορὰν καὶ γενόμενος πρὸς τῷ δεσμωτηρίῳ παρέδωκε τὸν Λέντλον τῷ δημίῳ καὶ προσέταξεν ἀνελεῖν εἶθʼ ἑξῆς τὸν Κέθηγον, καὶ οὕτω τῶν ἄλλων ἕκαστον καταγαγὼν ἀπέκτεινεν. ὁρῶν δὲ πολλοὺς ἔτι τῶν ἀπὸ τῆς συνωμοσίας<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">τῶν ἀπὸ τῆς</foreign> Graux with M<hi rend="superscript">a</hi>:<foreign xml:lang="grc">τῆς</foreign>.</note> ἐν ἀγορᾷ συνεστῶτας ἀθρόους καὶ τὴν μὲν πρᾶξιν ἀγνοοῦντας, τὴν δὲ νύκτα προσμένοντας, ὡς ἔτι ζώντων τῶν ἀνδρῶν καὶ δυναμένων ἐξαρπασθῆναι, φθεγξάμενος μέγα πρὸς αὐτοὺς, <q>ἔζησαν,</q> εἶπεν. οὕτω δὲ <pb n="p.136"/> Ῥωμαίων οἱ δυσφημεῖν μὴ βουλόμενοι τὸ τεθνάναι σημαίνουσιν. </p>
             </div>
             <div n="3" type="section">
@@ -493,10 +467,7 @@
                <p>κἀκεῖνος ἐπὶ τούτοις ὡς ὀμόσων προῆλθε· καὶ γενομένης αὐτῷ σιωπῆς ὤμνυεν, οὐ τὸν πάτριον, ἀλλʼ ἴδιόν τινα καὶ καινὸν ὅρκον, ἦ μὴν σεσωκέναι τὴν πατρίδα καὶ διατετηρηκέναι τὴν ἡγεμονίαν. ἐπώμνυε δὲ τὸν ὅρκον αὐτῷ σύμπας ὁ δῆμος, ἐφʼ οἷς ἔτι μᾶλλον ὅ τε Καῖσαρ οἵ τε δήμαρχοι χαλεπαίνοντες ἄλλας τε τῷ Κικέρωνι ταραχὰς ἐμηχανῶντο, καὶ νόμος ὑπʼ αὐτῶν εἰσήγετο καλεῖν Πομπήϊον μετὰ τῆς στρατιᾶς, ὡς δὴ καταλύσοντα τὴν Κικέρωνος δυναστείαν. </p>
             </div>
             <div n="3" type="section">
-               <p>ἀλλʼ ἦν ὄφελος μέγα τῷ Κικέρωνι καὶ πάσῃ τῇ πόλει δημαρχῶν τότε Κάτων καὶ τοῖς ἐκείνων<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>ἀλλʼ ἦν ὄφελος μέγα τῷ Κικέρωνι καὶ πάσῃ τῇ πόλει δημαρχῶν τότε Κάτων καὶ τοῖς ἐκείνων<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">ἐκείνων</foreign> Coraës, Bekker, and Graux, after Xylander:<foreign xml:lang="grc">ἐκείνου</foreign> (referring to Caesar).</note> πολιτεύμασιν ἀπʼ ἴσης μὲν ἐξουσίας, μείζονος δὲ δόξης ἀντιτασσόμενος, τά τε γὰρ ἄλλα ῥᾳδίως ἔλυσε, καὶ τὴν Κικέρωνος ὑπατείαν οὕτως ἦρε τῷ λόγῳ μεγάλην δημηγορήσας ὥστε τιμὰς αὐτῷ τῶν πώποτε μεγίστας ψηφίσασθαι καὶ προσαγορεῦσαι πατέρα πατρίδος, πρώτῳ γὰρ ἐκείνῳ δοκεῖ <pb n="p.140"/> τοῦτο καθυπάρξαι, Κάτωνος αὐτὸν οὕτως ἐν τῷ δήμῳ προσαγορεύσαντος. </p>
             </div>
          </div>
@@ -515,10 +486,7 @@
             </div>
             <div n="5" type="section">
                <p>
-                  <milestone unit="para"/>τῶν δὲ κατʼ αὑτὸν ἐνδόξων ἀπὸ λόγου καὶ σοφίας οὐκ ἔστιν οὐδεὶς ὃν οὐκ ἐποίησεν ἐνδοξότερον ἢ λέγων ἢ γράφων εὐμενῶς περὶ ἑκάστου. Κρατίππῳ δὲ τῷ Περιπατητικῷ διεπράξατο μὲν <pb n="paris.1624.873"/> Ῥωμαίῳ γενέσθαι παρὰ Καίσαρος ἄρχοντος ἤδη, διεπράξατο δὲ καὶ<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+                  <milestone unit="para"/>τῶν δὲ κατʼ αὑτὸν ἐνδόξων ἀπὸ λόγου καὶ σοφίας οὐκ ἔστιν οὐδεὶς ὃν οὐκ ἐποίησεν ἐνδοξότερον ἢ λέγων ἢ γράφων εὐμενῶς περὶ ἑκάστου. Κρατίππῳ δὲ τῷ Περιπατητικῷ διεπράξατο μὲν <pb n="paris.1624.873"/> Ῥωμαίῳ γενέσθαι παρὰ Καίσαρος ἄρχοντος ἤδη, διεπράξατο δὲ καὶ<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">καὶ</foreign> supplied here by Reiske, and deleted before<foreign xml:lang="grc">δεηθῆναι</foreign> by Sintenis<hi rend="superscript">1</hi> (in crit. notes). Graux simply transposes.</note> τὴν ἐξ Ἀρείου πάγου βουλὴν ψηφίσασθαι δεηθῆναι μένειν αὑτὸν ἐν Ἀθήναις καὶ διαλέγεσθαι τοῖς νέοις ὡς κοσμοῦντα τὴν πόλιν. </p>
             </div>
             <div n="6" type="section">
@@ -603,10 +571,7 @@
                <p>ἀλλὰ μειράκιον ὢν ἔτι καὶ μήπω γενειῶν ὁ Κλώδιος ἤλπιζε λήσεσθαι διαδὺς πρὸς τὴν Πομπηίαν μετὰ τῶν γυναικῶν, ὡς δʼ εἰσῆλθε νυκτὸς εἰς οἰκίαν μεγάλην, ἠπορεῖτο τῶν διόδων· καὶ πλανώμενον αὐτόν ἰδοῦσα Αὐρηλίας θεραπαινὶς τῆς Καίσαρος μητρός, ᾔτησεν ὄνομα, φθέγξασθαι δʼ ἀναγκασθέντος ἐκείνου καὶ φήσαντος ἀκόλουθον Πομπηίας ζητεῖν Ἄβραν τοὔνομα, συνεῖσα τὴν φωνὴν οὐ γυναικείαν οὖσαν ἀνέκραγε καὶ συνεκάλει τὰς γυναῖκας. </p>
             </div>
             <div n="3" type="section">
-               <p>αἱ δʼ ἀποκλείσασαι τὰς θύρας καὶ πάντα διερευνώμεναι λαμβάνουσι τὸν Κλώδιον εἰς οἴκημα παιδίσκης, ᾗ συνεισῆλθε, καταπεφευγότα. τοῦ δὲ πράγματος περιβοήτου <pb n="paris.1624.875"/> γενομένου Καῖσάρ τε τὴν Πομπηΐαν ἀφῆκε καὶ δίκην<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>αἱ δʼ ἀποκλείσασαι τὰς θύρας καὶ πάντα διερευνώμεναι λαμβάνουσι τὸν Κλώδιον εἰς οἴκημα παιδίσκης, ᾗ συνεισῆλθε, καταπεφευγότα. τοῦ δὲ πράγματος περιβοήτου <pb n="paris.1624.875"/> γενομένου Καῖσάρ τε τὴν Πομπηΐαν ἀφῆκε καὶ δίκην<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">δίκην</foreign> before this word Sintenis and Bekker assume a lacuna in the text, where once stood some such phrase as<foreign xml:lang="grc">εἶς τῶν δημάρχων</foreign> (Plutarch, <hi rend="italics">Caesar</hi>, x. 5). So (substantially) Graux.</note> ἀσεβείας ἀπεγράψατο τῷ Κλωδίῳ. </p>
             </div>
          </div>
@@ -621,10 +586,7 @@
                <p>χαλεπὴ δὲ τὸν τρόπον οὖσα καί τοῦ Κικέρωνος ἄρχουσα παρώξυνε τῷ Κλωδίῳ συνεπιθέσθαι καί καταμαρτυρῆσαι. κατεμαρτύρουν δὲ τοῦ Κλωδίου πολλοὶ τῶν καλῶν κάγαθῶν ἀνδρῶν ἐπιορκίας, ῥᾳδιουργίας, ὄχλων δεκασμούς, φθορὰς γυναικῶν. Λεύκολλος δὲ καί θεραπαινίδας παρεῖχεν ὡς συγγένοιτο τῇ νεωτάτῃ τῶν ἀδελφῶν ὁ Κλώδιος, ὅτε Λευκούλλῳ συνῴκει. </p>
             </div>
             <div n="4" type="section">
-               <p>πολλὴ δʼ ἦν δόξα καί ταῖς ἄλλαις δυσὶν ἀδελφαῖς πλησιάζειν τὸν Κλώδιον, ὧν Τερτίαν μέν Μάρκιος ὁ Ῥήξ, Κλωδίαν δὲ Μέτελλος ὁ Κέλερ εἶχεν, ἣν Κουαδρανταρίαν<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>πολλὴ δʼ ἦν δόξα καί ταῖς ἄλλαις δυσὶν ἀδελφαῖς πλησιάζειν τὸν Κλώδιον, ὧν Τερτίαν μέν Μάρκιος ὁ Ῥήξ, Κλωδίαν δὲ Μέτελλος ὁ Κέλερ εἶχεν, ἣν Κουαδρανταρίαν<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">Κουαδραντίαν</foreign> Sintenis with the MSS.;<foreign xml:lang="grc">Κουαδρανταρίαν</foreign> Bekker, after Xylander and Du Soul (cf. Cic. <hi rend="italics">pro Cael.</hi> 26, 62, mulier quadrantaria).</note> ἐκάλουν, ὅτι τῶν ἐραστῶν τις αὐτῇ χαλκοῦς ἐμβαλὼν εἰς βαλάντιον ὡς ἀργύριον εἰσέπεμψε· τὸ δὲ λεπτότατον τοῦ χαλκοῦ νομίσματος κουαδράντην ἐκάλουν. ἐπὶ ταύτῃ μάλιστα τῶν ἀδελφῶν κακῶς ἤκουσεν ὁ Κλώδιος. </p>
             </div>
             <div n="5" type="section">
@@ -724,10 +686,7 @@
                <p>ἐκείνου δὲ τὴν ἀγορὰν ἔτι νυκτὸς ἀπὸ τῶν ἄκρων περιλαβόντος τοῖς στρατιώταις, ὁ Μίλων τὸν Κικέρωνα δείσας μὴ πρὸς τὴν ὄψιν ἀηθείᾳ διαταραχθεὶς χεῖρον διαγωνίσηται, συνέπεισεν ἐν φορείῳ κομισθέντα πρὸς τὴν ἀγορὰν ἡσυχάζειν, ἄχρι οὗ συνίασιν οἱ κριταὶ καὶ πληροῦται τὸ δικαστήριον. </p>
             </div>
             <div n="3" type="section">
-               <p>ὁ δʼ οὐ μόνον ἦν, ὡς ἔοικεν, ἐν ὅπλοις ἀθαρσής, ἀλλὰ καὶ τῷ λέγειν μετὰ φόβου προσῄει, καὶ μόλις ἂν ἐπαύσατο<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>ὁ δʼ οὐ μόνον ἦν, ὡς ἔοικεν, ἐν ὅπλοις ἀθαρσής, ἀλλὰ καὶ τῷ λέγειν μετὰ φόβου προσῄει, καὶ μόλις ἂν ἐπαύσατο<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">ἂν ἐπαύσατο</foreign> Graux with D (<foreign xml:lang="grc">ἀνεπαυσατο</foreign> M<hi rend="superscript">a</hi>):<foreign xml:lang="grc">ἐπαύσατο</foreign>.</note> παλλόμενος καὶ τρέμων ἐπὶ πολλῶν ἀγώνων ἀκμὴν τοῦ λόγου καὶ κατάστασιν λαβόντος. Λικιννίῳ δὲ Μουρήνᾳ φεύγοντι δίκην ὑπὸ Κάτωνος βοηθῶν, καὶ φιλοτιμούμενος Ὁρτήσιον ὑπερβαλεῖν εὐημερήσαντα, μέρος οὐδὲν ἀνεπαύσατο τῆς νυκτός, ὡς ὑπὸ τοῦ σφόδρα φροντίσαι καὶ διαγρυπνῆσαι κακωθεὶς ἐνδεέστερος αὐτοῦ φανῆναι. <pb n="p.172"/>
                </p>
             </div>
@@ -749,10 +708,7 @@
                <p>ἀνευρὼν δὲ πολλὰ τῶν δημοσίων κεκλεμμένα τάς τε πόλεις εὐπόρους ἐποίησε, καὶ τούς ἀποτίνοντας οὐδὲν τούτου πλεῖον παθόντας ἐπιτίμους διεφύλαξεν. ἥψατο δὲ καὶ πολέμου, λῃστὰς τῶν περὶ τὸν Ἀμανὸν οἰκούντων τρεψάμενος· ἐφʼ ᾧ καὶ αὐτοκράτωρ ὑπὸ τῶν στρατιωτῶν ἀνηγορεύθη. </p>
             </div>
             <div n="5" type="section">
-               <p>Καιλίου<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>Καιλίου<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">Καιλίου</foreign> Coraës, Bekker, and Graux, after Xylander:<foreign xml:lang="grc">Κεκιλίου</foreign>.</note> δὲ τοῦ ῥήτορος δεομένου παρδάλεις αὐτῷ πρός τινα θέαν εἰς Ῥώμην ἐκ Κιλικίας ἀποστεῖλαι, καλλωπιζόμενος ἐπὶ τοῖς πεπραγμένοις γράφει πρός αὐτὸν οὐκ εἶναι παρδάλεις ἐν Κιλικίᾳ· πεφευγέναι γὰρ εἰς Καρίαν ἀγανακτούσας ὅτι μόναι πολεμοῦνται, πάντων εἰρήνην ἐχόντων, πλέων δʼ ἀπὸ τῆς ἐπαρχίας τοῦτο μὲν Ῥόδῳ προσέσχε, τοῦτο δʼ Ἀθήναις ἐνδιέτριψεν ἄσμενος πόθῳ τῶν πάλαι διατριβῶν. </p>
             </div>
             <div n="6" type="section">
@@ -809,10 +765,7 @@
                <p>ὁ γὰρ Καῖσαρ, ὡς εἶδεν αὐτὸν πολὺ πρὸ τῶν ἄλλων ἀπαντῶντα, κατέβη καὶ ἠσπάσατο καὶ διαλεγόμενος μόνῳ συχνῶν σταδίων ὁδὸν προῆλθεν. ἐκ δὲ τούτου διετέλει τιμῶν καὶ φιλοφρονούμενος, ὥστε καὶ γράψαντι λόγον ἐγκώμιον Κάτωνος ἀντιγράφων τόν τε λόγον αὐτοῦ καὶ τόν βίον ὡς μάλιστα τῷ Περικλέους ἐοικότα καὶ Θηραμένους ἐπαινεῖν. </p>
             </div>
             <div n="5" type="section">
-               <p>ὁ μὲν οὖν Κικέρωνος λόγος Κάτων, ὁ δὲ Καίσαρος Ἀντικάτων ἐπιγέγραπται. <milestone unit="para"/>λέγεται δὲ καὶ Κοΐντου Λιγαρίου δίκην φεύγοντος ὅτι τῶν Καίσαρος πολεμίων εἷς ἐγεγόνει, καὶ Κικέρωνος αὐτῷ βοηθοῦντος, εἰπεῖν τόν Καίσαρα πρὸς τοὺς φίλους· <q>τί κωλύει διὰ χρόνου Κικέρωνος ἀκοῦσαι λέγοντος, ἐπεὶ πάλαι κέκριται πονηρὸς ὁ ἀνὴρ<note resp="editor"
-                           place="unspecified"
-                           anchored="true"
-                           xml:lang="grc">
+               <p>ὁ μὲν οὖν Κικέρωνος λόγος Κάτων, ὁ δὲ Καίσαρος Ἀντικάτων ἐπιγέγραπται. <milestone unit="para"/>λέγεται δὲ καὶ Κοΐντου Λιγαρίου δίκην φεύγοντος ὅτι τῶν Καίσαρος πολεμίων εἷς ἐγεγόνει, καὶ Κικέρωνος αὐτῷ βοηθοῦντος, εἰπεῖν τόν Καίσαρα πρὸς τοὺς φίλους· <q>τί κωλύει διὰ χρόνου Κικέρωνος ἀκοῦσαι λέγοντος, ἐπεὶ πάλαι κέκριται πονηρὸς ὁ ἀνὴρ<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                         <foreign xml:lang="grc">ὁ ἀνὴρ</foreign>, Bekker, after Schaefer:<foreign xml:lang="grc">ἀνήρ</foreign>.</note> καὶ πολέμιος;</q>
                </p>
             </div>
@@ -849,10 +802,7 @@
                <p>ἦν γὰρ ἡ παῖς σφόδρα πλουσία, καὶ τὴν οὐσίαν αὐτῆς ὁ Κικέρων ἐν πίστει κληρονόμος ἀπολειφθεὶς διεφύλαττεν. ὀφείλων δὲ πολλὰς μυριάδας ὑπὸ τῶν φίλων καὶ οἰκείων ἐπείσθη τὴν παῖδα γῆμαι παρʼ ἡλικίαν καὶ τοὺς δανειστὰς <pb n="paris.1624.882"/> ἀπαλλάξαι τοῖς ἐκείνης χρησάμενος. Ἀντώνιος δὲ τοῦ γάμου μνησθεὶς ἐν ταῖς πρὸς τοὺς Φιλιππικοὺς ἀντιγραφαῖς ἐκβαλεῖν αὐτόν φησι γυναῖκα παρʼ ἡ ἐγήρασε· χαριέντως ἅμα τὴν οἰκουρίαν ὡς ἀπράκτου καὶ ἀστρατεύτου παρασκώπτων τοῦ Κικέρωνος. </p>
             </div>
             <div n="5" type="section">
-               <p>γήμαντι δʼ αὐτῷ μετʼ οὐ πολὺν χρόνον ἡ θυγάτηρ ἀπέθανε τίκτουσα παρὰ Λέντλῳ· τούτῳ γὰρ ἐγαμήθη μετὰ τὴν Πείσωνος τοῦ προτέρου ἀνδρὸς τελευτήν. καὶ συνῆλθον μὲν ἐπὶ τὴν παραμυθίαν τῷ Κικέρωνι πανταχόθεν οἱ φίλοι·<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>γήμαντι δʼ αὐτῷ μετʼ οὐ πολὺν χρόνον ἡ θυγάτηρ ἀπέθανε τίκτουσα παρὰ Λέντλῳ· τούτῳ γὰρ ἐγαμήθη μετὰ τὴν Πείσωνος τοῦ προτέρου ἀνδρὸς τελευτήν. καὶ συνῆλθον μὲν ἐπὶ τὴν παραμυθίαν τῷ Κικέρωνι πανταχόθεν οἱ φίλοι·<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">φίλοι</foreign> Graux, after Volkmann:<foreign xml:lang="grc">φιλόσοφοι</foreign>.</note> βαρέως δʼ ἄγαν ἤνεγκε τὸ συμβεβηκός, ὥστε καὶ τὴν γαμηθεῖσαν ἀποπέμψασθαι δόξασαν ἡσθῆναι τῇ τελευτῇ τῆς Τυλλίας. </p>
             </div>
          </div>
@@ -907,10 +857,7 @@
          </div>
          <div n="45" type="chapter">
             <div n="1" type="section">
-               <p>αὗται μὲν οὖν προφάσεις ἦσαν αἱ λεγόμεναι·<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>αὗται μὲν οὖν προφάσεις ἦσαν αἱ λεγόμεναι·<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">αἱ λεγόμεναι</foreign> Bekker, after Reiske:<foreign xml:lang="grc">λεγόμεναι.</foreign>
                   </note> τὸ δὲ πρὸς Ἀντώνιον μῖσος Κικέρωνα πρῶτον, εἶτα ἡ φύσις ἥττων οὖσα τιμῆς προσεποίησε Καίσαρι νομίζοντα προσλαμβάνειν τῇ πολιτείᾳ τὴν ἐκείνου δύναμιν. οὕτω γὰρ ὑπῄει τὸ μειράκιον αὐτόν ὥστε καὶ πατέρα προσαγορεύειν. </p>
             </div>
@@ -955,15 +902,9 @@
                   <milestone unit="para"/>ὁ μὲν οὖν Κόιντος οὐ πολλαῖς ὕστερον ἡμέραις ὑπὸ τῶν οἰκετῶν προδοθεὶς τοῖς ζητοῦσιν ἀνῃρέθη μετὰ τοῦ παιδός. ὁ δὲ Κικέρων εἷς Ἄστυρα κομισθεὶς καὶ πλοῖον εὑρών εὐθὺς ἐνέβη καὶ <pb n="paris.1624.885"/> παρέπλευσεν ἄχρι Κιρκαίου, πνεύματι χρώμενος. ἐκεῖθεν δὲ βουλομένων εὐθὺς αἴρειν τῶν κυβερνητῶν, εἴτε δείσας τὴν θάλασσαν εἴτʼ οὔπω παντάπασι τὴν Καίσαρος ἀπεγνωκὼς πίστιν, ἀπέβη καὶ παρῆλθε πεζῇ σταδίους ἑκατὸν ὡς εἷς Ῥώμην πορευόμενος. </p>
             </div>
             <div n="4" type="section">
-               <p>αὖθις δʼ ἀλύων καὶ μεταβαλλόμενος κατῄει πρὸς θάλασσαν εἷς Ἄστυρα. κἀκεῖ διενυκτέρευσεν ἐπὶ δεινῶν καὶ ἀπόρων λογισμῶν, ὥστε καὶ παρελθεῖν εἷς τὴν Καίσαρος οἰκίαν διενοήθη κρύφα καὶ σφάξας ἑαυτὸν ἐπὶ <pb n="p.204"/> τῆς ἑστίας ἀλάστορα προσβαλεῖν. ἀλλὰ καὶ ταύτης αὐτὸν ἀπέκρουσε τῆς ὁδοῦ δέος βασάνων καὶ πολλὰ<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+               <p>αὖθις δʼ ἀλύων καὶ μεταβαλλόμενος κατῄει πρὸς θάλασσαν εἷς Ἄστυρα. κἀκεῖ διενυκτέρευσεν ἐπὶ δεινῶν καὶ ἀπόρων λογισμῶν, ὥστε καὶ παρελθεῖν εἷς τὴν Καίσαρος οἰκίαν διενοήθη κρύφα καὶ σφάξας ἑαυτὸν ἐπὶ <pb n="p.204"/> τῆς ἑστίας ἀλάστορα προσβαλεῖν. ἀλλὰ καὶ ταύτης αὐτὸν ἀπέκρουσε τῆς ὁδοῦ δέος βασάνων καὶ πολλὰ<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">πολλὰ</foreign> Graux, after Coraës: <foreign xml:lang="grc">τἆλλα.</foreign>
-                  </note> ταραχώδη καὶ παλίντροπα βουλεύματα τῆς γνώμης μεταλαμβάνων παρέδωκε τοῖς οἰκέταις ἑαυτὸν εἷς Καιήτην<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="grc">
+                  </note> ταραχώδη καὶ παλίντροπα βουλεύματα τῆς γνώμης μεταλαμβάνων παρέδωκε τοῖς οἰκέταις ἑαυτὸν εἷς Καιήτην<note resp="editor" place="unspecified" anchored="true" xml:lang="grc">
                      <foreign xml:lang="grc">Καιήτη</foreign> Coraës and Bekker, after Wyttenbach;<foreign xml:lang="grc">Καιήτας</foreign> Sintenis (in notes), and Graux;<foreign xml:lang="grc">Καπίτας</foreign> MSS.</note> κατὰ πλοῦν κομίζειν, ἔχων ἐκεῖ χωρία καὶ καταφυγὴν ὥρᾳ θέρους φιλάνθρωπον, ὅταν ἥδιστον οἱ ἐτησίαι καταπνέωσιν. </p>
             </div>
             <div n="5" type="section">

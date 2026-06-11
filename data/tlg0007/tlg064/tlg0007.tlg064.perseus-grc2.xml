@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -55,14 +54,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -70,7 +65,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -112,10 +107,7 @@
                <p> ὁ δὲ Ἀρσίκας τῆς μητρὸς ἱκέτης γενόμενος καὶ πολλὰ κατακλαύσας μόλις ἔπεισε μήτε ἀποκτεῖναι μήτε αὐτοῦ διαστῆσαι τὴν ἄνθρωπον. ἡ δὲ μήτηρ ὑπῆρχε τὸν Κῦρον μᾶλλον φιλοῦσα καὶ βουλομένη βασιλεύειν ἐκεῖνον, διὸ καὶ τοῦ πατρὸς νοσοῦντος ἤδη μετάπεμπτος ἀπὸ θαλάσσης γενόμενος παντάπασιν ἀνέβαινεν εὔελπις ὤν, ὡς κατειργασμένης ἐκείνης διάδοχον αὐτὸν ἀποδειχθῆναι τῆς ἀρχῆς.</p>
             </div>
             <div n="3" type="section">
-               <p> καὶ γὰρ εἶχεν εὐπρεπῆ λόγον ἡ Παρύσατις, ᾧ καὶ Ξέρξης ὁ παλαιὸς ἐχρήσατο, Δημαράτου διδάξαντος, ὡς Ἀρσίκαν μὲν ἰδιώτῃ, Κῦρον δὲ βασιλεύοντι Δαρείῳ τεκεῖν.<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p> καὶ γὰρ εἶχεν εὐπρεπῆ λόγον ἡ Παρύσατις, ᾧ καὶ Ξέρξης ὁ παλαιὸς ἐχρήσατο, Δημαράτου διδάξαντος, ὡς Ἀρσίκαν μὲν ἰδιώτῃ, Κῦρον δὲ βασιλεύοντι Δαρείῳ τεκεῖν.<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">τεκεῖν</foreign> Bekker has <foreign xml:lang="grc">τέκοι</foreign>, after Coraës.</note> οὐ μὴν ἔπεισεν, ἀλλʼ ὁ πρεσβύτερος ἀπεδείχθη βασιλεύς, Ἀρτοξέρξης μετονομασθείς, Κῦρος δὲ Λυδίας σατράπης καὶ τῶν ἐπὶ θαλάσσης στρατηγός.</p>
             </div>
          </div>
@@ -190,10 +182,7 @@
                <p> Κύρῳ δὲ προσιόντι φῆμαι καὶ λόγοι προσέπιπτον, ὡς οὐ μάχεσθαι βασιλέως εὐθὺς ἐγνωκότος οὐδὲ συνδραμεῖν εἰς χεῖρας αὐτῷ σπεύδοντος, ἀλλʼ ἐν Πέρσαις ὑπομένειν ἄχρι ἂν αἱ δυνάμεις ἐκεῖ πανταχόθεν συνέλθωσι. καὶ γὰρ τάφρον εὖρος ὀργυιῶν δέκα καὶ βάθος ἴσων ἐπὶ σταδίους διὰ τοῦ πεδίου τετρακοσίους ἐνέβαλε· καὶ ταύτης τε περιεῖδε τὸν Κῦρον ἐντὸς παρελθόντα καὶ Βαβυλῶνος αὐτῆς οὐ μακρὰν γενόμενον.</p>
             </div>
             <div n="2" type="section">
-               <p>Τηριβάζου δέ, ὥς φασι, πρώτου τολμήσαντος εἰπεῖν ὡς οὐ δεῖ φυγομαχεῖν οὐδὲ Μηδίας ἐκστάντα καὶ Βαβυλῶνος ἅμα<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+               <p>Τηριβάζου δέ, ὥς φασι, πρώτου τολμήσαντος εἰπεῖν ὡς οὐ δεῖ φυγομαχεῖν οὐδὲ Μηδίας ἐκστάντα καὶ Βαβυλῶνος ἅμα<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">ἅμα</foreign> Bekker and Ziegler, after Coraïs: <foreign xml:lang="grc">ἀλλά</foreign>.</note> καὶ Σούσων ἐνδύεσθαι τῇ Περσίδι, πολλαπλασίαν μὲν ἔχοντα δύναμιν τῶν πολεμίων, μυρίους δὲ σατράπας καὶ στρατηγούς Κύρου καὶ φρονεῖν καὶ μάχεσθαι βελτίονας, ὥρμησε διαγωνίσασθαι τὴν ταχίστην.</p>
             </div>
             <div n="3" type="section">

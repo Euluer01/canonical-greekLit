@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -56,13 +55,11 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line.</p>
             </cRefPattern>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="line" delim="." match=".//l" use="@n"/>
             </citeStructure>
@@ -80,9 +77,9 @@
          <change when="2023-03-03" who="Lisa Cerrato">EpiDoc and CTS updates: header compliance and line numbering verification</change>
          <change who="Aurélien Berra" when="2018-05-12">Test full compliance with CapiTainS CTS via HookTest and revise file: harmonise language @ident to grc and lat, de-duplicate lines where needed adding letters to numbers in @n, fix Latin content in some bibl tags erroneously in Greek, update EpiDoc schema metadata.</change>
          <change when="2014-06-09" who="Bridget Almas"> Converted from TEI edition at https://github.com/PerseusDL/canonical/blob/master/CTS_XML_TEI/perseus/greekLit/tlg0019/tlg006/tlg0019.tlg007.perseus-grc1.xml Conversion involved: converting speaker tags to said tags, adding line numbers, converting div1 and div2 to divs.</change>
-         <change when="2010-06-21" who="gcrane">small fixes to Greek errors -- mainly accent issues with the speaker names&#x2028;</change>
+         <change when="2010-06-21" who="gcrane">small fixes to Greek errors -- mainly accent issues with the speaker names </change>
          <change when="2009-10-08" who="rsingh04">began reorganizing texts module by collection. created separate work directory in texts module to keep hopper files separate from in progress files</change>
-         <change when="2009-09-08" who="lcerrato">&#x2028;fixed typo</change>
+         <change when="2009-09-08" who="lcerrato"> fixed typo</change>
          <change when="2005-08-01" who="packel">removed stray item tags</change>
          <change when="2005-07-25" who="packel">Converted to XML</change>
          <change when="2004-04-21" who="mimno">added card 1s</change>

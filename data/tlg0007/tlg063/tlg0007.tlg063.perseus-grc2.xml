@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -54,14 +53,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -69,7 +64,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -101,14 +96,8 @@
                </p>
             </div>
             <div n="2" type="section">
-               <p> καί φησι τοὺς ἀφʼ αὑτῶν οὐδενὸς ἀξίους ὄντας, ὑποδυομένους δὲ προγόνων τινῶν ἀρεταῖς<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">ἀρεταῖς</foreign> Sint. and Ziegler with S<hi rend="super">g</hi>; Bekker has <foreign xml:lang="grc">ἀρετάς</foreign>, with inferior MSS.</note> καί πλεονάζοντας ἐν τοῖς ἐκείνων ἐπαίνοις ὑπὸ τῆς παροιμίας ἐπιστομίζεσθαι· ἀλλʼ ᾧ γε φύσει τὸ γενναῖον ἐπιπρέπει ἐκ πατέρων, κατὰ Πίνδαρον,<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">Pyth. viii. 44f.(<foreign xml:lang="grc">φυᾷ <gap reason="lost"/> ἐκ πατέρων παισὶ λῆμα</foreign>).</note> ὥσπερ σοί πρὸς τὸ κάλλιστον ἀφομοιοῦντι τῶν οἴκοθεν παραδειγμάτων τὸν βίον, εὔδαιμον ἂν εἴη τὸ μεμνῆσθαι τῶν ἀπὸ γένους ἀρίστων, ἀκούοντας περὶ αὑτῶν ἀεί τι καί λέγοντας.</p>
+               <p> καί φησι τοὺς ἀφʼ αὑτῶν οὐδενὸς ἀξίους ὄντας, ὑποδυομένους δὲ προγόνων τινῶν ἀρεταῖς<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
+                     <foreign xml:lang="grc">ἀρεταῖς</foreign> Sint. and Ziegler with S<hi rend="super">g</hi>; Bekker has <foreign xml:lang="grc">ἀρετάς</foreign>, with inferior MSS.</note> καί πλεονάζοντας ἐν τοῖς ἐκείνων ἐπαίνοις ὑπὸ τῆς παροιμίας ἐπιστομίζεσθαι· ἀλλʼ ᾧ γε φύσει τὸ γενναῖον ἐπιπρέπει ἐκ πατέρων, κατὰ Πίνδαρον,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">Pyth. viii. 44f.(<foreign xml:lang="grc">φυᾷ <gap reason="lost"/> ἐκ πατέρων παισὶ λῆμα</foreign>).</note> ὥσπερ σοί πρὸς τὸ κάλλιστον ἀφομοιοῦντι τῶν οἴκοθεν παραδειγμάτων τὸν βίον, εὔδαιμον ἂν εἴη τὸ μεμνῆσθαι τῶν ἀπὸ γένους ἀρίστων, ἀκούοντας περὶ αὑτῶν ἀεί τι καί λέγοντας.</p>
             </div>
             <div n="3" type="section">
                <p> οὐ γὰρ ἰδίων <pb n="p.4"/> πλυταρξηʼς λιες ἀπορίᾳ καλῶν ἐξαρτῶσιν ἀλλοτρίων ἐπαίνων τὴν δόξαν, ἀλλὰ τοῖς ἐκείνων τὰ οἰκεῖα συνάπτοντες, ὡς καί τοῦ γένους καί τοῦ βίου καθηγεμόνας εὐφημοῦσι. διὸ κἀγὼ τὸν Ἀράτου τοῦ σοῦ πολίτου καί προπάτορος βίον, ὃν οὔτε τῇ δόξῃ τῇ περὶ σεαυτὸν οὔτε τῇ δυνάμει καταισχύνεις, ἀπέσταλκά σοί συγγραψάμενος, οὐχ ὡς οὐχὶ πάντων ἀκριβέστατά σοί μεμεληκὸς ἐξ ἀρχῆς ἐπίστασθαι τὰς ἐκείνου πράξεις, </p>
@@ -151,10 +140,7 @@
                <p> ὅθεν οἵ τε φυγάδες μάλιστα τὸν νοῦν ἐκείνῳ προσεῖχον, ὅ τε Νικοκλῆς οὐκ ἠμέλει τῶν πραττομένων, ἀλλʼ ἀδήλως ἀπεθεώρει Καὶ παρεφύλαττεν αὑτοῦ τὴν ὁρμήν, τόλμημα μὲν οὐδὲν τηλικοῦτον δεδιὼς οὐδὲ ἔργον οὐδὲν οὕτω παρακεκινδυνευμένον, ὑποπτεύων δὲ τοῖς βασιλεῦσιν αὐτὸν διαλέγεσθαι φίλοις οὖσι Καὶ ξένοις πατρῴοις.</p>
             </div>
             <div n="3" type="section">
-               <p>καὶ γὰρ ἀληθῶς ὁ Ἄρατος ἐπεχείρησε τὴν ὁδὸν ἐκείνην βαδίζειν. ὡς δὲ Ἀντίγονος μὲν ὑπισχνούμενος ἠμέλει Καὶ παρῆγε<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>καὶ γὰρ ἀληθῶς ὁ Ἄρατος ἐπεχείρησε τὴν ὁδὸν ἐκείνην βαδίζειν. ὡς δὲ Ἀντίγονος μὲν ὑπισχνούμενος ἠμέλει Καὶ παρῆγε<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">παρῆγε</foreign> Coraës and Ziegler, with S<hi rend="super">g</hi>: <foreign xml:lang="grc">παρῆκε</foreign> (<gloss>let the time pass</gloss>).</note> τὸν χρόνον, αἱ δὲ ἀπʼ <pb n="p.10"/> Αἰγύπτου Καὶ παρὰ Πτολεμαίου μακρὰν ἦσαν ἐλπίδες, ἔγνω διʼ αὑτοῦ καταλύειν τὸν τύραννον.</p>
             </div>
          </div>
@@ -220,10 +206,7 @@
                <p> ἦν δὲ οὐ πολὺ διάστημα ἀπὸ τοῦ κήπου πρὸς τὸ τεῖχος καὶ τὸν πύργον, ἐν ᾧ κύων μέγας ἐφρούρει θηρατικός. αὐτὸς μὲν οὖν οὐκ ᾔσθετο τὴν ἔφοδον, εἴτε φύσει νωθὴς ὢν, εἴτε μεθʼ ἡμέραν κατάκοπος γεγονώς. τῶν δὲ τοῦ κηπουροῦ κυναρίων κάτωθεν ἐκκαλουμένων αὐτόν ὑπεφθέγγετο τυφλὸν καὶ ἄσημον τὸ πρῶτον, εἶτα μᾶλλον ἐπέτεινε παρερχομένων.</p>
             </div>
             <div n="2" type="section">
-               <p> καὶ κατεῖχεν ἤδη πολὺς ὑλαγμὸς τὸ χωρίον, ὥστε τὸν πέραν φύλακα κραυγῇ μεγάλῃ πυνθάνεσθαι τοῦ κυνηγοῦ, πρός τίνα τραχέως οὕτως ὁ κύων ὑλακτεῖ, καὶ μή τι <pb n="p.18"/> γίνεται καινότερον. ὁ δʼ ἀπὸ τοῦ πύργου αὐτῷ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> καὶ κατεῖχεν ἤδη πολὺς ὑλαγμὸς τὸ χωρίον, ὥστε τὸν πέραν φύλακα κραυγῇ μεγάλῃ πυνθάνεσθαι τοῦ κυνηγοῦ, πρός τίνα τραχέως οὕτως ὁ κύων ὑλακτεῖ, καὶ μή τι <pb n="p.18"/> γίνεται καινότερον. ὁ δʼ ἀπὸ τοῦ πύργου αὐτῷ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἀπὸ <gap reason="lost"/> αὐτῷ</foreign> bracketed by Sint.<hi rend="super">2</hi>; Ziegler reads <foreign xml:lang="grc">πρὸς αὐτόν</foreign>, with Stephanus.</note> ἀντεφώνησε μηδὲν εἶναι δεινόν, ἀλλὰ τὸν κύνα πρὸς τὸ φῶς τῶν τειχοφυλάκων καὶ τὸν ψόφον τοῦ κώδωνος παρωξύνθαι.</p>
             </div>
             <div n="3" type="section">
@@ -274,10 +257,7 @@
          </div>
          <div n="11" type="chapter">
             <div n="1" type="section">
-               <p> ὁ δὲ Ἄρατος, ἐπεὶ κατέμιξε τοῖς Ἀχαιοῖς ἑαυτὸν καὶ τὴν πόλιν, ἐν τοῖς ἱππεῦσι στρατευόμενος ἠγαπᾶτο διʼ εὐπείθειαν ὑπὸ τῶν ἀρχόντων, ὅτι, καίπερ συμβολὰς τῷ κοινῷ μεγάλας δεδωκὼς τὴν ἑαυτοῦ δόξαν καὶ τὴν τῆς πατρίδος δύναμιν, ὡς ἑνὶ τῶν ἐπιτυχόντων χρῆσθαι παρεῖχεν αὑτῷ τὸν ἀεὶ στρατηγοῦντα<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ὁ δὲ Ἄρατος, ἐπεὶ κατέμιξε τοῖς Ἀχαιοῖς ἑαυτὸν καὶ τὴν πόλιν, ἐν τοῖς ἱππεῦσι στρατευόμενος ἠγαπᾶτο διʼ εὐπείθειαν ὑπὸ τῶν ἀρχόντων, ὅτι, καίπερ συμβολὰς τῷ κοινῷ μεγάλας δεδωκὼς τὴν ἑαυτοῦ δόξαν καὶ τὴν τῆς πατρίδος δύναμιν, ὡς ἑνὶ τῶν ἐπιτυχόντων χρῆσθαι παρεῖχεν αὑτῷ τὸν ἀεὶ στρατηγοῦντα<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τὸν ἀεὶ στρατηγοῦντα</foreign> Ziegler, witn Sint.<hi rend="super">1</hi> and the MSS.: <foreign xml:lang="grc">τῷ ἀεὶ στρατηγοῦντι.</foreign>
                   </note> τῶν Ἀχαιῶν, εἴτε Δυμαῖος, εἴτε Τριταιεὺς, εἴτε μικροτέρας τινὸς ὢν τύχοι πόλεως.</p>
             </div>
@@ -333,10 +313,7 @@
                      <l>ἄμμες δʼ εἰκόνʼ, Ἄρατε, τεὰν νόστοιο τυχόντες </l>
                      <l>στάσαμεν ἀντʼ ἀρετᾶς ἠδὲ δικαιοσύνας </l>
                      <l>σωτῆρος σωτῆρσι θεοῖς, ὅτι πατρίδι τᾷ σᾷ </l>
-                     <l>δαιμόνιον<note anchored="true"
-                              place="unspecified"
-                              resp="editor"
-                              xml:lang="eng">
+                     <l>δαιμόνιον<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                            <foreign xml:lang="grc">δαιμόνιον</foreign> Sint.<hi rend="super">2</hi> and Ziegler, after Zeitz: <foreign xml:lang="grc">δαίμον’ ἴσον.</foreign>
                         </note> θείαν τʼ ὤπασας εὐνομίαν.</l>
                   </quote>
@@ -367,10 +344,7 @@
                <p>Χάρης μὲν γὰρ ὁ Ἀθηναῖος ἔν τινι μάχῃ πρὸς τοὺς βασιλέως στρατηγοὺς εὐτυχήσας ἔγραψε τῷ δήμῳ τῶν Ἀθηναίων ὡς νενικήκοι τῆς ἐν Μαραθῶνι μάχης ἀδελφήν ταύτην δὲ τὴν πρᾶξιν οὐκ ἂν ἁμάρτοι τις ἀδελφήν προσειπὼν τῆς Πελοπίδου τοῦ Θηβαίου καὶ Θρασυβούλου τοῦ Ἀθηναίου τυραννοκτονίας, πλὴν ὅτι τῷ μὴ πρὸς Ἕλληνας, ἀλλὰ ἐπακτὸν ἀρχὴν γεγονέναι καὶ ἀλλόφυλον αὕτη διήνεγκεν.</p>
             </div>
             <div n="4" type="section">
-               <p> ὁ μὲν γὰρ <pb n="p.36"/> Ἰσθμός ἐμφράσσων τὰς θαλάσσας, εἰς ταὐτὸ συνάγει τὼ τόπῳ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ὁ μὲν γὰρ <pb n="p.36"/> Ἰσθμός ἐμφράσσων τὰς θαλάσσας, εἰς ταὐτὸ συνάγει τὼ τόπῳ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">τὼ τύπω</foreign> Capps: <foreign xml:lang="grc">τῷ τόπῳ.</foreign>
                   </note> καὶ συνάπτει τὴν ἤπειρον ἡμῶν, ὁ δὲ Ἀκροκόρινθος, ὑψηλὸν ὄρος, ἐκ μέσης ἀναπεφυκὼς τῆς Ἑλλάδος, ὅταν λάβῃ φρουράν, ἐνίσταται καὶ ἀποκόπτει τὴν ἐντὸς Ἰσθμοῦ πᾶσαν ἐπιμιξιῶν τε καὶ παρόδων καὶ στρατειῶν ἐργασίας τε κατὰ γῆν καὶ κατὰ θάλατταν, </p>
             </div>
@@ -426,10 +400,7 @@
                <p> οὖσαν δὲ καθʼ αὑτὴν ἐπισφαλῆ τὴν πρᾶξιν ἐπισφαλεστέραν ἐποίησεν ἁμαρτία τις εὐθὺς ἐν ἀρχῇ συμβᾶσα διʼ ἄγνοιαν. ὁ γὰρ οἰκέτης τοῦ Ἀράτου Τέχνων ἐπέμφθη μὲν ὡς μετὰ τοῦ Διοκλέους κατασκεψόμενος τὸ τεῖχος, οὔπω δʼ ἦν τῷ Διοκλεῖ πρότερον ἐντετυχηκὼς κατʼ ὄψιν, ἀλλὰ τὴν μορφὴν αὐτοῦ καὶ τὸ εἶδος δοκῶν κατέχειν ἐξ ὧν ὁ Ἐργῖνος ἐπεσήμηνεν οὐλοκόμην καὶ μελάγχρουν καὶ ἀγένειον.</p>
             </div>
             <div n="2" type="section">
-               <p> ἐλθὼν οὖν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ἐλθὼν οὖν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἀγένειον. ἐλθὼν οὖν</foreign> Coraës and Ziegler, with the MSS.:<foreign xml:lang="grc">ἀγένειον, ἐλθών.</foreign>
                   </note> ὅπου <pb n="p.44"/> συνετέτακτο, τὸν Ἐργῖνον ὡς ἀφιξόμενον μετὰ τὸν Διοκλέους ἀνέμενε πρὸ τῆς πόλεως πρὸ τοῦ καλουμένου Ὄρνιθος, ἐν δὲ τούτῳ πρῶτος ἀδελφὸς Ἐργίνου καὶ Διοκλέους ὄνομα Διονύσιος οὐ συνειδὼς τὴν πρᾶξιν οὐδὲ κοινωνῶν, ὅμοιος δὲ τῷ Διοκλεῖ, προσῄει κατὰ τύχην. ὁ δὲ Τέχνων πρὸς τὰ σημεῖα τῆς μορφῆς τῇ ὁμοιότητι κινηθείς <pb n="paris.1624.1036"/> ἠρώτησε τὸν ἄνθρωπον εἴ τι συμβόλαιον αὐτῷ πρὸς Ἐργῖνον εἴη.</p>
             </div>
@@ -463,10 +434,7 @@
          </div>
          <div n="22" type="chapter">
             <div n="1" type="section">
-               <p> ἐν τούτῳ δὲ ὁ μὲν Ἄρατος ἐμφὺς τῇ πορείᾳ παρὰ τὸ κρημνῶδες ἡμιλλᾶτο, βραδέως καὶ ταλαιπώρως τὸ πρῶτον, οὐ κατακρατῶν, ἀλλʼ ἀποπλανώμενος τοῦ τρίβου παντάπασιν ἐνδεδυκότος καὶ πεοισκιαζομένου ταῖς τραχύτησι καὶ διὰ πολλῶν ἑλιγμῶν καὶ παραβολῶν περαίνοντος πρὸς τὸ τεῖχος, εἶτα θαυμάσιον οἷον ἡ σελήνη λέγεται διαστέλλουσα τὰ νέφη καὶ ὑπολαμποῦσα,<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ἐν τούτῳ δὲ ὁ μὲν Ἄρατος ἐμφὺς τῇ πορείᾳ παρὰ τὸ κρημνῶδες ἡμιλλᾶτο, βραδέως καὶ ταλαιπώρως τὸ πρῶτον, οὐ κατακρατῶν, ἀλλʼ ἀποπλανώμενος τοῦ τρίβου παντάπασιν ἐνδεδυκότος καὶ πεοισκιαζομένου ταῖς τραχύτησι καὶ διὰ πολλῶν ἑλιγμῶν καὶ παραβολῶν περαίνοντος πρὸς τὸ τεῖχος, εἶτα θαυμάσιον οἷον ἡ σελήνη λέγεται διαστέλλουσα τὰ νέφη καὶ ὑπολαμποῦσα,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ὑπολαμποῦσα</foreign> Coraës and Bekker, adopting an anonymous conjecture: <foreign xml:lang="grc">ὑπολαβοῦσα.</foreign>
                   </note> τῆς ὁδοῦ τὸ χαλεπώτατον σαφηνίζειν, ἕως ἥψατο τοῦ τείχους καθʼ ὃν ἔδει τόπον· ἐκεῖ δὲ πάλιν συνεσκίασε καὶ ἀπέκρυψε νεφῶν συνελθόντων.</p>
             </div>
@@ -695,10 +663,7 @@
             </div>
             <div n="4" type="section">
                <p>
-                  <milestone unit="para"/>ὁ δὲ εὐημερῶν παρὰ τοῖς Ἀχαιοῖς καὶ βουλόμενος εἰς τὴν Λακωνικὴν ἐμβαλεῖν ἐκάλει τὸν Ἄρατον ἐξ Ἀθηνῶν, ὁ δὲ ἔγραφε μὲν αὐτῷ τὴν στρατείαν ἀπαγορεύων καὶ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+                  <milestone unit="para"/>ὁ δὲ εὐημερῶν παρὰ τοῖς Ἀχαιοῖς καὶ βουλόμενος εἰς τὴν Λακωνικὴν ἐμβαλεῖν ἐκάλει τὸν Ἄρατον ἐξ Ἀθηνῶν, ὁ δὲ ἔγραφε μὲν αὐτῷ τὴν στρατείαν ἀπαγορεύων καὶ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">καὶ</foreign> bracketed by Sint.<hi rend="super">2</hi>
                   </note> τῷ Κλεομένει θράσος <pb n="p.82"/> ἔχοντι καὶ παραβόλως αὐξανομένῳ συμπλέκεσθαι τοὺς Ἀχαιοὺς μὴ βουλόμενος, ὡρμημένου δὲ πάντως ὑπήκουσε καὶ παρὼν συνεστράτευεν.</p>
             </div>
@@ -764,10 +729,7 @@
                <p> ὁ δὲ Ἄρατος ὡς ᾔσθετο βαδίζοντα καὶ περὶ Λέρναν ὄντα μετὰ τῆς δυνάμεως, φοβηθεὶς ἀπέστελλε πρέσβεις τοὺς ἀξιοῦντας ὡς παρὰ φίλους καὶ συμμάχους αὐτὸν ἥκειν μετὰ τριακοσίων, εἰ δὲ ἀπιστεῖ, λαβεῖν ὁμήρους, ταῦτα ὕβριν εἶναι καὶ χλευασμὸν αὑτοῦ φήσας ὁ Κλεομένης ἀνέζευξεν, ἐπιστολὴν γράψας τοῖς Ἀχαιοῖς ἐγκλήματα πολλὰ κατὰ τοῦ Ἀράτου καὶ διαβολὰς ἔχουσαν.</p>
             </div>
             <div n="3" type="section">
-               <p> ἔγραφε δὲ κἀκεῖνος ἐπιστολὰς κατὰ τοῦ Κλεομένους· καὶ ἐφέροντο λοιδορίαι καὶ βλασφημίαι μέχρι γάμων καὶ γυναικῶν ἀλλήλους κακῶς λεγόντων. <milestone unit="para"/>ἐκ τούτου κήρυκα πέμψας ὁ Κλεομένης πόλεμον προεροῦντα τοῖς Ἀχαιοῖς, μικροῦ μὲν ἔλαθε τὴν Σικυωνίων πόλιν ἁρπάσας διὰ προδοσίας, ἐγγύθεν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ἔγραφε δὲ κἀκεῖνος ἐπιστολὰς κατὰ τοῦ Κλεομένους· καὶ ἐφέροντο λοιδορίαι καὶ βλασφημίαι μέχρι γάμων καὶ γυναικῶν ἀλλήλους κακῶς λεγόντων. <milestone unit="para"/>ἐκ τούτου κήρυκα πέμψας ὁ Κλεομένης πόλεμον προεροῦντα τοῖς Ἀχαιοῖς, μικροῦ μὲν ἔλαθε τὴν Σικυωνίων πόλιν ἁρπάσας διὰ προδοσίας, ἐγγύθεν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἔγγυθεν</foreign> Bekker reads <foreign xml:lang="grc">ἐκεῖθεν,</foreign> with the Aldine.</note> δὲ ἀποτραπεὶς Πελλήνῃ προσέβαλε καὶ τοῦ στρατηγοῦ τῶν Ἀχαιῶν ἐκπεσόντος ἔσχε τὴν πόλιν. ὀλίγῳ δὲ ὕστερον καὶ Φενεὸν ἔλαβε καὶ Πεντέλειον.</p>
             </div>
             <div n="4" type="section">
@@ -794,17 +756,11 @@
          </div>
          <div n="41" type="chapter">
             <div n="1" type="section">
-               <p> τῷ δὲ Ἀράτῳ συνῆλθον εἰς Σικυῶνα τῶν Ἀχαιῶν οὐ πολλοί·<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> τῷ δὲ Ἀράτῳ συνῆλθον εἰς Σικυῶνα τῶν Ἀχαιῶν οὐ πολλοί·<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">οὐ πολλοί</foreign> Ziegler, with S<hi rend="super">g</hi> and most good MSS.: <foreign xml:lang="grc">οἱ πολλοί</foreign>.</note> καὶ γενομένης ἐκκλησίας ᾑρέθη στρατηγὸς αὐτοκράτωρ, καὶ περιεστήσατο φρουρὰν ἐκ τῶν ἑαυτοῦ πολιτῶν, τριάκοντα μὲν ἔτη καὶ τρία πεπολιτευμένος ἐν τοῖς Ἀχαιοῖς, πεπρωτευκὼς δὲ καὶ δυνάμει καὶ δόξῃ τῶν Ἑλλήνων, τότε δὲ ἔρημος καὶ ἄπορος συντετριμμένος, ὥσπερ ἐπὶ ναυαγίου τῆς πατρίδος ἐν τοσούτῳ σάλῳ καὶ κινδύνῳ διαφερόμενος.</p>
             </div>
             <div n="2" type="section">
-               <p> καὶ γὰρ Αἰτωλοὶ δεομένου βοηθεῖν ἀπείπαντο, καὶ τὴν Ἀθηναίων πόλιν χάριτι τοῦ Ἀράτου πρόθυμον οὖσαν οἱ περὶ Εὐρυκλείδην καὶ Μικίωνα διεκώλυσαν. ὄντων δὲ τῷ Ἀράτῳ καὶ χρημάτων ἐν Κορίνθῳ καὶ οἰκίας, ὁ Κλεομένης ἥψατο μὲν οὐδενός οὐδὲ ἄλλον εἴασε, μεταπεμψάμενος δὲ τοὺς φίλους αὐτοῦ καὶ τοὺς διοικητάς ἐκέλευε <pb n="p.96"/> πάντα διοικεῖν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> καὶ γὰρ Αἰτωλοὶ δεομένου βοηθεῖν ἀπείπαντο, καὶ τὴν Ἀθηναίων πόλιν χάριτι τοῦ Ἀράτου πρόθυμον οὖσαν οἱ περὶ Εὐρυκλείδην καὶ Μικίωνα διεκώλυσαν. ὄντων δὲ τῷ Ἀράτῳ καὶ χρημάτων ἐν Κορίνθῳ καὶ οἰκίας, ὁ Κλεομένης ἥψατο μὲν οὐδενός οὐδὲ ἄλλον εἴασε, μεταπεμψάμενος δὲ τοὺς φίλους αὐτοῦ καὶ τοὺς διοικητάς ἐκέλευε <pb n="p.96"/> πάντα διοικεῖν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">διοικεῖν</foreign> suggested by Sintenis, with comparison of Cleomenes, xix. 3: <foreign xml:lang="grc">ποιεῖν.</foreign>
                   </note> καὶ φυλάσσειν ὡς Ἀράτῳ λόγον ὑφέξοντας· </p>
             </div>
@@ -835,10 +791,7 @@
             </div>
             <div n="3" type="section">
                <p>
-                  <milestone unit="para"/>καὶ γὰρ ἦν ὁ Ἄρατος οὐ μόνον ἐν πράγμασι <pb n="p.100"/> μεγάλοις ὠφέλιμος, ἀλλὰ καὶ σχολάζοντι βασιλεῖ συγγενέσθαι παρʼ ὁντινοῦν ἐπίχαρις. διό, καίπερ ὢν νέος ὁ Ἀντίγονος, ὡς κατενόησε τὴν φύσιν τοῦ ἀνδρὸς μηδὲν ἀργὸν εἰς φιλίαν βασιλικὴν οὖσαν, οὐ μόνον Ἀχαιῶν, ἀλλὰ καὶ Μακεδόνων τῶν σὺν αὐτῷ πάντων μάλιστα<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+                  <milestone unit="para"/>καὶ γὰρ ἦν ὁ Ἄρατος οὐ μόνον ἐν πράγμασι <pb n="p.100"/> μεγάλοις ὠφέλιμος, ἀλλὰ καὶ σχολάζοντι βασιλεῖ συγγενέσθαι παρʼ ὁντινοῦν ἐπίχαρις. διό, καίπερ ὢν νέος ὁ Ἀντίγονος, ὡς κατενόησε τὴν φύσιν τοῦ ἀνδρὸς μηδὲν ἀργὸν εἰς φιλίαν βασιλικὴν οὖσαν, οὐ μόνον Ἀχαιῶν, ἀλλὰ καὶ Μακεδόνων τῶν σὺν αὐτῷ πάντων μάλιστα<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">πάντων μάλιστα</foreign> Coraës and Ziegler, after Reiske: <foreign xml:lang="grc">πάντα.</foreign>
                   </note> χρώμενος ἐκείνῳ διετέλει· </p>
             </div>

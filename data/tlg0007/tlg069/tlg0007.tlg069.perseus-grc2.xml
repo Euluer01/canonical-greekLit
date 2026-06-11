@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -59,16 +58,14 @@
          <refsDecl n="CTS">
 <!--<state unit="chapter" delim="."/>
 <state unit="section"/>-->
-            <cRefPattern n="section"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts sections</p>
             </cRefPattern>
          </refsDecl>
          <!--<refsDecl doctype="TEI.2">
 <state unit="stephpage" n="chunk"/>
 </refsDecl>-->
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
             </citeStructure>
@@ -95,10 +92,7 @@
             <p rend="indent">
                <milestone unit="stephpage" xml:id="stephpage-37c" n="37c"/> τὴν γενομένην μοι σχολὴν περὶ τοῦ ἀκούειν, ὦ Νίκανδρε, ἀπέσταλκά σοι γράψας, ὅπως εἰδῇς τοῦ πείθοντος ὀρθῶς ἀκούειν, ὅτε τῶν προσταττόντων ἀπήλλαξαι τὸ ἀνδρεῖον ἀνειληφὼς ἱμάτιον.
  <milestone unit="tlnum" n="5"/> ἀναρχία μὲν γάρ, ἣν ἔνιοι τῶν νέων ἐλευθερίαν
- <milestone unit="stephpage" xml:id="stephpage-37d" n="37d"/> ἀπαιδευσίᾳ νομίζουσι, χαλεπωτέρους ἐκείνων τῶν ἐν παισὶ διδασκάλων καὶ παιδαγωγῶν δεσπότας ἐφίστησι τὰς ἐπιθυμίας ὥσπερ ἐκ δεσμῶν λυθείσας· καὶ καθάπερ Ἡρόδοτός<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="stephpage" xml:id="stephpage-37d" n="37d"/> ἀπαιδευσίᾳ νομίζουσι, χαλεπωτέρους ἐκείνων τῶν ἐν παισὶ διδασκάλων καὶ παιδαγωγῶν δεσπότας ἐφίστησι τὰς ἐπιθυμίας ὥσπερ ἐκ δεσμῶν λυθείσας· καὶ καθάπερ Ἡρόδοτός<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">Ἡρόδοτος</foreign>] I 8</note> φησιν ἅμα τῷ χιτῶνι συνεκδύεσθαι
  <milestone unit="tlnum" n="10"/> τὴν αἰδῶ τὰς γυναῖκας, οὕτως ἔνιοι τῶν νέων ἅμα τῷ τὸ παιδικὸν ἱμάτιον ἀποθέσθαι συναποθέμενοι τὸ αἰδεῖσθαι καὶ φοβεῖσθαι καὶ λύσαντες τὴν κατασχηματίζουσαν αὐτοὺς περιβολὴν εὐθὺς ἐμπίπλανται τῆς ἀναγωγίας. σὺ δὲ πολλάκις ἀκηκοὼς
  <milestone unit="tlnum" n="15"/> ὅτι ταὐτόν ἐστι τὸ ἕπεσθαι θεῷ καὶ τὸ πείθεσθαι λόγῳ, νόμιζε τὴν εἰς ἄνδρας ἐκ παίδων ἀγωγὴν
@@ -109,40 +103,25 @@
          <div n="2" type="section">
             <p rend="indent">ἐπεὶ δʼ ὥσπερ τῶν ἐγγραφομένων εἰς τὰς πολιτείας οἱ μὲν ἀλλοδαποὶ καὶ ξένοι κομιδῇ πολλὰ
  <milestone unit="stephpage" xml:id="stephpage-37f" n="37f"/> μέμφονται καὶ δυσκολαίνουσι τῶν γιγνομένων, οἱ δʼ ἐκ μετοίκων σύντροφοι καὶ συνήθεις τῶν νόμων ὄντες οὐ χαλεπῶς προσδέχονται τὰ ἐπιβάλλοντα καὶ
- <milestone unit="tlnum" n="10"/> στέργουσιν, οὕτω σε δεῖ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="10"/> στέργουσιν, οὕτω σε δεῖ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">οὕτω σε δεῖ</foreign> Duebnerus <foreign xml:lang="grc">οὕτως ἔδει</foreign>
                </note> πολὺν χρόνον ἐν φιλοσοφίᾳ παρατρεφόμενον καὶ πᾶν μάθημα καὶ ἄκουσμα παιδικὸν ἀπʼ ἀρχῆς ἐθισθέντα προσφέρεσθαι λόγῳ φιλοσόφῳ μεμιγμένον, εὐμενῆ καὶ οἰκεῖον ἥκειν εἰς φιλοσοφίαν, ἣ μόνη τὸν ἀνδρεῖον καὶ τέλειον ὡς
-  <milestone unit="tlnum" n="15"/> ἀληθῶς ἐκ λόγου τοῖς νέοις περιτίθησι κόσμον. Οὐκ ἂν ἀηδῶς οἶμαί<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+  <milestone unit="tlnum" n="15"/> ἀληθῶς ἐκ λόγου τοῖς νέοις περιτίθησι κόσμον. Οὐκ ἂν ἀηδῶς οἶμαί<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">οἶμαι</foreign>
                   <foreign xml:lang="lat">scripsi:</foreign>
                   <foreign xml:lang="grc">δ’ οἶμαι</foreign>
-               </note> σε προακοῦσαι<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               </note> σε προακοῦσαι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">προακοῦσαι</foreign> Madvigius: <foreign xml:lang="grc">προσακοῦσαι</foreign>
                </note> περὶ τῆς ἀκουστικῆς
  <milestone unit="stephpage" xml:id="stephpage-38a" n="38a"/> αἰσθήσεως, ἣν ὁ Θεόφραστος παθητικωτάτην εἶναί φησι πασῶν. οὔτε γὰρ ὁρατὸν οὐδὲν οὔτε γευστὸν οὔτε ἁπτὸν ἐκστάσεις ἐπιφέρει καὶ ταραχὰς καὶ
  <milestone unit="tlnum" n="20"/> πτοίας τηλικαύτας ἡλίκαι καταλαμβάνουσι τὴν ψυχὴν κτύπων τινῶν καὶ πατάγων καὶ ἤχων τῇ ἀκοῇ προσπεσόντων. ἔστι δὲ λογικωτέρα μᾶλλον ἢ παθητικωτέρα. τῇ μὲν γὰρ κακίᾳ πολλὰ χωρία καὶ μέρη τοῦ σώματος παρέχει διʼ αὐτῶν ἐνδῦσαν ἅψασθαι τῆς
  <milestone unit="tlnum" n="25"/> ψυχῆς, τῇ δʼ ἀρετῇ μία λαβὴ τὰ ὦτα τῶν νέων
- <milestone unit="stephpage" xml:id="stephpage-38b" n="38b"/> ἐστίν, ἂν ᾖ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="stephpage" xml:id="stephpage-38b" n="38b"/> ἐστίν, ἂν ᾖ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἂν ᾖ</foreign>] <foreign xml:lang="grc">ἂν</foreign> R</note> καθαρὰ καὶ ἄθρυπτα κολακείᾳ καὶ λόγοις ἄθικτα φαύλοις ἀπʼ ἀρχῆς φυλάττηται. διὸ καὶ <pb xml:id="v.1.p.93"/> Ξενοκράτης τοῖς παισὶ μᾶλλον τοῖς ἀθληταῖς ἐκέλευε περιάπτειν ἀμφωτίδας, ὡς ἐκείνων μὲν τὰ ὦτα ταῖς πληγαῖς, τούτων δὲ τοῖς λόγοις τὰ ἤθη διαστρεφομένων, οὐκ ἀνηκοΐαν οὐδὲ κωφότητα προμνώμενος,
  <milestone unit="tlnum" n="5"/> ἀλλὰ τῶν λόγων τοὺς φαύλους φυλάττεσθαι παραινῶν, πρὶν ἑτέρους χρηστούς, ὥσπερ φύλακας ἐντραφέντας ὑπὸ φιλοσοφίας τῷ ἤθει , τὴν μάλιστα κινουμένην αὐτοῦ καὶ ἀναπειθομένην χώραν κατασχεῖν. καὶ Βίας ὁ παλαιὸς Ἀμάσιδι, κελευσθεὶς τὸ
  <milestone unit="tlnum" n="10"/> χρηστότατον ὁμοῦ καὶ φαυλότατον ἐκπέμψαι κρέας τοῦ ἱερείου, τὴν γλῶτταν ἐξελὼν ἀπέπεμψεν, ὡς καὶ βλάβας καὶ ὠφελείας τοῦ λέγειν ἔχοντος μεγίστας.
  <milestone unit="stephpage" xml:id="stephpage-38c" n="38c"/> οἵ τε πολλοὶ τὰ μικρὰ παιδία καταφιλοῦντες αὐτοὶ τε τῶν ὤτων ἅπτονται κἀκεῖνα τοῦτο ποιεῖν κελεύουσιν,
- <milestone unit="tlnum" n="15"/> αἰνιττόμενοι μετὰ παιδιᾶς ὅτι δεῖ φιλεῖν μάλιστα τοὺς διὰ τῶν ὤτων ὠφελοῦντας. ἐπεὶ ὅτι γε πάσης ἀκροάσεως ἀπειργόμενος ὁ νέος καὶ λόγου μηδενὸς γευόμενος οὐ μόνον ἄκαρπος ὅλως καὶ ἀβλαστὴς διαμένει<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="15"/> αἰνιττόμενοι μετὰ παιδιᾶς ὅτι δεῖ φιλεῖν μάλιστα τοὺς διὰ τῶν ὤτων ὠφελοῦντας. ἐπεὶ ὅτι γε πάσης ἀκροάσεως ἀπειργόμενος ὁ νέος καὶ λόγου μηδενὸς γευόμενος οὐ μόνον ἄκαρπος ὅλως καὶ ἀβλαστὴς διαμένει<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">διαμενεῖ</foreign> Madvigius: <foreign xml:lang="grc">διαμένει</foreign>
                </note> πρὸς ἀρετήν, ἀλλὰ καὶ διαστρέφοιτʼ
  <milestone unit="tlnum" n="20"/> ἂν πρὸς κακίαν, ὥσπερ ἐκ χώρας ἀκινήτου καὶ ἀργῆς ἄγρια πολλὰ τῆς ψυχῆς ἀναδιδούς, δῆλόν ἐστι. τὰς γὰρ ἐφʼ ἡδονὴν ὁρμὰς καὶ πρὸς πόνον
@@ -159,10 +138,7 @@
  <milestone unit="stephpage" xml:id="stephpage-38f" n="38f"/> νέων μηδʼ ὠφελεῖσθαι διʼ ἀκοῆς ἐθισθέντων ὑπηνέμιος ὄντως ὁ λόγος ἐκπίπτων <quote rend="blockquote">
                   <l>ἀκλειὴς ἀίδηλος ὑπαὶ νεφέεσσι κεδάσθη</l>
                </quote> τὰ μὲν γὰρ ἀγγεῖα πρὸς τὴν ὑποδοχὴν τῶν ἐγχεομένων
- <milestone unit="tlnum" n="20"/> ἐπικλίνουσι καὶ συνεπιστρέφουσιν, ἵνʼ ἔγχυσις ἀληθῶς, μὴ ἔκχυσις γένηται, αὑτοὺς δὲ τῷ λέγοντι παρέχειν καὶ, συναρμόττειν τῇ προσοχῇ τὴν ἀκρόασιν, ὡς μηδὲν ἐκφύγῃ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="20"/> ἐπικλίνουσι καὶ συνεπιστρέφουσιν, ἵνʼ ἔγχυσις ἀληθῶς, μὴ ἔκχυσις γένηται, αὑτοὺς δὲ τῷ λέγοντι παρέχειν καὶ, συναρμόττειν τῇ προσοχῇ τὴν ἀκρόασιν, ὡς μηδὲν ἐκφύγῃ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἐκφύγῃ</foreign> H: <foreign xml:lang="grc">ἐκφύγοι</foreign>
                </note> τῶν χρησίμως λεγομένων, οὐ μανθάνουσιν, ἀλλʼ ὃ πάντων καταγελαστότατόν ἐστιν,
  <milestone unit="tlnum" n="25"/>
@@ -175,10 +151,7 @@
          <div n="4" type="section">
             <p rend="indent">πανταχοῦ μὲν οὖν τῷ νέῳ κόσμος ἀσφαλής ἐστιν ἡ σιωπή, μάλιστα δʼ ὅταν ἀκούων ἑτέρου μὴ
  <milestone unit="stephpage" xml:id="stephpage-39c" n="39c"/> συνταράττηται μηδʼ ἐξυλακτῇ πρὸς ἕκαστον, ἀλλὰ κἂν ὁ λόγος ᾖ μὴ λίαν ἀρεστός, ἀνέχηται καὶ περιμένῃ
- <milestone unit="tlnum" n="20"/> παύσασθαι τὸν διαλεγόμενον, καὶ παυσαμένου μὴ εὐθέως ἐπιβάλλῃ τὴν ἀντίρρησιν, ἀλλʼ ὡς Αἰσχίνης φησί, διαλείπῃ χρόνον, εἴτε προσθεῖναί τι βούλοιτο τοῖς λελεγμένοις ὁ εἰρηκώς, εἴτε μεταθέσθαι καὶ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="20"/> παύσασθαι τὸν διαλεγόμενον, καὶ παυσαμένου μὴ εὐθέως ἐπιβάλλῃ τὴν ἀντίρρησιν, ἀλλʼ ὡς Αἰσχίνης φησί, διαλείπῃ χρόνον, εἴτε προσθεῖναί τι βούλοιτο τοῖς λελεγμένοις ὁ εἰρηκώς, εἴτε μεταθέσθαι καὶ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">καὶ</foreign>
                   <foreign xml:lang="grc">ἢ καὶ</foreign> R</note> ἀφελεῖν. οἱ δʼ εὐθὺς ἀντικόπτοντες, οὔτʼ ἀκούοντες
  <milestone unit="tlnum" n="25"/> οὔτʼ ἀκουόμενοι λέγοντες δὲ πρὸς λέγοντας, ἀσχημονοῦσιν· ὁ δʼ ἐγκρατῶς καὶ μετʼ αἰδοῦς ἀκούειν ἐθισθεὶς τὸν μὲν ὠφέλιμον λόγον ἐδέξατο καὶ κατέσχε, τὸν δʼ ἄχρηστον ἢ ψευδῆ μᾶλλον διεῖδε καὶ <pb xml:id="v.1.p.96"/>
@@ -186,10 +159,7 @@
  <milestone unit="tlnum" n="5"/> τι βουλομένους χρήσιμον εἰ δὲ μή, γέμοντες ὄγκου καὶ φυσήματος οὐ προσδέχονται. </p>
          </div>
          <div n="5" type="section">
-            <p rend="indent">φθόνος τοίνυν μετὰ βασκανίας καὶ δυσμενείας οὐδενὶ μὲν ἔργῳ παρὼν ἀγαθόν,<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+            <p rend="indent">φθόνος τοίνυν μετὰ βασκανίας καὶ δυσμενείας οὐδενὶ μὲν ἔργῳ παρὼν ἀγαθόν,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἀγαθός</foreign> H</note> ἀλλὰ πᾶσιν ἐμπόδιος τοῖς καλοῖς, κάκιστος δʼ ἀκροωμένῳ πάρεδρος
  <milestone unit="tlnum" n="10"/> καὶ σύμβουλος, ἀνιαρὰ καὶ ἀηδῆ καὶ δυσπρόσδεκτα ποιῶν τὰ ὠφέλιμα διὰ τὸ πᾶσι μᾶλλον ἥδεσθαι τοὺς
  <milestone unit="stephpage" xml:id="stephpage-39e" n="39e"/> φθονοῦντας ἢ τοῖς εὖ λεγομένοις. καίτοι πλοῦτος μὲν ὅντινα δάκνει καὶ δόξα καὶ κάλλος, ἑτέροις ὑπάρχοντα, φθονερός ἐστι μόνον· ἄχθεται γὰρ ἄλλων
@@ -205,32 +175,14 @@
             </p>
          </div>
          <div n="6" type="section">
-            <p rend="indent">διὸ δεῖ τῇ φιληκοΐᾳ πρὸς τὴν φιλοδοξίαν σπεισάμενον ἀκροᾶσθαι τοῦ λέγοντος ἵλεων καὶ πρᾶον, ὥσπερ ἐφʼ ἑστίασιν ἱερὰν καὶ θυσίας ἀπαρχὴν παρειλημμένον, ἐπαινοῦντα μὲν ἐν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
-                  <foreign xml:lang="grc">ἐν</foreign> add. R</note> οἷς ἐπιτυγχάνει τὴν δύναμιν, ἀγαπῶντα δὲ τὴν προθυμίαν αὐτὴν τοῦ <milestone unit="tlnum" n="20"/> φέροντος εἰς μέσον ἃ γιγνώσκει καὶ πείθοντος ἑτέρους διʼ ὧν αὐτὸς πέπεισται. τοῖς μὲν οὖν κατορθουμένοις ἐπιλογιστέον ὡς οὐκ ἀπὸ τύχης οὐδʼ αὐτομάτως ἀλλʼ ἐπιμελείᾳ καὶ πόνῳ καὶ μαθήσει κατορθοῦνται,<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+            <p rend="indent">διὸ δεῖ τῇ φιληκοΐᾳ πρὸς τὴν φιλοδοξίαν σπεισάμενον ἀκροᾶσθαι τοῦ λέγοντος ἵλεων καὶ πρᾶον, ὥσπερ ἐφʼ ἑστίασιν ἱερὰν καὶ θυσίας ἀπαρχὴν παρειλημμένον, ἐπαινοῦντα μὲν ἐν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                  <foreign xml:lang="grc">ἐν</foreign> add. R</note> οἷς ἐπιτυγχάνει τὴν δύναμιν, ἀγαπῶντα δὲ τὴν προθυμίαν αὐτὴν τοῦ <milestone unit="tlnum" n="20"/> φέροντος εἰς μέσον ἃ γιγνώσκει καὶ πείθοντος ἑτέρους διʼ ὧν αὐτὸς πέπεισται. τοῖς μὲν οὖν κατορθουμένοις ἐπιλογιστέον ὡς οὐκ ἀπὸ τύχης οὐδʼ αὐτομάτως ἀλλʼ ἐπιμελείᾳ καὶ πόνῳ καὶ μαθήσει κατορθοῦνται,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">κατορθοῦνται</foreign> H: <foreign xml:lang="grc">κατορθοῦνται</foreign>
-               </note> καὶ μιμητέον γε ταῦτα θαυμάζοντάς <milestone unit="tlnum" n="25"/> γε δὴ καὶ ζηλοῦντας τοῖς δʼ ἁμαρτανομένοις ἐφιστάναι χρὴ τὴν διάνοιαν, ὑφʼ ὧν αἰτιῶν καὶ ὅθεν <milestone unit="stephpage" xml:id="stephpage-40c" n="40c"/> ἡ παρατροπὴ γέγονεν. ὡς γὰρ ὁ Ξενοφῶν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
-                  <foreign xml:lang="grc">Ξενοφῶν</foreign> Oecon. I 7</note> φησι <pb xml:id="v.1.p.98"/> τοὺς οἰκονομικοὺς καὶ ἀπὸ τῶν φίλων ὀνίνασθαι καὶ ἀπὸ τῶν ἐχθρῶν, οὕτω τοὺς ἐγρηγορότας καὶ προσέχοντας οὐ μόνον κατορθοῦντες ἀλλὰ καὶ διαμαρτάνοντες ὠφελοῦσιν οἱ λέγοντες· καὶ γὰρ διανοήματος <milestone unit="tlnum" n="5"/> εὐτέλεια καὶ ῥήματος κενότης καὶ σχῆμα φορτικὸν καὶ πτόησις μετὰ χαρᾶς ἀπειροκάλου πρὸς ἔπαινον καὶ ὅσα τοιαῦτα μᾶλλον ἀκροωμένοις ἐφʼ ἑτέρων ἢ λέγουσιν ἐφʼ ἑαυτῶν καταφαίνεται. διὸ δεῖ μεταφέρειν τὴν εὐθύνην ἐφʼ ἑαυτοὺς ἀπὸ τοῦ <milestone unit="tlnum" n="10"/> λέγοντος, ἀνασκοποῦντας εἴ τι τοιοῦτο λανθάνομεν <milestone unit="stephpage" xml:id="stephpage-40d" n="40d"/> ἁμαρτάνοντες, ῥᾷστον γάρ ἐστι τῶν ὄντων τὸ μέμψασθαι<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
-                  <foreign xml:lang="grc">μεμφεσθαι</foreign> H</note> τὸν πλησίον, ἀχρήστως τε καὶ κενῶς γιγνόμενον,<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               </note> καὶ μιμητέον γε ταῦτα θαυμάζοντάς <milestone unit="tlnum" n="25"/> γε δὴ καὶ ζηλοῦντας τοῖς δʼ ἁμαρτανομένοις ἐφιστάναι χρὴ τὴν διάνοιαν, ὑφʼ ὧν αἰτιῶν καὶ ὅθεν <milestone unit="stephpage" xml:id="stephpage-40c" n="40c"/> ἡ παρατροπὴ γέγονεν. ὡς γὰρ ὁ Ξενοφῶν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                  <foreign xml:lang="grc">Ξενοφῶν</foreign> Oecon. I 7</note> φησι <pb xml:id="v.1.p.98"/> τοὺς οἰκονομικοὺς καὶ ἀπὸ τῶν φίλων ὀνίνασθαι καὶ ἀπὸ τῶν ἐχθρῶν, οὕτω τοὺς ἐγρηγορότας καὶ προσέχοντας οὐ μόνον κατορθοῦντες ἀλλὰ καὶ διαμαρτάνοντες ὠφελοῦσιν οἱ λέγοντες· καὶ γὰρ διανοήματος <milestone unit="tlnum" n="5"/> εὐτέλεια καὶ ῥήματος κενότης καὶ σχῆμα φορτικὸν καὶ πτόησις μετὰ χαρᾶς ἀπειροκάλου πρὸς ἔπαινον καὶ ὅσα τοιαῦτα μᾶλλον ἀκροωμένοις ἐφʼ ἑτέρων ἢ λέγουσιν ἐφʼ ἑαυτῶν καταφαίνεται. διὸ δεῖ μεταφέρειν τὴν εὐθύνην ἐφʼ ἑαυτοὺς ἀπὸ τοῦ <milestone unit="tlnum" n="10"/> λέγοντος, ἀνασκοποῦντας εἴ τι τοιοῦτο λανθάνομεν <milestone unit="stephpage" xml:id="stephpage-40d" n="40d"/> ἁμαρτάνοντες, ῥᾷστον γάρ ἐστι τῶν ὄντων τὸ μέμψασθαι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                  <foreign xml:lang="grc">μεμφεσθαι</foreign> H</note> τὸν πλησίον, ἀχρήστως τε καὶ κενῶς γιγνόμενον,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">γιγνόμενον = ὃ γίγνεται</foreign>
-               </note> ἂν μὴ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               </note> ἂν μὴ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">μή</foreign> H: <foreign xml:lang="grc">ἦ</foreign>
                </note> πρός τινα διόρθωσιν ἢ φυλακὴν ἀναφέρηται τῶν ὁμοίων. καὶ τὸ τοῦ Πλάτωνος οὐκ ὀκνητέον ἀεὶ πρὸς αὑτὸν ἐπὶ τῶν ἁμαρτανόντων ἀναφθέγγεσθαι, <q>μή που ἄρʼ ἐγὼ τοιοῦτος;</q> ὡς γὰρ <milestone unit="tlnum" n="15"/> ἐν τοῖς ὄμμασι τῶν πλησίον ἐλλάμποντα τὰ ἑαυτῶν ὁρῶμεν, οὕτως ἐπὶ τῶν λόγων δεῖ τοὺς ἑαυτῶν ἐνεικονίζεσθαι τοῖς ἑτέρων, ἵνα μήτʼ ἄγαν θρασέως <milestone unit="tlnum" n="20"/> καταφρονῶμεν ἄλλων, αὑτοῖς τε προσέχωμεν ἐν τῷ <milestone unit="stephpage" xml:id="stephpage-40e" n="40e"/> λέγειν ἐπιμελέστερον. χρήσιμον δὲ πρὸς τοῦτο καὶ τὸ τῆς παραβολῆς, ὅταν γενόμενοι καθʼ αὑτοὺς ἀπὸ τῆς ἀκροάσεως καὶ λαβόντες τι τῶν μὴ καλῶς ἢ μὴ ἱκανῶς εἰρῆσθαι δοκούντων ἐπιχειρῶμεν εἰς ταὐτὸ <milestone unit="tlnum" n="25"/> καὶ προάγωμεν αὑτοὺς τὰ μὲν ὥσπερ ἀναπληροῦν, τὰ δʼ ἐπανορθοῦσθαι, τὰ δʼ ἑτέρως φράζειν, τὰ δʼ ὅλοις ἐξ ὑπαρχῆς εἰσφέρειν πειρώμενοι πρὸς τὴν <pb xml:id="v.1.p.99"/> ὑπόθεσιν. ὃ καὶ Πλάτων ἐποίησε πρὸς τὸν Λυσίου λόγον. τὸ μὲν γὰρ ἀντειπεῖν οὐ χαλεπὸν ἀλλὰ καὶ πάνυ ῥᾴδιον εἰρημένῳ λόγῳ· τὸ δʼ ἕτερον ἀνταναστῆσαι βελτίονα παντάπασιν ἐργῶδες. ὥσπερ ὁ <milestone unit="tlnum" n="5"/>Λακεδαιμόνιος ἀκούσας ὅτι Φίλιππος Ὄλυνθον κατέσκαψεν <q>ἀλλʼ οὐκ ἀναστῆσαί γε τοιαύτην</q> ἔφη <milestone unit="stephpage" xml:id="stephpage-40f" n="40f"/>
                <q>πόλιν ἐκεῖνος ἂν δυνηθείη.</q> ὅταν οὖν ἐν τῷ διαλέγεσθαι πρὸς τὴν τοιαύτην ὑπόθεσιν μὴ πολὺ φαινώμεθα τῶν εἰρηκότων διαφέροντες, πολὺ τοῦ <milestone unit="tlnum" n="10"/> καταφρονεῖν ἀφαιροῦμεν, καὶ τάχιστα κολούεται τὸ αὔθαδες ἡμῶν καὶ φίλαυτον ἐν ταῖς τοιαύταις ἐλεγχόμενον ἀντιπαραβολαῖς. </p>
@@ -239,14 +191,8 @@
             <p rend="indent">τῷ τοίνυν καταφρονεῖν τὸ θαυμάζειν ἀντικείμενον εὐγνωμονεστέρας μέν ἐστι δήπου καὶ ἡμερωτέρας
  <milestone unit="tlnum" n="15"/> φύσεως, δεῖταί γε μὴν οὐδʼ αὐτὸ μικρᾶς εὐλαβείας, τάχα δὲ καὶ μείζονος· οἱ μὲν γὰρ καταφρονητικοὶ
  <milestone unit="stephpage" xml:id="stephpage-41a" n="41a"/> καὶ θρασεῖς ἧττον ὠφελοῦνται ὑπὸ τῶν λεγόντων, οἱ δὲ θαυμαστικοὶ καὶ ἄκακοι μᾶλλον βλάπτονται, καὶ τὸν Ἡράκλειτον οὐκ ἐλέγχουσιν
- <milestone unit="tlnum" n="20"/> εἰπόντα <q>βλὰξ<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
-                     <foreign xml:lang="grc">βλάξ</foreign>] p. 28 d</note> ἄνθρωπος ἐπὶ παντὶ λόγῳ ἐπτοῆσθαι<note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">
+ <milestone unit="tlnum" n="20"/> εἰπόντα <q>βλὰξ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                     <foreign xml:lang="grc">βλάξ</foreign>] p. 28 d</note> ἄνθρωπος ἐπὶ παντὶ λόγῳ ἐπτοῆσθαι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                      <foreign xml:lang="grc">ἐπτοὴσθαι</foreign> Xylander: <foreign xml:lang="grc">παιδεύεσθαι</foreign>
                   </note> φιλεῖ.</q> δεῖ δὲ τὸν μὲν ἔπαινον ἀφελῶς τοῖς λέγουσι τὴν δὲ πίστιν εὐλαβῶς προΐεσθαι τοῖς λόγοις, καὶ τῆς μὲν λέξεως καὶ προφορᾶς τῶν ἀγωνιζομένων εὐμενῆ καὶ ἁπλοῦν εἶναι θεατήν, τῆς δὲ χρείας
  <milestone unit="tlnum" n="25"/> καὶ τῆς ἀληθείας τῶν λεγομένων ἀκριβῆ καὶ πικρὸν
@@ -264,20 +210,14 @@
          </div>
          <div n="8" type="section">
             <p rend="indent">διὸ δεῖ τὸ πολὺ καὶ κενὸν ἀφαιροῦντα τῆς
- <milestone unit="stephpage" xml:id="stephpage-41f" n="41f"/> λέξεως αὐτὸν διώκειν τὸν καρπὸν καὶ μιμεῖσθαι μὴ τὰς στεφανηπλόκους<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="stephpage" xml:id="stephpage-41f" n="41f"/> λέξεως αὐτὸν διώκειν τὸν καρπὸν καὶ μιμεῖσθαι μὴ τὰς στεφανηπλόκους<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">στεφανηπλόκους</foreign> H: <foreign xml:lang="grc">στεφηπλόκους</foreign>
                </note> ἀλλὰ τὰς μελίσσας. αἱ μὲν γὰρ ἐπιοῦσαι τὰ ἀνθηρὰ καὶ εὐώδη τῶν φύλλων συνείρουσι
  <milestone unit="tlnum" n="15"/> καὶ διαπλέκουσιν ἡδὺ μὲν ἐφήμερον δὲ καὶ ἄκαρπον ἔργον· αἱ δὲ πολλάκις ἴων καὶ ῥόδων καὶ ὑακίνθων διαπετόμεναι λειμῶνας ἐπὶ τὸν τραχύτατον καὶ δριμύτατον θύμον καταίρουσι καὶ τούτῳ προσκάθηνται
  <milestone unit="tlnum" n="20"/>
                <quote rend="blockquote">
                   <l>ξανθὸν μέλι μηδόμεναι,</l>
-                  <note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">Bergk. 3 p. 411</note>
+                  <note resp="editor" place="unspecified" anchored="true" xml:lang="eng">Bergk. 3 p. 411</note>
                </quote> καὶ λαβοῦσαί τι τῶν χρησίμων ἀποπέτονται πρὸς τὸ οἰκεῖον ἔργον. οὕτως οὖν δεῖ τὸν φιλότεχνον καὶ καθαρὸν ἀκροατὴν τὰ μὲν ἀνθηρὰ καὶ τρυφερὰ τῶν
  <milestone unit="stephpage" xml:id="stephpage-42a" n="42a"/> ὀνομάτων καὶ τῶν πραγμάτων τὰ δραματικὰ καὶ
  <milestone unit="tlnum" n="25"/> πανηγυρικὰ κηφήνων βοτάνην σοφιστιώντων ἡγούμενον ἐᾶν, αὐτὸν δὲ τῇ προσοχῇ καταδυόμενον εἰς τὸν νοῦν τοῦ λόγου καὶ τὴν διάθεσιν τοῦ λέγοντος <pb xml:id="v.1.p.102"/> ἕλκειν ἀπʼ αὐτῆς τὸ χρήσιμον καὶ ὠφέλιμον, μεμνημένον ὡς οὐκ εἰς θέατρον οὐδʼ ᾠδεῖον ἀλλʼ εἰς σχολὴν καὶ διδασκαλεῖον ἀφῖκται, τῷ λόγῳ τὸν βίον ἐπανορθωσόμενος. ὅθεν δὴ καὶ ποιητέον ἐπίσκεψιν
@@ -294,10 +234,7 @@
  <milestone unit="tlnum" n="25"/> γέμουσαν ἐκκαθήρῃ. καὶ γὰρ εἰ τοῖς λέγουσι προσήκει μὴ παντάπασιν ἡδονὴν ἐχούσης καὶ πιθανότητα λέξεως. παραμελεῖν, ἐλάχιστα τούτου φροντιστέον τῷ νέῳ, τό γε πρῶτον. ὕστερον δέ που,
  <milestone unit="stephpage" xml:id="stephpage-42d" n="42d"/> καθάπερ οἱ πίνοντες, ὅταν παύσωνται διψῶντες, τότε <pb xml:id="v.1.p.103"/> τὰ τορεύματα τῶν ἐκπωμάτων ὑποθεωροῦσι καὶ στρέφουσιν, οὕτως ἐμπλησθέντι δογμάτων καὶ ἀναπνεύσαντι δοτέον τὴν λέξιν εἴ τι κομψὸν ἔχει καὶ περιττὸν ἐπισκοπεῖν. ὁ δʼ εὐθὺς ἐξ ἀρχῆς μὴ τοῖς
  <milestone unit="tlnum" n="5"/> πράγμασιν ἐμφυόμενος ἀλλὰ τὴν λέξιν Ἀττικὴν ἀξιῶν εἶναι καὶ ἰσχνὴν ὅμοιός ἐστι μὴ βουλομένῳ πιεῖν ἀντίδοτον, ἂν μὴ τὸ ἀγγεῖον ἐκ τῆς Ἀττικῆς κωλιάδος κεκεραμευμένον, μηδʼ ἱμάτιον περιβαλέσθαι χειμῶνος, εἰ μὴ προβάτων Ἀττικῶν εἴη τὸ
- <milestone unit="tlnum" n="10"/> ἔριον, ἀλλʼ ὥσπερ ἐν τρίβωνι Λυσιακοῦ λόγου λεπτῷ καὶ ψιλῷ καθήμενος ἄπρακτος<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="10"/> ἔριον, ἀλλʼ ὥσπερ ἐν τρίβωνι Λυσιακοῦ λόγου λεπτῷ καὶ ψιλῷ καθήμενος ἄπρακτος<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἄπρακτος</foreign>] <foreign xml:lang="grc">μένειν ἄπρακτος</foreign>
                   <foreign xml:lang="lat">Sauppius. Auditur</foreign>
                   <foreign xml:lang="grc">ἐστι</foreign>
@@ -313,10 +250,7 @@
  <milestone unit="stephpage" xml:id="stephpage-43a" n="43a"/>
                <quote rend="blockquote">
                   <l>αἰτίζων ἀκόλους, οὐκ ἄορας οὐδὲ λέβητας·</l>
-                  <note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">Homer. <foreign xml:lang="grc">ρ</foreign> 222</note>
+                  <note resp="editor" place="unspecified" anchored="true" xml:lang="eng">Homer. <foreign xml:lang="grc">ρ</foreign> 222</note>
                </quote> μεγαλοψυχίας γὰρ ἡγοῦνται σημεῖον, ὡς τὸ διδόναι τι τῶν μεγάλων, καὶ τὸ αἰτεῖν. μᾶλλον δʼ ἄν τις ἀκροατοῦ καταγελάσειεν εἰς μικρὰ καὶ γλίσχρα προβλήματα
  <milestone unit="tlnum" n="10"/> τὸν διαλεγόμενον κινοῦντος, οἷα τερθρευόμενοί τινες τῶν νέων καὶ παρεπιδεικνύμενοι διαλεκτικὴν ἢ μαθηματικὴν ἕξιν εἰώθασι προβάλλειν περὶ τῆς τῶν ἀορίστων τομῆς, καὶ τίς ἡ κατὰ πλευρὰν ἢ κατὰ διάμετρον κίνησις. πρὸς οὓς ἔστιν
  <milestone unit="tlnum" n="15"/>
@@ -325,10 +259,7 @@
          </div>
          <div n="11" type="section">
             <p rend="indent">εὖ μάλα δὲ χρὴ καὶ πρὸς τὴν τοῦ λέγοντος
- <milestone unit="tlnum" n="25"/> ἐμπειρίαν ἢ φυσικὴν δύναμιν ἡρμοσμένον, ἐν οἷς αὐτὸς<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="25"/> ἐμπειρίαν ἢ φυσικὴν δύναμιν ἡρμοσμένον, ἐν οἷς αὐτὸς<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">αὐτὸς</foreign>] Nauck. p. 329</note> ἑαυτοῦ κράτιστός ἐστι, ποιεῖσθαι τὰς ἐρωτήσεις
  <milestone unit="stephpage" xml:id="stephpage-43c" n="43c"/>, καὶ μὴ παραβιάζεσθαι τὸν μὲν ἠθικώτερον φιλοσοφοῦντα φυσικὰς ἐπάγοντα καὶ μαθηματικὰς <pb xml:id="v.1.p.105"/> ἀπορίας, τὸν δὲ τοῖς φυσικοῖς σεμνυνόμενον εἰς συνημμένων ἐπικρίσεις ἕλκοντα καὶ ψευδομένων λύσεις. ὡς γὰρ ὁ τῇ κλειδὶ τὰ ξύλα σχίζειν τῇ δʼ ἀξίνῃ τὴν θύραν ἀνοίγειν πειρώμενος οὐκ ἐκεῖνα
  <milestone unit="tlnum" n="5"/> δόξειεν ἂν ἐπηρεάζειν, ἀλλʼ αὑτὸν ἀποστερεῖν τῆς ἑκατέρου χρείας καὶ δυνάμεως, οὕτως οἱ παρὰ τοῦ λέγοντος ὃ μὴ πέφυκε μηδʼ ἤσκηκεν αἰτοῦντες, ὃ δʼ ἔχει καὶ δίδωσι μὴ δρεπόμενοι μηδὲ λαμβάνοντες,
@@ -336,25 +267,16 @@
  <milestone unit="tlnum" n="10"/> καὶ δυσμένειαν προσοφλισκάνουσι. </p>
          </div>
          <div n="12" type="section">
-            <p rend="indent">φυλακτέον δὲ καὶ τὸ πολλὰ καὶ πολλάκις αὐτὸν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+            <p rend="indent">φυλακτέον δὲ καὶ τὸ πολλὰ καὶ πολλάκις αὐτὸν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">αὐτὸν</foreign> Aldina: <foreign xml:lang="grc">αὐτὸν</foreign>
                </note> προβάλλειν· ἔστι γὰρ καὶ τοῦτο τρόπον τινὰ παρεπιδεικνυμένου. τὸ δʼ ἑτέρου προτείνοντος ἀκροᾶσθαι μετʼ εὐκολίας φιλόλογον καὶ κοινωνικόν.
- <milestone unit="tlnum" n="15"/> ἂν μή τι τῶν ἰδίων ἐνοχλῇ καὶ κατεπείγῃ πάθος ἐπισχέσεως δεόμενον ἢ νόσημα παρηγορίας. τάχα μὲν γὰρ οὐδʼ <q>ἀμαθίην κρύπτειν ἄμεινον,</q> ὥς φησιν Ἡράκλειτος,<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="15"/> ἂν μή τι τῶν ἰδίων ἐνοχλῇ καὶ κατεπείγῃ πάθος ἐπισχέσεως δεόμενον ἢ νόσημα παρηγορίας. τάχα μὲν γὰρ οὐδʼ <q>ἀμαθίην κρύπτειν ἄμεινον,</q> ὥς φησιν Ἡράκλειτος,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">Ἡράκλειτος</foreign> Mullach. 1 p. 315</note> ἀλλʼ εἰς μέσον τιθέναι καὶ θεραπεύειν.
  <milestone unit="tlnum" n="20"/> ἂν δʼ ὀργή τις ἢ προσβολὴ δεισιδαιμονίας ἢ διαφορὰ πρὸς οἰκείους σύντονος ἢ περιμανὴς ἐξ ἔρωτος ἐπιθυμία
  <milestone unit="stephpage" xml:id="stephpage-43e" n="43e"/>
                <quote rend="blockquote">
                   <l> κινοῦσα χορδὰς τὰς ἀκινήτους φρενῶν</l>
-                  <note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">Nauck. p. 696</note>
+                  <note resp="editor" place="unspecified" anchored="true" xml:lang="eng">Nauck. p. 696</note>
                </quote> ἐπιταράξῃ τὴν διάνοιαν, οὐ φευκτέον εἰς ἑτέρους λόγους ἀποδιδράσκοντας τὸν ἔλεγχον, ἀλλὰ περὶ
  <milestone unit="tlnum" n="25"/> αὐτῶν τούτων ἀκουστέον ἐν ταῖς διατριβαῖς, καὶ μετὰ τὰς διατριβὰς ἰδίᾳ προσιόντας αὐτοὺς καὶ προσανακρίνοντας. ἀλλὰ μὴ τοὐναντίον, ὥσπερ οἱ <pb xml:id="v.1.p.106"/> πολλοὶ χαίρουσι τοῖς φιλοσόφοις περὶ ἄλλων διαλεγομένοις καὶ θαυμάζουσιν· ἂν δὲ τοὺς ἄλλους ἐάσας ὁ φιλόσοφος αὐτοῖς ἐκείνοις ἰδίᾳ παρρησιάζηται
  <milestone unit="tlnum" n="5"/> περὶ τῶν διαφερόντων καὶ ὑπομιμνήσκῃ, δυσχεραίνουσι
@@ -366,47 +288,26 @@
          <div n="13" type="section">
             <p rend="indent">δεῖται δὲ καὶ τὸ περὶ τοὺς ἐπαίνους καθῆκον
  <milestone unit="tlnum" n="20"/> εὐλαβείας τινὸς καὶ μετριότητος διὰ τὸ μήτε τὴν ἔλλειψιν αὐτοῦ μήτε τὴν ὑπερβολὴν ἐλευθέριον εἶναι. βαρὺς μὲν γὰρ ἀκροατὴς καὶ φορτικὸς ὁ πρὸς
- <milestone unit="tlnum" n="25"/> πᾶν ἄτεγκτος καὶ ἀτενὴς τὸ λεγόμενον, οἰήματος ὑπούλου καὶ περιαυτολογίας ἐνδιαθέτου μεστός, ὡς ἔχων τι τῶν λεγομένων βέλτιον εἰπεῖν, μήτʼ ὀφρῦν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="25"/> πᾶν ἄτεγκτος καὶ ἀτενὴς τὸ λεγόμενον, οἰήματος ὑπούλου καὶ περιαυτολογίας ἐνδιαθέτου μεστός, ὡς ἔχων τι τῶν λεγομένων βέλτιον εἰπεῖν, μήτʼ ὀφρῦν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ὀφρῦν κατὰ σχῆμα</foreign>] <foreign xml:lang="grc">ὀφρύος κατάστημα</foreign> Lobeckius</note> κατὰ σχῆμα κινῶν μήτε φωνὴν εὐγνώμονος μάρτυρα
  <milestone unit="stephpage" xml:id="stephpage-44b" n="44b"/> φιληκοΐας προϊέμενος, ἀλλὰ σιγῇ καὶ βαρύτητι καταπλάστῳ καὶ σχηματισμῷ θηρώμενος δόξαν <pb xml:id="v.1.p.107"/> εὐσταθοῦς καὶ βάθος ἔχοντος ἀνδρός, ὥσπερ χρημάτων τῶν ἐπαίνων ὅσον ἄλλῳ μεταδίδωσιν αὑτοῦ δοκῶν ἀφαιρεῖσθαι. πολλοὶ γάρ εἰσιν οἱ κακῶς καὶ παρὰ μέλος τὴν Πυθαγόρου φωνὴν ὑπολαμβάνοντες.
- <milestone unit="tlnum" n="5"/> ἐκεῖνος μὲν γὰρ ἐκ φιλοσοφίας ἔφησεν αὑτῷ περιγεγονέναι τὸ μηδὲν θαυμάζειν· οὗτοι δὲ τὸ μηδὲν ἐπαινεῖν μηδὲ τιμᾶν, ἐν τῷ καταφρονεῖν τιθέμενοι τὸ σεμνὸν καὶ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="5"/> ἐκεῖνος μὲν γὰρ ἐκ φιλοσοφίας ἔφησεν αὑτῷ περιγεγονέναι τὸ μηδὲν θαυμάζειν· οὗτοι δὲ τὸ μηδὲν ἐπαινεῖν μηδὲ τιμᾶν, ἐν τῷ καταφρονεῖν τιθέμενοι τὸ σεμνὸν καὶ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">τό σεμνὸν καὶ</foreign>
                   <foreign xml:lang="lat">scripsi:</foreign>
                   <foreign xml:lang="grc">καὶ τὸ σεμνὸν</foreign>
-               </note> ὑπεροψίᾳ διώκοντες. ὁ γὰρ φιλόσοφος λόγος τὸ μὲν ἐξ ἀπειρίας<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               </note> ὑπεροψίᾳ διώκοντες. ὁ γὰρ φιλόσοφος λόγος τὸ μὲν ἐξ ἀπειρίας<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἀπειρίας</foreign> Xylander: <foreign xml:lang="grc">ἀπορίας</foreign>
                </note> καὶ ἀγνοίας θαῦμα
  <milestone unit="tlnum" n="10"/>
-               <milestone unit="stephpage" xml:id="stephpage-44c" n="44c"/> καὶ θάμβος ἐξαιρεῖ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               <milestone unit="stephpage" xml:id="stephpage-44c" n="44c"/> καὶ θάμβος ἐξαιρεῖ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἐξαιρεῖ</foreign> W: <foreign xml:lang="grc">ἐξαίρει</foreign>
-               </note> γνώσει καὶ ἱστορίᾳ τῆς περὶ ἕκαστον αἰτίας, τὸ δʼ εὔκολον καὶ μέτριον<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               </note> γνώσει καὶ ἱστορίᾳ τῆς περὶ ἕκαστον αἰτίας, τὸ δʼ εὔκολον καὶ μέτριον<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">μέτριον</foreign>
                   <foreign xml:lang="lat">scripsi:</foreign>
                   <foreign xml:lang="grc">μέγα</foreign>
                </note> καὶ φιλάνθρωπον οὐκ ἀπόλλυσι. τοῖς γὰρ ἀληθινῶς καὶ βεβαίως ἀγαθοῖς τιμή τε καλλίστη τὸ τιμῆσαί τινα τῶν ἀξίων, καὶ κόσμος εὐπρεπέστατος τὸ ἐπικοσμῆσαι,
- <milestone unit="tlnum" n="15"/> περιουσίᾳ δόξης καὶ ἀφθονίᾳ γιγνόμενον.<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
-                  <foreign xml:lang="grc">γιγνόμενον = ὁ γίγνεται</foreign>. Cf. p. 40 d</note> οἱ δὲ γλίσχροι περὶ τοὺς ἑτέρων ἐπαίνους ἔτι πένεσθαι καὶ πεινῆν ἐοίκασι τῶν ἰδίων. ὁ δʼ ἐναντίος αὖ πάλιν τούτων, μηδὲν ἐπικρίνων ἀλλὰ κατὰ ῥῆμα καὶ συλλαβὴν ἐφιστάμενος<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="15"/> περιουσίᾳ δόξης καὶ ἀφθονίᾳ γιγνόμενον.<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                  <foreign xml:lang="grc">γιγνόμενον = ὁ γίγνεται</foreign>. Cf. p. 40 d</note> οἱ δὲ γλίσχροι περὶ τοὺς ἑτέρων ἐπαίνους ἔτι πένεσθαι καὶ πεινῆν ἐοίκασι τῶν ἰδίων. ὁ δʼ ἐναντίος αὖ πάλιν τούτων, μηδὲν ἐπικρίνων ἀλλὰ κατὰ ῥῆμα καὶ συλλαβὴν ἐφιστάμενος<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἐξιστάμενος</foreign> Emperius</note> καὶ κεκραγώς , ἐλαφρός
  <milestone unit="tlnum" n="20"/>
                <milestone unit="stephpage" xml:id="stephpage-44d" n="44d"/> τις ὢν καὶ ὀρνεώδης, πολλάκις μὲν οὐδʼ αὐτοῖς ἀρέσκει τοῖς ἀγωνιζομένοις, ἀεὶ δὲ λυπεῖ τοὺς ἀκροωμένους, ἀνασοβῶν καὶ συνεξανιστὰς παρὰ γνώμην, οἷον ἑλκομένους βίᾳ διʼ αἰδῶ καὶ συνεπηχοῦντας. οὐδὲν δʼ ὠφεληθεὶς διὰ τὸ ταραχώδη καὶ
@@ -420,33 +321,21 @@
    <milestone unit="stephpage" xml:id="stephpage-44f" n="44f"/>
                   </l>
                   <l>φύονται μαλακῶν ἄνθεα λευκοΐων</l>
-               </quote> ὅπου γὰρ ἐμέτου τινὲς ἐγκώμια καὶ πυρετοῦ καὶ νὴ Δία χύτρας ἐπιδεικνύμενοι, πιθανότητος οὐκ ἀμοιροῦσιν, ἦ που λόγος ὑπʼ ἀνδρὸς ἁμωσγέπως<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               </quote> ὅπου γὰρ ἐμέτου τινὲς ἐγκώμια καὶ πυρετοῦ καὶ νὴ Δία χύτρας ἐπιδεικνύμενοι, πιθανότητος οὐκ ἀμοιροῦσιν, ἦ που λόγος ὑπʼ ἀνδρὸς ἁμωσγέπως<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἀμωσγέπως</foreign> R: <foreign xml:lang="grc">ἄλλως γέ πως</foreign>
                </note> δοκοῦντος
- <milestone unit="tlnum" n="20"/> ἢ καλουμένου φιλοσόφου περαινόμενος οὐκ ἂν ὅλως ἀναπνοήν τινα καὶ καιρὸν ἀκροαταῖς εὐμενέσι καὶ φιλανθρώποις παράσχοι πρὸς ἔπαινον; οἱ γοῦν ἐν ὥρᾳ πάντες, ὥς φησιν ὁ Πλάτων,<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="20"/> ἢ καλουμένου φιλοσόφου περαινόμενος οὐκ ἂν ὅλως ἀναπνοήν τινα καὶ καιρὸν ἀκροαταῖς εὐμενέσι καὶ φιλανθρώποις παράσχοι πρὸς ἔπαινον; οἱ γοῦν ἐν ὥρᾳ πάντες, ὥς φησιν ὁ Πλάτων,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">Πλάτων</foreign>] Rep. p. 474 e</note> ἁμηγέπη δάκνουσι τὸν ἐρωτικόν, καὶ λευκοὺς μὲν θεῶν παῖδας
  <milestone unit="tlnum" n="25"/>
                <milestone unit="stephpage" xml:id="stephpage-45a" n="45a"/> ἀνακαλῶν μέλανας δʼ ἀνδρικούς, καὶ τὸν γρυπὸν βασιλικὸν καὶ τὸν σιμὸν ἐπίχαριν τὸν δʼ ὠχρὸν μελίχρουν ὑποκοριζόμενος ἀσπάζεται καὶ ἀγαπᾷ· <pb xml:id="v.1.p.109"/> δεινὸς γάρ ἐστιν ὁ ἔρως ὥσπερ κιττὸς αὑτὸν ἐκ πάσης ἀναδῆσαι προφάσεως. πολὺ δὴ μᾶλλον ὁ φιλήκοος καὶ φιλόλογος ἀεί τινος αἰτίας εὑρετικὸς ἔσται, διʼ ἣν οὐκ ἀπὸ τρόπου τῶν λεγόντων ἕκαστον
- <milestone unit="tlnum" n="5"/> ἐπαινῶν φανεῖται. καὶ γὰρ ὁ Πλάτων<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="5"/> ἐπαινῶν φανεῖται. καὶ γὰρ ὁ Πλάτων<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">Πλάτων</foreign>] Phaedr. p. 234 e</note> τὸν Λυσίου λόγον οὔτε κατὰ τὴν εὕρεσιν ἐπαινῶν καὶ τῆς ἀταξίας αἰτιώμενος ὅμως αὐτοῦ τὴν ἀπαγγελίαν ἐπαινεῖ, καὶ ὅτι <q>τῶν ὀνομάτων σαφῶς καὶ στρογγύλως ἕκαστον
  <milestone unit="stephpage" xml:id="stephpage-45b" n="45b"/> ἀποτετόρνευται.</q> μέμψαιτο δʼ ἄν τις Ἀρχιλόχου
  <milestone unit="tlnum" n="10"/> μὲν τὴν ὑπόθεσιν, Παρμενίδου δὲ τὴν στιχοποιίαν, Φωκυλίδου δὲ τὴν εὐτέλειαν, Εὐριπίδου δὲ τὴν λαλιάν, Σοφοκλέους δὲ τὴν ἀνωμαλίαν, ὥσπερ ἀμέλει καὶ τῶν ῥητόρων ἐστὶν ὁ μὲν οὐκ ἔχων ἦθος, ὁ δὲ πρὸς πάθος ἀργός, ὁ δʼ ἐνδεὴς χαρίτων ἕκαστός
  <milestone unit="tlnum" n="15"/> γε μὴν ἐπαινεῖται κατὰ τὸ ἴδιον τῆς δυνάμεως, ᾧ κινεῖν καὶ ἄγειν πέφυκεν. ὥστε καὶ τοῖς ἀκούουσιν εὐπορίαν εἶναι καὶ ἀφθονίαν τοῦ φιλοφρονεῖσθαι τοὺς λέγοντας. ἐνίοις γὰρ ἐξαρκεῖ, κἂν μὴ διὰ φωνῆς ἐπιμαρτυρῶμεν, ὄμματος πραότητα καὶ
  <milestone unit="tlnum" n="20"/> γαλήνην προσώπου καὶ διάθεσιν εὐμενῆ καὶ ἄλυπον ἐμπαρασχεῖν. ἐκεῖνα μὲν γὰρ ἤδη καὶ πρὸς τοὺς
  <milestone unit="stephpage" xml:id="stephpage-45c" n="45c"/> ὅλως ἀποτυγχάνοντας ὥσπερ ἐγκύκλια καὶ κοινὰ πάσης ἀκροάσεώς ἐστι, καθέδρα τέ τις ἄθρυπτος καὶ ἀκλινὴς ἐν ὀρθῷ σχήματι καὶ πρόσβλεψις αὐτῷ τῷ
- <milestone unit="tlnum" n="25"/> λέγοντι καὶ τάξις ἐνεργοῦ προσοχῆς, καὶ προσώπου κατάστασις καθαρὰ καὶ ἀνέμφαντος οὐχ ὕβρεως οὐδὲ δυσκολίας μόνον ἀλλὰ καὶ φροντίδων ἄλλων καὶ ἀσχολιῶν· ὡς ἐν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="25"/> λέγοντι καὶ τάξις ἐνεργοῦ προσοχῆς, καὶ προσώπου κατάστασις καθαρὰ καὶ ἀνέμφαντος οὐχ ὕβρεως οὐδὲ δυσκολίας μόνον ἀλλὰ καὶ φροντίδων ἄλλων καὶ ἀσχολιῶν· ὡς ἐν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ὡς ἐν</foreign>] <foreign xml:lang="grc">ἐν</foreign> W</note> ἔργῳ γε παντὶ τὸ μὲν καλὸν ἐκ <pb xml:id="v.1.p.110"/> πολλῶν οἷον ἀριθμῶν εἰς ἕνα καιρὸν ἡκόντων ὑπὸ συμμετρίας τινὸς καὶ ἁρμονίας ἐπιτελεῖται, τὸ δʼ αἰσχρὸν ἐξ ἑνὸς τοῦ τυχόντος ἐλλείποντος ἢ προσόντος ἀτόπως εὐθὺς ἑτοίμην ἔχει τὴν γένεσιν, ὥσπερ
  <milestone unit="tlnum" n="5"/>
                <milestone unit="stephpage" xml:id="stephpage-45d" n="45d"/> ἐπʼ αὐτῆς τῆς ἀκροάσεως οὐ μόνον βαρύτης ἐπισκυνίου καὶ ἀηδία προσώπου καὶ βλέμμα ῥεμβῶδες καὶ περίκλασις σώματος καὶ μηρῶν ἐπάλλαξις ἀπρεπὴς ἀλλὰ καὶ νεῦμα καὶ ψιθυρισμὸς πρὸς ἕτερον καὶ μειδίαμα χάσμαι τε ὑπνώδεις καὶ κατήφειαι καὶ
@@ -456,24 +345,15 @@
             <p rend="indent">οἱ δὲ τοῦ μὲν λέγοντος οἴονταί τι ἔργον εἶναι, τοῦ δʼ ἀκούοντος οὐδέν, ἀλλʼ ἐκεῖνον μὲν ἀξιοῦσιν ἥκειν πεφροντικότα καὶ παρεσκευασμένον, αὐτοὶ
  <milestone unit="tlnum" n="15"/> δʼ ἄσκεπτοι καὶ ἀφρόντιδες τῶν καθηκόντων ἐμβαλόντες καθέζονται καθάπερ ἀτεχνῶς ἐπὶ δεῖπνον
  <milestone unit="stephpage" xml:id="stephpage-45e" n="45e"/> ἥκοντες. εὖ παθεῖν πονουμένων ἑτέρων. καίτοι καὶ συνδείπνου τι χαρίεντος ἔργον ἐστί, πολὺ δὲ μᾶλλον ἀκροατοῦ. κοινωνὸς γάρ ἐστι, τοῦ λόγου καὶ
- <milestone unit="tlnum" n="20"/> συνεργὸς τοῦ λέγοντος, καὶ οὐ τὰ μὲν ἐκείνου πλημμελήματα πικρῶς ἐξετάζειν ὀφείλει κατὰ ῥῆμα καὶ πρᾶγμα προσάγων<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="20"/> συνεργὸς τοῦ λέγοντος, καὶ οὐ τὰ μὲν ἐκείνου πλημμελήματα πικρῶς ἐξετάζειν ὀφείλει κατὰ ῥῆμα καὶ πρᾶγμα προσάγων<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">προσάγων</foreign> R: <foreign xml:lang="grc">προάγων</foreign>
                </note> τὴν εὐθύνην, αὐτὸς δʼ ἀνευθύνως, ἀσχημονεῖν καὶ πολλὰ σολοικίζειν περὶ τὴν ἀκρόασιν, ἀλλʼ ὥσπερ ἐν τῷ σφαιρίζειν τῷ βάλλοντι δεῖ συγκινούμενον εὐρύθμως φέρεσθαι τὸν δεχόμενον, οὕτως ἐπὶ τῶν λόγων ἔστι τις εὐρυθμία καὶ περὶ τὸν λέγοντα καὶ περὶ τὸν ἀκροώμενον, ἂν
  <milestone unit="stephpage" xml:id="stephpage-45f" n="45f"/> ἑκάτερος τὸ προσῆκον αὑτῷ φυλάττῃ. <pb xml:id="v.1.p.111"/>
             </p>
          </div>
          <div n="15" type="section">
-            <p rend="indent">δεῖ δὲ μηδὲ ταῖς φωναῖς τῶν ἐπαίνων ὡς ἔτυχε χρῆσθαι. καὶ γὰρ Ἐπίκουρος<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
-                  <foreign xml:lang="grc">Ἐπίκουρος</foreign>] Diog. L. X 5</note> ἐπὶ τοῖς τῶν φίλων ἐπιστολίοις κροτοθορύβους γίγνεσθαι παρʼ αὐτῶν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+            <p rend="indent">δεῖ δὲ μηδὲ ταῖς φωναῖς τῶν ἐπαίνων ὡς ἔτυχε χρῆσθαι. καὶ γὰρ Ἐπίκουρος<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
+                  <foreign xml:lang="grc">Ἐπίκουρος</foreign>] Diog. L. X 5</note> ἐπὶ τοῖς τῶν φίλων ἐπιστολίοις κροτοθορύβους γίγνεσθαι παρʼ αὐτῶν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">παρ’ αὐτῷ</foreign>?</note> λέγων ἀηδής ἐστιν. οἱ δὲ τὰς ξένας φωνὰς
  <milestone unit="tlnum" n="5"/> τοῖς ἀκροατηρίοις νῦν ἐπεισάγοντες, οὗτοι καὶ <q>θείως</q> καὶ <q>θεοφορήτως</q> καὶ <q>ἀπροσίτως</q> ἐπιλέγοντες, ὡς οὐκέτι τοῦ <q>καλῶς</q> καὶ τοῦ <q>σοφῶς</q> καὶ τοῦ <q>ἀληθῶς</q> ἐξαρκοῦντος, οἷς οἱ περὶ Πλάτωνα καὶ Σωκράτη καὶ Ὑπερείδην ἐχρῶντο σημείοις τῶν ἐπαίνων, ὑπερασχημονοῦσι
  <milestone unit="tlnum" n="10"/> καὶ διαβάλλουσι τοὺς λέγοντας ὡς
@@ -487,18 +367,12 @@
          </div>
          <div n="16" type="section">
             <p rend="indent">καὶ μὴν τῶν γε νουθεσιῶν καὶ τῶν ἐπιπλήξεων οὔτʼ ἀναλγήτως οὔτʼ ἀνάνδρως ἀκουστέον.
- <milestone unit="tlnum" n="10"/> οἱ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="10"/> οἱ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">οἱ</foreign> H: <foreign xml:lang="grc">οἵ τε</foreign>
                </note> γὰρ εὐκόλως καὶ ὀλιγώρως τὸ κακῶς ἀκούειν ὑπὸ τῶν φιλοσόφων φέροντες, ὥστε γελᾶν ἐλεγχόμενοι καὶ τοὺς ἐλέγχοντας ἐπαινεῖν, ὥσπερ οἱ παράσιτοι τοὺς τρέφοντας, ὅταν ὑπʼ αὐτῶν λοιδορῶνται, παντάπασιν ἰταμοὶ καὶ θρασεῖς ὄντες, οὐ καλὴν οὐδʼ
  <milestone unit="tlnum" n="15"/> ἀληθῆ διδόασιν ἀπόδειξιν ἀνδρείας τὴν ἀναισχυντίαν. σκῶμμα μὲν γὰρ ἀνύβριστον ἐν παιδιᾷ τινι
  <milestone unit="stephpage" xml:id="stephpage-46d" n="46d"/> μετʼ εὐτραπελίας ἀφειμένον ἐνεγκεῖν ἀλύπως καὶ ἱλαρῶς οὐκ ἀγεννὲς οὐδʼ ἀπαίδευτον ἀλλʼ ἐλευθέριον πάνυ καὶ Λακωνικόν ἐστιν· ἐπαφῆς δὲ καὶ νουθεσίας
-  <milestone unit="tlnum" n="20"/> πρὸς ἐπανόρθωσιν ἤθους ὥσπερ φαρμάκῳ δάκνοντι λόγῳ χρωμένης ἐλέγχοντι μὴ συνεσταλμένον ἀκούειν μηδʼ ἱδρῶτος καὶ ἰλίγγου μεστόν, αἰσχύνῃ<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+  <milestone unit="tlnum" n="20"/> πρὸς ἐπανόρθωσιν ἤθους ὥσπερ φαρμάκῳ δάκνοντι λόγῳ χρωμένης ἐλέγχοντι μὴ συνεσταλμένον ἀκούειν μηδʼ ἱδρῶτος καὶ ἰλίγγου μεστόν, αἰσχύνῃ<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">αἰσχύνῃ</foreign>
                   <foreign xml:lang="grc">μηδ’ αἰσχύνῃ</foreign> H</note> φλεγόμενον τὴν ψυχήν, ἀλλʼ ἄτρεπτον καὶ σεσηρότα καὶ κατειρωνευόμενον, ἀνελευθέρου τινὸς
  <milestone unit="tlnum" n="25"/> δεινῶς καὶ ἀπαθοῦς πρὸς τὸ αἰδεῖσθαι νέου διὰ συνήθειαν ἁμαρτημάτων καὶ συνέχειαν, ὥσπερ ἐν σκληρᾷ σαρκὶ καὶ τυλώδει τῇ ψυχῇ μώλωπα μὴ λαμβάνοντος.
@@ -508,10 +382,7 @@
  <milestone unit="stephpage" xml:id="stephpage-46f" n="46f"/> ἀνεδέξατο, τὸ δʼ ὠφέλιμον οὐχ ὑπέμεινε τῆς θεραπείας, οὕτως ὁ τῷ χαράξαντι καὶ τρώσαντι λόγῳ τὴν ἀβελτερίαν ἀπουλῶσαι καὶ καταστῆσαι μὴ παρασχὼν
  <milestone unit="tlnum" n="15"/> ἀπῆλθε δηχθεὶς καὶ ἀλγήσας ἐκ φιλοσοφίας, ὠφεληθεὶς δὲ μηδέν. οὐ γὰρ μόνον, ὡς Εὐριπίδης φησί, τὸ Τηλέφου τραῦμα <quote rend="blockquote">
                   <l> πριστοῖσι λόγχης θέλγεται ῥινήμασιν</l>
-                  <note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">Nauck. p. 462</note>
+                  <note resp="editor" place="unspecified" anchored="true" xml:lang="eng">Nauck. p. 462</note>
                </quote>
                <milestone unit="stephpage" xml:id="stephpage-47a" n="47a"/> ἀλλὰ καὶ τὸν ἐκ φιλοσοφίας ἐμφυόμενον εὐφυέσι
  <milestone unit="tlnum" n="20"/> νέοις δηγμὸν αὐτὸς ὁ τρώσας λόγος ἰᾶται. διὸ δεῖ πάσχειν μέν τι καὶ δάκνεσθαι, μὴ συντρίβεσθαι δὲ μηδʼ ἀθυμεῖν τὸν ἐλεγχόμενον, ἀλλʼ ὥσπερ ἐν τελετῇ κατηργμένης αὐτοῦ φιλοσοφίας τοὺς πρώτους καθαρμοὺς καὶ θορύβους ἀνασχόμενον ἐλπίζειν τι
@@ -537,10 +408,7 @@
  <milestone unit="tlnum" n="20"/>
                <quote rend="blockquote">
                   <l> πόλλʼ ἀπατηθῆναι διζήμενον ἔμμεναι ἐσθλόν,</l>
-                  <note resp="editor"
-                        place="unspecified"
-                        anchored="true"
-                        xml:lang="eng">Bergk. 2 p, 71</note>
+                  <note resp="editor" place="unspecified" anchored="true" xml:lang="eng">Bergk. 2 p, 71</note>
                </quote>
                <milestone unit="stephpage" xml:id="stephpage-47f" n="47f"/> ἀλλὰ καὶ γελασθῆναι δεῖ πολλὰ καὶ ἀδοξῆσαι, καὶ σκώμματα καὶ βωμολοχίας ἀναδεξάμενον ὤσασθαι παντὶ τῷ θυμῷ καὶ καταθλῆσαι τὴν ἀμαθίαν. οὐ μὴν οὐδὲ τῆς πρὸς τοὐναντίον ἁμαρτίας ἀμελητέον,
  <milestone unit="tlnum" n="25"/> ἣν ἁμαρτάνουσιν οἱ μὲν ὑπὸ νωθείας, ἀηδεῖς καὶ
@@ -548,24 +416,15 @@
  <milestone unit="tlnum" n="5"/> λαλιᾷ καὶ περιεργίᾳ τοὺς λέγοντας, ἀεί τι προσδιαποροῦντες τῶν οὐκ ἀναγκαίων καὶ ζητοῦντες ἀποδείξεις τῶν οὐ δεομένων <quote rend="blockquote">
                   <l>οὕτως ὁδὸς βραχεῖα γίγνεται μακρά,</l>
                </quote>
-               <milestone unit="stephpage" xml:id="stephpage-48b" n="48b"/> ὥς φησι Σοφοκλῆς,<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+               <milestone unit="stephpage" xml:id="stephpage-48b" n="48b"/> ὥς φησι Σοφοκλῆς,<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">Σοφοκλῆς</foreign>] Anig. 237</note> οὐκ αὐτοῖς μόνον ἀλλὰ καὶ τοῖς 
  <milestone unit="tlnum" n="10"/> ἄλλοις. ἀντιλαμβανόμενοι γὰρ ἑκάστοτε κεναῖς καὶ περιτταῖς ἐρωτήσεσι τοῦ διδάσκοντος, ὥσπερ ἐν συνοδίᾳ, τὸ ἐνδελεχὲς ἐμποδίζουσι τῆς μαθήσεως, ἐπιστάσεις καὶ διατριβὰς λαμβανούσης. οὗτοι μὲν
- <milestone unit="tlnum" n="15"/> οὖν κατὰ τὸν Ἱερώνυμον ὥσπερ οἱ δειλοὶ καὶ γλίσχροι<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="tlnum" n="15"/> οὖν κατὰ τὸν Ἱερώνυμον ὥσπερ οἱ δειλοὶ καὶ γλίσχροι<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">γλίσχροι</foreign>] <foreign xml:lang="grc">λίχνοι</foreign> W</note> σκύλακες τὰ δέρματα δάκνοντες οἴκοι καὶ 15 τὰ τίλματα τίλλοντες τῶν θηρίων αὐτῶν οὐχ ἅπτονται τοὺς δʼ ἀργοὺς ἐκείνους παρακαλῶμεν, ὅταν τὰ κεφάλαια τῇ νοήσει περιλάβωσιν, αὐτοὺς διʼ αὑτῶν τὰ λοιπὰ συντιθέναι, καὶ τῇ μνήμῃ χειραγωγεῖν
  <milestone unit="tlnum" n="20"/>
                <milestone unit="stephpage" xml:id="stephpage-48c" n="48c"/> τὴν εὕρεσιν, καὶ τὸν ἀλλότριον λόγον οἷον ἀρχὴν καὶ σπέρμα λαβόντας ἐκτρέφειν καὶ αὔξειν. οὐ γὰρ ὡς ἀγγεῖον ὁ νοῦς ἀποπληρώσεως ἀλλʼ ὑπεκκαύματος μόνον ὥσπερ ὕλη δεῖται, ὁρμὴν ἐμποιοῦντος εὑρετικὴν καὶ ὄρεξιν ἐπὶ τὴν ἀλήθειαν. ὥσπερ οὖν εἴ
  <milestone unit="tlnum" n="25"/> τις ἐκ γειτόνων πυρὸς δεόμενος, εἶτα πολὺ καὶ λαμπρὸν εὑρὼν αὐτοῦ καταμένοι διὰ τέλους θαλπόμενος, οὕτως εἴ τις ἥκων λόγου μεταλαβεῖν πρὸς ἄλλον οὐχ οἴεται δεῖν φῶς οἰκεῖον ἐξάπτειν καὶ <pb xml:id="v.1.p.117"/> νοῦν ἴδιον, ἀλλὰ χαίρων τῇ ἀκροάσει κάθηται θελγόμενος,
- <milestone unit="stephpage" xml:id="stephpage-48d" n="48d"/> οἷον ἔρευθος ἕλκει καὶ γάνωμα τὴν δόξαν ἀπὸ τῶν λόγων, τὸν δʼ ἐντὸς  εὐρῶτα τῆς ψυχῆς καὶ ζόφον οὐκ ἐκτεθέρμαγκεν<note resp="editor"
-                     place="unspecified"
-                     anchored="true"
-                     xml:lang="eng">
+ <milestone unit="stephpage" xml:id="stephpage-48d" n="48d"/> οἷον ἔρευθος ἕλκει καὶ γάνωμα τὴν δόξαν ἀπὸ τῶν λόγων, τὸν δʼ ἐντὸς  εὐρῶτα τῆς ψυχῆς καὶ ζόφον οὐκ ἐκτεθέρμαγκεν<note resp="editor" place="unspecified" anchored="true" xml:lang="eng">
                   <foreign xml:lang="grc">ἐκτεθέρμαγκεν</foreign>] <foreign xml:lang="grc">ἐκεθεράπευκεν</foreign> Emperius</note> οὐδʼ ἐξέωκε διὰ φιλοσοφίας.
  <milestone unit="tlnum" n="5"/> εἰ δεῖ τινος οὖν πρὸς ἀκρόασιν ἑτέρου παραγγέλματος, δεῖ καὶ τοῦ νῦν εἰρημένου μνημονεύοντας ἀσκεῖν ἅμα τῇ μαθήσει τὴν εὕρεσιν, ἵνα μὴ σοφιστικὴν ἕξιν μηδʼ ἱστορικὴν ἀλλʼ ἐνδιάθετον καὶ φιλόσοφον λαμβάνωμεν, ἀρχὴν τοῦ καλῶς βιῶναι
  <milestone unit="tlnum" n="10"/> τὸ καλῶς ἀκοῦσαι νομίζοντες.</p>

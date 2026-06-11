@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -55,14 +54,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -70,7 +65,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -294,20 +289,14 @@
                <p>τοῦ τε ναυστάθμου περὶ Ὠρεὸν ὁρμοῦντος ἀπροσδόκητον ἐπίπλουν θέμενος εἴκοσι μὲν αὐτοφόρτους ὁλκάδας ἐχειρώσατο, τὰς δʼ ἄλλας σίτου γεμούσας κατέδυσεν· ἐκράτησε δὲ καὶ πεντηρικά τέσσαρα. </p>
             </div>
             <div n="4" type="section">
-               <p>καὶ μάχην ἐπολέμησε τὸ δεύτερον, ἐν ᾗ τὸν ὑπατικὸν Ὁστίλιον ἀπεκρούσατο καταβιαζόμενον<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>καὶ μάχην ἐπολέμησε τὸ δεύτερον, ἐν ᾗ τὸν ὑπατικὸν Ὁστίλιον ἀπεκρούσατο καταβιαζόμενον<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">καταβιαζόμενον</foreign> Coraës and Sintenis, after Bryan, for the <foreign xml:lang="grc">καὶ βιαζόμενον</foreign> of the MSS., where Bekker brackets <foreign xml:lang="grc">καί</foreign>.</note> κατὰ τὰς Ἐλιμίας· λάθρα δὲ διὰ Θεσσαλίας ἐμβαλόντα προκαλούμενος εἰς μάχην ἐφόβησε. </p>
             </div>
             <div n="5" type="section">
                <p>πάρεργον δὲ τοῦ πολέμου στρατείαν ἐπὶ Δαρδανεῖς θέμενος, ὡς δὴ τοὺς Ῥωμαίους ὑπερορῶν καὶ σχολάζων, μυρίους τῶν βαρβάρων κατέκοψε καὶ λείαν ἠλάσατο πολλήν. </p>
             </div>
             <div n="6" type="section">
-               <p>ὑπεκίνει δὲ καὶ Γαλάτας τοὺς περὶ τὸν Ἴστρον ᾠκημένους, οἳ Βαστέρναι<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ὑπεκίνει δὲ καὶ Γαλάτας τοὺς περὶ τὸν Ἴστρον ᾠκημένους, οἳ Βαστέρναι<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">οἳ Βαστέρναι</foreign> Coraës and Bekker, after Stephanus: <foreign xml:lang="grc">Βαστέρναι</foreign>.</note> καλοῦνται, στρατὸν ἱππότην καὶ μάχιμον, Ἰλλυριούς τε διὰ Γενθίου τοῦ βασιλέως παρεκάλει συνεφάψασθαι <pb n="p.378"/> τοῦ πολέμου, καὶ λόγος κατέσχεν ὡς τῶν βαρβάρων μισθῷ πεπεισμένων ὑπʼ αὐτοῦ διὰ τῆς κάτω Γαλατίας παρὰ τὸν Ἀδρίαν ἐμβαλεῖν εἰς τὴν Ἰταλίαν. </p>
             </div>
          </div>
@@ -483,10 +472,7 @@
                <p>
                   <quote rend="blockquote">
                      <l>Οὐλύμπου κορυφῆς ἐπὶ Πυθίου Ἀπόλλωνος </l>
-                     <l>ἱερὸν ὕψος ἔχει, πρός κάθετον δὲ μέτρον,<note anchored="true"
-                              place="unspecified"
-                              resp="editor"
-                              xml:lang="eng">
+                     <l>ἱερὸν ὕψος ἔχει, πρός κάθετον δὲ μέτρον,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                            <foreign xml:lang="grc">πρὸς <gap reason="lost"/> μέτρον</foreign> a correction suggested by Sintenis (and adopted by Bekker) of the unmetrical <foreign xml:lang="grc">πρὸς τὴν κάθετον δ’ ἐμετρήθη</foreign> of the MSS.</note>
                      </l>
                      <l>πλήρη μέν δεκάδα σταδίων μίαν, αὐτὰρ ἐπʼ αὐτῇ </l>
@@ -801,10 +787,7 @@
                <p>ζητουμένου δὲ τοῦ πρώτου φράσαντος, <pb n="p.422"/> ὡς οὐδεὶς ἦν, ἀλλʼ ο λόγος εἰς ἄλλον ἐξ ἄλλου διωκόμενος ἀνέφευγε, καὶ τέλος καταδὺς ὥσπερ εἰς πέλαγος ἀχανὲς τὸν ἄπειρον ὄχλον ἐφάνη μηδεμίαν ἀρχὴν ἔχων βέβαιον, αὕτη μὲν ἡ φήμη ταχὺ τῆς πόλεως ἐξερρύη, πορευομένῳ δὲ τῷ Δομετιανῷ μετὰ δυνάμεως ἐπὶ τὸν πόλεμον ἤδη καθʼ ὁδὸν ἀγγελία καὶ γράμματα φράζοντα τὴν νίκην ἀπήντησεν. </p>
             </div>
             <div n="7" type="section">
-               <p>ἡ δʼ αὐτοῦ<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>ἡ δʼ αὐτοῦ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">αὐτοῦ</foreign> Bekker adopts Reiske’s correction to <foreign xml:lang="grc">αὐτή</foreign>.</note> τοῦ κατορθώματος ἡμέρα καὶ τῆς φήμης ἐγίνετο, ἐπὶ πλέον ἢ δισμυρίους σταδίους τῶν τόπων διεστώτων. ταῦτα μὲν οὐδεὶς ἀγνοεῖ τῶν καθʼ ἡμᾶς. </p>
             </div>
          </div>
@@ -858,10 +841,7 @@
                <p>οὐ μὴν ἀλλὰ τοῦτον μὲν ἀναστήσας καὶ δεξιωσάμενος Τουβέρωνι παρέδωκεν, αὐτὸς δὲ τοὺς παῖδας καὶ τοὺς γαμβροὺς καὶ τῶν ἄλλων ἡγεμονικῶν μάλιστα τοὺς νεωτέρους ἔσω τῆς σκηνῆς ἐπισπασάμενος πολὺν χρόνον ἦν πρὸς αὑτῷ σιωπῇ καθήμενος, ὥστε θαυμάζειν ἅπαντας. </p>
             </div>
             <div n="2" type="section">
-               <p>ὁρμήσας δὲ περὶ τῆς τύχης καὶ τῶν ἀνθρωπίνων διαλέγεσθαι πραγμάτων, <q>ἆρά γε,</q> εἶπεν, <q>ἄξιον εὐπραγίας παρούσης ἄνθρωπον ὄντα θρασύνεσθαι καὶ μέγα φρονεῖν ἔθνος ἢ πόλιν ἢ βασιλείαν καταστρεψάμενον, ἢ τὴν μεταβολὴν ταύτην τῆς τύχης, ἡ<note anchored="true"
-                           place="unspecified"
-                           resp="editor"
-                           xml:lang="eng">
+               <p>ὁρμήσας δὲ περὶ τῆς τύχης καὶ τῶν ἀνθρωπίνων διαλέγεσθαι πραγμάτων, <q>ἆρά γε,</q> εἶπεν, <q>ἄξιον εὐπραγίας παρούσης ἄνθρωπον ὄντα θρασύνεσθαι καὶ μέγα φρονεῖν ἔθνος ἢ πόλιν ἢ βασιλείαν καταστρεψάμενον, ἢ τὴν μεταβολὴν ταύτην τῆς τύχης, ἡ<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                         <foreign xml:lang="grc">τῆς τύχης, ἤ</foreign> so Sintenis, Coraës, and Bekker, with the MSS.:<foreign xml:lang="grc">ἡ τύχη</foreign>.</note> παράδειγμα τῷ πολεμοῦντι κοινῆς ἀσθενείας προθεῖσα παιδεύει μηδὲν ὡς μόνιμον καὶ βέβαιον διανοεῖσθαι;</q>
                </p>
             </div>

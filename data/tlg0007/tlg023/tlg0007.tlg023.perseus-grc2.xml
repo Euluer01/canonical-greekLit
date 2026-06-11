@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -55,14 +54,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -70,7 +65,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -107,10 +102,7 @@
                <p>οὐ μὴν ἀλλὰ τούτοις μὲν ἔστι παραβαλεῖν τὰ Λεῦκτρα καὶ Τεγύρας, ἐπιφανεστάτους καὶ μεγίστους ἀγώνων, κρυφαίαν δὲ σὺν λόχῳ κατωρθωμένην πρᾶξιν οὐκ ἔχομεν τοῦ Μαρκέλλου παραβαλεῖν οἷς Πελοπίδας περὶ τὴν ἐκ φυγῆς κάθοδον καὶ ἀναίρεσιν τῶν ἐν Θήβαις τυράννων ἔπραξεν, ἀλλʼ ἐκεῖνο πολὺ πάντων ἔοικε πρωτεύειν τῶν ὑπὸ σκότῳ καὶ διʼ ἀπάτης γεγενημένων τὸ ἔργον.</p>
             </div>
             <div n="4" type="section">
-               <p>Ἀννίβας φοβερὸς μὲν καὶ δεινὸς ἐνέκειτο Ῥωμαίοις,<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>Ἀννίβας φοβερὸς μὲν καὶ δεινὸς ἐνέκειτο Ῥωμαίοις,<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">ἐνέκειτο Ῥωμαίοις</foreign> Coraës and Bekker, after an early anonymous critic: <foreign xml:lang="grc">ἐνέκειτο.</foreign>
                   </note> ὥσπερ ἀμέλει Λακεδαιμόνιοι τότε Θηβαίοις, ἐνδοῦναι δὲ τούτους μὲν Πελοπίδᾳ καὶ περὶ Τεγύρας καὶ περὶ Λεῦκτρα βέβαιόν ἐστιν, <pb n="paris.1624.317"/> Ἀννίβαν δὲ Μάρκελλος, ὡς μὲν οἱ περὶ Πολύβιον λέγουσιν, οὐδὲ ἅπαξ ἐνίκησεν, ἀλλʼ ἀήττητος ὁ ἁνὴρ δοκεῖ διαγενέσθαι μέχρι Σκηπίωνος· </p>
             </div>
@@ -137,10 +129,7 @@
                <p>τὴν τοίνυν τελευτὴν ἐπαινῶ μὲν οὐδετέρου <pb n="p.528"/> τῶν ἀνδρῶν, ἀλλʼ ἀνιῶμαι καὶ ἀγανακτῶ τῷ παραλόγῳ τοῦ συμπτώματος· καὶ θαυμάζω μὲν ἐν μάχαις τοσαύταις ὅσαις ἀποκάμοι τις ἂν καταριθμῶν, μηδὲ τρωθέντα τὸν Ἀννίβαν, ἄγαμαι δὲ καὶ τὸν ἐν τῇ Παιδείᾳ Χρυσάνταν, ὃς διηρμένος κοπίδα καὶ παίειν μέλλων πολέμιον, ὡς ὑπεσήμηνεν ἡ σάλπιγξ ἀνακλητικόν, ἀφεὶς τὸν ἄνδρα μάλα πρᾴως καὶ κοσμίως ἀνεχώρησεν.</p>
             </div>
             <div n="2" type="section">
-               <p>οὐ μὴν ἀλλὰ τὸν Πελοπίδαν ποιεῖ συγγνωστὸν ἅμα τῷ τῆς μάχης καιρῷ παραθερμον ὄντα καὶ πρὸς τὴν ἄμυναν οὐκ ἀγεννῶς ἐκφέρων ὁ θυμός· ἄριστον μὲν γὰρ νικῶντα σῴζεσθαι τὸν στρατηγόν, <q>εἰ δὲ θανεῖν, εἰς ἀρετὴν καταλύσαντα βίον,</q> ὡς Εὐριπίδης φησίν.<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p>οὐ μὴν ἀλλὰ τὸν Πελοπίδαν ποιεῖ συγγνωστὸν ἅμα τῷ τῆς μάχης καιρῷ παραθερμον ὄντα καὶ πρὸς τὴν ἄμυναν οὐκ ἀγεννῶς ἐκφέρων ὁ θυμός· ἄριστον μὲν γὰρ νικῶντα σῴζεσθαι τὸν στρατηγόν, <q>εἰ δὲ θανεῖν, εἰς ἀρετὴν καταλύσαντα βίον,</q> ὡς Εὐριπίδης φησίν.<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <quote rend="blockquote">
                         <l>
                            <foreign xml:lang="grc">Εἰ δὲ θανεῖν θέμις, ὧδε θανεῖν καλόν,</foreign>

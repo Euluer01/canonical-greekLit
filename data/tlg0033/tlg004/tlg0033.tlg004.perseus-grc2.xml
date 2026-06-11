@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -40,27 +39,21 @@
                      <date type="reprint">1937</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/details/odesofpindarincl0000pind/page/n55/mode/2up"
-                    type="login_restricted">Internet Archive</ref>
-               <ref target="https://archive.org/details/in.ernet.dli.2015.183513/page/n45/mode/2up"
-                    type="free">Internet Archive</ref>
+               <ref target="https://archive.org/details/odesofpindarincl0000pind/page/n55/mode/2up" type="login_restricted">Internet Archive</ref>
+               <ref target="https://archive.org/details/in.ernet.dli.2015.183513/page/n45/mode/2up" type="free">Internet Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
                <p>This pointer pattern extracts poem and line.</p>
             </cRefPattern>
-            <cRefPattern n="poem"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts poem.</p>
             </cRefPattern>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="line" delim="." match="l" use="@n"/>
             </citeStructure>

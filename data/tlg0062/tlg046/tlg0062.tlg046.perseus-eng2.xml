@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -46,7 +45,7 @@
                      </imprint>
                      <biblScope unit="volume">5</biblScope>
                   </monogr>
-                  <series>&#x2028; <title>Loeb Classical Library</title>&#x2028; </series>
+                  <series>  <title>Loeb Classical Library</title>  </series>
                   <ref target="https://archive.org/details/lucianhar05luciuoft/page/292/mode/2up">Internet Archive</ref>
                   <ref target="https://hdl.handle.net/2027/osu.32435024202111?urlappend=%3Bseq=304">The Hathi Trust</ref>
                </biblStruct>
@@ -56,13 +55,11 @@
       <encodingDesc>
          <p>Text encoded in accordance with the latest EpiDoc standards</p>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts section.</p>
             </cRefPattern>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
             </citeStructure>

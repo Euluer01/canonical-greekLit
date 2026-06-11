@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -56,14 +55,10 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts chapter</p>
             </cRefPattern>
          </refsDecl>
@@ -71,7 +66,7 @@
             <refState unit="chapter" delim="."/>
             <refState unit="section"/>
          </refsDecl>
-         <refsDecl n="CTS">
+         <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n">
                   <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
@@ -282,10 +277,7 @@
          </div>
          <div n="11" type="chapter">
             <div n="1" type="section">
-               <p> λέγεται δὲ τῆς τῶν Νεμείων πανηγύρεως συνεστώσης<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> λέγεται δὲ τῆς τῶν Νεμείων πανηγύρεως συνεστώσης<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">συνεστώσης</foreign> Bekker has <foreign xml:lang="grc">ἐνεστώσης</foreign>, after Bryan.</note> στρατηγοῦντα τὸν Φιλοποίμενα τὸ δεύτερον καὶ νενικηκότα μὲν οὐ πάλαι τὴν ἐν Μαντινείᾳ μάχην, τότε δὲ σχολὴν ἄγοντα διὰ τὴν ἑορτήν, πρῶτον μὲν ἐπιδεῖξαι τοῖς Ἕλλησι κεκοσμημένην τὴν φάλαγγα καὶ κινουμένην, ὥσπερ εἴθιστο, τοὺς τακτικοὺς ῥυθμοὺς μετὰ τάχους καὶ ῥώμης· </p>
             </div>
             <div n="2" type="section">
@@ -293,10 +285,7 @@
                </p>
             </div>
             <div n="3" type="section">
-               <p> ἅμα δὲ τῇ λαμπρότητι τῆς φωνῆς τοῦ περὶ τὴν ποίησιν ὄγκου συμπρέψαντος ἐπίβλεψιν γενέσθαι τοῦ θεάτρου πανταχόθεν εἰς τὸν Φιλοποίμενα καὶ κρότον μετὰ χαρᾶς, τῶν Ἑλλήνων τὸ παλαιὸν <pb n="p.286"/> ἀξίωμα ταῖς ἐλπίσιν ἀναλαμβανόντων καὶ τοῦ τότε φρονήματος ἔγγιστα τῷ θαρρεῖν γινομένων.<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ἅμα δὲ τῇ λαμπρότητι τῆς φωνῆς τοῦ περὶ τὴν ποίησιν ὄγκου συμπρέψαντος ἐπίβλεψιν γενέσθαι τοῦ θεάτρου πανταχόθεν εἰς τὸν Φιλοποίμενα καὶ κρότον μετὰ χαρᾶς, τῶν Ἑλλήνων τὸ παλαιὸν <pb n="p.286"/> ἀξίωμα ταῖς ἐλπίσιν ἀναλαμβανόντων καὶ τοῦ τότε φρονήματος ἔγγιστα τῷ θαρρεῖν γινομένων.<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">γινομένων</foreign> Bekker after Coraës: <foreign xml:lang="grc">γενομένων</foreign>.</note>
                </p>
             </div>
@@ -320,10 +309,7 @@
          </div>
          <div n="13" type="chapter">
             <div n="1" type="section">
-               <p> ταῦτα μὲν οὖν καλὰ τοῦ Φιλοποίμενος· ἡ δʼ εἰς Κρήτην αὖθις ἀποδημία Γορτυνίων δεηθέντων, ὡς χρήσαιντο πολεμούμενοι στρατηγῷ, διαβολὴν ἔσχεν, ὅτι τῆς πατρίδος αὐτοῦ πολεμουμένης ὑπὸ Νάβιδος ἀπῆν φυγομαχῶν ἡ φιλοτιμούμενος ἀκαίρως πρὸς ἑτέρους, καίτοι συντόνως οὕτως ἐπολεμήθησαν Μεγαλοπολῖται κατὰ τὸν χρόνον ἐκεῖνον ὥστε τοῖς μὲν τείχεσιν ἐνοικεῖν, σπείρειν δέ τοὺς στενωπούς, περικεκομμένης<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> ταῦτα μὲν οὖν καλὰ τοῦ Φιλοποίμενος· ἡ δʼ εἰς Κρήτην αὖθις ἀποδημία Γορτυνίων δεηθέντων, ὡς χρήσαιντο πολεμούμενοι στρατηγῷ, διαβολὴν ἔσχεν, ὅτι τῆς πατρίδος αὐτοῦ πολεμουμένης ὑπὸ Νάβιδος ἀπῆν φυγομαχῶν ἡ φιλοτιμούμενος ἀκαίρως πρὸς ἑτέρους, καίτοι συντόνως οὕτως ἐπολεμήθησαν Μεγαλοπολῖται κατὰ τὸν χρόνον ἐκεῖνον ὥστε τοῖς μὲν τείχεσιν ἐνοικεῖν, σπείρειν δέ τοὺς στενωπούς, περικεκομμένης<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">περικεκομμένης</foreign> Coraës and Bekker, with the vulgate: <foreign xml:lang="grc">περικεκομμένους</foreign>.</note> τῆς χώρας καὶ τῶν πολεμίων σχεδὸν ἐν ταῖς πύλαις στρατοπεδευόντων.</p>
             </div>
             <div n="2" type="section">
@@ -483,10 +469,7 @@
                <p> ὡς οὖν ὁ περὶ τῆς τελευτῆς λόγος ἧκεν εἰς τοὺς Ἀχαιούς, τὰς μὲν πόλεις αὐτῶν κοινὴ κατήφεια καὶ πένθος εἶχεν, οἱ δʼ ἐν ἡλικίᾳ μετὰ τῶν προβούλων συνελθόντες εἰς Μεγάλην πόλιν οὐδʼ ἡντινοῦν ἀναβολὴν ἐποιήσαντο τῆς τιμωρίας, ἀλλʼ ἑλόμενοι στρατηγὸν Λυκόρταν εἰς τὴν Μεσσηνίαν ἐνέβαλον καὶ κακῶς ἐποίουν τὴν χώραν, ἄχρι οὗ συμφρονήσαντες ἐδέξαντο τοὺς Ἀχαιούς.</p>
             </div>
             <div n="2" type="section">
-               <p> καὶ Δεινοκράτης μὲν αὐτὸς αὑτὸν φθάσας διεχρήσατο, τῶν δὲ ἄλλων ὅσοις μὲν ἀνελεῖν ἔδοξε Φιλοποίμενα διʼ αὐτῶν<note anchored="true"
-                        place="unspecified"
-                        resp="editor"
-                        xml:lang="eng">
+               <p> καὶ Δεινοκράτης μὲν αὐτὸς αὑτὸν φθάσας διεχρήσατο, τῶν δὲ ἄλλων ὅσοις μὲν ἀνελεῖν ἔδοξε Φιλοποίμενα διʼ αὐτῶν<note anchored="true" place="unspecified" resp="editor" xml:lang="eng">
                      <foreign xml:lang="grc">δι’ αὐτῶν</foreign> Bekker and Blass have <foreign xml:lang="grc">δι’ αὑτῶν</foreign> (<gloss>died by their own hands</gloss>), with Stephanus.</note> ἀπέθνῃσκον, ὅσοις δὲ καὶ βασανίσαι, τούτους ἐπʼ αἰκίαις ἀπολουμένους συνελάμβανεν ὁ Λυκόρτας. τὸ δὲ σῶμα καύσαντες αὐτοῦ καὶ τὰ λείψανα συνθέντες εἰς ὑδρίαν ἀνεζεύγνυσαν, οὐκ ἀτάκτως οὐδὲ ὡς ἔτυχεν, ἀλλʼ ἐπινίκιόν πομπήν τινα ἅμα ταῖς ταφαῖς μίξαντες.</p>
             </div>
             <div n="3" type="section">
