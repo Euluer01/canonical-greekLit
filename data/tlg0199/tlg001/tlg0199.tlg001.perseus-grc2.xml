@@ -63,8 +63,8 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim="." match="l" use="@n"/>
-            </citeStructure>
+               <citeStructure match="div[@type='poem']" use="@n" unit="poem" delim=":"><citeStructure unit="line" delim="." match="l" use="@n"/>
+            </citeStructure></citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>

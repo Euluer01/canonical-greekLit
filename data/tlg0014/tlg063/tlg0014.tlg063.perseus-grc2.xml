@@ -61,8 +61,8 @@
          </editorialDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
-            </citeStructure>
+               <citeStructure match="div[@type='letter']" use="@n" unit="letter" delim=":"><citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+            </citeStructure></citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>

@@ -59,8 +59,8 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim="." match="l" use="@n"/>
-            </citeStructure>
+               <citeStructure match="sp" use="@n" unit="sp" delim=":"><citeStructure unit="line" delim="." match="l" use="@n"/>
+            </citeStructure></citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
