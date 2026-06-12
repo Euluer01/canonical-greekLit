@@ -66,7 +66,7 @@
          <p>The rend="displayNum" attribute on the lb tags is used to indicate that line numbers on the line breaks are intended for display</p>
          <refsDecl xml:id="CTS" n="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim="." match="l" use="@n"/>
+               <citeStructure unit="line" delim=":" match="l" use="@n"/>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
