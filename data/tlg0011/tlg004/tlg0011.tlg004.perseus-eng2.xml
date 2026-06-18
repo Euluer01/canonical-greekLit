@@ -66,9 +66,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -1651,7 +1650,7 @@
                <speaker>Iocasta</speaker>
                <l n="861">I will send for him without delay. But let us go into the house: I will do
                   nothing which does not please you. <stage rend="italic">Exeunt Oedipus and
-                  Iocasta.</stage>
+                     Iocasta.</stage>
                </l>
             </sp>
          </div>

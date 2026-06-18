@@ -67,9 +67,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -1362,7 +1361,7 @@
                         son, seek victory in arms, but always seek it with the help of god.</q> Then
                      with a tall boast and foolishly he replied, <q type="spoken">Father, with the
                      help of the gods even a worthless man might achieve victory; but I, even
-                     without that help, fully trust to bring that glory within my grasp.</q>
+                        without that help, fully trust to bring that glory within my grasp.</q>
                   </q>
                </l>
                <l n="770">
@@ -2496,7 +2495,7 @@
                      start forward and move on,</l>
                   <l n="1415">laboring in service to this man of perfect excellence. To a nobler man
                      such service has never yet been rendered <del>—nobler than Ajax when he lived,
-                     I mean</del>.</l>
+                        I mean</del>.</l>
                </sp>
             </div>
             <div type="anapests">

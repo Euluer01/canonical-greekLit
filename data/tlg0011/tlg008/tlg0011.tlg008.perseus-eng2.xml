@@ -54,9 +54,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -343,7 +342,7 @@
             <l n="132">What are you <q type="emph">ooh-ooh</q>-ing for? What are you afraid of? What
                do you see? What frightful thing are you looking at? Why are you carrying on like
                bacchantes? Is there a hawk nearby? <stage rend="italic">From offstage, we hear a
-               lyre being
+                  lyre being
                   tuned. Since the player is in fact Hermes, it sounds divine, but no mortal has
                   ever heard this instrument before, and the satyrs are terrified. They abruptly
                   stop squealing.</stage> Do you want to know what it was? Why are you so quiet,
@@ -417,7 +416,7 @@
             <speaker>Chorus</speaker>
             <l n="176">
                <stage rend="italic">Perhaps separate satyrs sing the various lines of this song.
-               With Silenus, they approach the cave, upstage, jostling, confused, and squabbling.
+                  With Silenus, they approach the cave, upstage, jostling, confused, and squabbling.
                The lyre-noises resume.</stage> Ooh, ooh, ooh, ssh, ssh, aah, aah! Say what you’re
                working on. <milestone unit="para" />Why did you shout and scream? It’s pointless.
                And why were you suspicious of me? Who’s holding back in our first task?</l>
@@ -583,9 +582,9 @@
                acatalectic, a very unusual meter for dialogue. The parabasis-speech in an Old Comedy
                is always in tetrameters, but always catalectic (iambic, trochaic, or anapestic).
                Trochaic tetrameters catalectic are fairly common in tragedy for excited scenes.
-               There are no other acatalectic iambic tetrameters in extant complete plays, though
+                  There are no other acatalectic iambic tetrameters in extant complete plays, though
                they appear in at least one other fragmentary satyr play. We don’t know why this
-               scene is in this particular meter.</note>
+                  scene is in this particular meter.</note>
             </l>
          </sp>
          <sp>

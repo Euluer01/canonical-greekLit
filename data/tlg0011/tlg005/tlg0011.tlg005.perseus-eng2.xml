@@ -69,9 +69,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -448,7 +447,7 @@
                   infuriated,</l>
                <l n="295">she comes up to me and cries;—<q type="spoken">Have you not brought this
                   upon me? Is this not your doing, since you stole Orestes from my hands and
-                  secretly sent him away? Yes—but rest assured that you will be justly punished.</q>
+                     secretly sent him away? Yes—but rest assured that you will be justly punished.</q>
                   Like this she barks, and in agreement</l>
                <l n="300">her glorious bridegroom by her side urges her on—that total impotent, that
                   utter plague who fights his battles with the help of women. But my heart is broken
@@ -2463,7 +2462,7 @@
                   rather demands that we enter the house immediately, after first adoring the
                   shrines of my father’s</l>
                <l n="1375">gods, the keepers of these gates. <stage rend="italic">Orestes and
-                  Pylades enter the house, followed by the Paedagogus. Electra remains outside.</stage>
+                     Pylades enter the house, followed by the Paedagogus. Electra remains outside.</stage>
                </l>
             </sp>
             <sp>
@@ -2650,7 +2649,7 @@
                <sp>
                   <speaker>Electra</speaker>
                   <l n="1438">Things here will be my concern. <stage rend="italic">Exeunt Orestes
-                     and Pylades, into the house.</stage>
+                        and Pylades, into the house.</stage>
                   </l>
                </sp>
                <sp>

@@ -69,9 +69,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -3160,7 +3159,7 @@
                <milestone unit="para" />
                <l n="1610">When he heard their sudden bitter cry, he put his arms around them and
                   said: <q type="spoken">My children, on this day your father no longer exists. Now
-                  I have perished utterly, and no longer will you bear the burden of tending me,</q>
+                     I have perished utterly, and no longer will you bear the burden of tending me,</q>
                </l>
                <l n="1615">
                   <q type="spoken" rend="merge">which was no light one, I well know, my children.

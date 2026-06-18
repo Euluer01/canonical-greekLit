@@ -69,9 +69,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -380,7 +379,7 @@
                   time to time helpful to you. Now I will go to the ship, leaving matters here to
                   you. May escorting Hermes the Deceiver, lead us on, and divine Victory, Athena
                   Polias, who saves me always! <stage rend="italic">Exit Odysseus, on the
-                  spectators’ left.</stage>
+                     spectators’ left.</stage>
                </l>
             </sp>
          </div>

@@ -64,9 +64,8 @@
                <citeStructure unit="scene" delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-                  n="chunk">
-                  <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-               </citeStructure>
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -2371,7 +2370,7 @@
                   father’s deeds, and his grief-filled marriage. </l>
                <l n="1225" resp="p">But his father, when he saw him, cried aloud with a dreadful cry
                   and went in and called to him with a voice of wailing: <q type="spoken">Ah,
-                  unhappy boy, what have you done! What plan have
+                     unhappy boy, what have you done! What plan have
                      you seized on? By what misfortune have you lost your reason?</q>
                </l>
                <l n="1230" resp="p">
