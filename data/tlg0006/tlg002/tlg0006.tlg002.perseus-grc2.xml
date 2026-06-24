@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release">2020</date>
             <idno type="filename">tlg0006.tlg002.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0006.tlg002.perseus-grc2</idno>
          </publicationStmt>
@@ -40,41 +42,50 @@
                   </imprint>
                   <biblScope unit="volume">1</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/euripidisfabulae01euriuoft/page/n55/mode/2up">The Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/euripidisfabulae01euriuoft/page/n55/mode/2up">The
+                  Internet Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <p>Greek produced via Lace 0.6.15. Lace copyright 2013-2020, Bruce Robertson, Dept. of Classics, Mount Allison University. Developed through the support of the <ref target="https://nbif.ca/en">NBIF</ref>.</p>
+            <p>Greek produced via Lace 0.6.15. Lace copyright 2013-2020, Bruce Robertson, Dept. of
+               Classics, Mount Allison University. Developed through the support of the <ref
+                  target="https://nbif.ca/en">NBIF</ref>.</p>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts lines</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#drama-line"/>
+            <catRef scheme="#perseus-genre" target="#drama-line" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="2020-09-20" who="Lisa Cerrato"/>
+         <change when="2020-09-20" who="Lisa Cerrato" />
       </revisionDesc>
    </teiHeader>
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0006.tlg002.perseus-grc2">
-         <milestone resp="perseus" n="1" unit="card"/>
-         <l resp="perseus" style="hidden" n="0"/>
+         <milestone resp="perseus" n="1" unit="card" />
+         <l resp="perseus" style="hidden" n="0" />
          <note resp="editor" place="inline">
             <p>τὰ τοῦ δράματος πρόσωπα</p>
             <p>Ἀπόλλων</p>
@@ -113,14 +124,14 @@
                <l n="20">ψυχορραγοῦσα· τῇδε γάρ σφ’ ἐν ἡμέρᾳ </l>
                <l n="21">θανεῖν πέπρωται καὶ μεταστῆναι βίου. </l>
                <l n="22">ἐγὼ δέ, μὴ μίασμά μ’ ἐν δόμοις κίχῃ, </l>
-               <pb facs="euripidisfabulae01euriuoft_0058"/>
+               <pb facs="euripidisfabulae01euriuoft_0058" />
                <l n="23">λείπω μελάθρων τῶνδε φιλτάτην στέγην. </l>
                <l n="24">ἤδη δὲ τόνδε Θάνατον εἰσορῶ πέλας, </l>
                <l n="25">ἱερῆ θανόντων, ὅς νιν εἰς Ἅιδου δόμους </l>
                <l n="26">μέλλει κατάξειν· συμμέτρως δ’ ἀφίκετο, </l>
                <l n="27">φρουρῶν τόδ’ ἦμαρ ᾧ θανεῖν αὐτὴν χρεών. </l>
             </sp>
-            <milestone resp="perseus" n="28" unit="card"/>
+            <milestone resp="perseus" n="28" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Θάνατος</speaker>
@@ -135,7 +146,7 @@
                   <l n="36">ἣ τόδ’ ὑπέστη πόσιν ἐκλύσασ’ </l>
                   <l n="37">αὐτὴ προθανεῖν Πελίου παῖς. </l>
                </sp>
-               <milestone resp="perseus" n="38" unit="card"/>
+               <milestone resp="perseus" n="38" unit="card" />
                <sp>
                   <speaker>Ἀπόλλων</speaker>
                   <l rend="indent" n="38">θάρσει· δίκην τοι καὶ λόγους κεδνοὺς ἔχω. </l>
@@ -184,7 +195,7 @@
                   <speaker>Θάνατος</speaker>
                   <l rend="indent" n="49">κτείνειν γ’ ὃν ἂν χρῇ; τοῦτο γὰρ τετάγμεθα. </l>
                </sp>
-               <pb facs="euripidisfabulae01euriuoft_0059"/>
+               <pb facs="euripidisfabulae01euriuoft_0059" />
                <sp>
                   <speaker>Ἀπόλλων</speaker>
                   <l rend="indent" n="50">οὔκ, ἀλλὰ τοῖς μέλλουσι θάνατον ἐμβαλεῖν. </l>
@@ -262,8 +273,8 @@
                </sp>
             </div>
          </div>
-         <pb facs="euripidisfabulae01euriuoft_0060"/>
-         <milestone resp="perseus" n="77" unit="card"/>
+         <pb facs="euripidisfabulae01euriuoft_0060" />
+         <milestone resp="perseus" n="77" unit="card" />
          <div type="choral">
             <div type="anapests">
                <sp>
@@ -279,7 +290,7 @@
                   <l n="85">πόσιν εἰς αὑτῆς γεγενῆσθαι. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="86" unit="card"/>
+            <milestone resp="perseus" n="86" unit="card" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -292,7 +303,7 @@
                   <l n="92">ὦ Παιάν, φανείης. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="93" unit="card"/>
+            <milestone resp="perseus" n="93" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -302,13 +313,13 @@
                   <l n="95">—πόθεν; οὐκ αὐχῶ. τί σε θαρσύνει; </l>
                   <l n="96">—πῶς ἂν ἔρημον τάφον Ἄδμητος </l>
                   <l n="96a">
-                     <gap reason="lost" rend=" . . . . . . "/>
+                     <gap reason="lost" rend=" . . . . . . " />
                   </l>
                   <l n="97">κεδνῆς ἂν ἔπραξε γυναικός; </l>
                </sp>
             </div>
-            <pb facs="euripidisfabulae01euriuoft_0061"/>
-            <milestone resp="perseus" n="98" unit="card"/>
+            <pb facs="euripidisfabulae01euriuoft_0061" />
+            <milestone resp="perseus" n="98" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -321,7 +332,7 @@
                   <l n="104">δουπεῖ χεὶρ γυναικῶν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="105" unit="card"/>
+            <milestone resp="perseus" n="105" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -334,7 +345,7 @@
                   <l n="111">χρηστὸς ἀπ’ ἀρχῆς νενόμισται. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="112" unit="card"/>
+            <milestone resp="perseus" n="112" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -350,8 +361,8 @@
                   <l n="121">μηλοθύταν πορευθῶ. </l>
                </sp>
             </div>
-            <pb facs="euripidisfabulae01euriuoft_0062"/>
-            <milestone resp="perseus" n="122" unit="card"/>
+            <pb facs="euripidisfabulae01euriuoft_0062" />
+            <milestone resp="perseus" n="122" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -367,7 +378,7 @@
                   <l n="131">ἐλπίδα προσδέχωμαι; </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="132" unit="card"/>
+            <milestone resp="perseus" n="132" unit="card" />
             <div type="lyric">
                <sp>
                   <speaker>Χορός</speaker>
@@ -378,7 +389,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" n="136" unit="card"/>
+         <milestone resp="perseus" n="136" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Χορός</speaker>
@@ -408,7 +419,7 @@
                <speaker>Θεράπαινα</speaker>
                <l rend="indent" n="145">οὔπω τόδ’ οἶδε δεσπότης, πρὶν ἂν πάθῃ. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0063"/>
+            <pb facs="euripidisfabulae01euriuoft_0063" />
             <sp>
                <speaker>Χορός</speaker>
                <l rend="indent" n="146">ἐλπὶς μὲν οὐκέτ’ ἐστὶ σῴζεσθαι βίον; </l>
@@ -456,7 +467,7 @@
                <l n="173">ἄκλαυτος ἀστένακτος, οὐδὲ τοὐπιὸν </l>
                <l n="174">κακὸν μεθίστη χρωτὸς εὐειδῆ φύσιν. </l>
                <l n="175">κἄπειτα θάλαμον ἐσπεσοῦσα καὶ λέχος, </l>
-               <pb facs="euripidisfabulae01euriuoft_0064"/>
+               <pb facs="euripidisfabulae01euriuoft_0064" />
                <l n="176">ἐνταῦθα δὴ ʼδάκρυσε καὶ λέγει τάδε· </l>
                <l n="177">Ὦ λέκτρον, ἔνθα παρθένει’ ἔλυσ’ ἐγὼ </l>
                <l n="178">κορεύματ’ ἐκ τοῦδ’ ἀνδρός, οὗ θνῄσκω πέρι, </l>
@@ -490,11 +501,11 @@
                <speaker>Θεράπαινα</speaker>
                <l rend="indent" n="201">κλαίει γ’ ἄκοιτιν ἐν χεροῖν φίλην ἔχων, </l>
                <l n="202">καὶ μὴ προδοῦναι λίσσεται, τἀμήχανα </l>
-               <pb facs="euripidisfabulae01euriuoft_0065"/>
+               <pb facs="euripidisfabulae01euriuoft_0065" />
                <l n="203">ζητῶν· φθίνει γὰρ καὶ μαραίνεται νόσῳ. </l>
                <l n="204">παρειμένη δέ, χειρὸς ἄθλιον βάρος </l>
                <l n="204a">
-                  <gap reason="lost" rend=" . . . . . . . "/>
+                  <gap reason="lost" rend=" . . . . . . . " />
                </l>
                <l n="205">ὅμως δὲ καίπερ σμικρὸν ἐμπνέουσ’ ἔτι </l>
                <l n="206">βλέψαι πρὸς αὐγὰς βούλεται τὰς ἡλίου </l>
@@ -508,7 +519,7 @@
                <l n="212">σὺ δ’ εἶ παλαιὸς δεσπόταις ἐμοῖς φίλος. </l>
             </sp>
          </div>
-         <milestone resp="perseus" n="213" unit="card"/>
+         <milestone resp="perseus" n="213" unit="card" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -527,16 +538,16 @@
                   <l n="222">—πόριζε δὴ πόριζε· καὶ πάρος γὰρ </l>
                   <l n="223">
                      <sic>τοῦδ’ ἐφεῦρες</sic>, καὶ νῦν </l>
-                  <pb facs="euripidisfabulae01euriuoft_0066"/>
+                  <pb facs="euripidisfabulae01euriuoft_0066" />
                   <l n="224">λυτήριος ἐκ θανάτου γενοῦ, </l>
                   <l n="225">φόνιον δ’ ἀπόπαυσον Ἅιδαν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="226" unit="card"/>
+            <milestone resp="perseus" n="226" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
-                  <l rend="indent" n="226">— παπαῖ <gap reason="lost" rend=". . . . . . . . . "/>
+                  <l rend="indent" n="226">— παπαῖ <gap reason="lost" rend=". . . . . . . . . " />
                   </l>
                   <l n="226a">ὦ παῖ Φέρητος, οἷ’ ἔπρα- </l>
                   <l n="227">ξας δάμαρτος σᾶς στερείς. </l>
@@ -554,7 +565,7 @@
                   <l n="237">κατὰ γᾶς χθόνιον παρ’ Ἅιδαν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="238" unit="card"/>
+            <milestone resp="perseus" n="238" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -566,36 +577,36 @@
                   <l n="243">τὸν ἔπειτα χρόνον βιοτεύσει. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="244" unit="card"/>
+            <milestone resp="perseus" n="244" unit="card" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Ἄλκηστις</speaker>
                   <l rend="indent" n="244">Ἅλιε καὶ φάος ἁμέρας, </l>
                   <l n="245">οὐράνιαί τε δῖναι νεφέλας δρομαίου. </l>
-                  <pb facs="euripidisfabulae01euriuoft_0067"/>
+                  <pb facs="euripidisfabulae01euriuoft_0067" />
                </sp>
-               <milestone resp="perseus" n="246" unit="card"/>
+               <milestone resp="perseus" n="246" unit="card" />
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="246">ὁρᾷ σὲ κἀμέ, δύο κακῶς πεπραγότας, </l>
                   <l n="247">οὐδὲν θεοὺς δράσαντας ἀνθ’ ὅτου θανῇ. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="248" unit="card"/>
+            <milestone resp="perseus" n="248" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Ἄλκηστις</speaker>
                   <l rend="indent" n="248">γαῖά τε καὶ μελάθρων στέγαι </l>
                   <l n="249">νυμφίδιοί τε κοῖται πατρίας Ἰωλκοῦ. </l>
                </sp>
-               <milestone resp="perseus" n="250" unit="card"/>
+               <milestone resp="perseus" n="250" unit="card" />
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="250">ἔπαιρε σαυτήν, ὦ τάλαινα, μὴ προδῷς· </l>
                   <l n="251">λίσσου δὲ τοὺς κρατοῦντας οἰκτῖραι θεούς. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="252" unit="card"/>
+            <milestone resp="perseus" n="252" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Ἄλκηστις</speaker>
@@ -606,14 +617,14 @@
                   <l n="256">ἐπείγου· σὺ κατείργεις. τάδε τοί με </l>
                   <l n="256a">σπερχόμενος ταχύνει. </l>
                </sp>
-               <milestone resp="perseus" n="257" unit="card"/>
+               <milestone resp="perseus" n="257" unit="card" />
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="257">οἴμοι, πικράν γε τήνδε μοι ναυκληρίαν </l>
                   <l n="258">ἔλεξας. ὦ δύσδαιμον, οἷα πάσχομεν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="259" unit="card"/>
+            <milestone resp="perseus" n="259" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Ἄλκηστις</speaker>
@@ -625,19 +636,19 @@
                      <del>μέθες με·</del> τί ῥέξεις; ἄφες.—οἵαν ὅδον ἁ δει- </l>
                   <l n="263a">λαιότατα προβαίνω. </l>
                </sp>
-               <milestone resp="perseus" n="264" unit="card"/>
+               <milestone resp="perseus" n="264" unit="card" />
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="264">οἰκτρὰν φίλοισιν, ἐκ δὲ τῶν μάλιστ’ ἐμοὶ </l>
                   <l n="265">καὶ παισίν, οἷς δὴ πένθος ἐν κοινῷ τόδε. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="266" unit="card"/>
+            <milestone resp="perseus" n="266" unit="card" />
             <div type="epode">
                <sp>
                   <speaker>Ἄλκηστις</speaker>
                   <l rend="indent" n="266">μέθετε μέθετέ μ’ ἤδη. </l>
-                  <pb facs="euripidisfabulae01euriuoft_0068"/>
+                  <pb facs="euripidisfabulae01euriuoft_0068" />
                   <l n="267">κλίνατʼ, οὐ σθένω ποσίν· </l>
                   <l n="268">πλησίον Ἅιδας. </l>
                   <l n="269">σκοτία δ’ ἐπ’ ὄσσοισι νὺξ ἐφέρπει. </l>
@@ -646,7 +657,7 @@
                   <l n="272">χαίροντες, ὦ τέκνα, τόδε φάος ὁρῷτον. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="273" unit="card"/>
+            <milestone resp="perseus" n="273" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Ἄδμητος</speaker>
@@ -661,7 +672,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" n="280" unit="card"/>
+         <milestone resp="perseus" n="280" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Ἄλκηστις</speaker>
@@ -680,7 +691,7 @@
                <l n="292">καλῶς δὲ σῶσαι παῖδα κεὐκλεῶς θανεῖν. </l>
                <l n="293">μόνος γὰρ αὐτοῖς ἦσθα, κοὔτις ἐλπὶς ἦν </l>
                <l n="294">σοῦ κατθανόντος ἄλλα φιτύσειν τέκνα. </l>
-               <pb facs="euripidisfabulae01euriuoft_0069"/>
+               <pb facs="euripidisfabulae01euriuoft_0069" />
                <l n="295">κἀγώ τ’ ἂν ἔζων καὶ σὺ τὸν λοιπὸν χρόνον, </l>
                <l n="296">κοὐκ ἂν μονωθεὶς σῆς δάμαρτος ἔστενες </l>
                <l n="297">καὶ παῖδας ὠρφάνευες. ἀλλὰ ταῦτα μὲν </l>
@@ -711,7 +722,7 @@
                <l n="320">δεῖ γὰρ θανεῖν με· καὶ τόδ’ οὐκ ἐς αὔριον </l>
                <l n="321">οὐδ’ ἐς τρίτην μοι μηνὸς ἔρχεται κακόν, </l>
                <l n="322">ἀλλ’ αὐτίκ’ ἐν τοῖς οὐκέτ’ οὖσι λέξομαι. </l>
-               <pb facs="euripidisfabulae01euriuoft_0070"/>
+               <pb facs="euripidisfabulae01euriuoft_0070" />
                <l n="323">χαίροντες εὐφραίνοισθε· καὶ σοὶ μέν, πόσι, </l>
                <l n="324">γυναῖκ’ ἀρίστην ἔστι κομπάσαι λαβεῖν, </l>
                <l n="325">ὑμῖν δέ, παῖδες, μητρὸς ἐκπεφυκέναι. </l>
@@ -721,7 +732,7 @@
                <l rend="indent" n="326">θάρσει· πρὸ τούτου γὰρ λέγειν οὐχ ἅζομαι· </l>
                <l n="327">δράσει τάδʼ, εἴπερ μὴ φρενῶν ἁμαρτάνει. </l>
             </sp>
-            <milestone resp="perseus" n="328" unit="card"/>
+            <milestone resp="perseus" n="328" unit="card" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="328">ἔσται τάδ’ ἔσται, μὴ τρέσῃς· ἐπεὶ σ’ ἐγὼ </l>
@@ -750,7 +761,7 @@
                <l n="351">ὄνομα καλῶν σὸν τὴν φίλην ἐν ἀγκάλαις </l>
                <l n="352">δόξω γυναῖκα καίπερ οὐκ ἔχων ἔχειν· </l>
                <l n="353">ψυχρὰν μέν, οἶμαι, τέρψιν, ἀλλ’ ὅμως βάρος </l>
-               <pb facs="euripidisfabulae01euriuoft_0071"/>
+               <pb facs="euripidisfabulae01euriuoft_0071" />
                <l n="354">ψυχῆς ἀπαντλοίην ἄν. ἐν δ’ ὀνείρασι </l>
                <l n="355">φοιτῶσά μ’ εὐφραίνοις ἄν· ἡδὺ γὰρ φίλους </l>
                <l n="356">κἀν νυκτὶ λεύσσειν, ὅντιν’ ἂν παρῇ χρόνον. </l>
@@ -772,7 +783,7 @@
                <l rend="indent" n="369">καὶ μὴν ἐγώ σοι πένθος ὡς φίλος φίλῳ </l>
                <l n="370">λυπρὸν συνοίσω τῆσδε· καὶ γὰρ ἀξία. </l>
             </sp>
-            <milestone resp="perseus" n="371" unit="card"/>
+            <milestone resp="perseus" n="371" unit="card" />
             <sp>
                <speaker>Ἄλκηστις</speaker>
                <l rend="indent" n="371">ὦ παῖδες, αὐτοὶ δὴ τάδ’ εἰσηκούσατε </l>
@@ -811,7 +822,7 @@
                <speaker>Ἄλκηστις</speaker>
                <l rend="indent" n="381">χρόνος μαλάξει σʼ· οὐδέν ἐσθ’ ὁ κατθανών. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0072"/>
+            <pb facs="euripidisfabulae01euriuoft_0072" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="382">ἄγου με σὺν σοί, πρὸς θεῶν, ἄγου κάτω. </l>
@@ -868,7 +879,7 @@
                <speaker>Χορός</speaker>
                <l rend="indent" n="392">βέβηκεν, οὐκέτ’ ἔστιν Ἀδμήτου γυνή. </l>
             </sp>
-            <milestone resp="perseus" n="393" unit="card"/>
+            <milestone resp="perseus" n="393" unit="card" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Παῖς</speaker>
@@ -883,30 +894,30 @@
                   <l n="402">καλοῦμαί σ’ ὁ σὸς ποτὶ σοῖσι πίτ- </l>
                   <l n="403">στόμασιν νεοσσός. </l>
                </sp>
-               <milestone resp="perseus" n="404" unit="card"/>
+               <milestone resp="perseus" n="404" unit="card" />
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="404">τὴν οὐ κλύουσαν οὐδ’ ὁρῶσαν· ὥστ’ ἐγὼ </l>
                   <l n="405">καὶ σφὼ βαρείᾳ συμφορᾷ πεπλήγμεθα. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="406" unit="card"/>
+            <milestone resp="perseus" n="406" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Παῖς</speaker>
                   <l rend="indent" n="406">νέος ἐγώ, πάτερ, λείπομαι φίλας </l>
                   <l n="407">μονόστολός τε ματρός· ὦ </l>
-                  <pb facs="euripidisfabulae01euriuoft_0073"/>
+                  <pb facs="euripidisfabulae01euriuoft_0073" />
                   <l n="408">σχέτλια δὴ παθὼν </l>
                   <l n="409">ἐγὼ ἐργὰ . ., </l>
                   <l n="410">σύ τέ μοι σύγκασι κούρα </l>
-                  <l n="411">συνέτλας· <gap reason="lost" rend=" . . . . . "/> ὦ πάτερ, </l>
+                  <l n="411">συνέτλας· <gap reason="lost" rend=" . . . . . " /> ὦ πάτερ, </l>
                   <l n="412">ἀνόνατ’ ἀνόνατ’ ἐνύμφευσας, οὐδὲ γήρως </l>
                   <l n="413">ἔβας τέλος σὺν τᾷδʼ· </l>
                   <l n="414">ἔφθιτο γὰρ πάρος· οἰχομένας δὲ σοῦ, </l>
                   <l n="415">μᾶτερ, ὄλωλεν οἶκος. </l>
                </sp>
-               <milestone resp="perseus" n="416" unit="card"/>
+               <milestone resp="perseus" n="416" unit="card" />
                <sp>
                   <speaker>Χορός</speaker>
                   <l rend="indent" n="416">Ἄδμητʼ, ἀνάγκη τάσδε συμφορὰς φέρειν· </l>
@@ -934,8 +945,8 @@
                </sp>
             </div>
          </div>
-         <pb facs="euripidisfabulae01euriuoft_0074"/>
-         <milestone resp="perseus" n="435" unit="card"/>
+         <pb facs="euripidisfabulae01euriuoft_0074" />
+         <milestone resp="perseus" n="435" unit="card" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -951,7 +962,7 @@
                   <l n="444">σας ἐλάτᾳ δικώπῳ. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="445" unit="card"/>
+            <milestone resp="perseus" n="445" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -966,7 +977,7 @@
                   <l n="454">πὰν μελέων ἀοιδοῖς. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="455" unit="card"/>
+            <milestone resp="perseus" n="455" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -975,7 +986,7 @@
                   <l n="457">φάος ἐξ Ἀίδα τεράμνων </l>
                   <l n="458">καὶ Κωκυτοῖο ῥεέθρων </l>
                   <l n="459">ποταμίᾳ νερτέρᾳ τε κώπᾳ. </l>
-                  <pb facs="euripidisfabulae01euriuoft_0075"/>
+                  <pb facs="euripidisfabulae01euriuoft_0075" />
                   <l n="460">σὺ γὰρ ὤ, μόνα, ὦ φίλα γυναικῶν, </l>
                   <l n="461">σὺ τὸν αὑτᾶς </l>
                   <l n="462">ἔτλας πόσιν ἀντὶ σᾶς ἀμεῖψαι </l>
@@ -985,7 +996,7 @@
                   <l n="465">στυγηθεὶς τέκνοις τε τοῖς σοῖς. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="466" unit="card"/>
+            <milestone resp="perseus" n="466" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -993,7 +1004,7 @@
                   <l n="467">πρὸ παιδὸς χθονὶ κρύψαι </l>
                   <l n="468">δέμας, οὐδὲ πατρὸς γεραιοῦ, </l>
                   <l n="468a">
-                     <gap reason="lost" rend=" . . . . . . "/>
+                     <gap reason="lost" rend=" . . . . . . " />
                   </l>
                   <l n="469">ὃν ἔτεκον δʼ, οὐκ ἔτλαν ῥύεσθαι, </l>
                   <l n="470">σχετλίω, πολιὰν ἔχοντε χαίταν. </l>
@@ -1006,7 +1017,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" n="476" unit="card"/>
+         <milestone resp="perseus" n="476" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Ἡρακλῆς</speaker>
@@ -1019,7 +1030,7 @@
                <l n="479">ἀλλ’ εἰπὲ χρεία τίς σε Θεσσαλῶν χθόνα </l>
                <l n="480">πέμπει, Φεραῖον ἄστυ προσβῆναι τόδε. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0076"/>
+            <pb facs="euripidisfabulae01euriuoft_0076" />
             <sp>
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="481">Τιρυνθίῳ πράσσω τιν’ Εὐρυσθεῖ πόνον. </l>
@@ -1103,11 +1114,11 @@
                <l n="505">ἀλλ’ οὔτις ἔστιν ὃς τὸν Ἀλκμήνης γόνον </l>
                <l n="506">τρέσαντα χεῖρα πολεμίαν ποτ’ ὄψεται. </l>
             </sp>
-            <milestone resp="perseus" n="507" unit="card"/>
+            <milestone resp="perseus" n="507" unit="card" />
             <sp>
                <speaker>Χορός</speaker>
                <l rend="indent" n="507">καὶ μὴν ὅδ’ αὐτὸς τῆσδε κοίρανος χθονὸς </l>
-               <pb facs="euripidisfabulae01euriuoft_0077"/>
+               <pb facs="euripidisfabulae01euriuoft_0077" />
                <l n="508">Ἄδμητος ἔξω δωμάτων πορεύεται. </l>
             </sp>
             <sp>
@@ -1214,12 +1225,12 @@
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="534">πῶς οὖν ἐν οἴκοις σοῖσιν ὤλεσεν βίον; </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0078"/>
+            <pb facs="euripidisfabulae01euriuoft_0078" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="535">πατρὸς θανόντος ἐνθάδ’ ὠρφανεύετο. </l>
             </sp>
-            <milestone resp="perseus" n="536" unit="card"/>
+            <milestone resp="perseus" n="536" unit="card" />
             <sp>
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="536">φεῦ. </l>
@@ -1280,7 +1291,7 @@
                <l n="557">καὶ πρὸς κακοῖσιν ἄλλο τοῦτ’ ἂν ἦν κακόν, </l>
                <l n="558">δόμους καλεῖσθαι τοὺς ἐμοὺς ἐχθροξένους. </l>
                <l n="559">αὐτὸς δ’ ἀρίστου τοῦδε τυγχάνω ξένου, </l>
-               <pb facs="euripidisfabulae01euriuoft_0079"/>
+               <pb facs="euripidisfabulae01euriuoft_0079" />
                <l n="560">ὅταν ποτ’ Ἄργους διψίαν ἔλθω χθόνα. </l>
             </sp>
             <sp>
@@ -1297,7 +1308,7 @@
                <l n="567">μέλαθρ’ ἀπωθεῖν οὐδ’ ἀτιμάζειν ξένους. </l>
             </sp>
          </div>
-         <milestone resp="perseus" n="568" unit="card"/>
+         <milestone resp="perseus" n="568" unit="card" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -1312,7 +1323,7 @@
                   <l n="577">ποιμνίτας ὑμεναίους. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="578" unit="card"/>
+            <milestone resp="perseus" n="578" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1326,22 +1337,23 @@
                   <l n="587">χαίρουσ’ εὔφρονι μολπᾷ. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="588" unit="card"/>
+            <milestone resp="perseus" n="588" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
                   <l rend="indent" n="588">τοιγὰρ πολυμηλοτάταν </l>
                   <l n="589">ἑστίαν οἰκεῖς παρὰ καλλίναον </l>
                   <l n="590">Βοιβίαν λίμναν. ἀρότοις δὲ γυᾶν </l>
-                  <pb facs="euripidisfabulae01euriuoft_0080"/>
+                  <pb facs="euripidisfabulae01euriuoft_0080" />
                   <l n="591">καὶ πεδίων δαπέδοις ὅρον ἀμφὶ μὲν </l>
                   <l n="592">ἀελίου κνεφαίαν </l>
-                  <l n="593">ἱππόστασιν αἰθέρα τὰν Μολοσσῶν <gap reason="lost" rend=" . . "/> τίθεται, </l>
+                  <l n="593">ἱππόστασιν αἰθέρα τὰν Μολοσσῶν <gap reason="lost" rend=" . . " />
+                     τίθεται, </l>
                   <l n="595">πόντιον δ’ Αἰγαίων’ ἐπ’ ἀκτὰν </l>
                   <l n="596">ἀλίμενον Πηλίου κρατύνει. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="597" unit="card"/>
+            <milestone resp="perseus" n="597" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1356,7 +1368,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" n="606" unit="card"/>
+         <milestone resp="perseus" n="606" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Ἄδμητος</speaker>
@@ -1381,7 +1393,7 @@
                <l n="618">δέχου δὲ κόσμον τόνδε, καὶ κατὰ χθονὸς </l>
                <l n="619">ἴτω. τὸ ταύτης σῶμα τιμᾶσθαι χρεών, </l>
                <l n="620">ἥτις γε τῆς σῆς προύθανε ψυχῆς, τέκνον, </l>
-               <pb facs="euripidisfabulae01euriuoft_0081"/>
+               <pb facs="euripidisfabulae01euriuoft_0081" />
                <l n="621">καί μ’ οὐκ ἄπαιδ’ ἔθηκεν οὐδ’ εἴασε σοῦ </l>
                <l n="622">στερέντα γήρᾳ πενθίμῳ καταφθίνειν, </l>
                <l n="623">πάσαις δ’ ἔθηκεν εὐκλεέστερον βίον </l>
@@ -1391,7 +1403,7 @@
                <l n="627">εὖ σοι γένοιτο. φημὶ τοιούτους γάμους </l>
                <l n="628">λύειν βροτοῖσιν, ἢ γαμεῖν οὐκ ἄξιον. </l>
             </sp>
-            <milestone resp="perseus" n="629" unit="card"/>
+            <milestone resp="perseus" n="629" unit="card" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="629">οὔτ’ ἦλθες ἐς τόνδ’ ἐξ ἐμοῦ κληθεὶς τάφον, </l>
@@ -1413,7 +1425,7 @@
                <l n="645">τοῦ σοῦ πρὸ παιδός, ἀλλὰ τήνδ’ εἰάσατε </l>
                <l n="646">γυναῖκ’ ὀθνείαν, ἣν ἐγὼ καὶ μητέρα </l>
                <l n="647">πατέρα τέ γ’ ἐνδίκως ἂν ἡγοίμην μόνην. </l>
-               <pb facs="euripidisfabulae01euriuoft_0082"/>
+               <pb facs="euripidisfabulae01euriuoft_0082" />
                <l n="648">καίτοι καλόν γ’ ἂν τόνδ’ ἀγῶν’ ἠγωνίσω, </l>
                <l n="649">τοῦ σοῦ πρὸ παιδὸς κατθανών, βραχὺς δέ σοι </l>
                <l n="650">πάντως ὁ λοιπὸς ἦν βιώσιμος χρόνος. </l>
@@ -1449,8 +1461,8 @@
                <l rend="indent" n="673">παύσασθʼ· ἅλις γὰρ ἡ παροῦσα συμφορά· </l>
                <l n="674">ὦ παῖ, πατρὸς δὲ μὴ παροξύνῃς φρένας. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0083"/>
-            <milestone resp="perseus" n="675" unit="card"/>
+            <pb facs="euripidisfabulae01euriuoft_0083" />
+            <milestone resp="perseus" n="675" unit="card" />
             <sp>
                <speaker>Φέρης</speaker>
                <l rend="indent" n="675">ὦ παῖ, τίν’ αὐχεῖς, πότερα Λυδὸν ἢ Φρύγα </l>
@@ -1481,7 +1493,7 @@
                <l n="700">εἰ τὴν παροῦσαν κατθανεῖν πείσεις ἀεὶ </l>
                <l n="701">γυναῖχ’ ὑπὲρ σοῦ· κᾆτ’ ὀνειδίζεις φίλοις </l>
                <l n="702">τοῖς μὴ θέλουσι δρᾶν τάδʼ, αὐτὸς ὢν κακός; </l>
-               <pb facs="euripidisfabulae01euriuoft_0084"/>
+               <pb facs="euripidisfabulae01euriuoft_0084" />
                <l n="703">σίγα· νόμιζε δʼ, εἰ σὺ τὴν σαυτοῦ φιλεῖς </l>
                <l n="704">ψυχήν, φιλεῖν ἅπαντας· εἰ δ’ ἡμᾶς κακῶς </l>
                <l n="705">ἐρεῖς, ἀκούσῃ πολλὰ κοὐ ψευδῆ κακά. </l>
@@ -1491,7 +1503,7 @@
                <l rend="indent" n="706">πλείω λέλεκται νῦν τε καὶ τὰ πρὶν κακά· </l>
                <l n="707">παῦσαι δέ, πρέσβυ, παῖδα σὸν κακορροθῶν. </l>
             </sp>
-            <milestone resp="perseus" n="708" unit="card"/>
+            <milestone resp="perseus" n="708" unit="card" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="708">λέγʼ, ὡς ἐμοῦ λέξαντος· εἰ δ’ ἀλγεῖς κλύων </l>
@@ -1577,7 +1589,7 @@
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="729">ἄπελθε κἀμὲ τόνδ’ ἔα θάψαι νεκρόν. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0085"/>
+            <pb facs="euripidisfabulae01euriuoft_0085" />
             <sp>
                <speaker>Φέρης</speaker>
                <l rend="indent" n="730">ἄπειμι· θάψεις δ’ αὐτὸς ὢν αὐτῆς φονεύς, </l>
@@ -1595,7 +1607,7 @@
                <l n="739">ἡμεῖς δέ—τοὐν ποσὶν γὰρ οἰστέον κακόν— </l>
                <l n="740">ὡς ἂν ἐν πυρᾷ θῶμεν νεκρόν. </l>
             </sp>
-            <milestone resp="perseus" n="741" unit="card"/>
+            <milestone resp="perseus" n="741" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1606,7 +1618,7 @@
                   <l n="745">πλέον ἔστ’ ἀγαθοῖς, τούτων μετέχουσ’ </l>
                   <l n="746">Ἅιδου νύμφῃ παρεδρεύοις. </l>
                </sp>
-               <milestone resp="perseus" n="747" unit="card"/>
+               <milestone resp="perseus" n="747" unit="card" />
                <sp>
                   <speaker>Θεράπων</speaker>
                   <l rend="indent" n="747">πολλοὺς μὲν ἤδη κἀπὸ παντοίας χθονὸς </l>
@@ -1618,7 +1630,7 @@
                   <l n="753">ἔπειτα δ’ οὔτι σωφρόνως ἐδέξατο </l>
                   <l n="754">τὰ προστυχόντα ξένια, συμφορὰν μαθών, </l>
                   <l n="755">ἀλλʼ, εἴ τι μὴ φέροιμεν, ὤτρυνεν φέρειν. </l>
-                  <pb facs="euripidisfabulae01euriuoft_0086"/>
+                  <pb facs="euripidisfabulae01euriuoft_0086" />
                   <l n="756">ποτῆρα δ’ ἐν χείρεσσι κίσσινον λαβὼν </l>
                   <l n="757">πίνει μελαίνης μητρὸς εὔζωρον μέθυ, </l>
                   <l n="758">ἕως ἐθέρμην’ αὐτὸν ἀμφιβᾶσα φλὸξ </l>
@@ -1637,7 +1649,7 @@
                   <l n="771">ὀργὰς μαλάσσουσ’ ἀνδρός. ἆρα τὸν ξένον </l>
                   <l n="772">στυγῶ δικαίως, ἐν κακοῖς ἀφιγμένον; </l>
                </sp>
-               <milestone resp="perseus" n="773" unit="card"/>
+               <milestone resp="perseus" n="773" unit="card" />
                <sp>
                   <speaker>Ἡρακλῆς</speaker>
                   <l rend="indent" n="773">οὗτος, τί σεμνὸν καὶ πεφροντικὸς βλέπεις; </l>
@@ -1652,7 +1664,7 @@
                   <l n="782">βροτοῖς ἅπασι κατθανεῖν ὀφείλεται, </l>
                   <l n="783">κοὐκ ἔστι θνητῶν ὅστις ἐξεπίσταται </l>
                   <l n="784">τὴν αὔριον μέλλουσαν εἰ βιώσεται· </l>
-                  <pb facs="euripidisfabulae01euriuoft_0087"/>
+                  <pb facs="euripidisfabulae01euriuoft_0087" />
                   <l n="785">τὸ τῆς τύχης γὰρ ἀφανὲς οἷ προβήσεται, </l>
                   <l n="786">κἄστ’ οὐ διδακτὸν οὐδ’ ἁλίσκεται τέχνῃ. </l>
                   <l n="787">ταῦτ’ οὖν ἀκούσας καὶ μαθὼν ἐμοῦ πάρα, </l>
@@ -1706,7 +1718,7 @@
                   <speaker>Ἡρακλῆς</speaker>
                   <l rend="indent" n="812">μῶν ξυμφοράν τιν’ οὖσαν οὐκ ἔφραζέ μοι; </l>
                </sp>
-               <pb facs="euripidisfabulae01euriuoft_0088"/>
+               <pb facs="euripidisfabulae01euriuoft_0088" />
                <sp>
                   <speaker>Θεράπων</speaker>
                   <l rend="indent" n="813">χαίρων ἴθʼ· ἡμῖν δεσποτῶν μέλει κακά. </l>
@@ -1719,7 +1731,7 @@
                   <speaker>Θεράπων</speaker>
                   <l rend="indent" n="815">οὐ γάρ τι κωμάζοντ’ ἂν ἠχθόμην σ’ ὁρῶν. </l>
                </sp>
-               <milestone resp="perseus" n="816" unit="card"/>
+               <milestone resp="perseus" n="816" unit="card" />
                <sp>
                   <speaker>Ἡρακλῆς</speaker>
                   <l rend="indent" n="816">ἀλλ’ ἦ πέπονθα δείν’ ὑπὸ ξένων ἐμῶν; </l>
@@ -1772,7 +1784,7 @@
                   <l rend="indent" n="835">ὀρθὴν παρ’ οἶμον, ἣ ’πὶ Λάρισαν φέρει, </l>
                   <l n="836">τύμβον κατόψῃ ξεστὸν ἐκ προαστίου. </l>
                </sp>
-               <pb facs="euripidisfabulae01euriuoft_0089"/>
+               <pb facs="euripidisfabulae01euriuoft_0089" />
                <sp>
                   <speaker>Ἡρακλῆς</speaker>
                   <l rend="indent" n="837">ὦ πολλὰ τλᾶσα καρδία καὶ χεὶρ ἐμή, </l>
@@ -1802,15 +1814,15 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" n="861" unit="card"/>
+         <milestone resp="perseus" n="861" unit="card" />
          <div type="choral">
             <div type="anapests">
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="861">ἰώ, στυγναὶ </l>
                   <l n="861a">πρόσοδοι, στυγναὶ δ’ ὄψεις χήρων </l>
-                  <pb facs="euripidisfabulae01euriuoft_0090"/>
-                  <l n="862">μελάθρων.  ἰώ μοί μοι. αἶ αἶ. </l>
+                  <pb facs="euripidisfabulae01euriuoft_0090" />
+                  <l n="862">μελάθρων. ἰώ μοί μοι. αἶ αἶ. </l>
                   <l n="863">ποῖ βῶ; ποῖ στῶ; τί λέγω; τί δὲ μή; </l>
                   <l n="864">πῶς ἂν ὀλοίμαν; </l>
                   <l n="865">ἦ βαρυδαίμονα μήτηρ μ’ ἔτεκεν. </l>
@@ -1822,7 +1834,7 @@
                   <l n="871" rend="indent">Ἅιδῃ Θάνατος παρέδωκεν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="872" unit="card"/>
+            <milestone resp="perseus" n="872" unit="card" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1862,7 +1874,7 @@
                   <l n="877">πρόσωπόν ἄντα λυπρόν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="878" unit="card"/>
+            <milestone resp="perseus" n="878" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Ἄδμητος</speaker>
@@ -1874,13 +1886,13 @@
                   <l n="883">μία γὰρ ψυχή, τῆς ὑπεραλγεῖν </l>
                   <l n="884">μέτριον ἄχθος· </l>
                   <l n="885">παίδων δὲ νόσους καὶ νυμφιδίους </l>
-                  <pb facs="euripidisfabulae01euriuoft_0091"/>
+                  <pb facs="euripidisfabulae01euriuoft_0091" />
                   <l n="886">εὐνὰς θανάτοις κεραϊζομένας </l>
                   <l n="887">οὐ τλητὸν ὁρᾶν, ἐξὸν ἀτέκνους </l>
                   <l n="888">ἀγάμους τ’ εἶναι διὰ παντός. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="889" unit="card"/>
+            <milestone resp="perseus" n="889" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1920,7 +1932,7 @@
                   <l n="894">πιέζει φανεῖσα θνατῶν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="895" unit="card"/>
+            <milestone resp="perseus" n="895" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Ἄδμητος</speaker>
@@ -1934,7 +1946,7 @@
                   <l n="902">χθονίαν λίμνην διαβάντε. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="903" unit="card"/>
+            <milestone resp="perseus" n="903" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1948,8 +1960,8 @@
                   <l n="910">βιότου τε πόρσω. </l>
                </sp>
             </div>
-            <pb facs="euripidisfabulae01euriuoft_0092"/>
-            <milestone resp="perseus" n="912" unit="card"/>
+            <pb facs="euripidisfabulae01euriuoft_0092" />
+            <milestone resp="perseus" n="912" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Ἄδμητος</speaker>
@@ -1969,7 +1981,7 @@
                   <l n="925" rend="indent">λέκτρων κοίτας ἐς ἐρήμους. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="926" unit="card"/>
+            <milestone resp="perseus" n="926" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1982,7 +1994,7 @@
                   <l n="932">ἤδη παρέλυσεν </l>
                   <l n="933">θάνατος δάμαρτας. </l>
                </sp>
-               <milestone resp="perseus" n="935" unit="card"/>
+               <milestone resp="perseus" n="935" unit="card" />
                <sp>
                   <speaker>Ἄδμητος</speaker>
                   <l rend="indent" n="935">φίλοι, γυναικὸς δαίμον’ εὐτυχέστερον </l>
@@ -1991,7 +2003,7 @@
                   <l n="938">πολλῶν δὲ μόχθων εὐκλεὴς ἐπαύσατο. </l>
                   <l n="939">ἐγὼ δʼ, ὃν οὐ χρῆν ζῆν, παρεὶς τὸ μόρσιμον </l>
                   <l n="940">λυπρὸν διάξω βίοτον· ἄρτι μανθάνω.</l>
-                  <pb facs="euripidisfabulae01euriuoft_0093"/>
+                  <pb facs="euripidisfabulae01euriuoft_0093" />
                   <l n="941">πῶς γὰρ δόμων τῶνδ’ εἰσόδους ἀνέξομαι; </l>
                   <l n="942">τίν’ ἂν προσειπών, τοῦ δὲ προσρηθεὶς ὕπο, </l>
                   <l n="943">τερπνῆς τύχοιμ’ ἂν ἐξόδου; ποῖ τρέψομαι; </l>
@@ -2015,7 +2027,7 @@
                   <l n="961">κακῶς κλύοντι καὶ κακῶς πεπραγότι; </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="962" unit="card"/>
+            <milestone resp="perseus" n="962" unit="card" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2026,12 +2038,12 @@
                   <l n="966">ηὗρον, οὐδέ τι φάρμακον </l>
                   <l n="967">Θρῄσσαις ἐν σανίσιν, τὰς </l>
                   <l n="968">Ὀρφεία κατέγραψεν </l>
-                  <pb facs="euripidisfabulae01euriuoft_0094"/>
+                  <pb facs="euripidisfabulae01euriuoft_0094" />
                   <l n="970">γῆρυς, οὐδ’ ὅσα Φοῖβος Ἀσκληπιάδαις ἔδωκε </l>
                   <l n="971">φάρμακα πολυπόνοις ἀντιτεμὼν βροτοῖσιν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="973" unit="card"/>
+            <milestone resp="perseus" n="973" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2046,7 +2058,7 @@
                   <l n="981">οὐδέ τις ἀποτόμου λήματός ἐστιν αἰδώς. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="984" unit="card"/>
+            <milestone resp="perseus" n="984" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2061,7 +2073,7 @@
                   <l n="994">γενναιοτάταν δὲ πασᾶν ἐζεύξω κλισίαις ἄκοιτιν. </l>
                </sp>
             </div>
-            <milestone resp="perseus" n="995" unit="card"/>
+            <milestone resp="perseus" n="995" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2071,14 +2083,14 @@
                   <l n="1000">καί τις δοχμίαν κέλευθον </l>
                   <l n="1001">ἐκβαίνων τόδ’ ἐρεῖ· </l>
                   <l n="1002">Αὕτα ποτὲ προύθαν’ ἀνδρός, </l>
-                  <pb facs="euripidisfabulae01euriuoft_0095"/>
+                  <pb facs="euripidisfabulae01euriuoft_0095" />
                   <l n="1003">νῦν δ’ ἐστὶ μάκαιρα δαίμων· </l>
                   <l n="1004">χαῖρʼ, ὦ πότνι’, εὖ δὲ δοίης. τοῖαί νιν προσεροῦσι </l>
                   <l n="1005">φῆμαι. </l>
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" n="1006" unit="card"/>
+         <milestone resp="perseus" n="1006" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Χορός</speaker>
@@ -2110,7 +2122,7 @@
                <l n="1028">ὅθεν κομίζω τήνδε νικητήρια </l>
                <l n="1029">λαβών· τὰ μὲν γὰρ κοῦφα τοῖς νικῶσιν ἦν </l>
                <l n="1030">ἵππους ἄγεσθαι, τοῖσι δ’ αὖ τὰ μείζονα </l>
-               <pb facs="euripidisfabulae01euriuoft_0096"/>
+               <pb facs="euripidisfabulae01euriuoft_0096" />
                <l n="1031">νικῶσι, πυγμὴν καὶ πάλην, βουφόρβια· </l>
                <l n="1032">γυνὴ δ’ ἐπ’ αὐτοῖς εἵπετʼ· ἐντυχόντι δὲ </l>
                <l n="1033">αἰσχρὸν παρεῖναι κέρδος ἦν τόδ’ εὐκλεές. </l>
@@ -2118,7 +2130,7 @@
                <l n="1035">οὐ γὰρ κλοπαίαν, ἀλλὰ σὺν πόνῳ λαβὼν </l>
                <l n="1036">ἥκω· χρόνῳ δὲ καὶ σύ μ’ αἰνέσεις ἴσως. </l>
             </sp>
-            <milestone resp="perseus" n="1037" unit="card"/>
+            <milestone resp="perseus" n="1037" unit="card" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="1037">οὔτοι σ’ ἀτίζων οὐδ’ ἐν αἰσχροῖσιν τιθεὶς </l>
@@ -2142,7 +2154,7 @@
                <l n="1055">ἢ τῆς θανούσης θάλαμον ἐσβήσας τρέφω; </l>
                <l n="1056">καὶ πῶς ἐπεσφρῶ τήνδε τῷ κείνης λέχει; </l>
                <l n="1057">διπλῆν φοβοῦμαι μέμψιν, ἔκ τε δημοτῶν, </l>
-               <pb facs="euripidisfabulae01euriuoft_0097"/>
+               <pb facs="euripidisfabulae01euriuoft_0097" />
                <l n="1058">μή τίς μ’ ἐλέγξῃ τὴν ἐμὴν εὐεργέτιν </l>
                <l n="1059">προδόντ’ ἐν ἄλλης δεμνίοις πίτνειν νέας, </l>
                <l n="1060">καὶ τῆς θανούσης· ἀξία δέ μοι σέβειν· </l>
@@ -2161,7 +2173,7 @@
                <l rend="indent" n="1070">ἐγὼ μὲν οὐκ ἔχοιμ’ ἂν εὖ λέγειν τύχην· </l>
                <l n="1071">χρὴ δʼ, ὅστις εἶ σύ, καρτερεῖν θεοῦ δόσιν. </l>
             </sp>
-            <milestone resp="perseus" n="1072" unit="card"/>
+            <milestone resp="perseus" n="1072" unit="card" />
             <sp>
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="1072">εἰ γὰρ τοσαύτην δύναμιν εἶχον ὥστε σὴν </l>
@@ -2197,7 +2209,7 @@
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="1082">ἀπώλεσέν με, κἄτι μᾶλλον ἢ λέγω. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0098"/>
+            <pb facs="euripidisfabulae01euriuoft_0098" />
             <sp>
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="1083">γυναικὸς ἐσθλῆς ἤμπλακες· τίς ἀντερεῖ; </l>
@@ -2303,7 +2315,7 @@
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="1108">νίκα νυν. οὐ μὴν ἁνδάνοντά μοι ποιεῖς. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0099"/>
+            <pb facs="euripidisfabulae01euriuoft_0099" />
             <sp>
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="1109">ἀλλ’ ἔσθ’ ὅθ’ ἡμᾶς αἰνέσεις· πιθοῦ μόνον. </l>
@@ -2340,7 +2352,7 @@
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="1117">τόλμα προτεῖναι χεῖρα καὶ θιγεῖν ξένης. </l>
             </sp>
-            <milestone resp="perseus" n="1118" unit="card"/>
+            <milestone resp="perseus" n="1118" unit="card" />
             <sp>
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="1118">καὶ δὴ προτείνω, Γοργόν’ ὡς καρατομῶν. </l>
@@ -2390,7 +2402,7 @@
                <speaker>Ἄδμητος</speaker>
                <l rend="indent" n="1131">θίγω, προσείπω ζῶσαν ὡς δάμαρτ’ ἐμήν; </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0100"/>
+            <pb facs="euripidisfabulae01euriuoft_0100" />
             <sp>
                <speaker>Ἡρακλῆς</speaker>
                <l rend="indent" n="1132">πρόσειπʼ. ἔχεις γὰρ πᾶν ὅσονπερ ἤθελες. </l>
@@ -2455,8 +2467,8 @@
                <l n="1157">νῦν γὰρ μεθηρμόσμεσθα βελτίω βίον </l>
                <l n="1158">τοῦ πρόσθεν· οὐ γὰρ εὐτυχῶν ἀρνήσομαι. </l>
             </sp>
-            <pb facs="euripidisfabulae01euriuoft_0101"/>
-            <milestone resp="perseus" n="1159" unit="card"/>
+            <pb facs="euripidisfabulae01euriuoft_0101" />
+            <milestone resp="perseus" n="1159" unit="card" />
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>

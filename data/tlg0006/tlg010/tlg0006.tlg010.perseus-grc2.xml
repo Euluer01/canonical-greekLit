@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -17,7 +18,7 @@
             </respStmt>
             <funder n="org:AnnCPB">The Annenberg CPB/Project</funder>
          </titleStmt>
-         <extent/>
+         <extent />
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -25,7 +26,8 @@
             <date type="release">1996</date>
             <idno type="filename">tlg0006.tlg010.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0006.tlg010.perseus-grc2</idno>
          </publicationStmt>
@@ -42,22 +44,28 @@
                   </imprint>
                   <biblScope unit="volume">2</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/euripidisfabu02euri/page/n123/mode/2up">The Internet Archive</ref>
+               <ref target="https://archive.org/details/euripidisfabu02euri/page/n123/mode/2up">The
+                  Internet Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <quotation marks="none"/>
+            <quotation marks="none" />
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts lines</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -68,7 +76,7 @@
 </encodingDesc>-->
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#drama-line"/>
+            <catRef scheme="#perseus-genre" target="#drama-line" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -76,22 +84,31 @@
       </profileDesc>
       <revisionDesc>
          <change when="2020-01-17" who="Lisa Cerrato">EpiDoc and CTS conversion</change>
-         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
+         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing
+            greco-roman collection texts to a Work directory</change>
          <change when="2013-06-13" who="gcrane">tagging now should be compatible with CTS</change>
-         <change when="2012-02-14" who="ajones06">Standardized and in a few cases added in header info.</change>
+         <change when="2012-02-14" who="ajones06">Standardized and in a few cases added in header
+            info.</change>
          <change when="2011-09-07" who="rsingh04">adding rend=displayNum to lb tags</change>
          <change when="2011-01-13" who="gcrane">more refinements making these files SDL compatible</change>
-         <change when="2010-12-25" who="gcrane">our existing files but with L tags converted to LB milestones</change>
-         <change when="2009-11-23" who="rsingh04">moved more xml files around based on copyright status</change>
+         <change when="2010-12-25" who="gcrane">our existing files but with L tags converted to LB
+            milestones</change>
+         <change when="2009-11-23" who="rsingh04">moved more xml files around based on copyright
+            status</change>
          <change when="2005-08-01" who="packel">removed stray item tags</change>
          <change when="2005-07-25" who="packel">Converted to XML</change>
          <change when="2004-04-21" who="mimno">added card 1s</change>
-         <change when="2003-09-09" who="amahoney">put spaces around em-dash entity so as not to confuse morphology stuff</change>
-         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2003-09-09" who="amahoney">put spaces around em-dash entity so as not to
+            confuse morphology stuff</change>
+         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions;
+            minor cleanup (esp. character encodings and typos.)</change>
          <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
-         <change when="2000-02-17" who="amahoney">use n attribute on sp to carry over speaker names when long speeches are interrupted by card breaks -- and move card break past close tag of sp</change>
+         <change when="2000-02-17" who="amahoney">use n attribute on sp to carry over speaker names
+            when long speeches are interrupted by card breaks -- and move card break past close tag
+            of sp</change>
          <change when="2000-01-14" who="amahoney">bring up to P3</change>
-         <change when="1998-10-01" who="Bill Merrill">Fixed cardbreaks at 219, 237; added line nos. 217b, 235b.</change>
+         <change when="1998-10-01" who="Bill Merrill">Fixed cardbreaks at 219, 237; added line nos.
+            217b, 235b.</change>
          <change when="1995-06-01" who="Lisa Cerrato">Added speaker tags where needed.</change>
          <change when="1992-08-01" who="W. Merrill">Set speakers l.c.;</change>
          <change when="1988-01-01" who="Judith Nelson">Basic SGML tagging</change>
@@ -99,8 +116,8 @@
    </teiHeader>
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0006.tlg010.perseus-grc2">
-         <milestone resp="perseus" unit="card" n="1"/>
-         <l resp="perseus" style="hidden" n="0"/>
+         <milestone resp="perseus" unit="card" n="1" />
+         <l resp="perseus" style="hidden" n="0" />
          <note resp="editor" place="inline">
             <p>τὰ τοῦ δράματος πρόσωπα</p>
             <p>Ἑρμῆς</p>
@@ -160,7 +177,7 @@
                <l n="38">ἤνεγκα, καὶ τὸν παῖδα κρηπίδων ἔπι</l>
                <l n="39">τίθημι ναοῦ τοῦδʼ, ἀναπτύξας κύτος</l>
                <l n="40">ἑλικτὸν ἀντίπηγος, ὡς ὁρῷθʼ ὁ παῖς.</l>
-               <milestone resp="perseus" unit="card" n="41"/>
+               <milestone resp="perseus" unit="card" n="41" />
                <l n="41">κυρεῖ δʼ ἅμʼ ἱππεύοντος ἡλίου κύκλῳ</l>
                <l n="42">προφῆτις ἐσβαίνουσα μαντεῖον θεοῦ·</l>
                <l n="43">ὄψιν δὲ προσβαλοῦσα παιδὶ νηπίῳ</l>
@@ -204,7 +221,7 @@
                <l n="81">Ἴωνʼ ἐγώ <add>νιν</add> πρῶτος ὀνομάζω θεῶν.</l>
             </sp>
          </div>
-         <milestone resp="perseus" unit="card" n="82"/>
+         <milestone resp="perseus" unit="card" n="82" />
          <div type="choral">
             <div type="anapests">
                <sp>
@@ -241,7 +258,7 @@
                   <l n="111">Φοίβου ναοὺς θεραπεύω.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="112"/>
+            <milestone resp="perseus" unit="card" n="112" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Ἴων</speaker>
@@ -264,7 +281,7 @@
                   <l n="127">εἴης, ὦ Λατοῦς παῖ.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="128"/>
+            <milestone resp="perseus" unit="card" n="128" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Ἴων</speaker>
@@ -286,7 +303,7 @@
                   <l n="143">εἴης, ὦ Λατοῦς παῖ.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="144"/>
+            <milestone resp="perseus" unit="card" n="144" />
             <div type="anapests">
                <sp>
                   <speaker>Ἴων</speaker>
@@ -327,7 +344,7 @@
                   <l n="175">ταῖς Ἀλφειοῦ παιδούργει,</l>
                   <l n="176">ἢ νάπος Ἴσθμιον,</l>
                   <l n="177">ὡς ἀναθήματα μὴ βλάπτηται</l>
-                  <l n="178">ναοί θʼ οἱ Φοίβου <gap reason="lost" rend=". . . . "/>
+                  <l n="178">ναοί θʼ οἱ Φοίβου <gap reason="lost" rend=". . . . " />
                   </l>
                   <l n="179">κτείνειν δʼ ὑμᾶς αἰδοῦμαι</l>
                   <l n="180">τοὺς θεῶν ἀγγέλλοντας φήμας</l>
@@ -336,7 +353,7 @@
                   <l n="183">τοὺς βόσκοντας θεραπεύων.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="184"/>
+            <milestone resp="perseus" unit="card" n="184" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -353,7 +370,7 @@
                   <l n="193">φίλα, πρόσιδʼ ὄσσοις.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="194"/>
+            <milestone resp="perseus" unit="card" n="194" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -370,7 +387,7 @@
                   <l n="204">τρισώματον ἀλκάν.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="205"/>
+            <milestone resp="perseus" unit="card" n="205" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -391,7 +408,7 @@
                   <l n="218">ἐναίρει Γᾶς τέκνων ὁ Βακχεύς.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="219"/>
+            <milestone resp="perseus" unit="card" n="219" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -460,7 +477,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" unit="card" n="237"/>
+         <milestone resp="perseus" unit="card" n="237" />
          <div type="episode">
             <sp>
                <speaker>Ἴων</speaker>
@@ -517,7 +534,8 @@
             </sp>
             <sp>
                <speaker>Ἴων</speaker>
-               <l rend="indent" n="265">πρὸς θεῶν ἀληθῶς, ὡς μεμύθευται βροτοῖς  <gap reason="ellipsis" rend=". . . "/> ;</l>
+               <l rend="indent" n="265">πρὸς θεῶν ἀληθῶς, ὡς μεμύθευται βροτοῖς <gap
+                     reason="ellipsis" rend=". . . " /> ;</l>
             </sp>
             <sp>
                <speaker>Κρέουσα</speaker>
@@ -541,7 +559,8 @@
             </sp>
             <sp>
                <speaker>Ἴων</speaker>
-               <l rend="indent" n="271">δίδωσι δʼ, ὥσπερ ἐν γραφῇ νομίζεται  <gap reason="ellipsis" rend=" . . . "/> ;</l>
+               <l rend="indent" n="271">δίδωσι δʼ, ὥσπερ ἐν γραφῇ νομίζεται <gap reason="ellipsis"
+                     rend=" . . . " /> ;</l>
             </sp>
             <sp>
                <speaker>Κρέουσα</speaker>
@@ -555,11 +574,12 @@
                <speaker>Κρέουσα</speaker>
                <l rend="indent" n="274">τοιγὰρ θανοῦσαι σκόπελον ᾕμαξαν πέτρας.</l>
             </sp>
-            <milestone resp="perseus" unit="card" n="275"/>
+            <milestone resp="perseus" unit="card" n="275" />
             <sp>
                <speaker>Ἴων</speaker>
                <l rend="indent" n="275">εἶἑν·</l>
-               <l n="275a">τί δαὶ τόδʼ; ἆρʼ ἀληθὲς ἢ μάτην λόγος  <gap reason="ellipsis" rend=" . . . "/>
+               <l n="275a">τί δαὶ τόδʼ; ἆρʼ ἀληθὲς ἢ μάτην λόγος <gap reason="ellipsis"
+                     rend=" . . . " />
                </l>
             </sp>
             <sp>
@@ -637,7 +657,8 @@
             </sp>
             <sp>
                <speaker>Κρέουσα</speaker>
-               <l rend="indent" n="294">Εὔβοιʼ Ἀθήναις ἔστι τις γείτων πόλις   <gap reason="ellipsis" rend=" . . . "/>
+               <l rend="indent" n="294">Εὔβοιʼ Ἀθήναις ἔστι τις γείτων πόλις <gap reason="ellipsis"
+                     rend=" . . . " />
                </l>
             </sp>
             <sp>
@@ -692,7 +713,7 @@
                <speaker>Ἴων</speaker>
                <l rend="indent" n="307">ὦ τλῆμον, ὡς τἄλλʼ εὐτυχοῦσʼ οὐκ εὐτυχεῖς.</l>
             </sp>
-            <milestone resp="perseus" unit="card" n="308"/>
+            <milestone resp="perseus" unit="card" n="308" />
             <sp>
                <speaker>Κρέουσα</speaker>
                <l rend="indent" n="308">σὺ δʼ εἶ τίς; ὥς σου τὴν τεκοῦσαν ὤλβισα.</l>
@@ -739,7 +760,8 @@
             </sp>
             <sp>
                <speaker>Ἴων</speaker>
-               <l rend="indent" n="319">οὐπώποτʼ ἔγνων μαστόν· ἣ δʼ ἔθρεψέ με   <gap reason="ellipsis" rend=" . . . "/>
+               <l rend="indent" n="319">οὐπώποτʼ ἔγνων μαστόν· ἣ δʼ ἔθρεψέ με <gap reason="ellipsis"
+                     rend=" . . . " />
                </l>
             </sp>
             <sp>
@@ -809,7 +831,7 @@
             </sp>
             <sp>
                <speaker>Κρέουσα</speaker>
-               <l rend="indent" n="336">ἄκουε δὴ τὸν μῦθον.  — ἀλλʼ αἰδούμεθα.</l>
+               <l rend="indent" n="336">ἄκουε δὴ τὸν μῦθον. — ἀλλʼ αἰδούμεθα.</l>
             </sp>
             <sp>
                <speaker>Ἴων</speaker>
@@ -883,7 +905,7 @@
                <speaker>Κρέουσα</speaker>
                <l rend="indent" n="354">σοὶ ταὐτὸν ἥβης, εἴπερ, εἶχεν ἂν μέτρον.</l>
             </sp>
-            <milestone resp="perseus" unit="card" n="355"/>
+            <milestone resp="perseus" unit="card" n="355" />
             <sp>
                <speaker>Ἴων</speaker>
                <l rend="indent" n="355">ἀδικεῖ νιν ὁ θεός· ἡ τεκοῦσα δʼ ἀθλία.</l>
@@ -968,7 +990,7 @@
                <l n="386">ὃς οὔτʼ ἔσωσας τὸν σὸν ὃν σῶσαί σʼ ἐχρῆν,</l>
                <l n="387">οὔθʼ ἱστορούσῃ μητρὶ μάντις ὢν ἐρεῖς,</l>
                <l n="388">ὡς, εἰ μὲν οὐκέτʼ ἔστιν, ὀγκωθῇ τάφῳ,</l>
-               <l n="389">εἰ δʼ ἔστιν   <gap reason="lost" rend=" . . . "/>
+               <l n="389">εἰ δʼ ἔστιν <gap reason="lost" rend=" . . . " />
                </l>
                <l n="390">ἀλλʼ ἐᾶν χρὴ τάδʼ, εἰ πρὸς τοῦ θεοῦ</l>
                <l n="391">κωλυόμεσθα μὴ μαθεῖν ἃ βούλομαι.</l>
@@ -982,7 +1004,7 @@
                <l n="399">κἀν ταῖς κακαῖσιν ἁγαθαὶ μεμειγμέναι</l>
                <l n="400">μισούμεθʼ· οὕτω δυστυχεῖς πεφύκαμεν.</l>
             </sp>
-            <milestone resp="perseus" unit="card" n="401"/>
+            <milestone resp="perseus" unit="card" n="401" />
             <sp>
                <speaker>Ξοῦθος</speaker>
                <l rend="indent" n="401">πρῶτον μὲν ὁ θεὸς τῶν ἐμῶν προσφθεγμάτων</l>
@@ -1062,7 +1084,7 @@
                <l n="451">μιμούμεθʼ, ἀλλὰ τοὺς διδάσκοντας τάδε.</l>
             </sp>
          </div>
-         <milestone resp="perseus" unit="card" n="452"/>
+         <milestone resp="perseus" unit="card" n="452" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -1089,7 +1111,7 @@
                   <l n="471">μαντεύμασι κῦρσαι.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="472"/>
+            <milestone resp="perseus" unit="card" n="472" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1115,7 +1137,7 @@
                   <l n="491">εὔπαιδος ἐχοίμαν.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="492"/>
+            <milestone resp="perseus" unit="card" n="492" />
             <div type="epode">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1140,7 +1162,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" unit="card" n="510"/>
+         <milestone resp="perseus" unit="card" n="510" />
          <div type="episode">
             <div type="trochees">
                <sp>
@@ -1320,7 +1342,7 @@
                   <speaker>Ξοῦθος</speaker>
                   <l rend="indent" n="543b" part="F">οὐκ οἶδʼ, ἀναφέρω δʼ ἐς τὸν θεόν.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="544"/>
+               <milestone resp="perseus" unit="card" n="544" />
                <sp>
                   <speaker>Ἴων</speaker>
                   <l rend="indent" n="544" part="I">φέρε λόγων ἁψώμεθʼ ἄλλων.</l>
@@ -1383,7 +1405,8 @@
                </sp>
                <sp>
                   <speaker>Ξοῦθος</speaker>
-                  <l rend="indent" n="551b" part="F">ὅς με Δελφίσιν κόραις  <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="551b" part="F">ὅς με Δελφίσιν κόραις <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -1481,7 +1504,7 @@
                   <l n="565">ἀλλʼ ἴσως τέθνηκας, ἡμεῖς δʼ οὐδὲν ἂν δυναίμεθα.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="566"/>
+            <milestone resp="perseus" unit="card" n="566" />
             <div type="iambic">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1534,7 +1557,7 @@
                   <l n="604">ψήφοισιν. οὕτω γὰρ τάδʼ, ὦ πάτερ, φιλεῖ·</l>
                   <l n="605">οἳ τὰς πόλεις ἔχουσι κἀξιώματα,</l>
                   <l n="606">τοῖς ἀνθαμίλλοις εἰσὶ πολεμιώτατοι.</l>
-                  <milestone resp="perseus" unit="card" n="607"/>
+                  <milestone resp="perseus" unit="card" n="607" />
                   <l rend="indent" n="607">ἐλθὼν δʼ ἐς οἶκον ἀλλότριον ἔπηλυς ὢν</l>
                   <l n="608">γυναῖκά θʼ ὡς ἄτεκνον, ἣ κοινουμένη</l>
                   <l n="609">τὰς συμφοράς σοι πρόσθεν, ἀπολαχοῦσα νῦν</l>
@@ -1582,7 +1605,7 @@
                   <l rend="indent" n="648">καλῶς ἔλεξας, εἴπερ οὓς ἐγὼ φιλῶ</l>
                   <l n="649">ἐν τοῖσι σοῖσιν εὐτυχήσουσιν φίλοις.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="650"/>
+               <milestone resp="perseus" unit="card" n="650" />
                <sp>
                   <speaker>Ξοῦθος</speaker>
                   <l rend="indent" n="650">παῦσαι λόγων τῶνδʼ, εὐτυχεῖν δʼ ἐπίστασο·</l>
@@ -1617,7 +1640,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" unit="card" n="676"/>
+         <milestone resp="perseus" unit="card" n="676" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -1635,29 +1658,29 @@
                   <l n="685">οὐ γάρ με σαίνει θέσφατα μή τινʼ ἔχῃ δόλον.</l>
                   <l n="688">δειμαίνω συμφοράν,</l>
                   <l n="689">ἐφʼ ὅ ποτε βάσεται.</l>
-                  <l n="690">ἄτοπος ἄτοπα γὰρ  δίδωσί μοι,</l>
+                  <l n="690">ἄτοπος ἄτοπα γὰρ δίδωσί μοι,</l>
                   <l n="691">τὸ δʼ ἔτʼ εὔφημʼ ἔχει,</l>
-                  <l n="692">δόλον τύχαν θʼ, ὁ παῖς <gap reason="lost" rend=" . . . "/>
+                  <l n="692">δόλον τύχαν θʼ, ὁ παῖς <gap reason="lost" rend=" . . . " />
                   </l>
                   <l n="693">ἄλλων τραφεὶς ἐξ αἱμάτων.</l>
                   <l n="694">τίς οὐ τάδε ξυνοίσεται;</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="695"/>
+            <milestone resp="perseus" unit="card" n="695" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
                   <l rend="indent" n="695">— φίλαι, πότερʼ ἐμᾷ δεσποίνᾳ</l>
                   <l n="696">τάδε τορῶς ἐς οὖς γεγωνήσομεν;</l>
                   <l n="697">πόσιν, ἐν ᾧ τὰ πάντʼ ἔχουσʼ ἐλπίδων</l>
-                  <l n="698">μέτοχος ἦν, τλάμων,  <gap reason="lost" rend=" . . . "/>
+                  <l n="698">μέτοχος ἦν, τλάμων, <gap reason="lost" rend=" . . . " />
                   </l>
                   <l n="699">— νῦν δʼ ἣ μὲν ἔρρει συμφοραῖς, ὃ δʼ εὐτυχεῖ.</l>
-                  <l n="700">— πολιὸν ἐσπεσοῦσα γῆρας, πόσις δʼ  <gap reason="lost" rend=" . . . "/>
+                  <l n="700">— πολιὸν ἐσπεσοῦσα γῆρας, πόσις δʼ <gap reason="lost" rend=" . . . " />
                   </l>
                   <l n="701">— ἀτίετος φίλων.</l>
                   <l n="702">— μέλεος, ὃς θυραῖος ἐλθὼν δόμους,</l>
-                  <l n="703">μέγαν ἐς ὄλβον, οὐκ ἴσωσεν τύχης <gap reason="lost" rend=" . . . "/>
+                  <l n="703">μέγαν ἐς ὄλβον, οὐκ ἴσωσεν τύχης <gap reason="lost" rend=" . . . " />
                   </l>
                   <l n="704">(— ὄλοιτʼ, ὄλοιτο) πότνιαν ἐξαπαφὼν ἐμάν.</l>
                   <l n="705">— καὶ θεοῖσιν μὴ τύχοι</l>
@@ -1671,7 +1694,7 @@
                   <l n="713">παῖς καὶ πατὴρ νέος νέων.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="714"/>
+            <milestone resp="perseus" unit="card" n="714" />
             <div type="epode">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1682,17 +1705,17 @@
                   <l n="719">μή ποτʼ εἰς ἐμὰν πόλιν ἵκοιθʼ ὁ παῖς,</l>
                   <l n="720">νέαν δʼ ἁμέραν ἀπολιπὼν θάνοι.</l>
                   <l n="721">στενομένα γὰρ ἂν πόλις ἔχοι σκῆψιν</l>
-                  <l n="722">ξενικὸν ἐσβολὰν  <gap reason="lost" rend=" . . . "/>
+                  <l n="722">ξενικὸν ἐσβολὰν <gap reason="lost" rend=" . . . " />
                   </l>
                   <l n="722a">
-                     <gap reason="lost" rend=" . . . . . "/>
+                     <gap reason="lost" rend=" . . . . . " />
                   </l>
                   <l n="723">ἁλίσας ὁ πάρος ἀρχαγὸς ὢν</l>
                   <l n="724">Ἐρεχθεὺς ἄναξ.</l>
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" unit="card" n="725"/>
+         <milestone resp="perseus" unit="card" n="725" />
          <div type="episode">
             <sp>
                <speaker>Κρέουσα</speaker>
@@ -1768,7 +1791,8 @@
             </sp>
             <sp>
                <speaker>Χορός</speaker>
-               <l rend="indent" n="756">εἶἑν· τί δρῶμεν; θάνατος ὧν κεῖται πέρι  <gap reason="ellipsis" rend=" . . . "/>
+               <l rend="indent" n="756">εἶἑν· τί δρῶμεν; θάνατος ὧν κεῖται πέρι <gap
+                     reason="ellipsis" rend=" . . . " />
                </l>
             </sp>
             <sp>
@@ -1817,7 +1841,8 @@
                </sp>
                <sp>
                   <speaker>Πρεσβύτης</speaker>
-                  <l rend="indent" n="769" part="I">μήπω στενάξῃς <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="769" part="I">μήπω στενάξῃς <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -1826,7 +1851,8 @@
                </sp>
                <sp>
                   <speaker>Πρεσβύτης</speaker>
-                  <l rend="indent" n="770" part="I">πρὶν ἂν μάθωμεν <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="770" part="I">πρὶν ἂν μάθωμεν <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -1840,7 +1866,7 @@
                   <l rend="indent" n="771">εἰ ταὐτὰ πράσσων δεσπότης τῆς συμφορᾶς</l>
                   <l n="772">κοινωνός ἐστιν, ἢ μόνη σὺ δυστυχεῖς.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="774"/>
+               <milestone resp="perseus" unit="card" n="774" />
                <sp>
                   <speaker>Χορός</speaker>
                   <l rend="indent" n="774">κείνῳ μέν, ὦ γεραιέ, παῖδα Λοξίας</l>
@@ -1922,7 +1948,7 @@
                   <l n="806">σκηνὰς ἐς ἱερὰς τῆσδε λαθραίως πόσις,</l>
                   <l n="807">κοινὴν ξυνάψων δαῖτα παιδὶ τῷ νέῳ.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="808"/>
+               <milestone resp="perseus" unit="card" n="808" />
                <sp>
                   <speaker>Πρεσβύτης</speaker>
                   <l rend="indent" n="808">δέσποινα, προδεδόμεσθα — σὺν γάρ σοι νοσῶ — </l>
@@ -1959,7 +1985,7 @@
                   <l n="834">κοσμοῦσι. φαῦλον χρηστὸν ἂν λαβεῖν φίλον</l>
                   <l n="835">θέλοιμι μᾶλλον ἢ κακὸν σοφώτερον.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="836"/>
+               <milestone resp="perseus" unit="card" n="836" />
                <sp>
                   <speaker>Πρεσβύτης</speaker>
                   <l rend="indent" n="836">καὶ τῶνδʼ ἁπάντων ἔσχατον πείσῃ κακόν·</l>
@@ -1996,7 +2022,7 @@
                   <l n="858">κοινουμένη τήνδʼ ἢ θανεῖν ἢ ζῆν καλῶς.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="859"/>
+            <milestone resp="perseus" unit="card" n="859" />
             <div type="lyric">
                <sp>
                   <speaker>Κρέουσα</speaker>
@@ -2022,7 +2048,7 @@
                   <l n="878">ἔκ τʼ ἀνθρώπων ἔκ τʼ ἀθανάτων,</l>
                   <l n="879">οὓς ἀποδείξω</l>
                   <l n="880">λέκτρων προδότας ἀχαρίστους.</l>
-                  <milestone resp="perseus" unit="card" n="881"/>
+                  <milestone resp="perseus" unit="card" n="881" />
                   <l n="881">ὦ τᾶς ἑπταφθόγγου μέλπων</l>
                   <l n="882">κιθάρας ἐνοπάν, ἅτʼ ἀγραύλοις</l>
                   <l n="883">κέρασιν ἐν ἀψύχοις ἀχεῖ</l>
@@ -2046,10 +2072,10 @@
                   <l n="901">ἐζεύξω τὰν δύστανον.</l>
                   <l n="902">οἴμοι μοι· καὶ νῦν ἔρρει</l>
                   <l n="903">πτανοῖς ἁρπασθεὶς θοίνα</l>
-                  <l n="904">παῖς μοι <gap reason="ellipsis" rend=" . . . "/> καὶ σός, τλάμων·</l>
+                  <l n="904">παῖς μοι <gap reason="ellipsis" rend=" . . . " /> καὶ σός, τλάμων·</l>
                   <l n="905">σὺ δὲ κιθάρᾳ κλάζεις</l>
                   <l n="906">παιᾶνας μέλπων.</l>
-                  <milestone resp="perseus" unit="card" n="907"/>
+                  <milestone resp="perseus" unit="card" n="907" />
                   <l n="907">ὠή,</l>
                   <l n="907a">τὸν Λατοῦς αὐδῶ <add>σʼ</add>,</l>
                   <l n="908">ὅστʼ ὀμφὰν κληροῖς</l>
@@ -2068,7 +2094,7 @@
                   <l n="921">ἔνθα λοχεύματα σέμνʼ ἐλοχεύσατο</l>
                   <l n="922">Λατὼ Δίοισί σε καρποῖς.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="923"/>
+               <milestone resp="perseus" unit="card" n="923" />
                <sp>
                   <speaker>Χορός</speaker>
                   <l rend="indent" n="923">οἴμοι, μέγας θησαυρὸς ὡς ἀνοίγνυται</l>
@@ -2212,7 +2238,7 @@
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="965">ὡς τὸν θεὸν σῴζοντα τόν γʼ αὑτοῦ γόνον.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="966"/>
+               <milestone resp="perseus" unit="card" n="966" />
                <sp>
                   <speaker>Πρεσβύτης</speaker>
                   <l rend="indent" n="966">οἴμοι, δόμων σῶν ὄλβος ὡς χειμάζεται.</l>
@@ -2345,7 +2371,7 @@
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="997">τόδʼ ἔσχεν ὄνομα θεῶν ὅτʼ ᾖξεν ἐς δόρυ.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="998"/>
+               <milestone resp="perseus" unit="card" n="998" />
                <sp>
                   <speaker>Πρεσβύτης</speaker>
                   <l rend="indent" n="998">τί δῆτα, θύγατερ, τοῦτο σοῖς ἐχθροῖς βλάβος;</l>
@@ -2360,7 +2386,8 @@
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
-                  <l rend="indent" n="1001">τούτῳ δίδωσι Παλλὰς ὄντι νεογόνῳ <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="1001">τούτῳ δίδωσι Παλλὰς ὄντι νεογόνῳ <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -2401,7 +2428,8 @@
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
-                  <l rend="indent" n="1011">κοίλης μὲν ὅστις φλεβὸς ἀπέσταξεν φόνῳ <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="1011">κοίλης μὲν ὅστις φλεβὸς ἀπέσταξεν φόνῳ <gap
+                        reason="ellipsis" rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -2479,7 +2507,7 @@
                   <l n="1031">ἐλθὼν ἵνʼ ἡμῖν βουθυτεῖ λάθρα πόσις,</l>
                   <l n="1032">δείπνων ὅταν λήγωσι καὶ σπονδὰς θεοῖς</l>
                   <l n="1033">μέλλωσι λείβειν, ἐν πέπλοις ἔχων τόδε</l>
-                  <l n="1034">κάθες βαλὼν ἐς πῶμα τῷ νεανίᾳ <gap reason="ellipsis" rend=" . . . "/>
+                  <l n="1034">κάθες βαλὼν ἐς πῶμα τῷ νεανίᾳ <gap reason="ellipsis" rend=" . . . " />
                   </l>
                   <l n="1035">ἰδίᾳ δέ, μή τι πᾶσι, χωρίσας ποτὸν</l>
                   <l n="1036">τῷ τῶν ἐμῶν μέλλοντι δεσπόζειν δόμων.</l>
@@ -2500,7 +2528,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" unit="card" n="1048"/>
+         <milestone resp="perseus" unit="card" n="1048" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -2520,7 +2548,7 @@
                   <l n="1060">πλὴν τῶν εὐγενετᾶν Ἐρεχθειδᾶν.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1061"/>
+            <milestone resp="perseus" unit="card" n="1061" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2539,7 +2567,7 @@
                   <l n="1073">ἁ τῶν εὐπατριδᾶν γεγῶσʼ οἴκων.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1074"/>
+            <milestone resp="perseus" unit="card" n="1074" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2561,7 +2589,7 @@
                   <l n="1089">ὁ Φοίβειος ἀλάτας.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1090"/>
+            <milestone resp="perseus" unit="card" n="1090" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2584,7 +2612,7 @@
                </sp>
             </div>
          </div>
-         <milestone resp="perseus" unit="card" n="1106"/>
+         <milestone resp="perseus" unit="card" n="1106" />
          <div type="episode">
             <sp>
                <speaker>Θεράπων</speaker>
@@ -2609,7 +2637,7 @@
             </sp>
             <sp>
                <speaker>Θεράπων</speaker>
-               <l rend="indent" n="1115">ἔγνως;  — μεθέξεις οὐκ ἐν ὑστάτοις κακοῦ.</l>
+               <l rend="indent" n="1115">ἔγνως; — μεθέξεις οὐκ ἐν ὑστάτοις κακοῦ.</l>
             </sp>
             <sp>
                <speaker>Χορός</speaker>
@@ -2638,7 +2666,7 @@
                <l n="1129">σκηνὰς ἀνίστη τεκτόνων μοχθήμασι.</l>
                <l n="1130">θύσας δὲ Γενέταις Θεοῖσιν ἢν μακρὸν χρόνον</l>
                <l n="1131">μένω, παροῦσι δαῖτες ἔστωσαν φίλοις.</l>
-               <milestone resp="perseus" unit="card" n="1132"/>
+               <milestone resp="perseus" unit="card" n="1132" />
                <l rend="indent" n="1132">λαβὼν δὲ μόσχους ᾤχεθʼ· ὁ δὲ νεανίας</l>
                <l n="1133">σεμνῶς ἀτοίχους περιβολὰς σκηνωμάτων</l>
                <l n="1134">ὀρθοστάταις ἱδρύεθʼ, ἡλίου βολὰς</l>
@@ -2679,13 +2707,13 @@
                <l n="1169">στεφάνοισι κοσμηθέντες εὐόχθου βορᾶς</l>
                <l n="1170">ψυχὴν ἐπλήρουν. ὡς δʼ ἀνεῖσαν ἡδονήν,</l>
                <l n="1171">
-                  <gap reason="lost" rend=" . . "/> παρελθὼν πρέσβυς ἐς μέσον πέδον</l>
+                  <gap reason="lost" rend=" . . " /> παρελθὼν πρέσβυς ἐς μέσον πέδον</l>
                <l n="1172">ἔστη, γέλων δʼ ἔθηκε συνδείπνοις πολύν,</l>
                <l n="1173">πρόθυμα πράσσων· ἔκ τε γὰρ κρωσσῶν ὕδωρ</l>
                <l n="1174">χεροῖν ἔπεμπε νίπτρα, κἀξεθυμία</l>
                <l n="1175">σμύρνης ἱδρῶτα, χρυσέων τʼ ἐκπωμάτων</l>
                <l n="1176">ἦρχʼ, αὐτὸς αὑτῷ τόνδε προστάξας πόνον.</l>
-               <milestone resp="perseus" unit="card" n="1177"/>
+               <milestone resp="perseus" unit="card" n="1177" />
                <l rend="indent" n="1177">ἐπεὶ δʼ ἐς αὐλοὺς ἧκον ἐς κρατῆρά τε</l>
                <l n="1178">κοινόν, γέρων ἔλεξʼ· Ἀφαρπάζειν χρεὼν</l>
                <l n="1179">οἰνηρὰ τεύχη σμικρά, μεγάλα δʼ ἐσφέρειν,</l>
@@ -2710,7 +2738,7 @@
                <l n="1198">ἄτρεστα ναίουσʼ — ὡς δʼ ἀπέσπεισαν μέθυ,</l>
                <l n="1199">ἐς αὐτὸ χείλη πώματος κεχρημέναι</l>
                <l n="1200">καθῆκαν, εἷλκον δʼ εὐπτέρους ἐς αὐχένας.</l>
-               <milestone resp="perseus" unit="card" n="1201"/>
+               <milestone resp="perseus" unit="card" n="1201" />
                <l rend="indent" n="1201">καὶ ταῖς μὲν ἄλλαις ἄνοσος ἦν λοιβὴ θεοῦ·</l>
                <l n="1202">ἣ δʼ ἕζετʼ ἔνθʼ ὁ καινὸς ἔσπεισεν γόνος,</l>
                <l n="1203">ποτοῦ τʼ ἐγεύσατʼ, εὐθὺς εὔπτερον δέμας</l>
@@ -2740,7 +2768,7 @@
                <l n="1227">παίδων γὰρ ἐλθοῦσʼ εἰς ἔρον Φοίβου πάρα,</l>
                <l n="1228">τὸ σῶμα κοινῇ τοῖς τέκνοις ἀπώλεσεν.</l>
             </sp>
-            <milestone resp="perseus" unit="card" n="1229"/>
+            <milestone resp="perseus" unit="card" n="1229" />
             <div type="lyric">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2749,7 +2777,7 @@
                   <l n="1231">φανερὰ <del>γὰρ</del> φανερὰ τάδʼ ἤδη,</l>
                   <l n="1232">σπονδᾶς ἐκ Διονύσου,</l>
                   <l n="1233">βοτρύων θοᾶς ἐχίδνας</l>
-                  <l n="1234">σταγόσι μειγνυμένας φόνῳ <gap reason="ellipsis" rend=" . . . "/>
+                  <l n="1234">σταγόσι μειγνυμένας φόνῳ <gap reason="ellipsis" rend=" . . . " />
                   </l>
                   <l n="1235">φανερὰ θύματα νερτέρων,</l>
                   <l n="1236">συμφοραὶ μὲν ἐμῷ βίῳ,</l>
@@ -2762,7 +2790,7 @@
                   <l n="1243">ἢ πρύμνας ἐπὶ ναῶν;</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1244"/>
+            <milestone resp="perseus" unit="card" n="1244" />
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2774,7 +2802,7 @@
                   <l n="1249">πεισόμεθʼ, ὥσπερ τὸ δίκαιον;</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1250"/>
+            <milestone resp="perseus" unit="card" n="1250" />
             <div type="trochees">
                <sp>
                   <speaker>Κρέουσα</speaker>
@@ -2822,7 +2850,7 @@
                   <l n="1260">προστρόπαιον αἷμα θήσεις· οἰστέον δὲ τὴν τύχην.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1261"/>
+            <milestone resp="perseus" unit="card" n="1261" />
             <div type="iambic">
                <sp>
                   <speaker>Ἴων</speaker>
@@ -2848,7 +2876,7 @@
                   <l n="1280">οἵαν ἔπλεξε· βωμὸν ἔπτηξεν θεοῦ,</l>
                   <l n="1281">ὡς οὐ δίκην δώσουσα τῶν εἰργασμένων.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1282"/>
+               <milestone resp="perseus" unit="card" n="1282" />
                <sp>
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="1282">ἀπεννέπω σε μὴ κατακτείνειν ἐμὲ</l>
@@ -2978,7 +3006,7 @@
                   <l n="1318">καὶ μὴ ʼπὶ ταὐτὸ τοῦτʼ ἰόντʼ ἔχειν ἴσον</l>
                   <l n="1319">τόν τʼ ἐσθλὸν ὄντα τόν τε μὴ θεῶν πάρα.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1320"/>
+               <milestone resp="perseus" unit="card" n="1320" />
                <sp>
                   <speaker>Προφῆτις</speaker>
                   <l rend="indent" n="1320">ἐπίσχες, ὦ παῖ· τρίποδα γὰρ χρηστήριον</l>
@@ -3016,7 +3044,8 @@
                </sp>
                <sp>
                   <speaker>Προφῆτις</speaker>
-                  <l rend="indent" n="1331">μὴ ταῦτα· λείπων ἱερὰ καὶ στείχων πάτραν <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="1331">μὴ ταῦτα· λείπων ἱερὰ καὶ στείχων πάτραν <gap
+                        reason="ellipsis" rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -3081,7 +3110,8 @@
                </sp>
                <sp>
                   <speaker>Προφῆτις</speaker>
-                  <l rend="indent" n="1347">ἐνθύμιόν μοι τότε τίθησι Λοξίας <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="1347">ἐνθύμιόν μοι τότε τίθησι Λοξίας <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -3094,7 +3124,8 @@
                </sp>
                <sp>
                   <speaker>Ἴων</speaker>
-                  <l rend="indent" n="1350">ἔχει δέ μοι τί κέρδος <gap reason="ellipsis" rend=" . . . "/> ἢ τίνα βλάβην;</l>
+                  <l rend="indent" n="1350">ἔχει δέ μοι τί κέρδος <gap reason="ellipsis"
+                        rend=" . . . " /> ἢ τίνα βλάβην;</l>
                </sp>
                <sp>
                   <speaker>Προφῆτις</speaker>
@@ -3132,10 +3163,10 @@
                   <l n="1364">ἄρξαι δʼ ὅθεν σὴν μητέρα ζητεῖν σε χρή·</l>
                   <l n="1365">πρῶτον μὲν εἴ τις Δελφίδων τεκοῦσά σε</l>
                   <l n="1366">ἐς τούσδε ναοὺς ἐξέθηκε παρθένος,</l>
-                  <l n="1367">ἔπειτα δʼ εἴ τις Ἑλλάς.  — ἐξ ἡμῶν δʼ ἔχεις</l>
+                  <l n="1367">ἔπειτα δʼ εἴ τις Ἑλλάς. — ἐξ ἡμῶν δʼ ἔχεις</l>
                   <l n="1368">ἅπαντα Φοίβου θʼ, ὃς μετέσχε τῆς τύχης.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1369"/>
+               <milestone resp="perseus" unit="card" n="1369" />
                <sp>
                   <speaker>Ἴων</speaker>
                   <l rend="indent" n="1369">φεῦ φεῦ· κατʼ ὄσσων ὡς ὑγρὸν βάλλω δάκρυ,</l>
@@ -3153,7 +3184,8 @@
                   <l n="1381">ἀνάθημʼ, ἵνʼ εὕρω μηδὲν ὧν οὐ βούλομαι.</l>
                   <l n="1382">εἰ γάρ με δούλη τυγχάνει τεκοῦσά τις,</l>
                   <l n="1383">εὑρεῖν κάκιον μητέρʼ ἢ σιγῶντʼ ἐᾶν.</l>
-                  <l n="1384">ὦ Φοῖβε, ναοῖς ἀνατίθημι τήνδε σοῖς <gap reason="ellipsis" rend=" . . . "/>
+                  <l n="1384">ὦ Φοῖβε, ναοῖς ἀνατίθημι τήνδε σοῖς <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                   <l rend="indent" n="1385">καίτοι τί πάσχω; τοῦ θεοῦ προθυμίᾳ</l>
                   <l n="1386">πολεμῶ, τὰ μητρὸς σύμβολʼ ὃς σέσωκέ μοι.</l>
@@ -3166,20 +3198,22 @@
                   <l n="1393">εὐρώς τʼ ἄπεστι πλεγμάτων· ὁ δʼ ἐν μέσῳ</l>
                   <l n="1394">χρόνος πολὺς δὴ τοῖσδε θησαυρίσμασιν.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1395"/>
+               <milestone resp="perseus" unit="card" n="1395" />
                <sp>
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="1395">τί δῆτα φάσμα τῶν ἀνελπίστων ὁρῶ;</l>
                </sp>
                <sp>
                   <speaker>Ἴων</speaker>
-                  <l rend="indent" n="1396">σίγα σύ· πολλὰ καὶ πάροιθεν οἶσθά μοι <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="1396">σίγα σύ· πολλὰ καὶ πάροιθεν οἶσθά μοι <gap
+                        reason="ellipsis" rend=" . . . " />
                   </l>
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="1397">οὐκ ἐν σιωπῇ τἀμά· μή με νουθέτει.</l>
-                  <l n="1398">ὁρῶ γὰρ ἄγγος οὗ ʼξέθηκʼ ἐγώ ποτε <gap reason="ellipsis" rend=" . . . "/>
+                  <l n="1398">ὁρῶ γὰρ ἄγγος οὗ ʼξέθηκʼ ἐγώ ποτε <gap reason="ellipsis"
+                        rend=" . . . " />
                   </l>
                   <l n="1399">σέ γʼ, ὦ τέκνον μοι, βρέφος ἔτʼ ὄντα νήπιον,</l>
                   <l n="1400">Κέκροπος ἐς ἄντρα καὶ Μακρὰς πετρηρεφεῖς.</l>
@@ -3213,7 +3247,7 @@
                </sp>
                <sp>
                   <speaker>Ἴων</speaker>
-                  <l rend="indent" n="1410">παῦσαι πλέκουσα.  — λήψομαί σʼ ἐγὼ καλῶς.</l>
+                  <l rend="indent" n="1410">παῦσαι πλέκουσα. — λήψομαί σʼ ἐγὼ καλῶς.</l>
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
@@ -3241,7 +3275,8 @@
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
-                  <l rend="indent" n="1417">σκέψασθʼ· ὃ παῖς ποτʼ οὖσʼ ὕφασμʼ ὕφηνʼ ἐγὼ <gap reason="ellipsis" rend=" . . . "/>
+                  <l rend="indent" n="1417">σκέψασθʼ· ὃ παῖς ποτʼ οὖσʼ ὕφασμʼ ὕφηνʼ ἐγὼ <gap
+                        reason="ellipsis" rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -3284,7 +3319,8 @@
                <sp>
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="1427">δράκοντες· ἀρχαῖόν τι παγχρύσῳ γένει</l>
-                  <l n="1428">δώρημʼ Ἀθάνας, ἣ τέκνʼ ἐντρέφειν λέγει <gap reason="lost" rend=" . . . "/>
+                  <l n="1428">δώρημʼ Ἀθάνας, ἣ τέκνʼ ἐντρέφειν λέγει <gap reason="lost"
+                        rend=" . . . " />
                   </l>
                   <l n="1429">Ἐριχθονίου γε τοῦ πάλαι μιμήματα.</l>
                </sp>
@@ -3307,7 +3343,7 @@
                   <l n="1435">ὅς, εἴπερ ἔστιν, οὔποτʼ ἐκλείπει χλόην,</l>
                   <l n="1436">θάλλει δʼ, ἐλαίας ἐξ ἀκηράτου γεγώς.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1437"/>
+               <milestone resp="perseus" unit="card" n="1437" />
                <sp>
                   <speaker>Ἴων</speaker>
                   <l rend="indent" n="1437">ὦ φιλτάτη μοι μῆτερ, ἄσμενός σʼ ἰδὼν</l>
@@ -3381,7 +3417,7 @@
                   <l n="1466">ὅ τε γηγενέτας δόμος οὐκέτι νύκτα δέρκεται,</l>
                   <l n="1467">ἀελίου δʼ ἀναβλέπει λαμπάσιν.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1468"/>
+               <milestone resp="perseus" unit="card" n="1468" />
                <sp>
                   <speaker>Ἴων</speaker>
                   <l rend="indent" n="1468">μῆτερ, παρών μοι καὶ πατὴρ μετασχέτω</l>
@@ -3416,7 +3452,8 @@
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
-                  <l rend="indent" n="1478" part="I">ἴστω Γοργοφόνα <gap reason="ellipsis" rend=" . . ."/>
+                  <l rend="indent" n="1478" part="I">ἴστω Γοργοφόνα <gap reason="ellipsis"
+                        rend=" . . ." />
                   </l>
                </sp>
                <sp>
@@ -3427,7 +3464,7 @@
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="1479">ἃ σκοπέλοις ἐπʼ ἐμοῖς</l>
                   <l n="1480">τὸν ἐλαιοφυῆ πάγον</l>
-                  <l n="1481" part="I">θάσσει <gap reason="ellipsis" rend=" . . ."/>
+                  <l n="1481" part="I">θάσσει <gap reason="ellipsis" rend=" . . ." />
                   </l>
                </sp>
                <sp>
@@ -3437,7 +3474,7 @@
                <sp>
                   <speaker>Κρέουσα</speaker>
                   <l rend="indent" n="1482">παρʼ ἀηδόνιον πέτραν</l>
-                  <l n="1483" part="I">Φοίβῳ <gap reason="ellipsis" rend=" . . ."/>
+                  <l n="1483" part="I">Φοίβῳ <gap reason="ellipsis" rend=" . . ." />
                   </l>
                </sp>
                <sp>
@@ -3446,7 +3483,8 @@
                </sp>
                <sp>
                   <speaker>Κρέουσα</speaker>
-                  <l rend="indent" n="1484">κρυπτόμενον λέχος ηὐνάσθην  <gap reason="lost" rend=" . . . "/>
+                  <l rend="indent" n="1484">κρυπτόμενον λέχος ηὐνάσθην <gap reason="lost"
+                        rend=" . . . " />
                   </l>
                </sp>
                <sp>
@@ -3498,7 +3536,7 @@
                   <l n="1509">γένοιτό τις οὖρος ἐκ κακῶν, ὦ παῖ.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1510"/>
+            <milestone resp="perseus" unit="card" n="1510" />
             <div type="iambic">
                <sp>
                   <speaker>Χορός</speaker>
@@ -3568,7 +3606,7 @@
                   <l n="1551">φεύγωμεν, ὦ τεκοῦσα, μὴ τὰ δαιμόνων</l>
                   <l n="1552">ὁρῶμεν — εἰ μὴ καιρός ἐσθʼ ἡμᾶς ὁρᾶν.</l>
                </sp>
-               <milestone resp="perseus" unit="card" n="1553"/>
+               <milestone resp="perseus" unit="card" n="1553" />
                <sp>
                   <speaker>Ἀθήνα</speaker>
                   <l rend="indent" n="1553">μὴ φεύγετʼ· οὐ γὰρ πολεμίαν με φεύγετε,</l>
@@ -3589,7 +3627,7 @@
                   <l n="1568">σέ θʼ ὡς πέφυκας τῆσδε καὶ Φοίβου πατρός.</l>
                   <l n="1569">ἀλλʼ ὡς περαίνω πρᾶγμα, καὶ χρησμοὺς θεοῦ,</l>
                   <l n="1570">ἐφʼ οἷσιν ἔζευξʼ ἅρματʼ, εἰσακούσατον.</l>
-                  <milestone resp="perseus" unit="card" n="1571"/>
+                  <milestone resp="perseus" unit="card" n="1571" />
                   <l rend="indent" n="1571">λαβοῦσα τόνδε παῖδα Κεκροπίαν χθόνα</l>
                   <l n="1572">χώρει, Κρέουσα, κἀς θρόνους τυραννικοὺς</l>
                   <l n="1573">ἵδρυσον. ἐκ γὰρ τῶν Ἐρεχθέως γεγὼς</l>
@@ -3601,7 +3639,7 @@
                   <l n="1579">Γελέων μὲν ἔσται πρῶτος· εἶτα δεύτερος</l>
                   <l n="1579a">
                      <add>
-                        <gap reason="lost" rend=" . . . . . . ."/>
+                        <gap reason="lost" rend=" . . . . . . ." />
                      </add>
                   </l>
                   <l n="1580">Ὅπλητες Ἀργαδῆς τʼ, ἐμῆς τʼ ἀπʼ αἰγίδος</l>
@@ -3632,7 +3670,7 @@
                   <l n="1605">εὐδαίμονʼ ὑμῖν πότμον ἐξαγγέλλομαι.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="1606"/>
+            <milestone resp="perseus" unit="card" n="1606" />
             <div type="trochees">
                <sp>
                   <speaker>Ἴων</speaker>
