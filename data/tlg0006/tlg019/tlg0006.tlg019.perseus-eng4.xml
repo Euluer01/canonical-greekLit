@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -13,9 +14,9 @@
                <name>Lisa Cerrato</name>
                <name>David Mimno</name>
             </respStmt>
-            <funder/>
+            <funder />
          </titleStmt>
-         <extent/>
+         <extent />
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -23,7 +24,8 @@
             <date type="release" cert="unknown">2005</date>
             <idno type="filename">tlg0006.tlg019.perseus-eng4.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0006.tlg019.perseus-eng4</idno>
          </publicationStmt>
@@ -39,22 +41,28 @@
                      <date>1913</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/details/rhesusofeuripid00euri/page/n6">The Internet Archive</ref>
+               <ref target="https://archive.org/details/rhesusofeuripid00euri/page/n6">The Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <quotation marks="none"/>
+            <quotation marks="none" />
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts lines</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -65,7 +73,7 @@
     	</encodingDesc>-->
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#drama-line"/>
+            <catRef scheme="#perseus-genre" target="#drama-line" />
          </textClass>
          <langUsage>
             <language ident="eng">English</language>
@@ -78,35 +86,187 @@
    </teiHeader>
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0006.tlg019.perseus-eng4">
-         <milestone unit="card" resp="perseus" n="1"/>
-         <pb xml:id="p.3"/>
-         <l resp="perseus" style="hidden" n="0"/>
+         <milestone unit="card" resp="perseus" n="1" />
+         <pb xml:id="p.3" />
+         <l resp="perseus" style="hidden" n="0" />
          <note resp="editor" place="inline">
             <p>INTRODUCTION</p>
-            <p>THIS short play needs rather a long introduction. It has had the bad fortune to become a literary problem, and almost all its few readers are so much occupied with the question whether it can be the work of Euripides—and if not his, whose?—that they seldom allow themselves to take it on its merits as a stirring and adventurous piece, not particularly profound or subtle, but always full of movement and life and possessing at least one or two scenes of great and penetrating beauty.</p>
-            <p>The outlines of the <title>Rhesus</title> Question are these. The <title>Rhesus</title> appears in the MSS. of Euripides; we know from the Athenian Didascaliae, or Records of Performances, that Euripides wrote a play of the name; some passages in it are quoted by early Alexandrian writers as from <q type="emph">the Rhesus of Euripides;</q> no passage is quoted under any other name. This seems about as strong as external evidence need be. Yet the ancient introduction to the play mentions that <q type="written">some think the play spurious,</q> and expresses the odd opinion that <q type="written">it suggests rather the Sophoclean style.</q> Further, it tells us that, besides the present opening scene, there were extant two different prologues, one of which was <q type="written">quite prosy and perhaps concocted by the actors.</q> This seems to show that the Alexandrian scholars who tried for the first time to collect the complete works of Euripides, some two centuries after his death, found this play current as <q type="soCalled">Euripides’ <title>Rhesus</title>,</q> but that it was credited with three different openings and that its style was felt to be somehow peculiar. </p>
-            <p>The peculiarity of style is incontestable. It does not to our judgment suggest Sophocles. It suggests a young man imitating Aeschylus, and it has a great number of Euripidean expressions. Hermann, who collected what he took to be <q type="soCalled">imitations</q> of early poets in the Rhesus, noted only 25 of Sophocles, 38 of Aeschylus, and 84 of Euripides. </p>
-            <p>Is it, then, the work of a somewhat imitative fourth-century poet, naturally influenced by his great forerunners? Hardly: because, with a few exceptions, the verse and diction of the <title>Rhesus</title>, are markedly early in character, the verse severe and smooth, the diction direct and rather grandiose, the choral lyrics strictly relevant. In Euripides’ later years Drama was moving rapidly away from all these things and, as far as we can judge, continued so moving after his death. If the <title>Rhesus</title> is a post-classical play it can hardly be honest fourth-century work: it must be deliberately archaistic, a product of the Alexandrian spirit if not actually of the Alexandrian age. This is what Hermann believed. But unfortunately it is not a bit more like our fragments of Alexandrian tragedy than it is like the Medea; and, further, if it is an Alexandrian pseudo-classic tragedy, how did it succeed in deceiving the Alexandrian critics, detectives specially trained for this kind of work? </p>
-            <p>Let us try quite a different hypothesis, and begin by accepting the external evidence as true. The famous critic, Crates, of the second century B.C., happens to mention—in excuse of what he took to be a slip in the poet’s astronomy—that the <title>Rhesus</title> of Euripides was a youthful work. Now the earliest dated tragedy of Euripides that we possess is the <title>Alcestis</title>, B.C. <date when="-0438">438</date>, written when he was about forty-six. His style may well have been considerably different fifteen or twenty years earlier, and must certainly have been much under the influence of Aeschylus. So far, so good. Then what of the other difficulties, the three different opening scenes and the few passages of late phrasing or technique? One obvious explanation suits both. The three different openings pretty clearly imply that the play was reproduced more than once after the poet’s death and adapted by the producer for each occasion. This happened to many plays of Euripides, and in one case we even know the name of the producer; he was Euripides the Younger, son of the poet. Among other things we have reason to believe that he wrote some parts of the <title>Iphigenia in <placeName key="tgn,5004252">Aulis</placeName>
-               </title>. And in this connexion we can hardly help noticing that the <title>Iphigenia in <placeName key="tgn,5004252">Aulis</placeName>
-               </title>, like the <title>Rhesus</title> and like no other Greek tragedy, has two alternative openings, one a dull prologue and one a lyrical scene in anapaests under the stars. The general style of the two plays is utterly different; the <title>Iphigenia</title> is most typically late Euripidean; but one would not be surprised to learn that they had both passed at some time through the same revising hand.</p>
+            <p>THIS short play needs rather a long introduction. It has had the bad fortune to
+               become a literary problem, and almost all its few readers are so much occupied with
+               the question whether it can be the work of Euripides—and if not his, whose?—that they
+               seldom allow themselves to take it on its merits as a stirring and adventurous piece,
+               not particularly profound or subtle, but always full of movement and life and
+               possessing at least one or two scenes of great and penetrating beauty.</p>
+            <p>The outlines of the <title>Rhesus</title> Question are these. The <title>Rhesus</title>
+               appears in the MSS. of Euripides; we know from the Athenian Didascaliae, or Records
+               of Performances, that Euripides wrote a play of the name; some passages in it are
+               quoted by early Alexandrian writers as from <q type="emph">the Rhesus of Euripides;</q>
+               no passage is quoted under any other name. This seems about as strong as external
+               evidence need be. Yet the ancient introduction to the play mentions that <q
+                  type="written">some think the play spurious,</q> and expresses the odd opinion
+               that <q type="written">it suggests rather the Sophoclean style.</q> Further, it tells
+               us that, besides the present opening scene, there were extant two different
+               prologues, one of which was <q type="written">quite prosy and perhaps concocted by
+               the actors.</q> This seems to show that the Alexandrian scholars who tried for the
+               first time to collect the complete works of Euripides, some two centuries after his
+               death, found this play current as <q type="soCalled">Euripides’ <title>Rhesus</title>
+               ,</q> but that it was credited with three different openings and that its style was
+               felt to be somehow peculiar. </p>
+            <p>The peculiarity of style is incontestable. It does not to our judgment suggest
+               Sophocles. It suggests a young man imitating Aeschylus, and it has a great number of
+               Euripidean expressions. Hermann, who collected what he took to be <q type="soCalled">
+               imitations</q> of early poets in the Rhesus, noted only 25 of Sophocles, 38 of
+               Aeschylus, and 84 of Euripides. </p>
+            <p>Is it, then, the work of a somewhat imitative fourth-century poet, naturally
+               influenced by his great forerunners? Hardly: because, with a few exceptions, the
+               verse and diction of the <title>Rhesus</title>, are markedly early in character, the
+               verse severe and smooth, the diction direct and rather grandiose, the choral lyrics
+               strictly relevant. In Euripides’ later years Drama was moving rapidly away from all
+               these things and, as far as we can judge, continued so moving after his death. If the <title>
+               Rhesus</title> is a post-classical play it can hardly be honest fourth-century work:
+               it must be deliberately archaistic, a product of the Alexandrian spirit if not
+               actually of the Alexandrian age. This is what Hermann believed. But unfortunately it
+               is not a bit more like our fragments of Alexandrian tragedy than it is like the
+               Medea; and, further, if it is an Alexandrian pseudo-classic tragedy, how did it
+               succeed in deceiving the Alexandrian critics, detectives specially trained for this
+               kind of work? </p>
+            <p>Let us try quite a different hypothesis, and begin by accepting the external evidence
+               as true. The famous critic, Crates, of the second century B.C., happens to mention—in
+               excuse of what he took to be a slip in the poet’s astronomy—that the <title>Rhesus</title>
+               of Euripides was a youthful work. Now the earliest dated tragedy of Euripides that we
+               possess is the <title>Alcestis</title>, B.C. <date when="-0438">438</date>, written
+               when he was about forty-six. His style may well have been considerably different
+               fifteen or twenty years earlier, and must certainly have been much under the
+               influence of Aeschylus. So far, so good. Then what of the other difficulties, the
+               three different opening scenes and the few passages of late phrasing or technique?
+               One obvious explanation suits both. The three different openings pretty clearly imply
+               that the play was reproduced more than once after the poet’s death and adapted by the
+               producer for each occasion. This happened to many plays of Euripides, and in one case
+               we even know the name of the producer; he was Euripides the Younger, son of the poet.
+               Among other things we have reason to believe that he wrote some parts of the <title>Iphigenia
+               in <placeName key="tgn,5004252">Aulis</placeName>
+               </title>. And in this
+               connexion we can hardly help noticing that the <title>Iphigenia in <placeName
+                     key="tgn,5004252">Aulis</placeName>
+               </title>, like the <title>
+               Rhesus</title> and like no other Greek tragedy, has two alternative openings, one a
+               dull prologue and one a lyrical scene in anapaests under the stars. The general style
+               of the two plays is utterly different; the <title>Iphigenia</title> is most typically
+               late Euripidean; but one would not be surprised to learn that they had both passed at
+               some time through the same revising hand.</p>
             <p>This hypothesis seems to work well. But one difficulty remains. </p>
-            <p>We have so far gone on the supposition that Euripides at twenty-five or thirty perhaps wrote very differently from Euripides at forty-six, and that the manner we call Euripidean is only the manner of his later life. There is nothing improbable in this suggestion, but have we any evidence? Yes, a very little, and unfortunately it does not say what we want. We have some fragments—twenty lines altogether—preserved from the <title>Peliades</title>, with which Euripides won his first victory in the year <date when="-0455">455</date>, seventeen years before the <title>Alcestis</title>, and as far as they go they are just in his ordinary manner—a good deal more so, in fact, than much of the <title>Alcestis</title> is. Let us face this difficulty.</p>
-            <p>The ordinary style of Euripides is full, flexible, lucid, antithetic, studiously simple in vocabulary and charged with philosophic reflection. If we look in his extant remains for any trace of a style, like that of the <title>Rhesus</title>, which is comparatively terse, rich, romantic, not shrinking from rare words and strong colour and generally untinged by philosophy, we shall find the nearest approach to it in the <title>Cyclops</title>. Next to the <title>Cyclops</title> I am not sure what play would come, but the <title>Alcestis</title> would not be far off. It has especially several Epic forms which cannot be paralleled in tragedy. Now the conjunction of these two plays with the <title>Rhesus</title> is significant. The three seem to be three earliest of the extant plays; they are also—if we count the Heraclidae as mutilated—the three shortest. But, what is more important, the <title>Cyclops</title> is not a tragedy but a satyr-play, and the <title>Alcestis</title> is a tragedy of a special sort, written to take the place of a satyr-play. It is a tragedy with some half grotesque figures and a fantastic atmosphere.</p>
-            <p>This is no place for a close analysis of the diction of the various works of Euripides; but taking one rough test, just for what it is worth, we may try to count the number of words in each play which are not found elsewhere in Euripides. The <title>Medea</title>, a central sort of play, has in its 1419 lines 103 such words. The <title>Alcestis</title>, with 1163 lines, has 122; the <title>Rhesus</title>, with less than 1000 lines, has 177; the <title>Cyclops</title>, with only 701 lines, has actually 220. This calculation is doubtless slightly inexact: in any case it is worth very little until it is carefully analysed. But on the whole it accords with my general impression that the <title>Rhesus</title> in its variation from the Euripidean norm goes further than the <title>Alcestis</title>, and not so far as the <title>Cyclops</title>, and goes in very much the same direction. I feel in the <title>Rhesus</title> a good deal of that curious atmosphere, not exactly comic, but wild and extravagant, which the Greeks felt to be suited to the Satyr horde; the atmosphere normally breathed by the one-eyed Giant of the cavern on volcanic <placeName key="tgn,7003867">Aetna</placeName>, or the drunken and garlanded Heracles who wrestles with Death and cracks his ribs for him at midnight among the tombs. The whole scene and setting of the <title>Rhesus</title>; the man-wolf crawling away into the darkness and his two enemies presently crawling in out of the same darkness with his bloody spoils; the divine Thracian king with his round targe that shines by night and his horses whiter than the snow; the panic of the watch, the vaunting of the doomed chieftain, the goddess disguised as another goddess, the thrilling half-farcical scene where the spy Odysseus is actually caught and befools his captors: these things are not of course comic, like some incidents in the <title>Cyclops</title>. They belong to tragedy; but they are near the outside limit of the tragic convention, and would perhaps be most at home in a pro-satyric tragedy like the <title>Alcestis</title>.</p>
-            <p>In the upshot I see no adequate reason for rejecting the external evidence which makes this play a work of Euripides, if we suppose it to be an early pro-satyric play which was produced again after the poet’s death by Euripides the Younger or some contemporary. Most scholars, however, prefer to think it simply an archaistic work of the fourth century. </p>
-            <p>On this theory the Alexandrians when looking for the <title>Rhesus</title> of Euripides found an anonymous play called <title>Rhesus</title> and accepted it for what it was worth. The Prologues mentioned in the argument would perhaps belong to other plays of the same name; one, no doubt, to the real play of Euripides. The rich and severe style may, for all we know—for direct evidence fails us—be the natural work of some reactionary archaistic school about the time of Plato or Aristotle. The same date might well be indicated by the great interest our play takes in the <title>Iliad</title>, and by its almost <q type="emph">Alexandrian</q> use of the gods as ornamental machinery. I cannot call such a theory improbable; but it really amounts to rejecting the external evidence in order to place the Rhesus in a period of tragic style of which we happen to know nothing. It is certainly not confirmed by the scanty fragments we possess of Theodectes or Chairemon.</p>
-            <p>And, if one is to venture into more speculative and subjective arguments, I find it rather hard to think of any lyric poet except Euripides who could have written the Adrasteia chorus or the lines about the Nightingale in the Watchers’ Song; of any playwright except Euripides who would have ended a play of gallant martial adventure with the vision of a solitary mother clasping her dead son. There are many other passages, too, like the mysterious sobbing in the dark that heralds the entry of the wounded Thracian, and the final passing out of the army to its certain defeat, which seem to me more like undeveloped genius than common imitative mediocrity. If a nameless fourth-century poet wrote this play, I think we should have heard more of him. </p>
-            <p>The story of the play is taken straight from the Doloneia, an Epic rhapsody which now takes its place as the Tenth Book of the <title>Iliad</title>, but was very likely independent in the time of Euripides (<title>Rise of the Greek Epic</title>, p. 313 f.). The play seems in one or two points to follow a more archaic model than the version in our Homer. (See notes on l. 150 and 1. 175.) </p>
-            <p>In Rhesus himself—the name is said to be the Thracian form of rex<note resp="editor">Perdrizet, Cultes et Mythes de Pangée, p. 17</note>—we seem to have the traditional divine king of the Thracian tribes about Pangaion, seen through the eyes of Greek romance. He is the son of the greatest of Rivers and the Muse of the Mountain: she is simply <q type="emph">The Muse,</q> otherwise nameless, and we are lost if we try to bind her down to the identity of any Greek goddess. Like many Thracian heroes Rhesus has a dash of the Sun-god in him, the burning targe, the white horses and the splendour. Like them he is a boaster and  a deep drinker, a child of battle and of song. Like other divine kings he dies in his youth and strength, and keeps watch over his people from some <q type="emph">feasting presence, full of light,</q> where he lies among the buried silver-veins of Pangaion. If the uttermost need comes, doubtless he will wake again. When the Athenians began making their dangerous settlements on the coast of Thrace—ten thousand settlers were massacred by Rhesus’s people about <date when="-0465">465</date> B.C.: <placeName key="perseus,Amphipolis">Amphipolis</placeName> not fully established till 437—they found the legend of Rhesus in the air, and eventually they thought it prudent to send for his hallowed bones from the <placeName key="tgn,7002331">Troad</placeName>, where they were supposed to be buried, and give them a tomb in the Athenian colony. Possibly that pacified him. And his legend in the mouth of the poets seemed perhaps like the story of his own mountaineers, multitudes of strong men, stormy and chivalrous, terrible in onset, who somehow in the end melted away before the skill and persistent courage of a civilised Greek city.</p>
+            <p>We have so far gone on the supposition that Euripides at twenty-five or thirty
+               perhaps wrote very differently from Euripides at forty-six, and that the manner we
+               call Euripidean is only the manner of his later life. There is nothing improbable in
+               this suggestion, but have we any evidence? Yes, a very little, and unfortunately it
+               does not say what we want. We have some fragments—twenty lines altogether—preserved
+               from the <title>Peliades</title>, with which Euripides won his first victory in the
+               year <date when="-0455">455</date>, seventeen years before the <title>Alcestis</title>,
+               and as far as they go they are just in his ordinary manner—a good deal more so, in
+               fact, than much of the <title>Alcestis</title> is. Let us face this difficulty.</p>
+            <p>The ordinary style of Euripides is full, flexible, lucid, antithetic, studiously
+               simple in vocabulary and charged with philosophic reflection. If we look in his
+               extant remains for any trace of a style, like that of the <title>Rhesus</title>,
+               which is comparatively terse, rich, romantic, not shrinking from rare words and
+               strong colour and generally untinged by philosophy, we shall find the nearest
+               approach to it in the <title>Cyclops</title>. Next to the <title>Cyclops</title> I am
+               not sure what play would come, but the <title>Alcestis</title> would not be far off.
+               It has especially several Epic forms which cannot be paralleled in tragedy. Now the
+               conjunction of these two plays with the <title>Rhesus</title> is significant. The
+               three seem to be three earliest of the extant plays; they are also—if we count the
+               Heraclidae as mutilated—the three shortest. But, what is more important, the <title>
+               Cyclops</title> is not a tragedy but a satyr-play, and the <title>Alcestis</title> is
+               a tragedy of a special sort, written to take the place of a satyr-play. It is a
+               tragedy with some half grotesque figures and a fantastic atmosphere.</p>
+            <p>This is no place for a close analysis of the diction of the various works of
+               Euripides; but taking one rough test, just for what it is worth, we may try to count
+               the number of words in each play which are not found elsewhere in Euripides. The <title>
+               Medea</title>, a central sort of play, has in its 1419 lines 103 such words. The <title>
+               Alcestis</title>, with 1163 lines, has 122; the <title>Rhesus</title>, with less than
+               1000 lines, has 177; the <title>Cyclops</title>, with only 701 lines, has actually
+               220. This calculation is doubtless slightly inexact: in any case it is worth very
+               little until it is carefully analysed. But on the whole it accords with my general
+               impression that the <title>Rhesus</title> in its variation from the Euripidean norm
+               goes further than the <title>Alcestis</title>, and not so far as the <title>Cyclops</title>,
+               and goes in very much the same direction. I feel in the <title>Rhesus</title> a good
+               deal of that curious atmosphere, not exactly comic, but wild and extravagant, which
+               the Greeks felt to be suited to the Satyr horde; the atmosphere normally breathed by
+               the one-eyed Giant of the cavern on volcanic <placeName key="tgn,7003867">Aetna</placeName>,
+               or the drunken and garlanded Heracles who wrestles with Death and cracks his ribs for
+               him at midnight among the tombs. The whole scene and setting of the <title>Rhesus</title>;
+               the man-wolf crawling away into the darkness and his two enemies presently crawling
+               in out of the same darkness with his bloody spoils; the divine Thracian king with his
+               round targe that shines by night and his horses whiter than the snow; the panic of
+               the watch, the vaunting of the doomed chieftain, the goddess disguised as another
+               goddess, the thrilling half-farcical scene where the spy Odysseus is actually caught
+               and befools his captors: these things are not of course comic, like some incidents in
+               the <title>Cyclops</title>. They belong to tragedy; but they are near the outside
+               limit of the tragic convention, and would perhaps be most at home in a pro-satyric
+               tragedy like the <title>Alcestis</title>.</p>
+            <p>In the upshot I see no adequate reason for rejecting the external evidence which
+               makes this play a work of Euripides, if we suppose it to be an early pro-satyric play
+               which was produced again after the poet’s death by Euripides the Younger or some
+               contemporary. Most scholars, however, prefer to think it simply an archaistic work of
+               the fourth century. </p>
+            <p>On this theory the Alexandrians when looking for the <title>Rhesus</title> of
+               Euripides found an anonymous play called <title>Rhesus</title> and accepted it for
+               what it was worth. The Prologues mentioned in the argument would perhaps belong to
+               other plays of the same name; one, no doubt, to the real play of Euripides. The rich
+               and severe style may, for all we know—for direct evidence fails us—be the natural
+               work of some reactionary archaistic school about the time of Plato or Aristotle. The
+               same date might well be indicated by the great interest our play takes in the <title>
+               Iliad</title>, and by its almost <q type="emph">Alexandrian</q> use of the gods as
+               ornamental machinery. I cannot call such a theory improbable; but it really amounts
+               to rejecting the external evidence in order to place the Rhesus in a period of tragic
+               style of which we happen to know nothing. It is certainly not confirmed by the scanty
+               fragments we possess of Theodectes or Chairemon.</p>
+            <p>And, if one is to venture into more speculative and subjective arguments, I find it
+               rather hard to think of any lyric poet except Euripides who could have written the
+               Adrasteia chorus or the lines about the Nightingale in the Watchers’ Song; of any
+               playwright except Euripides who would have ended a play of gallant martial adventure
+               with the vision of a solitary mother clasping her dead son. There are many other
+               passages, too, like the mysterious sobbing in the dark that heralds the entry of the
+               wounded Thracian, and the final passing out of the army to its certain defeat, which
+               seem to me more like undeveloped genius than common imitative mediocrity. If a
+               nameless fourth-century poet wrote this play, I think we should have heard more of
+               him. </p>
+            <p>The story of the play is taken straight from the Doloneia, an Epic rhapsody which now
+               takes its place as the Tenth Book of the <title>Iliad</title>, but was very likely
+               independent in the time of Euripides (<title>Rise of the Greek Epic</title>, p. 313
+               f.). The play seems in one or two points to follow a more archaic model than the
+               version in our Homer. (See notes on l. 150 and 1. 175.) </p>
+            <p>In Rhesus himself—the name is said to be the Thracian form of rex<note resp="editor">Perdrizet,
+               Cultes et Mythes de Pangée, p. 17</note>—we seem to have the traditional divine king
+               of the Thracian tribes about Pangaion, seen through the eyes of Greek romance. He is
+               the son of the greatest of Rivers and the Muse of the Mountain: she is simply <q
+                  type="emph">The Muse,</q> otherwise nameless, and we are lost if we try to bind
+               her down to the identity of any Greek goddess. Like many Thracian heroes Rhesus has a
+               dash of the Sun-god in him, the burning targe, the white horses and the splendour.
+               Like them he is a boaster and a deep drinker, a child of battle and of song. Like
+               other divine kings he dies in his youth and strength, and keeps watch over his people
+               from some <q type="emph">feasting presence, full of light,</q> where he lies among
+               the buried silver-veins of Pangaion. If the uttermost need comes, doubtless he will
+               wake again. When the Athenians began making their dangerous settlements on the coast
+               of Thrace—ten thousand settlers were massacred by Rhesus’s people about <date
+                  when="-0465">465</date> B.C.: <placeName key="perseus,Amphipolis">Amphipolis</placeName>
+               not fully established till 437—they found the legend of Rhesus in the air, and
+               eventually they thought it prudent to send for his hallowed bones from the <placeName
+                  key="tgn,7002331">Troad</placeName>, where they were supposed to be buried, and
+               give them a tomb in the Athenian colony. Possibly that pacified him. And his legend
+               in the mouth of the poets seemed perhaps like the story of his own mountaineers,
+               multitudes of strong men, stormy and chivalrous, terrible in onset, who somehow in
+               the end melted away before the skill and persistent courage of a civilised Greek
+               city.</p>
          </note>
          <note resp="editor" place="inline">
             <p>CHARACTERS OF THE PLAY</p>
-            <p>HECTOR, Prince of <placeName key="tgn,7002329">Ilion</placeName> and General of the Trojan Armies.</p>
+            <p>HECTOR, Prince of <placeName key="tgn,7002329">Ilion</placeName> and General of the
+               Trojan Armies.</p>
             <p>AENEAS, a Trojan Prince.</p>
             <p>DOLON, a Trojan.</p>
             <p>PARIS, also called ALEXANDER, brother of Hector.</p>
-            <p>RHESUS, King of <placeName key="tgn,7002756">Thrace</placeName>, son of the River Strŷmon and the Muse of the Mountains.</p>
+            <p>RHESUS, King of <placeName key="tgn,7002756">Thrace</placeName>, son of the River
+               Strŷmon and the Muse of the Mountains.</p>
             <p>A THRACIAN, the King’s charioteer.</p>
             <p>ODYSSEUS, a Greek chieftain, famous for craft and daring.</p>
             <p>DIOMEDES, a Greek chieftain, famous for valour.</p>
@@ -116,15 +276,44 @@
             <p>CHORUS of Trojan Guards with their LEADER.</p>
             <p>Some THRACIANS with their CAPTAIN, Attendants, etc.</p>
          </note>
-         <note resp="editor" place="inline">The date and authorship of the play are unknown; it probably belongs to the Fifth Century B.C., and is attributed to Euripides.</note>
-         <note resp="editor" place="inline">THE play presupposes a knowledge of the Iliad in some form, if not exactly in the form which it now wears. We are not only supposed to know that Hector, son of Priam, leads the Trojans and their allies (<q type="written">Trojans, and Lycians, and Dardans bold</q>: in tragedy they are also called Phrygians) in defence against the Greeks—Argives, Achaeans, Hellênes—under Agamemnon, king of men, and his brother Menelaüs, husband of Helen. This sort of supposition is usual in all Greek tragedy. It merely means that the poet takes for granted the main outlines of the heroic saga. But in this play we are also supposed to take up the story as it stands at the opening of the Doloneia or Tenth Book of the <title>Iliad</title>. Indeed one might almost say that the <title>Rhesus</title> is simply the Doloneia turned into drama and set in the Trojan camp. The only other play that is taken straight from Homer is the Satyr-play, <title>Cyclops</title>, which tells the story of <title>Odyssey</title> IX., but it is likely enough that if we possessed more of the earlier epic literature we should find many other plays closely hugging their traditional sources.—The Trojans are camping out on the field of battle, close to the Greek lines. Hector, always ready for danger, seems to have his tent or log-hut set up quite in the van, just behind the outposts. In Il. X. 415 ff. he is holding counsel with the other chieftains <q type="written">away from the throng</q>; the allies are taking their sleep and trusting to the Trojans, who keep awake in groups round the camp fires; no watchword is mentioned.</note>
+         <note resp="editor" place="inline">The date and authorship of the play are unknown; it
+            probably belongs to the Fifth Century B.C., and is attributed to Euripides.</note>
+         <note resp="editor" place="inline">THE play presupposes a knowledge of the Iliad in some
+            form, if not exactly in the form which it now wears. We are not only supposed to know
+            that Hector, son of Priam, leads the Trojans and their allies (<q type="written">Trojans,
+            and Lycians, and Dardans bold</q>: in tragedy they are also called Phrygians) in defence
+            against the Greeks—Argives, Achaeans, Hellênes—under Agamemnon, king of men, and his
+            brother Menelaüs, husband of Helen. This sort of supposition is usual in all Greek
+            tragedy. It merely means that the poet takes for granted the main outlines of the heroic
+            saga. But in this play we are also supposed to take up the story as it stands at the
+            opening of the Doloneia or Tenth Book of the <title>Iliad</title>. Indeed one might
+            almost say that the <title>Rhesus</title> is simply the Doloneia turned into drama and
+            set in the Trojan camp. The only other play that is taken straight from Homer is the
+            Satyr-play, <title>Cyclops</title>, which tells the story of <title>Odyssey</title> IX.,
+            but it is likely enough that if we possessed more of the earlier epic literature we
+            should find many other plays closely hugging their traditional sources.—The Trojans are
+            camping out on the field of battle, close to the Greek lines. Hector, always ready for
+            danger, seems to have his tent or log-hut set up quite in the van, just behind the
+            outposts. In Il. X. 415 ff. he is holding counsel with the other chieftains <q
+               type="written">away from the throng</q>; the allies are taking their sleep and
+            trusting to the Trojans, who keep awake in groups round the camp fires; no watchword is
+            mentioned.</note>
          <div type="choral">
             <div type="anapests">
                <sp>
                   <speaker>VARIOUS VOICES.</speaker>
-                  <stage rend="outdent">It is a cloudy but moonlight night on the plain before <placeName key="perseus,Troy">Troy</placeName>. The Trojans and their allies have won a decisive victory and are camping on the open field close to the Greek outposts. The scene is in front of a rude tent or hut that has been set up for HECTOR, the Trojan leader. A watch-fire burns low in front. Far off at the back can be seen rows of watch-fires in the Greek camp. The road to <placeName key="perseus,Troy">Troy</placeName> is in front to the left; the road to <placeName key="tgn,1105013">Mount Ida</placeName> leads far away to the right.</stage>
-                  <stage rend="outdent">All is silence; then a noise outside. Enter tumultuously a band of Trojan Pickets.</stage>
-                  <note resp="editor" place="inline">(The dash — in these passages indicates a new speaker.)</note>
+                  <stage rend="outdent">It is a cloudy but moonlight night on the plain before <placeName
+                        key="perseus,Troy">Troy</placeName>. The Trojans and their allies have won a
+                     decisive victory and are camping on the open field close to the Greek outposts.
+                     The scene is in front of a rude tent or hut that has been set up for HECTOR,
+                     the Trojan leader. A watch-fire burns low in front. Far off at the back can be
+                     seen rows of watch-fires in the Greek camp. The road to <placeName
+                        key="perseus,Troy">Troy</placeName> is in front to the left; the road to <placeName
+                        key="tgn,1105013">Mount Ida</placeName> leads far away to the right.</stage>
+                  <stage rend="outdent">All is silence; then a noise outside. Enter tumultuously a
+                     band of Trojan Pickets.</stage>
+                  <note resp="editor" place="inline">(The dash — in these passages indicates a new
+                     speaker.)</note>
                   <l rend="indent" n="1">On to the Prince’s quarters!—Ho!</l>
                   <l n="2">Who is awake? What man-at-arms,</l>
                   <l n="3">Or squire or groom?—Let Hector know</l>
@@ -137,7 +326,7 @@
                   <l n="9">Up from thy leaf-strewn bed!—</l>
                   <l n="10">Lord Hector!</l>
                </sp>
-               <pb xml:id="p.4"/>
+               <pb xml:id="p.4" />
                <sp>
                   <speaker>HECTOR</speaker>
                   <stage rend="italic">(coming out from the tent).</stage>
@@ -170,7 +359,7 @@
                   <l n="22" rend="indent">And gateways of the Greek?</l>
                </sp>
             </div>
-            <milestone unit="card" resp="perseus" n="23"/>
+            <milestone unit="card" resp="perseus" n="23" />
             <div type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -182,22 +371,24 @@
                   <l n="26">Of sleep.—Let someone fly</l>
                   <l n="27">And get the horses’ armour on!—</l>
                   <l n="28">Who goes with me to Panthoös’ son?—</l>
-                  <pb xml:id="p.5"/>
+                  <pb xml:id="p.5" />
                   <l n="29">Who’s for Sarpêdon and the Lycians?—None</l>
-                  <l n="30">Hath seen the priest<note resp="editor">P. 5, 1. 30, The priest.]—He would be needed to make the sacrifice before battle.</note> go by?—</l>
+                  <l n="30">Hath seen the priest<note resp="editor">P. 5, 1. 30, The priest.]—He
+                     would be needed to make the sacrifice before battle.</note> go by?—</l>
                   <l n="31">Ho, Captain of the Runners, ho!—</l>
                   <l n="32">Ho, Trojans of the hornèd bow!</l>
                   <l n="33">String, string! For need is nigh.</l>
                </sp>
             </div>
-            <milestone unit="card" resp="perseus" n="34"/>
+            <milestone unit="card" resp="perseus" n="34" />
             <div type="anapests">
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="34">Ha, silence there! . . .</l>
                   <l n="35">First words of fear,</l>
                   <l n="36">Then comfort. All an empty swell!</l>
-                  <l n="37">It seems The lash of trembling Pan<note resp="editor">P. 5, 1. 36, The lash of trembling Pan.]—i.e., a panic.</note>
+                  <l n="37">It seems The lash of trembling Pan<note resp="editor">P. 5, 1. 36, The
+                     lash of trembling Pan.]—i.e., a panic.</note>
                   </l>
                   <l n="38">Hath caught you. Speak, if speak ye can.</l>
                   <l n="39">What tidings? Not a word is clear</l>
@@ -205,15 +396,30 @@
                </sp>
                <stage rend="italic">[The turmoil subsides, the LEADER comes forward.</stage>
             </div>
-            <milestone unit="card" resp="perseus" n="41"/>
+            <milestone unit="card" resp="perseus" n="41" />
             <div type="antistrophe">
                <sp>
                   <speaker>LEADER.</speaker>
                   <note rend="margin" resp="editor">[Antistr.</note>
-                  <l rend="indent" n="41">Great beacons in the <placeName key="tgn,5001993">Argive</placeName> line<note resp="editor">P. 5, 1. 41, Great beacons in the <placeName key="tgn,5001993">Argive</placeName> line.]— In the Iliad it is the Trojan watch-fires that are specially mentioned, especially VIII. 553-end. There is no great disturbance in the Greek camp in the Doloneia; there is a gathering of the principal chiefs, a visit to the Guards, and the despatch of the two spies, but no general tumult such as there is in Book II. One cannot help wondering whether our playwright found in his version of the Doloneia a description of fires in the Greek camp, such as our Eighth Book has of those in the Trojan camp. The object might be merely protection against a night attack, or it might be a wish to fly, as Hector thinks.  If so, presumably the Assembly changed its mind— much as it does in our Book II.—and determined to send spies.</note>
+                  <l rend="indent" n="41">Great beacons in the <placeName key="tgn,5001993">Argive</placeName>
+                     line<note resp="editor">P. 5, 1. 41, Great beacons in the <placeName
+                           key="tgn,5001993">Argive</placeName> line.]— In the Iliad it is the
+                     Trojan watch-fires that are specially mentioned, especially VIII. 553-end.
+                     There is no great disturbance in the Greek camp in the Doloneia; there is a
+                     gathering of the principal chiefs, a visit to the Guards, and the despatch of
+                     the two spies, but no general tumult such as there is in Book II. One cannot
+                     help wondering whether our playwright found in his version of the Doloneia a
+                     description of fires in the Greek camp, such as our Eighth Book has of those in
+                     the Trojan camp. The object might be merely protection against a night attack,
+                     or it might be a wish to fly, as Hector thinks. If so, presumably the Assembly
+                     changed its mind— much as it does in our Book II.—and determined to send spies.</note>
                   </l>
                   <l n="42">Have burned, my chief, through half the night.</l>
-                  <l n="43">The shipyard timbers<note resp="editor">P. 5, 1. 43 ff., The shipyard timbers.]—The Greeks had their ships drawn up on the beach and protected by some sort of wooden <q type="soCalled">shipyard</q>; then came the camp; then, outside the whole, a trench and a wall.  The fires were in the camp.</note> seemed to shine.</l>
+                  <l n="43">The shipyard timbers<note resp="editor">P. 5, 1. 43 ff., The shipyard
+                     timbers.]—The Greeks had their ships drawn up on the beach and protected by
+                     some sort of wooden <q type="soCalled">shipyard</q>; then came the camp; then,
+                     outside the whole, a trench and a wall. The fires were in the camp.</note>
+                     seemed to shine.</l>
                   <l n="44">Then, clear against the light,</l>
                   <l n="45">Toward Agamemnon’s tent the whole</l>
                   <l n="46">Army in tumult seemed to roll,</l>
@@ -225,14 +431,14 @@
                </sp>
             </div>
          </div>
-         <milestone unit="card" resp="perseus" n="52"/>
+         <milestone unit="card" resp="perseus" n="52" />
          <div type="episode">
             <sp>
                <speaker>HECTOR.</speaker>
                <stage rend="italic">(after a moment of thought)</stage>
                <l rend="indent" n="52">No! Welcome, friend, with all thy tale of fear!</l>
                <l n="53">It shows they mean to fly: they mean to clear</l>
-               <pb xml:id="p.6"/>
+               <pb xml:id="p.6" />
                <l n="54">Decks in the dark and so delude my sight . . .</l>
                <l n="55">I like that beacon-burning in the night.</l>
                <l n="56" rend="indent">O Zeus above, who checked my conquering way,</l>
@@ -268,7 +474,7 @@
                <speaker>HECTOR.</speaker>
                <l rend="indent" n="78">What makes them light their beacons? Tell me, what?</l>
             </sp>
-            <pb xml:id="p.7"/>
+            <pb xml:id="p.7" />
             <sp>
                <speaker>LEADER.</speaker>
                <l rend="indent" n="79">God knows! And, for my part, I like it not.</l>
@@ -294,7 +500,7 @@
                <speaker>HECTOR.</speaker>
                <l rend="indent" n="84">My word is simple. Arm and face the foe.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="85"/>
+            <milestone unit="card" resp="perseus" n="85" />
             <stage rend="italic">[A sound of marching without.</stage>
             <sp>
                <speaker>LEADER.</speaker>
@@ -312,10 +518,11 @@
                <speaker>HECTOR.</speaker>
                <l rend="indent" n="90">To arms, Aeneas! Arm from head to heel!</l>
             </sp>
-            <pb xml:id="p.8"/>
+            <pb xml:id="p.8" />
             <sp>
                <speaker>AENEAS.</speaker>
-               <l rend="indent" n="91">What is it? Tidings? Doth the <placeName key="tgn,5001993">Argive</placeName> steal</l>
+               <l rend="indent" n="91">What is it? Tidings? Doth the <placeName key="tgn,5001993">
+                  Argive</placeName> steal</l>
                <l n="92">Some march, some ambush in the day’s eclipse?</l>
             </sp>
             <sp>
@@ -348,12 +555,19 @@
             </sp>
             <sp>
                <speaker>AENEAS.</speaker>
-               <l rend="indent" n="105">Brother, I would thy wit were like thy spear!<note resp="editor">P. 8, 1. 105, Brother! I would thy wit were like thy spear!]—In Homer Hector is impulsive and over-daring, but still good in counsel. On the stage every quality that is characteristic is apt to be over-emphasized, all that is not characteristic neglected.  Hence on the Attic stage Odysseus is more crafty, Ajax and Diomedes more blunt, Menelaus more unwarlike and more uxorious than in Homer.  This speech of Aeneas, though not inapposite, is rather didactic—a fault which always remained a danger to Euripides.</note>
+               <l rend="indent" n="105">Brother, I would thy wit were like thy spear!<note
+                     resp="editor">P. 8, 1. 105, Brother! I would thy wit were like thy spear!]—In
+                  Homer Hector is impulsive and over-daring, but still good in counsel. On the stage
+                  every quality that is characteristic is apt to be over-emphasized, all that is not
+                  characteristic neglected. Hence on the Attic stage Odysseus is more crafty, Ajax
+                  and Diomedes more blunt, Menelaus more unwarlike and more uxorious than in Homer.
+                  This speech of Aeneas, though not inapposite, is rather didactic—a fault which
+                  always remained a danger to Euripides.</note>
                </l>
                <l n="106">But Nature wills not one man should be wise</l>
                <l n="107">In all things; each must seek his separate prize.</l>
                <l n="108">And thine is battle pure. There comes this word</l>
-               <pb xml:id="p.9"/>
+               <pb xml:id="p.9" />
                <l n="109">Of beacons, on the touch thy soul is stirred:</l>
                <l n="110">
                   <q type="spoken">They fly! Out horse and chariots!</q>—Out withal</l>
@@ -373,13 +587,14 @@
                <l n="123">Nay, brother, let the army, head on shield,</l>
                <l n="124">Sleep off its long day’s labour in the field:</l>
                <l n="125">Then, send a spy; find someone who will dare</l>
-               <l n="126">Creep to yon <placeName key="tgn,5001993">Argive</placeName> camp. Then, if ’tis clear</l>
+               <l n="126">Creep to yon <placeName key="tgn,5001993">Argive</placeName> camp. Then,
+                  if ’tis clear</l>
                <l n="127">They mean flight, on and smite them as they fly.</l>
                <l n="128">Else, if the beacons hide some strategy,</l>
                <l n="129">The spy will read it out, and we can call</l>
                <l n="130">A council.—Thus speak I, my general.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="131"/>
+            <milestone unit="card" resp="perseus" n="131" />
             <div type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -392,13 +607,14 @@
                   <l n="136">For what strange work those beacons burn</l>
                   <l n="136a">All night beside the guarded wave.</l>
                </sp>
-               <pb xml:id="p.10"/>
-               <milestone unit="card" resp="perseus" n="137"/>
+               <pb xml:id="p.10" />
+               <milestone unit="card" resp="perseus" n="137" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="137">Ye all so wish it?—Well, ye conquer me.</l>
                   <l n="138">
-                     <stage rend="italic">(To AENEAS)</stage>  Go thou and calm the allies. There will be</l>
+                     <stage rend="italic">(To AENEAS)</stage> Go thou and calm the allies. There
+                     will be</l>
                   <l n="139">Some stir among them, hearing of these high</l>
                   <l n="140">And midnight councils.—I will seek the spy</l>
                   <l n="140a">To send to the Greek camp. If there we learn</l>
@@ -412,7 +628,8 @@
                <sp>
                   <speaker>AENEAS.</speaker>
                   <l rend="indent" n="147">Aye, haste and send him. Now thy plans are wise,</l>
-                  <l n="148">And when need comes I am with thee, sword by sword.  <stage rend="italic">[Exit AENEAS.</stage>
+                  <l n="148">And when need comes I am with thee, sword by sword. <stage
+                        rend="italic">[Exit AENEAS.</stage>
                   </l>
                </sp>
                <sp>
@@ -428,19 +645,31 @@
                <stage rend="italic">[A lean dark man pushes forward from the back.</stage>
                <sp>
                   <speaker>DOLON</speaker>
-                  <note resp="editor">P. 10, l. 150 ff., Dolon.]—The name is derived from <emph>dolos</emph>, <q type="gloss">craft.</q> In our version of Homer Dolon merely wears, over his tunic, the skin of a grey wolf. He has a leather cap and a bow.  In the play he goes, as Red Indian spies used to go, actually disguised as a wolf, on all fours in a complete wolf-skin. The same version is found on the <placeName key="tgn,7004333">Munich</placeName> cylix of the early vase-painter Euphronius (about 500 B.C.), in which Dolon wears a tight-fitting hairy skin with a long tail. The plan can of course only succeed in a country where wild animals are common enough to be thought unimportant. The playwright has evidently chosen a more primitive and romantic version of the story; the Homeric reviser has, as usual, cut out what might seem ridiculous. (See J. A. K. Thomson in Classical Review, xxv. pp. 238 f.).</note>
+                  <note resp="editor">P. 10, l. 150 ff., Dolon.]—The name is derived from <emph>
+                     dolos</emph>, <q type="gloss">craft.</q> In our version of Homer Dolon merely
+                     wears, over his tunic, the skin of a grey wolf. He has a leather cap and a bow.
+                     In the play he goes, as Red Indian spies used to go, actually disguised as a
+                     wolf, on all fours in a complete wolf-skin. The same version is found on the <placeName
+                        key="tgn,7004333">Munich</placeName> cylix of the early vase-painter
+                     Euphronius (about 500 B.C.), in which Dolon wears a tight-fitting hairy skin
+                     with a long tail. The plan can of course only succeed in a country where wild
+                     animals are common enough to be thought unimportant. The playwright has
+                     evidently chosen a more primitive and romantic version of the story; the
+                     Homeric reviser has, as usual, cut out what might seem ridiculous. (See J. A.
+                     K. Thomson in Classical Review, xxv. pp. 238 f.).</note>
                   <l rend="indent" n="154">I, Prince!—I offer for our City’s sake</l>
                   <l n="155">To go disguised to the Greek ships, to make</l>
                   <l n="156">Their counsels mine, and here bring word to thee.</l>
                   <l n="157">If that be thy full service, I agree.</l>
                </sp>
-               <pb xml:id="p.11"/>
+               <pb xml:id="p.11" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="158">Dolon the Wolf! A wise wolf and a true!</l>
                   <l n="159">Thy father’s house was praised when first I knew</l>
                   <l n="160">
-                     <placeName key="tgn,7014164">Troy</placeName>: this shall raise it twofold in our eyes.</l>
+                     <placeName key="tgn,7014164">Troy</placeName>: this shall raise it twofold in
+                     our eyes.</l>
                </sp>
                <sp>
                   <speaker>DOLON.</speaker>
@@ -448,7 +677,7 @@
                   <l n="162">To pay the worker. Aye, and fair reward</l>
                   <l n="163">Makes twofold pleasure, though the work be hard.</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="164"/>
+               <milestone unit="card" resp="perseus" n="164" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="164">So be it: an honest rule. Do thou lay down</l>
@@ -476,9 +705,10 @@
                </sp>
                <sp>
                   <speaker>HECTOR.</speaker>
-                  <l rend="indent" n="171">Well, <placeName key="tgn,7014164">Troy</placeName> hath other treasures manifold.</l>
+                  <l rend="indent" n="171">Well, <placeName key="tgn,7014164">Troy</placeName> hath
+                     other treasures manifold.</l>
                </sp>
-               <pb xml:id="p.12"/>
+               <pb xml:id="p.12" />
                <sp>
                   <speaker>DOLON.</speaker>
                   <l rend="indent" n="172">Pay me not now, but when the Greeks are ta’en.</l>
@@ -493,7 +723,17 @@
                </sp>
                <sp>
                   <speaker>HECTOR.</speaker>
-                  <l rend="indent" n="175">Thou wilt not ask for Ajax, Ileus’ son<note resp="editor">P. 12, 1. 175, Ajax, Ileus’ son.]—<q type="mentioned">Ajax</q> is mentioned here and at 11. 463, 497, 601, as apparently next in importance to the two Atreidae or to Achilles.  That is natural, but it is a shock to have him here described as son of Ileus. In the Iliad we should have had <q type="emph">Ajax son of Telamon.</q> The son of Ileus is <q type="emph">Ajax the less,</q> a hero of the second rank. Scholars have conjectured on other grounds that in some older form of the Iliad-saga Ajax son of Ileus was of much greater importance. The father <q type="emph">Telamon</q> and the connection with <placeName key="tgn,7011087">Aegina</placeName> are neither of them original in the myth.</note>?</l>
+                  <l rend="indent" n="175">Thou wilt not ask for Ajax, Ileus’ son<note resp="editor">P.
+                     12, 1. 175, Ajax, Ileus’ son.]—<q type="mentioned">Ajax</q> is mentioned here
+                     and at 11. 463, 497, 601, as apparently next in importance to the two Atreidae
+                     or to Achilles. That is natural, but it is a shock to have him here described
+                     as son of Ileus. In the Iliad we should have had <q type="emph">Ajax son of
+                     Telamon.</q> The son of Ileus is <q type="emph">Ajax the less,</q> a hero of
+                     the second rank. Scholars have conjectured on other grounds that in some older
+                     form of the Iliad-saga Ajax son of Ileus was of much greater importance. The
+                     father <q type="emph">Telamon</q> and the connection with <placeName
+                           key="tgn,7011087">Aegina</placeName> are neither of them original in the
+                     myth.</note>?</l>
                </sp>
                <sp>
                   <speaker>DOLON.</speaker>
@@ -521,13 +761,20 @@
                </sp>
                <sp>
                   <speaker>DOLON.</speaker>
-                  <l rend="indent" n="182">Achilles’ horses!<note resp="editor">P. 12, 1. 182, Achilles’ horses.]—They are as glorious in the Iliad as they are here. Cf. especially the passages where they bear Automedon out of the battle (end of XVI.), and where <placeName key="tgn,7002633">Xanthos</placeName> is given a human voice to warn his master of the coming of death (end of XIX.). The heroic age of <placeName key="tgn,1000074">Greece</placeName> delighted in horses.  Cf. those of Aeneas, Diomedes, Eumêlus, and Rhesus himself.</note>
-                     <stage rend="italic">Murmurs of surprise.</stage>
+                  <l rend="indent" n="182">Achilles’ horses!<note resp="editor">P. 12, 1. 182,
+                     Achilles’ horses.]—They are as glorious in the Iliad as they are here. Cf.
+                     especially the passages where they bear Automedon out of the battle (end of
+                     XVI.), and where <placeName key="tgn,7002633">Xanthos</placeName> is given a
+                     human voice to warn his master of the coming of death (end of XIX.). The heroic
+                     age of <placeName key="tgn,1000074">Greece</placeName> delighted in horses. Cf.
+                     those of Aeneas, Diomedes, Eumêlus, and Rhesus himself.</note>
+                     <stage
+                        rend="italic">Murmurs of surprise.</stage>
                   </l>
                   <l n="182a" rend="indent">Yes, I need a great</l>
                   <l n="183">Prize. I am dicing for my life with Fate.</l>
                </sp>
-               <pb xml:id="p.13"/>
+               <pb xml:id="p.13" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="184">’Fore God, I am thy rival, if thy love</l>
@@ -549,7 +796,7 @@
                </sp>
                <stage rend="italic">Exit HECTOR.</stage>
             </div>
-            <milestone unit="card" resp="perseus" n="195"/>
+            <milestone unit="card" resp="perseus" n="195" />
             <div type="antistrophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -562,15 +809,16 @@
                   <l n="200">Thou drinkest to the full this night</l>
                   <l n="200a">The cup of man’s imaginings.</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="201"/>
+               <milestone unit="card" resp="perseus" n="201" />
                <sp>
                   <speaker>DOLON.</speaker>
                   <stage rend="italic">He stands waiting a moment looking out into the dark.</stage>
                   <l rend="indent" n="201">There lies the way.—But first I must go find</l>
                   <l n="202">At home some body-shelter to my mind;</l>
-                  <l n="203">Then, forward to the ships of <placeName key="tgn,7002739">Argolis</placeName>!</l>
+                  <l n="203">Then, forward to the ships of <placeName key="tgn,7002739">Argolis</placeName>
+                     !</l>
                </sp>
-               <pb xml:id="p.14"/>
+               <pb xml:id="p.14" />
                <sp>
                   <speaker>LEADER.</speaker>
                   <l rend="indent" n="204">What other raiment wilt thou need than this?</l>
@@ -614,12 +862,23 @@
                <stage rend="italic">Exit DOLON.</stage>
             </div>
          </div>
-         <pb xml:id="p.15"/>
-         <milestone unit="card" resp="perseus" n="224"/>
+         <pb xml:id="p.15" />
+         <milestone unit="card" resp="perseus" n="224" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
-                  <speaker>CHORUS.<note resp="editor">P. 15, 11. 225-263, Chorus.]—Apollo is appealed to as a God of Thymbra in the Troad, of Delos the Ionian island, and of Lycia in the South of Asia Minor; the god of Asiatics and barbaroi, the enemy of the Achaeans. This is also to a great extent the conception of Apollo in the Iliad, where he fights for Troy and is Hector’s special patron. The sudden ferocity towards Helen in the last strophe is quite in the manner of Euripides; cf. Trojan Women, 1107 ff. (p. 65), 766 ff. (p. 49), and often; also Iph. Taur.  438 ff. (p. 21), where her name comes somewhat as a surprise.  The stage directions here are of course conjectural: it does not seem likely that the playwright, having made Dolon describe his wolf’s disguise in detail, would waste the opportunity of making him crawl off in it.  Cf. on 1. 594, p. 63, and at the end of the play.</note>
+                  <speaker>CHORUS.<note resp="editor">P. 15, 11. 225-263, Chorus.]—Apollo is
+                     appealed to as a God of Thymbra in the Troad, of Delos the Ionian island, and
+                     of Lycia in the South of Asia Minor; the god of Asiatics and barbaroi, the
+                     enemy of the Achaeans. This is also to a great extent the conception of Apollo
+                     in the Iliad, where he fights for Troy and is Hector’s special patron. The
+                     sudden ferocity towards Helen in the last strophe is quite in the manner of
+                     Euripides; cf. Trojan Women, 1107 ff. (p. 65), 766 ff. (p. 49), and often; also
+                     Iph. Taur. 438 ff. (p. 21), where her name comes somewhat as a surprise. The
+                     stage directions here are of course conjectural: it does not seem likely that
+                     the playwright, having made Dolon describe his wolf’s disguise in detail, would
+                     waste the opportunity of making him crawl off in it. Cf. on 1. 594, p. 63, and
+                     at the end of the play.</note>
                   </speaker>
                   <l rend="indent" n="224">Thymbraean, Delian, Birth divine, </l>
                   <l n="225">That walkest Lycia’s inmost shrine,</l>
@@ -628,11 +887,12 @@
                   <l n="228">To help thy Dardans as of old,</l>
                   <l n="229">When stone by stone thy music rolled—</l>
                   <l n="230">O conquering Strength, O Sire Apollo!—</l>
-                  <l n="231">Young <placeName key="tgn,7002329">Ilion</placeName> into towers of light.</l>
+                  <l n="231">Young <placeName key="tgn,7002329">Ilion</placeName> into towers of
+                     light.</l>
                </sp>
                <note resp="perseus">numeration out of sync: 232 omitted </note>
             </div>
-            <milestone unit="card" resp="perseus" n="233"/>
+            <milestone unit="card" resp="perseus" n="233" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -647,7 +907,7 @@
                </sp>
                <note resp="perseus">numeration out of sync: 241-242 omitted </note>
             </div>
-            <milestone unit="card" resp="perseus" n="242"/>
+            <milestone unit="card" resp="perseus" n="242" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -657,13 +917,14 @@
                   <l n="246">When seas across the bulwark break,</l>
                   <l n="247">And sunlight sickens o’er the crew.</l>
                   <note resp="perseus">numeration out of sync: 248-249 omitted </note>
-                  <l n="250">Ah, <placeName key="tgn,7002613">Phrygia</placeName> still hath hearts of rock!</l>
+                  <l n="250">Ah, <placeName key="tgn,7002613">Phrygia</placeName> still hath hearts
+                     of rock!</l>
                   <l n="251">The Phrygian spear flies fast and far!</l>
                   <l n="252">Where shall ye find the fool to mock</l>
                   <l n="253">Our works in war?</l>
                </sp>
             </div>
-            <milestone unit="card" resp="perseus" n="254"/>
+            <milestone unit="card" resp="perseus" n="254" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -671,30 +932,40 @@
                   <l n="255">The quick grey wolf, the crawling doom?</l>
                   <note resp="perseus">numeration out of sync: 256 omitted </note>
                   <l n="257">Grant that he slay the Spartan! Nay,</l>
-                  <pb xml:id="p.16"/>
+                  <pb xml:id="p.16" />
                   <l n="258">Or Agamemnon’s head and plume</l>
                   <note resp="perseus">numeration out of sync: 259 omitted </note>
                   <l n="260">To Helen bear at dawn of day!</l>
                   <l n="260a">A lightsome dawn to hear her wail</l>
                   <l n="261">Her brother sworn, her King who came</l>
-                  <l n="262">To <placeName key="tgn,7002329">Ilion</placeName> with his thousand sail,</l>
-                  <l n="263">And swords, and flame!  <stage rend="italic">As the song ends DOLON reappears, in the disguise of a wolf. The Guards gather round him, bidding him godspeed as he crawls off in the dark towards the Greek camp. Meantime from the direction of <placeName key="tgn,1105013">Mount Ida</placeName> has entered a SHEPHERD who goes to HECTOR’S door and calls. The Guards seeing him return to their places.</stage>
+                  <l n="262">To <placeName key="tgn,7002329">Ilion</placeName> with his thousand
+                     sail,</l>
+                  <l n="263">And swords, and flame! <stage rend="italic">As the song ends DOLON
+                     reappears, in the disguise of a wolf. The Guards gather round him, bidding him
+                     godspeed as he crawls off in the dark towards the Greek camp. Meantime from the
+                     direction of <placeName key="tgn,1105013">Mount Ida</placeName> has entered a
+                     SHEPHERD who goes to HECTOR’S door and calls. The Guards seeing him return to
+                     their places.</stage>
                   </l>
                </sp>
             </div>
          </div>
-         <milestone unit="card" resp="perseus" n="264"/>
+         <milestone unit="card" resp="perseus" n="264" />
          <div type="episode">
             <sp>
                <speaker>SHEPHERD.</speaker>
-               <l rend="indent" n="264">Ho, Master!  <stage rend="italic">Enter HECTOR from tent.</stage>
+               <l rend="indent" n="264">Ho, Master! <stage rend="italic">Enter HECTOR from tent.</stage>
                </l>
                <l n="264a">I would it ofttimes were my luck to share</l>
                <l n="265">As goodly news with thee as now I bear.</l>
             </sp>
             <sp>
                <speaker>HECTOR.</speaker>
-               <l rend="indent" n="266">What dulness hangs about these shepherds! Block,<note resp="editor">P. 16, 1. 267. Hector is as bluff and hasty here as he is impulsively obstinate in 1. 319 ff., p. 19, impulsively frank to Rhesus in 1. 393 ff., p. 23, and splendidly courteous under the gibes of the wounded charioteer, 1. 856 ff., p. 47. A fine stage character, if not a very subtle study.</note>
+               <l rend="indent" n="266">What dulness hangs about these shepherds! Block,<note
+                     resp="editor">P. 16, 1. 267. Hector is as bluff and hasty here as he is
+                  impulsively obstinate in 1. 319 ff., p. 19, impulsively frank to Rhesus in 1. 393
+                  ff., p. 23, and splendidly courteous under the gibes of the wounded charioteer, 1.
+                  856 ff., p. 47. A fine stage character, if not a very subtle study.</note>
                </l>
                <l n="267">Com’st thou to us with tidings of thy flock</l>
                <l n="268">Here in the field in arms? Who wants thee here?</l>
@@ -707,7 +978,7 @@
                <l rend="indent" n="271">Dull wits, we shepherds! Aye, ’twas alway so.</l>
                <l n="272">Yet still, there is some good news to be told.</l>
             </sp>
-            <pb xml:id="p.17"/>
+            <pb xml:id="p.17" />
             <sp>
                <speaker>HECTOR.</speaker>
                <l rend="indent" n="273">A truce there to thy gossip of the fold!</l>
@@ -727,7 +998,8 @@
             </sp>
             <sp>
                <speaker>SHEPHERD.</speaker>
-               <l rend="indent" n="279">He comes from <placeName key="tgn,7002756">Thrace</placeName>, the River Strymon’s son.</l>
+               <l rend="indent" n="279">He comes from <placeName key="tgn,7002756">Thrace</placeName>,
+                  the River Strymon’s son.</l>
             </sp>
             <sp>
                <speaker>HECTOR.</speaker>
@@ -742,21 +1014,26 @@
                <l rend="indent" n="282">What makes he there towards Ida? All astray</l>
                <l n="283">Thus from the plain and the broad waggon-way!</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="284"/>
+            <milestone unit="card" resp="perseus" n="284" />
             <sp>
                <speaker>SHEPHERD.</speaker>
-               <l rend="indent" n="284">I know not rightly, though one well may guess.<note>P. 17, l. 284 ff. The description of the march of the mountaineers, the vast crowd, the noise, the mixture of all arms, suggests personal observation. A great many fifth-century Athenians had probably served some time or other in <placeName key="tgn,7002756">Thrace</placeName>.</note>
+               <l rend="indent" n="284">I know not rightly, though one well may guess.<note>P. 17,
+                  l. 284 ff. The description of the march of the mountaineers, the vast crowd, the
+                  noise, the mixture of all arms, suggests personal observation. A great many
+                  fifth-century Athenians had probably served some time or other in <placeName
+                        key="tgn,7002756">Thrace</placeName>.</note>
                </l>
                <l n="285">’Tis hard to land at night, with such a press</l>
                <l n="286">Of spears, on a strange coast, where rumours tell</l>
                <l n="286a">Of foes through all the plain-land. We that dwell</l>
                <l n="287">On Ida, in the rock, Troy’s ancient root</l>
-               <pb xml:id="p.18"/>
+               <pb xml:id="p.18" />
                <l n="288">And hearth-stone, were well frighted, through the mute</l>
                <l n="289">And wolfish thickets thus to hear him break.</l>
                <l n="290">A great and rushing noise those Thracians make,</l>
                <l n="291">Marching. We, all astonied, ran to drive</l>
-               <l n="292">Our sheep to the upmost heights. ’Twas some <placeName key="tgn,5001993">Argive</placeName>,</l>
+               <l n="292">Our sheep to the upmost heights. ’Twas some <placeName key="tgn,5001993">
+                  Argive</placeName>,</l>
                <l n="293">We thought, who came to sweep the mountain clear</l>
                <l n="294">And waste thy folds; till suddenly our ear</l>
                <l n="294a">Caught at their speech, and knew ’twas nothing Greek.</l>
@@ -768,7 +1045,8 @@
                   <q type="spoken" rend="merge">Doth lead you? From what nation do ye bring</q>
                </l>
                <l n="299">
-                  <q type="spoken" rend="merge">This host with aid to <placeName key="tgn,7002329">Ilion</placeName> and her king?</q>
+                  <q type="spoken" rend="merge">This host with aid to <placeName key="tgn,7002329">
+                     Ilion</placeName> and her king?</q>
                </l>
                <l n="300" rend="indent">He told me what I sought, and there I stood</l>
                <l n="301">Watching; and saw one gleaming like a God,</l>
@@ -785,17 +1063,19 @@
                <l n="311">Long lines of horsemen, lines of targeteers,</l>
                <l n="312">Archers abundant; and behind them veers</l>
                <l n="313">A wavering horde, light-armed, in Thracian weed.</l>
-               <l n="314" rend="indent">A friend is come to <placeName key="tgn,7002329">Ilion</placeName> in her need</l>
-               <l n="315">’Gainst whom no <placeName key="tgn,5001993">Argive</placeName>, let him fly or stand,</l>
+               <l n="314" rend="indent">A friend is come to <placeName key="tgn,7002329">Ilion</placeName>
+                  in her need</l>
+               <l n="315">’Gainst whom no <placeName key="tgn,5001993">Argive</placeName>, let him
+                  fly or stand,</l>
                <l n="316">Shall aught avail nor ’scape his conquering hand.</l>
             </sp>
-            <pb xml:id="p.19"/>
+            <pb xml:id="p.19" />
             <sp>
                <speaker>LEADER.</speaker>
                <l rend="indent" n="317">Lo, when the Gods breathe gently o’er a town,</l>
                <l n="318">All runs to good, as water-streams run down.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="319"/>
+            <milestone unit="card" resp="perseus" n="319" />
             <sp>
                <speaker>HECTOR.</speaker>
                <stage rend="italic">(bitterly)</stage>
@@ -807,7 +1087,8 @@
                <l n="324">Then Rhesus taught us Trojans what avail</l>
                <l n="325">His words are.—He comes early to the feast;</l>
                <l n="325a">Where was he when the hunters met the beast?</l>
-               <l n="326">Where, when we sank beneath the <placeName key="tgn,5001993">Argive</placeName> spear?</l>
+               <l n="326">Where, when we sank beneath the <placeName key="tgn,5001993">Argive</placeName>
+                  spear?</l>
             </sp>
             <sp>
                <speaker>LEADER.</speaker>
@@ -827,7 +1108,7 @@
                <speaker>HECTOR.</speaker>
                <l rend="indent" n="331">I do. To-morrow’s light will show.</l>
             </sp>
-            <pb xml:id="p.20"/>
+            <pb xml:id="p.20" />
             <sp>
                <speaker>LEADER.</speaker>
                <l rend="indent" n="332">Have care. Fate often flings a backward cast.</l>
@@ -852,24 +1133,36 @@
             <sp>
                <speaker>HECTOR.</speaker>
                <stage rend="italic">(yielding reluctantly, with a laugh)</stage>
-               <l rend="indent" n="339">Ah, well; thy words are prudent; and  <stage rend="italic">(To SHEPHERD)</stage>  thine eyes</l>
+               <l rend="indent" n="339">Ah, well; thy words are prudent; and <stage rend="italic">(To
+                  SHEPHERD)</stage> thine eyes</l>
                <l n="339a">See glorious things. With all these panoplies</l>
                <l n="340">Of gold that filled our Shepherd’s heart with joy,</l>
                <l n="341">Bid Rhesus welcome, as war-friend to Troy.</l>
             </sp>
             <stage rend="italic">Exit SHEPHERD; HECTOR returns to his tent,
-		    amid the joy of the soldiers.</stage>
+               amid the joy of the soldiers.</stage>
          </div>
-         <milestone unit="card" resp="perseus" n="342"/>
+         <milestone unit="card" resp="perseus" n="342" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
-                  <l rend="indent" n="342">Now Adrasteia<note resp="editor">P. 20, l. 342, Adrasteia.]—She-from-whom-there-is-no-Running, is a goddess identified with Nemesis, a requiter of sin, especially the sin of pride or over-confidence. In spite of the opening apology this whole chorus, with its boundless exultation, is an offence against her.—It is interesting to notice that a town and a whole district in the north of the Troad was called by her name; the poet is using local colour in making his Trojans here, and Rhesus in l. 468, speak of her. There seems also to be something characteristically Thracian in the story of the Muse and the River, in the title <q type="emph">Zeus of the Dawn</q> given to Rhesus, in the revelry to be held when <placeName key="tgn,7002329">Ilion</placeName> is free, and in the conception of the king in his dazzling chariot, Sun-god-like.</note> be near and guard</l>
+                  <l rend="indent" n="342">Now Adrasteia<note resp="editor">P. 20, l. 342,
+                     Adrasteia.]—She-from-whom-there-is-no-Running, is a goddess identified with
+                     Nemesis, a requiter of sin, especially the sin of pride or over-confidence. In
+                     spite of the opening apology this whole chorus, with its boundless exultation,
+                     is an offence against her.—It is interesting to notice that a town and a whole
+                     district in the north of the Troad was called by her name; the poet is using
+                     local colour in making his Trojans here, and Rhesus in l. 468, speak of her.
+                     There seems also to be something characteristically Thracian in the story of
+                     the Muse and the River, in the title <q type="emph">Zeus of the Dawn</q> given
+                     to Rhesus, in the revelry to be held when <placeName key="tgn,7002329">Ilion</placeName>
+                     is free, and in the conception of the king in his dazzling chariot,
+                     Sun-god-like.</note> be near and guard</l>
                   <l n="343">Our lips from sin, lest the end be hard!</l>
                   <l n="344">But he cometh, he cometh, the Child of the River!</l>
                   <l n="345">The pride of my heart it shall roll unbarred.</l>
-                  <pb xml:id="p.21"/>
+                  <pb xml:id="p.21" />
                   <l n="346">We craved thy coming; yea, need was strong</l>
                   <l n="347">In the Hall of thy lovers, O child of Song;</l>
                   <l n="348">Thy mother the Muse and her fair-bridged River</l>
@@ -877,7 +1170,7 @@
                </sp>
                <note resp="perseus">numeration out of sync: 350 omitted </note>
             </div>
-            <milestone unit="card" resp="perseus" n="351"/>
+            <milestone unit="card" resp="perseus" n="351" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -892,22 +1185,24 @@
                </sp>
                <note resp="perseus">numeration out of sync: 359 omitted </note>
             </div>
-            <milestone unit="card" resp="perseus" n="360"/>
+            <milestone unit="card" resp="perseus" n="360" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
-                  <l rend="indent" n="360">And men shall tell of thee, <placeName key="tgn,7002329">Ilion</placeName> mine,</l>
+                  <l rend="indent" n="360">And men shall tell of thee, <placeName key="tgn,7002329">
+                     Ilion</placeName> mine,</l>
                   <l n="361">Once more a-harping at day’s decline,</l>
                   <l n="362">’Mid laughing of lovers and lays and dances</l>
                   <l n="363">And challenge on challenge of circling wine?</l>
                   <l n="364">When the Greek is smitten that day shall be,</l>
-                  <l n="365">And fled to <placeName key="tgn,7002739">Argolis</placeName> over the sea:</l>
+                  <l n="365">And fled to <placeName key="tgn,7002739">Argolis</placeName> over the
+                     sea:</l>
                   <l n="366">O mighty of hand, O leader of lances,</l>
                   <l n="367">Smite him, and heaven be good to thee!</l>
                </sp>
                <note resp="perseus">numeration out of sync: 368-369 omitted </note>
             </div>
-            <milestone unit="card" resp="perseus" n="370"/>
+            <milestone unit="card" resp="perseus" n="370" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -918,15 +1213,18 @@
                   <l n="374">No Greek shall boast he hath seen thy face</l>
                   <l n="375">And danced again in the dancing place;</l>
                   <l n="376">And the land shall laugh for the sheaves she reapeth,</l>
-                  <l n="377">Of spoilers dead by a sword from <placeName key="tgn,7002756">Thrace</placeName>.</l>
+                  <l n="377">Of spoilers dead by a sword from <placeName key="tgn,7002756">Thrace</placeName>
+                     .</l>
                </sp>
                <note resp="perseus">numeration out of sync: 378 omitted </note>
             </div>
          </div>
-         <pb xml:id="p.22"/>
-         <milestone unit="card" resp="perseus" n="379"/>
+         <pb xml:id="p.22" />
+         <milestone unit="card" resp="perseus" n="379" />
          <div type="episode">
-            <stage rend="italic">Enter RHESUS in dazzling white armour, followed by his CHARIOTEER and Attendants. The CHARIOTEER carries his golden shield. The CHORUS break into a shout of <q type="spoken">All Hail!</q>
+            <stage rend="italic">Enter RHESUS in dazzling white armour, followed by his CHARIOTEER
+               and Attendants. The CHARIOTEER carries his golden shield. The CHORUS break into a
+               shout of <q type="spoken">All Hail!</q>
             </stage>
             <sp>
                <speaker>LEADER.</speaker>
@@ -944,11 +1242,12 @@
                <l n="386">Of Strymon and the Muse of song,</l>
                <l n="387" rend="indent">Whose breath is fragrant on thy shore!</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="388"/>
+            <milestone unit="card" resp="perseus" n="388" />
             <stage rend="italic">Re-enter HECTOR.</stage>
             <sp>
                <speaker>RHESUS.</speaker>
-               <l rend="indent" n="388">Lord Hector, Prince of <placeName key="tgn,7002329">Ilion</placeName>, noble son</l>
+               <l rend="indent" n="388">Lord Hector, Prince of <placeName key="tgn,7002329">Ilion</placeName>,
+                  noble son</l>
                <l n="389a">Of noble sires, all hail! Long years have run</l>
                <l n="389">Since last we greeted, and ’tis joy this day</l>
                <l n="390">To see thy fortunes firm and thine array</l>
@@ -956,18 +1255,31 @@
                <l n="392">That foe for thee, and wrap his ships in flame.</l>
             </sp>
             <sp>
-               <speaker>HECTOR.
-<note resp="editor">
-                     <p>P. 23, 11. 394-453, Speeches of Hector and Rhesus.] —The scene reads to me like a rather crude and early form of the celebrated psychological controversies of Euripides. It is simple, but spirited and in character. The description of Thracian fighting again suggests personal knowledge, and so does the boasting. The Thracians apparently bound themselves with heroic boasts before battle much as Irish and Highland chieftains sometimes did, or as the Franks did with their gabs. (See, e.g., Le Pèlerinage de Charlemagne, as described in Gaston Paris, Litt. du Moyen Age, I. p. 122 ff.) It was a disgrace if you did not fulfil your gab afterwards.</p>
-                     <p>Rhesus’s defence is apparently true, though in a modern play one would have expected some explanation of the rather different story that his mother tells, l. 933 ff., p. 51. Perhaps he did not realise how she was holding him back. In any case ancient technique prefers to leave such details unsettled: cf., for instance, Helen’s speech in the Trojan Women, in which the false is evidently mixed up with the true, and they are never separated afterwards.</p>
+               <speaker>HECTOR. <note resp="editor">
+                     <p>P. 23, 11. 394-453, Speeches of Hector and Rhesus.] —The scene reads to me
+                  like a rather crude and early form of the celebrated psychological controversies
+                  of Euripides. It is simple, but spirited and in character. The description of
+                  Thracian fighting again suggests personal knowledge, and so does the boasting. The
+                  Thracians apparently bound themselves with heroic boasts before battle much as
+                  Irish and Highland chieftains sometimes did, or as the Franks did with their gabs.
+                  (See, e.g., Le Pèlerinage de Charlemagne, as described in Gaston Paris, Litt. du
+                  Moyen Age, I. p. 122 ff.) It was a disgrace if you did not fulfil your gab
+                  afterwards.</p>
+                     <p>Rhesus’s defence is apparently true, though in a modern play one would have
+                  expected some explanation of the rather different story that his mother tells, l.
+                  933 ff., p. 51. Perhaps he did not realise how she was holding him back. In any
+                  case ancient technique prefers to leave such details unsettled: cf., for instance,
+                  Helen’s speech in the Trojan Women, in which the false is evidently mixed up with
+                  the true, and they are never separated afterwards.</p>
                   </note>
                </speaker>
                <l rend="indent" n="393">Thou child of Music and the Thracian flood,</l>
                <l n="394">Strymonian Rhesus, truth is alway good</l>
                <l n="395">In Hector’s eyes. I wear no double heart.</l>
-               <pb xml:id="p.23"/>
+               <pb xml:id="p.23" />
                <l n="396">Long, long ago thou shouldst have borne thy part</l>
-               <l n="397">In <placeName key="tgn,7002329">Ilion</placeName>’s labours, not have left us here,</l>
+               <l n="397">In <placeName key="tgn,7002329">Ilion</placeName>’s labours, not have left
+                  us here,</l>
                <l n="398">For all thy help, to sink beneath the spear.</l>
                <l n="399">Why didst thou—not for lack of need made plain!—</l>
                <l n="400">Not come, not send, not think of us again?</l>
@@ -982,7 +1294,8 @@
                <l n="407">And made thee mighty, I and this right hand;</l>
                <l n="408">When round Pangaion and the Paiôn’s land,</l>
                <l n="409">Front against front, I burst upon the brood</l>
-               <l n="410">Of <placeName key="tgn,7002756">Thrace</placeName> and broke their targes, and subdued</l>
+               <l n="410">Of <placeName key="tgn,7002756">Thrace</placeName> and broke their targes,
+                  and subdued</l>
                <l n="411">Their power to thine. The grace whereof, not small,</l>
                <l n="412">Thou hast spurned, and when thy kinsmen, drowning, call,</l>
                <l n="413">Comest too late. Thou! Others there have been</l>
@@ -992,14 +1305,15 @@
                <l n="416">And others, yet here in the shielded line</l>
                <l n="416a">Or mid the chariots, parching in the shine</l>
                <l n="417">Of noonday, starving in the winds that bite</l>
-               <l n="417a">Through <placeName key="tgn,7002329">Ilion</placeName>’s winter, still endure and fight</l>
+               <l n="417a">Through <placeName key="tgn,7002329">Ilion</placeName>’s winter, still
+                  endure and fight</l>
                <l n="418">On at my side. ’Twas not their way, to lie</l>
                <l n="418a">On a soft couch and, while the cups go by,</l>
                <l n="419">Pledge my good health, like thee, in Thracian wine.</l>
                <l n="420">I speak as a free man. With thee and thine</l>
                <l n="421">Hector is wroth, and tells thee to thy face.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="422"/>
+            <milestone unit="card" resp="perseus" n="422" />
             <sp>
                <speaker>RHESUS.</speaker>
                <l rend="indent" n="422">Thy way is mine, friend. Straight I run my race</l>
@@ -1013,14 +1327,18 @@
                <l n="429">Of the Friendless Sea and purposed to have crossed</l>
                <l n="429a">My Thracians there. We turned; and all that plain</l>
                <l n="430">Is trampled in a mire of Scythian slain</l>
-               <l n="431">Ploughed by our spears, and blood of <placeName key="tgn,7002756">Thrace</placeName> withal</l>
+               <l n="431">Ploughed by our spears, and blood of <placeName key="tgn,7002756">Thrace</placeName>
+                  withal</l>
                <l n="432">Not stinted. This it was that drowned thy call</l>
-               <l n="433">For help and held me back from <placeName key="tgn,7002329">Ilion</placeName>’s need.</l>
+               <l n="433">For help and held me back from <placeName key="tgn,7002329">Ilion</placeName>’s
+                  need.</l>
                <l n="434">I broke their power; the princes of their breed</l>
                <l n="434a">I took to hostage, made their elders swear</l>
                <l n="435">To bring my house due tribute, year by year,</l>
-               <l n="436">Then, never lagging, crossed the <placeName key="tgn,7016619">Pontus</placeName> mouth,</l>
-               <l n="437">Marched by long stages through <placeName key="tgn,7016608">Bithynia</placeName> south</l>
+               <l n="436">Then, never lagging, crossed the <placeName key="tgn,7016619">Pontus</placeName>
+                  mouth,</l>
+               <l n="437">Marched by long stages through <placeName key="tgn,7016608">Bithynia</placeName>
+                  south</l>
                <l n="438">And here am come . . . not drunken with the feast,</l>
                <l n="439">As thou wouldst have me be, not lulled to rest</l>
                <l n="440">In golden chambers. In this harness hard</l>
@@ -1033,7 +1351,7 @@
                <l n="446a">The same red dice for thee and for thy foes.</l>
                <l n="447">Now, hear my vow. Before one day’s eclipse</l>
                <l n="448">I swear to break their wall, to burn their ships</l>
-               <pb xml:id="p.25"/>
+               <pb xml:id="p.25" />
                <l n="449">And slay their princes. On the second day</l>
                <l n="450">I leave this soil and take my homeward way,</l>
                <l n="451">Thy pains relieved. No Trojan of the land</l>
@@ -1041,11 +1359,16 @@
                <l n="452">Alone my late-comers will turn the tide</l>
                <l n="453">And smite your Greeks, for all their bitter pride.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="454"/>
+            <milestone unit="card" resp="perseus" n="454" />
             <div type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
-                  <stage rend="italic">The Trojan soldiers, who have been listening with delight, here break out in irrepressible applause.<note resp="editor">P. 25, 11. 454 ff. This little Chorus seems to represent—in due tragic convention—an irrepressible outburst of applause from the Trojans, interrupting Rhesus’s speech. In spite of the words about possible <q type="mentioned">wrath</q> that may follow the Thracian’s boasting, the applause excites him at once to a yet bolder gab.</note>
+                  <stage rend="italic">The Trojan soldiers, who have been listening with delight,
+                     here break out in irrepressible applause.<note resp="editor">P. 25, 11. 454 ff.
+                     This little Chorus seems to represent—in due tragic convention—an irrepressible
+                     outburst of applause from the Trojans, interrupting Rhesus’s speech. In spite
+                     of the words about possible <q type="mentioned">wrath</q> that may follow the
+                     Thracian’s boasting, the applause excites him at once to a yet bolder gab.</note>
                   </stage>
                   <l rend="indent" n="454">All hail!</l>
                   <l n="455">Sweet words and faithful heart!</l>
@@ -1062,7 +1385,7 @@
                   <l n="466">Broken beneath thy steel,</l>
                   <l n="466a">And once in blood his many murders pay!</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="467"/>
+               <milestone unit="card" resp="perseus" n="467" />
                <sp>
                   <speaker>RHESUS.</speaker>
                   <l rend="indent" n="467">Yea, more atonement thou shalt take from me</l>
@@ -1071,22 +1394,28 @@
                   <l n="469a">Troy free from these who compass her with hate,</l>
                   <l n="470">Soon as the Gods have had their first-fruits, I</l>
                   <l n="471">With thee will sail—so help me Zeus on high!—</l>
-                  <l n="472">And sack all <placeName key="tgn,1000074">Hellas</placeName> with the sword, till these</l>
+                  <l n="472">And sack all <placeName key="tgn,1000074">Hellas</placeName> with the
+                     sword, till these</l>
                   <l n="473">Doers of deeds shall know what suffering is.</l>
                </sp>
-               <pb xml:id="p.26"/>
+               <pb xml:id="p.26" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="474">By heaven, could I once see this peril rolled</l>
-                  <l n="475">Past us, and live in <placeName key="tgn,7002329">Ilion</placeName> as of old,</l>
+                  <l n="475">Past us, and live in <placeName key="tgn,7002329">Ilion</placeName> as
+                     of old,</l>
                   <l n="476">Untrembling, I would thank my gods! To seek</l>
                   <l n="477">
-                     <placeName key="perseus,Argos">Argos</placeName> and sack the cities of the Greek-</l>
+                     <placeName key="perseus,Argos">Argos</placeName> and sack the cities of the
+                     Greek-</l>
                   <l n="478">’Twere not such light work as thou fanciest.</l>
                </sp>
                <sp>
                   <speaker>RHESUS.</speaker>
-                  <l rend="indent" n="479">These Greeks that face thee, are they not their best?<note resp="editor">P. 26, l. 480. It may be remarked that the play here uses a fairly common Homeric phrase in a sense which the scholars of our tradition knew but rejected.</note>
+                  <l rend="indent" n="479">These Greeks that face thee, are they not their best?<note
+                        resp="editor">P. 26, l. 480. It may be remarked that the play here uses a
+                     fairly common Homeric phrase in a sense which the scholars of our tradition
+                     knew but rejected.</note>
                   </l>
                </sp>
                <sp>
@@ -1112,7 +1441,7 @@
                   <l n="486">To ground the targe and stablish thine array?</l>
                   <l n="487">Right, left, or midmost in the allies? Say.</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="488"/>
+               <milestone unit="card" resp="perseus" n="488" />
                <sp>
                   <speaker>RHESUS.</speaker>
                   <l rend="indent" n="488">’Twould please me best to fight these Greeks alone.</l>
@@ -1120,7 +1449,7 @@
                   <l n="490">One firebrand on the ships with me, why, then</l>
                   <l n="491">Set us to face Achilles and his men.</l>
                </sp>
-               <pb xml:id="p.27"/>
+               <pb xml:id="p.27" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="492">Achilles? Nay, his spear ye cannot meet.</l>
@@ -1144,20 +1473,31 @@
                   <l n="498">Or Diomede.—But Odysseus is a tough</l>
                   <l n="499">And subtle fox, and brave; aye, brave enough.</l>
                   <l n="500">No man of them hath harmed us more than he.</l>
-                  <l n="501">He climbed here to Athena’s sanctuary<note resp="editor">P. 27, l. 501 ff.   These three achievements of Odysseus are all in the traditional saga. The Rapt of the Palladium, or figure of Pallas, by Odysseus and Diomedes, was in an old lost epic, called The Little Iliad; the Begging in <placeName key="perseus,Troy">Troy</placeName> in the Little Iliad and also in Odyssey IV. 242 ff.; the great ambuscades in Odyssey IV. 290 ff., VIII. 493 ff., and in Odysseus’s own feigned story, XIV. 468 ff. According to our tradition they belong to a later period of the war than the death of Rhesus, but perhaps the sequence was different, or not so definite, at the time of this play.</note>
+                  <l n="501">He climbed here to Athena’s sanctuary<note resp="editor">P. 27, l. 501
+                     ff. These three achievements of Odysseus are all in the traditional saga. The
+                     Rapt of the Palladium, or figure of Pallas, by Odysseus and Diomedes, was in an
+                     old lost epic, called The Little Iliad; the Begging in <placeName
+                           key="perseus,Troy">Troy</placeName> in the Little Iliad and also in
+                     Odyssey IV. 242 ff.; the great ambuscades in Odyssey IV. 290 ff., VIII. 493
+                     ff., and in Odysseus’s own feigned story, XIV. 468 ff. According to our
+                     tradition they belong to a later period of the war than the death of Rhesus,
+                     but perhaps the sequence was different, or not so definite, at the time of this
+                     play.</note>
                   </l>
                   <l n="502">One night, and stole her image clean away</l>
-                  <l n="502a">To the <placeName key="tgn,5001993">Argive</placeName> ships. Yes, and another day,</l>
+                  <l n="502a">To the <placeName key="tgn,5001993">Argive</placeName> ships. Yes, and
+                     another day,</l>
                   <l n="503">Guised as a wandering priest, in rags, he came</l>
                   <l n="504">And walked straight through the Gates, made loud acclaim</l>
                   <l n="504a">Of curses on the Greek, spied out alone</l>
-                  <l n="505">All that he sought in <placeName key="tgn,7002329">Ilion</placeName>, and was gone—</l>
+                  <l n="505">All that he sought in <placeName key="tgn,7002329">Ilion</placeName>,
+                     and was gone—</l>
                   <l n="506">Gone, and the watch and helpers of the Gate</l>
                   <l n="507">Dead! And in every ambush they have set</l>
                   <l n="508">By the old Altar, close to Troy, we know</l>
                   <l n="509">He sits—a murderous reptile of a foe!</l>
                </sp>
-               <pb xml:id="p.28"/>
+               <pb xml:id="p.28" />
                <sp>
                   <speaker>RHESUS.</speaker>
                   <l rend="indent" n="510">No brave man seeks so dastardly to harm</l>
@@ -1168,7 +1508,8 @@
                   <l n="515">Stake through him, and so star him at the Gate</l>
                   <l n="516">To feed your wide-winged vultures. ’Tis the death</l>
                   <l n="516a">Most meet for a lewd thief, who pillageth</l>
-                  <l n="517">God’s sanctuary, or so we hold in <placeName key="tgn,7002756">Thrace</placeName>.</l>
+                  <l n="517">God’s sanctuary, or so we hold in <placeName key="tgn,7002756">Thrace</placeName>
+                     .</l>
                </sp>
                <sp>
                   <speaker>HECTOR.</speaker>
@@ -1182,25 +1523,54 @@
                   <l n="523">Advance beyond your stations, men, at some</l>
                   <l n="524">Distance, and stay on watch till Dolon come</l>
                   <l n="525">With word of the Argives’ counsel. If his vow</l>
-                  <l n="526">Prosper, he should be nearing us by now.<note resp="editor">P. 28, l. 528. Rhesus shows the simple courage of a barbarian in his contempt for the ruses of Odysseus, the brutality of a barbarian in the methods of punishment he proposes.  Such proposals would disgust a Greek; it looks as if they displeased Hector. In any case his abruptness here, and his careful indication of the place where the Thracians are to sleep, far from the rest of the camp, have some dramatic value for the sequel.</note>
+                  <l n="526">Prosper, he should be nearing us by now.<note resp="editor">P. 28, l.
+                     528. Rhesus shows the simple courage of a barbarian in his contempt for the
+                     ruses of Odysseus, the brutality of a barbarian in the methods of punishment he
+                     proposes. Such proposals would disgust a Greek; it looks as if they displeased
+                     Hector. In any case his abruptness here, and his careful indication of the
+                     place where the Thracians are to sleep, far from the rest of the camp, have
+                     some dramatic value for the sequel.</note>
                   </l>
                </sp>
             </div>
          </div>
-         <milestone unit="card" resp="perseus" n="527"/>
+         <milestone unit="card" resp="perseus" n="527" />
          <div type="choral">
-            <stage rend="italic">Exeunt HECTOR and RHESUS and Attendants. The Guards, who have been below, come forward sleepily from the camp fire, and sit watching by HECTOR’S tent.</stage>
+            <stage rend="italic">Exeunt HECTOR and RHESUS and Attendants. The Guards, who have been
+               below, come forward sleepily from the camp fire, and sit watching by HECTOR’S tent.</stage>
             <div type="strophe">
                <sp>
                   <speaker>CHORUS.<note resp="editor">
-                        <p>Pp. 28-30, 11. 527-564, Stars and Nightingale chorus.]—The beauty of these lines in the Greek is quite magical, but the stage management of the scene is difficult. Apparently Hector (1. 523) bids the Guards come forward from where they are and wait nearer the front for Dolon; obeying this they come up from the orchestra, we may suppose, to the stage. Then watching somewhere near Hector’s tent they partly express, in the usual song, the lyrical emotion of the night, partly they chat about Dolon and the order of the watches. The scene is technically very interesting with its rather abrupt introduction of realism into the high convention of tragedy. Meantime the Trojans’ time of watch is over and the Lycians, who ought to watch next, have not come. In a modern army it would of course be the duty of the new watch to come and relieve the old; in an ancient barbaric army—characteristically—the old watch had to go and wake the new. You could not, one must suppose, trust them to take their turn otherwise. At the end of the first strophe a Guard suggests that they should rouse the Lycians; at the end of the second the Leader definitely gives the word to do so. The Guards go, and so the stage (and orchestra) is left empty.</p>
-                        <p>This is plain enough; but why were the Guards brought away from their original position—from the orchestra to the stage? Probably to allow the Greek spies to pass on towards the Thracian camp by a different and unoccupied way, not by the way which the Guards had just taken.</p>
-                        <p>The story of the Nightingale is well known: she was Philomêla, or in the older story Procnê, an Athenian princess, wedded to the faithless Thracian king, Têreus.  In a fury of vengeance on her husband she slew their only son, Itys or Itylus, and now laments him broken-hearted for ever.</p>
+                        <p>Pp. 28-30, 11. 527-564, Stars and Nightingale chorus.]—The beauty of
+                     these lines in the Greek is quite magical, but the stage management of the
+                     scene is difficult. Apparently Hector (1. 523) bids the Guards come forward
+                     from where they are and wait nearer the front for Dolon; obeying this they come
+                     up from the orchestra, we may suppose, to the stage. Then watching somewhere
+                     near Hector’s tent they partly express, in the usual song, the lyrical emotion
+                     of the night, partly they chat about Dolon and the order of the watches. The
+                     scene is technically very interesting with its rather abrupt introduction of
+                     realism into the high convention of tragedy. Meantime the Trojans’ time of
+                     watch is over and the Lycians, who ought to watch next, have not come. In a
+                     modern army it would of course be the duty of the new watch to come and relieve
+                     the old; in an ancient barbaric army—characteristically—the old watch had to go
+                     and wake the new. You could not, one must suppose, trust them to take their
+                     turn otherwise. At the end of the first strophe a Guard suggests that they
+                     should rouse the Lycians; at the end of the second the Leader definitely gives
+                     the word to do so. The Guards go, and so the stage (and orchestra) is left
+                     empty.</p>
+                        <p>This is plain enough; but why were the Guards brought away from their
+                     original position—from the orchestra to the stage? Probably to allow the Greek
+                     spies to pass on towards the Thracian camp by a different and unoccupied way,
+                     not by the way which the Guards had just taken.</p>
+                        <p>The story of the Nightingale is well known: she was Philomêla, or in the
+                     older story Procnê, an Athenian princess, wedded to the faithless Thracian
+                     king, Têreus. In a fury of vengeance on her husband she slew their only son,
+                     Itys or Itylus, and now laments him broken-hearted for ever.</p>
                      </note>
                   </speaker>
                   <l rend="indent" n="527">Say, whose is the watch? Who exchanges</l>
                   <l n="528" rend="indent">With us? The first planets to rise</l>
-                  <pb xml:id="p.29"/>
+                  <pb xml:id="p.29" />
                   <l n="529">Are setting; the Pleiades seven</l>
                   <l n="530">Move low on the margin of heaven,</l>
                   <l n="531">And the Eagle is risen and ranges</l>
@@ -1245,8 +1615,8 @@
                </sp>
                <note resp="perseus">numeration out of sync: 546 omitted </note>
             </div>
-            <pb xml:id="p.30"/>
-            <milestone unit="card" resp="perseus" n="546"/>
+            <pb xml:id="p.30" />
+            <milestone unit="card" resp="perseus" n="546" />
             <div type="antistrophe">
                <sp>
                   <speaker>ANOTHER.</speaker>
@@ -1273,7 +1643,8 @@
                   <speaker>DIVERS GUARDS</speaker>
                   <stage rend="italic">(talking).</stage>
                   <l rend="indent" n="557">Why have we still no word nor sign</l>
-                  <l n="558">Of that scout in the <placeName key="tgn,5001993">Argive</placeName> line?</l>
+                  <l n="558">Of that scout in the <placeName key="tgn,5001993">Argive</placeName>
+                     line?</l>
                </sp>
                <sp>
                   <speaker>ANOTHER.</speaker>
@@ -1288,7 +1659,7 @@
                   <speaker>ANOTHER.</speaker>
                   <l rend="indent" n="561a">It may be. I am half afraid.</l>
                </sp>
-               <pb xml:id="p.31"/>
+               <pb xml:id="p.31" />
                <sp>
                   <speaker>LEADER.</speaker>
                   <l rend="indent" n="562">Our time is past! Up, men, and tell</l>
@@ -1297,14 +1668,35 @@
                </sp>
             </div>
          </div>
-         <milestone unit="card" resp="perseus" n="565"/>
+         <milestone unit="card" resp="perseus" n="565" />
          <div type="episode">
-            <stage rend="italic">The Guards pass out to waken the Lycians. The stage is empty and dark except for the firelight, when a whisper is heard at the back. Presently enter ODYSSEUS and DIOMEDE in dull leather armour, DIOMEDE carrying at his belt DOLON’S wolf-skin and mask.</stage>
+            <stage rend="italic">The Guards pass out to waken the Lycians. The stage is empty and
+               dark except for the firelight, when a whisper is heard at the back. Presently enter
+               ODYSSEUS and DIOMEDE in dull leather armour, DIOMEDE carrying at his belt DOLON’S
+               wolf-skin and mask.</stage>
             <sp>
                <speaker>ODYSSEUS.</speaker>
                <l rend="indent" n="565">Diomede, hist!—A little sound of arms<note resp="editor">
-                     <p>P. 31, 1. 567 ff., Odysseus and Diomedes.]—Observe how we are left gradually to discover that they have met and killed Dolon. They enter carrying, as far as we can make out, a wolf-skin that looks like his: they had evidently spoken to him, 11. 572, 575: it is his and they have killed him—l. 592 f.</p>
-                     <p>All the Odysseus-Diomedes scenes have something unusual about them, something daring, turbulent, and perhaps lacking in dramatic tact. The silent rush on Hector’s empty tent is hard to parallel. The cruel Athena is Euripidean; but her appearance in the midst of the action is startling, though it may be paralleled from Sophocles’ Ajax. In Euripides Gods are generally kept for the prologue or epilogue, away from the ordinary action. (The vision of Iris and Lyssa in the middle of the Heracles has at least the stage clear of mortals and the Chorus apparently in a kind of dream.) Again the conception of Athena pretending to be Cypris is curious.  The disguised Athena is common in the Odyssey, but she does not disguise herself as another goddess. (It is sometimes held that this scene requires four actors, which would be a decisive mark of lateness; but this is not really so.  The actor who took Odysseus could easily get round in time to take Paris also—especially if he made his exit at 1. 626, before Athena sees Paris. And the Greek stage had no objection to such doubling.) Lastly, the scene of turmoil between the spies and the Guards is extraordinary in a tragedy, though it would suit well in a pro-satyric play. See Introduction.</p>
+                     <p>P. 31, 1. 567 ff., Odysseus and Diomedes.]—Observe how we are left gradually
+                  to discover that they have met and killed Dolon. They enter carrying, as far as we
+                  can make out, a wolf-skin that looks like his: they had evidently spoken to him,
+                  11. 572, 575: it is his and they have killed him—l. 592 f.</p>
+                     <p>All the Odysseus-Diomedes scenes have something unusual about them,
+                  something daring, turbulent, and perhaps lacking in dramatic tact. The silent rush
+                  on Hector’s empty tent is hard to parallel. The cruel Athena is Euripidean; but
+                  her appearance in the midst of the action is startling, though it may be
+                  paralleled from Sophocles’ Ajax. In Euripides Gods are generally kept for the
+                  prologue or epilogue, away from the ordinary action. (The vision of Iris and Lyssa
+                  in the middle of the Heracles has at least the stage clear of mortals and the
+                  Chorus apparently in a kind of dream.) Again the conception of Athena pretending
+                  to be Cypris is curious. The disguised Athena is common in the Odyssey, but she
+                  does not disguise herself as another goddess. (It is sometimes held that this
+                  scene requires four actors, which would be a decisive mark of lateness; but this
+                  is not really so. The actor who took Odysseus could easily get round in time to
+                  take Paris also—especially if he made his exit at 1. 626, before Athena sees
+                  Paris. And the Greek stage had no objection to such doubling.) Lastly, the scene
+                  of turmoil between the spies and the Guards is extraordinary in a tragedy, though
+                  it would suit well in a pro-satyric play. See Introduction.</p>
                   </note>
                </l>
                <l n="566">Clanking . . . or am I full of void alarms?</l>
@@ -1328,18 +1720,18 @@
                <speaker>ODYSSEUS.</speaker>
                <l rend="indent" n="572">Thou know’st the watchword, if we stir some guard?</l>
             </sp>
-            <pb xml:id="p.32"/>
+            <pb xml:id="p.32" />
             <sp>
                <speaker>DIOMEDE.</speaker>
-               <l rend="indent" n="573">Phoebus.   ’Twas the last sign that Dolon gave.</l>
+               <l rend="indent" n="573">Phoebus. ’Twas the last sign that Dolon gave.</l>
             </sp>
             <stage rend="italic">They creep forward in silence to the entrance
-		    of HECTOR’S tent.</stage>
+               of HECTOR’S tent.</stage>
             <sp>
                <speaker>ODYSSEUS.</speaker>
                <l rend="indent" n="574">Now, forward!</l>
                <stage rend="italic">They dash into the tent, swords drawn; then
-			return.</stage>
+                  return.</stage>
                <l n="574a">God! All empty as the grave!</l>
             </sp>
             <sp>
@@ -1370,7 +1762,7 @@
                <l n="583">The God who gave him victory saves him still.</l>
                <l n="584">We cannot force Fortune against her will.</l>
             </sp>
-            <pb xml:id="p.33"/>
+            <pb xml:id="p.33" />
             <sp>
                <speaker>DIOMEDE.</speaker>
                <l rend="indent" n="585">Could we not find Aeneas? Or the bed</l>
@@ -1392,22 +1784,29 @@
                <l n="592">Dolon, their spy, and bear his tokens still?</l>
                <l n="593">Dost think the whole camp should be thine to quell?</l>
             </sp>
-            <stage rend="italic">DIOMEDE takes DOLON’S wolf-mask off his belt and hangs it in HECTOR’S tent, then turns.<note>P. 33, l. 594, Stage direction.]—They bear Dolon’s <q type="translation">spoils</q> or <q type="translation">tokens</q>: probably his wolf-skin. If they bring it with them they must probably do something with it, and to hang it where it may give Hector a violent start seems the natural proceeding. Also, they can hardly be carrying it in the scene with the Guards, 1. 675 ff., p. 38 f. That would be madness. They must have got rid of it before then, and this seems the obvious place for doing so.</note>
+            <stage rend="italic">DIOMEDE takes DOLON’S wolf-mask off his belt and hangs it in
+               HECTOR’S tent, then turns.<note>P. 33, l. 594, Stage direction.]—They bear Dolon’s <q
+                     type="translation">spoils</q> or <q type="translation">tokens</q>: probably his
+               wolf-skin. If they bring it with them they must probably do something with it, and to
+               hang it where it may give Hector a violent start seems the natural proceeding. Also,
+               they can hardly be carrying it in the scene with the Guards, 1. 675 ff., p. 38 f.
+               That would be madness. They must have got rid of it before then, and this seems the
+               obvious place for doing so.</note>
             </stage>
             <sp>
                <speaker>DIOMEDE.</speaker>
                <l rend="indent" n="594">Good. Now for home! And may the end be well!</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="595"/>
+            <milestone unit="card" resp="perseus" n="595" />
             <stage rend="italic">As they turn there appears at the back a
-		    luminous and gigantic shape, the Goddess ATHENA.</stage>
+               luminous and gigantic shape, the Goddess ATHENA.</stage>
             <sp>
                <speaker>ATHENA.</speaker>
                <l rend="indent" n="595">What make ye, from these sleepers thus to part</l>
                <l n="596">Desponding and with sorrow-wounded heart</l>
                <l n="597">If Hector be not granted you to slay</l>
                <l n="598">Nor Paris? Little know ye what great stay</l>
-               <pb xml:id="p.34"/>
+               <pb xml:id="p.34" />
                <l n="599">Of help is found for Troy. This very night</l>
                <l n="600">Rhesus is come; who, if he see the light</l>
                <l n="601">Of morning, not Achilles nor the rack</l>
@@ -1444,7 +1843,7 @@
                <l rend="indent" n="622">Say, Diomede, wilt make the men thy share,</l>
                <l n="623">Or catch the steeds and leave the fight to me?</l>
             </sp>
-            <pb xml:id="p.35"/>
+            <pb xml:id="p.35" />
             <sp>
                <speaker>DIOMEDE.</speaker>
                <l rend="indent" n="624">I take the killing, thou the stablery:</l>
@@ -1482,18 +1881,27 @@
                <l n="637a">For me, my guise</l>
                <l n="637b">Shall melt and change in Alexander’s eyes,</l>
                <l n="637c">Yea, till he dream ’tis Cypris, his delight <note>
-                     <p>P. 36, 11. 637 ff., Athena as Cypris.]—It is not clear how this would be represented on the Greek stage, though there is no reason to think there would be any special difficulty. On a modern stage it could be worked as follows:—The Goddess will be behind a gauze, so that she is invisible when only the lights in front of the gauze are lit, but visible when a light goes up behind it. She will first appear with helmet and spear in some hard light; then disappear and be rediscovered in the same place in a softer light, the helmet and spear gone and some emblems of Cypris—say a flower and a dove—in their place. Of course the voice will change too.</p>
-                     <p>The next scene, where the two spies are caught and let go, is clear enough in its general structure; the details must remain conjectural.</p>
+                     <p>P. 36, 11. 637 ff., Athena as Cypris.]—It is not clear how this would be
+                  represented on the Greek stage, though there is no reason to think there would be
+                  any special difficulty. On a modern stage it could be worked as follows:—The
+                  Goddess will be behind a gauze, so that she is invisible when only the lights in
+                  front of the gauze are lit, but visible when a light goes up behind it. She will
+                  first appear with helmet and spear in some hard light; then disappear and be
+                  rediscovered in the same place in a softer light, the helmet and spear gone and
+                  some emblems of Cypris—say a flower and a dove—in their place. Of course the voice
+                  will change too.</p>
+                     <p>The next scene, where the two spies are caught and let go, is clear enough
+                  in its general structure; the details must remain conjectural.</p>
                   </note>
                </l>
                <l n="638">And help in need, that meets him in the night,</l>
-               <pb xml:id="p.36"/>
+               <pb xml:id="p.36" />
                <l n="639">And soft shall be my words to him I hate.</l>
                <l n="640">So speak I; but on whom my spell is set</l>
                <l n="641">He hears not, sees not, though so near I stand.</l>
             </sp>
             <stage rend="italic">She becomes invisible where she stands.</stage>
-            <milestone unit="card" resp="perseus" n="642"/>
+            <milestone unit="card" resp="perseus" n="642" />
             <stage rend="italic">Enter PARIS.</stage>
             <sp>
                <speaker>PARIS.</speaker>
@@ -1502,7 +1910,8 @@
                <l n="644">Our guards have marked some prowler of the night,</l>
                <l n="645">We know not if a mere thief or a spy.</l>
             </sp>
-            <stage rend="italic">ATHENA becomes visible again, but seems changed and her voice softer.</stage>
+            <stage rend="italic">ATHENA becomes visible again, but seems changed and her voice
+               softer.</stage>
             <sp>
                <speaker>ATHENA.</speaker>
                <l rend="indent" n="646">Have comfort thou! Doth not the Cyprian’s eye</l>
@@ -1512,19 +1921,21 @@
                <l n="649">To crown this day and all its victories,</l>
                <l n="650">Lo, I have guided here to Troy a strong</l>
                <l n="651">Helper, the scion of the Muse of song</l>
-               <l n="652">And Strymon’s flood, the crownèd stream of <placeName key="tgn,7002756">Thrace</placeName>.</l>
+               <l n="652">And Strymon’s flood, the crownèd stream of <placeName key="tgn,7002756">
+                  Thrace</placeName>.</l>
             </sp>
             <sp>
                <speaker>PARIS.</speaker>
                <stage rend="italic">(standing like one in a dream)</stage>
                <l rend="indent" n="653">Indeed thy love is steadfast, and thy grace</l>
-               <l n="653a">Bounteous to <placeName key="perseus,Troy">Troy</placeName> and me. Thou art the joy</l>
+               <l n="653a">Bounteous to <placeName key="perseus,Troy">Troy</placeName> and me. Thou
+                  art the joy</l>
                <l n="654">And jewel of my days, which I to Troy</l>
                <l n="655">Have brought, and made thee hers.—O Cyprian,</l>
                <l n="656">I heard, not clearly,—’twas some talk that ran</l>
                <l n="657">Among the pickets—spies had passed some spot</l>
                <l n="658">Close by the camp. The men who saw them not</l>
-               <pb xml:id="p.37"/>
+               <pb xml:id="p.37" />
                <l n="659">Talk much, and they who saw, or might have seen,</l>
                <l n="659a">Can give no sign nor token. It had been</l>
                <l n="660">My purpose to find Hector where he lay.</l>
@@ -1549,7 +1960,8 @@
                <stage rend="italic">Exit PARIS. She raises her voice.</stage>
                <l n="669">Back, back, ye twain! Are ye in love with death?</l>
                <l n="670">
-                  <placeName key="perseus,Laertes">Laertes</placeName>’ son, thy sword into the sheath!</l>
+                  <placeName key="perseus,Laertes">Laertes</placeName>’ son, thy sword into the
+                  sheath!</l>
                <l n="671">Our golden Thracian gaspeth in his blood;</l>
                <l n="672">The steeds are ours; the foe hath understood</l>
                <l n="673">And crowds against you. Haste ye! haste to fly,—</l>
@@ -1557,16 +1969,17 @@
             </sp>
             <stage rend="italic">
                <p>ATHENA vanishes; a noise of tumult is heard.</p>
-               <p>Enter a crowd of Thracians running in confusion, in the midst of them ODYSSEUS and DIOMEDE.</p>
+               <p>Enter a crowd of Thracians running in confusion, in the midst of them ODYSSEUS and
+                  DIOMEDE.</p>
             </stage>
-            <milestone unit="card" resp="perseus" n="675"/>
+            <milestone unit="card" resp="perseus" n="675" />
             <sp>
                <speaker>VOICES.</speaker>
                <stage rend="italic">(amid the tumult)</stage>
                <l rend="indent" n="675">Ha! Ha!—At them! At them! After them! Down</l>
                <l n="676" rend="indent">with them !—Where are they?</l>
             </sp>
-            <pb xml:id="p.38"/>
+            <pb xml:id="p.38" />
             <sp>
                <speaker>CAPTAIN.</speaker>
                <l rend="indent" n="678">Who is that fellow? Look! That yonder!</l>
@@ -1588,17 +2001,20 @@
             <sp>
                <speaker>CAPTAIN</speaker>
                <stage rend="italic">(to ODYSSEUS).</stage>
-               <l rend="indent" n="682">Whence comest thou?  What art thou?   Say; what captain and what company?</l>
+               <l rend="indent" n="682">Whence comest thou? What art thou? Say; what captain and
+                  what company?</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="683"/>
+            <milestone unit="card" resp="perseus" n="683" />
             <sp>
                <speaker>ODYSSEUS</speaker>
                <stage rend="italic">(indignantly).</stage>
-               <l rend="indent" n="683">’Tis not for thee to know. This day thou diest for thy knavery!</l>
+               <l rend="indent" n="683">’Tis not for thee to know. This day thou diest for thy
+                  knavery!</l>
             </sp>
             <sp>
                <speaker>CAPTAIN.</speaker>
-               <l rend="indent" n="684">Stop! Give the watchword quick, before I have thy body on my pike.</l>
+               <l rend="indent" n="684">Stop! Give the watchword quick, before I have thy body on my
+                  pike.</l>
             </sp>
             <sp>
                <speaker>ODYSSEUS</speaker>
@@ -1609,7 +2025,7 @@
                <speaker>CAPTAIN.</speaker>
                <l rend="indent" n="685b" part="F">Come, gather round. Be quick to strike.</l>
             </sp>
-            <pb xml:id="p.39"/>
+            <pb xml:id="p.39" />
             <sp>
                <speaker>ODYSSEUS</speaker>
                <stage rend="italic">(to CAPTAIN).</stage>
@@ -1650,7 +2066,8 @@
                <speaker>ODYSSEUS.</speaker>
                <l rend="indent" n="689b">We saw them running, somewhere here.</l>
             </sp>
-            <stage rend="italic">He makes off into the darkness. DIOMEDE follows, and some Thracians.</stage>
+            <stage rend="italic">He makes off into the darkness. DIOMEDE follows, and some
+               Thracians.</stage>
             <sp>
                <speaker>CAPTAIN.</speaker>
                <l rend="indent" n="690" part="I">Off every one upon their track!</l>
@@ -1666,9 +2083,11 @@
                <l n="691c" part="F">Let us go.</l>
             </sp>
          </div>
-         <milestone unit="card" resp="perseus" n="692"/>
+         <milestone unit="card" resp="perseus" n="692" />
          <div type="choral">
-            <stage rend="italic">The Thracians go off in pursuit. Meantime the original Guards who form the Chorus have hastened back. The two Greeks are presently seen crossing at the back in a different direction.</stage>
+            <stage rend="italic">The Thracians go off in pursuit. Meantime the original Guards who
+               form the Chorus have hastened back. The two Greeks are presently seen crossing at the
+               back in a different direction.</stage>
             <div type="strophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -1686,9 +2105,14 @@
                   <l n="701">Or harvester of some starved island’s corn?</l>
                   <l n="702">What man hath seen his face?</l>
                   <l n="702a">What was his name or race,</l>
-                  <l n="703">What the high God<note> P. 40, 1. 703, What the High God.]—It would be unparalleled in classical Greek to describe a man by his religion; but this phrase seems only to mean: <q type="translation">What is his tribal God?</q> i.e. what is his tribe? Thus it could be said of Isagoras in Herodotus (v. 66) that his kinsmen sacrificed to Carian Zeus, suggesting, presumably, that he had Carian blood. </note> by whom his sires have sworn?</l>
+                  <l n="703">What the high God<note> P. 40, 1. 703, What the High God.]—It would be
+                     unparalleled in classical Greek to describe a man by his religion; but this
+                     phrase seems only to mean: <q type="translation">What is his tribal God?</q>
+                     i.e. what is his tribe? Thus it could be said of Isagoras in Herodotus (v. 66)
+                     that his kinsmen sacrificed to Carian Zeus, suggesting, presumably, that he had
+                     Carian blood. </note> by whom his sires have sworn?</l>
                </sp>
-               <pb xml:id="p.41"/>
+               <pb xml:id="p.41" />
                <sp>
                   <speaker>DIVERS GUARDS</speaker>
                   <stage rend="italic">(talking).</stage>
@@ -1697,11 +2121,11 @@
                   <l n="706">Odysseus surely!—That is thy belief?—</l>
                   <l n="707">What else? It seems he hath no fear</l>
                   <l n="708">Of such as we!—Whom praise ye there?</l>
-                  <l n="708a">Whose prowess?   Say!—Odysseus.—Nay,</l>
+                  <l n="708a">Whose prowess? Say!—Odysseus.—Nay,</l>
                   <l n="709">Praise not the secret stabbing of a thief!</l>
                </sp>
             </div>
-            <milestone unit="card" resp="perseus" n="710"/>
+            <milestone unit="card" resp="perseus" n="710" />
             <div type="antistrophe">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -1719,7 +2143,8 @@
                   <l n="718">Like one long hurt, who nurseth anger sore;</l>
                   <l n="719">Would that a curse, yea, would</l>
                   <l n="720">The uttermost wrath of God</l>
-                  <l n="721">Had held those feet from walking <placeName key="tgn,7002329">Ilion</placeName>’s shore!</l>
+                  <l n="721">Had held those feet from walking <placeName key="tgn,7002329">Ilion</placeName>’s
+                     shore!</l>
                </sp>
                <sp>
                   <speaker>DIVERS GUARDS</speaker>
@@ -1728,16 +2153,17 @@
                   <l n="723">Will weep for this. Aye, Hector will be hard.—</l>
                   <l n="724">What will he say?—He will suspect.—Suspect?</l>
                   <l n="725">What evil? What should make you fear?—</l>
-                  <pb xml:id="p.42"/>
+                  <pb xml:id="p.42" />
                   <l n="726">’Twas we that left a passage clear.—</l>
                   <l n="726a">A passage?—Yea, for these men’s way,</l>
                   <l n="727">Who came by night into the lines unchecked.</l>
                </sp>
             </div>
          </div>
-         <milestone unit="card" resp="perseus" n="728"/>
+         <milestone unit="card" resp="perseus" n="728" />
          <div type="episode">
-            <stage rend="italic">A sound of moaning outside in the darkness, which has been heard during the last few lines, now grows into articulate words.</stage>
+            <stage rend="italic">A sound of moaning outside in the darkness, which has been heard
+               during the last few lines, now grows into articulate words.</stage>
             <sp>
                <speaker>VOICE.</speaker>
                <l rend="indent" n="728">Woe, woe!</l>
@@ -1750,16 +2176,22 @@
                <l n="730a">Our man is drawing to the net.</l>
             </sp>
             <sp>
-               <speaker>VOICE.<note resp="editor">P. 42, 1. 728, Voice of the wounded man outside.]— The puzzled and discouraged talk of the Guards round the fire, the groaning in the darkness without, the quick alarm among the men who had been careless before, and the slow realisation of disaster that follows—all these seem to me to be wonderfully indicated, though the severe poetic convention excludes any approach to what we, by modern prose standards, would call effective realism.  </note>
+               <speaker>VOICE.<note resp="editor">P. 42, 1. 728, Voice of the wounded man outside.]—
+                  The puzzled and discouraged talk of the Guards round the fire, the groaning in the
+                  darkness without, the quick alarm among the men who had been careless before, and
+                  the slow realisation of disaster that follows—all these seem to me to be
+                  wonderfully indicated, though the severe poetic convention excludes any approach
+                  to what we, by modern prose standards, would call effective realism. </note>
                </speaker>
                <l rend="indent" n="731">Woe, woe!</l>
-               <l n="732" part="I">The burden of the hills of <placeName key="tgn,7002756">Thrace</placeName>!</l>
+               <l n="732" part="I">The burden of the hills of <placeName key="tgn,7002756">Thrace</placeName>
+                  !</l>
             </sp>
             <sp>
                <speaker>LEADER.</speaker>
                <l rend="indent" n="732b" part="F">An ally? None of Hellene race.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="733"/>
+            <milestone unit="card" resp="perseus" n="733" />
             <sp>
                <speaker>VOICE.</speaker>
                <l rend="indent" n="733">Woe, woe!</l>
@@ -1767,15 +2199,15 @@
                <l n="734">My master! Once to set thine eye</l>
                <l n="735">On <placeName key="tgn,7002329">Ilion</placeName> the accurst, and die!</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="736"/>
+            <milestone unit="card" resp="perseus" n="736" />
             <sp>
                <speaker>LEADER</speaker>
                <stage rend="italic">(calling aloud).</stage>
                <l rend="indent" n="736">Ho there! What ally passes? The dim night</l>
                <l n="737">Blurreth mine eyes; I cannot see thee right.</l>
             </sp>
-            <pb xml:id="p.43"/>
-            <milestone unit="card" resp="perseus" n="738"/>
+            <pb xml:id="p.43" />
+            <milestone unit="card" resp="perseus" n="738" />
             <sp>
                <speaker>VOICE.</speaker>
                <l rend="indent" n="738">Ho, some one of the Trojan name!</l>
@@ -1786,14 +2218,15 @@
                <l n="743">We woke and there was nought to see,</l>
                <l n="744">But our own misery.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="745"/>
+            <milestone unit="card" resp="perseus" n="745" />
             <sp>
                <speaker>LEADER.</speaker>
                <l rend="indent" n="745">I cannot hear him right; it sounds as if</l>
                <l n="746">The Thracians were surprised or in some grief.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="747"/>
-            <stage rend="italic">There enters a wounded man, walking with difficulty; he is the Thracian Charioteer who came with RHESUS.</stage>
+            <milestone unit="card" resp="perseus" n="747" />
+            <stage rend="italic">There enters a wounded man, walking with difficulty; he is the
+               Thracian Charioteer who came with RHESUS.</stage>
             <sp>
                <speaker>THRACIAN.</speaker>
                <l rend="indent" n="747">The army lost and the king slain,</l>
@@ -1804,18 +2237,29 @@
                <l n="752">Who came to save, and failed and died.</l>
             </sp>
             <note resp="perseus">numeration out of sync: 753 omitted </note>
-            <milestone unit="card" resp="perseus" n="754"/>
+            <milestone unit="card" resp="perseus" n="754" />
             <sp>
                <speaker>LEADER.</speaker>
                <l rend="indent" n="754">This needs no surmise: ’tis disaster plain</l>
                <l n="755">That comes. He speaketh of some ally slain.</l>
             </sp>
             <sp>
-               <speaker>THRACIAN.<note resp="editor">P. 44, ll. 756-803. This fine vivid speech has something  of the famous Euripidean Messenger-Speeches in it; though they are apt to be much longer and also are practically never spoken by a principal in the action, always by a subordinate or an onlooker. Cf. the speech of the Messenger-Shepherd above, p. 17 f. An extreme sharpness of articulation is characteristic of Euripides’ later work: each speech, each scene, each effect is isolated and made complete in itself. The Messenger prepares his message, relates his message and goes, not mixing himself up in the further fortunes of the drama. But this extreme pursuit of lucidity and clear outlines is not nearly so marked in the early plays: in the Cyclops the Messenger’s speech is actually spoken by Odysseus, 11. 382-436, and the Serving Man and Serving Maid in the Alcestis are not mere abstract Messengers.</note>
+               <speaker>THRACIAN.<note resp="editor">P. 44, ll. 756-803. This fine vivid speech has
+                  something of the famous Euripidean Messenger-Speeches in it; though they are apt
+                  to be much longer and also are practically never spoken by a principal in the
+                  action, always by a subordinate or an onlooker. Cf. the speech of the
+                  Messenger-Shepherd above, p. 17 f. An extreme sharpness of articulation is
+                  characteristic of Euripides’ later work: each speech, each scene, each effect is
+                  isolated and made complete in itself. The Messenger prepares his message, relates
+                  his message and goes, not mixing himself up in the further fortunes of the drama.
+                  But this extreme pursuit of lucidity and clear outlines is not nearly so marked in
+                  the early plays: in the Cyclops the Messenger’s speech is actually spoken by
+                  Odysseus, 11. 382-436, and the Serving Man and Serving Maid in the Alcestis are
+                  not mere abstract Messengers.</note>
                </speaker>
                <l rend="indent" n="756">Disaster, yea: and with disaster shame,</l>
                <l n="757">Which lights Disaster to a twofold flame</l>
-               <pb xml:id="p.44"/>
+               <pb xml:id="p.44" />
                <l n="758">Of evil. For to die in soldier’s wise,</l>
                <l n="759">Since die we needs must . . . though the man who dies</l>
                <l n="760">Hath pain . . . to all his house ’tis praise and pride;</l>
@@ -1840,7 +2284,7 @@
                <l n="777">Two thieves, I thought, from the great host that lay</l>
                <l n="778">Round us. They never answered, and, for me,</l>
                <l n="779">I said no more but turned and presently</l>
-               <milestone unit="card" resp="perseus" n="780"/>
+               <milestone unit="card" resp="perseus" n="780" />
                <l n="780" rend="indent">Was sleeping. In my sleep there came a dream.</l>
                <l n="781">I seemed to see the horses—mine own team</l>
                <l n="782">I had trained long since and drove at Rhesus’ side—</l>
@@ -1848,7 +2292,7 @@
                <l n="784">Who drove and scourged; I saw the horses rear</l>
                <l n="785">And stagger with wide nostrils, stiff with fear,</l>
                <l n="786">And, starting up to drive the beasts away,</l>
-               <pb xml:id="p.45"/>
+               <pb xml:id="p.45" />
                <l n="787">I woke.—A terror of great darkness lay</l>
                <l n="788">About me, but I lifted up my head</l>
                <l n="789">And listened. There was moaning, like the dead</l>
@@ -1861,7 +2305,7 @@
                <l n="796">Deep through my flank. I felt its passage well,</l>
                <l n="797">So deep, so wide, so spreading . . . then I fell.</l>
                <l n="798">And they, they got the bridles in their hand</l>
-               <l n="799">And fled  .... Ah! Ah! This pain. I cannot stand.</l>
+               <l n="799">And fled .... Ah! Ah! This pain. I cannot stand.</l>
                <stage rend="italic">The Guards catch him as he reels, and lay him on the ground.</stage>
                <l n="800">I know, I saw, thus much. But why or how</l>
                <l n="801">Those dead men went to death I cannot know,</l>
@@ -1879,9 +2323,14 @@
             <sp>
                <speaker>HECTOR.</speaker>
                <l rend="indent" n="808">Ye workers of amazement! Have your eyes</l>
-               <l n="809">No sight? Ye watch and let these <placeName key="tgn,5001993">Argive</placeName> spies</l>
-               <pb xml:id="p.46"/>
-               <l n="810">Pass—and our friends are butchered in their sleep—<note resp="editor">P. 46, 11. 810-830. Hector and the Guard.]—There is intentional colour here—the impulsive half-barbaric rage of Hector, the oriental grovelling of the Guard, and of course the quick return to courteous self-mastery with which Hector receives the taunts of the wounded man.</note>
+               <l n="809">No sight? Ye watch and let these <placeName key="tgn,5001993">Argive</placeName>
+                  spies</l>
+               <pb xml:id="p.46" />
+               <l n="810">Pass—and our friends are butchered in their sleep—<note resp="editor">P.
+                  46, 11. 810-830. Hector and the Guard.]—There is intentional colour here—the
+                  impulsive half-barbaric rage of Hector, the oriental grovelling of the Guard, and
+                  of course the quick return to courteous self-mastery with which Hector receives
+                  the taunts of the wounded man.</note>
                </l>
                <l n="811">And then pass back unwounded, laughing deep</l>
                <l n="811a">Amid the galleys at the news they bring</l>
@@ -1897,12 +2346,15 @@
                <l n="818">Awaits thee. Else, be Hector in your thought</l>
                <l n="819">Writ down a babbler and a man of nought.</l>
             </sp>
-            <milestone unit="card" resp="perseus" n="820"/>
+            <milestone unit="card" resp="perseus" n="820" />
             <div type="antistrophe">
                <sp>
                   <speaker>LEADER</speaker>
                   <stage rend="italic">(grovelling before HECTOR)</stage>
-                  <note resp="editor">P. 46, 1. 819. The Guard seems to think that the spies got past him when he came to Hector’s tent at the beginning of the play. It was really later, when he made his men leave their post to wake the Lycians.  Perhaps he is lying.</note>
+                  <note resp="editor">P. 46, 1. 819. The Guard seems to think that the spies got
+                     past him when he came to Hector’s tent at the beginning of the play. It was
+                     really later, when he made his men leave their post to wake the Lycians.
+                     Perhaps he is lying.</note>
                   <l rend="indent" n="820">Woe, woe! It was for thee, only for thee,</l>
                   <l n="821">I must have gone, O Help and Majesty,</l>
                   <note resp="perseus">numeration out of sync: 822 omitted </note>
@@ -1917,13 +2369,14 @@
                   <l n="831">Or word I have offended, let me bleed!</l>
                   <l n="832">Bury me here alive! I ask no pardon.</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="833"/>
+               <milestone unit="card" resp="perseus" n="833" />
                <sp>
                   <speaker>THRACIAN.</speaker>
-                  <stage rend="italic">HECTOR is standing over him ready to strike when the CHARIOTEER speaks.</stage>
+                  <stage rend="italic">HECTOR is standing over him ready to strike when the
+                     CHARIOTEER speaks.</stage>
                   <l rend="indent" n="833">Why threaten them? Art thou a Greek to blind</l>
                   <l n="834">My barbarous wit so nimbly, in a wind</l>
-                  <pb xml:id="p.47"/>
+                  <pb xml:id="p.47" />
                   <l n="835">Of words? This work was thine. And no man’s head</l>
                   <l n="836">Is asked by us, the wounded and the dead,</l>
                   <l n="837">Save thine. It needs more play, and better feigned,</l>
@@ -1951,14 +2404,15 @@
                   <speaker>HECTOR</speaker>
                   <stage rend="italic">(steadied and courteous again).</stage>
                   <l rend="indent" n="856">Good allies I have had since first the Greek</l>
-                  <l n="857">Set foot in <placeName key="perseus,Troy">Troy</placeName>, and never heard them speak</l>
+                  <l n="857">Set foot in <placeName key="perseus,Troy">Troy</placeName>, and never
+                     heard them speak</l>
                   <l n="858">Complaint of Hector. Thou wilt be the first.</l>
                   <l n="859">I have not, by God’s mercy, such a thirst</l>
                   <l n="860">For horses as to murder for their sake.</l>
                   <stage rend="italic">He turns to his own men.</stage>
                   <l n="861">Odysseus! Yet again Odysseus! Take</l>
                   <l n="862">All the Greek armies, is there one but he</l>
-                  <pb xml:id="p.48"/>
+                  <pb xml:id="p.48" />
                   <l n="863">Could have devised, or dared, this devilry?</l>
                   <l n="863a">I fear him; yea, fear in mine own despite,</l>
                   <l n="864">Lest Dolon may have crossed him in the night</l>
@@ -2000,10 +2454,12 @@
                <sp>
                   <speaker>THRACIAN.</speaker>
                   <l rend="indent" n="875">My curse rest—not on Hector, but on those</l>
-                  <l n="876">Who stabbed us, as thou say’st.—Ah, Justice knows!<note resp="editor">P. 48, 1. 876, Justice knows.]—It is a clever touch to leave the Thracian still only half-convinced and grumbling.</note>
+                  <l n="876">Who stabbed us, as thou say’st.—Ah, Justice knows!<note resp="editor">P.
+                     48, 1. 876, Justice knows.]—It is a clever touch to leave the Thracian still
+                     only half-convinced and grumbling.</note>
                   </l>
                </sp>
-               <pb xml:id="p.49"/>
+               <pb xml:id="p.49" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="877">There, lift him.—Bear him to my house. Take pains,</l>
@@ -2013,9 +2469,10 @@
                   <l n="881">My charge, that, where the cart-road from the plain</l>
                   <l n="881a">Branches, they make due burial for our slain.</l>
                </sp>
-               <stage rend="italic">One party of Guards lifts carefully the wounded THRACIAN and goes off bearing him: another departs with the message to Troy.</stage>
+               <stage rend="italic">One party of Guards lifts carefully the wounded THRACIAN and
+                  goes off bearing him: another departs with the message to Troy.</stage>
             </div>
-            <milestone unit="card" resp="perseus" n="882"/>
+            <milestone unit="card" resp="perseus" n="882" />
             <div type="anapests">
                <sp>
                   <speaker>CHORUS.</speaker>
@@ -2024,7 +2481,13 @@
                   <l n="883">Some god that is not ours doth lead</l>
                   <l n="884">Troy and her sons; He sows the seed,</l>
                   <l n="884a">Who knows the reaping?</l>
-                  <stage rend="italic">In the air at the back there appears a Vision of the MUSE holding the body of her dead son RHESUS.<note resp="editor">P. 49, 1. 882, Appearance of the Muse.]—A beautiful scene. It has been thought to come abruptly and, as it were, unskilfully on top of the familiar dialogue between Hector and the Thracian. But the movements, first of soldiers lifting and carrying the wounded man, and then of messengers taking word to Priam for burial of the men slain, make the transition much easier.</note>
+                  <stage rend="italic">In the air at the back there appears a Vision of the MUSE
+                     holding the body of her dead son RHESUS.<note resp="editor">P. 49, 1. 882,
+                     Appearance of the Muse.]—A beautiful scene. It has been thought to come
+                     abruptly and, as it were, unskilfully on top of the familiar dialogue between
+                     Hector and the Thracian. But the movements, first of soldiers lifting and
+                     carrying the wounded man, and then of messengers taking word to Priam for
+                     burial of the men slain, make the transition much easier.</note>
                   </stage>
                   <l n="885">Ah! Ah!</l>
                   <l n="886">My king, what cometh? There appears</l>
@@ -2035,7 +2498,7 @@
                   <l n="889">Wrath and great weeping.</l>
                </sp>
                <stage rend="italic">The Guards hide their heads in their mantles.</stage>
-               <milestone unit="card" resp="perseus" n="890"/>
+               <milestone unit="card" resp="perseus" n="890" />
                <sp>
                   <speaker>MUSE.</speaker>
                   <l rend="indent" n="890">Nay, look your fill, ye Trojans. It is I,</l>
@@ -2046,11 +2509,15 @@
                   <l n="894">Vengeance, who crawled and stabbed him where he lay.</l>
                </sp>
             </div>
-            <milestone unit="card" resp="perseus" n="895"/>
+            <milestone unit="card" resp="perseus" n="895" />
             <div type="strophe">
                <sp>
                   <speaker>MUSE.</speaker>
-                  <l rend="indent" n="895">With a dirge of the Thracian mountains,<note resp="editor">P. 50,1. 895 ff. and 1. 906 ff., A dirge of the Thracian mountains.]—Such dirges must have struck the Greeks as the fragments of Ossian struck the Lowlanders among us. I have found that the dirge here goes naturally into a sort of Ossianic rhythm.</note>
+                  <l rend="indent" n="895">With a dirge of the Thracian mountains,<note
+                        resp="editor">P. 50,1. 895 ff. and 1. 906 ff., A dirge of the Thracian
+                     mountains.]—Such dirges must have struck the Greeks as the fragments of Ossian
+                     struck the Lowlanders among us. I have found that the dirge here goes naturally
+                     into a sort of Ossianic rhythm.</note>
                   </l>
                   <l n="896">I mourn for thee, O my son.</l>
                   <l n="897">For a mother’s weeping, for a galley’s launching, for</l>
@@ -2061,14 +2528,14 @@
                   <l n="902">Ah, woe is me for thee, thou dear face,</l>
                   <l n="903">My belovèd and my son!</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="904"/>
+               <milestone unit="card" resp="perseus" n="904" />
                <sp>
                   <speaker>LEADER.</speaker>
                   <l rend="indent" n="904">Goddess, if tears for such as thee may run</l>
                   <l n="905">In our low eyes, I weep for thy dead son.</l>
                </sp>
             </div>
-            <milestone unit="card" resp="perseus" n="906"/>
+            <milestone unit="card" resp="perseus" n="906" />
             <div type="antistrophe">
                <sp>
                   <speaker>MUSE.</speaker>
@@ -2076,17 +2543,28 @@
                   <l n="907">And cursèd be Diomede!</l>
                   <l n="908">For they made me childless, and forlorn for ever, of</l>
                   <l n="909">the flower of sons.</l>
-                  <l n="910">Yea, curse Helen, who left the houses of <placeName key="tgn,1000074">Hellas</placeName>.</l>
+                  <l n="910">Yea, curse Helen, who left the houses of <placeName key="tgn,1000074">
+                     Hellas</placeName>.</l>
                   <l n="911">She knew her lover, she feared not the ships and sea.</l>
                   <l n="912">She called thee, called thee, to die for the sake of Paris,</l>
                   <l n="913">Belovèd, and a thousand cities</l>
                   <l n="914">She made empty of good men.</l>
-                  <pb xml:id="p.51"/>
-                  <milestone unit="card" resp="perseus" n="915"/>
+                  <pb xml:id="p.51" />
+                  <milestone unit="card" resp="perseus" n="915" />
                   <l n="915">O conquered Thamyris, is this thy bane<note resp="editor">
-                        <p>P. 51, 1. 915. The speech of the Muse seems like the writing of a poet who is, for the moment, tired of mere drama, and wishes to get back into his own element.  Such passages are characteristic of Euripides.—The death of Rhesus seems to the Muse like an act of vengeance from the dead Thamyris, the Thracian bard who had blasphemied the Muses and challenged them to a contest of song. They conquered him and left him blind, but still a poet. The story in Homer is more terrible, though more civilised: <q type="written">They in wrath made him a maimed man, they took away his heavenly song and made him forget his harping.</q>
+                        <p>P. 51, 1. 915. The speech of the Muse seems like the writing of a poet
+                     who is, for the moment, tired of mere drama, and wishes to get back into his
+                     own element. Such passages are characteristic of Euripides.—The death of Rhesus
+                     seems to the Muse like an act of vengeance from the dead Thamyris, the Thracian
+                     bard who had blasphemied the Muses and challenged them to a contest of song.
+                     They conquered him and left him blind, but still a poet. The story in Homer is
+                     more terrible, though more civilised: <q type="written">They in wrath made him
+                     a maimed man, they took away his heavenly song and made him forget his harping.</q>
                         </p>
-                        <p>Thamyris, the bard who defied Heaven; Orpheus, the bard, saint, lover, whose severed head still cried for his lost Eurydice; Musaeus, the bard of mystic wisdom and initiations—are the three great legendary figures of this Northern mountain minstrelsy.</p>
+                        <p>Thamyris, the bard who defied Heaven; Orpheus, the bard, saint, lover,
+                     whose severed head still cried for his lost Eurydice; Musaeus, the bard of
+                     mystic wisdom and initiations—are the three great legendary figures of this
+                     Northern mountain minstrelsy.</p>
                      </note>
                   </l>
                   <l n="916">Returned from death to pierce my heart again?</l>
@@ -2107,7 +2585,8 @@
                   <l n="929">Received and to no mortal nursing gave</l>
                   <l n="929a">His child, but to the Maidens of the Wave.</l>
                   <l n="930">And well they nursed thee, and a king thou wast</l>
-                  <l n="931">And first of <placeName key="tgn,7002756">Thrace</placeName> in war; yea, far and near</l>
+                  <l n="931">And first of <placeName key="tgn,7002756">Thrace</placeName> in war;
+                     yea, far and near</l>
                   <l n="932">Through thine own hills thy bloody chariot passed,</l>
                   <l n="933">Thy battered helm flashed, and I had no fear;</l>
                   <l n="934">Only to Troy I charged thee not to go:</l>
@@ -2119,7 +2598,7 @@
                   <l n="940">’Tis thine, all thine; dream not thy cruel hand</l>
                   <l n="941">Is hid from me! Yet ever on thy land</l>
                   <l n="942">The Muse hath smiled; we gave it praise above</l>
-                  <pb xml:id="p.52"/>
+                  <pb xml:id="p.52" />
                   <l n="942a">All cities, yea, fulfilled it with our love.</l>
                   <l n="943">The light of thy great Mysteries was shed</l>
                   <l n="944">By Orpheus, very cousin of this dead</l>
@@ -2133,19 +2612,26 @@
                <stage rend="italic">She weeps over RHESUS.</stage>
                <sp>
                   <speaker>LEADER.</speaker>
-                  <l rend="indent" n="950">Hector, thou hearest. We were guiltless here,<note resp="editor">P. 52, l. 950. These short speeches between Hector and the Leader of the Guard make a jarring note in the midst of the Muse’s lament. Perhaps it would not be so if we knew how the play was produced, but at present this seems like one of several marks of comparative crudity in technique which mark the play, amid all its daring and inventiveness.</note>
+                  <l rend="indent" n="950">Hector, thou hearest. We were guiltless here,<note
+                        resp="editor">P. 52, l. 950. These short speeches between Hector and the
+                     Leader of the Guard make a jarring note in the midst of the Muse’s lament.
+                     Perhaps it would not be so if we knew how the play was produced, but at present
+                     this seems like one of several marks of comparative crudity in technique which
+                     mark the play, amid all its daring and inventiveness.</note>
                   </l>
                   <l n="951">And falsely spake that Thracian charioteer.</l>
                </sp>
-               <milestone unit="card" resp="perseus" n="952"/>
+               <milestone unit="card" resp="perseus" n="952" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="952">Always I knew it. Had we any need</l>
                   <l n="953">Of seers to tell this was Odysseus’ deed?</l>
                   <l n="954">For me, what could I else, when I beheld</l>
-                  <l n="954a">The hosts of <placeName key="perseus,Argos">Argos</placeName> camped upon this field,</l>
+                  <l n="954a">The hosts of <placeName key="perseus,Argos">Argos</placeName> camped
+                     upon this field,</l>
                   <l n="955">What but with prayers and heralds bid my friend</l>
-                  <l n="956">Come forth and fight for <placeName key="tgn,7002329">Ilion</placeName> ere the end?</l>
+                  <l n="956">Come forth and fight for <placeName key="tgn,7002329">Ilion</placeName>
+                     ere the end?</l>
                   <l n="957">He owed me that.—Yet, now my friend is slain,</l>
                   <l n="957a">His sorrow is my sorrow. On this plain</l>
                   <l n="958">I will uplift a wondrous sepulchre,</l>
@@ -2156,12 +2642,21 @@
                <sp>
                   <speaker>MUSE.</speaker>
                   <l rend="indent" n="962">My son shall not be laid in any grave<note resp="editor">
-                        <p>P. 52, 1. 962 ff., My son shall not be laid in any grave.]—Like other Northern barbaric princes, such as Orpheus (1. 972 below) and Zalmoxis (Herodotus, iv.  95) and Holgar the <placeName key="tgn,1123294">Dane</placeName>, Rhesus lies in a hidden chamber beneath the earth, watching, apparently, for the day of uttermost need when he must rise to help his people. There is no other passage in Greek tragedy where such a fate is attributed to a hero, though the position of Darius in the <title>Persae</title> and Agamemnon in the <title>Choephori</title> or the <title>Electra</title> is in some ways analogous.</p>
-                        <p>The last lines of the Muse have a very Euripidean ring: cf. <title>Medea</title>, l. 1090 (p. 61, <q type="written">My thoughts have roamed a cloudy land</q>), <title>Alcestis</title>, 1. 882.</p>
+                        <p>P. 52, 1. 962 ff., My son shall not be laid in any grave.]—Like other
+                     Northern barbaric princes, such as Orpheus (1. 972 below) and Zalmoxis
+                     (Herodotus, iv. 95) and Holgar the <placeName key="tgn,1123294">Dane</placeName>,
+                     Rhesus lies in a hidden chamber beneath the earth, watching, apparently, for
+                     the day of uttermost need when he must rise to help his people. There is no
+                     other passage in Greek tragedy where such a fate is attributed to a hero,
+                     though the position of Darius in the <title>Persae</title> and Agamemnon in the <title>
+                     Choephori</title> or the <title>Electra</title> is in some ways analogous.</p>
+                        <p>The last lines of the Muse have a very Euripidean ring: cf. <title>Medea</title>,
+                     l. 1090 (p. 61, <q type="written">My thoughts have roamed a cloudy land</q>), <title>
+                     Alcestis</title>, 1. 882.</p>
                      </note>
                   </l>
                   <l n="962a">Of darkness; thus much guerdon will I crave</l>
-                  <pb xml:id="p.53"/>
+                  <pb xml:id="p.53" />
                   <l n="963">Of Death’s eternal bride, the heavenly-born</l>
                   <l n="964">Maid of Demeter, Life of fruits and corn,</l>
                   <l n="965">To set this one soul free. She owes me yet,</l>
@@ -2190,13 +2685,22 @@
                <stage rend="italic">The VISION rises through the air and vanishes.</stage>
                <sp>
                   <speaker>LEADER.</speaker>
-                  <l rend="indent" n="983">The dead man sleepeth in his mother’s care;<note resp="editor">P. 54, 11. 983-end. This curious and moving end—not in death or peace but in a girding of tired men to greater toil—reminds one of the last words of <title>The Trojan Women</title>: <q type="written">Forth to the long Greek ships And the sea’s foaming,</q> and the last words of the Chanson de Roland there quoted.  The Trojans evidently go forth under the shadow of disaster, though with firmness and courage. The stage direction is of course purely conjectural. If Diomedes left some sign of Dolon’s death for Hector to see, as he probably must have done, then Hector must at some time or other see it. If so, this seems to be the place.  </note>
+                  <l rend="indent" n="983">The dead man sleepeth in his mother’s care;<note
+                        resp="editor">P. 54, 11. 983-end. This curious and moving end—not in death
+                     or peace but in a girding of tired men to greater toil—reminds one of the last
+                     words of <title>The Trojan Women</title>: <q type="written">Forth to the long
+                     Greek ships And the sea’s foaming,</q> and the last words of the Chanson de
+                     Roland there quoted. The Trojans evidently go forth under the shadow of
+                     disaster, though with firmness and courage. The stage direction is of course
+                     purely conjectural. If Diomedes left some sign of Dolon’s death for Hector to
+                     see, as he probably must have done, then Hector must at some time or other see
+                     it. If so, this seems to be the place. </note>
                   </l>
                   <l n="984">But we who battle still—behold, the glare</l>
                   <l n="984a">Of dawn that rises. Doth thy purpose hold,</l>
                   <l n="985">Hector, our arms are ready as of old.</l>
                </sp>
-               <pb xml:id="p.54"/>
+               <pb xml:id="p.54" />
                <sp>
                   <speaker>HECTOR.</speaker>
                   <l rend="indent" n="986">March on; and bid the allies with all speed</l>
@@ -2210,9 +2714,12 @@
                   <l n="992a">The dawn to Troy, hath freedom on his wings.</l>
                </sp>
             </div>
-            <milestone resp="perseus" unit="card" n="993"/>
+            <milestone resp="perseus" unit="card" n="993" />
             <div type="anapests">
-               <stage rend="italic">During the following lines HECTOR goes to his tent to get his shield, and as he enters sees DOLON’S bloody wolf-skin hanging. He takes it, looks at it, and throws it down without a word. Then he puts on his helmet, takes his shield and spear, and follows the Guards as they march off.</stage>
+               <stage rend="italic">During the following lines HECTOR goes to his tent to get his
+                  shield, and as he enters sees DOLON’S bloody wolf-skin hanging. He takes it, looks
+                  at it, and throws it down without a word. Then he puts on his helmet, takes his
+                  shield and spear, and follows the Guards as they march off.</stage>
                <sp>
                   <speaker>CHORUS.</speaker>
                   <l rend="indent" n="993">The Chief hath spoken: let his will</l>
