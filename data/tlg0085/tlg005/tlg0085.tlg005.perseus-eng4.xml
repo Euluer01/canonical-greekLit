@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -34,37 +35,45 @@
                   </imprint>
                   <biblScope unit="volume">13</biblScope>
                </monogr>
-               <ref target="https://books.google.com/books?id=818oAAAAYAAJ&amp;pg=PA269">Google Books</ref>
+               <ref target="https://books.google.com/books?id=818oAAAAYAAJ&amp;pg=PA269">Google
+                  Books</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <quotation marks="none"/>
+            <quotation marks="none" />
             <correction method="silent" status="medium">
                <p>optical character recognition</p>
             </correction>
          </editorialDecl>
-         <!--<refsDecl n="CTS">
-            <cRefPattern n="card" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+         <!--<refsDecl
+         n="CTS">
+            <cRefPattern n="card" matchPattern="(\w+)"
+         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts cards</p>
             </cRefPattern>
-            
+
         </refsDecl>-->
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts lines</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#drama-line"/>
+            <catRef scheme="#perseus-genre" target="#drama-line" />
          </textClass>
          <langUsage>
             <language ident="eng">English</language>
@@ -77,11 +86,18 @@
       </profileDesc>
       <revisionDesc>
          <change when="2017-02-28" who="Lisa Cerrato">reverting back to lines</change>
-         <change when="2017-01-18" who="Lisa Cerrato">fixed change log and other minor inconsitencies; fixed line numbering for display functions; fixed front matter; quotation marks. Note that the line numbers are imprecise due to the nature of the translation but I tried to maintain counts within milestones and sections.</change>
+         <change when="2017-01-18" who="Lisa Cerrato">fixed change log and other minor
+            inconsitencies; fixed line numbering for display functions; fixed front matter;
+            quotation marks. Note that the line numbers are imprecise due to the nature of the
+            translation but I tried to maintain counts within milestones and sections.</change>
          <change when="2016-01-12" who="TDBuck">epidoc to cts</change>
-         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
-         <change when="2013-06-30" who="gcrane">the card divs had had a line range but there was a problem with this, so we just have the start line in the n attribute.</change>
-         <change when="2009-10-07" who="rsingh04">began reorganizing texts module by collection.  created separate work directory in texts module to keep hopper files separate from in progress files</change>
+         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing
+            greco-roman collection texts to a Work directory</change>
+         <change when="2013-06-30" who="gcrane">the card divs had had a line range but there was a
+            problem with this, so we just have the start line in the n attribute.</change>
+         <change when="2009-10-07" who="rsingh04">began reorganizing texts module by collection.
+            created separate work directory in texts module to keep hopper files separate from in
+            progress files</change>
          <change when="2009-06-22" who="student-CEH">edited entity tags CEH</change>
          <change when="2009-05-27" who="rsingh04">added cvs log keyword</change>
          <change when="2002-05-07" who="AEM">initial scanning and markup</change>
@@ -89,161 +105,138 @@
    </teiHeader>
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg005.perseus-eng4">
-         <l n="preface">
-            Translator’s preface
-            
-               
-            <milestone unit="para"/>MAY I be permitted to chat a little, by way of recreation,
-                  at the end of a somewhat toilsome and perhaps fruitless
-                  adventure?
-            <milestone unit="para"/>If, because of the immense fame of the following
-                  Tragedy, I wished to acquaint myself with it, and could
-                  only do so by the help of a translator, I should require
-                  him to be literal at every cost save that of absolute
-                  violence to our language.  The use of certain allowable
-                  constructions which, happening to be out of daily favour,
-                  are all the more appropriate to archaic workmanship, is
-                  no violence: but I would be tolerant for once,—in the
-                  case of so immensely famous an original,—of even a
-                  clumsy attempt to furnish me with the very turn of each
-                  phrase in as Greek a fashion as English will bear: while,
-                  with respect to amplifications and embellishments,—anything rather than, with the good farmer, experience that
-                  most signal of mortifications, <quote>to gape for Aeschylus and
-                  get Theognis.</quote> I should especially decline,—what may
-                  appear to brighten up a passage,—the employment of a
-                  new word for some old one—<foreign xml:lang="grc">πόνος</foreign>, or <foreign xml:lang="grc">μέγας</foreign>, or <foreign xml:lang="grc">τέλος</foreign>,
-                  with its congeners, recurring four times in three lines:
-                  for though such substitution may be in itself perfectly
-                  justifiable, yet this exercise of ingenuity ought to be
-                  within the competence of the unaided English reader
-                  if he likes to show himself ingenious. Learning Greek
-                  teaches Greek, and nothing else: certainly not common
-                  sense, if that have failed to precede the teaching. Further,—if I obtained a mere strict bald version of thing
-                  by thing, or at least word pregnant with thing, I should
-                  hardly look for an impossible transmission of the reputed
-                  magniloquence and sonority of the Greek; and this with
-                  the less regret, inasmuch as there is abundant musicality
-                  elsewhere, but nowhere else than in his poem the ideas
-                  of the poet.  And lastly, when presented with these
-                  ideas, I should expect the result to prove very hard
-                  reading indeed if it were meant to resemble Aeschylus,
-                  <cit>
+         <l n="preface"> Translator’s preface <milestone unit="para" />MAY I be permitted to chat a
+            little, by way of recreation, at the end of a somewhat toilsome and perhaps fruitless
+            adventure? <milestone unit="para" />If, because of the immense fame of the following
+            Tragedy, I wished to acquaint myself with it, and could only do so by the help of a
+            translator, I should require him to be literal at every cost save that of absolute
+            violence to our language. The use of certain allowable constructions which, happening to
+            be out of daily favour, are all the more appropriate to archaic workmanship, is no
+            violence: but I would be tolerant for once,—in the case of so immensely famous an
+            original,—of even a clumsy attempt to furnish me with the very turn of each phrase in as
+            Greek a fashion as English will bear: while, with respect to amplifications and
+            embellishments,—anything rather than, with the good farmer, experience that most signal
+            of mortifications, <quote>to gape for Aeschylus and
+               get Theognis.</quote> I should especially decline,—what may appear to brighten up a
+            passage,—the employment of a new word for some old one—<foreign xml:lang="grc">πόνος</foreign>,
+            or <foreign xml:lang="grc">μέγας</foreign>, or <foreign xml:lang="grc">τέλος</foreign>,
+            with its congeners, recurring four times in three lines: for though such substitution
+            may be in itself perfectly justifiable, yet this exercise of ingenuity ought to be
+            within the competence of the unaided English reader if he likes to show himself
+            ingenious. Learning Greek teaches Greek, and nothing else: certainly not common sense,
+            if that have failed to precede the teaching. Further,—if I obtained a mere strict bald
+            version of thing by thing, or at least word pregnant with thing, I should hardly look
+            for an impossible transmission of the reputed magniloquence and sonority of the Greek;
+            and this with the less regret, inasmuch as there is abundant musicality elsewhere, but
+            nowhere else than in his poem the ideas of the poet. And lastly, when presented with
+            these ideas, I should expect the result to prove very hard reading indeed if it were
+            meant to resemble Aeschylus, <cit>
                <quote xml:lang="grc">ξυμβαλεῖν οὐ ῥᾴδιος</quote>
                <bibl n="Aristoph. Frogs 931">(Frogs 931)</bibl>
-            </cit>, <gloss>not easy to understand,</gloss> in the
-                  opinion of his stoutest advocate among the ancients;
-                  while, I suppose, even modern scholarship sympathizes
-                  with that early declaration of the redoubtable Salmasius,
-                  when, looking about for an example of the truly obscure
-                  for the benefit of those who found obscurity in the sacred
-                  books, he protested that this particular play leaves them
-                  all behind in this respect, with their <quote>Hebraisms, Syriasms,
-                  Hellenisms, and the whole of such bag and baggage.</quote>
+            </cit>, <gloss>not easy
+            to understand,</gloss> in the opinion of his stoutest advocate among the ancients;
+            while, I suppose, even modern scholarship sympathizes with that early declaration of the
+            redoubtable Salmasius, when, looking about for an example of the truly obscure for the
+            benefit of those who found obscurity in the sacred books, he protested that this
+            particular play leaves them all behind in this respect, with their <quote>Hebraisms,
+            Syriasms,
+               Hellenisms, and the whole of such bag and baggage.</quote>
             <note anchored="true">
                <cit>
                   <quote xml:lang="lat">Quis Aeschylum possit affirmare Graece nunc scienti magis
-                           patere explicabilem  quam  Evangelia aut Epistolas Apostolicas?
-                           Unus ejus Agamemnon obscuritate superat quantum est librorum
-                           sacrorum  cum  suis Hebraismis et Syriasmis et tota Hellenisticae
-                           supellectili vel farragine.</quote>
+            patere explicabilem quam Evangelia aut Epistolas Apostolicas?
+                     Unus ejus Agamemnon obscuritate superat quantum est librorum
+                     sacrorum cum suis Hebraismis et Syriasmis et tota Hellenisticae
+                     supellectili vel farragine.</quote>
                   <bibl>SALMASIUS de Hellenistica, Epist. Dedic.</bibl>
                </cit>
             </note>
-                  For, over and above the purposed ambiguity of the Chorus,
-                  the text is sadly corrupt, probably interpolated, and certainly mutilated; and no unlearned person enjoys the
-                  scholar’s privilege of trying his fancy upon each obstacle
-                  whenever he comes to a stoppage, and effectually clearing the way by suppressing what seems to lie in it.
-            <milestone unit="para"/>All I can say for the present performance is, that I
-                  have done as I would be done by, if need were. Should
-                  anybody, without need, honour my translation by a comparison with the original, I beg him to observe that,
-                  following no editor exclusively, I keep to the earlier
-                  readings so long as sense can be made out of them, but
-                  disregard, I hope, little of importance in recent criticism
-                  so far as I have fallen in with it.  Fortunately, the
-                  poorest translation, provided only it be faithful,—though
-                  it reproduce all the artistic confusion of tenses, moods,
-                  and persons, with which the original teems,—will not
-                  only suffice to display what an eloquent friend maintains
-                  to be the all-in-all of poetry—<quote>the action of the piece</quote>—
-                  but may help to illustrate his assurance that <quote>the Greeks
-                  are the highest models of expression, the unapproached
-                  masters of the grand style: their expression is so excellent because it is so admirably kept in its right degree
-                  of prominence, because it is so simple and so well subordinated, because it draws its force directly from the
-                  pregnancy of the matter which it conveys . . . not a
-                  word wasted, not a sentiment capriciously thrown in,
-                  stroke on stroke!</quote>
+            For, over and above the purposed ambiguity of the Chorus, the text is sadly corrupt,
+            probably interpolated, and certainly mutilated; and no unlearned person enjoys the
+            scholar’s privilege of trying his fancy upon each obstacle whenever he comes to a
+            stoppage, and effectually clearing the way by suppressing what seems to lie in it. <milestone
+               unit="para" />All I can say for the present performance is, that I have done as I
+            would be done by, if need were. Should anybody, without need, honour my translation by a
+            comparison with the original, I beg him to observe that, following no editor
+            exclusively, I keep to the earlier readings so long as sense can be made out of them,
+            but disregard, I hope, little of importance in recent criticism so far as I have fallen
+            in with it. Fortunately, the poorest translation, provided only it be faithful,—though
+            it reproduce all the artistic confusion of tenses, moods, and persons, with which the
+            original teems,—will not only suffice to display what an eloquent friend maintains to be
+            the all-in-all of poetry—<quote>the action of the piece</quote>— but may help to
+            illustrate his assurance that <quote>the Greeks
+               are the highest models of expression, the unapproached
+               masters of the grand style: their expression is so excellent because it is so
+            admirably kept in its right degree
+               of prominence, because it is so simple and so well subordinated, because it draws its
+            force directly from the
+               pregnancy of the matter which it conveys . . . not a
+               word wasted, not a sentiment capriciously thrown in,
+               stroke on stroke!</quote>
             <note anchored="true">
-               <title>Poems by Matthew Arnold</title>, Preface.</note> So may all happen!
-            <milestone unit="para"/>Just a word more on the subject of my spelling—in a
-                  transcript from the Greek and there exclusively—Greek
-                  names and places precisely as does the Greek author. I
-                  began this practice, with great innocency of intention,
-                  some six-and-thirty years ago. Leigh Hunt, I remember,
-                  was accustomed to speak of his gratitude, when ignorant
-                  of Greek, to those writers (like Goldsmith) who had
-                  obliged him by using English characters, so that he
-                  might relish, for instance, the smooth quality of such a
-                  phrase as <q type="foreign">hapalunetai galené;</q> he said also that Shelley
-                  was indignant at <q type="emph">Firenze</q> having displaced the Dantesque <q type="emph">Fiorenza,</q> and would contemptuously English
-                  the intruder <q type="emph">Firence.</q> I supposed I was doing a simple
-                  thing enough: but there has been till lately much astonishment
-                  at <mentioned>os</mentioned> and <mentioned>us</mentioned>, <mentioned>ai</mentioned> and <mentioned>oi</mentioned>, representing the same
-                  letters in Greek.  Of a sudden, however, whether in
-                  translation or out of it, everybody seems committing the
-                  offence, although the adoption of <mentioned>u</mentioned> for <mentioned>v</mentioned> still presents
-                  such difficulty that it is a wonder how we have hitherto
-                  escaped <q type="emph">Eyripides.</q> But there existed a sturdy Briton
-                  who, Ben Jonson informs us, wrote <title>The Life of the
-                  Emperor Anthony Pie</title> — whom we now acquiesce in as
-                  Antoninus Pius: for <quote>with time and patience the mulberry
-                  leaf becomes satin.</quote> Yet there is, on all sides, much
-                  profession of respect for what Keats called <quote>vowelled
-                  Greek</quote> — <q type="emph">consonanted,</q> one would expect; and, in a
-                  criticism upon a late admirable translation of something
-                  of my own, it was deplored that, in a certain verse corresponding in measure to the fourteenth of the sixth
-                  Pythian Ode, <quote>neither Professor Jebb in his Greek, nor
-                  Mr. Browning in his English, could emulate that matchlessly musical <cit>
+               <title>Poems by Matthew Arnold</title>, Preface.</note> So may all happen! <milestone
+               unit="para" />Just a word more on the subject of my spelling—in a transcript from the
+            Greek and there exclusively—Greek names and places precisely as does the Greek author. I
+            began this practice, with great innocency of intention, some six-and-thirty years ago.
+            Leigh Hunt, I remember, was accustomed to speak of his gratitude, when ignorant of
+            Greek, to those writers (like Goldsmith) who had obliged him by using English
+            characters, so that he might relish, for instance, the smooth quality of such a phrase
+            as <q type="foreign">hapalunetai galené;</q> he said also that Shelley was indignant at <q
+               type="emph">Firenze</q> having displaced the Dantesque <q type="emph">Fiorenza,</q>
+            and would contemptuously English the intruder <q type="emph">Firence.</q> I supposed I
+            was doing a simple thing enough: but there has been till lately much astonishment at <mentioned>
+            os</mentioned> and <mentioned>us</mentioned>, <mentioned>ai</mentioned> and <mentioned>
+            oi</mentioned>, representing the same letters in Greek. Of a sudden, however, whether in
+            translation or out of it, everybody seems committing the offence, although the adoption
+            of <mentioned>u</mentioned> for <mentioned>v</mentioned> still presents such difficulty
+            that it is a wonder how we have hitherto escaped <q type="emph">Eyripides.</q> But there
+            existed a sturdy Briton who, Ben Jonson informs us, wrote <title>The Life of the
+               Emperor Anthony Pie</title> — whom we now acquiesce in as Antoninus Pius: for <quote>with
+            time and patience the mulberry
+               leaf becomes satin.</quote> Yet there is, on all sides, much profession of respect
+            for what Keats called <quote>vowelled
+               Greek</quote> — <q type="emph">consonanted,</q> one would expect; and, in a criticism
+            upon a late admirable translation of something of my own, it was deplored that, in a
+            certain verse corresponding in measure to the fourteenth of the sixth Pythian Ode, <quote>neither
+            Professor Jebb in his Greek, nor Mr. Browning in his English, could emulate that
+            matchlessly musical <cit>
                   <quote xml:lang="grc">γόνον ἰδὼν κάλλιστον ἀνδρῶν</quote>
                   <bibl n="Pind. P. 4.123">(Pyth. 4.123)</bibl>
-               </cit>.</quote>  Now,
-                  undoubtedly, <gloss>Seeing her son the fairest of men</gloss> has
-                  more sense than sound to boast of: but then, would not
-                  an Italian roll us out <quote xml:lang="ita">Rimirando il figliuolo bellissimo
-                     degli uomini!</quote> whereat Pindar, no less than Professor
-                  Jebb and Mr. Browning, <cit>
+               </cit>.</quote> Now,
+            undoubtedly, <gloss>Seeing her son the fairest of men</gloss> has more sense than sound
+            to boast of: but then, would not an Italian roll us out <quote xml:lang="ita">Rimirando
+            il figliuolo bellissimo
+               degli uomini!</quote> whereat Pindar, no less than Professor Jebb and Mr. Browning, <cit>
                <quote xml:lang="grc">τριακτῆρος οἴχεται τυχών</quote>
                <bibl n="Aesch. Ag. 171">(Ag. 171)</bibl>
-            </cit>.
-            <milestone unit="para"/>It is recorded in the annals of Art<note anchored="true">
-               <title xml:lang="fre">Lettres à un jeune Prince, traduites du Suédois</title>.</note> that there was
-                  once upon a time, practising so far north as <placeName key="tgn,7003777">Stockholm</placeName>, a
-                  painter and picture-cleaner — sire of a less unhappy son
-                  — Old Muytens: and the annalist, Baron de Tessé, has
-                  not concealed his profound dissatisfaction at Old Muytens’
-                  conceit <quote>to have himself had something to do with the
-                  work of whatever master of eminence might pass through
-                  his hands.</quote>  Whence it was,—the Baron goes on to
-                  deplore,—that much detriment was done to that excellent
-                  piece <title>The Recognition of Achilles,</title> by Rubens, through
-                  the perversity of Old Muytens, <quote>who must needs take on
-                  him to beautify every nymph of the twenty by the bestowment of a widened eye and an enlarged mouth.</quote> I,
-                  at least, have left eyes and mouths everywhere as I found
-                  them, and this conservatism is all that claims praise for —
-                  what is, after all, <cit>
+            </cit>. <milestone unit="para" />It
+            is recorded in the annals of Art<note anchored="true">
+               <title xml:lang="fre">Lettres à un jeune Prince, traduites du Suédois</title>.</note>
+            that there was once upon a time, practising so far north as <placeName key="tgn,7003777">
+            Stockholm</placeName>, a painter and picture-cleaner — sire of a less unhappy son — Old
+            Muytens: and the annalist, Baron de Tessé, has not concealed his profound
+            dissatisfaction at Old Muytens’ conceit <quote>to have himself had something to do with
+            the
+               work of whatever master of eminence might pass through
+               his hands.</quote> Whence it was,—the Baron goes on to deplore,—that much detriment
+            was done to that excellent piece <title>The Recognition of Achilles,</title> by Rubens,
+            through the perversity of Old Muytens, <quote>who must needs take on
+               him to beautify every nymph of the twenty by the bestowment of a widened eye and an
+            enlarged mouth.</quote> I, at least, have left eyes and mouths everywhere as I found
+            them, and this conservatism is all that claims praise for — what is, after all, <cit>
                <quote xml:lang="grc">ἀκέλευστος ἄμισθος ἀοιδά</quote>
                <bibl n="Aesch. Ag. 979">(Ag. 979)</bibl>
-            </cit>.  No, neither
-                  <gloss>uncommanded</gloss> nor <gloss>unrewarded</gloss>:   since it was commanded of me by my venerated friend Thomas Carlyle,
-                  and rewarded will it indeed become if I am permitted to
-                  dignify it by the prefatory insertion of his dear and noble
-                  name.
-          
-               <milestone unit="para"/>
+            </cit>. No, neither <gloss>
+            uncommanded</gloss> nor <gloss>unrewarded</gloss>: since it was commanded of me by my
+            venerated friend Thomas Carlyle, and rewarded will it indeed become if I am permitted to
+            dignify it by the prefatory insertion of his dear and noble name. <milestone unit="para" />
             <!--<closer>-->
-            <name n="Robert Browning">R. B.</name>
-            <placeName key="tgn,7011781">LONDON</placeName>: <date when="1877-10-01">October 1st, 1877.</date>
+            <name
+               n="Robert Browning">R. B.</name>
+            <placeName key="tgn,7011781">LONDON</placeName>: <date
+               when="1877-10-01">October 1st, 1877.</date>
             <!--</closer>-->
-            <milestone unit="card" n="1"/>
+            <milestone unit="card" n="1" />
             <listPerson>
                <person>
                   <persName>Warder.</persName>
@@ -279,7 +272,8 @@
                <l n="6">Bright dynasts, as they pride them in the aether</l>
                <l n="7">— Stars, when they wither, and the uprisings of them.</l>
                <l n="8">And now on ward I wait the torch’s token,</l>
-               <l n="9">The glow of fire, shall bring from <placeName key="tgn,7002329">Troia</placeName> message</l>
+               <l n="9">The glow of fire, shall bring from <placeName key="tgn,7002329">Troia</placeName>
+                  message</l>
                <l n="10">And word of capture: so prevails audacious</l>
                <l n="11">The man’s-way-planning hoping heart of woman.</l>
                <l n="12">But when I, driven from night-rest, dew-drenched hold to</l>
@@ -298,7 +292,8 @@
                <l n="25">To Agamemnon’s wife I show, by shouting,</l>
                <l n="26">That, from bed starting up at once, i’ the household</l>
                <l n="27">Joyous acclaim, good-omened to this torch-blaze,</l>
-               <l n="28">She send aloft, if haply <placeName key="tgn,7002329">Ilion</placeName>’s city</l>
+               <l n="28">She send aloft, if haply <placeName key="tgn,7002329">Ilion</placeName>’s
+                  city</l>
                <l n="29">Be taken, as the beacon boasts announcing.</l>
                <l n="30">Ay, and, for me, myself will dance a prelude,</l>
                <l n="31">For, that my masters’ dice drop right, I’ll reckon:</l>
@@ -311,7 +306,7 @@
                <l n="38">To those who know: to who know not — I’m blankness.
 </l>
             </sp>
-            <milestone unit="card" n="40"/>
+            <milestone unit="card" n="40" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="40">The tenth year this, since Priamos’ great match,</l>
@@ -363,7 +358,7 @@
                <l n="82">A dream in day.
 </l>
             </sp>
-            <milestone unit="card" n="83"/>
+            <milestone unit="card" n="83" />
             <sp>
                <l n="83">But thou, Tundareus’ daughter, Klutaimnestra queen,</l>
                <l n="84">What need? What new? What having heard or seen,</l>
@@ -388,7 +383,7 @@
                <l n="103">The sorrow at my breast, devouring there!</l>
             </sp>
          </div>
-         <milestone unit="card" n="104"/>
+         <milestone unit="card" n="104" />
          <div type="choral">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -400,10 +395,11 @@
                <l n="109">Born to the business, still such war can wage)</l>
                <l n="110">— How the fierce bird against the Teukris land</l>
                <l n="111">Despatched, with spear and executing hand,</l>
-               <l n="112">The Achaian’s two-throned empery—o’er <placeName key="tgn,1000074">Hellas</placeName>’ youth</l>
+               <l n="112">The Achaian’s two-throned empery—o’er <placeName key="tgn,1000074">Hellas</placeName>’
+                  youth</l>
                <l n="113">Two rulers with one mind:</l>
                <l n="114">The birds’ king to these kings of ships, on high,</l>
-               <l n="115">— The black sort, and the sort that’s white behind,  —</l>
+               <l n="115">— The black sort, and the sort that’s white behind, —</l>
                <l n="116">Appearing by the palace, on the spear-throw side,</l>
                <l n="117">In right sky-regions, visible far and wide, —</l>
                <l n="118">Devouring a hare-creature, great with young,</l>
@@ -412,7 +408,7 @@
                <l n="121">But may the good prevail!
 </l>
             </sp>
-            <milestone unit="card" n="122"/>
+            <milestone unit="card" n="122" />
             <sp>
                <l n="122">The prudent army-prophet seeing two</l>
                <l n="123">The Atreidai, two their tempers, knew</l>
@@ -423,10 +419,12 @@
                   <q type="spoken">In time, this outset takes the town of Priamos:</q>
                </l>
                <l n="127">
-                  <q type="spoken" rend="merge">But all before its towers, — the people’s wealth that was,</q>
+                  <q type="spoken" rend="merge">But all before its towers, — the people’s wealth
+                     that was,</q>
                </l>
                <l n="128">
-                  <q type="spoken" rend="merge">Of flocks and herds, — as sure, shall booty-sharing thence</q>
+                  <q type="spoken" rend="merge">Of flocks and herds, — as sure, shall booty-sharing
+                     thence</q>
                </l>
                <l n="129">
                   <q type="spoken" rend="merge">Drain to the dregs away, by battle violence.</q>
@@ -435,10 +433,12 @@
                   <q type="spoken" rend="merge">Only, have care lest grudge of any god disturb</q>
                </l>
                <l n="131">
-                  <q type="spoken" rend="merge">With cloud the unsullied shine of that great force, the curb</q>
+                  <q type="spoken" rend="merge">With cloud the unsullied shine of that great force,
+                     the curb</q>
                </l>
                <l n="132">
-                  <q type="spoken" rend="merge">Of <placeName key="tgn,7002329">Troia</placeName>, struck with damp</q>
+                  <q type="spoken" rend="merge">Of <placeName key="tgn,7002329">Troia</placeName>,
+                     struck with damp</q>
                </l>
                <l n="133">
                   <q type="spoken" rend="merge">Beforehand in the camp!</q>
@@ -459,13 +459,14 @@
                   <q type="spoken" rend="merge">And cowering beast,</q>
                </l>
                <l n="138">
-                  <q type="spoken" rend="merge">Brood and all, ere the birth: she hates the eagles’ feast.</q>
+                  <q type="spoken" rend="merge">Brood and all, ere the birth: she hates the eagles’
+                     feast.</q>
                </l>
                <l n="139">Ah, Linos, say — ah, Linos, song of wail!</l>
                <l n="139a">But may the good prevail!
 </l>
             </sp>
-            <milestone unit="card" n="140"/>
+            <milestone unit="card" n="140" />
             <sp>
                <l n="140">
                   <q type="spoken">Thus ready is the beauteous one with help</q>
@@ -536,7 +537,7 @@
                <l n="159a">But may the good prevail!
 </l>
             </sp>
-            <milestone unit="card" n="160"/>
+            <milestone unit="card" n="160" />
             <sp>
                <l n="160">Zeus, whosoe’er he be, — if that express</l>
                <l n="161">Aught dear to him on whom I call —</l>
@@ -548,7 +549,7 @@
                <l n="166">From off my soul its vague care-burthen thrust.
 </l>
             </sp>
-            <milestone unit="card" n="167"/>
+            <milestone unit="card" n="167" />
             <sp>
                <l n="167">Not — whosoever was the great of yore,</l>
                <l n="168">Bursting to bloom with bravery all round —</l>
@@ -561,7 +562,7 @@
                <l n="175">Complete in judgment shall that man be found.
 </l>
             </sp>
-            <milestone unit="card" n="176"/>
+            <milestone unit="card" n="176" />
             <sp>
                <l n="176">Zeus, who leads onward mortals to be wise,</l>
                <l n="177">Appoints that suffering masterfully teach.</l>
@@ -574,7 +575,7 @@
                <l n="183a">Assume the awful seat.
 </l>
             </sp>
-            <milestone unit="card" n="184"/>
+            <milestone unit="card" n="184" />
             <sp>
                <l n="184">And then the old leader of the Achaian fleet,</l>
                <l n="185">Disparaging no seer —</l>
@@ -583,10 +584,10 @@
                <l n="188">By stay from sailing, — every pulse at length</l>
                <l n="189">Emptied of vital strength, —</l>
                <l n="190">Hard over Kalchis shore-bound, current-crost</l>
-               <l n="191">In <placeName key="perseus,Aulis">Aulis</placeName> station, — while the winds which post
-</l>
+               <l n="191">In <placeName key="perseus,Aulis">Aulis</placeName> station, — while the
+                  winds which post </l>
             </sp>
-            <milestone unit="card" n="192"/>
+            <milestone unit="card" n="192" />
             <sp>
                <l n="192">From Strumon, ill-delayers, famine-fraught,</l>
                <l n="193">Tempters of man to sail where harbourage is naught,</l>
@@ -603,7 +604,7 @@
                <l n="204">Could not withhold the tear) —
 </l>
             </sp>
-            <milestone unit="card" n="205"/>
+            <milestone unit="card" n="205" />
             <sp>
                <l n="205">Then did the king, the elder, speak this clear.</l>
                <l n="206">
@@ -643,7 +644,7 @@
                   <q type="spoken" rend="merge">Well may it work them — this that they require!</q>
                </l>
             </sp>
-            <milestone unit="card" n="218"/>
+            <milestone unit="card" n="218" />
             <sp>
                <l n="218">But when he underwent necessity’s</l>
                <l n="219">Yoke-trace, — from soul blowing unhallowed change</l>
@@ -659,7 +660,7 @@
                <l n="227">With such prelusive rite!
 </l>
             </sp>
-            <milestone unit="card" n="228"/>
+            <milestone unit="card" n="228" />
             <sp>
                <l n="228">Prayings and callings <q type="spoken">Father</q> — naught they made</l>
                <l n="229">Of these, and of the virgin-age, —</l>
@@ -672,7 +673,7 @@
                <l n="236">From utterance a curse against the House
 </l>
             </sp>
-            <milestone unit="card" n="238"/>
+            <milestone unit="card" n="238" />
             <sp>
                <l n="238">By dint of bit-violence bridling speech.</l>
                <l n="239">And as to ground her saffron-vest she shed,</l>
@@ -688,7 +689,7 @@
                <l n="247">Good fortune to the sire she loved so well.
 </l>
             </sp>
-            <milestone unit="card" n="248"/>
+            <milestone unit="card" n="248" />
             <sp>
                <l n="248">What followed — those things I nor saw nor tell.</l>
                <l n="249">But Kalchas’ arts, — whate’er they indicate, —</l>
@@ -706,7 +707,7 @@
                <l n="257">Sole guarding barrier of the Apian land.</l>
             </sp>
          </div>
-         <milestone unit="card" n="258"/>
+         <milestone unit="card" n="258" />
          <div type="episode">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -731,7 +732,8 @@
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="269">
-                  <placeName key="tgn,7002329">Troia</placeName> the Achaioi hold: do I speak plainly?</l>
+                  <placeName key="tgn,7002329">Troia</placeName> the Achaioi hold: do I speak
+                  plainly?</l>
             </sp>
             <sp>
                <speaker>CHOROS.</speaker>
@@ -778,13 +780,14 @@
                <l n="280">And who of messengers could reach this swiftness?
 </l>
             </sp>
-            <milestone unit="card" n="281"/>
+            <milestone unit="card" n="281" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="281">Hephaistos — sending a bright blaze from Ide.</l>
                <l n="282">Beacon did beacon send, from fire the poster,</l>
                <l n="283">Hitherward: Ide to the rock Hermaian</l>
-               <l n="284">Of <placeName key="tgn,7011173">Lemnos</placeName>: and a third great torch o’ the island</l>
+               <l n="284">Of <placeName key="tgn,7011173">Lemnos</placeName>: and a third great
+                  torch o’ the island</l>
                <l n="285">Zeus’ seat received in turn, the Athoan summit.</l>
                <l n="286">And, — so upsoaring as to stride sea over,</l>
                <l n="287">The strong lamp-voyager, and all for joyance —</l>
@@ -804,7 +807,7 @@
                <l n="301">O’ the guard — as burning more than burnings told you.</l>
                <l n="302">And over Lake Gorgopis light went leaping,</l>
                <l n="303">And, at Mount Aigiplanktos safe arriving,</l>
-               <l n="304">Enforced the law —  <q type="emph">to never stint the fire-stuff.</q>
+               <l n="304">Enforced the law — <q type="emph">to never stint the fire-stuff.</q>
                </l>
                <l n="305">And they send, lighting up with ungrudged vigour,</l>
                <l n="306">Of flame a huge beard, ay, the very foreland</l>
@@ -817,7 +820,8 @@
                <l n="313">Such are the rules prescribed the flambeau-bearers:</l>
                <l n="314">He beats that’s first and also last in running.</l>
                <l n="315">Such is the proof and token I declare thee,</l>
-               <l n="316">My husband having sent me news from <placeName key="tgn,7002329">Troia</placeName>.</l>
+               <l n="316">My husband having sent me news from <placeName key="tgn,7002329">Troia</placeName>
+                  .</l>
             </sp>
             <sp>
                <speaker>CHOROS.</speaker>
@@ -826,7 +830,7 @@
                <l n="319">Thoroughly, I am fain — if twice thou tell them.
 </l>
             </sp>
-            <milestone unit="card" n="320"/>
+            <milestone unit="card" n="320" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="320">
@@ -869,11 +873,12 @@
                <l n="354">For, grace that must be paid has crowned our labours.
 </l>
             </sp>
-            <milestone unit="card" n="355"/>
+            <milestone unit="card" n="355" />
             <sp>
                <l n="355">O Zeus the king, and friendly Night</l>
                <l n="356">Of these brave boons bestower —</l>
-               <l n="357">Thou who didst fling on <placeName key="tgn,7002329">Troia</placeName>’s every tower</l>
+               <l n="357">Thou who didst fling on <placeName key="tgn,7002329">Troia</placeName>’s
+                  every tower</l>
                <l n="358">The o’er-roofing snare, that neither great thing might,</l>
                <l n="359">Nor any of the young ones, overpass</l>
                <l n="360">Captivity’s great sweep-net — one and all</l>
@@ -885,7 +890,7 @@
                <l n="366">Nor o’er the stars the foolish dart should light.</l>
             </sp>
          </div>
-         <milestone unit="card" n="367"/>
+         <milestone unit="card" n="367" />
          <div type="choral">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -920,7 +925,7 @@
                <l n="384">And disappearing — Right’s great altar.
 </l>
             </sp>
-            <milestone unit="card" n="385"/>
+            <milestone unit="card" n="385" />
             <sp>
                <l n="385">Yes —</l>
                <l n="385a">It urges him, the sad persuasiveness,</l>
@@ -942,11 +947,12 @@
                <l n="401">Shamed the guest’s board by robbery of the spouse.
 </l>
             </sp>
-            <milestone unit="card" n="403"/>
+            <milestone unit="card" n="403" />
             <sp>
                <l n="403">And, leaving to her townsmen throngs a-spread</l>
                <l n="404">With shields, and spear-thrusts of sea-armament,</l>
-               <l n="405">And bringing <placeName key="tgn,7002329">Ilion</placeName>, in a dowry’s stead,</l>
+               <l n="405">And bringing <placeName key="tgn,7002329">Ilion</placeName>, in a dowry’s
+                  stead,</l>
                <l n="406">Destruction — swiftly through the gates she went,</l>
                <l n="407">Daring the undareable. But many a groan outbroke</l>
                <l n="408">From prophets of the House as thus they spoke.</l>
@@ -963,7 +969,8 @@
                   <q type="spoken" rend="merge">There she stands silent! meets no honour — no</q>
                </l>
                <l n="413">
-                  <q type="spoken" rend="merge">Shame — sweetest still to see of things gone long ago!</q>
+                  <q type="spoken" rend="merge">Shame — sweetest still to see of things gone long
+                     ago!</q>
                </l>
                <l n="414">
                   <q type="spoken" rend="merge">And, through desire of one across the main,</q>
@@ -981,7 +988,7 @@
                   <q type="spoken" rend="merge">Those blanks — all Aphrodite dies.</q>
                </l>
             </sp>
-            <milestone unit="card" n="420"/>
+            <milestone unit="card" n="420" />
             <sp>
                <l n="420">
                   <q type="spoken" rend="merge">But dream-appearing mournful fantasies —</q>
@@ -1017,7 +1024,7 @@
                <l n="436">The house of each.
 </l>
             </sp>
-            <milestone unit="card" n="437"/>
+            <milestone unit="card" n="437" />
             <sp>
                <l n="437">For Ares, gold-exchanger for the dead,</l>
                <l n="438">And balance-holder in the fight o’ the spear,</l>
@@ -1040,7 +1047,7 @@
                <l n="455">It hid them — what they have and hold — the hostile earth.
 </l>
             </sp>
-            <milestone unit="card" n="456"/>
+            <milestone unit="card" n="456" />
             <sp>
                <l n="456">And big with anger goes the city’s word,</l>
                <l n="457">And pays a debt by public curse incurred.</l>
@@ -1065,7 +1072,7 @@
                <l n="474">Nor life, myself by others captive, see.
 </l>
             </sp>
-            <milestone unit="card" n="475"/>
+            <milestone unit="card" n="475" />
             <sp>
                <l n="475">A swift report has gone our city through,</l>
                <l n="476">From fire, the good-news messenger: if true,</l>
@@ -1083,7 +1090,7 @@
                <l n="487">The glory perishes by woman vaunted.</l>
             </sp>
          </div>
-         <milestone unit="card" n="488"/>
+         <milestone unit="card" n="488" />
          <div type="episode">
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
@@ -1128,11 +1135,13 @@
                <l n="520">For he comes bringing light in night-time to you,</l>
                <l n="521">In common with all these — king Agamemnon.</l>
                <l n="522">But kindly greet him — for clear shows your duty —</l>
-               <l n="523">Who has dug under <placeName key="tgn,7002329">Troia</placeName> with the mattock</l>
+               <l n="523">Who has dug under <placeName key="tgn,7002329">Troia</placeName> with the
+                  mattock</l>
                <l n="524">Of Zeus the Avenger, whereby plains are out-ploughed,</l>
                <l n="525">Altars unrecognizable, and gods’ shrines,</l>
                <l n="526">And the whole land’s seed thoroughly has perished.</l>
-               <l n="527">And such a yoke-strap having cast round <placeName key="tgn,7002329">Troia</placeName>,</l>
+               <l n="527">And such a yoke-strap having cast round <placeName key="tgn,7002329">Troia</placeName>
+                  ,</l>
                <l n="528">The elder king Atreides, happy man — he</l>
                <l n="529">Comes to be honoured, worthiest of what mortals</l>
                <l n="530">Now are. Nor Paris nor the accomplice-city</l>
@@ -1143,7 +1152,7 @@
                <l n="535">Debts the Priamidai have paid twice over.
 </l>
             </sp>
-            <milestone unit="card" n="538"/>
+            <milestone unit="card" n="538" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="538">Hail, herald from the army of Achaians!</l>
@@ -1226,10 +1235,12 @@
                <l n="576">By us, o’er sea and land the aery flyers,</l>
                <l n="577">
                   <q type="spoken">
-                     <placeName key="tgn,7002329">Troia</placeName> at last taking, the band of Argives</q>
+                     <placeName key="tgn,7002329">Troia</placeName> at last taking, the band of
+                     Argives</q>
                </l>
                <l n="578">
-                  <q type="spoken" rend="merge">Hang up such trophies to the gods of <placeName key="tgn,1000074">Hellas</placeName>
+                  <q type="spoken" rend="merge">Hang up such trophies to the gods of <placeName
+                        key="tgn,1000074">Hellas</placeName>
                   </q>
                </l>
                <l n="579">
@@ -1240,7 +1251,7 @@
                <l n="582">Of Zeus, shall honoured be. Thou hast my whole word.
 </l>
             </sp>
-            <milestone unit="card" n="583"/>
+            <milestone unit="card" n="583" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="583">O’ercome by words, their sense I do not gainsay.</l>
@@ -1253,11 +1264,13 @@
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="587">I shouted long ago, indeed, for joyance,</l>
                <l n="588">When came that first night-messenger of fire</l>
-               <l n="589">Proclaiming <placeName key="tgn,7002329">Ilion</placeName>’s capture and dispersion.</l>
+               <l n="589">Proclaiming <placeName key="tgn,7002329">Ilion</placeName>’s capture and
+                  dispersion.</l>
                <l n="590">And someone, girding me, said, <q type="spoken">Through fire-bearers</q>
                </l>
                <l n="591">
-                  <q type="spoken" rend="merge">Persuaded — <placeName key="tgn,7002329">Troia</placeName> to be sacked now, thinkest?</q>
+                  <q type="spoken" rend="merge">Persuaded — <placeName key="tgn,7002329">Troia</placeName>
+                     to be sacked now, thinkest?</q>
                </l>
                <l n="592">
                   <q type="spoken" rend="merge">Truly, the woman’s way, — high to lift heart up!</q>
@@ -1284,7 +1297,7 @@
                <l n="612">With any other man more than — bronze-dippings!
 </l>
             </sp>
-            <milestone unit="card" n="613"/>
+            <milestone unit="card" n="613" />
             <sp>
                <speaker>HERALD.</speaker>
                <l n="613">Such boast as this — brimful of the veracious —</l>
@@ -1315,7 +1328,8 @@
             </sp>
             <sp>
                <speaker>CHOROS.</speaker>
-               <l n="626">Whether forth-putting openly from <placeName key="tgn,7002329">Ilion</placeName>,</l>
+               <l n="626">Whether forth-putting openly from <placeName key="tgn,7002329">Ilion</placeName>
+                  ,</l>
                <l n="627">Or did storm — wide woe — snatch him from the army?</l>
             </sp>
             <sp>
@@ -1339,7 +1353,7 @@
                <l n="635">Attack and end, by the celestials’ anger?
 </l>
             </sp>
-            <milestone unit="card" n="636"/>
+            <milestone unit="card" n="636" />
             <sp>
                <speaker>HERALD.</speaker>
                <l n="636">It suits not to defile a day auspicious</l>
@@ -1389,7 +1403,7 @@
                <l n="680">Having heard such things, know, thou truth art hearing!</l>
             </sp>
          </div>
-         <milestone unit="card" n="681"/>
+         <milestone unit="card" n="681" />
          <div type="choral">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -1410,9 +1424,10 @@
                <l n="695">For sake of strife all gore!
 </l>
             </sp>
-            <milestone unit="card" n="699"/>
+            <milestone unit="card" n="699" />
             <sp>
-               <l n="699">To <placeName key="tgn,7002329">Ilion</placeName> Wrath, fulfilling her intent,</l>
+               <l n="699">To <placeName key="tgn,7002329">Ilion</placeName> Wrath, fulfilling her
+                  intent,</l>
                <l n="700">This marriage-care — the rightly named so — sent:</l>
                <l n="701">In after-time, for the tables’ abuse</l>
                <l n="702">And that of the hearth-partaker Zeus,</l>
@@ -1431,7 +1446,7 @@
                <l n="714">For citizens’ unhappy slaughter, bore.
 </l>
             </sp>
-            <milestone unit="card" n="716"/>
+            <milestone unit="card" n="716" />
             <sp>
                <l n="716">And thus a man, by no milk’s help,</l>
                <l n="717">Within his household reared a lion’s whelp</l>
@@ -1445,7 +1460,7 @@
                <l n="725">Wagging its tail, at belly’s strict command.
 </l>
             </sp>
-            <milestone unit="card" n="727"/>
+            <milestone unit="card" n="727" />
             <sp>
                <l n="727">But in due time upgrown,</l>
                <l n="728">The custom of progenitors was shown:</l>
@@ -1457,7 +1472,7 @@
                <l n="734">Great mischief many-slaying!
 </l>
             </sp>
-            <milestone unit="card" n="737"/>
+            <milestone unit="card" n="737" />
             <sp>
                <l n="737">From God it was-some priest</l>
                <l n="738">Of Até, in the house, by nurture thus increased.</l>
@@ -1474,7 +1489,7 @@
                <l n="749">Erinus for a bride, — to make brides mourn, her dower.
 </l>
             </sp>
-            <milestone unit="card" n="750"/>
+            <milestone unit="card" n="750" />
             <sp>
                <l n="750">Spoken long ago</l>
                <l n="751">Was the ancient saying</l>
@@ -1499,7 +1514,7 @@
                <l n="762">Ever a beauteous child is born of Fate.
 </l>
             </sp>
-            <milestone unit="card" n="763"/>
+            <milestone unit="card" n="763" />
             <sp>
                <l n="763">But ancient Arrogance delights to generate</l>
                <l n="764">Arrogance, young and strong mid mortals’ sorrow,</l>
@@ -1510,7 +1525,7 @@
                <l n="769">Within the household, children like their nurses.
 </l>
             </sp>
-            <milestone unit="card" n="772"/>
+            <milestone unit="card" n="772" />
             <sp>
                <l n="772">But Justice shines in smoke-grimed habitations,</l>
                <l n="773">And honours the well-omened life;</l>
@@ -1523,13 +1538,15 @@
                <l n="780">And to its end directs each thing begun.
 </l>
             </sp>
-            <milestone unit="card" n="782"/>
+            <milestone unit="card" n="782" />
             <sp>
-               <l n="782">Approach then, my monarch, of <placeName key="tgn,7002329">Troia</placeName> the sacker, of Atreus the son!</l>
-               <l n="783">How ought I address thee, how ought I revere thee, —  nor yet overhitting</l>
+               <l n="782">Approach then, my monarch, of <placeName key="tgn,7002329">Troia</placeName>
+                  the sacker, of Atreus the son!</l>
+               <l n="783">How ought I address thee, how ought I revere thee, — nor yet overhitting</l>
                <l n="784">Nor yet underbending the grace that is fitting?</l>
                <l n="785">Many of mortals hasten to honour the seeming-to-be —</l>
-               <l n="786">Passing by justice: and, with the ill-faring, to groan as he groans all are free.</l>
+               <l n="786">Passing by justice: and, with the ill-faring, to groan as he groans all
+                  are free.</l>
                <l n="787">But no bite of the sorrow their liver has reached to:</l>
                <l n="788">They say with the joyful, — one outside on each, too,</l>
                <l n="789">As they force to a smile smileless faces.</l>
@@ -1541,22 +1558,25 @@
                <l n="795">Thou to me, then, indeed, sending an army for Helena’s sake,</l>
                <l n="796">(I will not conceal it) wast — oh, by no help of the Muses! — depicted</l>
                <l n="797">Not well of thy midriff the rudder directing. — convicted</l>
-               <l n="798">Of bringing a boldness they did not desire to the men with existence at stake.</l>
+               <l n="798">Of bringing a boldness they did not desire to the men with existence at
+                  stake.</l>
                <l n="799">But now — from no outside of mind, nor unlovingly — gracious thou art</l>
                <l n="800">To those who have ended the labour, fulfilling their part;</l>
                <l n="801">And in time shalt thou know, by inquiry instructed,</l>
                <l n="802">Who of citizens justly, and who not to purpose, the city conducted.</l>
             </sp>
          </div>
-         <milestone unit="card" n="810"/>
+         <milestone unit="card" n="810" />
          <div type="episode">
             <sp>
                <speaker>AGAMEMNON.</speaker>
-               <l n="810">First, indeed, <placeName key="tgn,perseus,Argos">Argos</placeName>, and the gods, the local,</l>
+               <l n="810">First, indeed, <placeName key="tgn,perseus,Argos">Argos</placeName>, and
+                  the gods, the local,</l>
                <l n="811">’T is right addressing — those with me the partners</l>
                <l n="812">In this return and right things done the city</l>
                <l n="813">Of Priamos: gods who, from no tongue hearing</l>
-               <l n="814">The rights o’ the cause, for <placeName key="tgn,7002329">Ilion</placeName>’s fate man-slaught’rous</l>
+               <l n="814">The rights o’ the cause, for <placeName key="tgn,7002329">Ilion</placeName>’s
+                  fate man-slaught’rous</l>
                <l n="815">Into the bloody vase, not oscillating,</l>
                <l n="816">Put the vote-pebbles, while, o’ the rival vessel,</l>
                <l n="817">Hope rose up to the lip-edge: filled it was not.</l>
@@ -1602,7 +1622,7 @@
                <l n="854">And Victory, since she followed, fixed remain she!
 </l>
             </sp>
-            <milestone unit="card" n="855"/>
+            <milestone unit="card" n="855" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="855">Men, citizens, Argeians here, my worships!</l>
@@ -1610,7 +1630,8 @@
                <l n="857">To tell before you: for in time there dies off</l>
                <l n="858">The diffidence from people. Not from others</l>
                <l n="859">Learning, I of myself will tell the hard life</l>
-               <l n="860">I bore so long as this man was ’neath <placeName key="tgn,7002329">Ilion</placeName>.</l>
+               <l n="860">I bore so long as this man was ’neath <placeName key="tgn,7002329">Ilion</placeName>
+                  .</l>
                <l n="861">First: for a woman, from the male divided,</l>
                <l n="862">To sit at home alone, is monstrous evil —</l>
                <l n="863">Hearing the many rumours back-revenging:</l>
@@ -1640,7 +1661,7 @@
                <l n="886">Such an excuse, I think, no cunning carries!
 </l>
             </sp>
-            <milestone unit="card" n="887"/>
+            <milestone unit="card" n="887" />
             <sp>
                <l n="887">As for myself — why, of my wails the rushing</l>
                <l n="888">Fountains are dried up: not in them a drop more!</l>
@@ -1662,7 +1683,8 @@
                <l n="904">— Envy stand off! — for many those old evils</l>
                <l n="905">We underwent. And now, to me — dear headship! —</l>
                <l n="906">Dismount thou from this car, not earthward setting</l>
-               <l n="907">The foot of thine, O king, that’s <placeName key="tgn,7002329">Ilion</placeName>’s spoiler!</l>
+               <l n="907">The foot of thine, O king, that’s <placeName key="tgn,7002329">Ilion</placeName>’s
+                  spoiler!</l>
                <l n="908">Slave-maids, why tarry? — whose the task allotted</l>
                <l n="909">To strew the soil o’ the road with carpet-spreadings.</l>
                <l n="910">Immediately be purple-strewn the pathway,</l>
@@ -1671,7 +1693,7 @@
                <l n="913">Dispose things — justly (gods to aid!) appointed.
 </l>
             </sp>
-            <milestone unit="card" n="914"/>
+            <milestone unit="card" n="914" />
             <sp>
                <speaker>AGAMEMNON.</speaker>
                <l n="914">Offspring of Leda, of my household warder,</l>
@@ -1687,7 +1709,7 @@
                <l n="924">To walk — to me, indeed, is nowise fear-free.</l>
                <l n="925">I say — as man, not god, to me do homage!</l>
                <l n="926">Apart from foot-mats both and varied vestures,</l>
-               <l n="927">Renown is loud, and  —  not to lose one’s senses,</l>
+               <l n="927">Renown is loud, and — not to lose one’s senses,</l>
                <l n="928">God’s greatest gift. Behoves we him call happy</l>
                <l n="929">Who has brought life to end in loved well-being.</l>
                <l n="930">If all things I might manage thus — brave man, I!</l>
@@ -1742,10 +1764,9 @@
             </sp>
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
-               <l n="943">Persuade thee! power, for once, grant <emph>me</emph> — and willing!
-</l>
+               <l n="943">Persuade thee! power, for once, grant <emph>me</emph> — and willing! </l>
             </sp>
-            <milestone unit="card" n="944"/>
+            <milestone unit="card" n="944" />
             <sp>
                <speaker>AGAMEMNON.</speaker>
                <l n="944">But if this seem so to thee — shoes, let someone</l>
@@ -1784,7 +1805,7 @@
                <l n="974">Thy care be — yea — of things thou mayst make perfect!</l>
             </sp>
          </div>
-         <milestone unit="card" n="975"/>
+         <milestone unit="card" n="975" />
          <div type="choral">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -1798,24 +1819,24 @@
                <l n="982">For time, since, by a throw of all the hands,</l>
                <l n="983">The boat’s stern-cables touched the sands,</l>
                <l n="984">Has past from youth to oldness, —</l>
-               <l n="985">When under <placeName key="tgn,7002329">Ilion</placeName> rushed the ship-borne bands.
-</l>
+               <l n="985">When under <placeName key="tgn,7002329">Ilion</placeName> rushed the
+                  ship-borne bands. </l>
             </sp>
-            <milestone unit="card" n="988"/>
+            <milestone unit="card" n="988" />
             <sp>
                <l n="988">And from my eyes I learn —</l>
                <l n="989">Being myself my witness — their return.</l>
                <l n="990">Yet, all the same, without a lyre, my soul,</l>
                <l n="991">Itself its teacher too, chants from within</l>
                <l n="992">Erinus’ dirge, not having now the whole</l>
-               <l n="993">Of Hope’s dear boldness: nor my inwards sin  —</l>
+               <l n="993">Of Hope’s dear boldness: nor my inwards sin —</l>
                <l n="994">The heart that’s rolled in whirls against the mind</l>
                <l n="995">Justly presageful of a fate behind.</l>
                <l n="996">But I pray — things false, from my hope, may fall</l>
                <l n="997">Into the fate that’s not-fulfilled-at-all!
 </l>
             </sp>
-            <milestone unit="card" n="1001"/>
+            <milestone unit="card" n="1001" />
             <sp>
                <l n="1001">Especially at least, of health that’s great</l>
                <l n="1002">The term’s insatiable: for, its weight</l>
@@ -1834,7 +1855,7 @@
                <l n="1015">Has done away with famine, the disease;
 </l>
             </sp>
-            <milestone unit="card" n="1017"/>
+            <milestone unit="card" n="1017" />
             <sp>
                <l n="1017">But blood of man to earth once falling-deadly, black —</l>
                <l n="1018">In times ere these, —</l>
@@ -1850,7 +1871,7 @@
                <l n="1028">From out the enkindling mind.</l>
             </sp>
          </div>
-         <milestone unit="card" n="1035"/>
+         <milestone unit="card" n="1035" />
          <div type="episode">
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
@@ -1892,7 +1913,8 @@
                <l n="1058">By those who never hoped to have such favour.</l>
                <l n="1059">If thou, then, aught of this wilt do, delay not!</l>
                <l n="1060">But if thou, being witless, tak’st no word in,</l>
-               <l n="1061">Speak thou, instead of voice, with hand as <placeName key="tgn,7002554">Kars</placeName> do!</l>
+               <l n="1061">Speak thou, instead of voice, with hand as <placeName key="tgn,7002554">
+                  Kars</placeName> do!</l>
             </sp>
             <sp>
                <speaker>CHOROS.</speaker>
@@ -1914,7 +1936,7 @@
                <l n="1071">Yielding to this necessity, prove yoke’s use!</l>
             </sp>
          </div>
-         <milestone unit="card" n="1072"/>
+         <milestone unit="card" n="1072" />
          <div type="choral">
             <sp>
                <speaker>KASSANDRA.</speaker>
@@ -1927,7 +1949,7 @@
                <l n="1075">Since he is none such as to suit a mourner.
 </l>
             </sp>
-            <milestone unit="card" n="1076"/>
+            <milestone unit="card" n="1076" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1076">Otototoi, Gods, Earth, —</l>
@@ -1939,7 +1961,7 @@
                <l n="1079">— Nowise empowered in woes to stand by helpful.
 </l>
             </sp>
-            <milestone unit="card" n="1080"/>
+            <milestone unit="card" n="1080" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1080">Apollon, Apollon,</l>
@@ -1952,7 +1974,7 @@
                <l n="1084">Remains the god-gift to the slave-soul present.
 </l>
             </sp>
-            <milestone unit="card" n="1085"/>
+            <milestone unit="card" n="1085" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1085">Apollon, Apollon,</l>
@@ -1965,7 +1987,7 @@
                <l n="1089">I tell it thee, nor this wilt thou call falsehood.
 </l>
             </sp>
-            <milestone unit="card" n="1090"/>
+            <milestone unit="card" n="1090" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1090">How! How!</l>
@@ -1979,7 +2001,7 @@
                <l n="1094">She snuffs indeed the victims she will find there.
 </l>
             </sp>
-            <milestone unit="card" n="1095"/>
+            <milestone unit="card" n="1095" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1095a">How! How!</l>
@@ -1993,7 +2015,7 @@
                <l n="1099">Doubtless: but prophets none are we in scent of!
 </l>
             </sp>
-            <milestone unit="card" n="1100"/>
+            <milestone unit="card" n="1100" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1100">Ah, gods, what ever does she meditate?</l>
@@ -2009,7 +2031,7 @@
                <l n="1106">But those I knew: for the whole city bruits them.
 </l>
             </sp>
-            <milestone unit="card" n="1107"/>
+            <milestone unit="card" n="1107" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1107">Ah, unhappy one, this thou consummatest?</l>
@@ -2025,7 +2047,7 @@
                <l n="1113">Now, in blind oracles, I feel resourceless.
 </l>
             </sp>
-            <milestone unit="card" n="1114"/>
+            <milestone unit="card" n="1114" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1114">Eh, eh, papai, papai,</l>
@@ -2054,7 +2076,7 @@
                <l n="1124">Swift is the curse begun!
 </l>
             </sp>
-            <milestone unit="card" n="1125"/>
+            <milestone unit="card" n="1125" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1125">How! How!</l>
@@ -2075,7 +2097,7 @@
                <l n="1135">Bring the fear’t is their office to teach.
 </l>
             </sp>
-            <milestone unit="card" n="1136"/>
+            <milestone unit="card" n="1136" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1136">Ah me, ah me —</l>
@@ -2098,7 +2120,7 @@
                <l n="1145">With evils, flourishing on each side, rife.
 </l>
             </sp>
-            <milestone unit="card" n="1146"/>
+            <milestone unit="card" n="1146" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1146">Ah me, ah me,</l>
@@ -2120,7 +2142,7 @@
                <l n="1155">That evils bode?
 </l>
             </sp>
-            <milestone unit="card" n="1156"/>
+            <milestone unit="card" n="1156" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1156">Ah me, the nuptials, the nuptials of Paris, the deadly to friends!</l>
@@ -2140,7 +2162,7 @@
                <l n="1166a">To me who hear — a wonder!
 </l>
             </sp>
-            <milestone unit="card" n="1167"/>
+            <milestone unit="card" n="1167" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1167">Ah me, the toils — the toils of the city</l>
@@ -2164,7 +2186,7 @@
                <l n="1177a">I am without resource to apprehend</l>
             </sp>
          </div>
-         <milestone unit="card" n="1178"/>
+         <milestone unit="card" n="1178" />
          <div type="episode">
             <sp>
                <speaker>KASSANDRA.</speaker>
@@ -2197,7 +2219,7 @@
                <l n="1201">Shouldst hit in speaking, just as if thou stood’st by!
 </l>
             </sp>
-            <milestone unit="card" n="1202"/>
+            <milestone unit="card" n="1202" />
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1202">Prophet Apollon put me in this office.</l>
@@ -2261,7 +2283,8 @@
                <l n="1224">Lion ignoble, on the bed that wallows,</l>
                <l n="1225">House-guard (ah, me!) to the returning master</l>
                <l n="1226">— Mine, since to bear the slavish yoke behoves me!</l>
-               <l n="1227">The ship’s commander, <placeName key="tgn,7002329">Ilion</placeName>’s desolator,</l>
+               <l n="1227">The ship’s commander, <placeName key="tgn,7002329">Ilion</placeName>’s
+                  desolator,</l>
                <l n="1228">Knows not what things the tongue of the lewd she-dog</l>
                <l n="1229">Speaking, outspreading, shiny-souled, in fashion</l>
                <l n="1230">Of Até hid, will reach to, by ill fortune!</l>
@@ -2278,7 +2301,7 @@
                <l n="1241">
                   <q type="emph">True prophet all too much</q> wilt pitying style me. </l>
             </sp>
-            <milestone unit="card" n="1242"/>
+            <milestone unit="card" n="1242" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1242">Thuestes’ feast, indeed, on flesh of children,</l>
@@ -2358,7 +2381,8 @@
                <l n="1283">For there is sworn a great oath from the gods that</l>
                <l n="1284">Him shall bring hither his fallen sire’s prostration.</l>
                <l n="1285">Why make I then, like an indweller, moaning?</l>
-               <l n="1286">Since at the first I foresaw <placeName key="tgn,7002329">Ilion</placeName>’s city</l>
+               <l n="1286">Since at the first I foresaw <placeName key="tgn,7002329">Ilion</placeName>’s
+                  city</l>
                <l n="1287">Suffering as it has suffered: and who took it,</l>
                <l n="1288">Thus by the judgment of the gods are faring.</l>
                <l n="1289">I go, will suffer, will submit to dying!</l>
@@ -2368,7 +2392,7 @@
                <l n="1293">In easy outflow, — I this eye may close up!
 </l>
             </sp>
-            <milestone unit="card" n="1295"/>
+            <milestone unit="card" n="1295" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1295">O much unhappy, but, again, much learned</l>
@@ -2456,7 +2480,7 @@
                <l n="1326">Pay for the dead slave — easy-managed hand’s work!
 </l>
             </sp>
-            <milestone unit="card" n="1331"/>
+            <milestone unit="card" n="1331" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1331">Alas for mortal matters! Happy-fortuned, —</l>
@@ -2481,15 +2505,15 @@
                <l n="1342">Daimon to have been born — who would not, hearing thus?
 </l>
             </sp>
-            <milestone unit="card" n="1343"/>
+            <milestone unit="card" n="1343" />
             <sp>
                <speaker>AGAMEMNON.</speaker>
                <l n="1343">Ah me! I am struck — a right-aimed stroke within me!</l>
             </sp>
             <sp>
                <speaker>CHOROS.</speaker>
-               <l n="1344">Silence! Who is it shouts <q type="spoken">stroke</q> — <q type="spoken">right-aimedly</q> a
-                     wounded one?</l>
+               <l n="1344">Silence! Who is it shouts <q type="spoken">stroke</q> — <q type="spoken">
+                  right-aimedly</q> a wounded one?</l>
             </sp>
             <sp>
                <speaker>AGAMEMNON.</speaker>
@@ -2497,7 +2521,8 @@
             </sp>
             <sp>
                <speaker>CHOROS.</speaker>
-               <l n="1346">This work seems to me completed by this <q type="spoken">Ah me</q> of the king’s;</l>
+               <l n="1346">This work seems to me completed by this <q type="spoken">Ah me</q> of the
+                  king’s;</l>
                <l n="1347">But we somehow may together share in solid counsellings.</l>
             </sp>
             <sp>
@@ -2561,7 +2586,7 @@
                <l n="1371">Clearly to know — Atreides, what he’s doing!
 </l>
             </sp>
-            <milestone unit="card" n="1372"/>
+            <milestone unit="card" n="1372" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1372">Much having been before to purpose spoken,</l>
@@ -2608,7 +2633,7 @@
                <l n="1406">Ay, of a just artificer: so things are.</l>
             </sp>
          </div>
-         <milestone unit="card" n="1407"/>
+         <milestone unit="card" n="1407" />
          <div type="choral">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -2626,7 +2651,7 @@
                <l n="1411a">A hate immense!
 </l>
             </sp>
-            <milestone unit="card" n="1412"/>
+            <milestone unit="card" n="1412" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1412">Now, indeed, thou adjudgest exile to me,</l>
@@ -2645,7 +2670,7 @@
                <l n="1425">Thou shalt learn — late taught, certes — to be modest.
 </l>
             </sp>
-            <milestone unit="card" n="1426"/>
+            <milestone unit="card" n="1426" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1426">Greatly-intending thou art:</l>
@@ -2658,7 +2683,7 @@
                <l n="1430">Is — blow with blow to expiate!</l>
             </sp>
          </div>
-         <milestone unit="card" n="1431"/>
+         <milestone unit="card" n="1431" />
          <div type="episode">
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
@@ -2670,7 +2695,8 @@
                <l n="1436">Aigisthos as before well-caring for me;</l>
                <l n="1437">Since he to me is shield, no small, of boldness.</l>
                <l n="1438">Here does he lie — outrager of this female,</l>
-               <l n="1439">Dainty of all the Chruseids under <placeName key="tgn,7002329">Ilion</placeName>;</l>
+               <l n="1439">Dainty of all the Chruseids under <placeName key="tgn,7002329">Ilion</placeName>
+                  ;</l>
                <l n="1440">And she — the captive, the soothsayer also</l>
                <l n="1441">And couchmate of this man, oracle-speaker,</l>
                <l n="1442">Faithful bed-fellow, — ay, the sailors’ benches</l>
@@ -2681,7 +2707,7 @@
                <l n="1447">My bed’s by-nicety — the whet of dalliance.</l>
             </sp>
          </div>
-         <milestone unit="card" n="1448"/>
+         <milestone unit="card" n="1448" />
          <div type="choral">
             <sp>
                <speaker>CHOROS.</speaker>
@@ -2697,7 +2723,7 @@
                <l n="1454">By a woman he withered from life!
 </l>
             </sp>
-            <milestone unit="card" n="1455"/>
+            <milestone unit="card" n="1455" />
             <sp>
                <l n="1455">Ah me!</l>
                <l n="1455a">Law-breaking Helena who, one,</l>
@@ -2710,7 +2736,7 @@
                <l n="1461">Strife all-subduing, the woe of a spouse.
 </l>
             </sp>
-            <milestone unit="card" n="1462"/>
+            <milestone unit="card" n="1462" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1462">Nowise, of death the fate —</l>
@@ -2729,7 +2755,7 @@
                <l n="1467">And wrought immense annoy!
 </l>
             </sp>
-            <milestone unit="card" n="1468"/>
+            <milestone unit="card" n="1468" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1468">Daimon, who fallest</l>
@@ -2742,7 +2768,7 @@
                <l n="1474">Doth Something vaunt!
 </l>
             </sp>
-            <milestone unit="card" n="1475"/>
+            <milestone unit="card" n="1475" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1475">Now, of a truth, hast thou set upright</l>
@@ -2756,7 +2782,7 @@
                <l n="1480">Is the elder throe — new ichor!
 </l>
             </sp>
-            <milestone unit="card" n="1481"/>
+            <milestone unit="card" n="1481" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1481">Certainly, great of might</l>
@@ -2768,7 +2794,7 @@
                <l n="1487">Rendered insatiate!
 </l>
             </sp>
-            <milestone unit="card" n="1489"/>
+            <milestone unit="card" n="1489" />
             <sp>
                <l n="1489">Oh, oh, —</l>
                <l n="1490">King, king, how shall I beweep thee?</l>
@@ -2781,7 +2807,7 @@
                <l n="1496">From the hand, by the two-edged dart.
 </l>
             </sp>
-            <milestone unit="card" n="1497"/>
+            <milestone unit="card" n="1497" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1497">Thou boastest this deed to be mine:</l>
@@ -2797,7 +2823,7 @@
                <l n="1504">A full-grown for the young one’s sacrifice.
 </l>
             </sp>
-            <milestone unit="card" n="1505"/>
+            <milestone unit="card" n="1505" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1505">That no cause, indeed, of this killing art thou,</l>
@@ -2811,7 +2837,7 @@
                <l n="1512">At the frozen-child’s-flesh food.
 </l>
             </sp>
-            <milestone unit="card" n="1513"/>
+            <milestone unit="card" n="1513" />
             <sp>
                <l n="1513">King, king, how shall I beweep thee?</l>
                <l n="1514">From friendly soul whatever say?</l>
@@ -2823,7 +2849,7 @@
                <l n="1520">From the hand, by the two-edged dart.
 </l>
             </sp>
-            <milestone unit="card" n="1521"/>
+            <milestone unit="card" n="1521" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1521">No death <q type="emph">unfit for the free</q>
@@ -2840,7 +2866,7 @@
                <l n="1529a">For that sword’s punishment himself inflicted first.
 </l>
             </sp>
-            <milestone unit="card" n="1530"/>
+            <milestone unit="card" n="1530" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1530">I at a loss am left —</l>
@@ -2854,7 +2880,7 @@
                <l n="1536">For other deed of hurt, on other whetstones yet.
 </l>
             </sp>
-            <milestone unit="card" n="1537"/>
+            <milestone unit="card" n="1537" />
             <sp>
                <l n="1537">Woe, earth, earth — would thou hadst taken me</l>
                <l n="1538">Ere I saw the man I see,</l>
@@ -2873,7 +2899,7 @@
                <l n="1550">From the truth of his mind as he toils intent?
 </l>
             </sp>
-            <milestone unit="card" n="1551"/>
+            <milestone unit="card" n="1551" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1551">It belongs not to thee to declare</l>
@@ -2889,7 +2915,7 @@
                <l n="1559">Around him — kiss that kindest of sires!
 </l>
             </sp>
-            <milestone unit="card" n="1560"/>
+            <milestone unit="card" n="1560" />
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1560">This blame comes in the place of blame:</l>
@@ -2907,7 +2933,7 @@
                <l n="1566">The race is to Até glued!
 </l>
             </sp>
-            <milestone unit="card" n="1567"/>
+            <milestone unit="card" n="1567" />
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1567">Thou hast gone into this oracle</l>
@@ -2925,7 +2951,7 @@
                <l n="1576">The mutually-murderous.</l>
             </sp>
          </div>
-         <milestone unit="card" n="1577"/>
+         <milestone unit="card" n="1577" />
          <div type="episode">
             <sp>
                <speaker>AIGISTHOS.</speaker>
@@ -2975,7 +3001,7 @@
                <l n="1616">The people’s throwing — know that! — stones and curses!
 </l>
             </sp>
-            <milestone unit="card" n="1617"/>
+            <milestone unit="card" n="1617" />
             <sp>
                <speaker>AIGISTHOS.</speaker>
                <l n="1617">Thou such things soundest — seated at the lower</l>
@@ -3028,7 +3054,7 @@
                <l n="1648">Of both these he may be the all-conquering slayer?
 </l>
             </sp>
-            <milestone unit="card" n="1649"/>
+            <milestone unit="card" n="1649" />
             <sp>
                <speaker>AIGISTHOS.</speaker>
                <l n="1649">But since this to do thou thinkest — and not talk — thou soon shalt know!</l>
