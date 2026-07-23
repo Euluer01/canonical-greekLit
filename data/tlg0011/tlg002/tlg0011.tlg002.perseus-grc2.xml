@@ -318,7 +318,7 @@
                <l n="99">ἄνους μὲν ἔρχει, τοῖς φίλοις δʼ ὀρθῶς φίλη.</l>
             </sp>
          </div>
-         <div type="choral" n="Parados (100-161b)">
+         <div type="choral" n="Parados (100-161)">
             <milestone unit="card" n="100" />
             <div n="1" type="strophe">
                <sp>
@@ -1582,7 +1582,7 @@
                </sp>
             </div>
          </div>
-         <div type="choral" n="Kommos (806-882)">
+         <div type="choral" n="Fourth Episode (806-943)">
             <milestone unit="card" n="806" />
             <div n="1" type="strophe">
                <sp>
@@ -1691,9 +1691,9 @@
                   <l n="881">τὸν δʼ ἐμὸν πότμον ἀδάκρυτον</l>
                   <l n="882">οὐδεὶς φίλων στενάζει.</l>
                </sp>
-            </div>
-         </div>
-         <div type="episode" n="Fourth Episode (883-912)">
+            <!-- </div> -->
+         <!-- </div>
+         <div type="episode" n="Fourth Episode (883-912)"> -->
             <milestone unit="card" n="883" />
             <sp>
                <speaker>Κρέων</speaker>
@@ -1747,6 +1747,7 @@
                <l n="927">εἰ δʼ οἵδʼ ἁμαρτάνουσι, μὴ πλείω κακὰ</l>
                <l n="928">πάθοιεν ἢ καὶ δρῶσιν ἐκδίκως ἐμέ.</l>
             </sp>
+            </div>
             <milestone unit="card" n="929" />
             <div type="anapests">
                <sp>
@@ -2143,7 +2144,7 @@
                </sp>
             </div>
          </div>
-         <div type="episode" n="Sixth Episode (1155-1260)">
+         <div type="episode" n="Exodus (1155-1353)">
             <milestone unit="card" n="1155" />
             <sp>
                <speaker>Ἄγγελος</speaker>
@@ -2311,8 +2312,8 @@
                   <l n="1260">ἄτην, ἀλλʼ αὐτὸς ἁμαρτών.</l>
                </sp>
             </div>
-         </div>
-         <div type="choral" n="Sixth Stasimon (1261-1346)">
+         <!-- </div>
+         <div type="choral" n="Sixth Stasimon (1261-1346)"> -->
             <milestone unit="card" n="1261" />
             <div n="1" type="strophe">
                <sp>
@@ -2483,8 +2484,8 @@
                   <l n="1346">πότμος δυσκόμιστος εἰσήλατο.</l>
                </sp>
             </div>
-         </div>
-         <div type="episode" n="Exodus (1347-1353)">
+         <!-- </div>
+         <div type="episode" n="Exodus (1347-1353)"> -->
             <milestone unit="card" n="1347" />
             <div type="anapests">
                <sp>
