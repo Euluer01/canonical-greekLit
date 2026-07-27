@@ -71,7 +71,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
