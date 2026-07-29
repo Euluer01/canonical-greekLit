@@ -61,9 +61,9 @@
             </refsDecl>-->
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
                <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
@@ -118,7 +118,7 @@
    </teiHeader>
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg002.perseus-eng2">
-         <div type="episode">
+         <div type="episode" n="Prologue (1-99)">
             <milestone unit="card" n="1" />
             <sp>
                <speaker>Antigone</speaker>
@@ -317,7 +317,7 @@
             </sp>
          </div>
          <milestone unit="card" n="100" />
-         <div type="choral">
+         <div type="choral" n="Parados (100-161)">
             <div n="1" type="strophe">
                <stage rend="italic">Enter the Chorus on the right.</stage>
                <sp>
@@ -423,7 +423,7 @@
             </div>
          </div>
          <milestone unit="card" n="162" />
-         <div type="episode">
+         <div type="episode" n="First Episode (162-331)">
             <stage rend="italic">Enter Creon, with two attendants.</stage>
             <sp>
                <speaker>Creon</speaker>
@@ -707,7 +707,7 @@
             </sp>
          </div>
          <milestone unit="card" n="332" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (332-383)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -784,7 +784,7 @@
             </div>
          </div>
          <milestone unit="card" n="384" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (384-581)">
             <sp>
                <speaker>Guard</speaker>
                <l n="384" resp="p">Here is she, the one who did the deed. </l>
@@ -1240,7 +1240,7 @@
             </div>
          </div>
          <milestone unit="card" n="583" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (582-630)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1315,7 +1315,7 @@
             </div>
          </div>
          <milestone unit="card" n="631" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (631-780)">
             <sp>
                <speaker>Creon</speaker>
                <l n="631" resp="p">We will soon know better than seers could tell us.—My son, can it
@@ -1627,7 +1627,7 @@
             </sp>
          </div>
          <milestone unit="card" n="781" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (781-805)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1669,7 +1669,7 @@
             </div>
          </div>
          <milestone unit="card" n="806" />
-         <div type="choral">
+         <div type="episode" n="Fourth Episode (806-943)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Antigone</speaker>
@@ -1787,108 +1787,109 @@
                      sun. But for my fate no tear is shed, no friend moans in sorrow.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="883" />
-         <div type="episode">
-            <stage rend="italic">Enter Creon.</stage>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="883" resp="p">Do you not know that dirges and
-                  wailing before death would never be given up, if it were allowed to make
-                  them freely? </l>
-               <l n="885" resp="p">Take her away—now!
-                  And when you have enshrouded her, as I proclaimed, in her covered tomb,
-                  leave her alone, deserted—let her decide whether she wishes to die or to
-                  live entombed in such a home. It makes no difference, since our hands
-                  are clean so far as regards this girl. </l>
-               <l n="890" resp="p">But no matter what, she will be stripped of her home
-                  here above.</l>
-            </sp>
-            <sp>
-               <speaker>Antigone</speaker>
-               <l n="891" resp="p">Tomb, bridal-chamber, deep-dug eternal prison where I go to find
-                  my own,
-                  whom in the greatest numbers destruction has seized and Persephone has
-                  welcomed among the dead! </l>
-               <l n="895" resp="p">Last of
-                  them all and in by far the most shameful circumstances, I will descend,
-                  even before the fated term of my life is spent. But I cherish strong
-                  hopes that I will arrive welcome to my father, and pleasant to you,
-                  Mother, and welcome, dear brother, to you. </l>
-               <l n="900" resp="p">For, when each of you died, with my own hands I washed and
-                  dressed you and poured drink-offerings at your graves. But now, Polyneices, it is
-                  for tending your corpse that I win such reward as this. <del>And yet I honored you
-                  rightly, as the wise understand.</del>
-               </l>
-               <l n="905" resp="p">
-                  <del>Never, if I had been a mother of children, or if a
-                     husband had been rotting after death, would I have taken that burden
-                     upon myself in violation of the citizens’ will. For the sake of what
-                     law, you ask, do I say that? A husband lost, another might have been
-                     found, </del>
-               </l>
-               <l n="910" resp="p">
-                  <del>and if
-                     bereft of a child, there could be a second from some other man. But when
-                     father and mother are hidden in Hades, no brother could ever bloom for
-                     me again. Such was the law whereby I held you first in honor, but for
-                     that Creon judged me guilty of wrongdoing</del>
-               </l>
-               <l n="915" resp="p">
-                  <del>and of dreadful outrage, dear brother! And now he leads
-                     me thus in his hands’ strong grasp, when I have enjoyed no marriage bed
-                     or bridal song and have not received any portion of marriage or the
-                     nurture of children. But deserted by friends, </del>
-               </l>
-               <l n="920" resp="p">
-                  <del>in misery I go living to the hollow graves of the
-                     dead.</del> What law of the gods have I transgressed? Why should I look to the
-                  gods anymore? What ally should I call out to, when by my reverence I have earned a
-                  name for irreverence? </l>
-               <l n="925" resp="p">Well, then, if these events please the gods, once I have suffered
-                  my
-                  doom I will come to know my guilt. But if the guilt lies with my judges,
-                  I could wish for them no greater evils than they inflict unjustly on
-                  me.</l>
-            </sp>
-            <milestone unit="card" n="929" />
-            <div type="anapests">
-               <sp>
-                  <speaker>Chorus</speaker>
-                  <l n="929" resp="p">Still the same tempest of the soul </l>
-                  <l n="930" resp="p">grips this girl with the same fierce gusts.</l>
-               </sp>
+            <div type="dialogue">
+               <stage rend="italic">Enter Creon.</stage>
                <sp>
                   <speaker>Creon</speaker>
-                  <l n="931" resp="p">Then because of this her guards will have reason to lament
-                     their
-                     slowness.</l>
+                  <l n="883" resp="p">Do you not know that dirges and
+                     wailing before death would never be given up, if it were allowed to make
+                     them freely? </l>
+                  <l n="885" resp="p">Take her away—now!
+                     And when you have enshrouded her, as I proclaimed, in her covered tomb,
+                     leave her alone, deserted—let her decide whether she wishes to die or to
+                     live entombed in such a home. It makes no difference, since our hands
+                     are clean so far as regards this girl. </l>
+                  <l n="890" resp="p">But no matter what, she will be stripped of her home
+                     here above.</l>
                </sp>
                <sp>
                   <speaker>Antigone</speaker>
-                  <l n="933" resp="p">Ah, no! That command verges close on death.</l>
-               </sp>
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="935" resp="p">I cannot console you with any hope
-                     that your doom is not to be fulfilled in that way.</l>
-               </sp>
-               <sp>
-                  <speaker>Antigone</speaker>
-                  <l n="937" resp="p">O city of my fathers, land of <placeName key="perseus,Thebes">
-                     Thebes</placeName>, and you gods, our ancestors! I am led away now; there is no
-                     more delay! </l>
-                  <l n="940" resp="p">Look at me, you who are <placeName key="perseus,Thebes">Thebes</placeName>’
-                     lords—look at the only remaining daughter of the house of your kings. See what
-                     I suffer, and at whose hands, because I revered reverence! <stage rend="italic">Antigone
-                     is led away by the
-                        guards.</stage>
+                  <l n="891" resp="p">Tomb, bridal-chamber, deep-dug eternal prison where I go to find
+                     my own,
+                     whom in the greatest numbers destruction has seized and Persephone has
+                     welcomed among the dead! </l>
+                  <l n="895" resp="p">Last of
+                     them all and in by far the most shameful circumstances, I will descend,
+                     even before the fated term of my life is spent. But I cherish strong
+                     hopes that I will arrive welcome to my father, and pleasant to you,
+                     Mother, and welcome, dear brother, to you. </l>
+                  <l n="900" resp="p">For, when each of you died, with my own hands I washed and
+                     dressed you and poured drink-offerings at your graves. But now, Polyneices, it is
+                     for tending your corpse that I win such reward as this. <del>And yet I honored you
+                     rightly, as the wise understand.</del>
                   </l>
+                  <l n="905" resp="p">
+                     <del>Never, if I had been a mother of children, or if a
+                        husband had been rotting after death, would I have taken that burden
+                        upon myself in violation of the citizens’ will. For the sake of what
+                        law, you ask, do I say that? A husband lost, another might have been
+                        found, </del>
+                  </l>
+                  <l n="910" resp="p">
+                     <del>and if
+                        bereft of a child, there could be a second from some other man. But when
+                        father and mother are hidden in Hades, no brother could ever bloom for
+                        me again. Such was the law whereby I held you first in honor, but for
+                        that Creon judged me guilty of wrongdoing</del>
+                  </l>
+                  <l n="915" resp="p">
+                     <del>and of dreadful outrage, dear brother! And now he leads
+                        me thus in his hands’ strong grasp, when I have enjoyed no marriage bed
+                        or bridal song and have not received any portion of marriage or the
+                        nurture of children. But deserted by friends, </del>
+                  </l>
+                  <l n="920" resp="p">
+                     <del>in misery I go living to the hollow graves of the
+                        dead.</del> What law of the gods have I transgressed? Why should I look to the
+                     gods anymore? What ally should I call out to, when by my reverence I have earned a
+                     name for irreverence? </l>
+                  <l n="925" resp="p">Well, then, if these events please the gods, once I have suffered
+                     my
+                     doom I will come to know my guilt. But if the guilt lies with my judges,
+                     I could wish for them no greater evils than they inflict unjustly on
+                     me.</l>
                </sp>
             </div>
+               <milestone unit="card" n="929" />
+               <div type="anapests">
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="929" resp="p">Still the same tempest of the soul </l>
+                     <l n="930" resp="p">grips this girl with the same fierce gusts.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="931" resp="p">Then because of this her guards will have reason to lament
+                        their
+                        slowness.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Antigone</speaker>
+                     <l n="933" resp="p">Ah, no! That command verges close on death.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="935" resp="p">I cannot console you with any hope
+                        that your doom is not to be fulfilled in that way.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Antigone</speaker>
+                     <l n="937" resp="p">O city of my fathers, land of <placeName key="perseus,Thebes">
+                        Thebes</placeName>, and you gods, our ancestors! I am led away now; there is no
+                        more delay! </l>
+                     <l n="940" resp="p">Look at me, you who are <placeName key="perseus,Thebes">Thebes</placeName>’
+                        lords—look at the only remaining daughter of the house of your kings. See what
+                        I suffer, and at whose hands, because I revered reverence! <stage rend="italic">Antigone
+                        is led away by the
+                           guards.</stage>
+                     </l>
+                  </sp>
+               </div>
          </div>
          <milestone unit="card" n="944" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (944-987)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1950,7 +1951,7 @@
             </div>
          </div>
          <milestone unit="card" n="988" />
-         <div type="episode">
+         <div type="episode" n="Fifth Episode (988-1114)">
             <stage rend="italic">Enter Teiresias, led by a boy, on the spectators’ right.</stage>
             <sp>
                <speaker>Teiresias</speaker>
@@ -2198,7 +2199,7 @@
             </sp>
          </div>
          <milestone unit="card" n="1115" />
-         <div type="choral">
+         <div type="choral" n="Fifth Stasimon (1115-1154)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2253,388 +2254,388 @@
             </div>
          </div>
          <milestone unit="card" n="1155" />
-         <div type="episode">
-            <stage rend="italic">Enter Messenger, on the spectators’ left.</stage>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1155" resp="p">Neighbors of the house of Cadmus and of Amphion, there
-                  is no station of human life that I would ever praise or blame as being
-                  settled. Fortune sets upright and Fortune sinks the lucky and unlucky
-                  from day to day, </l>
-               <l n="1160" resp="p">and no one can prophesy to men concerning the order
-                  that has just been established. For Creon, as I saw it, was once blest:
-                  he had saved this land of Cadmus from its enemies; and having won sole
-                  and total dominion in the land, he guided it on a straight course and
-                  flourished in his noble crop of children. </l>
-               <l n="1165" resp="p">And now all this has been lost. When a man has
-                  forfeited his pleasures, I do not reckon his existence as life, but
-                  consider him just a breathing corpse. Heap up riches in your house, if
-                  you wish! Live with a tyrant’s pomp! But if there is no joy</l>
-               <l n="1170" resp="p">along with all of that, I would not pay even the shadow
-                  of smoke for all the rest, compared with joy.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1172" resp="p">What is this new grief for our princes that you have come
-                  to report?</l>
-            </sp>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1173" resp="p">They are dead, and the living are guilty of the deaths.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1174" resp="p">Who is the murderer? Who the murdered? Tell us.</l>
-            </sp>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1175" resp="p">Haemon is dead—his blood was shed by no strange
-                  hand.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1176" resp="p">Was it his father’s, or his own ?</l>
-            </sp>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1177" resp="p">He did it by his own, enraged with his father for the
-                  murder.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1178" resp="p">Ah, prophet, how true, then, you have proved your word!</l>
-            </sp>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1179" resp="p">Knowing that these things are so, you must consider the
-                  rest.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1180" resp="p">Wait, I see the unhappy Eurydice, Creon’s wife, nearby.
-                  She comes from the house either knowing of her son, or merely by
-                  chance.</l>
-            </sp>
-            <milestone unit="card" n="1183" />
-            <stage rend="italic">Enter Eurydice.</stage>
-            <sp>
-               <speaker>Eurydice</speaker>
-               <l n="1183" resp="p">People of <placeName key="tgn,7011071">Thebes</placeName>, I
-                  heard your words as I was on my way to the gates to address divine Pallas with my
-                  prayers. </l>
-               <l n="1185" resp="p">At one and the same time I was loosening the bolts of
-                  the gate to open it, and the sound of a blow to our house struck my ear.
-                  In terror I sank back into the arms of my handmaids, and my senses fled. </l>
-               <l n="1190" resp="p">But repeat what your news was, for I shall hear it with
-                  ears that are no strangers to sorrow.</l>
-            </sp>
-            <sp n="Messenger">
-               <speaker>Messenger</speaker>
-               <l n="1192" resp="p">Dear mistress, I will tell what I witnessed and leave no
-                  word of the truth unspoken. For what good would it do that should I
-                  soothe you with words in which I must later be found false? </l>
-               <l n="1195" resp="p">The truth is always best. I attended your husband as
-                  his guide to the furthest part of the plain, where unpitied the body of
-                  Polyneices, torn by dogs, still lay. After we had prayed to the goddess
-                  of the roads </l>
-               <l n="1200" resp="p">and to Pluto to restrain their anger in mercy, we
-                  washed him with pure washing, and with freshly-plucked boughs we burned
-                  what remains there were. Lastly we heaped a high-mounded tomb of his
-                  native earth. Afterwards we turned away to enter the maiden’s
-                  stoney-bedded </l>
-               <l n="1205" resp="p">bridal chamber, the caverned mansion of Hades’ bride.
-                  From a distance, one of us servants heard a voice of loud wailing near
-                  that bride’s unwept bed and came to tell our master Creon. And as the
-                  King moved closer and closer, obscure signs rising from a bitter cry
-                  surrounded him— </l>
-               <l n="1210" resp="p">he groaned and said in bitter lament, <q type="spoken">Ah,
-                  misery, am I now the prophet of evil? Am I going on the path
-                     most lined with grief of all that I have walked before? My son’s
-                     voice greets me. Go, my servants,</q>
-               </l>
-               <l n="1215" resp="p">
-                  <q type="spoken" rend="merge">hurry closer, and when
-                     you have reached the tomb, enter the opening where the stones of the
-                     mound have been torn away, up to the cell’s very mouth. See if it is
-                     Haemon’s voice that I recognize, or if I am cheated by the
-                     gods.</q>
-               </l>
-            </sp>
-            <milestone unit="card" n="1219" />
-            <sp>
-               <l n="1219" resp="p">This search, at our desperate master’s word, </l>
-               <l n="1220" resp="p">we went to make, and in the furthest part of the tomb
-                  we saw her hanging by the neck, fastened by a halter of fine linen
-                  threads, while he was embracing her with arms thrown around her waist,
-                  bewailing the loss of his bride to the spirits below, as well as his
-                  father’s deeds, and his grief-filled marriage. </l>
-               <l n="1225" resp="p">But his father, when he saw him, cried aloud with a dreadful cry
-                  and went in and called to him with a voice of wailing: <q type="spoken">Ah,
-                     unhappy boy, what have you done! What plan have
-                     you seized on? By what misfortune have you lost your reason?</q>
-               </l>
-               <l n="1230" resp="p">
-                  <q type="spoken" rend="merge">Come out, my son, I pray
-                     you, I beg you!</q> But the boy glared at him with savage eyes, spat in his
-                  face, and without a word in response drew his twin-edged sword. As his father
-                  rushed out in flight, he missed his aim. Then the ill-fated boy was enraged with
-                  himself </l>
-               <l n="1235" resp="p">and straightway stretched himself over his sword and
-                  drove it, half its length, into his side. Still conscious, he clasped
-                  the maiden in his faint embrace, and, as he gasped, he shot onto her
-                  pale cheek a swift stream of oozing blood. </l>
-               <l n="1240" resp="p">Corpse enfolding corpse he lay, having won his marriage rites,
-                  poor boy, not here, but in Hades’ palace, and having shown to mankind by how much
-                  the failure to reason wisely is the most severe of all afflictions assigned to
-                  man. <stage rend="italic">Eurydice departs into the
-                     house.</stage>
-               </l>
-            </sp>
-            <milestone unit="card" n="1244" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1244" resp="p">What would you infer from this? The lady </l>
-               <l n="1245" resp="p">has turned back and gone without a word, either for
-                  good or for evil.</l>
-            </sp>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1246" resp="p">I, too, am startled. Still I am nourished by the hope that
-                  at the grave news of her son she thinks it unworthy to make her laments
-                  before the city, but in the shelter of her home will set her handmaids
-                  to mourn the house’s grief. </l>
-               <l n="1250" resp="p">For she is not unhabituated to discretion, that she
-                  should err.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1251" resp="p">I do not know. But to me, in any case, a silence too strict
-                  seems to promise trouble just as much as a fruitless abundance of
-                  weeping.</l>
-            </sp>
-            <sp>
-               <speaker>Messenger</speaker>
-               <l n="1253" resp="p">I will find out whether she is not, in fact, hiding some
-                  repressed plan in the darkness of her passionate heart. </l>
-               <l n="1255" resp="p">I will go in, since you are right—in an excess of silence, too,
-                  there may be trouble. <stage rend="italic">Exit Messenger.</stage>
-               </l>
-            </sp>
-            <milestone unit="card" n="1257" />
-            <div type="anapests">
-               <stage rend="italic">Enter Creon, attended and carrying the shrouded body of Haemon,
-                  on
-                  the spectators’ left.</stage>
-               <sp>
-                  <speaker>Chorus</speaker>
-                  <l n="1257" resp="p">Look, here is the King himself approaching, his hands
-                     grasping a monument plainly signing that his—if we may say it—and no
-                     one else’s,</l>
-                  <l n="1260" resp="p">was the madness of this error.</l>
-               </sp>
-            </div>
-         </div>
-         <milestone unit="card" n="1261" />
-         <div type="choral">
-            <div n="1" type="strophe">
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1261" resp="p">Ah, the blunders of an unthinking
-                     mind, blunders of rigidity, yielding death! Oh, you witnesses of the
-                     killers and the killed, both of one family! </l>
-                  <l n="1265" resp="p">What misery arises from my reasonings! Haemon, you have
-                     died after a young life, youngest and last of my sons! O God! You have
-                     departed not by your foolishness, but by my own!</l>
-               </sp>
-            </div>
-            <milestone unit="card" n="1270" />
-            <div n="2" type="strophe">
-               <sp>
-                  <speaker>Chorus</speaker>
-                  <l n="1270" resp="p">Ah, how late you seem to see the
-                     right!</l>
-               </sp>
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1271" resp="p">God, I have mastered the bitter lesson! But then, then, I
-                     think, some god
-                     struck me on my head with a crushing weight, and drove me into savage
-                     paths, </l>
-                  <l n="1275" resp="p">—ah!—and overthrew my
-                     joy to be trampled on! Ah, the labors men must toil through!</l>
-               </sp>
-               <milestone unit="card" n="1278" />
-               <sp>
-                  <stage rend="italic">Enter the Messenger from the house.</stage>
-               </sp>
+         <div type="episode" n="Exodus (1155-1353)">
+               <stage rend="italic">Enter Messenger, on the spectators’ left.</stage>
                <sp>
                   <speaker>Messenger</speaker>
-                  <l n="1278" resp="p">My master, you have come, I
-                     think, like one whose hands are not empty, but who has a ready store:
-                     first, you carry that burden visible in your arms; </l>
-                  <l n="1280" resp="p">second, you will soon look upon further
-                     sufferings inside your house.</l>
-               </sp>
-            </div>
-            <milestone unit="card" n="1281" />
-            <div type="anapests">
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1281" resp="p">What worse suffering is still to follow upon these
-                     sufferings?</l>
-               </sp>
-               <sp>
-                  <speaker>Messenger</speaker>
-                  <l n="1282" resp="p">Your wife is dead, true mother of that corpse, poor lady, by
-                     wounds newly
-                     cut.</l>
-               </sp>
-            </div>
-            <milestone unit="card" n="1284" />
-            <div n="1" type="antistrophe">
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1284" resp="p">O harbor of Hades, hard to
-                     purify! </l>
-                  <l n="1285" resp="p">Why, why do you ruin
-                     me? Herald of evil, of grief, what word do you say? Ah, you have done in
-                     a dead man anew! What are you saying, boy? What is this you report to
-                     me </l>
-                  <l n="1290" resp="p">God no!—what new slaughter, my wife’s doom, is heaped
-                     upon this ruin?</l>
-               </sp>
-               <milestone unit="card" n="1293" />
-               <sp>
-                  <stage rend="italic">The doors of the palace are opened, and the corpse of
-                     Eurydice is
-                     disclosed.</stage>
+                  <l n="1155" resp="p">Neighbors of the house of Cadmus and of Amphion, there
+                     is no station of human life that I would ever praise or blame as being
+                     settled. Fortune sets upright and Fortune sinks the lucky and unlucky
+                     from day to day, </l>
+                  <l n="1160" resp="p">and no one can prophesy to men concerning the order
+                     that has just been established. For Creon, as I saw it, was once blest:
+                     he had saved this land of Cadmus from its enemies; and having won sole
+                     and total dominion in the land, he guided it on a straight course and
+                     flourished in his noble crop of children. </l>
+                  <l n="1165" resp="p">And now all this has been lost. When a man has
+                     forfeited his pleasures, I do not reckon his existence as life, but
+                     consider him just a breathing corpse. Heap up riches in your house, if
+                     you wish! Live with a tyrant’s pomp! But if there is no joy</l>
+                  <l n="1170" resp="p">along with all of that, I would not pay even the shadow
+                     of smoke for all the rest, compared with joy.</l>
                </sp>
                <sp>
                   <speaker>Chorus</speaker>
-                  <l n="1293" resp="p">The sight is at hand. It is no longer hidden inside.</l>
-               </sp>
-            </div>
-            <milestone unit="card" n="1294" />
-            <div n="2" type="antistrophe">
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1294" resp="p">Ah, misery! </l>
-                  <l n="1295" resp="p">There I see a new, a
-                     second evil! What destiny, ah, what, can still await me? I have just now
-                     taken my son in my arms, and now I see another corpse before
-                     me! </l>
-                  <l n="1300" resp="p">Oh, tormented mother! Oh,
-                     my son!</l>
+                  <l n="1172" resp="p">What is this new grief for our princes that you have come
+                     to report?</l>
                </sp>
                <sp>
                   <speaker>Messenger</speaker>
-                  <l n="1301" resp="p">By the altar, with a
-                     sharp-whetted sword, she struck until her eyes went slack and dark.
-                     Before that she bewailed the noble fate of Megareus who died earlier,
-                     and then the fate of this boy, and also, with her last breath,</l>
-                  <l n="1305" resp="p">she called down evil fortune upon you,
-                     the slayer of her sons.</l>
-               </sp>
-            </div>
-            <milestone unit="card" n="1306" />
-            <div n="3" type="strophe">
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1306" resp="p">Ah, no! I tremble with fear. Why
-                     does no one strike me full on my chest with a two-edged sword?</l>
-                  <l n="1310" resp="p">I am miserable—ah—and bathed in
-                     miserable anguish!</l>
-               </sp>
-               <sp>
-                  <speaker>Messenger</speaker>
-                  <l n="1312" resp="p">Yes, because you were accused of responsibility for both
-                     this son’s death, and the other’s, by her whose corpse you see.</l>
-               </sp>
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1314" resp="p">What was the manner of the violent deed by which she
-                     departed?</l>
-               </sp>
-               <sp>
-                  <speaker>Messenger</speaker>
-                  <l n="1315" resp="p">Her own hand struck her to the heart upon learning her
-                     son’s sharply-lamented fate.</l>
-               </sp>
-            </div>
-            <milestone unit="card" n="1317" />
-            <div n="4" type="strophe">
-               <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1317" resp="p">Ah this guilt can never be
-                     fastened onto any other mortal so as to remove my own! It was I, yes, I,
-                     who killed you, I the wretch. </l>
-                  <l n="1320" resp="p">I
-                     admit the truth. Lead me away, my servants, lead me from here with all
-                     haste, who am no more than a dead man!</l>
+                  <l n="1173" resp="p">They are dead, and the living are guilty of the deaths.</l>
                </sp>
                <sp>
                   <speaker>Chorus</speaker>
-                  <l n="1325" resp="p">The course you recommend is to
-                     your gain, if there can be gain amidst evil. What is briefest is best,
-                     when trouble lies at your feet.</l>
+                  <l n="1174" resp="p">Who is the murderer? Who the murdered? Tell us.</l>
                </sp>
-            </div>
-            <milestone unit="card" n="1328" />
-            <div n="3" type="antistrophe">
                <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1328" resp="p">Let it come, let it appear, that
-                     fairest of fates for me, that brings my final day, </l>
-                  <l n="1330" resp="p">the fate supreme! Oh, let it come, so that I may never
-                     see tomorrow’s light!</l>
+                  <speaker>Messenger</speaker>
+                  <l n="1175" resp="p">Haemon is dead—his blood was shed by no strange
+                     hand.</l>
                </sp>
-               <milestone unit="card" n="1334" />
                <sp>
                   <speaker>Chorus</speaker>
-                  <l n="1334" resp="p">These things are in the future.
-                     We must see to present affairs. </l>
-                  <l n="1335" resp="p">Fulfillment of these things rests in the hands where it
-                     should
+                  <l n="1176" resp="p">Was it his father’s, or his own ?</l>
+               </sp>
+               <sp>
+                  <speaker>Messenger</speaker>
+                  <l n="1177" resp="p">He did it by his own, enraged with his father for the
+                     murder.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="1178" resp="p">Ah, prophet, how true, then, you have proved your word!</l>
+               </sp>
+               <sp>
+                  <speaker>Messenger</speaker>
+                  <l n="1179" resp="p">Knowing that these things are so, you must consider the
                      rest.</l>
                </sp>
                <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1336" resp="p">All that I crave was summed in that prayer.</l>
+                  <speaker>Chorus</speaker>
+                  <l n="1180" resp="p">Wait, I see the unhappy Eurydice, Creon’s wife, nearby.
+                     She comes from the house either knowing of her son, or merely by
+                     chance.</l>
+               </sp>
+               <milestone unit="card" n="1183" />
+               <stage rend="italic">Enter Eurydice.</stage>
+               <sp>
+                  <speaker>Eurydice</speaker>
+                  <l n="1183" resp="p">People of <placeName key="tgn,7011071">Thebes</placeName>, I
+                     heard your words as I was on my way to the gates to address divine Pallas with my
+                     prayers. </l>
+                  <l n="1185" resp="p">At one and the same time I was loosening the bolts of
+                     the gate to open it, and the sound of a blow to our house struck my ear.
+                     In terror I sank back into the arms of my handmaids, and my senses fled. </l>
+                  <l n="1190" resp="p">But repeat what your news was, for I shall hear it with
+                     ears that are no strangers to sorrow.</l>
+               </sp>
+               <sp n="Messenger">
+                  <speaker>Messenger</speaker>
+                  <l n="1192" resp="p">Dear mistress, I will tell what I witnessed and leave no
+                     word of the truth unspoken. For what good would it do that should I
+                     soothe you with words in which I must later be found false? </l>
+                  <l n="1195" resp="p">The truth is always best. I attended your husband as
+                     his guide to the furthest part of the plain, where unpitied the body of
+                     Polyneices, torn by dogs, still lay. After we had prayed to the goddess
+                     of the roads </l>
+                  <l n="1200" resp="p">and to Pluto to restrain their anger in mercy, we
+                     washed him with pure washing, and with freshly-plucked boughs we burned
+                     what remains there were. Lastly we heaped a high-mounded tomb of his
+                     native earth. Afterwards we turned away to enter the maiden’s
+                     stoney-bedded </l>
+                  <l n="1205" resp="p">bridal chamber, the caverned mansion of Hades’ bride.
+                     From a distance, one of us servants heard a voice of loud wailing near
+                     that bride’s unwept bed and came to tell our master Creon. And as the
+                     King moved closer and closer, obscure signs rising from a bitter cry
+                     surrounded him— </l>
+                  <l n="1210" resp="p">he groaned and said in bitter lament, <q type="spoken">Ah,
+                     misery, am I now the prophet of evil? Am I going on the path
+                        most lined with grief of all that I have walked before? My son’s
+                        voice greets me. Go, my servants,</q>
+                  </l>
+                  <l n="1215" resp="p">
+                     <q type="spoken" rend="merge">hurry closer, and when
+                        you have reached the tomb, enter the opening where the stones of the
+                        mound have been torn away, up to the cell’s very mouth. See if it is
+                        Haemon’s voice that I recognize, or if I am cheated by the
+                        gods.</q>
+                  </l>
+               </sp>
+               <milestone unit="card" n="1219" />
+               <sp>
+                  <l n="1219" resp="p">This search, at our desperate master’s word, </l>
+                  <l n="1220" resp="p">we went to make, and in the furthest part of the tomb
+                     we saw her hanging by the neck, fastened by a halter of fine linen
+                     threads, while he was embracing her with arms thrown around her waist,
+                     bewailing the loss of his bride to the spirits below, as well as his
+                     father’s deeds, and his grief-filled marriage. </l>
+                  <l n="1225" resp="p">But his father, when he saw him, cried aloud with a dreadful cry
+                     and went in and called to him with a voice of wailing: <q type="spoken">Ah,
+                        unhappy boy, what have you done! What plan have
+                        you seized on? By what misfortune have you lost your reason?</q>
+                  </l>
+                  <l n="1230" resp="p">
+                     <q type="spoken" rend="merge">Come out, my son, I pray
+                        you, I beg you!</q> But the boy glared at him with savage eyes, spat in his
+                     face, and without a word in response drew his twin-edged sword. As his father
+                     rushed out in flight, he missed his aim. Then the ill-fated boy was enraged with
+                     himself </l>
+                  <l n="1235" resp="p">and straightway stretched himself over his sword and
+                     drove it, half its length, into his side. Still conscious, he clasped
+                     the maiden in his faint embrace, and, as he gasped, he shot onto her
+                     pale cheek a swift stream of oozing blood. </l>
+                  <l n="1240" resp="p">Corpse enfolding corpse he lay, having won his marriage rites,
+                     poor boy, not here, but in Hades’ palace, and having shown to mankind by how much
+                     the failure to reason wisely is the most severe of all afflictions assigned to
+                     man. <stage rend="italic">Eurydice departs into the
+                        house.</stage>
+                  </l>
+               </sp>
+               <milestone unit="card" n="1244" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="1244" resp="p">What would you infer from this? The lady </l>
+                  <l n="1245" resp="p">has turned back and gone without a word, either for
+                     good or for evil.</l>
+               </sp>
+               <sp>
+                  <speaker>Messenger</speaker>
+                  <l n="1246" resp="p">I, too, am startled. Still I am nourished by the hope that
+                     at the grave news of her son she thinks it unworthy to make her laments
+                     before the city, but in the shelter of her home will set her handmaids
+                     to mourn the house’s grief. </l>
+                  <l n="1250" resp="p">For she is not unhabituated to discretion, that she
+                     should err.</l>
                </sp>
                <sp>
                   <speaker>Chorus</speaker>
-                  <l n="1337" resp="p">Then pray no more; for mortals have no release from destined
-                     misfortune.</l>
+                  <l n="1251" resp="p">I do not know. But to me, in any case, a silence too strict
+                     seems to promise trouble just as much as a fruitless abundance of
+                     weeping.</l>
                </sp>
-            </div>
-            <milestone unit="card" n="1339" />
-            <div n="4" type="antistrophe">
                <sp>
-                  <speaker>Creon</speaker>
-                  <l n="1339" resp="p">Lead me away, I beg you, a rash,
-                     useless man. </l>
-                  <l n="1340" resp="p">I have murdered you,
-                     son, unwittingly, and you, too, my wife—the misery! I do not know which
-                     way I should look, or where I should seek support. All is </l>
-                  <l n="1345" resp="p">amiss that is in my hands, and, again,
-                     a crushing fate has leapt upon my head.</l>
+                  <speaker>Messenger</speaker>
+                  <l n="1253" resp="p">I will find out whether she is not, in fact, hiding some
+                     repressed plan in the darkness of her passionate heart. </l>
+                  <l n="1255" resp="p">I will go in, since you are right—in an excess of silence, too,
+                     there may be trouble. <stage rend="italic">Exit Messenger.</stage>
+                  </l>
                </sp>
-            </div>
-         </div>
-         <milestone unit="card" n="1347" />
-         <div type="episode">
-            <div type="anapests">
-               <stage rend="italic">As Creon is being conducted into the house, the Chorus Leader
-                  speaks the
-                  closing verses.</stage>
-               <sp>
-                  <speaker>Chorus</speaker>
-                  <l n="1347" resp="p">Wisdom is provided as the chief
-                     part of happiness, and our dealings with the gods must be in no way
-                     unholy. The great words of arrogant men have to make repayment with
-                     great blows, and in old age teach wisdom.</l>
-               </sp>
-            </div>
+               <milestone unit="card" n="1257" />
+               <div type="anapests">
+                  <stage rend="italic">Enter Creon, attended and carrying the shrouded body of Haemon,
+                     on
+                     the spectators’ left.</stage>
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1257" resp="p">Look, here is the King himself approaching, his hands
+                        grasping a monument plainly signing that his—if we may say it—and no
+                        one else’s,</l>
+                     <l n="1260" resp="p">was the madness of this error.</l>
+                  </sp>
+               </div>
+            <!-- </div> -->
+            <milestone unit="card" n="1261" />
+            <!-- <div type="choral"> -->
+               <div n="1" type="strophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1261" resp="p">Ah, the blunders of an unthinking
+                        mind, blunders of rigidity, yielding death! Oh, you witnesses of the
+                        killers and the killed, both of one family! </l>
+                     <l n="1265" resp="p">What misery arises from my reasonings! Haemon, you have
+                        died after a young life, youngest and last of my sons! O God! You have
+                        departed not by your foolishness, but by my own!</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1270" />
+               <div n="2" type="strophe">
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1270" resp="p">Ah, how late you seem to see the
+                        right!</l>
+                  </sp>
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1271" resp="p">God, I have mastered the bitter lesson! But then, then, I
+                        think, some god
+                        struck me on my head with a crushing weight, and drove me into savage
+                        paths, </l>
+                     <l n="1275" resp="p">—ah!—and overthrew my
+                        joy to be trampled on! Ah, the labors men must toil through!</l>
+                  </sp>
+                  <milestone unit="card" n="1278" />
+                  <sp>
+                     <stage rend="italic">Enter the Messenger from the house.</stage>
+                  </sp>
+                  <sp>
+                     <speaker>Messenger</speaker>
+                     <l n="1278" resp="p">My master, you have come, I
+                        think, like one whose hands are not empty, but who has a ready store:
+                        first, you carry that burden visible in your arms; </l>
+                     <l n="1280" resp="p">second, you will soon look upon further
+                        sufferings inside your house.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1281" />
+               <div type="anapests">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1281" resp="p">What worse suffering is still to follow upon these
+                        sufferings?</l>
+                  </sp>
+                  <sp>
+                     <speaker>Messenger</speaker>
+                     <l n="1282" resp="p">Your wife is dead, true mother of that corpse, poor lady, by
+                        wounds newly
+                        cut.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1284" />
+               <div n="1" type="antistrophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1284" resp="p">O harbor of Hades, hard to
+                        purify! </l>
+                     <l n="1285" resp="p">Why, why do you ruin
+                        me? Herald of evil, of grief, what word do you say? Ah, you have done in
+                        a dead man anew! What are you saying, boy? What is this you report to
+                        me </l>
+                     <l n="1290" resp="p">God no!—what new slaughter, my wife’s doom, is heaped
+                        upon this ruin?</l>
+                  </sp>
+                  <milestone unit="card" n="1293" />
+                  <sp>
+                     <stage rend="italic">The doors of the palace are opened, and the corpse of
+                        Eurydice is
+                        disclosed.</stage>
+                  </sp>
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1293" resp="p">The sight is at hand. It is no longer hidden inside.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1294" />
+               <div n="2" type="antistrophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1294" resp="p">Ah, misery! </l>
+                     <l n="1295" resp="p">There I see a new, a
+                        second evil! What destiny, ah, what, can still await me? I have just now
+                        taken my son in my arms, and now I see another corpse before
+                        me! </l>
+                     <l n="1300" resp="p">Oh, tormented mother! Oh,
+                        my son!</l>
+                  </sp>
+                  <sp>
+                     <speaker>Messenger</speaker>
+                     <l n="1301" resp="p">By the altar, with a
+                        sharp-whetted sword, she struck until her eyes went slack and dark.
+                        Before that she bewailed the noble fate of Megareus who died earlier,
+                        and then the fate of this boy, and also, with her last breath,</l>
+                     <l n="1305" resp="p">she called down evil fortune upon you,
+                        the slayer of her sons.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1306" />
+               <div n="3" type="strophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1306" resp="p">Ah, no! I tremble with fear. Why
+                        does no one strike me full on my chest with a two-edged sword?</l>
+                     <l n="1310" resp="p">I am miserable—ah—and bathed in
+                        miserable anguish!</l>
+                  </sp>
+                  <sp>
+                     <speaker>Messenger</speaker>
+                     <l n="1312" resp="p">Yes, because you were accused of responsibility for both
+                        this son’s death, and the other’s, by her whose corpse you see.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1314" resp="p">What was the manner of the violent deed by which she
+                        departed?</l>
+                  </sp>
+                  <sp>
+                     <speaker>Messenger</speaker>
+                     <l n="1315" resp="p">Her own hand struck her to the heart upon learning her
+                        son’s sharply-lamented fate.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1317" />
+               <div n="4" type="strophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1317" resp="p">Ah this guilt can never be
+                        fastened onto any other mortal so as to remove my own! It was I, yes, I,
+                        who killed you, I the wretch. </l>
+                     <l n="1320" resp="p">I
+                        admit the truth. Lead me away, my servants, lead me from here with all
+                        haste, who am no more than a dead man!</l>
+                  </sp>
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1325" resp="p">The course you recommend is to
+                        your gain, if there can be gain amidst evil. What is briefest is best,
+                        when trouble lies at your feet.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1328" />
+               <div n="3" type="antistrophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1328" resp="p">Let it come, let it appear, that
+                        fairest of fates for me, that brings my final day, </l>
+                     <l n="1330" resp="p">the fate supreme! Oh, let it come, so that I may never
+                        see tomorrow’s light!</l>
+                  </sp>
+                  <milestone unit="card" n="1334" />
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1334" resp="p">These things are in the future.
+                        We must see to present affairs. </l>
+                     <l n="1335" resp="p">Fulfillment of these things rests in the hands where it
+                        should
+                        rest.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1336" resp="p">All that I crave was summed in that prayer.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1337" resp="p">Then pray no more; for mortals have no release from destined
+                        misfortune.</l>
+                  </sp>
+               </div>
+               <milestone unit="card" n="1339" />
+               <div n="4" type="antistrophe">
+                  <sp>
+                     <speaker>Creon</speaker>
+                     <l n="1339" resp="p">Lead me away, I beg you, a rash,
+                        useless man. </l>
+                     <l n="1340" resp="p">I have murdered you,
+                        son, unwittingly, and you, too, my wife—the misery! I do not know which
+                        way I should look, or where I should seek support. All is </l>
+                     <l n="1345" resp="p">amiss that is in my hands, and, again,
+                        a crushing fate has leapt upon my head.</l>
+                  </sp>
+               </div>
+            <!-- </div> -->
+            <milestone unit="card" n="1347" />
+            <!-- <div type="episode"> -->
+               <div type="anapests">
+                  <stage rend="italic">As Creon is being conducted into the house, the Chorus Leader
+                     speaks the
+                     closing verses.</stage>
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1347" resp="p">Wisdom is provided as the chief
+                        part of happiness, and our dealings with the gods must be in no way
+                        unholy. The great words of arrogant men have to make repayment with
+                        great blows, and in old age teach wisdom.</l>
+                  </sp>
+               </div>
          </div>
       </body>
    </text>
