@@ -82,14 +82,6 @@
                </citeStructure>
             </citeStructure>
          </refsDecl>
-         <refsDecl n="CTS-chapter" xml:id="CTS-chapter">
-            <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
-                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n"
-                     n="chunk" />
-               </citeStructure>
-            </citeStructure>
-         </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
