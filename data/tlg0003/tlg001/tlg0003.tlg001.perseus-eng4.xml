@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -49,16 +48,13 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="section" matchPattern="(\w+).(\w+).(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
                <p>This pointer pattern extracts book and chapter and section.</p>
             </cRefPattern>
-            <cRefPattern n="chapter" matchPattern="(\w+).(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="chapter" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts book and chapter.</p>
             </cRefPattern>
-            <cRefPattern n="book" matchPattern="(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts book.</p>
             </cRefPattern>
          </refsDecl>
@@ -68,23 +64,29 @@
             </correction>
          </editorialDecl>
          <refsDecl>
-            <refState unit="book" />
-            <refState unit="chapter" n="chunk" />
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
-                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"
-                        n="chunk" />
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n" n="chunk"/>
                   </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS-chapter" xml:id="CTS-chapter">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n" n="chunk"/>
                </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#prose-standard" />
+            <catRef scheme="#perseus-genre" target="#prose-standard"/>
          </textClass>
          <langUsage>
             <language ident="eng">English</language>
@@ -128,8 +130,7 @@
                   know not whether he deserved more by his severity in imposing it (as he did to his
                   last breath) on himself, or by his magnanimity in not exacting it to himself from
                   others. No man better discerned of men: and therefore was he constant in his
-                  friendships, because he regarded not the <hi rend="ital">fortune</hi> nor <hi
-                     rend="ital">adherence,</hi> but the <hi rend="ital">men;</hi> with whom also he
+                  friendships, because he regarded not the <hi rend="ital">fortune</hi> nor <hi rend="ital">adherence,</hi> but the <hi rend="ital">men;</hi> with whom also he
                   conversed with an openness of heart that had no other guard than his own integrity
                   and that <foreign xml:lang="la">nil conscire</foreign>. To his equals he carried
                   himself equally, and to his inferiors familiarly; but maintaining his respect
@@ -303,8 +304,7 @@
                   was of the house of Miltiades, that famous general of the Athenians against the
                   Persians at Marathon; which they also prove by this, that his tomb was a long time
                   extant amongst the monuments of that family. For near unto the gates of Athens,
-                  called Melitides, there was a place named Coela; and in it the monuments called <hi
-                     rend="ital">Cimoniana,</hi> belonging to the family of Miltiades, in which none
+                  called Melitides, there was a place named Coela; and in it the monuments called <hi rend="ital">Cimoniana,</hi> belonging to the family of Miltiades, in which none
                   but such as were of that family might be buried. And amongst those was the
                   monument of Thucydides; with this inscription, <hi rend="caps">Thucydides Oroli
                   Halimusius</hi>. Now Miltiades is confessed by all, to have descended from Olorus
@@ -386,8 +386,7 @@
                   resolutions, caused by the diversity of ends and power of rhetoric in the orators;
                   and the desperate actions undertaken upon the flattering advice of such as desired
                   to attain, or to hold what they had attained, of authority and sway amongst the
-                  common people. Nor doth it appear that he magnifieth anywhere the authority of <hi
-                     rend="ital">the few:</hi> amongst whom, he saith, every one desireth to be the
+                  common people. Nor doth it appear that he magnifieth anywhere the authority of <hi rend="ital">the few:</hi> amongst whom, he saith, every one desireth to be the
                   chief; and they that are undervalued, bear it with less patience than in a
                   democracy; whereupon sedition followeth, and dissolution of the government. He
                   praiseth the government of Athens, when it was mixed of <hi rend="ital">the few</hi>
@@ -446,8 +445,7 @@
                   that he died in banishment: yet there be that have written, that after the defeat
                   in Sicily the Athenians decreed a general revocation of all banished persons,
                   except those of the family of Peisistratus; and that he then returned, and was
-                  afterwards put to death at Athens. But this is very unlikely to be true, unless by <hi
-                     rend="ital">after</hi> the defeat in Sicily, be meant <hi rend="ital">so long
+                  afterwards put to death at Athens. But this is very unlikely to be true, unless by <hi rend="ital">after</hi> the defeat in Sicily, be meant <hi rend="ital">so long
                   after,</hi> that it was also after the end of the Peloponnesian war; because
                   Thucydides himself maketh no mention of such return, though he outlived the whole
                   war, as is manifest by his words in the fifth book. For he saith he lived in
@@ -460,8 +458,7 @@
                   have written he was), though he died abroad: or his monument might be there, and
                   (as others have affirmed) he not buried in it. In this variety of conjecture,
                   there is nothing more probable than that which is written by Pausanias, where he
-                  describeth the monuments of the Athenian city; and saith thus: <q
-                     type="unspecified">The worthy act of (Enobius in the behalf of Thucydides, is
+                  describeth the monuments of the Athenian city; and saith thus: <q type="unspecified">The worthy act of (Enobius in the behalf of Thucydides, is
                   not without honour</q>: meaning that he had a statue. <q type="unspecified">For
                   (Enobius obtained to have a decree passed for his return; who returning was slain
                   by treachery; and his sepulchre is near the gates called Melitides.</q> He died,
@@ -496,8 +493,7 @@
                   wealth upon intelligence), as was possible for a man to use. He affected least of
                   any man the acclamations of popular auditories, and wrote not his history to win
                   present applause, as was the use of that age: but for a monument to instruct the
-                  ages to come; which he professeth himself, and entitleth his book <foreign
-                     xml:lang="greek">Κτῆμα ἐς ἀεί</foreign>, <gloss>a possession for everlasting</gloss>.
+                  ages to come; which he professeth himself, and entitleth his book <foreign xml:lang="greek">Κτῆμα ἐς ἀεί</foreign>, <gloss>a possession for everlasting</gloss>.
                   He was far from the necessity of servile writers, either to fear or flatter. And
                   whereas he may peradventure be thought to have been malevolent towards his
                   country, because they deserved to have him so; yet hath he not written any thing
@@ -508,9 +504,7 @@
                   a history did ever appear by the manner of relating, it doth so in this history:
                   so coherent, perspicuous and persuasive is the whole narration, and every part
                   thereof. </p>
-               <p>In the <hi rend="ital">elocution</hi> also, two things are considerable: <hi
-                     rend="ital">disposition</hi> or <hi rend="ital">method,</hi> and <hi
-                     rend="ital">style</hi>. Of the <hi rend="ital">disposition</hi> here used by
+               <p>In the <hi rend="ital">elocution</hi> also, two things are considerable: <hi rend="ital">disposition</hi> or <hi rend="ital">method,</hi> and <hi rend="ital">style</hi>. Of the <hi rend="ital">disposition</hi> here used by
                   Thucydides, it will be sufficient in this place briefly to observe only this: that
                   in his first book, first he hath, by way of exordium, derived the state of Greece
                   from the cradle to the vigorous stature it then was at when he began to write: and
@@ -706,8 +700,7 @@
                   of history ought to handle, as the principal cause of war, proclaimed injury or
                   concealed envy. In a word, the image of the method used by Thucydides in this
                   point, is this: <q type="unspecified">The quarrel about Corcyra passed on this
-                  manner; and the quarrel about Potidaea on this manner</q>: relating both at large: <q
-                     type="unspecified">and in both the Athenians were accused to have done the
+                  manner; and the quarrel about Potidaea on this manner</q>: relating both at large: <q type="unspecified">and in both the Athenians were accused to have done the
                   injury. Nevertheless, the Lacedæmonians had not upon this injury entered into a
                   war against them, but that they envied the greatness of their power, and feared
                   the consequence of their ambition.</q> I think a more clear and natural order
@@ -765,8 +758,7 @@
                   in the description of a sedition, or other thing of that kind, be not easily
                   understood; it is of those only that cannot penetrate into the nature of such
                   things, and proceedeth not from any intricacy of expression. Dionysius further
-                  findeth fault with his using to set word against word: which the rhetoricians call <hi
-                     rend="ital">antitheta.</hi> Which, as it is in some kind of speech a very great
+                  findeth fault with his using to set word against word: which the rhetoricians call <hi rend="ital">antitheta.</hi> Which, as it is in some kind of speech a very great
                   vice, so is it not improper in characters: and of comparative discourses, it is
                   almost the only style. </p>
                <p>And whereas he further taxeth him for licentiousness in turning nouns into verbs,
@@ -3326,8 +3318,7 @@
                   <p>and saying afterwards that he could not discern whether was the greater cry
                      (for they used there to give their votes <hi rend="italic">viva voce</hi> and
                      not with balls) and desiring that it might be evident that their minds were
-                     inclined most to the war, he put it unto them again and said, <q
-                        type="unspecified">to whomsoever of you it seemeth that the peace is broken
+                     inclined most to the war, he put it unto them again and said, <q type="unspecified">to whomsoever of you it seemeth that the peace is broken
                      and that the Athenians have done unjustly, let him arise and go yonder,</q> and
                      withal he showed them a certain place, <q type="unspecified">and to whomsoever
                      it seemeth otherwise, let him go to the other side.</q>
@@ -3478,8 +3469,7 @@
                <div n="7" type="section">
                   <p>
                      <q type="unspecified">For that in strength unequal men cannot alike and equally
-                     advise for the common benefit of Greece. Therefore,</q> said he, <q
-                        type="unspecified">either must all the confederate cities be unwalled, or
+                     advise for the common benefit of Greece. Therefore,</q> said he, <q type="unspecified">either must all the confederate cities be unwalled, or
                      you must not think amiss of what is done by us.</q>
                   </p>
                </div>
@@ -4171,8 +4161,7 @@
                </div>
                <div n="3" type="section">
                   <p>and also having sent to Delphi and enquired of Apollo whether they should have
-                     the better in the war or not, they received, as it is reported, this answer: <q
-                        type="unspecified">That if they warred with their whole power, they should
+                     the better in the war or not, they received, as it is reported, this answer: <q type="unspecified">That if they warred with their whole power, they should
                      have victory and that himself would be on their side, both called and uncalled.</q>
                   </p>
                </div>
@@ -5076,8 +5065,7 @@
                <div n="1" type="section">
                   <p rend="align(indent)">Thus spake Pericles. The Athenians, liking best of his
                      advice, decreed as he would have them, answering the Lacedaemonians according
-                     to his direction, both in particulars as he had spoken and generally, <q
-                        type="unspecified">that they would do nothing on command, but were ready to
+                     to his direction, both in particulars as he had spoken and generally, <q type="unspecified">that they would do nothing on command, but were ready to
                      answer their accusations upon equal terms by way of arbitrament.</q> So the
                      ambassadors went home, and after these there came no more. </p>
                </div>
@@ -6710,8 +6698,7 @@
                         <hi rend="italic">And a great plague withal.</hi>
                      </l>
                   </quote>
-                  <p>Now were men at variance about the word, some saying it was not <hi
-                        rend="italic">loimos</hi> [plague], that was by the ancients mentioned in
+                  <p>Now were men at variance about the word, some saying it was not <hi rend="italic">loimos</hi> [plague], that was by the ancients mentioned in
                      that verse, but <hi rend="italic">limos</hi> [famine]. But upon the present
                      occasion the word <hi rend="italic">loimos</hi> deservedly obtained. For as men
                      suffered, so they made the verse to say. And I think if after this there shall
@@ -6725,10 +6712,8 @@
                <div n="5" type="section">
                   <p>
                      <hi rend="italic">that if they warred with all their power, they</hi>
-                     <hi
-                        rend="italic">should have the victory, and that the God himself would take</hi>
-                     <hi
-                        rend="italic">their parts.</hi> And thereupon they thought the present
+                     <hi rend="italic">should have the victory, and that the God himself would take</hi>
+                     <hi rend="italic">their parts.</hi> And thereupon they thought the present
                      misery to be a fulfilling of that prophecy. The Peloponnesians were no sooner
                      entered Attica but the sickness presently began, and never came into
                      Peloponnesus, to speak of, but reigned principally in Athens and in such other
@@ -10948,9 +10933,7 @@
                <div n="8" type="section">
                   <p>For such as were of authority in the cities, both of the one and the other
                      faction, preferring under decent titles, one, <hi rend="italic">the polit-</hi>
-                     <hi
-                        rend="italic">ical equality of the multitude,</hi> the other, <hi
-                        rend="italic">the moderate aristoc-</hi>
+                     <hi rend="italic">ical equality of the multitude,</hi> the other, <hi rend="italic">the moderate aristoc-</hi>
                      <hi rend="italic">racy,</hi> though
                      in words they seemed to be servants of the public, they made it in effect but
                      the prize of their contention; and striving by whatsoever means to overcome
@@ -11839,9 +11822,7 @@
                <div n="4" type="section">
                   <p>
                      <q type="unspecified">Then,</q> said he again, <q type="unspecified">they
-                     belong not to them that were in battle with us.</q> The other answered: <q
-                        type="unspecified">Yes, if you fought yesterday in Idomene.</q> — <q
-                        type="unspecified">But we fought not yesterday at all, but the other day in
+                     belong not to them that were in battle with us.</q> The other answered: <q type="unspecified">Yes, if you fought yesterday in Idomene.</q> — <q type="unspecified">But we fought not yesterday at all, but the other day in
                      our retreat.</q> — <q type="unspecified">But we yet fought yesterday with those
                      Ambraciotes that came from the city to aid the rest.</q>
                   </p>
@@ -12570,8 +12551,7 @@
                      when they should be there, if the Lacedaemonians would make restitution of
                      Nisaea and Pegae and Troezen and Achaia</q>—the which they had not won in war
                      but had received by former treaty when the Athenians, being in distress and at
-                     that time in more need of peace than now, [yielded them up into their hands]— <q
-                        type="unspecified">then they should have their men again, and peace should
+                     that time in more need of peace than now, [yielded them up into their hands]— <q type="unspecified">then they should have their men again, and peace should
                      be made for as long as they both should think good.</q>
                   </p>
                </div>
@@ -13096,8 +13076,7 @@
                <div n="3" type="section">
                   <p>But the Athenians, letting none go thence, called for heralds out of the
                      continent; and the question having been twice or thrice asked, the last of the
-                     Lacedaemonians that came over from the continent brought them this answer: <q
-                        type="unspecified">The Lacedaemonians bid you take advice touching
+                     Lacedaemonians that came over from the continent brought them this answer: <q type="unspecified">The Lacedaemonians bid you take advice touching
                      yourselves such as you shall think good, provided you do nothing dishonourably.</q>
                      Whereupon, having consulted, they yielded up themselves and their arms.</p>
                </div>
@@ -13469,8 +13448,7 @@
                <div n="2" type="section">
                   <p>This Cythera is an island upon the coast of Laconia, over against Malea. The
                      inhabitants be Lacedaemonians, of the same that dwell about them. And every
-                     year there goeth over unto them from Sparta a magistrate called <hi
-                        rend="italic">Cyther-</hi>
+                     year there goeth over unto them from Sparta a magistrate called <hi rend="italic">Cyther-</hi>
                      <hi rend="italic">odikes.</hi> They likewise sent
                      over men of arms from time to time to lie in the garrison there, and took much
                      care of the place.</p>
@@ -16330,8 +16308,7 @@
                </div>
                <div n="5" type="section">
                   <p>Brasidas at the same time, having spied his opportunity and that the army of
-                     the Athenians removed, said to those about him and the rest: <q
-                        type="unspecified">These men stay not for us; it is apparent by the wagging
+                     the Athenians removed, said to those about him and the rest: <q type="unspecified">These men stay not for us; it is apparent by the wagging
                      of their spears and of their heads; for where such motion is, they use not to
                      stay for the charge of the enemy;</q>
                   </p>
@@ -16934,8 +16911,7 @@
                <div n="3" type="section">
                   <p>And therefore, they said, they did not break the oath of their league by
                      rejecting the peace with Athens. For having sworn unto them by the gods, they
-                     should in betraying them offend the gods. And whereas it is said <q
-                        type="unspecified">unless some god or hero hinder it,</q> this appeareth to
+                     should in betraying them offend the gods. And whereas it is said <q type="unspecified">unless some god or hero hinder it,</q> this appeareth to
                      be a divine hindrance.</p>
                </div>
                <div n="4" type="section">
@@ -17416,8 +17392,7 @@
                </div>
                <div n="4" type="section">
                   <p>For when they came before the people, and to the question whether they had full
-                     power of concluding, had, contrary to what they had said in council, answered <hi
-                        rend="italic">No,</hi> the Athenians would no longer endure them, but gave
+                     power of concluding, had, contrary to what they had said in council, answered <hi rend="italic">No,</hi> the Athenians would no longer endure them, but gave
                      ear to Alcibiades, that exclaimed against the Lacedaemonians far more now than
                      ever; and were ready then presently to have the Argives and those others with
                      them brought in, and to make the league; but an earthquake happening before
@@ -18232,10 +18207,8 @@
                      of the Lacedaemonians, and put to flight and chased them to their carriages,
                      slaying also certain of the elder sort left there for a guard, so as in this
                      part the Lacedaemonians were overcome, yet with the rest of the army, and
-                     especially the middle battle where Agis was himself, and those which are called <q
-                        type="unspecified">the three hundred horsemen</q> about him, they charged
-                     upon the eldest of the Argives, and upon those which are named <q
-                        type="unspecified">the five cohorts,</q> and upon the Cleonaeans and
+                     especially the middle battle where Agis was himself, and those which are called <q type="unspecified">the three hundred horsemen</q> about him, they charged
+                     upon the eldest of the Argives, and upon those which are named <q type="unspecified">the five cohorts,</q> and upon the Cleonaeans and
                      Orneates, and certain Athenians arranged amongst them, and put them all to
                      flight;</p>
                </div>
@@ -18438,8 +18411,7 @@
                </div>
                <div n="4" type="section">
                   <p>And that if any controversy arise between any of the cities, either within or
-                     without Peloponnesus, about limits or other matter, they also shall decide it. <q
-                        type="unspecified">That if any confederate city be at contention with
+                     without Peloponnesus, about limits or other matter, they also shall decide it. <q type="unspecified">That if any confederate city be at contention with
                      another, it shall have recourse to that city which they both shall think most
                      indifferent; but the particular men of any one city shall be judged according
                      to the law of the same.</q>
@@ -18608,8 +18580,7 @@
             </div>
             <div n="86" type="chapter">
                <div n="1" type="section">
-                  <p rend="align(indent)">Whereunto the council of the Melians answered: <q
-                        type="unspecified">The equity of a leisurely debate is not to be found fault
+                  <p rend="align(indent)">Whereunto the council of the Melians answered: <q type="unspecified">The equity of a leisurely debate is not to be found fault
                      withal; but this preparation of war, not future but already here present,
                      seemeth not to agree with the same. For we see that you are come to be judges
                      of the conference, and that the issue of it, if we be superior in argument and

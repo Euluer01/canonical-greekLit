@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -10,7 +9,7 @@
             <sponsor>Perseus Project, Tufts University</sponsor>
             <principal>Gregory Crane</principal>
          </titleStmt>
-         <extent />
+         <extent/>
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -43,12 +42,10 @@
                breaks in the Greek.</p>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="Chapter" matchPattern="(\\w+).(\\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\']/tei:div[@n=\'$2\'])">
+            <cRefPattern n="Chapter" matchPattern="(\\w+).(\\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\']/tei:div[@n=\'$2\'])">
                <p>This pointer pattern extracts Book and Chapter</p>
             </cRefPattern>
-            <cRefPattern n="Book" matchPattern="(\\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\'])">
+            <cRefPattern n="Book" matchPattern="(\\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n=\'$1\'])">
                <p>This pointer pattern extracts Book</p>
             </cRefPattern>
          </refsDecl>
@@ -59,16 +56,22 @@
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
-                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"
-                        n="chunk" />
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n" n="chunk"/>
                   </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS-chapter" xml:id="CTS-chapter">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n" n="chunk"/>
                </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#prose-standard" />
+            <catRef scheme="#perseus-genre" target="#prose-standard"/>
          </textClass>
          <langUsage>
             <language ident="deu">German</language>
@@ -82,7 +85,7 @@
    </teiHeader>
    <text xml:lang="deu">
       <body xml:base="urn:cts:greekLit:tlg0003.tlg001.1st1K-ger4">
-         <pb />
+         <pb/>
          <div n="2" type="book">
             <div n="34" type="chapter">
                <div n="1" type="section">
@@ -131,7 +134,7 @@
                </div>
                <div n="2" type="section">
                   <p>Denn schwer ist es das Maß der Rede zu treffen wo überhaupt kaum die Wahrheit
-                     zu veranschaulichen möglich ist. <pb /> Denn wer mit dabei war und den Dingen
+                     zu veranschaulichen möglich ist. <pb/> Denn wer mit dabei war und den Dingen
                      Gerechtigkeit widerfahren lassen will, der könnte leicht den Eindruck haben daß
                      alles hinter seinem Willen und Wissen zurückbleibe. Der Unerfahrene aber wird
                      es für übertrieben halten: aus Neid nämlich wenn er von Dingen hört die über
@@ -182,7 +185,7 @@
             </div>
             <div n="37" type="chapter">
                <div n="1" type="section">
-                  <p>Wir genießen einer Verfassung welche die Gesetzgebung anderer <pb /> Staaten
+                  <p>Wir genießen einer Verfassung welche die Gesetzgebung anderer <pb/> Staaten
                      nicht nachahmt; im Gegenteil sind wir eher ändern ein Beispiel, als daß wir sie
                      nachahmten. Und mit Recht wird sie, da die Gewalt nicht bei wenigen sondern bei
                      der Gesamtheit ruht, Volksherrschaft genannt Jedem gebührt nach den Gesetzen
@@ -231,7 +234,7 @@
                      Gegnern. Darin nämlich daß wir unsere Stadt als allen gemeinsam betrachten. Und
                      nie geschieht es daß wir durch Ausweisung eines Fremden irgend jemanden von
                      etwas Wissens- oder Sehenswertem abhalten, weil etwa dadurch daß man es nicht
-                     geheim hält irgend einer unserer <pb /> Feinde daraus Nutzen ziehen könne. Wir
+                     geheim hält irgend einer unserer <pb/> Feinde daraus Nutzen ziehen könne. Wir
                      vertrauen nicht so sehr auf Vorkehrungen und Täuschungen als auf den in uns
                      lebenden Mut und Glauben für alle unsere Werke. Und während jene schon von
                      Kindesbeinen an, kaum entwickelt, in wahrhaft asketischen Übungen mannhaftes
@@ -280,7 +283,7 @@
                </div>
                <div n="3" type="section">
                   <p>Denn wir allein sind es, die den der sich solchen ganz fernhält nicht für einen
-                     Ruheliebenden sondern für einen Unnützen <pb /> erachten. Auf eigenem Urteil
+                     Ruheliebenden sondern für einen Unnützen <pb/> erachten. Auf eigenem Urteil
                      und auf eigener Überzeugung beruht unser Tun; und wir halten nicht die Rede für
                      eine Gefahr für die Tat, sondern eher, nicht durch die Rede sich belehren zu
                      lassen bevor man zur Tat schreitet« Denn auch dies ist unsere Art: da am
@@ -327,7 +330,7 @@
                      ausgebreitet und die Bewunderung der lebenden Geschlechter wie der Nachwelt
                      wird uns zuteil. Keines Homeros bedürfen wir als Verkünder unseres Ruhms noch
                      sonst eines ändern der in Heldengesängen Herrliches darstellen mag während die
-                     Wahrheit die Uberhebung der Tat Lügen straft, <pb /> sondern wir haben zu allen
+                     Wahrheit die Uberhebung der Tat Lügen straft, <pb/> sondern wir haben zu allen
                      Meeren und Ländern kühn uns den Eingang eröffnet und allüberall die Denkmäler
                      unserer Taten im Bösen wie im Guten aufgerichtet.</p>
                </div>
@@ -379,7 +382,7 @@
             </div>
             <div n="43" type="chapter">
                <div n="1" type="section">
-                  <p>Also handelnd <pb /> taten dem Staat sie Gebühr —: und sie wurden zu Helden.
+                  <p>Also handelnd <pb/> taten dem Staat sie Gebühr —: und sie wurden zu Helden.
                      Die überlebenden aber sollen, wenn sie auch beten mögen um ein gnädigeres
                      Schicksal, keine minder herrliche Gesinnung vor dem Feinde erweisen zu dürfen
                      vermeinen. Denn allein den Nutzen einer solchen sollen sie nicht berechnend ins
@@ -427,7 +430,7 @@
                <div n="1" type="section">
                   <p>Deshalb will ich nun auch die Eltern der Gefallenen, euch zumal die ihr zugegen
                      seid, nicht mehr beklagen sondern trösten. Wißt ihr doch selbst daß ihr in
-                     mannigfacher Unbeständigkeit <pb /> und vielerlei Wechsel des Geschickes
+                     mannigfacher Unbeständigkeit <pb/> und vielerlei Wechsel des Geschickes
                      herangewachsen seid. Das wahre Glück aber liegt in einem wohlanstehenden
                      Schicksal wie es diesen in einem herrlichen Ende, euch in der edelsten Trauer
                      bereitet ist, außer euch aber nur jenen gewährt wird denen ein gütiger Geist
@@ -471,7 +474,7 @@
                </div>
                <div n="2" type="section">
                   <p>Ziemt es mir aber nun noch der fraulichen Tugend derer zu gedenken die nun im
-                     Witwentum leben werden, so will ich in kurzer Mahnung alles berühren. Euer Ruhm <pb />
+                     Witwentum leben werden, so will ich in kurzer Mahnung alles berühren. Euer Ruhm <pb/>
                      wird es sein, der euch beherrschenden Natur nicht unterlegen euch zu erweisen;
                      und nicht besprochen zu werden unter den Männern in Lob oder Tadel wird eure
                      höchste Ehrung sein. — </p>

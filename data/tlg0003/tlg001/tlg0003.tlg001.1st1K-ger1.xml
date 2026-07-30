@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -10,7 +9,7 @@
             <sponsor>Perseus Project, Tufts University</sponsor>
             <principal>Gregory Crane</principal>
          </titleStmt>
-         <extent />
+         <extent/>
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -35,24 +34,20 @@
                      <date>1856</date>
                   </imprint>
                </monogr>
-               <ref
-                  target="https://hdl.handle.net/2027/njp.32101065317867?urlappend=%3Bseq=3%3Bownerid=27021597766847557-7">The
+               <ref target="https://hdl.handle.net/2027/njp.32101065317867?urlappend=%3Bseq=3%3Bownerid=27021597766847557-7">The
                   HathiTrust</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="section" matchPattern="(\w+).(\w+).(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
+            <cRefPattern n="section" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
                <p>This pointer pattern extracts book and chapter and section</p>
             </cRefPattern>
-            <cRefPattern n="chapter" matchPattern="(\w+).(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+            <cRefPattern n="chapter" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                <p>This pointer pattern extracts book and chapter</p>
             </cRefPattern>
-            <cRefPattern n="book" matchPattern="(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts book</p>
             </cRefPattern>
          </refsDecl>
@@ -63,16 +58,22 @@
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
-                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"
-                        n="chunk" />
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n" n="chunk"/>
                   </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS-chapter" xml:id="CTS-chapter">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n" n="chunk"/>
                </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#prose-standard" />
+            <catRef scheme="#perseus-genre" target="#prose-standard"/>
          </textClass>
          <langUsage>
             <language ident="deu">German</language>
@@ -89,7 +90,7 @@
    </teiHeader>
    <text xml:lang="deu">
       <body xml:base="urn:cts:greekLit:tlg0003.tlg001.1st1K-ger1">
-         <pb n="3" />
+         <pb n="3"/>
          <div n="1" type="book">
             <head>1. Die Friedensrede des Archidamus.<note xml:lang="mul" place="unspecified">
                Während Thucydides seine gesamte Darstellung, insbesondere aber die eingeflochtenen
@@ -216,7 +217,7 @@
             <div n="81" type="chapter">
                <div n="1" type="section">
                   <p>Man könnte einwenden, dass wir ihnen durch unser Fussvolk, unsere Anzahl weit
-                     überlegen sind, und so ihr Land unsem verwüstenden Einfällen offen <pb />
+                     überlegen sind, und so ihr Land unsem verwüstenden Einfällen offen <pb/>
                      steht. Allein sie besitzen auswärts Unterthanenland genug und können ihre
                      Bedürfnisse zur See beziehen. Oder endlich wir wollten die Bundesgenossen zum
                      Abfall bringen, so brauchen wir wieder eine Flotte zu deren Beistand, da sie
@@ -255,7 +256,7 @@
                      Aeussersten treiben. Demi eine übereilte Verwüstung desselben, ohne
                      Vorbereitung, blos auf die Beschwerden der Bundesgenossen hin, würde sicherlich
                      dem Peloponnes nur noch mehr Schande und Schaden bereiten. Streitigkeiten
-                     zwischen Staaten wie zwischen Einzelnen lassen sich schlichten; wenn <pb />
+                     zwischen Staaten wie zwischen Einzelnen lassen sich schlichten; wenn <pb/>
                      aber erst ein Staatenbund für Sonderinteressen einen Krieg angefangen hat,
                      dessen Ausgang niemand abzusehen vermag, dann ist es nicht mehr leicht, ihn mit
                      Ehren beizulegen. </p>
@@ -291,25 +292,21 @@
                      Besonnenheit!</p>
                   <p>Uns wenigstens bewahrt es vor der sonst gewöhnlichen Ueberhebung im Glücke und
                      im Unglück vor der plötzlichen Muthlosigkeit; will man durch Schmeichelei gegen
-                     unsere Ueberzeugung uns zu einem Wagnis verlocken<note xml:lang="mul" n="3"
-                        place="unspecified" /> , so lassen wir <pb /> uns nicht durch Ehrgeiz
-                     fortreissen, oder wenn man dann mit Vorwürfen uns in Harnisch bringen will<note
-                        xml:lang="mul" n="4" place="unspecified" /> , eben sowenig aus verletztem
+                     unsere Ueberzeugung uns zu einem Wagnis verlocken<note xml:lang="mul" n="3" place="unspecified"/> , so lassen wir <pb/> uns nicht durch Ehrgeiz
+                     fortreissen, oder wenn man dann mit Vorwürfen uns in Harnisch bringen will<note xml:lang="mul" n="4" place="unspecified"/> , eben sowenig aus verletztem
                      Ehrgefühl überreden. Beides im Feld wie im Rath ist uns die Bescheidenheit gut.
                      Im Feld; denn Besonnenheit ist vor allem die Mutter der Scham, Ehrgefühl aber
                      die des Muthes. Im Rathe; denn unsere Erziehung ist zu eingezogen, um uns
                      besser zu dünken als das Gesetz, zu rauh und strenge, um ihm ungehorsam zu
                      sein; sie bewahrt uns vor der eiteln Afterklugheit, welche die Macht des
                      Feindes trefflich herabsetzen, aber im Ernst es doch nicht mit ihr aufnehmen
-                     kann<note xml:lang="mul" n="5" place="unspecified" /> ; sie lässt uns nicht
-                     vergessen, dass der Gegner ebenfalls seinen Verstand hat<note xml:lang="mul"
-                        n="6" place="unspecified" /> , besondere Glücksfälle aber sich nicht
+                     kann<note xml:lang="mul" n="5" place="unspecified"/> ; sie lässt uns nicht
+                     vergessen, dass der Gegner ebenfalls seinen Verstand hat<note xml:lang="mul" n="6" place="unspecified"/> , besondere Glücksfälle aber sich nicht
                      wahrsagen lassen, dass wir also stets dem Gegner Ueberlegung zutrauen und
                      darnach unsere Vorbereitungen treffen müssen. Baue niemand seine Hoffnungen auf
-                     dessen muth- <pb n="7" /> massliche Fehler, sondern allein auf die eigenen
+                     dessen muth- <pb n="7"/> massliche Fehler, sondern allein auf die eigenen
                      Vorsichtsmassregeln, noch glaube er, dass ein Mensch vor dem andern viel voraus
-                     habe, sondern (gerade) der der Tüchtigste sei, den die Schule der Noth gebildet<note
-                        xml:lang="mul" n="7" place="unspecified" /> . </p>
+                     habe, sondern (gerade) der der Tüchtigste sei, den die Schule der Noth gebildet<note xml:lang="mul" n="7" place="unspecified"/> . </p>
                </div>
             </div>
             <div n="85" type="chapter">
@@ -323,7 +320,7 @@
                      gerichtliche Entscheidung nicht ablehnen. Wer diese anbietet, den hat man kein
                      Recht als bereits Verurtheilten anzugreifen. Aber zugleich rüstet euch auch zum
                      Kriege. Dies ist das Beste, was ihr beschliessen könnt, und wird bei dem Feind
-                     am meisten Eindruck machen. <pb n="8" />
+                     am meisten Eindruck machen. <pb n="8"/>
                   </p>
                </div>
             </div>
@@ -353,7 +350,7 @@
                      darin finden lässt, wenn er an höhere Beweggründe glauben soll, als er selber
                      kennt. Denn Lobreden auf andere erträgt der Mensch nur so weit, als er die
                      Kraft zu den Handlungen, die man ihm erzählt, wenn auch nur zum Theil, in sich
-                     findet; jede weitere Zumuthung<note xml:lang="mul" n="1" place="unspecified" />
+                     findet; jede weitere Zumuthung<note xml:lang="mul" n="1" place="unspecified"/>
                      weckt nur den Neid und man will nicht mehr glauben.</p>
                </div>
                <div n="3" type="section">
@@ -374,7 +371,7 @@
                </div>
                <div n="2" type="section">
                   <p>Ihrer Tapferkeit dankt noch jetzt das Vaterland seine Freiheit, und nie haben
-                     Wanderungen die Reihe von Geschlechtern unterbrochen, <pb n="9" /> die sie uns
+                     Wanderungen die Reihe von Geschlechtern unterbrochen, <pb n="9"/> die sie uns
                      überliefert. Und dieser Dank, den wir ihnen zollen, gebührt er nicht mehr noch
                      unsern Vätern, die zu dem Erbe der Vorzeit noch das mächtige Reich, das wir
                      beherrschen, wahrlich nicht mühelos erworben und dem jetzt lebenden Geschlechte
@@ -382,8 +379,7 @@
                </div>
                <div n="3" type="section">
                   <p>Seine jetzige Ausdehnung aber haben wir selber, die Männer in mittleren Jahren
-                     der gegenwärtigen Generation, ihm gegeben<note xml:lang="mul" n="2"
-                        place="unspecified" /> und dem Vaterlande zu dem unbedingtesten Besitz aller
+                     der gegenwärtigen Generation, ihm gegeben<note xml:lang="mul" n="2" place="unspecified"/> und dem Vaterlande zu dem unbedingtesten Besitz aller
                      Hülfsmittel für Krieg und Frieden verholten.</p>
                </div>
                <div n="4" type="section">
@@ -407,11 +403,11 @@
                   <p>Wir erfreuen uns einer Verfassung, welche nicht entstanden aus der Uebertragung
                      fremder Gesetze, keine Nachahmung, sondern vielmehr selber ein würdiges Vorbild
                      für andere ist. Mag sie Volksherrschaft heissen, sofern die Bürgerschaft, nicht
-                     ein Adel der Berechtigte ist<note xml:lang="mul" n="3" place="unspecified" /> ;
+                     ein Adel der Berechtigte ist<note xml:lang="mul" n="3" place="unspecified"/> ;
                      aber bei aller Gleichheit, welche das Gesetz den persönlichen Unterschieden
                      gegenüber allen gewährt, ist es doch lediglich die Tüchtigkeit, wo sie sich
                      auch hervorthun mag, welche den Rang bestimmt und den Weg zu Ehren und Würden
-                     bahnt, ja auch für den Aermsten, wofern er <pb n="10" /> nur dem Staate zu
+                     bahnt, ja auch für den Aermsten, wofern er <pb n="10"/> nur dem Staate zu
                      nützen vermag, bildet seine niedrige Stellung kein Hindernis.</p>
                </div>
                <div n="2" type="section">
@@ -463,13 +459,12 @@
                </div>
                <div n="2" type="section">
                   <p>Ich berufe mich auf Thatsachen. Sparta selbst schickt uns nicht seine
-                     Contingente, sondern nur das vereinigte Bundesheer ins Land<note xml:lang="mul"
-                        n="4" place="unspecified" /> , und bei unsern eigenen Feldzügen kostet es
+                     Contingente, sondern nur das vereinigte Bundesheer ins Land<note xml:lang="mul" n="4" place="unspecified"/> , und bei unsern eigenen Feldzügen kostet es
                      uns in der Regel wenig Mühe, im Feindesland einen Gegner, der für Haus und Herd
                      kämpft, aus dem Felde zu schlagen.</p>
                </div>
                <div n="3" type="section">
-                  <p>Noch hat kein Feind es mit unserer <pb /> gesamten Macht zu thun gehabt, die
+                  <p>Noch hat kein Feind es mit unserer <pb/> gesamten Macht zu thun gehabt, die
                      gleichzeitig durch den Flottendienst und zu Land durch Verschickung der
                      Bürgertruppen an alle bedrohten Punkte in Anspruch genommen ist, und es ist nur
                      Prahlerei, wenn uns jedes unbedeutende Gefecht, worin etliche der Unsern
@@ -492,8 +487,7 @@
                   <p>Hier blüht Kunstsinn neben Sitteneinfalt, und die Wissenschaften ohne
                      Ueberfeinerung; der'Reichthum dient nicht der Hoffahrt, sondern dem
                      Unteraehmungsgeiste, und die ehrliche Armuth wird nirgends beschämt, vielmehr
-                     die stumpfsinnige, arbeitsscheue ist eine Schande.<note xml:lang="mul" n="5"
-                        place="unspecified" />
+                     die stumpfsinnige, arbeitsscheue ist eine Schande.<note xml:lang="mul" n="5" place="unspecified"/>
                   </p>
                </div>
                <div n="2" type="section">
@@ -516,15 +510,14 @@
                      es wohl eine grössere Seelenstärke als die Besonnenheit, die Gefahr und Genuss
                      wohl
                      kennt und sich doch dadurch die Lust am Kampfe nicht rauben lässt? </p>
-                  <pb n="12" />
-                  <p />
+                  <pb n="12"/>
+                  <p/>
                </div>
                <div n="4" type="section">
                   <p>Auch unser Edelmuth ist von einer andern als der gewöhnlichen Art. Denn
                      erstlich sind es erwiesene und nicht empfangene Wohlthaten, was unsere
                      Freundschaften schliefst, und der Gebende ist immer auch zuverlässiger, um sich
-                     die Dankesschuld des Wohlwollens bei dem Empfänger stets ausstehend zu erhalten<note
-                        xml:lang="mul" n="6" place="unspecified" /> ; während der Verpflichtete
+                     die Dankesschuld des Wohlwollens bei dem Empfänger stets ausstehend zu erhalten<note xml:lang="mul" n="6" place="unspecified"/> ; während der Verpflichtete
                      fühlt, dass seine aufopferndste Freundschaft doch nur Schuldigkeit und kein
                      Verdienst ist und dadurch verdrossen wird.</p>
                </div>
@@ -560,7 +553,7 @@
                      Denkmale, die uns die Bewunderung der Mit - und Nachwelt sichern! Unser Ruhm
                      bedarf keines Homeres mehr, keines Dichters, dessen Gesänge zwar den Hörer
                      erfreuen, während doch seine vermeintlichen Kämpfe vor der Prüfung nicht
-                     bestehen können; vielmehr <pb n="12" /> hat sich unser Schwert zu jedem Land
+                     bestehen können; vielmehr <pb n="12"/> hat sich unser Schwert zu jedem Land
                      und Meer unaufhaltsam den Zugang erstritten und überall bleibende Denkmale von
                      Strafe und Belohnung hinterlassen. </p>
                </div>
@@ -591,7 +584,7 @@
                </div>
                <div n="3" type="section">
                   <p>Muss ja schon der gewöhnliche Mensch wegen patriotischer Tapferkeit im Kriege
-                     werth gehalten werden<note xml:lang="mul" n="7" place="unspecified" /> , da er
+                     werth gehalten werden<note xml:lang="mul" n="7" place="unspecified"/> , da er
                      das Böse durch Gutes in Vergessenheit gebracht und durch bürgerliche Tugend
                      mehr genützt, als im Privatleben geschadet hat. —</p>
                </div>
@@ -603,8 +596,8 @@
                      wollten sie auf dem Schlachtfeld den Sieg und die Erfüllung ihrer Wünsche
                      finden, so doch dass sie den dunkeln Ausgang ruhig dem Glücke vertrauten und
                      der Wirklichkeit, dem Ernst des Augenblicks die männliche Zuversicht auf die
-                     eigene Kraft entgegensetzten<note xml:lang="mul" n="8" place="unspecified" /> .
-                     In der Schlacht selbst achteten sie nicht Tod und Wunden, <pb n="14" /> keiner
+                     eigene Kraft entgegensetzten<note xml:lang="mul" n="8" place="unspecified"/> .
+                     In der Schlacht selbst achteten sie nicht Tod und Wunden, <pb n="14"/> keiner
                      wich und rettete das Leben, sondern wahrte die Ehre und erwartete den
                      Todesstreich, und als sie dem Geschick seinen kurzen Triumph lassen musten,
                      schieden sie ohne Bangen, im Vorgenuss ihres Ruhmes. </p>
@@ -642,7 +635,7 @@
                   <p>Denn ruhmwürdige Männer haben die ganze Erde zu ihrem Grabmal, und nicht der
                      Buchstabe nur auf dem Grabstein in der Heimat, sondern auch in der Fremde ein
                      lebendiges Andenken, unsichtbar in alle Herzen geschrieben, bewahrt ihren
-                     Namen. <pb n="15" />
+                     Namen. <pb n="15"/>
                   </p>
                </div>
                <div n="4" type="section">
@@ -669,14 +662,13 @@
                      nicht Worte der Klage, sondern des Trostes. Was ist doch unser Leben, als ein
                      Launenspiel des Schicksals, und wer ist der Glückliche als der, dem der Tod der
                      Ehren wie diesen, dem eine Trauer gleich der euren zu Theil ward, dem nach
-                     würdigem Genuss des Lebens ein gleiches Ende beschieden war.<note
-                        xml:lang="mul" n="9" place="unspecified" />
+                     würdigem Genuss des Lebens ein gleiches Ende beschieden war.<note xml:lang="mul" n="9" place="unspecified"/>
                   </p>
                </div>
                <div n="2" type="section">
                   <p>Wohl mag das Gefühl noch oft widersprechen, so oft euer Auge bei andern dem
                      Glücke begegnet, das für euch nun dahin ist, auch trauert das Herz nicht um die
-                     Entbehrung<note xml:lang="mul" n="10" place="unspecified" /> nie genossener
+                     Entbehrung<note xml:lang="mul" n="10" place="unspecified"/> nie genossener
                      Güter, sondern um langgewohnte, die ihm entrissen wurden.</p>
                </div>
                <div n="3" type="section">
@@ -684,11 +676,11 @@
                      zu hoffen hat. Ein frischer Nachwuchs wird manchem seinen Verlust vergessen
                      machen, und das Vaterland wird sich freuen, dass die Lücken sich wieder füllen
                      und seine Bürgschaften sich mehren. Denn unmöglich kann derjenige redlich zum
-                     gemeinen Besten mitrathen<note xml:lang="mul" n="11" place="unspecified" /> ,
+                     gemeinen Besten mitrathen<note xml:lang="mul" n="11" place="unspecified"/> ,
                      wer nicht auch als Vater mit seinen Mitbürgern die Gefahr theilt.</p>
                </div>
                <div n="4" type="section">
-                  <p>Wer aber über den Mittag des Lebens hinaus ist, der mag sich <pb n="16" /> an
+                  <p>Wer aber über den Mittag des Lebens hinaus ist, der mag sich <pb n="16"/> an
                      den vielen glücklichen Jahren, die ihm geworden, genügen lassen und sich seine
                      übrige Spanne Zeit mit dem Nachruhm seiner Todten aufrichten. Denn Ehre allein
                      verliert ihren Jugendreiz nicht, und ein geachteter Name ist es, nicht der
@@ -725,13 +717,12 @@
                      Tapfern erwartet, desto mehr zuverlässige Männer hat der Staat —</p>
                </div>
                <div n="2" type="section">
-                  <p>so trocknet die Thränen, die ihr den Euern geweint, und lasset uns gehen. <note
-                        xml:lang="mul" place="unspecified"> Hrn. Dr. Krahner's Erläuterungen über
+                  <p>so trocknet die Thränen, die ihr den Euern geweint, und lasset uns gehen. <note xml:lang="mul" place="unspecified"> Hrn. Dr. Krahner's Erläuterungen über
                      den
                         Gedankenplan des Epitaphios konnten verspäteter Zusendung wegen bei dem
                      vorstehenden Uebersetzungsversuch leider nur theilweise berücksichtigt
                         werden.</note>
-                     <pb n="17" />
+                     <pb n="17"/>
                   </p>
                </div>
             </div>
@@ -784,7 +775,7 @@
                      seinen Leiden anheben und über seine zahllosen Uebel mich verbreiten; indes ihr
                      kennet sie ja. Denn so wenig Unkunde die Schuld trägt an einem aufgenöthigten
                      Kriege, ebensowenig lässt sich die Eroberungslust durch Furcht von ihm
-                     zurückschrecken. Natürlich; ihr<note xml:lang="mul" n="1" place="unspecified" />
+                     zurückschrecken. Natürlich; ihr<note xml:lang="mul" n="1" place="unspecified"/>
                      erscheinen die Vortheile grösser als die Gefahren, während man dort sich lieber
                      den Kriegsgefahren aussetzen will, um einem gewissen Verlust zu entgehen. Aber
                      eben wenn es sich ergibt, dass beide Grundsätze zur Unzeit in Anwendung
@@ -802,14 +793,13 @@
                   <p>Wisset aber, dass es heute, wenn wir klug sind, nicht über Sonderinteressen zu
                      verhandeln gilt, sondern darüber, ob noch ein Mittel ist, ganz Sicilien vor den
                      augenscheinlichen Eroberungsgelüsten Athens zu retten. Ueberzeugender in der
-                     That, als ich es vermöchte, mahnt Athen zu einer Beilegung unserer Händel. <pb
-                        n="18" /> Denn was will der mächtigste Staat Griechenlands mit dieser
+                     That, als ich es vermöchte, mahnt Athen zu einer Beilegung unserer Händel. <pb n="18"/> Denn was will der mächtigste Staat Griechenlands mit dieser
                      kleinen Flotte an unsern Küsten, als auf unsere Fehler lauem und unter dem
                      unverfänglichen Namen einer Bundeshülfe durch den Sehern der Grossmuth über
                      seine wahren Absichten täuschen? Lasset es nur zum Kriege unter uns kommen und
                      rufet sie dann herbei, sie, die nicht auf Einladung warten, sondern ungerufen
                      erscheinen, vergeudet eure Mittel im verderblichen Bruderkrieg und arbeitet so
-                     ihrer Herrschsucht in die Hände<note xml:lang="mul" n="2" place="unspecified" />
+                     ihrer Herrschsucht in die Hände<note xml:lang="mul" n="2" place="unspecified"/>
                      , gewiss sie werden dann, wenn wir uns hinlänglich erschöpft haben, mit einer
                      ganz andern Flotte kommen und das ganze Land sich zu unterwerfen suchen. </p>
                </div>
@@ -832,11 +822,10 @@
                      sie so zuvorkommend sich beeilten, aus der Vertragspflicht Ernst zu machen? Den
                      Athenern indes sind ihre weitblickenden Eroberangsgedanken gar nicht zu
                      verargen, und ich tadle überhaupt nicht die Herrschsucht, sondern einzig die
-                     bereitwillige Unterwürfigkeit<note xml:lang="mul" n="3" place="unspecified" />
-                     . Ist es <pb n="19" /> dem Menschen nun einmal angeboren, seine Ueberlegenheit
+                     bereitwillige Unterwürfigkeit<note xml:lang="mul" n="3" place="unspecified"/>
+                     . Ist es <pb n="19"/> dem Menschen nun einmal angeboren, seine Ueberlegenheit
                      geltend zu machen, warum nicht auch die Nothwehr gegen einen Angreifer? Was
-                     hälfe uns aber die Einsicht in unsre Lage<note xml:lang="mul" n="4"
-                        place="unspecified" /> , wenn wir nicht das Richtige vorkehrten, wenn wir
+                     hälfe uns aber die Einsicht in unsre Lage<note xml:lang="mul" n="4" place="unspecified"/> , wenn wir nicht das Richtige vorkehrten, wenn wir
                      nicht mit dem Vorsatz gekommen wären, alle muthig zusammenzutreten wider die
                      gemeinsame Gefahr. Und wie leicht wäre sie abzuwenden, wenn wir unter einander
                      Frieden machten; denn wenn sie niemand zu Hülfe ruft, können die Athener von
@@ -867,7 +856,7 @@
                      der Mächtige an seinem Selbstgefühl auch eine Bürgschaft hätte, und nicht die
                      Ereignisse grösstentheils unter dem Gebot des Zufalls stünden, der, so blind er
                      auch ist, doch dadurch wieder höchst heilsam sich erweist, dass die über alle
-                     verhängte Furcht der Fehdelust einen Damm entgegenstellt. <pb n="20" />
+                     verhängte Furcht der Fehdelust einen Damm entgegenstellt. <pb n="20"/>
                   </p>
                </div>
             </div>
@@ -883,8 +872,7 @@
                      mir, dann werden unsere Städte insgesamt der Freiheit gemessen, die uns in den
                      Stand setzt, als ein unabhängiges Volk Wohlthaten oder Anfeindungen gleich sehr
                      nach Gebühr zu erwidern. Hören wir aber nicht, sondern unterwerfen uns Fremden,
-                     dann ist es zu spät mit Befreiungsversuchen<note xml:lang="mul" n="5"
-                        place="unspecified" /> , dann ist, selbst wenn uns alles nach Wunsch geht,
+                     dann ist es zu spät mit Befreiungsversuchen<note xml:lang="mul" n="5" place="unspecified"/> , dann ist, selbst wenn uns alles nach Wunsch geht,
                      Verbrüderung mit dem Erbfeind und ein Zustand unnatürlicher Feindschaft
                      unwiderruflich unser Loos. </p>
                </div>
@@ -902,7 +890,7 @@
                      keine Schande, dem eigenen Volksgenossen sich zu fügen, nicht blos der Dorier
                      dem Dorier, oder der Chalcidenser seinem Stammverwandten, sondern wir alle als
                      Nachbarn, als Bewohner der einen, von der Natur umgrenzten Heimat, als Träger
-                     des gemeinsamen Namens Sikelioten. <pb n="21" /> Unsere Kriege, wenn es sein
+                     des gemeinsamen Namens Sikelioten. <pb n="21"/> Unsere Kriege, wenn es sein
                      soll, müssen wir fortan für uns allein führen, oder auch sie beilegen, wie es
                      uns gemeinsam recht dünkt, wider den Fremdling aber, wenn er kommt, in
                      vernünftiger Eintracht zusammenhalten, so gewiss die Niederlage der Einzelnen
@@ -910,15 +898,14 @@
                      mehr ins Land gerufen werden. Bei diesem Verfahren werden wir für jetzt
                      Sicilien der frohen Aussicht nicht berauben, der Athener und des Bürgerkrieges
                      mit einemmale los zu werden, und in Zukunft in unabhängiger Freiheit und vom
-                     Ausland weniger behelligt darin wohnen. <pb n="22" />
+                     Ausland weniger behelligt darin wohnen. <pb n="22"/>
                   </p>
                </div>
             </div>
          </div>
          <div n="4" type="book">
             <div n="85" type="chapter">
-               <head>4. Die Rede des Brasidas in Akanth: B. 4, K. 85—87. 85.<note xml:lang="mul"
-                     place="unspecified">Mit einem kleinen Heere von 1700 Hopliten, darunter 700
+               <head>4. Die Rede des Brasidas in Akanth: B. 4, K. 85—87. 85.<note xml:lang="mul" place="unspecified">Mit einem kleinen Heere von 1700 Hopliten, darunter 700
                   Lacedämoniern, im ganzen etwa 4000 Mann, war Brasidas gegen Ende des Sommers 424
                   nach einem ebenso kühn als geschickt ausgeführten Zuge durch das mit Athen
                   verbündete Thessalien in den macedonischen Landschaften erschienen. Diese
@@ -968,14 +955,12 @@
                      allein, dass ihr zu dem Feinde stehet, es müsste auch alle folgenden Städte
                      zurückhaltend und besorgt machen, wenn gleich anfangs eine so ansehnliche und
                      einflussreiche Stadt wie die eurige mich abwiese. Der Glaube an meine Sendung
-                     wäre dahin<note xml:lang="mul" n="1" place="unspecified" /> , man argwohnte nur
-                     Böses in der Freiheit, die ich bringe<note xml:lang="mul" n="2"
-                        place="unspecified" /> , oder sähe in meinem Heere einen zu schwachen und
-                     nichtssagenden Schutz gegen <pb n="23" /> Athens drohende Rache. Zwar es war
+                     wäre dahin<note xml:lang="mul" n="1" place="unspecified"/> , man argwohnte nur
+                     Böses in der Freiheit, die ich bringe<note xml:lang="mul" n="2" place="unspecified"/> , oder sähe in meinem Heere einen zu schwachen und
+                     nichtssagenden Schutz gegen <pb n="23"/> Athens drohende Rache. Zwar es war
                      dasselbe Heer, mit dem ich vor Nisäa zog, wo die Athener trotz ihrer Uebermacht
                      keinen Angriff wagten, und ein so zahlreiches Heer wie das nisäische würden sie
-                     ohnehin in keinem Fall gegen euch über's Meer schicken.<note xml:lang="mul"
-                        n="3" place="unspecified" />
+                     ohnehin in keinem Fall gegen euch über's Meer schicken.<note xml:lang="mul" n="3" place="unspecified"/>
                   </p>
                </div>
             </div>
@@ -984,7 +969,7 @@
                   <p>Und was mich betrifft, so komme ich nicht zum Verderben der Griechen, sondern
                      zu ihrer Befreiung. Mit einem feierlichen Eide habe ich von den Ephoren mir die
                      vollste Unabhängigkeit für alle durch mich gewonnenen Bundesgenossen verbürgen
-                     lassen; und dann sind wir<note xml:lang="mul" n="4" place="unspecified" />
+                     lassen; und dann sind wir<note xml:lang="mul" n="4" place="unspecified"/>
                      nicht etwa darauf ausgegangen, euch mit List oder Gewalt zu Bundesgenossen zu
                      bekommen, sondern gedenken vielmehr euch gegen eure Tyrannen, die Athener,
                      beizustehen. Darum darf ich wohl auch jezt Zutrauen zu meinen so feierlich
@@ -1001,7 +986,7 @@
                      Der Mächtige entehrt sich weniger durch offene Gewaltthat als durch
                      heuchlerische Täuschung; in der Ueberlegenheit, die eine Gabe des Glückes ist,
                      liegt doch noch eine Beschönigung für den Angriff, nicht aber in der Tücke und
-                     Hinterlist. <pb n="24" />
+                     Hinterlist. <pb n="24"/>
                   </p>
                </div>
             </div>
@@ -1022,8 +1007,7 @@
                      von eurer Feindschaft den Schaden haben und eure Geldmittel den Athem
                      zufliessen lassen? Oder sollt ihr die Befreiung Griechenlands aus seiner
                      Knechtschaft hintertreiben dürfen? Denn freilich ohne den Rechtsgrund eines
-                     (grossen) vaterländischen Interesses dürften wir nicht so verfahren<note
-                        xml:lang="mul" n="5" place="unspecified" />, noch würde sich Sparta berufen
+                     (grossen) vaterländischen Interesses dürften wir nicht so verfahren<note xml:lang="mul" n="5" place="unspecified"/>, noch würde sich Sparta berufen
                      fühlen, ein widerstrebendes Volk zu befreien. Ja wenn wir nach Herrschaft
                      trachteten; allein wir streben vielmehr, dem Herrscherwesen ein Ende zu machen,
                      so dass es Unrecht an der Mehrzahl wäre, wenn wir im Bewustsein, der Welt die
