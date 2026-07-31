@@ -100,7 +100,7 @@
    </teiHeader>
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg005.perseus-eng3">
-         <milestone unit="episode"/>
+         <milestone unit="episode" n="Prologue (1-39)"/>
          <stage rend="italic">Upon the roof of the palace of Agamemnon at <placeName key="tgn,7010720">Argos</placeName>
          </stage>
          <milestone unit="card" n="1"/>
