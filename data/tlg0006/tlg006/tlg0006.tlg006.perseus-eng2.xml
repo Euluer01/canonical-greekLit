@@ -104,7 +104,7 @@
             <p>Messenger</p>
             <p>Thetis</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-116)">
             <sp>
                <speaker>Andromache</speaker>
                <l resp="perseus" rend="indent" n="1">O city of Thebes,<note>i.e. Thebes in Cilicia.</note>
@@ -298,7 +298,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="117" />
-         <div type="choral">
+         <div type="choral" n="Parados (117-146)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -348,7 +348,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="147" />
-         <div type="episode">
+         <div type="episode" n="First Episode (147-273)">
             <sp>
                <speaker>Hermione</speaker>
                <l resp="perseus" rend="indent" n="147">With a crown of golden workmanship upon my
@@ -594,7 +594,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="274" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (274-308)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -661,7 +661,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="309" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (309-463)">
             <sp>
                <speaker>Menelaus</speaker>
                <l resp="perseus" rend="indent" n="309">Behold I bring thy son with me, whom thou
@@ -885,7 +885,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="464" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (464-493)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -943,7 +943,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="494" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (494-765)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1362,7 +1362,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="766" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (766-801)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1407,7 +1407,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="802" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (802-1008)">
             <sp>
                <speaker>Nurse</speaker>
                <l resp="perseus" rend="indent" n="802">Alas! good friends, what a succession of
@@ -1792,7 +1792,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1009" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (1009-1046)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1849,7 +1849,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1047" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1047-1288)">
             <sp>
                <speaker>Peleus</speaker>
                <l resp="perseus" rend="indent" n="1047">Ye dames of Phthia, answer my questions. I
@@ -2050,9 +2050,9 @@
                   bier.</stage>
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" unit="card" n="1166" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2194,9 +2194,9 @@
                      ruined king.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" unit="card" n="1226" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
