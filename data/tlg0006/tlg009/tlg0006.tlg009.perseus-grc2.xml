@@ -273,7 +273,7 @@
                <l n="106">πέποιθεν αἰεί· τὸ δʼ ἀπορεῖν ἀνδρὸς κακοῦ. </l>
             </sp>
          </div>
-         <div type="choral" n="Parados (107-139)">
+         <div type="choral" n="Parados (107-137)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -325,18 +325,15 @@
                   <l n="136">οἵους οἵους ὀλέσα- </l>
                   <l n="137">σα τούσδʼ ἀποστερήσῃ. </l>
                </sp>
-            <!-- </div> -->
-         <!-- </div> -->
+            </div>
+         </div>
          <milestone resp="perseus" n="138" unit="card" />
-         <!-- <div type="episode" n="First Episode (138-347)"> -->
+         <div type="episode" n="First Episode (138-347)">
             <sp>
                <speaker>Χορός</speaker>
                <l rend="indent" n="138">—ἀλλʼ εἰσορῶ γὰρ τῆσδε κοίρανον χθονὸς </l>
                <l n="139">Λύκον περῶντα τῶνδε δωμάτων πέλας. </l>
             </sp>
-            </div>
-         </div>
-         <div type="episode" n="First Episode (140-347)">
             <sp>
                <speaker>Λύκος</speaker>
                <l rend="indent" n="140">τὸν Ἡράκλειον πατέρα καὶ ξυνάορον, </l>
@@ -586,7 +583,7 @@
                <l n="347">ἀμαθής τις εἶ θεός, ἢ δίκαιος οὐκ ἔφυς. </l>
             </sp>
          </div>
-         <div type="choral" n="First Stasimon (348-450)">
+         <div type="choral" n="First Stasimon (348-441)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -760,9 +757,9 @@
                   <l n="441">τᾶς εὐδαίμονος ἥβας. </l>
                </sp>
             </div>
-         <!-- </div> -->
+         </div>
          <milestone resp="perseus" n="442" unit="card" />
-         <!-- <div type="episode" n="Second Episode (442-636)"> -->
+         <div type="episode" n="Second Episode (442-636)">
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -775,8 +772,8 @@
                   <l n="448">δακρύων ὡς οὐ δύναμαι κατέχειν </l>
                   <l n="450">γραίας ὄσσων ἔτι πηγάς. </l>
                </sp>
-         </div>
-         <div type="episode" n="Second Episode (442-636)">
+            </div>
+            <div type="dialogue">
                <sp>
                   <speaker>Μεγάρα</speaker>
                   <l rend="indent" n="451">εἶἑν· τίς ἱερεύς, τίς σφαγεὺς τῶν δυσπότμων </l>
