@@ -1462,7 +1462,8 @@
                <l n="607">τὰ δαιμόνων δὲ τῆς τύχης ἐλάσσονα. </l>
             </sp>
             <milestone unit="card" n="608" resp="perseus" />
-            <div type="lyric" n="Third Stasimon (608-623)">
+         </div>
+         <div type="choral" n="Third Stasimon (608-623)">
                <sp>
                   <speaker>Χορός</speaker>
                   <l n="608" rend="center">λήψεται τὸν τράχηλον </l>
@@ -1483,8 +1484,8 @@
                   <l n="622a" rend="center">πος λιπὼν ἐρημίαν· </l>
                   <l n="623" rend="center">ἆρ’ ἐς τοσόνδ’ ἀφίξομαι;</l>
                </sp>
-            </div>
-            <div type="episode" n="Fourth Episode (624-655)">
+         </div>
+         <div type="episode" n="Fourth Episode (624-655)">
                <milestone unit="card" n="624" resp="perseus" />
                <sp>
                   <speaker>Ὀδυσσεύς</speaker>
@@ -1559,10 +1560,10 @@
                   <l rend="indent" n="654">δράσω τάδ’. ἐν τῷ Καρὶ κινδυνεύσομεν. </l>
                   <l n="655">κελευσμάτων δ’ ἕκατι τυφέσθω Κύκλωψ. </l>
                </sp>
-            </div>
+         </div>
             <pb facs="euripidisfabulae01euriuoft_0052" />
             <milestone unit="card" n="656" resp="perseus" />
-            <div type="lyric" n="Fourth Stasimon (656-662)">
+         <div type="choral" n="Fourth Stasimon (656-662)">
                <sp>
                   <speaker>Χορός</speaker>
                   <l n="656" rend="center">ἰὼ ἰώ· γενναιότατ’ ὠ- </l>
@@ -1574,8 +1575,8 @@
                   <l n="662" rend="center">δράσῃ τι μάταιον.</l>
                </sp>
                <milestone unit="card" n="663" resp="perseus" />
-            </div>
-            <div type="epsiode" n="Fifth Episode (663-709)">
+         </div>
+         <div type="episode" n="Fifth Episode (663-709)">
                <sp>
                   <speaker>Κύκλωψ</speaker>
                   <l rend="indent" n="663">ὤμοι, κατηνθρακώμεθ’ ὀφθαλμοῦ σέλας. </l>
@@ -1761,8 +1762,8 @@
                   <l rend="indent" n="708">ἡμεῖς δὲ συνναῦταί γε τοῦδ’ Ὀδυσσέως </l>
                   <l n="709">ὄντες τὸ λοιπὸν Βακχίῳ δουλεύσομεν. </l>
                </sp>
-            </div>
          </div>
+         <!-- </div> -->
       </body>
    </text>
 </TEI>
