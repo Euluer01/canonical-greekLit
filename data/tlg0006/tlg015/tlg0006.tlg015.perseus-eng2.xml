@@ -65,9 +65,9 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
                <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
@@ -133,7 +133,7 @@
             <p>Second Messenger</p>
             <p>Oedipus</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-201)">
             <stage rend="italic">Before the royal palace of <placeName key="perseus,Thebes">Thebes</placeName>
                . </stage>
             <sp>
@@ -444,7 +444,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="202" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (202-260)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -517,7 +517,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="261" />
-         <div type="episode">
+         <div type="episode" n="First Episode (261-637)">
             <sp>
                <speaker>Polyneices</speaker>
                <l rend="indent" resp="perseus" n="261">The doorkeeper’s bolts admitted me readily
@@ -1299,7 +1299,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="638" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (638-689)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1351,7 +1351,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="690" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (690-783)">
             <sp>
                <speaker>Eteocles</speaker>
                <stage rend="italic">to an attendant</stage>
@@ -1606,7 +1606,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="784" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (784-833)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1670,7 +1670,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="834" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (834-1018)">
             <sp>
                <speaker>Teiresias</speaker>
                <l rend="indent" resp="perseus" n="834">
@@ -2041,7 +2041,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="1019" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1019-1066)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2088,7 +2088,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1067" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1067-1283)">
             <sp>
                <speaker>Messenger</speaker>
                <l rend="indent" resp="perseus" n="1067">Ho there! Who is at the palace-gates? Open
@@ -2452,7 +2452,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="1284" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (1284-1306)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2483,7 +2483,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1307" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1307-1766)">
             <sp>
                <speaker>Chorus Leader</speaker>
                <l rend="indent" resp="perseus" n="1307">But hark! I see Creon on his way here to the

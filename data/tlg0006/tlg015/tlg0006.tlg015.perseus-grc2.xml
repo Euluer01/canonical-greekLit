@@ -61,9 +61,9 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
                <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
@@ -132,7 +132,7 @@
             <p>Ἕτερος Ἄγγελος</p>
             <p>Οἰδίπους</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-201)">
             <sp>
                <speaker>Ἰοκάστη</speaker>
                <l rend="indent" n="1">ὦ τὴν ἐν ἄστροις οὐρανοῦ τέμνων ὁδὸν</l>
@@ -456,7 +456,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="202" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (202-260)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -548,7 +548,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="261" />
-         <div type="episode">
+         <div type="episode" n="First Episode (261-637)">
             <sp>
                <speaker>Πολυνείκης</speaker>
                <l rend="indent" n="261">τὰ μὲν πυλωρῶν κλῇθρά μʼ εἰσεδέξατο</l>
@@ -1321,7 +1321,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="638" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (638-689)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1395,7 +1395,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="690" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (690-783)">
             <sp>
                <speaker>Ἐτεοκλῆς</speaker>
                <l rend="indent" n="690">χώρει σὺ καὶ κόμιζε τὸν Μενοικέως</l>
@@ -1635,7 +1635,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="784" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (784-833)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1714,7 +1714,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="834" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (834-1018)">
             <sp>
                <speaker>Τειρεσίας</speaker>
                <l rend="indent" n="834">ἡγοῦ πάροιθε, θύγατερ· ὡς τυφλῷ ποδὶ</l>
@@ -2088,7 +2088,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="1019" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1019-1066)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2156,7 +2156,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1067" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1067-1283)">
             <sp>
                <speaker>Ἄγγελος</speaker>
                <l rend="indent" n="1067">ὠή, τίς ἐν πύλαισι δωμάτων κυρεῖ;</l>
@@ -2514,7 +2514,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="1284" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (1284-1306)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2550,7 +2550,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1307" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1307-1766)">
             <!-- Trochaic tetrameters, hardly worth marking -->
             <sp>
                <speaker>Χορός</speaker>
