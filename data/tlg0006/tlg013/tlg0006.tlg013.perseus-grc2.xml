@@ -649,7 +649,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="392" />
-         <div type="choral" n="First Stasimon (392-466)">
+         <div type="choral" n="First Stasimon (392-455)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -734,30 +734,30 @@
                   <l n="454">ᾳ, τερπνῶν ὕπνων ἀπόλαυ-</l>
                   <l n="455">σιν, κοινὰν χάριν ὄλβου.</l>
                </sp>
-            <!-- </div> -->
-         <!-- </div> -->
-         <milestone resp="perseus" unit="card" n="456" />
-         <!-- <div type="episode"> -->
-            <!-- <div type="anapests"> -->
-               <sp>
-                  <speaker>Χορός</speaker>
-                  <l rend="indent" n="456">ἀλλʼ οἵδε χέρας δεσμοῖς δίδυμοι</l>
-                  <l n="457">συνερεισθέντες χωροῦσι, νέον</l>
-                  <l n="458">πρόσφαγμα θεᾶς· σιγᾶτε, φίλαι.</l>
-                  <l n="459">τὰ γὰρ Ἑλλήνων ἀκροθίνια δὴ</l>
-                  <l n="460">ναοῖσι πέλας τάδε βαίνει·</l>
-                  <l n="461">οὐδʼ ἀγγελίας ψευδεῖς ἔλακεν</l>
-                  <l n="462">βουφορβὸς ἀνήρ.</l>
-                  <l n="463">ὦ πότνιʼ, εἴ σοι τάδʼ ἀρεσκόντως</l>
-                  <l n="464">πόλις ἥδε τελεῖ, δέξαι θυσίας,</l>
-                  <l n="465">ἃς ὁ παρʼ ἡμῖν νόμος οὐχ ὁσίας</l>
-                  <l n="466">
-                     <del>Ἕλλησι διδοὺς</del> ἀναφαίνει.</l>
-               </sp>
             </div>
          </div>
-         <div type="episode" n="Second Episode (467-1088)">
-            <div type="scene" n="First Scene (467-642)">
+         <milestone resp="perseus" unit="card" n="456" />
+         <div type="episode" n="First Scene (456-1088)">
+            <div type="scene" n="First Scene (456-642)">
+               <div type="anapests">
+                  <sp>
+                     <speaker>Χορός</speaker>
+                     <l rend="indent" n="456">ἀλλʼ οἵδε χέρας δεσμοῖς δίδυμοι</l>
+                     <l n="457">συνερεισθέντες χωροῦσι, νέον</l>
+                     <l n="458">πρόσφαγμα θεᾶς· σιγᾶτε, φίλαι.</l>
+                     <l n="459">τὰ γὰρ Ἑλλήνων ἀκροθίνια δὴ</l>
+                     <l n="460">ναοῖσι πέλας τάδε βαίνει·</l>
+                     <l n="461">οὐδʼ ἀγγελίας ψευδεῖς ἔλακεν</l>
+                     <l n="462">βουφορβὸς ἀνήρ.</l>
+                     <l n="463">ὦ πότνιʼ, εἴ σοι τάδʼ ἀρεσκόντως</l>
+                     <l n="464">πόλις ἥδε τελεῖ, δέξαι θυσίας,</l>
+                     <l n="465">ἃς ὁ παρʼ ἡμῖν νόμος οὐχ ὁσίας</l>
+                     <l n="466">
+                        <del>Ἕλλησι διδοὺς</del> ἀναφαίνει.</l>
+                  </sp>
+               </div>
+         <!-- </div>
+         <div type="episode" n="Second Episode (467-1088)"> -->       
                <div type="anapests">
                   <milestone resp="perseus" unit="card" n="467" />
                   <sp>
