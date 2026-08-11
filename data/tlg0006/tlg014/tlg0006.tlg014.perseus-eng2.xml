@@ -65,9 +65,9 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
                <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
@@ -129,7 +129,7 @@
             <p>Servant</p>
             <p>Dioskouroi</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-163)">
             <milestone resp="perseus" unit="card" n="1" />
             <stage rend="italic">Scene.— Tomb of Proteus in the island of Pharos.</stage>
             <sp>
@@ -522,7 +522,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="164" />
-         <div type="choral">
+         <div type="choral" n="Parados (164-252)">
             <div type="hexameter">
                <stage rend="italic">Exit Teucer.</stage>
                <sp>
@@ -625,7 +625,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="253" />
-         <div type="episode">
+         <div type="episode" n="First Episode (253-1106)">
             <sp>
                <speaker>Chorus Leader</speaker>
                <l rend="indent" resp="perseus" n="253">You have sorrows, I know; but it is best to
@@ -2415,7 +2415,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1107" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (1107-1164)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2485,7 +2485,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1165" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (1165-1300)">
             <sp>
                <speaker>Theoklymenos</speaker>
                <l rend="indent" resp="perseus" n="1165">Greetings, tomb of my father! For I buried
@@ -2949,7 +2949,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="1301" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (1301-1368)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -3020,7 +3020,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1369" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (1369-1450)">
             <sp>
                <speaker>Helen</speaker>
                <l rend="indent" resp="perseus" n="1369">My friends, all goes well for us inside;</l>
@@ -3175,7 +3175,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="1451" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1451-1511)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -3243,7 +3243,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1512" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1512-1692)">
             <sp>
                <speaker>Second Messenger</speaker>
                <l rend="indent" resp="perseus" n="1512">
