@@ -129,7 +129,7 @@
             <p>Charioteer</p>
             <p>Muse</p>
          </note>
-         <div type="choral">
+         <div type="choral" n="Parados (1-51)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -221,7 +221,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="52" />
-         <div type="episode">
+         <div type="episode" n="First Episode (52-223)">
             <sp>
                <speaker>Hector</speaker>
                <l rend="indent" resp="perseus" n="52">In good season you come, although your tidings
@@ -582,7 +582,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="224" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (224-263)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -638,7 +638,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="264" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (264-341)">
             <sp>
                <speaker>Messenger</speaker>
                <l rend="indent" resp="perseus" n="264">Lord, in days to come may it be mine </l>
@@ -795,7 +795,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="342" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (342-379)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -846,7 +846,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="379" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (380-526)">
             <sp>
                <speaker>Chorus</speaker>
                <l rend="indent" resp="perseus" n="379">Hail, all hail! O mighty prince! </l>
@@ -1065,7 +1065,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="527" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (527-564)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1103,7 +1103,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="565" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (565-691)">
             <stage rend="italic">Enter Diomedes and Odysseus cautiously with drawn swords.</stage>
             <sp>
                <speaker>Odysseus</speaker>
@@ -1405,7 +1405,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="692" />
-         <div type="choral">
+         <div type="choral" n="Epiparados (692-727)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1457,7 +1457,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="728" />
-         <div type="episode">
+         <div type="episode" n="Exodus (728-996)">
             <sp>
                <speaker>Charioteer</speaker>
                <l rend="indent" resp="perseus" n="728">Oh, oh! Cruel stroke of fate. Woe, woe!</l>
