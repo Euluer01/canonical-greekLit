@@ -65,9 +65,9 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
                <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
@@ -127,7 +127,7 @@
             <p>Achilles</p>
             <p>Second Messenger</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-163)">
             <sp>
                <speaker>Agamemnon</speaker>
                <stage rend="italic">Scene. — The sea-coast at Aulis.</stage>
@@ -419,7 +419,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="164" />
-         <div type="choral">
+         <div type="choral" n="Parados (164-302)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -592,7 +592,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="303" />
-         <div type="episode">
+         <div type="episode" n="First Episode (303-542)">
             <sp>
                <speaker>Old man</speaker>
                <stage rend="italic">as Menelaus wrests a letter from him.</stage>
@@ -1174,7 +1174,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="543" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (543-589)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1236,7 +1236,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="590" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (590-750)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus of Argive men</speaker>
@@ -1803,7 +1803,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="751" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (751-800)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1879,7 +1879,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="801" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (801-1035)">
             <sp>
                <speaker>Achilles</speaker>
                <l rend="indent" resp="perseus" n="801">Where is <placeName key="tgn,7002733">Achaea</placeName>’s
@@ -2488,7 +2488,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1036" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1036-1097)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2564,7 +2564,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1098" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1098-1629)">
             <sp>
                <speaker>Clytemnestra</speaker>
                <stage rend="italic">reappearing from the tent.</stage>
@@ -2870,9 +2870,9 @@
                      rend="italic">Exit Agamemnon.</stage>
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" unit="card" n="1276" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div type="lyric">
                <sp>
                   <speaker>Clytemnestra</speaker>
@@ -2937,14 +2937,15 @@
                      causing the Danaids!</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" unit="card" n="1336" />
-         <div type="episode">
-            <sp>
-               <speaker>Chorus Leader</speaker>
-               <l rend="indent" resp="perseus" n="1336">I pity you for your cruel fate—a fate I
-                  would you never had met!</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Chorus Leader</speaker>
+                  <l rend="indent" resp="perseus" n="1336">I pity you for your cruel fate—a fate I
+                     would you never had met!</l>
+               </sp>
+            </div>
             <milestone resp="perseus" unit="card" n="1338" />
             <div type="trochees">
                <sp>
