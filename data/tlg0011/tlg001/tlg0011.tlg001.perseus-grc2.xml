@@ -67,9 +67,9 @@
             </refsDecl>-->
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
             </citeStructure>
          </refsDecl>
@@ -132,7 +132,7 @@
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg001.perseus-grc2">
          <milestone unit="card" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-93)">
             <sp>
                <speaker>Δηιάνειρα</speaker>
                <l n="1">λόγος μέν ἐστʼ ἀρχαῖος ἀνθρώπων φανείς,</l>
@@ -284,7 +284,7 @@
             </sp>
          </div>
          <milestone unit="card" n="94" />
-         <div type="choral">
+         <div type="choral" n="Parados (94-140)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -350,7 +350,7 @@
             </div>
          </div>
          <milestone unit="card" n="141" />
-         <div type="episode">
+         <div type="episode" n="First Episode (141-204)">
             <sp>
                <speaker>Δηιάνειρα</speaker>
                <l n="141">πεπυσμένη μέν, ὡς ἀπεικάσαι, πάρει</l>
@@ -448,7 +448,7 @@
             </sp>
          </div>
          <milestone unit="card" n="205" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (205-496)">
             <sp>
                <speaker>Χορός</speaker>
                <l n="205">ἀνολολυξάτω δόμοις ἐφεστίοις</l>
@@ -976,7 +976,7 @@
             </sp>
          </div>
          <milestone unit="card" n="497" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (497-530)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1025,7 +1025,7 @@
             </div>
          </div>
          <milestone unit="card" n="531" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (531-632)">
             <sp>
                <speaker>Δηιάνειρα</speaker>
                <l n="531">ἦμος, φίλαι, κατʼ οἶκον ὁ ξένος θροεῖ</l>
@@ -1172,7 +1172,7 @@
             </sp>
          </div>
          <milestone unit="card" n="633" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (633-662)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1226,7 +1226,7 @@
             </div>
          </div>
          <milestone unit="card" n="663" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (663-820)">
             <sp>
                <speaker>Δηιάνειρα</speaker>
                <l n="663">γυναῖκες, ὡς δέδοικα μὴ περαιτέρω</l>
@@ -1468,7 +1468,7 @@
             </sp>
          </div>
          <milestone unit="card" n="821" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (821-861)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1529,7 +1529,7 @@
             </div>
          </div>
          <milestone unit="card" n="863" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (863-946)">
             <sp>
                <speaker>Ἡμιχόριον 1</speaker>
                <l n="863">πότερον ἐγὼ μάταιος, ἢ κλύω τινὸς</l>
@@ -1700,7 +1700,7 @@
             </div>
          </div>
          <milestone unit="card" n="947" />
-         <div type="choral">
+         <div type="choral" n="Fifth Stasimon (947-972)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1750,7 +1750,7 @@
             </div>
          </div>
          <milestone unit="card" n="972" />
-         <div type="episode">
+         <div type="episode" n="Fifth Episode (972-1003)">
             <div type="anapests">
                <sp>
                   <speaker>Ὕλλος</speaker>
@@ -1815,7 +1815,7 @@
             </div>
          </div>
          <milestone unit="card" n="1004" />
-         <div type="choral">
+         <div type="choral" n="Sixth Stasimon (1004-1042)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Ἡρακλῆς</speaker>
@@ -1888,7 +1888,7 @@
             </div>
          </div>
          <milestone unit="card" n="1044" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1044-1278)">
             <sp>
                <speaker>Χορός</speaker>
                <l n="1044">κλύουσʼ ἔφριξα τάσδε συμφοράς, φίλαι,</l>
