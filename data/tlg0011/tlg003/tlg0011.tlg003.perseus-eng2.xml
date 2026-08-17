@@ -68,7 +68,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -121,7 +126,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg003.perseus-eng2">
          <milestone unit="card" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-133)">
             <sp>
                <speaker>Athena</speaker>
                <l n="1">Always, son of <placeName key="perseus,Laertes">Laertes</placeName>, have I
@@ -418,6 +423,8 @@
                   men of sense and abhor the evil.</l>
                <stage rend="italic">Exit Odysseus and Athena.</stage>
             </sp>
+         </div>
+         <div type="choral" n="Parados (134-200)">
             <milestone unit="card" n="134" />
             <div type="anapests">
                <stage rend="italic">Enter the Chorus of Salaminian Sailors, followers of Ajax.</stage>
@@ -454,9 +461,9 @@
                      in silence.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="172" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -501,7 +508,7 @@
             </div>
          </div>
          <milestone unit="card" n="201" />
-         <div type="episode">
+         <div type="episode" n="First Episode (201-595)">
             <div type="anapests">
                <stage rend="italic">Enter Tecmessa.</stage>
                <sp>
@@ -524,8 +531,8 @@
                      suggest an explanation.</l>
                </sp>
             </div>
-         </div>
-         <div type="choral">
+         <!-- </div> -->
+         <!-- <div type="choral"> -->
             <div type="anapests">
                <sp>
                   <speaker>Tecmessa</speaker>
@@ -590,153 +597,153 @@
                      induces sharp pains.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="263" />
-         <div type="episode">
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="263">But if he has stopped his madness, I have good hope that all may yet be
-                  well, since the trouble is of less account once it has passed.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="265">And which, if the choice were given you, would you choose—to distress your
-                  friends, and have joy yourself, or to share the grief of friends who grieve?</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="268">The twofold sorrow, lady, is certainly the greater evil.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="269">Then we are ruined now, although the plague is past.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="270">What do you mean? I do not understand what you say.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="271">That man, while afflicted, found joy for himself in the dire fantasies
-                  that held him, though his presence distressed us who were sane. But now, since he
-                  has had pause and rest from the plague,</l>
-               <l n="275">he has been utterly subjected to lowly anguish, and we similarly grieve no
-                  less than before. Surely, then, these are two sorrows, instead of one?</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="278">Indeed, I agree, and so I fear that a blow sent by a god has hit him. How
-                  could it be otherwise, if his spirit is no lighter</l>
-               <l n="280">than when he was plagued, now that he is released?</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="281">This, you must know, is how matters stand.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="282">In what way did the plague first swoop down on him? Tell us who share your
-                  pain how it happened.</l>
-            </sp>
-            <milestone unit="card" n="284" />
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="284">You will hear all that took place, since you are involved.</l>
-               <l n="285">In the dead of night when the evening lamps were no longer aflame, he
-                  seized a two-edged sword and wanted to leave on an aimless foray. Then I
-                  admonished him and said, <q type="spoken">What are you doing, Ajax? Why do you set
-                  out unsummoned on this expedition,</q>
-               </l>
-               <l n="290">
-                  <q type="spoken" rend="merge">neither called by messenger, nor warned by trumpet?
-                  In fact the whole army is sleeping now.</q> But he answered me curtly with that
-                  trite jingle: <q type="spoken">Woman, silence graces woman.</q> And I, taking his
-                  meaning, desisted, but he rushed out alone. <milestone unit="para" resp="ed" />
-               </l>
-               <l n="295">What happened out there, I cannot tell. But he came in with his captives
-                  hobbled together—bulls, herding dogs, and his fleecy quarry. Some he beheaded; of
-                  some he cut the twisted throat or broke the spine; others</l>
-               <l n="300">he abused in their bonds as though they were men, though falling only upon
-                  cattle. At last he darted out through the door, and dragged up words to speak to
-                  some shadow—now against the Atreidae, now about Odysseus—with many a mocking boast
-                  of all the abuse that in vengeance he had fully repaid them during his raid.</l>
-               <l n="305">After that he rushed back again into the house, and somehow by slow,
-                  painful steps he regained his reason. And as he scanned the room full of his
-                  disastrous madness, he struck his head and howled; he fell down, a wreck amid the
-                  wrecked corpses of the slaughtered sheep, and there he sat</l>
-               <l n="310">with clenched nails tightly clutching his hair. At first, and for a long
-                  while, he sat without a sound. But then he threatened me with those dreadful
-                  threats, if I did not declare all that had happened, and he demanded to know what
-                  on earth was the business he found himself in.</l>
-               <l n="315">And in my fear, friends, I told him all that had been done, as far as I
-                  knew it for certain. But he immediately groaned mournful groans, such as I had
-                  never heard from him before. For he had always taught that such wailing</l>
-               <l n="320">was for cowardly and low-hearted men. He used to grieve quietly without
-                  the sound of loud weeping, but instead moaned low like a bull. <milestone
-                     unit="para" resp="ed" />And now, prostrate in such miserable fortune, tasting
-                  no food, no drink,</l>
-               <l n="325">the man sits idly where he has fallen in the middle of the iron-slain
-                  cattle. And plainly he plans to do something terrible. Somehow his words and his
-                  laments say as much. Ah, my friends—for it was my errand to ask you this—come in
-                  and help him, if in any way you can.</l>
-               <l n="330">Men of his kind can be won over by the words of friends.</l>
-            </sp>
-            <milestone unit="card" n="331" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="331">Tecmessa, daughter of Teleutas, terrible is your news that our lord has
-                  been possessed by his sorrows.</l>
-            </sp>
-            <sp>
-               <stage rend="italic">Within.</stage>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <stage rend="italic">wailing.</stage>
-               <l n="333">Oh! Ah, me! Ah, me!</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="334">Soon there will be more sorrow, it seems. Did you not hear</l>
-               <l n="335">Ajax, did you not hear his resounding howl?</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <stage rend="italic">wailing.</stage>
-               <l n="336">Oh! Ah, me! Ah, me!</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="337">The man seems to be sick, or else to be still pained by the disease which
-                  was recently with him, since he sees its traces.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <stage rend="italic">wailing.</stage>
-               <l n="339">Oh my son, my son!</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="340">Ah, miserable me! Eurysaces, it is for you he calls! What can his purpose
-                  be? Where are you? I am miserable!</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="342">Teucer! Where is Teucer? Will his raid last for ever? While I perish?</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="344">He seems to be sane—open the door!</l>
-               <l n="345">Perhaps merely at the sight of me he will come to a more respectable mood.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="346">There, it is open. Now you can look on this man’s deeds, and his true
-                  condition.</l>
-            </sp>
-         </div>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="263">But if he has stopped his madness, I have good hope that all may yet be
+                     well, since the trouble is of less account once it has passed.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="265">And which, if the choice were given you, would you choose—to distress your
+                     friends, and have joy yourself, or to share the grief of friends who grieve?</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="268">The twofold sorrow, lady, is certainly the greater evil.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="269">Then we are ruined now, although the plague is past.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="270">What do you mean? I do not understand what you say.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="271">That man, while afflicted, found joy for himself in the dire fantasies
+                     that held him, though his presence distressed us who were sane. But now, since he
+                     has had pause and rest from the plague,</l>
+                  <l n="275">he has been utterly subjected to lowly anguish, and we similarly grieve no
+                     less than before. Surely, then, these are two sorrows, instead of one?</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="278">Indeed, I agree, and so I fear that a blow sent by a god has hit him. How
+                     could it be otherwise, if his spirit is no lighter</l>
+                  <l n="280">than when he was plagued, now that he is released?</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="281">This, you must know, is how matters stand.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="282">In what way did the plague first swoop down on him? Tell us who share your
+                     pain how it happened.</l>
+               </sp>
+               <milestone unit="card" n="284" />
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="284">You will hear all that took place, since you are involved.</l>
+                  <l n="285">In the dead of night when the evening lamps were no longer aflame, he
+                     seized a two-edged sword and wanted to leave on an aimless foray. Then I
+                     admonished him and said, <q type="spoken">What are you doing, Ajax? Why do you set
+                     out unsummoned on this expedition,</q>
+                  </l>
+                  <l n="290">
+                     <q type="spoken" rend="merge">neither called by messenger, nor warned by trumpet?
+                     In fact the whole army is sleeping now.</q> But he answered me curtly with that
+                     trite jingle: <q type="spoken">Woman, silence graces woman.</q> And I, taking his
+                     meaning, desisted, but he rushed out alone. <milestone unit="para" resp="ed" />
+                  </l>
+                  <l n="295">What happened out there, I cannot tell. But he came in with his captives
+                     hobbled together—bulls, herding dogs, and his fleecy quarry. Some he beheaded; of
+                     some he cut the twisted throat or broke the spine; others</l>
+                  <l n="300">he abused in their bonds as though they were men, though falling only upon
+                     cattle. At last he darted out through the door, and dragged up words to speak to
+                     some shadow—now against the Atreidae, now about Odysseus—with many a mocking boast
+                     of all the abuse that in vengeance he had fully repaid them during his raid.</l>
+                  <l n="305">After that he rushed back again into the house, and somehow by slow,
+                     painful steps he regained his reason. And as he scanned the room full of his
+                     disastrous madness, he struck his head and howled; he fell down, a wreck amid the
+                     wrecked corpses of the slaughtered sheep, and there he sat</l>
+                  <l n="310">with clenched nails tightly clutching his hair. At first, and for a long
+                     while, he sat without a sound. But then he threatened me with those dreadful
+                     threats, if I did not declare all that had happened, and he demanded to know what
+                     on earth was the business he found himself in.</l>
+                  <l n="315">And in my fear, friends, I told him all that had been done, as far as I
+                     knew it for certain. But he immediately groaned mournful groans, such as I had
+                     never heard from him before. For he had always taught that such wailing</l>
+                  <l n="320">was for cowardly and low-hearted men. He used to grieve quietly without
+                     the sound of loud weeping, but instead moaned low like a bull. <milestone
+                        unit="para" resp="ed" />And now, prostrate in such miserable fortune, tasting
+                     no food, no drink,</l>
+                  <l n="325">the man sits idly where he has fallen in the middle of the iron-slain
+                     cattle. And plainly he plans to do something terrible. Somehow his words and his
+                     laments say as much. Ah, my friends—for it was my errand to ask you this—come in
+                     and help him, if in any way you can.</l>
+                  <l n="330">Men of his kind can be won over by the words of friends.</l>
+               </sp>
+               <milestone unit="card" n="331" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="331">Tecmessa, daughter of Teleutas, terrible is your news that our lord has
+                     been possessed by his sorrows.</l>
+               </sp>
+               <sp>
+                  <stage rend="italic">Within.</stage>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <stage rend="italic">wailing.</stage>
+                  <l n="333">Oh! Ah, me! Ah, me!</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="334">Soon there will be more sorrow, it seems. Did you not hear</l>
+                  <l n="335">Ajax, did you not hear his resounding howl?</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <stage rend="italic">wailing.</stage>
+                  <l n="336">Oh! Ah, me! Ah, me!</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="337">The man seems to be sick, or else to be still pained by the disease which
+                     was recently with him, since he sees its traces.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <stage rend="italic">wailing.</stage>
+                  <l n="339">Oh my son, my son!</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="340">Ah, miserable me! Eurysaces, it is for you he calls! What can his purpose
+                     be? Where are you? I am miserable!</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="342">Teucer! Where is Teucer? Will his raid last for ever? While I perish?</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="344">He seems to be sane—open the door!</l>
+                  <l n="345">Perhaps merely at the sight of me he will come to a more respectable mood.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="346">There, it is open. Now you can look on this man’s deeds, and his true
+                     condition.</l>
+               </sp>
+            </div>
          <milestone unit="card" n="348" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <stage rend="italic">Ajax is discovered sitting amidst the slaughtered cattle.</stage>
                <sp>
@@ -883,273 +890,274 @@
                      further, when you have fallen on such harsh troubles.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="430" />
-         <div type="episode">
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="430">Aiai! Who would ever have thought that my name would so descriptively suit
-                  my troubles? For well now may Ajax cry <q type="spoken">Aiai</q>—yes, twice and
-                  three times. Such are the harsh troubles with which I have met. Look, I am one
-                  whose father’s</l>
-               <l n="435">prowess won him the fairest prize of all the army, whose father brought
-                  every glory home from this same land of Ida; but I, his son, who came after him to
-                  this same ground of <placeName key="perseus,Troy">Troy</placeName> with no less
-                  might and proved the service of my hand in no meaner deeds,</l>
-               <l n="440">I am ruined as you see by dishonor from the Greeks. And yet of this much I
-                  feel sure: if Achilles lived, and had been called to award the first place in
-                  valor to any claimant of his arms, no one would have grasped them before me.</l>
-               <l n="445">But now the Atreidae have made away with them to a man without scruples
-                  and thrust away the triumphs of Ajax. And if these eyes and this warped mind had
-                  not swerved from the purpose that was mine, they would have never in this way
-                  procured votes in judgment against another man.</l>
-               <l n="450">As it was, the daughter of Zeus, the grim-eyed, unconquerable goddess,
-                  tripped me up at the instant when I was readying my hand against them, and shot me
-                  with a plague of frenzy so that I might bloody my hands in these grazers. And
-                  those men exult to have escaped me—</l>
-               <l n="455">not that I wanted their escape. But if a god sends harm, it is true that
-                  even the base man can elude the worthier. <milestone unit="para" resp="ed" />And
-                  now what shall I do, when I am plainly hated by the gods, abhorred by the Greek
-                  forces and detested by all <placeName key="perseus,Troy">Troy</placeName> and all
-                  these plains?</l>
-               <l n="460">Shall I leave my station at the ships and the Atreidae to their own
-                  devices in order to go home across the <placeName key="tgn,7002675">Aegean</placeName>?
-                  And how shall I face my father Telamon, when I arrive? How will he bear to look on
-                  me, when I stand before him stripped, without that supreme prize of valor</l>
-               <l n="465">for which he himself won a great crown of fame? No, I could not bear to do
-                  it! But then shall I go against the bulwark of the Trojans, attacking alone in
-                  single combats and doing some valuable service, and finally die? But, in so doing
-                  I might, I think, gladden the Atreidae.</l>
-               <l n="470">That must not happen. Some enterprise must be sought whereby I may prove
-                  to my aged father that in nature, at least, his son is not gutless. It is a stain
-                  upon a man to crave the full term of life, when he finds no variation from his
-                  ignominious troubles.</l>
-               <l n="475">What joy is there in day following day, now advancing us towards, now
-                  drawing us back from the verge of death? I would not buy at any price the man who
-                  feels the glow of empty hopes.</l>
-               <l n="480">The options for a noble man are only two: either live with honor, or make
-                  a quick and honorable death. You have heard all.</l>
-            </sp>
-            <milestone unit="card" n="481" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="481">No man shall say that you have spoken a bastard word, Ajax, or one not
-                  bred of your own heart. Yet at least pause; dismiss these thoughts, and grant
-                  friends the power to rule your purpose.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="485">Ajax, my lord, the fortune that humans are compelled to endure is their
-                  gravest evil. I was the daughter of a free-born father mighty in wealth, if any
-                  Phrygian was. Now I am a slave, for somehow the gods so ordained,</l>
-               <l n="490">and even more so did your strong hand. Therefore, since I have come into
-                  your bed, I wish you well, and I do beg you, by the Zeus of our hearth, by your
-                  marriage-bed in which you coupled with me, do not condemn me to the cruel talk</l>
-               <l n="495">of your enemies, do not leave me to the hand of a stranger! On whatever
-                  day you die and
-                  widow me by your death, on that same day, be sure, I shall also be seized
-                  forcibly by the Greeks and, with your son, shall obtain a slave’s
-                  portion.</l>
-               <l n="500">Then one of my masters will name me bitterly, shooting me with taunts: <q
-                     type="spoken">See the concubine of Ajax, who was the mightiest man in the army.
-                  See what menial tasks she tends to, in place of such an enviable existence!</q>
-                  Such things will men say, and so will destiny afflict me</l>
-               <l n="505">while the shame of these words will stain you and your family. Show
-                  respect to your father, whom you abandon in miserable old age, and respect your
-                  mother with her share of many years, who often prays to the gods that you may come
-                  home alive.</l>
-               <l n="510">Pity, too, my king, your son. Pity him the great sorrow which at your
-                  death you will bequeath both to him and to me, if robbed of nurturing care he must
-                  spend his days apart from you, an orphan tended by guardians who are neither
-                  family nor friends. <milestone unit="para" resp="ed" />I have nothing left to
-                  which I can look,</l>
-               <l n="515">save you, and you are the reason. Your spear ravaged my country to
-                  nothingness, and another fate has brought down my mother and father, giving them a
-                  home in Hades in their death. What homeland, then, could I have without you? What
-                  wealth? My welfare is entirely in your hands.</l>
-               <l n="520">So remember me, too. A true man should cherish remembrance, if anywhere he
-                  takes some pleasure. It is kindness that always begets kindness. But whoever lets
-                  the memory of benefits seep from him, he can no longer be a noble man.</l>
-            </sp>
-            <milestone unit="card" n="525" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="525">Ajax, I wish that pity touched your heart as it does mine. Then you would
-                  approve her words.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="527">She will have approval as far as I am concerned, if only she takes heart
-                  and graciously does my bidding.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="529">Dear Ajax, I will obey you in everything.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="530">Then bring me my son, so that I may see him.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="531">But in my fear I released him from my keeping.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="532">Because of these troubles of mine? Or what do you mean?</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="533">Yes, for fear that somehow the poor child would get in your way, and die.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="534">Yes, that would have been truly worthy of my destiny.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="535">Well, at least I took care to avert that disaster.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="536">I approve of your action and of your foresight.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="537">How, then, can I serve you, as things stand now?</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="538">Let me speak to him and see him face to face.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="539">Oh, yes—he is close by, watched by our servants.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="540">Then why is his presence delayed?</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="541">My child, your father calls you. Bring him here, servant, whichever of you
-                  is guiding his steps.</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="543">Is the man coming? Or has he missed your call?</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="544">Here now one of the servants approaches with him.</l>
-            </sp>
-            <milestone unit="card" n="545" />
-            <sp>
-               <stage rend="italic">Enter the Servant and Eurysaces.</stage>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="545">Lift him; lift him up here. Doubtless he will not shrink to look on this
-                  newly-shed
-                  blood, if he is indeed my true-born son and heir to his father’s manners.
-                  But he must at once be broken into his father’s harsh ways and moulded to
-                  the likeness of my nature.</l>
-               <l n="550">Ah, son, may you prove luckier than your father, but in all else like him.
-                  Then you would not prove base. Yet even now I may well envy you on this account,
-                  that you have no perception of these evils about us. Yes, life is sweetest when
-                  one lacks sense, <del>for lack of sensation is a painless evil</del>
-               </l>
-               <l n="555">that is, until one learns to know joy or pain. But when you come to that
-                  knowledge, then
-                  you must be sure to prove among your father’s enemies of what mettle and of
-                  what lineage you are. Meanwhile feed on light breezes, and nurse your tender
-                  life for your mother’s joy.</l>
-               <l n="560">There is no Greek—I know it for certain—who will do violence to you with
-                  hard outrages, even when you are without me. So trusty is the guard, Teucer
-                  himself, whom I will leave at your gates. He will not falter in his care for you,
-                  although now he walks a far path, busied with the hunt of enemies. <milestone
-                     unit="para" resp="ed" />
-               </l>
-               <l n="565">O my warriors, my seafaring comrades! On you as on him, I lay this shared
-                  task of love: give my command to Teucer! Let him take this child to my home and
-                  set him before the face of Telamon, and of my mother, Eriboea,</l>
-               <l n="570">so that he may become the comfort of their age into eternity <del>until
-                  they come to the deep hollows of the god below</del>. And order him that no
-                  commissioners of games, nor he who is my destroyer, should make my arms a prize
-                  for the Greeks. No, you take this for my sake, Son, my broad shield from which you
-                  have your name.</l>
-               <l n="575">Hold it and wield it by the sturdy thong, this sevenfold, spear-proof
-                  shield! But the rest of my arms shall be my gravemates.</l>
-               <stage rend="italic">To Tecmessa.</stage>
-               <l n="578">Come, take the child right away, shut tight the doors and make no laments
-                  before the house.</l>
-               <l n="580">God, what a weepy thing is woman. Quick, close the house! It is not for a
-                  skilful doctor to moan incantations over a wound that craves the knife.</l>
-            </sp>
-            <milestone unit="card" n="583" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="583">I am afraid when I hear this eager haste. Your tongue’s sharp edge does
-                  not please
-                  me.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="585">Ajax, my lord, what can you have in mind?</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="586">Do not keep asking me, do not keep questioning. Self-restraint is a
-                  virtue.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="587">Ah, how I despair! Now, by your child, by the gods, I implore you, do not
-                  betray us!</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="589">You annoy me too much. Do you not know</l>
-               <l n="590">that I no longer owe any service to the gods?</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="591">Hush, no impiety!</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="591a">Speak to those who hear.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="592">You will not listen?</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="592a">Already your words have been too many.</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="593">Yes, because I am afraid, my king!</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <stage rend="italic">To the Attendants.</stage>
-               <l n="593a">Close the doors this instant!</l>
-            </sp>
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="594">In the name of the gods, be softened!</l>
-            </sp>
-            <sp>
-               <speaker>Ajax</speaker>
-               <l n="594a">You have foolish hope, I think,</l>
-               <l n="595">if you plan so late to begin schooling my temper.</l>
-               <stage rend="italic">Ajax is shut into the tent. Exit Tecmessa with Eurysaces.</stage>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="430">Aiai! Who would ever have thought that my name would so descriptively suit
+                     my troubles? For well now may Ajax cry <q type="spoken">Aiai</q>—yes, twice and
+                     three times. Such are the harsh troubles with which I have met. Look, I am one
+                     whose father’s</l>
+                  <l n="435">prowess won him the fairest prize of all the army, whose father brought
+                     every glory home from this same land of Ida; but I, his son, who came after him to
+                     this same ground of <placeName key="perseus,Troy">Troy</placeName> with no less
+                     might and proved the service of my hand in no meaner deeds,</l>
+                  <l n="440">I am ruined as you see by dishonor from the Greeks. And yet of this much I
+                     feel sure: if Achilles lived, and had been called to award the first place in
+                     valor to any claimant of his arms, no one would have grasped them before me.</l>
+                  <l n="445">But now the Atreidae have made away with them to a man without scruples
+                     and thrust away the triumphs of Ajax. And if these eyes and this warped mind had
+                     not swerved from the purpose that was mine, they would have never in this way
+                     procured votes in judgment against another man.</l>
+                  <l n="450">As it was, the daughter of Zeus, the grim-eyed, unconquerable goddess,
+                     tripped me up at the instant when I was readying my hand against them, and shot me
+                     with a plague of frenzy so that I might bloody my hands in these grazers. And
+                     those men exult to have escaped me—</l>
+                  <l n="455">not that I wanted their escape. But if a god sends harm, it is true that
+                     even the base man can elude the worthier. <milestone unit="para" resp="ed" />And
+                     now what shall I do, when I am plainly hated by the gods, abhorred by the Greek
+                     forces and detested by all <placeName key="perseus,Troy">Troy</placeName> and all
+                     these plains?</l>
+                  <l n="460">Shall I leave my station at the ships and the Atreidae to their own
+                     devices in order to go home across the <placeName key="tgn,7002675">Aegean</placeName>?
+                     And how shall I face my father Telamon, when I arrive? How will he bear to look on
+                     me, when I stand before him stripped, without that supreme prize of valor</l>
+                  <l n="465">for which he himself won a great crown of fame? No, I could not bear to do
+                     it! But then shall I go against the bulwark of the Trojans, attacking alone in
+                     single combats and doing some valuable service, and finally die? But, in so doing
+                     I might, I think, gladden the Atreidae.</l>
+                  <l n="470">That must not happen. Some enterprise must be sought whereby I may prove
+                     to my aged father that in nature, at least, his son is not gutless. It is a stain
+                     upon a man to crave the full term of life, when he finds no variation from his
+                     ignominious troubles.</l>
+                  <l n="475">What joy is there in day following day, now advancing us towards, now
+                     drawing us back from the verge of death? I would not buy at any price the man who
+                     feels the glow of empty hopes.</l>
+                  <l n="480">The options for a noble man are only two: either live with honor, or make
+                     a quick and honorable death. You have heard all.</l>
+               </sp>
+               <milestone unit="card" n="481" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="481">No man shall say that you have spoken a bastard word, Ajax, or one not
+                     bred of your own heart. Yet at least pause; dismiss these thoughts, and grant
+                     friends the power to rule your purpose.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="485">Ajax, my lord, the fortune that humans are compelled to endure is their
+                     gravest evil. I was the daughter of a free-born father mighty in wealth, if any
+                     Phrygian was. Now I am a slave, for somehow the gods so ordained,</l>
+                  <l n="490">and even more so did your strong hand. Therefore, since I have come into
+                     your bed, I wish you well, and I do beg you, by the Zeus of our hearth, by your
+                     marriage-bed in which you coupled with me, do not condemn me to the cruel talk</l>
+                  <l n="495">of your enemies, do not leave me to the hand of a stranger! On whatever
+                     day you die and
+                     widow me by your death, on that same day, be sure, I shall also be seized
+                     forcibly by the Greeks and, with your son, shall obtain a slave’s
+                     portion.</l>
+                  <l n="500">Then one of my masters will name me bitterly, shooting me with taunts: <q
+                        type="spoken">See the concubine of Ajax, who was the mightiest man in the army.
+                     See what menial tasks she tends to, in place of such an enviable existence!</q>
+                     Such things will men say, and so will destiny afflict me</l>
+                  <l n="505">while the shame of these words will stain you and your family. Show
+                     respect to your father, whom you abandon in miserable old age, and respect your
+                     mother with her share of many years, who often prays to the gods that you may come
+                     home alive.</l>
+                  <l n="510">Pity, too, my king, your son. Pity him the great sorrow which at your
+                     death you will bequeath both to him and to me, if robbed of nurturing care he must
+                     spend his days apart from you, an orphan tended by guardians who are neither
+                     family nor friends. <milestone unit="para" resp="ed" />I have nothing left to
+                     which I can look,</l>
+                  <l n="515">save you, and you are the reason. Your spear ravaged my country to
+                     nothingness, and another fate has brought down my mother and father, giving them a
+                     home in Hades in their death. What homeland, then, could I have without you? What
+                     wealth? My welfare is entirely in your hands.</l>
+                  <l n="520">So remember me, too. A true man should cherish remembrance, if anywhere he
+                     takes some pleasure. It is kindness that always begets kindness. But whoever lets
+                     the memory of benefits seep from him, he can no longer be a noble man.</l>
+               </sp>
+               <milestone unit="card" n="525" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="525">Ajax, I wish that pity touched your heart as it does mine. Then you would
+                     approve her words.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="527">She will have approval as far as I am concerned, if only she takes heart
+                     and graciously does my bidding.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="529">Dear Ajax, I will obey you in everything.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="530">Then bring me my son, so that I may see him.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="531">But in my fear I released him from my keeping.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="532">Because of these troubles of mine? Or what do you mean?</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="533">Yes, for fear that somehow the poor child would get in your way, and die.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="534">Yes, that would have been truly worthy of my destiny.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="535">Well, at least I took care to avert that disaster.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="536">I approve of your action and of your foresight.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="537">How, then, can I serve you, as things stand now?</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="538">Let me speak to him and see him face to face.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="539">Oh, yes—he is close by, watched by our servants.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="540">Then why is his presence delayed?</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="541">My child, your father calls you. Bring him here, servant, whichever of you
+                     is guiding his steps.</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="543">Is the man coming? Or has he missed your call?</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="544">Here now one of the servants approaches with him.</l>
+               </sp>
+               <milestone unit="card" n="545" />
+               <sp>
+                  <stage rend="italic">Enter the Servant and Eurysaces.</stage>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="545">Lift him; lift him up here. Doubtless he will not shrink to look on this
+                     newly-shed
+                     blood, if he is indeed my true-born son and heir to his father’s manners.
+                     But he must at once be broken into his father’s harsh ways and moulded to
+                     the likeness of my nature.</l>
+                  <l n="550">Ah, son, may you prove luckier than your father, but in all else like him.
+                     Then you would not prove base. Yet even now I may well envy you on this account,
+                     that you have no perception of these evils about us. Yes, life is sweetest when
+                     one lacks sense, <del>for lack of sensation is a painless evil</del>
+                  </l>
+                  <l n="555">that is, until one learns to know joy or pain. But when you come to that
+                     knowledge, then
+                     you must be sure to prove among your father’s enemies of what mettle and of
+                     what lineage you are. Meanwhile feed on light breezes, and nurse your tender
+                     life for your mother’s joy.</l>
+                  <l n="560">There is no Greek—I know it for certain—who will do violence to you with
+                     hard outrages, even when you are without me. So trusty is the guard, Teucer
+                     himself, whom I will leave at your gates. He will not falter in his care for you,
+                     although now he walks a far path, busied with the hunt of enemies. <milestone
+                        unit="para" resp="ed" />
+                  </l>
+                  <l n="565">O my warriors, my seafaring comrades! On you as on him, I lay this shared
+                     task of love: give my command to Teucer! Let him take this child to my home and
+                     set him before the face of Telamon, and of my mother, Eriboea,</l>
+                  <l n="570">so that he may become the comfort of their age into eternity <del>until
+                     they come to the deep hollows of the god below</del>. And order him that no
+                     commissioners of games, nor he who is my destroyer, should make my arms a prize
+                     for the Greeks. No, you take this for my sake, Son, my broad shield from which you
+                     have your name.</l>
+                  <l n="575">Hold it and wield it by the sturdy thong, this sevenfold, spear-proof
+                     shield! But the rest of my arms shall be my gravemates.</l>
+                  <stage rend="italic">To Tecmessa.</stage>
+                  <l n="578">Come, take the child right away, shut tight the doors and make no laments
+                     before the house.</l>
+                  <l n="580">God, what a weepy thing is woman. Quick, close the house! It is not for a
+                     skilful doctor to moan incantations over a wound that craves the knife.</l>
+               </sp>
+               <milestone unit="card" n="583" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="583">I am afraid when I hear this eager haste. Your tongue’s sharp edge does
+                     not please
+                     me.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="585">Ajax, my lord, what can you have in mind?</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="586">Do not keep asking me, do not keep questioning. Self-restraint is a
+                     virtue.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="587">Ah, how I despair! Now, by your child, by the gods, I implore you, do not
+                     betray us!</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="589">You annoy me too much. Do you not know</l>
+                  <l n="590">that I no longer owe any service to the gods?</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="591">Hush, no impiety!</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="591a">Speak to those who hear.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="592">You will not listen?</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="592a">Already your words have been too many.</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="593">Yes, because I am afraid, my king!</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <stage rend="italic">To the Attendants.</stage>
+                  <l n="593a">Close the doors this instant!</l>
+               </sp>
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="594">In the name of the gods, be softened!</l>
+               </sp>
+               <sp>
+                  <speaker>Ajax</speaker>
+                  <l n="594a">You have foolish hope, I think,</l>
+                  <l n="595">if you plan so late to begin schooling my temper.</l>
+                  <stage rend="italic">Ajax is shut into the tent. Exit Tecmessa with Eurysaces.</stage>
+               </sp>
+            </div>
          </div>
          <milestone unit="card" n="596" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (596-645)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1204,7 +1212,7 @@
             </div>
          </div>
          <milestone unit="card" n="646" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (646-692)">
             <sp>
                <stage rend="italic">Enter Ajax, sword in hand, followed by Tecmessa.</stage>
             </sp>
@@ -1254,7 +1262,7 @@
             </sp>
          </div>
          <milestone unit="card" n="693" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (693-718)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1284,7 +1292,7 @@
             </div>
          </div>
          <milestone unit="card" n="719" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (719-973)">
             <sp>
                <stage rend="italic">Enter the Messenger, from the Greek camp.</stage>
             </sp>
@@ -1553,9 +1561,9 @@
                      faces the shafts of the morning sun.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="879" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1711,28 +1719,31 @@
                      the Atreidae.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="961" />
-         <div type="episode">
-            <sp>
-               <speaker>Tecmessa</speaker>
-               <l n="961">Then let them mock and rejoice at this man’s misery. Perhaps, even though
-                  they did not
-                  cherish him while he lived, they will lament his death, when they meet with
-                  the difficulties of war. Men of crooked judgment do not know what good</l>
-               <l n="965">they have in their hands until they have thrown it away. His death is more
-                  bitter to me than it is sweet to the Greeks; but in any case to Ajax himself it is
-                  a joy, since he has accomplished all that he desired to get—his longed-for death.
-                  So why should they exult over him?</l>
-               <l n="970">He died before the gods, not at all before them—no! And so let Odysseus
-                  toss his insults in empty glee. For them Ajax is no more; for me he is gone,
-                  abandoning me to anguish and mourning.</l>
-            </sp>
-            <sp>
-               <speaker>Teucer</speaker>
-               <stage rend="italic">Approaching.</stage>
-               <l n="974">Ah! Ah, no!</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Tecmessa</speaker>
+                  <l n="961">Then let them mock and rejoice at this man’s misery. Perhaps, even though
+                     they did not
+                     cherish him while he lived, they will lament his death, when they meet with
+                     the difficulties of war. Men of crooked judgment do not know what good</l>
+                  <l n="965">they have in their hands until they have thrown it away. His death is more
+                     bitter to me than it is sweet to the Greeks; but in any case to Ajax himself it is
+                     a joy, since he has accomplished all that he desired to get—his longed-for death.
+                     So why should they exult over him?</l>
+                  <l n="970">He died before the gods, not at all before them—no! And so let Odysseus
+                     toss his insults in empty glee. For them Ajax is no more; for me he is gone,
+                     abandoning me to anguish and mourning.</l>
+               </sp>
+               <sp>
+                  <speaker>Teucer</speaker>
+                  <stage rend="italic">Approaching.</stage>
+                  <l n="974">Ah! Ah, no!</l>
+               </sp>
+            </div>
+         </div>
+         <div type="episode" n="Fourth Episode (974-1184)">
             <sp>
                <speaker>Chorus</speaker>
                <l n="975">Quiet—I think I hear the voice of Teucer striking a note that points to
@@ -2113,7 +2124,7 @@
             </div>
          </div>
          <milestone unit="card" n="1185" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1185-1222)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2165,7 +2176,7 @@
             </div>
          </div>
          <milestone unit="card" n="1223" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1223-1420)">
             <sp>
                <stage rend="italic">Enter Teucer.</stage>
             </sp>
