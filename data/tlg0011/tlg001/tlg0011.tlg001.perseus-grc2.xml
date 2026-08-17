@@ -67,9 +67,9 @@
             </refsDecl>-->
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
             </citeStructure>
          </refsDecl>
