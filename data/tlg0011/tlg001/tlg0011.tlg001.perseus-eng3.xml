@@ -125,7 +125,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg001.perseus-eng3">
          <milestone unit="card" resp="p" n="1" />
-         <div type="episode" n="Prologue">
+         <div type="episode" n="Prologue (1-93)">
             <sp>
                <speaker>Deianeira</speaker>
                <l n="1" resp="p">There is a saying among men, put forth long ago, that you cannot
@@ -265,7 +265,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="p" n="94" />
-         <div type="choral" n="Parados">
+         <div type="choral" n="Parados (94-140)">
             <div n="1" type="strophe">
                <stage rend="italic">Enter the Chorus on the other side.</stage>
                <sp>
@@ -330,7 +330,7 @@
             </div>
          </div>
          <milestone unit="card" n="141" />
-         <div type="episode" n="First Episode">
+         <div type="episode" n="First Episode (141-496)">
             <sp>
                <speaker>Deianeira</speaker>
                <l n="141" resp="p">You have heard of my trouble, I would guess, and that has brought
@@ -924,7 +924,7 @@
             </div>
          </div>
          <milestone unit="card" n="497" />
-         <div type="choral" n="First Stasimon">
+         <div type="choral" n="First Stasimon (497-530)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -970,7 +970,7 @@
             </div>
          </div>
          <milestone unit="card" n="531" />
-         <div type="episode" n="Second Episode">
+         <div type="episode" n="Second Episode (531-632)">
             <stage rend="italic">Enter Deianeira.</stage>
             <sp>
                <speaker>Deianeira</speaker>
@@ -1106,7 +1106,7 @@
             </sp>
          </div>
          <milestone unit="card" n="633" />
-         <div type="choral" n="Second Stasimon">
+         <div type="choral" n="Second Stasimon (633-662)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1151,7 +1151,7 @@
             </div>
          </div>
          <milestone unit="card" n="663" />
-         <div type="episode" n="Third Episode">
+         <div type="episode" n="Third Episode (663-820)">
             <stage rend="italic">Enter Deianeira from the house.</stage>
             <sp>
                <speaker>Deianeira</speaker>
@@ -1377,7 +1377,7 @@
             </sp>
          </div>
          <milestone unit="card" n="821" />
-         <div type="choral" n="Third Stasimon">
+         <div type="choral" n="Third Stasimon (821-862)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1433,7 +1433,7 @@
             </div>
          </div>
          <milestone unit="card" n="863" />
-         <div type="episode" n="Fourth Episode">
+         <div type="episode" n="Fourth Episode (863-946)">
             <div type="lyric">
                <sp>
                   <speaker>First Semi-Chorus</speaker>
@@ -1594,7 +1594,7 @@
             </div>
          </div>
          <milestone unit="card" n="947" />
-         <div type="choral" n="Fourth Stasimon">
+         <div type="choral" n="Fourth Stasimon (947-971)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1637,7 +1637,7 @@
             </div>
          </div>
          <milestone unit="card" n="971" />
-         <div type="episode" n="Exodus">
+         <div type="episode" n="Exodus (972-1278)">
             <stage rend="italic">Enter from one side an Old Man, with attendants, bearing Heracles
                upon a litter, and Hyllus from the house.</stage>
             <sp>
