@@ -119,7 +119,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg004.perseus-eng2">
          <milestone unit="card" resp="p" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-150)">
             <stage rend="italic">Before the palace of Oedipus in <placeName key="tgn,7011071">Thebes</placeName>.
                Suppliants of all ages are seated on the steps of the altars. Oedipus enters, in the
                robes of a king: for a moment he gazes silently on the groups at the altars, then
@@ -355,7 +355,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="p" n="151" />
-         <div type="choral">
+         <div type="choral" n="Parados (151-215)">
             <div n="1" type="strophe">
                <stage rend="italic">The chorus of Theban elders enters.</stage>
                <sp>
@@ -437,7 +437,7 @@
             </div>
          </div>
          <milestone unit="card" resp="p" n="216" />
-         <div type="episode">
+         <div type="episode" n="First Episode (216-462)">
             <sp n="Oedipus">
                <speaker>Oedipus</speaker>
                <l n="216">You pray. And in answer to your prayer, if you will give a loyal reception
@@ -875,7 +875,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="p" n="463" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (463-512)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -932,7 +932,7 @@
             </div>
          </div>
          <milestone unit="card" resp="p" n="513" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (513-862)">
             <sp>
                <speaker>Creon</speaker>
                <l n="513">Fellow citizens, having learned that Oedipus the king lays dire charges
@@ -1249,9 +1249,9 @@
                   awful oath to the gods, then for my sake and for the sake of those who stand
                   before you.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" resp="p" n="649" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1376,286 +1376,287 @@
                      conceived this steadfast wrath.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" resp="p" n="700" />
-         <div type="episode">
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="700">That I will do, for I honor you, lady, above these men. Creon is the
-                  cause, and the plots he has laid against me.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="702">Come, tell me how the argument began.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="703">He says that I stand guilty of Laius’ blood.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="704">On his own knowledge or on hearsay from another?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="705">He has made a rascal seer his mouth piece: as for himself, he keeps his
-                  lips wholly pure.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="707">Then absolve yourself of the things about which you are speaking. Listen
-                  to me, and take comfort in learning that nothing of mortal birth shares in the
-                  science of the seer.</l>
-               <l n="710">I will give you a pithy proof of this. An oracle came to Laius once—I will
-                  not say from Phoebus himself, but from his ministers—saying that he would suffer
-                  his doom at the hands of the child to be born to him and me.</l>
-               <l n="715">And Laius—as, at least, the rumor goes—was murdered one day by foreign
-                  robbers at a place
-                  where the three highways meet. And the child’s birth was not yet three days
-                  past, when Laius pinned his ankles together and had him thrown, by others’
-                  hands, on a remote mountain.</l>
-               <l n="720">So, in that case, Apollo did not bring it to pass that the child should
-                  become the slayer
-                  of his father, or that Laius should suffer that which he feared, death at the
-                  hands of his child: thus the messages of the seer’s art had mapped out the
-                  future. Pay them no regard. Whatever necessary event</l>
-               <l n="725">the god seeks, he himself will easily bring to light.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="726" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="726">What restlessness of soul, lady, what tumult has come upon me since I
-                  heard you speak!</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="728">What anxiety has startled you, that you say this?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="729">I thought that I heard this from you—that Laius</l>
-               <l n="730">was slain where the three roads meet.</l>
-            </sp>
-            <sp>
-               <speaker>Icasta</speaker>
-               <l n="731">Yes, that was the report, and so it is still thought.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="732">And where is the place where this occurred?</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="733">The land is called <placeName key="tgn,4003963">Phocis</placeName>; the
-                  branching forks lead to the same spot from <placeName key="perseus,Delphi">Delphi</placeName>
-                  and from Daulia.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="735">And how much time has passed since these events took place?</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="736">The news was announced to the town shortly before you first attained power
-                  over this land.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="738">O Zeus, what have you decreed for me?</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="739">Why, Oedipus, does this matter weigh upon your heart?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="740">Do not ask me yet. Tell me rather what stature Laius had, and how ripe his
-                  manhood was.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="742">He was tall—the silver just lightly strewn among his hair—and his form was
-                  not greatly unlike your own.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="744">Unhappy that I am! I think that I have</l>
-               <l n="745">laid myself under a terrible curse without realizing it.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="746">How do you mean? I tremble when I look at you, my lord.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="747">I have dread fears that the seer can see. But you will reveal the matter
-                  better if you tell me one thing more.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="749">Indeed, though I tremble, I will hear and answer all that you ask.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="750" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="750">Did he go with a small force, or like a chieftain, with many armed
-                  followers?</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="753">Five they were in all—a herald among them—and there was one carriage which
-                  bore Laius.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="755">Alas! It is all clear now! Who gave you this information, lady?</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="756">A servant, the only survivor who returned home.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="757">Is he by any chance in the house now?</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="758">No. Soon after he returned and found you ruling in Laius’ stead,</l>
-               <l n="760">he pled with me, with hand laid on mine, to send him to the fields, to the
-                  pastures of the flocks, that he might be far from the sight of this town. And I
-                  sent him; he was worthy, for a slave, to win even a larger favor than that.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="765">Would, then, that he return to us without delay!</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="766">That is easy. But why do you enjoin this?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="767">I fear, lady, that my words have been rash, and therefore I wish to see
-                  him.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="769">He will come. But I think that</l>
-               <l n="770">I too have a claim to learn what lies heavy on your heart, my king.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="771" />
-            <sp n="Oedipus">
-               <speaker>Oedipus</speaker>
-               <l n="771">It will not be kept from you, now that my forebodings have advanced so
-                  far. To whom more than to you would I speak in suffering such a fortune as this?
-                  My father was Polybus of <placeName key="perseus,Corinth">Corinth</placeName>,</l>
-               <l n="775">my mother the Dorian Merope. I was considered the greatest of the folk in
-                  that town, until a chance event befell me, worthy, indeed, of wonder, though not
-                  of my overreaction regarding it. At a banquet, a man drunk with wine</l>
-               <l n="780">cast it at me that I was not the true son of my father. And I, vexed,
-                  restrained myself for that day as best as I could, but on the next went to my
-                  mother and father and questioned them. They were angry at the one who had let this
-                  taunt fly.</l>
-               <l n="785">So I had comfort about them, but the matter rankled in my heart, for such
-                  a rumor still spread widely. I went to <placeName key="perseus,Delphi">Delphi</placeName>
-                  without my parents’ knowledge, and Phoebus sent me forth disappointed of the
-                  knowledge for which I had come,</l>
-               <l n="790">but in his response set forth other things, full of sorrow and terror and
-                  woe: that I was fated to defile my mother’s bed, that I would reveal to men a
-                  brood which they could not endure to behold, and that I would slay the father that
-                  sired me. When I heard this, I turned in flight from the land of <placeName
-                     key="perseus,Corinth">Corinth</placeName>,</l>
-               <l n="795">from then on thinking of it only by its position under the stars, to some
-                  spot where I should never see fulfillment of the infamies foretold in my evil
-                  fate. And on my way I came to the land in which you say that this prince perished.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="800" />
-            <sp>
-               <l n="800">Now, lady, I will tell you the truth. When on my journey I was near those
-                  three roads, there I met a herald, and a man in a carriage drawn by colts, as you
-                  have described. The leader and the old man</l>
-               <l n="805">himself tried to thrust me rudely from the path. Then, in anger, I struck
-                  the one pushing me aside, the driver, and the old man, when he saw this, watched
-                  for the moment I was passing, and from his carriage, brought his double goad
-                  straight down on my head.</l>
-               <l n="810">Yet he was paid back with interest: with one swift blow from the staff in
-                  this hand he rolled right out of the carriage onto his back. I slew every one of
-                  them. But if this stranger had any tie of kinship to Laius,</l>
-               <l n="815">who is now more wretched than this man before you? What mortal could be
-                  proved more hateful to the gods? No stranger, no citizen, is allowed to receive
-                  him at home, it is unlawful for anyone to accost him, and all must push him from
-                  their homes. And this—this curse—</l>
-               <l n="820">was laid on me by no other mouth than my own. And I pollute the bed of the
-                  slain man with the hands by which he perished. Am I now vile? Oh, am I not utterly
-                  unclean, seeing that I must be banished, and in banishment neither see my own
-                  people,</l>
-               <l n="825">nor set foot in my own land, or else be joined in wedlock to my mother,
-                  and slay my father Polybus, who sired and reared me? Then would he who judged
-                  these things to be sent down by some cruel divinity not be right about Oedipus?</l>
-               <l n="830">Prevent, prevent, you pure and awful gods, me from ever seeing that day!
-                  No, may I be swept away from all men, before I see myself visited with that brand
-                  of doom.
-</l>
-            </sp>
-            <milestone unit="card" resp="p" n="834" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="834">To us, king, these things are fraught with fear. Yet have hope, until at
-                  least you have gained full knowledge</l>
-               <l n="835">from the one who saw the deed.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="836">I have, in truth, this much hope alone: I await the man summoned from the
-                  pastures.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="838">And what do you want from him when he appears?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="839">I will tell you. If his story is found</l>
-               <l n="840">to match withwith yours, I at least, will stand clear of disaster.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="841">And what special note did you hear from me?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="842">You said that he spoke of Laius as slain by robbers. If, then, he still
-                  speaks of several as before, I was not the slayer:</l>
-               <l n="845">a solitary man could not be considered the same as that band. But if he
-                  names one lonely wayfarer, then beyond doubt this guilt rests upon me.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="848">Be assured that thus, at least, the tale was first told. He cannot revoke
-                  that,</l>
-               <l n="850">for the city heard it, not I alone. But even if he should diverge somewhat
-                  from his former story, never, king, can he show that the murder of Laius, at
-                  least, is truly square with the prophecy, for Loxias plainly said that he was to
-                  die at the hand of my child.</l>
-               <l n="855">How was it then that that poor innocent never slew him, but perished
-                  first? From now on then, as far as divination goes, I would not look to my right
-                  hand or my left.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="859">You are right. But nevertheless send someone to fetch the peasant,</l>
-               <l n="860">and do not neglect this matter.</l>
-            </sp>
-            <sp>
-               <speaker>Iocasta</speaker>
-               <l n="861">I will send for him without delay. But let us go into the house: I will do
-                  nothing which does not please you. <stage rend="italic">Exeunt Oedipus and
-                     Iocasta.</stage>
-               </l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="700">That I will do, for I honor you, lady, above these men. Creon is the
+                     cause, and the plots he has laid against me.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="702">Come, tell me how the argument began.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="703">He says that I stand guilty of Laius’ blood.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="704">On his own knowledge or on hearsay from another?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="705">He has made a rascal seer his mouth piece: as for himself, he keeps his
+                     lips wholly pure.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="707">Then absolve yourself of the things about which you are speaking. Listen
+                     to me, and take comfort in learning that nothing of mortal birth shares in the
+                     science of the seer.</l>
+                  <l n="710">I will give you a pithy proof of this. An oracle came to Laius once—I will
+                     not say from Phoebus himself, but from his ministers—saying that he would suffer
+                     his doom at the hands of the child to be born to him and me.</l>
+                  <l n="715">And Laius—as, at least, the rumor goes—was murdered one day by foreign
+                     robbers at a place
+                     where the three highways meet. And the child’s birth was not yet three days
+                     past, when Laius pinned his ankles together and had him thrown, by others’
+                     hands, on a remote mountain.</l>
+                  <l n="720">So, in that case, Apollo did not bring it to pass that the child should
+                     become the slayer
+                     of his father, or that Laius should suffer that which he feared, death at the
+                     hands of his child: thus the messages of the seer’s art had mapped out the
+                     future. Pay them no regard. Whatever necessary event</l>
+                  <l n="725">the god seeks, he himself will easily bring to light.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="726" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="726">What restlessness of soul, lady, what tumult has come upon me since I
+                     heard you speak!</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="728">What anxiety has startled you, that you say this?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="729">I thought that I heard this from you—that Laius</l>
+                  <l n="730">was slain where the three roads meet.</l>
+               </sp>
+               <sp>
+                  <speaker>Icasta</speaker>
+                  <l n="731">Yes, that was the report, and so it is still thought.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="732">And where is the place where this occurred?</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="733">The land is called <placeName key="tgn,4003963">Phocis</placeName>; the
+                     branching forks lead to the same spot from <placeName key="perseus,Delphi">Delphi</placeName>
+                     and from Daulia.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="735">And how much time has passed since these events took place?</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="736">The news was announced to the town shortly before you first attained power
+                     over this land.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="738">O Zeus, what have you decreed for me?</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="739">Why, Oedipus, does this matter weigh upon your heart?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="740">Do not ask me yet. Tell me rather what stature Laius had, and how ripe his
+                     manhood was.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="742">He was tall—the silver just lightly strewn among his hair—and his form was
+                     not greatly unlike your own.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="744">Unhappy that I am! I think that I have</l>
+                  <l n="745">laid myself under a terrible curse without realizing it.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="746">How do you mean? I tremble when I look at you, my lord.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="747">I have dread fears that the seer can see. But you will reveal the matter
+                     better if you tell me one thing more.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="749">Indeed, though I tremble, I will hear and answer all that you ask.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="750" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="750">Did he go with a small force, or like a chieftain, with many armed
+                     followers?</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="753">Five they were in all—a herald among them—and there was one carriage which
+                     bore Laius.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="755">Alas! It is all clear now! Who gave you this information, lady?</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="756">A servant, the only survivor who returned home.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="757">Is he by any chance in the house now?</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="758">No. Soon after he returned and found you ruling in Laius’ stead,</l>
+                  <l n="760">he pled with me, with hand laid on mine, to send him to the fields, to the
+                     pastures of the flocks, that he might be far from the sight of this town. And I
+                     sent him; he was worthy, for a slave, to win even a larger favor than that.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="765">Would, then, that he return to us without delay!</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="766">That is easy. But why do you enjoin this?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="767">I fear, lady, that my words have been rash, and therefore I wish to see
+                     him.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="769">He will come. But I think that</l>
+                  <l n="770">I too have a claim to learn what lies heavy on your heart, my king.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="771" />
+               <sp n="Oedipus">
+                  <speaker>Oedipus</speaker>
+                  <l n="771">It will not be kept from you, now that my forebodings have advanced so
+                     far. To whom more than to you would I speak in suffering such a fortune as this?
+                     My father was Polybus of <placeName key="perseus,Corinth">Corinth</placeName>,</l>
+                  <l n="775">my mother the Dorian Merope. I was considered the greatest of the folk in
+                     that town, until a chance event befell me, worthy, indeed, of wonder, though not
+                     of my overreaction regarding it. At a banquet, a man drunk with wine</l>
+                  <l n="780">cast it at me that I was not the true son of my father. And I, vexed,
+                     restrained myself for that day as best as I could, but on the next went to my
+                     mother and father and questioned them. They were angry at the one who had let this
+                     taunt fly.</l>
+                  <l n="785">So I had comfort about them, but the matter rankled in my heart, for such
+                     a rumor still spread widely. I went to <placeName key="perseus,Delphi">Delphi</placeName>
+                     without my parents’ knowledge, and Phoebus sent me forth disappointed of the
+                     knowledge for which I had come,</l>
+                  <l n="790">but in his response set forth other things, full of sorrow and terror and
+                     woe: that I was fated to defile my mother’s bed, that I would reveal to men a
+                     brood which they could not endure to behold, and that I would slay the father that
+                     sired me. When I heard this, I turned in flight from the land of <placeName
+                        key="perseus,Corinth">Corinth</placeName>,</l>
+                  <l n="795">from then on thinking of it only by its position under the stars, to some
+                     spot where I should never see fulfillment of the infamies foretold in my evil
+                     fate. And on my way I came to the land in which you say that this prince perished.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="800" />
+               <sp>
+                  <l n="800">Now, lady, I will tell you the truth. When on my journey I was near those
+                     three roads, there I met a herald, and a man in a carriage drawn by colts, as you
+                     have described. The leader and the old man</l>
+                  <l n="805">himself tried to thrust me rudely from the path. Then, in anger, I struck
+                     the one pushing me aside, the driver, and the old man, when he saw this, watched
+                     for the moment I was passing, and from his carriage, brought his double goad
+                     straight down on my head.</l>
+                  <l n="810">Yet he was paid back with interest: with one swift blow from the staff in
+                     this hand he rolled right out of the carriage onto his back. I slew every one of
+                     them. But if this stranger had any tie of kinship to Laius,</l>
+                  <l n="815">who is now more wretched than this man before you? What mortal could be
+                     proved more hateful to the gods? No stranger, no citizen, is allowed to receive
+                     him at home, it is unlawful for anyone to accost him, and all must push him from
+                     their homes. And this—this curse—</l>
+                  <l n="820">was laid on me by no other mouth than my own. And I pollute the bed of the
+                     slain man with the hands by which he perished. Am I now vile? Oh, am I not utterly
+                     unclean, seeing that I must be banished, and in banishment neither see my own
+                     people,</l>
+                  <l n="825">nor set foot in my own land, or else be joined in wedlock to my mother,
+                     and slay my father Polybus, who sired and reared me? Then would he who judged
+                     these things to be sent down by some cruel divinity not be right about Oedipus?</l>
+                  <l n="830">Prevent, prevent, you pure and awful gods, me from ever seeing that day!
+                     No, may I be swept away from all men, before I see myself visited with that brand
+                     of doom.
+   </l>
+               </sp>
+               <milestone unit="card" resp="p" n="834" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="834">To us, king, these things are fraught with fear. Yet have hope, until at
+                     least you have gained full knowledge</l>
+                  <l n="835">from the one who saw the deed.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="836">I have, in truth, this much hope alone: I await the man summoned from the
+                     pastures.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="838">And what do you want from him when he appears?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="839">I will tell you. If his story is found</l>
+                  <l n="840">to match withwith yours, I at least, will stand clear of disaster.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="841">And what special note did you hear from me?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="842">You said that he spoke of Laius as slain by robbers. If, then, he still
+                     speaks of several as before, I was not the slayer:</l>
+                  <l n="845">a solitary man could not be considered the same as that band. But if he
+                     names one lonely wayfarer, then beyond doubt this guilt rests upon me.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="848">Be assured that thus, at least, the tale was first told. He cannot revoke
+                     that,</l>
+                  <l n="850">for the city heard it, not I alone. But even if he should diverge somewhat
+                     from his former story, never, king, can he show that the murder of Laius, at
+                     least, is truly square with the prophecy, for Loxias plainly said that he was to
+                     die at the hand of my child.</l>
+                  <l n="855">How was it then that that poor innocent never slew him, but perished
+                     first? From now on then, as far as divination goes, I would not look to my right
+                     hand or my left.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="859">You are right. But nevertheless send someone to fetch the peasant,</l>
+                  <l n="860">and do not neglect this matter.</l>
+               </sp>
+               <sp>
+                  <speaker>Iocasta</speaker>
+                  <l n="861">I will send for him without delay. But let us go into the house: I will do
+                     nothing which does not please you. <stage rend="italic">Exeunt Oedipus and
+                        Iocasta.</stage>
+                  </l>
+               </sp>
+            </div>
          </div>
          <milestone unit="card" resp="p" n="863" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (863-910)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1714,7 +1715,7 @@
             </div>
          </div>
          <milestone unit="card" resp="p" n="911" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (911-1085)">
             <sp>
                <speaker>Iocasta</speaker>
                <l n="911">Princes of the land, I am planning to visit the shrines of the gods, with
@@ -2191,7 +2192,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="p" n="1086" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1086-1109)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2218,7 +2219,7 @@
             </div>
          </div>
          <milestone unit="card" resp="p" n="1110" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1110-1185)">
             <sp>
                <speaker>Oedipus</speaker>
                <l n="1110">Elders, if it is right for me, who have never met the man, to guess, I
@@ -2466,7 +2467,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="p" n="1186" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (1186-1122)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2516,7 +2517,7 @@
             </div>
          </div>
          <milestone unit="card" resp="p" n="1223" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1223-1530)">
             <stage rend="italic">A second messenger enters from the house.</stage>
             <sp>
                <speaker>Second Messenger</speaker>
@@ -2620,9 +2621,9 @@
                <speaker>Chorus</speaker>
                <l n="1312">To a dread place, dire in men’s ears, dire in their sight.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" resp="p" n="1313" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Oedipus</speaker>
@@ -2700,253 +2701,254 @@
                   <l n="1365">if there is a woe surpassing all woes, it has become Oedipus’ lot.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" resp="p" n="1367" />
-         <div type="episode">
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1367">I cannot agree that you have counseled well: you would have been better
-                  dead than living and blind.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1369">Do not tell me that things have not been best done in this way:</l>
-               <l n="1370">give me counsel no more. If I had sight, I know not with what eyes I
-                  could even have looked on my father, when I came to the house of Hades, or on my
-                  miserable mother, since against both I have sinned such sins as hanging myself
-                  could not punish.</l>
-               <l n="1375">But do you think that the sight of children, born as mine were, was
-                  lovely for me to look upon? No, no, never lovely to my eyes! No, neither was this
-                  town with its towering walls, nor the sacred statues of the gods, since I, thrice
-                  wretched that I am—</l>
-               <l n="1380">I, noblest of the sons of Thebes—have doomed myself to know them no more
-                  by commanding that all should reject the impious one, the one whom the gods have
-                  revealed as unholy, a member of Laius’ own race! After bearing such a stain upon
-                  myself,</l>
-               <l n="1385">was I to look with steady eyes on this folk? No indeed: were there a way
-                  to choke the source of hearing, I would not have hesitated to make a fast prison
-                  of this wretched frame, so that I should have known neither sight nor sound.</l>
-               <l n="1390">It is sweet for our thought to dwell beyond the sphere of grief. Alas,
-                  Cithaeron, why did you provide a shelter for me? When I was given to you, why did
-                  you not slay me straightway, that I might never reveal my origin to men. Ah,
-                  Polybus, ah, <placeName key="perseus,Corinth">Corinth</placeName>, and you that
-                  were called the ancient house of my father,</l>
-               <l n="1395">how fair-seeming was I, your nurseling, and what evils were festering
-                  underneath! Now I am found to be evil and of evil birth. Oh you three roads, and
-                  you secret glen, you, thicket, and narrow way where three paths met—</l>
-               <l n="1400">you who drank my father’s blood from my own hands—do you remember,
-                  perhaps, what deeds I
-                  have performed in your sight, and then what fresh deeds I went on to do when I
-                  came here? Oh marriage rites, you gave me birth, and when you had brought me
-                  forth,</l>
-               <l n="1405">you again bore children to your child, you created an incestuous kinship
-                  of fathers, brothers, sons, brides, wives, and mothers—all the foulest deeds that
-                  are wrought among men! But it is improper to mention what it is improper to do—</l>
-               <l n="1410">hurry, for the love of the gods, hide me somewhere beyond the land, or
-                  slay me, or cast me into the sea, where you will never behold me any longer!
-                  Approach—deign to lay your hands on a wretched man—listen and fear not: my plague
-                  can rest</l>
-               <l n="1415">on no other mortal.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="1416" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1416">But here is Creon in good time to plan and perform that which you
-                  request. He alone is left to guard the land in your place.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1419">Ah, me, how will I address him?</l>
-               <l n="1420">What claim to credence can be shown on my part? For in the past I proved
-                  to be wholly false to him.</l>
-            </sp>
-            <stage rend="italic">Enter Creon.</stage>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1422">I have not come to mock or reproach you with any any past fault.</l>
-            </sp>
-            <sp>
-               <stage rend="italic">To the Attendants.</stage>
-               <l n="1424">But you, if you no longer respect the children of men,</l>
-               <l n="1425">revere at least the all-nurturing flame of our lord the Sun, and don’t
-                  show so openly
-                  such a pollution as this, one which neither earth, nor holy rain, nor the light
-                  itself can welcome. Take him into the house as quickly as you can: it best
-                  accords with pity that</l>
-               <l n="1430">kinfolk alone should see and hear a kinsman’s woes.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1432">For the gods’ love—since you have done a gentle violence to my prediction
-                  and come in a spirit so noble to me, a man most vile—grant me a favor: I will
-                  speak for your own good, not mine.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1435">And what do you wish so eagerly to get from me?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1436">Cast me out of this land with all speed, to a place where no mortal shall
-                  be found to greet me.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1438">This I could have done, to be sure, except I craved first to learn from
-                  the god all my duty.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1440">But his pronouncement has been set forth in full—to let me perish, the
-                  parricide, unholy one that I am.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1442">Thus it was said. But since we have come to such a pass, it is better to
-                  learn clearly what should be done.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1444">Will you, then, seek a response on behalf of such a wretch as I?</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1445">Yes, for even you yourself will now surely put faith in the god.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="1446" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1446">Yes. And on you I lay this charge, to you I make this entreaty: give to
-                  the woman within such burial as you wish—you will properly render the last rites
-                  to your own. But never let this city of my father be condemned</l>
-               <l n="1450">to have me dwelling within, as long as I live. No, allow me to live in
-                  the hills, where Cithaeron, famed as mine, sits, which my mother and father, while
-                  they lived, fixed as my appointed tomb, so that I may die according to the decree
-                  of those who sought to slay me.</l>
-               <l n="1455">And yet I know this much, that neither sickness nor anything else can
-                  destroy me; for I would never have been snatched from death, except in order to
-                  suffer some strange doom. <milestone unit="para" />But let my fate go where it
-                  will. Regarding my children, Creon, I beg you to take no care of my sons:</l>
-               <l n="1460">they are men, so that they will never lack the means to live wherever
-                  they should be. My two girls, poor hapless ones—who never knew my table spread
-                  separately, or lacked their father’s presence, but always had a share of all that</l>
-               <l n="1465">reached my hands—I implore you to take care of them. And, if you can,
-                  allow me to touch them with my hands, and to indulge my grief. Grant it, prince,
-                  grant it, noble heart. Ah, if I could but once touch them with my hands, I would
-                  think that I had them</l>
-               <l n="1470">just as when I had sight.</l>
-               <stage rend="italic">Creon’s Attendants lead in the children, Antigone and Ismene.</stage>
-               <l n="1471">What is this? Oh, gods, can it be my loved ones that I hear sobbing, can
-                  Creon have taken pity on me and sent my children, my darlings?</l>
-               <l n="1475">Am I right?</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1476">You are. I have brought this about, for I knew the joy which you have
-                  long had from them—the joy you now have.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="1478" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1478">Bless you, and for this errand may the god prove a kinder guardian to you
-                  than he has to me.</l>
-               <l n="1480">My children, where are you? Come, here, here to the hands of the one
-                  whose mother was your own, the hands that have made your father’s once bright eyes
-                  to be such orbs as these—his, who seeing nothing, knowing nothing,</l>
-               <l n="1485">became your father by her from whom he was born! For you also do I weep,
-                  though I cannot see you, when I think of the bitter life that men will make you
-                  live in days to come. To what company of the citizens will you go, to what
-                  festival,</l>
-               <l n="1490">from which you will not return home in tears, not sharing in the holiday?
-                  But when you reach a ripe age for marriage, who shall he be, who shall be the man,
-                  my daughters, to risk taking upon himself the reproaches</l>
-               <l n="1495">that will certainly be baneful to my offspring and yours? What misery is
-                  lacking? Your father killed his own father, and bore you from the source of his
-                  own being!</l>
-               <l n="1500">Such are the taunts that will be cast at you. And who then will wed you?
-                  The man does not live, no, it cannot be, my children, but you will wither in
-                  barren maidenhood. Son of Menoeceus, hear me: since you are the only father left
-                  to them—we, their parents, are both gone—</l>
-               <l n="1505">do not allow them to wander poor and unwed, for they are your own kin,
-                  nor abase them to the level of my woes. Pity them, seeing them deprived of
-                  everything but you at such an age.</l>
-               <l n="1510">Promise, noble man, and touch them with your hand. To you, children, I
-                  would have given much counsel, if your minds were mature. But now pray that you
-                  may live where occasion allows, and that the life which is your lot may be happier
-                  than your father’s.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1515">Your grief has had a sufficient scope: move on into the house.</l>
-            </sp>
-            <milestone unit="card" resp="p" n="1516" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1516" part="I">I must obey, though I do it in no way gladly.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1516a" part="F">Yes, for it is in season that all things are good.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1517" part="I">Do you know on what terms I will go?</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1517a" part="F">You will tell me, and then I will know when I have heard them.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1518" part="I">See that you send me to dwell outside this land.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1518a" part="F">You ask for what the god must give.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1519" part="I">But to the gods I have become most hateful.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1519a" part="F">Then you will quickly get your wish.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1520" part="I">So you consent?</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1520a" part="F">It is not my way to say idly what I do not mean.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1521" part="I">Then it is time to lead me away.</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1521a" part="F">Come, then, but let your children go.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1522">No, do not take them from me!</l>
-            </sp>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="1523">Do not wish to be master in all things: the mastery which you did attain
-                  has not followed you through life.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1524">Residents of our native <placeName key="perseus,Thebes">Thebes</placeName>,
-                  behold, this is Oedipus,</l>
-               <l n="1525">who knew the renowned riddle, and was a most mighty man. What citizen did
-                  not gaze on his fortune with envy? See into what a stormy sea of troubles he has
-                  come! Therefore, while our eyes wait to see the final destined day, we must call
-                  no mortal happy until</l>
-               <l n="1530">he has crossed life’s border free from pain.</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="1367">I cannot agree that you have counseled well: you would have been better
+                     dead than living and blind.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1369">Do not tell me that things have not been best done in this way:</l>
+                  <l n="1370">give me counsel no more. If I had sight, I know not with what eyes I
+                     could even have looked on my father, when I came to the house of Hades, or on my
+                     miserable mother, since against both I have sinned such sins as hanging myself
+                     could not punish.</l>
+                  <l n="1375">But do you think that the sight of children, born as mine were, was
+                     lovely for me to look upon? No, no, never lovely to my eyes! No, neither was this
+                     town with its towering walls, nor the sacred statues of the gods, since I, thrice
+                     wretched that I am—</l>
+                  <l n="1380">I, noblest of the sons of Thebes—have doomed myself to know them no more
+                     by commanding that all should reject the impious one, the one whom the gods have
+                     revealed as unholy, a member of Laius’ own race! After bearing such a stain upon
+                     myself,</l>
+                  <l n="1385">was I to look with steady eyes on this folk? No indeed: were there a way
+                     to choke the source of hearing, I would not have hesitated to make a fast prison
+                     of this wretched frame, so that I should have known neither sight nor sound.</l>
+                  <l n="1390">It is sweet for our thought to dwell beyond the sphere of grief. Alas,
+                     Cithaeron, why did you provide a shelter for me? When I was given to you, why did
+                     you not slay me straightway, that I might never reveal my origin to men. Ah,
+                     Polybus, ah, <placeName key="perseus,Corinth">Corinth</placeName>, and you that
+                     were called the ancient house of my father,</l>
+                  <l n="1395">how fair-seeming was I, your nurseling, and what evils were festering
+                     underneath! Now I am found to be evil and of evil birth. Oh you three roads, and
+                     you secret glen, you, thicket, and narrow way where three paths met—</l>
+                  <l n="1400">you who drank my father’s blood from my own hands—do you remember,
+                     perhaps, what deeds I
+                     have performed in your sight, and then what fresh deeds I went on to do when I
+                     came here? Oh marriage rites, you gave me birth, and when you had brought me
+                     forth,</l>
+                  <l n="1405">you again bore children to your child, you created an incestuous kinship
+                     of fathers, brothers, sons, brides, wives, and mothers—all the foulest deeds that
+                     are wrought among men! But it is improper to mention what it is improper to do—</l>
+                  <l n="1410">hurry, for the love of the gods, hide me somewhere beyond the land, or
+                     slay me, or cast me into the sea, where you will never behold me any longer!
+                     Approach—deign to lay your hands on a wretched man—listen and fear not: my plague
+                     can rest</l>
+                  <l n="1415">on no other mortal.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="1416" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="1416">But here is Creon in good time to plan and perform that which you
+                     request. He alone is left to guard the land in your place.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1419">Ah, me, how will I address him?</l>
+                  <l n="1420">What claim to credence can be shown on my part? For in the past I proved
+                     to be wholly false to him.</l>
+               </sp>
+               <stage rend="italic">Enter Creon.</stage>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1422">I have not come to mock or reproach you with any any past fault.</l>
+               </sp>
+               <sp>
+                  <stage rend="italic">To the Attendants.</stage>
+                  <l n="1424">But you, if you no longer respect the children of men,</l>
+                  <l n="1425">revere at least the all-nurturing flame of our lord the Sun, and don’t
+                     show so openly
+                     such a pollution as this, one which neither earth, nor holy rain, nor the light
+                     itself can welcome. Take him into the house as quickly as you can: it best
+                     accords with pity that</l>
+                  <l n="1430">kinfolk alone should see and hear a kinsman’s woes.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1432">For the gods’ love—since you have done a gentle violence to my prediction
+                     and come in a spirit so noble to me, a man most vile—grant me a favor: I will
+                     speak for your own good, not mine.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1435">And what do you wish so eagerly to get from me?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1436">Cast me out of this land with all speed, to a place where no mortal shall
+                     be found to greet me.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1438">This I could have done, to be sure, except I craved first to learn from
+                     the god all my duty.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1440">But his pronouncement has been set forth in full—to let me perish, the
+                     parricide, unholy one that I am.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1442">Thus it was said. But since we have come to such a pass, it is better to
+                     learn clearly what should be done.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1444">Will you, then, seek a response on behalf of such a wretch as I?</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1445">Yes, for even you yourself will now surely put faith in the god.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="1446" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1446">Yes. And on you I lay this charge, to you I make this entreaty: give to
+                     the woman within such burial as you wish—you will properly render the last rites
+                     to your own. But never let this city of my father be condemned</l>
+                  <l n="1450">to have me dwelling within, as long as I live. No, allow me to live in
+                     the hills, where Cithaeron, famed as mine, sits, which my mother and father, while
+                     they lived, fixed as my appointed tomb, so that I may die according to the decree
+                     of those who sought to slay me.</l>
+                  <l n="1455">And yet I know this much, that neither sickness nor anything else can
+                     destroy me; for I would never have been snatched from death, except in order to
+                     suffer some strange doom. <milestone unit="para" />But let my fate go where it
+                     will. Regarding my children, Creon, I beg you to take no care of my sons:</l>
+                  <l n="1460">they are men, so that they will never lack the means to live wherever
+                     they should be. My two girls, poor hapless ones—who never knew my table spread
+                     separately, or lacked their father’s presence, but always had a share of all that</l>
+                  <l n="1465">reached my hands—I implore you to take care of them. And, if you can,
+                     allow me to touch them with my hands, and to indulge my grief. Grant it, prince,
+                     grant it, noble heart. Ah, if I could but once touch them with my hands, I would
+                     think that I had them</l>
+                  <l n="1470">just as when I had sight.</l>
+                  <stage rend="italic">Creon’s Attendants lead in the children, Antigone and Ismene.</stage>
+                  <l n="1471">What is this? Oh, gods, can it be my loved ones that I hear sobbing, can
+                     Creon have taken pity on me and sent my children, my darlings?</l>
+                  <l n="1475">Am I right?</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1476">You are. I have brought this about, for I knew the joy which you have
+                     long had from them—the joy you now have.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="1478" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1478">Bless you, and for this errand may the god prove a kinder guardian to you
+                     than he has to me.</l>
+                  <l n="1480">My children, where are you? Come, here, here to the hands of the one
+                     whose mother was your own, the hands that have made your father’s once bright eyes
+                     to be such orbs as these—his, who seeing nothing, knowing nothing,</l>
+                  <l n="1485">became your father by her from whom he was born! For you also do I weep,
+                     though I cannot see you, when I think of the bitter life that men will make you
+                     live in days to come. To what company of the citizens will you go, to what
+                     festival,</l>
+                  <l n="1490">from which you will not return home in tears, not sharing in the holiday?
+                     But when you reach a ripe age for marriage, who shall he be, who shall be the man,
+                     my daughters, to risk taking upon himself the reproaches</l>
+                  <l n="1495">that will certainly be baneful to my offspring and yours? What misery is
+                     lacking? Your father killed his own father, and bore you from the source of his
+                     own being!</l>
+                  <l n="1500">Such are the taunts that will be cast at you. And who then will wed you?
+                     The man does not live, no, it cannot be, my children, but you will wither in
+                     barren maidenhood. Son of Menoeceus, hear me: since you are the only father left
+                     to them—we, their parents, are both gone—</l>
+                  <l n="1505">do not allow them to wander poor and unwed, for they are your own kin,
+                     nor abase them to the level of my woes. Pity them, seeing them deprived of
+                     everything but you at such an age.</l>
+                  <l n="1510">Promise, noble man, and touch them with your hand. To you, children, I
+                     would have given much counsel, if your minds were mature. But now pray that you
+                     may live where occasion allows, and that the life which is your lot may be happier
+                     than your father’s.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1515">Your grief has had a sufficient scope: move on into the house.</l>
+               </sp>
+               <milestone unit="card" resp="p" n="1516" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1516" part="I">I must obey, though I do it in no way gladly.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1516a" part="F">Yes, for it is in season that all things are good.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1517" part="I">Do you know on what terms I will go?</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1517a" part="F">You will tell me, and then I will know when I have heard them.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1518" part="I">See that you send me to dwell outside this land.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1518a" part="F">You ask for what the god must give.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1519" part="I">But to the gods I have become most hateful.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1519a" part="F">Then you will quickly get your wish.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1520" part="I">So you consent?</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1520a" part="F">It is not my way to say idly what I do not mean.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1521" part="I">Then it is time to lead me away.</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1521a" part="F">Come, then, but let your children go.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1522">No, do not take them from me!</l>
+               </sp>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="1523">Do not wish to be master in all things: the mastery which you did attain
+                     has not followed you through life.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="1524">Residents of our native <placeName key="perseus,Thebes">Thebes</placeName>,
+                     behold, this is Oedipus,</l>
+                  <l n="1525">who knew the renowned riddle, and was a most mighty man. What citizen did
+                     not gaze on his fortune with envy? See into what a stormy sea of troubles he has
+                     come! Therefore, while our eyes wait to see the final destined day, we must call
+                     no mortal happy until</l>
+                  <l n="1530">he has crossed life’s border free from pain.</l>
+               </sp>
+            </div>
          </div>
       </body>
    </text>
