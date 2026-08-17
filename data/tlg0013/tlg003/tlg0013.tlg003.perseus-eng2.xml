@@ -67,6 +67,12 @@
           </citeStructure>
         </citeStructure>
       </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS-card">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match=".//milestone[@unit='card']"
+            unit="card" delim=":" use="@n" n="chunk" />
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <profileDesc>
       <textClass>
@@ -154,9 +160,9 @@
         <l n="60">from the hand of strangers; for truly your own soil is not rich.”<!-- <milestone
           type="endquote" --> <milestone
             unit="Para" ed="P" />So spake Leto. And <placeName key="perseus,Delos">Delos</placeName>
-          rejoiced and answered and said: -- <milestone type="startquote" -->“Leto, most glorious daughter of great Coeus, joyfully
-          would I receive your child the far-shooting lord; for it is all too true that I am
-          ill-spoken of </l>
+          rejoiced and answered and said: -- <milestone unit="startquote" />“Leto, most glorious
+          daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it
+          is all too true that I am ill-spoken of </l>
         <l n="65">among men, whereas thus I should become very greatly honored. But this saying I
           fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very
           haughty and will greatly lord it among gods and men all over the fruitful earth. </l>
