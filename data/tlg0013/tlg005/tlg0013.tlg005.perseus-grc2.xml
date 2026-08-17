@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -40,39 +41,46 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/hesiodhomerichym00hesiuoft/hesiodhomerichym00hesiuoft/page/406/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/hesiodhomerichym00hesiuoft/hesiodhomerichym00hesiuoft/page/406/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n=\'$1\'])">
+            <cRefPattern n="line" matchPattern="(\\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n=\'$1\'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl>
-            <refState unit="line"/>
+            <refState unit="line" />
          </refsDecl>
          <!--<refsDecl>
 	<refState n="chunk" unit="card"/>
       </refsDecl>-->
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="./milestone[@unit='card']" delim=":" unit="card"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="1988-01-01" who="Bill Merrill">Text keyboarded in the Philippines.  Basic SGML tagging by Bill Merrill</change>
-         <change when="1993-08-01" who="EM">Go over text, check cardbreaks, and change tags to be more TEI conformant.</change>
+         <change when="1988-01-01" who="Bill Merrill">Text keyboarded in the Philippines. Basic SGML
+            tagging by Bill Merrill</change>
+         <change when="1993-08-01" who="EM">Go over text, check cardbreaks, and change tags to be
+            more TEI conformant.</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2015-12-11" who="Lisa Cerrato">fixing titles and headers</change>
@@ -82,16 +90,16 @@
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0013.tlg005.perseus-grc2">
          <head>Εἲς Ἀφροδίτην</head>
-         <milestone unit="card" n="1" ed="P"/>
+         <milestone unit="card" n="1" ed="P" />
          <l n="1">
-            <milestone unit="Para" ed="P"/>μοῦσά μοι ἔννεπε ἔργα πολυχρύσου Ἀφροδίτης, </l>
+            <milestone unit="Para" ed="P" />μοῦσά μοι ἔννεπε ἔργα πολυχρύσου Ἀφροδίτης, </l>
          <l n="2">Κύπριδος, ἥτε θεοῖσιν ἐπὶ γλυκὺν ἵμερον ὦρσε </l>
          <l n="3">καί τʼ ἐδαμάσσατο φῦλα καταθνητῶν ἀνθρώπων </l>
          <l n="4">οἰωνούς τε διιπετέας καὶ θηρία πάντα, </l>
          <l n="5"> ἠμὲν ὅσʼ ἤπειρος πολλὰ τρέφει ἠδʼ ὅσα πόντος· </l>
          <l n="6">πᾶσιν δʼ ἔργα μέμηλεν ἐυστεφάνου Κυθερείης. </l>
          <l n="7">
-            <milestone unit="Para" ed="P"/>τρισσὰς δʼ οὐ δύναται πεπιθεῖν φρένας οὐδʼ ἀπατῆσαι· </l>
+            <milestone unit="Para" ed="P" />τρισσὰς δʼ οὐ δύναται πεπιθεῖν φρένας οὐδʼ ἀπατῆσαι· </l>
          <l n="8">κούρην τʼ αἰγιόχοιο Διός, γλαυκῶπιν Ἀθήνην· </l>
          <l n="9">οὐ γὰρ οἱ εὔαδεν ἔργα πολυχρύσου Ἀφροδίτης, </l>
          <l n="10">ἀλλʼ ἄρα οἱ πόλεμοί τε ἅδον καὶ ἔργον Ἄρηος </l>
@@ -116,10 +124,11 @@
          <l n="29">τῇ δὲ πατὴρ Ζεὺς δῶκε καλὸν γέρας ἀντὶ γάμοιο </l>
          <l n="30">καὶ τε μέσῳ οἴκῳ κατʼ ἄρʼ ἕζετο πῖαρ ἑλοῦσα. </l>
          <l n="31">πᾶσιν δʼ ἐν νηοῖσι θεῶν τιμάοχός ἐστι </l>
-         <l n="32">καὶ παρὰ πᾶσι βροτοῖσι θεῶν πρέσβειρα τέτυκται. <milestone unit="card" n="33" ed="P"/>
+         <l n="32">καὶ παρὰ πᾶσι βροτοῖσι θεῶν πρέσβειρα τέτυκται. <milestone unit="card" n="33"
+               ed="P" />
          </l>
          <l n="33">
-            <milestone unit="Para" ed="P"/>τάων οὐ δύναται πεπιθεῖν φρένας οὐδʼ ἀπατῆσαι· </l>
+            <milestone unit="Para" ed="P" />τάων οὐ δύναται πεπιθεῖν φρένας οὐδʼ ἀπατῆσαι· </l>
          <l n="34">τῶν δʼ ἄλλων οὔ πέρ τι πεφυγμένον ἔστʼ Ἀφροδίτην </l>
          <l n="35">οὔτε θεῶν μακάρων οὔτε θνητῶν ἀνθρώπων. </l>
          <l n="36">καί τε παρὲκ Ζηνὸς νόον ἤγαγε τερπικεραύνου, </l>
@@ -132,7 +141,7 @@
          <l n="43">μήτηρ τε Ῥείη· Ζεὺς δʼ ἄφθιτα μήδεα εἰδὼς </l>
          <l n="44">αἰδοίην ἄλοχον ποιήσατο κέδνʼ εἰδυῖαν. </l>
          <l n="45">
-            <milestone unit="Para" ed="P"/>τῇ δὲ καὶ αὐτῇ Ζεὺς γλυκὺν ἵμερον ἔμβαλε θυμῷ </l>
+            <milestone unit="Para" ed="P" />τῇ δὲ καὶ αὐτῇ Ζεὺς γλυκὺν ἵμερον ἔμβαλε θυμῷ </l>
          <l n="46">ἀνδρὶ καταθνητῷ μιχθήμεναι, ὄφρα τάχιστα </l>
          <l n="47">μηδʼ αὐτὴ βροτέης εὐνῆς ἀποεργμένη εἴη, </l>
          <l n="48">καί ποτʼ ἐπευξαμένη εἴπῃ μετὰ πᾶσι θεοῖσιν </l>
@@ -141,7 +150,7 @@
          <l n="51">καί τε καταθνητοὺς υἱεῖς τέκον ἀθανάτοισιν, </l>
          <l n="52">ὥς τε θεὰς ἀνέμιξε καταθνητοῖς ἀνθρώποις. </l>
          <l n="53">
-            <milestone unit="Para" ed="P"/>Ἀγχίσεω δʼ ἄρα οἱ γλυκὺν ἵμερον ἔμβαλε θυμῷ, </l>
+            <milestone unit="Para" ed="P" />Ἀγχίσεω δʼ ἄρα οἱ γλυκὺν ἵμερον ἔμβαλε θυμῷ, </l>
          <l n="54">ὃς τότʼ ἐν ἀκροπόλοις ὄρεσιν πολυπιδάκου Ἴδης </l>
          <l n="55">βουκολέεσκεν βοῦς δέμας ἀθανάτοισιν ἐοικώς. </l>
          <l n="56">τὸν δὴ ἔπειτα ἰδοῦσα φιλομμειδὴς Ἀφροδίτη </l>
@@ -162,7 +171,7 @@
          <l n="71">ἄρκτοι παρδάλιές τε θοαὶ προκάδων ἀκόρητοι </l>
          <l n="72">ἤισαν· ἣ δʼ ὁρόωσα μετὰ φρεσὶ τέρπετο θυμὸν </l>
          <l n="73">καὶ τοῖς ἐν στήθεσσι βάλʼ ἵμερον· οἳ δʼ ἅμα πάντες </l>
-         <l n="74">σύνδυο κοιμήσαντο κατὰ σκιόεντας ἐναύλους· <milestone unit="card" n="75" ed="P"/>
+         <l n="74">σύνδυο κοιμήσαντο κατὰ σκιόεντας ἐναύλους· <milestone unit="card" n="75" ed="P" />
          </l>
          <l n="75">αὐτὴ δʼ ἐς κλισίας εὐποιήτους ἀφίκανε· </l>
          <l n="76">τὸν δʼ εὗρε σταθμοῖσι λελειμμένον οἶον ἀπʼ ἄλλων </l>
@@ -181,7 +190,7 @@
          <l n="87">εἶχε δʼ ἐπιγναμπτὰς ἕλικας κάλυκάς τε φαεινάς· </l>
          <l n="88">ὅρμοι δʼ ἀμφʼ ἁπαλῇ δειρῇ περικαλλέες ἦσαν. </l>
          <l n="91">
-            <milestone unit="Para" ed="P"/>Ἀγχίσην δʼ ἔρος εἷλεν, ἔπος δέ μιν ἀντίον ηὔδα· </l>
+            <milestone unit="Para" ed="P" />Ἀγχίσην δʼ ἔρος εἷλεν, ἔπος δέ μιν ἀντίον ηὔδα· </l>
          <l n="92"><!-- <milestone type="startquote"/> -->χαῖρε, ἄνασσʼ, ἥ τις μακάρων τάδε δώμαθʼ ἱκάνεις, </l>
          <l n="93">Ἄρτεμις ἢ Λητὼ ἠὲ χρυσέη Ἀφροδίτη </l>
          <l n="94">ἢ Θέμις ἠυγενὴς ἠὲ γλαυκῶπις Ἀθήνη, </l>
@@ -197,9 +206,9 @@
          <l n="104">ποίει δʼ ἐξοπίσω θαλερὸν γόνον, αὐτὰρ ἔμʼ αὐτὸν </l>
          <l n="105">δηρὸν ἐὺ ζώειν καὶ ὁρᾶν φάος ἠελίοιο, </l>
          <l n="106">ὄλβιον ἐν λαοῖς, καὶ γήραος οὐδὸν ἱκέσθαι.<!-- <milestone type="endquote"/> --></l>
-         <milestone unit="card" n="107" ed="P"/>
+         <milestone unit="card" n="107" ed="P" />
          <l n="107">
-            <milestone unit="Para" ed="P"/>τὸν δʼ ἠμείβετʼ ἔπειτα Διὸς θυγάτηρ Ἀφροδίτη· </l>
+            <milestone unit="Para" ed="P" />τὸν δʼ ἠμείβετʼ ἔπειτα Διὸς θυγάτηρ Ἀφροδίτη· </l>
          <l n="108"><!-- <milestone type="startquote"/> -->Ἀγχίση, κύδιστε χαμαιγενέων ἀνθρώπων, </l>
          <l n="109">οὔ τίς τοι θεός εἰμι· τί μʼ ἀθανάτῃσιν ἐίσκεις; </l>
          <l n="110">ἀλλὰ καταθνητή τε, γυνὴ δέ με γείνατο μήτηρ. </l>
@@ -236,11 +245,12 @@
          <l n="141">ταῦτα δὲ ποιήσας δαίνυ γάμον ἱμερόεντα, </l>
          <l n="142">τίμιον ἀνθρώποισι καὶ ἀθανάτοισι θεοῖσιν.<!-- <milestone type="endquote"/> --></l>
          <l n="143">
-            <milestone unit="Para" ed="P"/>ὣς εἰποῦσα θεὰ γλυκὺν ἵμερον ἔμβαλε θυμῷ. </l>
-         <l n="144">Ἀγχίσην δʼ ἔρος εἷλεν ἔπος τʼ ἔφατʼ ἔκ τʼ ὀνόμαζεν· <milestone unit="card" n="145" ed="P"/>
+            <milestone unit="Para" ed="P" />ὣς εἰποῦσα θεὰ γλυκὺν ἵμερον ἔμβαλε θυμῷ. </l>
+         <l n="144">Ἀγχίσην δʼ ἔρος εἷλεν ἔπος τʼ ἔφατʼ ἔκ τʼ ὀνόμαζεν· <milestone unit="card"
+               n="145" ed="P" />
          </l>
          <l n="145">
-            <milestone unit="Para" ed="P"/>
+            <milestone unit="Para" ed="P" />
             <!-- <milestone type="startquote"/> -->εἰ μὲν θνητή τʼ ἐσσι, γυνὴ δέ σε γείνατο μήτηρ, </l>
          <l n="146">Ὀτρεὺς δʼ ἐστὶ πατὴρ ὀνομακλυτός, ὡς ἀγορεύεις, </l>
          <l n="147">ἀθανάτου δὲ ἕκητι διακτόρου ἐνθάδʼ ἱκάνεις </l>
@@ -252,7 +262,7 @@
          <l n="153">βουλοίμην κεν ἔπειτα, γύναι ἐικυῖα θεῇσι, </l>
          <l n="154">σῆς εὐνῆς ἐπιβὰς δῦναι δόμον Ἄιδος εἴσω.<!-- <milestone type="endquote"/> --></l>
          <l n="155">
-            <milestone unit="Para" ed="P"/>ὣς εἰπὼν λάβε χεῖρα· φιλομμειδὴς δʼ Ἀφροδίτη </l>
+            <milestone unit="Para" ed="P" />ὣς εἰπὼν λάβε χεῖρα· φιλομμειδὴς δʼ Ἀφροδίτη </l>
          <l n="156">ἕρπε μεταστρεφθεῖσα κατʼ ὄμματα καλὰ βαλοῦσα </l>
          <l n="157">ἐς λέχος εὔστρωτον, ὅθι περ πάρος ἔσκεν ἄνακτι </l>
          <l n="158">χλαίνῃσιν μαλακῇς ἐστρωμένον· αὐτὰρ ὕπερθεν </l>
@@ -266,7 +276,7 @@
          <l n="166">Ἀγχίσης· ὃ δʼ ἔπειτα θεῶν ἰότητι καὶ αἴσῃ </l>
          <l n="167">ἀθανάτῃ παρέλεκτο θεᾷ βροτός, οὐ σάφα εἰδώς. </l>
          <l n="168">
-            <milestone unit="Para" ed="P"/>ἦμος δʼ ἂψ εἰς αὖλιν ἀποκλίνουσι νομῆες </l>
+            <milestone unit="Para" ed="P" />ἦμος δʼ ἂψ εἰς αὖλιν ἀποκλίνουσι νομῆες </l>
          <l n="169">βοῦς τε καὶ ἴφια μῆλα νομῶν ἐξ ἀνθεμοέντων· </l>
          <l n="170">τῆμος ἄρʼ Ἀγχίσῃ μὲν ἐπὶ γλυκὺν ὕπνον ἔχευε </l>
          <l n="171">νήδυμον, αὐτὴ δὲ χροῒ ἕννυτο εἵματα καλά. </l>
@@ -275,20 +285,20 @@
          <l n="174">κῦρε κάρη· κάλλος δὲ παρειάων ἀπέλαμπεν </l>
          <l n="175">ἄμβροτον, οἷόν τʼ ἐστὶν ἐυστεφάνου Κυθερείης, </l>
          <l n="176">ἐξ ὕπνου τʼ ἀνέγειρεν ἔπος τʼ ἔφατʼ ἔκ τʼ ὀνόμαζεν· </l>
-         <milestone unit="card" n="177" ed="P"/>
+         <milestone unit="card" n="177" ed="P" />
          <l n="177">
-            <milestone unit="Para" ed="P"/>
+            <milestone unit="Para" ed="P" />
             <!-- <milestone type="startquote"/> -->ὄρσεο, Δαρδανίδη· τί νυ νήγρετον ὕπνον ἰαύεις; </l>
          <l n="178">καὶ φράσαι, εἴ τοι ὁμοίη ἐγὼν ἰνδάλλομαι εἶναι, </l>
          <l n="179">οἵην δή με τὸ πρῶτον ἐν ὀφθαλμοῖσι νόησας; <!-- <milestone type="endquote"/> --></l>
          <l n="180">
-            <milestone unit="Para" ed="P"/>ὣς φάθʼ· ὃ δʼ ἐξ ὕπνοιο μάλʼ ἐμμαπέως ὑπάκουσεν. </l>
+            <milestone unit="Para" ed="P" />ὣς φάθʼ· ὃ δʼ ἐξ ὕπνοιο μάλʼ ἐμμαπέως ὑπάκουσεν. </l>
          <l n="181">ὡς δὲ ἴδεν δειρήν τε καὶ ὄμματα κάλʼ Ἀφροδίτης, </l>
          <l n="182">τάρβησέν τε καὶ ὄσσε παρακλιδὸν ἔτραπεν ἄλλῃ· </l>
          <l n="183">ἂψ δʼ αὖτις χλαίνῃ τε καλύψατο καλὰ πρόσωπα </l>
          <l n="184">καί μιν λισσόμενος ἔπεα πτερόεντα προσηύδα· </l>
          <l n="185">
-            <milestone unit="Para" ed="P"/>
+            <milestone unit="Para" ed="P" />
             <!-- <milestone type="startquote"/> -->αὐτίκα σʼ ὡς τὰ πρῶτα, θεά, ἴδον ὀφθαλμοῖσιν, </l>
          <l n="186">ἔγνων ὡς θεὸς ἦσθα· σὺ δʼ οὐ νημερτὲς ἔειπες. </l>
          <l n="187">ἀλλά σε πρὸς Ζηνὸς γουνάζομαι αἰγιόχοιο, </l>
@@ -296,7 +306,7 @@
          <l n="189">ναίειν, ἀλλʼ ἐλέαιρʼ· ἐπεὶ οὐ βιοθάλμιος ἀνὴρ </l>
          <l n="190">γίγνεται, ὅς τε θεαῖς εὐνάζεται ἀθανάτῃσι.<!-- <milestone type="endquote"/> --></l>
          <l n="191">
-            <milestone unit="Para" ed="P"/>τὸν δʼ ἠμείβετʼ ἔπειτα Διὸς θυγάτηρ Ἀφροδίτη· </l>
+            <milestone unit="Para" ed="P" />τὸν δʼ ἠμείβετʼ ἔπειτα Διὸς θυγάτηρ Ἀφροδίτη· </l>
          <l n="192"><!-- <milestone type="startquote"/> -->Ἀγχίση, κύδιστε καταθνητῶν ἀνθρώπων, </l>
          <l n="193">θάρσει, μηδέ τι σῇσι μετὰ φρεσὶ δείδιθι λίην· </l>
          <l n="194">οὐ γάρ τοί τι δέος παθέειν κακὸν ἐξ ἐμέθεν γε, </l>
@@ -308,7 +318,7 @@
          <l n="200">ἀγχίθεοι δὲ μάλιστα καταθνητῶν ἀνθρώπων </l>
          <l n="201">αἰεὶ ἀφʼ ὑμετέρης γενεῆς εἶδός τε φυήν τε. </l>
          <l n="202">
-            <milestone unit="Para" ed="P"/>ἦ τοι μὲν ξανθὸν Γανυμήδεα μητιέτα Ζεὺς </l>
+            <milestone unit="Para" ed="P" />ἦ τοι μὲν ξανθὸν Γανυμήδεα μητιέτα Ζεὺς </l>
          <l n="203">ἥρπασε ὃν διὰ κάλλος, ἵνʼ ἀθανάτοισι μετείη </l>
          <l n="204">καί τε Διὸς κατὰ δῶμα θεοῖς ἐπιοινοχοεύοι, </l>
          <l n="205">θαῦμα ἰδεῖν, πάντεσσι τετιμένος ἀθανάτοισι, </l>
@@ -323,10 +333,11 @@
          <l n="214">ὡς ἔοι ἀθάνατος καὶ ἀγήρως ἶσα θεοῖσιν. </l>
          <l n="215">αὐτὰρ ἐπειδὴ Ζηνὸς ὅ γʼ ἔκλυεν ἀγγελιάων, </l>
          <l n="216">οὐκέτʼ ἔπειτα γόασκε, γεγήθει δὲ φρένας ἔνδον, </l>
-         <l n="217">γηθόσυνος δʼ ἵπποισιν ἀελλοπόδεσσιν ὀχεῖτο. <milestone unit="card" n="218" ed="P"/>
+         <l n="217">γηθόσυνος δʼ ἵπποισιν ἀελλοπόδεσσιν ὀχεῖτο. <milestone unit="card" n="218"
+               ed="P" />
          </l>
          <l n="218">
-            <milestone unit="Para" ed="P"/>ὣς δʼ αὖ Τιθωνὸν χρυσόθρονος ἥρπασεν Ἠώς, </l>
+            <milestone unit="Para" ed="P" />ὣς δʼ αὖ Τιθωνὸν χρυσόθρονος ἥρπασεν Ἠώς, </l>
          <l n="219">ὑμετέρης γενεῆς, ἐπιείκελον ἀθανάτοισι. </l>
          <l n="220">Βῆ δʼ ἴμεν αἰτήσουσα κελαινεφέα Κρονίωνα, </l>
          <l n="221">ἀθάνατόν τʼ εἶναι καὶ ζώειν ἤματα πάντα· </l>
@@ -348,17 +359,18 @@
          <l n="237">τοῦ δʼ ἦ τοι φωνὴ ῥέει ἄσπετος, οὐδέ τι κῖκυς </l>
          <l n="238">ἔσθʼ, οἵη πάρος ἔσκεν ἐνὶ γναμπτοῖσι μέλεσσιν. </l>
          <l n="239">
-            <milestone unit="Para" ed="P"/>οὐκ ἂν ἐγώ γε σὲ τοῖον ἐν ἀθανάτοισιν ἑλοίμην </l>
+            <milestone unit="Para" ed="P" />οὐκ ἂν ἐγώ γε σὲ τοῖον ἐν ἀθανάτοισιν ἑλοίμην </l>
          <l n="240">ἀθάνατόν τʼ εἶναι καὶ ζώειν ἤματα πάντα. </l>
          <l n="241">ἀλλʼ εἰ μὲν τοιοῦτος ἐὼν εἶδός τε δέμας τε </l>
          <l n="242">ζώοις ἡμέτερός τε πόσις κεκλημένος εἴης, </l>
          <l n="243">οὐκ ἂν ἔπειτά μʼ ἄχος πυκινὰς φρένας ἀμφικαλύπτοι. </l>
          <l n="244">νῦν δέ σε μὲν τάχα γῆρας ὁμοίιον ἀμφικαλύψει </l>
          <l n="245">νηλειές, τό τʼ ἔπειτα παρίσταται ἀνθρώποισιν, </l>
-         <l n="246">οὐλόμενον, καματηρόν, ὅτε στυγέουσι θεοί περ. <milestone unit="card" n="247" ed="P"/>
+         <l n="246">οὐλόμενον, καματηρόν, ὅτε στυγέουσι θεοί περ. <milestone unit="card" n="247"
+               ed="P" />
          </l>
          <l n="247">
-            <milestone unit="Para" ed="P"/>αὐτὰρ ἐμοὶ μέγʼ ὄνειδος ἐν ἀθανάτοισι θεοῖσιν </l>
+            <milestone unit="Para" ed="P" />αὐτὰρ ἐμοὶ μέγʼ ὄνειδος ἐν ἀθανάτοισι θεοῖσιν </l>
          <l n="248">ἔσσεται ἤματα πάντα διαμπερὲς εἵνεκα σεῖο, </l>
          <l n="249">οἳ πρὶν ἐμοὺς ὀάρους καὶ μήτιας, αἷς ποτε πάντας </l>
          <l n="250">ἀθανάτους συνέμιξα καταθνητῇσι γυναιξί, </l>
@@ -403,9 +415,9 @@
          <l n="289">εἴρηταί τοι πάντα· σὺ δὲ φρεσὶ σῇσι νοήσας, </l>
          <l n="290">ἴσχεο μηδʼ ὀνόμαινε, θεῶν δʼ ἐποπίζεο μῆνιν.<!-- <milestone type="endquote"/> --></l>
          <l n="291">
-            <milestone unit="Para" ed="P"/>ὣς εἰποῦσʼ ἤιξε πρὸς οὐρανὸν ἠνεμόεντα. </l>
+            <milestone unit="Para" ed="P" />ὣς εἰποῦσʼ ἤιξε πρὸς οὐρανὸν ἠνεμόεντα. </l>
          <l n="292">
-            <milestone unit="Para" ed="P"/>χαῖρε, θεά, Κύπροιο ἐυκτιμένης μεδέουσα· </l>
+            <milestone unit="Para" ed="P" />χαῖρε, θεά, Κύπροιο ἐυκτιμένης μεδέουσα· </l>
          <l n="293">σεῦ δʼ ἐγὼ ἀρξάμενος μεταβήσομαι ἄλλον ἐς ὕμνον. </l>
       </body>
    </text>

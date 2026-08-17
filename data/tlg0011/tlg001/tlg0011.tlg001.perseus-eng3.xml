@@ -69,6 +69,7 @@
                   n="chunk" />
             </citeStructure>
          </refsDecl>
+
          <refsDecl n="CTS" xml:id="CTS-card">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure match=".//milestone[@unit='card']"

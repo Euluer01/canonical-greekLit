@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -28,7 +29,8 @@
             <date type="release">2011-09-12</date>
             <idno type="filename">tlg0035.tlg001.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0035.tlg001.perseus-grc2</idno>
          </publicationStmt>
@@ -47,7 +49,8 @@
                         <date>1916</date>
                      </imprint>
                   </monogr>
-                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/422/mode/2up">Internet Archive</ref>
+                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/422/mode/2up">Internet
+                     Archive</ref>
                </biblStruct>
             </listBibl>
          </sourceDesc>
@@ -58,19 +61,22 @@
          </editorialDecl>
          <p>Text encoded in accordance with the latest EpiDoc standards.</p>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@xml:id" match="./pb" delim=":" unit="page"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -83,7 +89,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0035.tlg001.perseus-grc2">
-         <pb xml:id="p.422"/>
+         <pb xml:id="p.422" />
          <head rend="align(center)">ΕΡΩΣ ΔΡΑΠΕΤΗΣ</head>
          <l n="1">Ἁ Κύπρις τὸν Ἔρωτα τὸν υἱέα μακρὸν ἐβώστρει·</l>
          <l n="2">‘ὅστις ἐνὶ τριόδοισι πλανώμενον εἶδεν Ἔρωτα,</l>
@@ -103,7 +109,7 @@
          <l n="16">καὶ πτερόεις ὡς ὄρνις ἐφίπταται ἄλλον ἐπ’ ἄλλῳ,</l>
          <l n="17">ἀνέρας ἠδὲ γυναῖκας, ἐπὶ σπλάγχνοις δὲ κάθηται.</l>
          <l n="18">τόξον ἔχει μάλα βαιόν, ὑπὲρ τόξω δὲ βέλεμνον,</l>
-         <pb xml:id="p.424"/>
+         <pb xml:id="p.424" />
          <l n="19">τυτθὸν μὲν τὸ βέλεμνον, ἐς αἰθέρα δ’ ἄχρι φορεῖται.</l>
          <l n="20">καὶ χρύσεον περὶ νῶτα φαρέτριον, ἔνδοθι δ’ ἐντὶ </l>
          <l n="21">τοὶ πικροὶ κάλαμοι, τοῖς πολλάκι κἀμὲ τιτρώσκει.</l>

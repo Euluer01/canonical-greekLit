@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release">2011-09-12</date>
             <idno type="filename">tlg0035.tlg003.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0035.tlg003.perseus-grc2</idno>
          </publicationStmt>
@@ -42,7 +44,8 @@
                         <date>1916</date>
                      </imprint>
                   </monogr>
-                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/444/mode/2up">Internet Archive</ref>
+                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/444/mode/2up">Internet
+                     Archive</ref>
                </biblStruct>
             </listBibl>
          </sourceDesc>
@@ -53,19 +56,21 @@
          </editorialDecl>
          <p>Text encoded in accordance with the latest EpiDoc standards</p>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@xml:id" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -77,7 +82,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0035.tlg003.perseus-grc2">
-         <pb xml:id="p.422"/>
+         <pb xml:id="p.422" />
          <head rend="align(center)">ΕΠΙΤΑΦΙΟΣ ΒΙΩΝΟΣ</head>
          <l n="1">Αἴλινά μοι στοναχεῖτε νάπαι καὶ Δώριον ὕδωρ,</l>
          <l n="2">καὶ ποταμοὶ κλαίοιτε τὸν ἱμερόεντα Βίωνα.</l>
@@ -99,7 +104,7 @@
          <l n="18">Βιστονίαις Νύμφαισιν <q>ἀπώλετο Δώριος Ὀρφεύς.</q>
          </l>
          <l n="19" rend="align(center)">ἄρχετε Σικελικαὶ τῶ πένθεος ἄρχετε Μοῖσαι.</l>
-         <pb xml:id="p.446"/>
+         <pb xml:id="p.446" />
          <l n="20">κεῖνος ὁ ταῖς ἀγέλαισιν ἐράσμιος οὐκέτι μέλπει, </l>
          <l n="21">οὐκέτ’ ἐρημαίαισιν ὑπὸ δρυσὶν ἥμενος ᾅδει,</l>
          <l n="22">ἀλλὰ παρὰ Πλουτῆϊ μέλος Ληθαῖον ἀείδει.</l>
@@ -122,7 +127,7 @@
          <l n="39">οὐδὲ τόσον θρήνησεν ἀν’ ὤρεα μακρὰ Χελιδών,</l>
          <l n="40">Ἀλκυόνος δ’ οὐ τόσσον ἐπ’ ἄλγεσιν ἴαχε Κῆϋξ, </l>
          <l n="42">οὐδὲ τόσον γλαυκοῖς ἐνὶ κύμασι κηρύλος ᾆδεν, </l>
-         <pb xml:id="p.448"/>
+         <pb xml:id="p.448" />
          <l n="41">οὐ τόσον ἀῴοισιν ἐν ἄγκεσι παῖδα τὸν Ἀοῦς </l>
          <l n="43">ἱπτάμενος περὶ σᾶμα κινύρατο Μέμνονος ὄρνις, </l>
          <l n="44">ὅσσον ἀποφθιμένοιο κατωδύραντο Βίωνος.</l>
@@ -150,7 +155,7 @@
          <l n="64" rend="align(center)">ἄρχετε Σικελικαὶ τῶ πένθεος ἄρχετε Μοῖσαι.</l>
          <l n="65">πάντα τοι ὦ βούτα συγκάτθανε δῶρα τὰ Μοισᾶν,</l>
          <l n="66">παρθενικᾶν ἐρόεντα φιλήματα, χείλεα παίδων,</l>
-         <pb xml:id="p.450"/>
+         <pb xml:id="p.450" />
          <l n="67">καὶ στυμνοὶ περὶ σῶμα τεὸν κλαίουσιν Ἔρωτες.</l>
          <l n="68">χἀ Κύπρις ποθέει σε πολὺ πλέον ἢ τὸ φίλημα,</l>
          <l n="69">τὸ πρώαν τὸν Ἄδωνιν ἀποθνᾴσκοντα φίλησεν.</l>
@@ -176,7 +181,7 @@
          <l n="89">οὐ τόσον Ἀλκαίῳ περιμύρατο Λέσβος ἐραννά·</l>
          <l n="90">οὐδὲ τόσον ὃν ἀοιδὸν ὀδύρατο Τήϊον ἄστυ· </l>
          <l n="91">σὲ πλέον Ἀρχιλόχοιο ποθεῖ Πάρος· ἀντὶ δὲ Σαπφῶς</l>
-         <pb xml:id="p.452"/>
+         <pb xml:id="p.452" />
          <l n="92">εἰσέτι σεῦ τὸ μέλισμα κινύρεται ἁ Μιτυλάνα.</l>
          <l n="93">εἶ δὲ Συρακοσίοισι Θεόκριτος· αὐτὰρ ἐγώ τοι</l>
          <l n="94">Αὐσονικᾶς ὀδύνας μέλπω μέλος, οὐ ξένος ᾠδᾶς</l>
@@ -200,7 +205,7 @@
          <l n="112">ἢ δοῦναι καλέοντι τὸ φάρμακον;—ἔκψυγεν ᾠδά.</l>
          <l n="113" rend="align(center)">ἄρχετε Σικελικαὶ τῶ πένθεος ἄρχετε Μοῖσαι.</l>
          <l n="114">ἀλλὰ Δίκα κίχε πάντας. ἐγὼ δ’ ἐπὶ πένθεϊ τῷδε</l>
-         <pb xml:id="p.454"/>
+         <pb xml:id="p.454" />
          <l n="115">δακρυχέων τεὸν οἶτον ὀδύρομαι. εἰ δυνάμαν δέ,</l>
          <l n="116">ὡς Ὀρφεὺς καταβὰς ποτὶ Τάρταρον, ὥς ποκ’ Ὀδυσσεύς,</l>
          <l n="117">ὡς πάρος Ἀλκείδας, κἠγὼ τάχ’ ἂν ἐς δόμον ἦνθον</l>
