@@ -70,7 +70,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -124,7 +129,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg006.perseus-eng2">
          <milestone unit="card" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-134)">
             <sp>
                <speaker>Odysseus</speaker>
                <l n="1">This is the headland of sea-washed <placeName key="tgn,7011173">Lemnos</placeName>,
@@ -384,7 +389,7 @@
             </sp>
          </div>
          <milestone unit="card" n="135" />
-         <div type="choral">
+         <div type="choral" n="Parados (135-218)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -516,7 +521,7 @@
             </div>
          </div>
          <milestone unit="card" n="219" />
-         <div type="episode">
+         <div type="episode" n="First Episode (219-675)">
             <stage rend="italic">Enter Philoctetes, on the spectators’ right.</stage>
             <sp>
                <speaker>Philoctetes</speaker>
@@ -746,9 +751,9 @@
                   full. May he who hates the Atreids</l>
                <l n="390">be as dear to the gods as he is to me!</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="391" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -761,164 +766,164 @@
                      Hear it, blessed queen, who rides on bull-slaughtering lions!</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="403" />
-         <div type="episode">
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="403">It seems that you have come to me, friends, well commended by a grief that
-                  matches my own.</l>
-               <l n="405">Your story is in harmony with mine, so that I can recognize the work of
-                  the Atreids and of Odysseus. For well I know that he would put his tongue to any
-                  base tale and to any mischief-making, if thereby he could hope to accomplish
-                  something criminal in the end.</l>
-               <l n="410">No, that is not at all a wonder to me, but rather that the elder Ajax, if
-                  he was there, could bear to see this.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="412">Ah, friend, he was no longer alive—I would never have been plundered like
-                  that while he lived.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="414">What do you say? Is he, too, dead and gone?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="415">Think of him as of one who sees the sun’s light no more.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="416">Oh, no! But the son of Tydeus, and Sisyphus’ offspring that was bought by
-                  Laertes—they will not die, since they do not deserve to live!</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="419">No, indeed, be sure of it. On the contrary, they prosper now</l>
-               <l n="420">—yes, and greatly—in the <placeName key="tgn,5001993">Argive</placeName>
-                  army.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="421">And what of my brave old friend, Nestor of Pylos—is he not alive? He often
-                  checked the crimes of those two, if not others, by his sage counsels.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="424">He has his own troubles now, since Antilochus,</l>
-               <l n="425">the son that was at his side, left him for Hades.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="426">Ah, me! These two, again, whom you have named, are men of whose death I
-                  had least wished to hear. Gods! What are we to look for, when these men have died,
-                  but Odysseus here again lives, when</l>
-               <l n="430">in their place he should have been announced as dead?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="431">The man is a clever wrestler. But even clever schemes, Philoctetes, are
-                  often blocked.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="433">Now, by the gods, tell me—where was Patroclus when you needed him, he whom
-                  your father loved beyond all others?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="435">He, too, was dead. And in a brief maxim I would teach you this: War takes
-                  no evil man by choice, but always the good men.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="438">I will attest to that, and with that very truth in mind, I will ask you
-                  how fares a man of little worth, but sharp of tongue and clever.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="440">Surely the man of whom you ask is no one but Odysseus?</l>
-            </sp>
-            <milestone unit="card" n="441" />
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="441">I did not mean him; there was one Thersites, who could never be content to
-                  speak once and briefly, even though no one wanted him to speak at all. Do you know
-                  if he is alive?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="445">I never saw him, but I heard that he is still alive.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="446">He would be—no evil thing has ever been known to perish. No, the gods take
-                  excellent care of their kind. They find a strange joy in turning back from Hades
-                  all things criminal</l>
-               <l n="450">and crooked, while they are always dispatching the just and the good from
-                  life. How am I to regard these doings? How can I praise them, when in the very act
-                  of praising the ways of the gods, I find that the gods are evil?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="453">I, at least, son of Oetean Poeas, will be on my guard hereafter against <placeName
-                     key="tgn,7002329">Ilium</placeName>
-               </l>
-               <l n="455">and the Atreids, and look on them only from afar. And where the worse man
-                  is stronger than the good, where nobility goes to ruin and the vile man
-                  dominates—among such men I will never make my friends. No, rocky Scyros shall
-                  suffice for me</l>
-               <l n="460">from now on to make me delight in my home. Now to my ship! And you, son of
-                  Poeas, farewell—as best you can, farewell! May the gods free you of your disease,
-                  just as you wish! But we must be going, so that we</l>
-               <l n="465">may set sail whenever the god permits our voyage.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="466" part="I">Are you setting out already, son?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="466a" part="F">Yes, since opportunity bids us watch near our ship for a fair
-                  wind, rather than from afar.</l>
-            </sp>
-            <milestone unit="card" n="468" />
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="468">Now by your father and by your mother, son, by all that you cherish at
-                  home—</l>
-               <l n="470">I solemnly supplicate you, do not leave me alone like this, helpless amid
-                  these miseries in which I live, so harsh as you see, and so numerous as I have
-                  said! Consider me a small side-task. Great is</l>
-               <l n="475">your disgust, well I know, at such a cargo. Yet bear with it all the
-                  same—to noble minds baseness is hateful, and a good deed is glorious. If you
-                  forsake this task, you will have a stain on your honor; but if you perform it,
-                  boy, you will win the prize of highest honor—if I return alive to Oeta’s soil.</l>
-               <l n="480">Come, the trouble will not last one full day. Endure it, take me and throw
-                  me where you will—in the hold, the prow, the stern, wherever I will least annoy my
-                  shipmates. Say yes, by the great god of suppliants, son;</l>
-               <l n="485">be persuaded! I supplicate you at your knees, I am an infirm wretch, and
-                  lame! Do not leave me desolate like this, far from the paths of mankind! No, bring
-                  me safely to your own home, or to <placeName key="tgn,7002677">Euboea</placeName>,
-                  Chalcodon’s seat;</l>
-               <l n="490">and from there it will be no long journey for me to Oeta and the
-                  Trachinian heights, and fair-flowing Spercheius, so that you may show me to my
-                  beloved father, though long I have feared that he may have departed me. For often</l>
-               <l n="495">did I summon him by means of those who came here, sending imploring
-                  prayers that he would himself send a ship and get me safely home. But either he is
-                  dead, or else, as I think is likely, my messengers thought my concerns of little
-                  account and hurried on their homeward voyage.</l>
-               <l n="500">Now, however, since in you I have found one who can be both an escort and
-                  a messenger, save me and show me mercy, keeping in mind that all human destiny is
-                  full of the fear and the danger that prosperity may be followed by its opposite.
-                  He who stands clear of trouble must beware of dangers,</l>
-               <l n="505">and when a man lives at ease, then it is that he must look most closely to
-                  his livelihood, lest it secretly suffer ruin.</l>
-            </sp>
-         </div>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="403">It seems that you have come to me, friends, well commended by a grief that
+                     matches my own.</l>
+                  <l n="405">Your story is in harmony with mine, so that I can recognize the work of
+                     the Atreids and of Odysseus. For well I know that he would put his tongue to any
+                     base tale and to any mischief-making, if thereby he could hope to accomplish
+                     something criminal in the end.</l>
+                  <l n="410">No, that is not at all a wonder to me, but rather that the elder Ajax, if
+                     he was there, could bear to see this.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="412">Ah, friend, he was no longer alive—I would never have been plundered like
+                     that while he lived.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="414">What do you say? Is he, too, dead and gone?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="415">Think of him as of one who sees the sun’s light no more.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="416">Oh, no! But the son of Tydeus, and Sisyphus’ offspring that was bought by
+                     Laertes—they will not die, since they do not deserve to live!</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="419">No, indeed, be sure of it. On the contrary, they prosper now</l>
+                  <l n="420">—yes, and greatly—in the <placeName key="tgn,5001993">Argive</placeName>
+                     army.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="421">And what of my brave old friend, Nestor of Pylos—is he not alive? He often
+                     checked the crimes of those two, if not others, by his sage counsels.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="424">He has his own troubles now, since Antilochus,</l>
+                  <l n="425">the son that was at his side, left him for Hades.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="426">Ah, me! These two, again, whom you have named, are men of whose death I
+                     had least wished to hear. Gods! What are we to look for, when these men have died,
+                     but Odysseus here again lives, when</l>
+                  <l n="430">in their place he should have been announced as dead?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="431">The man is a clever wrestler. But even clever schemes, Philoctetes, are
+                     often blocked.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="433">Now, by the gods, tell me—where was Patroclus when you needed him, he whom
+                     your father loved beyond all others?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="435">He, too, was dead. And in a brief maxim I would teach you this: War takes
+                     no evil man by choice, but always the good men.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="438">I will attest to that, and with that very truth in mind, I will ask you
+                     how fares a man of little worth, but sharp of tongue and clever.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="440">Surely the man of whom you ask is no one but Odysseus?</l>
+               </sp>
+               <milestone unit="card" n="441" />
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="441">I did not mean him; there was one Thersites, who could never be content to
+                     speak once and briefly, even though no one wanted him to speak at all. Do you know
+                     if he is alive?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="445">I never saw him, but I heard that he is still alive.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="446">He would be—no evil thing has ever been known to perish. No, the gods take
+                     excellent care of their kind. They find a strange joy in turning back from Hades
+                     all things criminal</l>
+                  <l n="450">and crooked, while they are always dispatching the just and the good from
+                     life. How am I to regard these doings? How can I praise them, when in the very act
+                     of praising the ways of the gods, I find that the gods are evil?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="453">I, at least, son of Oetean Poeas, will be on my guard hereafter against <placeName
+                        key="tgn,7002329">Ilium</placeName>
+                  </l>
+                  <l n="455">and the Atreids, and look on them only from afar. And where the worse man
+                     is stronger than the good, where nobility goes to ruin and the vile man
+                     dominates—among such men I will never make my friends. No, rocky Scyros shall
+                     suffice for me</l>
+                  <l n="460">from now on to make me delight in my home. Now to my ship! And you, son of
+                     Poeas, farewell—as best you can, farewell! May the gods free you of your disease,
+                     just as you wish! But we must be going, so that we</l>
+                  <l n="465">may set sail whenever the god permits our voyage.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="466" part="I">Are you setting out already, son?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="466a" part="F">Yes, since opportunity bids us watch near our ship for a fair
+                     wind, rather than from afar.</l>
+               </sp>
+               <milestone unit="card" n="468" />
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="468">Now by your father and by your mother, son, by all that you cherish at
+                     home—</l>
+                  <l n="470">I solemnly supplicate you, do not leave me alone like this, helpless amid
+                     these miseries in which I live, so harsh as you see, and so numerous as I have
+                     said! Consider me a small side-task. Great is</l>
+                  <l n="475">your disgust, well I know, at such a cargo. Yet bear with it all the
+                     same—to noble minds baseness is hateful, and a good deed is glorious. If you
+                     forsake this task, you will have a stain on your honor; but if you perform it,
+                     boy, you will win the prize of highest honor—if I return alive to Oeta’s soil.</l>
+                  <l n="480">Come, the trouble will not last one full day. Endure it, take me and throw
+                     me where you will—in the hold, the prow, the stern, wherever I will least annoy my
+                     shipmates. Say yes, by the great god of suppliants, son;</l>
+                  <l n="485">be persuaded! I supplicate you at your knees, I am an infirm wretch, and
+                     lame! Do not leave me desolate like this, far from the paths of mankind! No, bring
+                     me safely to your own home, or to <placeName key="tgn,7002677">Euboea</placeName>,
+                     Chalcodon’s seat;</l>
+                  <l n="490">and from there it will be no long journey for me to Oeta and the
+                     Trachinian heights, and fair-flowing Spercheius, so that you may show me to my
+                     beloved father, though long I have feared that he may have departed me. For often</l>
+                  <l n="495">did I summon him by means of those who came here, sending imploring
+                     prayers that he would himself send a ship and get me safely home. But either he is
+                     dead, or else, as I think is likely, my messengers thought my concerns of little
+                     account and hurried on their homeward voyage.</l>
+                  <l n="500">Now, however, since in you I have found one who can be both an escort and
+                     a messenger, save me and show me mercy, keeping in mind that all human destiny is
+                     full of the fear and the danger that prosperity may be followed by its opposite.
+                     He who stands clear of trouble must beware of dangers,</l>
+                  <l n="505">and when a man lives at ease, then it is that he must look most closely to
+                     his livelihood, lest it secretly suffer ruin.</l>
+               </sp>
+            </div>
          <milestone unit="card" n="507" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -930,318 +935,319 @@
                      he longs, and so escape the god’s just wrath.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="519" />
-         <div type="episode">
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="519">Though now as a casual spectator you are compliant,</l>
-               <l n="520">beware lest later, when filled with his disease by its constant company,
-                  you prove no longer constant to these sentiments.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="522">That will not happen. You will never have just cause to rebuke me for
-                  that!</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="524">Well, then, it would shame me if the stranger were to find</l>
-               <l n="525">me less ready than you are to toil for his good. Come, if it pleases you,
-                  let us sail. Let the man set out at once; our ship, for her part, will carry him,
-                  and will not refuse. Only may the gods give us safe passage from this land, and
-                  from here to whatever destination we choose!</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="530">O day of joy unsurpassed! Most delightful man, and you good sailors! If
-                  only I could show you in deeds what a true friend you have made in me! Let us be
-                  going, my son, when we two have made a solemn farewell to my homeless home inside,
-                  so that you may also learn</l>
-               <l n="535">by what means I sustained my life, and how stout of heart I was born. For
-                  I believe that the mere sight would have deterred any other man but me from
-                  enduring these sufferings. But I have been slowly schooled by necessity to endure
-                  misery. <stage rend="italic">Neoptolemus is about to follow Philoctetes into the
-                  cave.</stage>
-               </l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="539">Wait, let us listen to the two men who are coming!</l>
-               <l n="540">One is a crewman of your ship, the other a stranger. Go in after you hear
-                  their report.</l>
-            </sp>
-            <stage rend="italic">Enter the Merchant, on the spectators’ left, accompanied by a
-               Sailor.</stage>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="542">Son of Achilles, I asked my companion here, when he was guarding your ship
-                  with two others, to tell me where you might be found,</l>
-               <l n="545">since I have chanced upon you unexpectedly by the good fortune of coming
-                  to anchor off this very coast. With no great company I am homeward bound on my
-                  trader’s voyage from <placeName key="tgn,7002329">Ilium</placeName> to Peparethus
-                  with its cluster-laden vines, but when I heard that the sailors</l>
-               <l n="550">were all of your crew, I resolved not to continue my voyage in silence,
-                  without first giving you my news and getting the due reward. You know nothing, I
-                  suspect, of your own affairs: the new designs the Greeks</l>
-               <l n="555">have regarding you, and not only designs, but deeds in progress and no
-                  longer postponed.</l>
-            </sp>
-            <milestone unit="card" n="557" />
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="557">The service you have done me by your forethought, sir, unless I am
-                  unworthy, will remain in my grateful thoughts. But tell me just what the designs
-                  are that you mentioned, so that I may understand</l>
-               <l n="560">what is the strange plan of the Greeks that you know.</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="561">Pursuers are on the way in search of you with a fleet. They are the aged
-                  Phoenix and the sons of Theseus.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="563">To bring me back by force, or through persuasion?</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="564">I do not know; but I have come to tell you what I did hear.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="565">Are Phoenix and his comrades really so eager to do this favor for the
-                  Atreids?</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="567">Be sure that it is being done, and without delay.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="568">Then why was Odysseus not ready to sail on this mission, and bring the
-                  message himself? Or did some fear hold him back?</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="570">Oh, he and the son of Tydeus were readying for pursuit of another man,
-                  just as I was leaving port.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="572">Who is this other after whom Odysseus himself was sailing?</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="573">There was a man. . . . But tell me first who that is over there. And
-                  whatever you say, do speak quietly.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="575">There, sir, before your eyes is the renowned Philoctetes.</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="576">Then do not question me further, but get yourself out of here as quickly
-                  as possible and sail away.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="578">What is he saying, boy? Why does the sailor traffic with you about me in
-                  these dark whispers?</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="580">His meaning yet eludes me. But, whatever he will say, he must say
-                  openly—to you, me and my men here.</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="582">Seed of Achilles, do not stir the army’s resentment against me for saying
-                  what I should not. I receive many benefits for what services I do them, as a poor
-                  man may.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="585">I am the enemy of the Atreids, and this man is my closest friend precisely
-                  because he hates them. Since, then, you have come kindly disposed towards me, you
-                  must not hide from us any part of their plans that you have heard.</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="589" part="I">Beware of what you are doing, boy.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="589a" part="F">I am well aware.</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="590" part="I">I will hold you accountable.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="590a" part="F">Do so, but speak.</l>
-            </sp>
-            <milestone unit="card" n="591" />
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="591">I will. It is after this man that those two whom I named to you, Diomedes
-                  and forceful Odysseus, are sailing. They are oath-bound to retrieve him, either by
-                  winning words or by overpowering might.</l>
-               <l n="595">And all the Achaeans heard this clearly from the mouth Odysseus, for his
-                  confidence of success in this action was higher than his comrade’s.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="598">And for the sake of what did the Atreids after so long a time turn their
-                  thoughts so urgently towards this man,</l>
-               <l n="600">whom they were long since keeping an outcast? What was the desire that
-                  came over them, or what force? What avenging spirit sent by the gods to exact
-                  payment for evil deeds?</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="603">I will inform you of all that, since it seems that you have not heard.
-                  There was a seer of noble birth,</l>
-               <l n="605">a son of Priam, called Helenus, whom that man, out on a solitary night
-                  raid—that deceitful Odysseus, whose repute is all shame and dishonor—captured.
-                  Leading him back in bonds, he displayed him publicly to the Achaeans as his
-                  glorious prey.</l>
-               <l n="610">Helenus then prophesied for them whatever matter they asked, and,
-                  pertaining to <placeName key="perseus,Troy">Troy</placeName>, he foretold that
-                  they would never sack its towers, unless by winning words they should bring
-                  Philoctetes here from the island where he now dwells. And, as soon as he heard the
-                  seer prophecy this, <placeName key="perseus,Laertes">Laertes</placeName>’ son</l>
-               <l n="615">immediately promised that he would bring the man and show him to the
-                  Achaeans. He thought it most likely that he would get him willingly, but, if
-                  unwilling, then by force, and he added that, were he to fail in this, whoever
-                  wished it might sever his head.</l>
-               <l n="620">You have heard everything, boy, and I advise speed for you, and for any
-                  man for whom you care.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="622">Alas! Has he, the utter plague, sworn to fetch me back to the Achaeans by
-                  persuasion? For if that were to happen, I could be persuaded, when dead, to come
-                  back up</l>
-               <l n="625">from Hades into the light, as his father did!</l>
-            </sp>
-            <sp>
-               <speaker>Merchant</speaker>
-               <l n="626">I know nothing about that. But for my part I must return to ship, while
-                  for you I pray that god may help you in every possible way. <stage rend="italic">Exit
-                  Merchant.</stage>
-               </l>
-            </sp>
-            <milestone unit="card" n="628" />
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="628">Now is it not astounding, boy, that Odysseus would ever have expected by
-                  means of soft words</l>
-               <l n="630">to lead me from his ship and show me in the middle of the Greeks? No! I
-                  would sooner listen to that greatest and worst of my enemies, the viper which made
-                  me crippled as I am! But there is nothing that he would not say or dare. And now I
-                  know that he is coming here.</l>
-               <l n="635">Come, son, let us be moving, so that a wide sea may part us from the ship
-                  of Odysseus. Let us go! Good speed in good season brings sleep and rest when toil
-                  is finished.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="639">Then as soon as the wind is not at our prow,</l>
-               <l n="640">we will sail. At present it blows against us.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="641">The sailing is always fair, when you flee trouble.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="642">Not so; this weather is against them also.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="643">No wind stands in the way of pirates who sense a chance to steal and
-                  plunder by force.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="645">Well, if you are so resolved, let us go, once you have taken from the cave
-                  whatever you need or desire most.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="647">Yes, there are some things that I need, though the choice is not large.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="648">What is there that will not be available on board my ship?</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="649">I have a store of a certain herb, whereby I can always</l>
-               <l n="650">best lull this wound, until it is wholly tamed.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="651">Fetch it, then. Now, what else do you wish to take?</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="652">Any of these arrows that may have been forgotten, and may have slipped
-                  away from me, so that I not leave it for another to take.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="654">Is that indeed the famous bow which you hold?</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="655">This, and no other, that I carry in my hand.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="656">Is there any way that I might have a closer view of it—and handle it, and
-                  salute it as divine?</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="658">To you alone, my son, this shall be granted, along with anything else in
-                  my power that is in your interest.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="660">I do indeed crave to touch it, but my craving takes this form: if it is
-                  lawful, I would be glad. If not, think no more of it.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="662">Your words are reverent, son, and your wish is lawful. For you alone have
-                  given to my eyes the light of life and the hope of seeing the land of Oeta, of
-                  seeing</l>
-               <l n="665">my aged father and my friends; and you alone, when I lay beneath the feet
-                  of my enemies, have lifted me beyond their reach. Be bold. The bow shall be yours
-                  to handle and to return to the hand that gave it, and you will be able to boast
-                  aloud that in reward for your goodness, you alone of mortals have touched it.</l>
-               <l n="670">Yes, it was by a good deed that I myself won it.</l>
-            </sp>
-            <sp>
-               <speaker>Neoptolemus</speaker>
-               <l n="671">I am not sorry that I found you and have gained your friendship, since
-                  whoever knows how to render benefit for a benefit received must prove a friend
-                  more valuable than any possession. Please, do go inside.</l>
-            </sp>
-            <sp>
-               <speaker>Philoctetes</speaker>
-               <l n="674a" part="F">Agreed, and I will bring you also.</l>
-               <l n="675">My sickness craves the comfort of your presence. <stage rend="italic">Philoctetes
-                  and Neoptolemus enter the cave.</stage>
-               </l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="519">Though now as a casual spectator you are compliant,</l>
+                  <l n="520">beware lest later, when filled with his disease by its constant company,
+                     you prove no longer constant to these sentiments.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="522">That will not happen. You will never have just cause to rebuke me for
+                     that!</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="524">Well, then, it would shame me if the stranger were to find</l>
+                  <l n="525">me less ready than you are to toil for his good. Come, if it pleases you,
+                     let us sail. Let the man set out at once; our ship, for her part, will carry him,
+                     and will not refuse. Only may the gods give us safe passage from this land, and
+                     from here to whatever destination we choose!</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="530">O day of joy unsurpassed! Most delightful man, and you good sailors! If
+                     only I could show you in deeds what a true friend you have made in me! Let us be
+                     going, my son, when we two have made a solemn farewell to my homeless home inside,
+                     so that you may also learn</l>
+                  <l n="535">by what means I sustained my life, and how stout of heart I was born. For
+                     I believe that the mere sight would have deterred any other man but me from
+                     enduring these sufferings. But I have been slowly schooled by necessity to endure
+                     misery. <stage rend="italic">Neoptolemus is about to follow Philoctetes into the
+                     cave.</stage>
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="539">Wait, let us listen to the two men who are coming!</l>
+                  <l n="540">One is a crewman of your ship, the other a stranger. Go in after you hear
+                     their report.</l>
+               </sp>
+               <stage rend="italic">Enter the Merchant, on the spectators’ left, accompanied by a
+                  Sailor.</stage>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="542">Son of Achilles, I asked my companion here, when he was guarding your ship
+                     with two others, to tell me where you might be found,</l>
+                  <l n="545">since I have chanced upon you unexpectedly by the good fortune of coming
+                     to anchor off this very coast. With no great company I am homeward bound on my
+                     trader’s voyage from <placeName key="tgn,7002329">Ilium</placeName> to Peparethus
+                     with its cluster-laden vines, but when I heard that the sailors</l>
+                  <l n="550">were all of your crew, I resolved not to continue my voyage in silence,
+                     without first giving you my news and getting the due reward. You know nothing, I
+                     suspect, of your own affairs: the new designs the Greeks</l>
+                  <l n="555">have regarding you, and not only designs, but deeds in progress and no
+                     longer postponed.</l>
+               </sp>
+               <milestone unit="card" n="557" />
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="557">The service you have done me by your forethought, sir, unless I am
+                     unworthy, will remain in my grateful thoughts. But tell me just what the designs
+                     are that you mentioned, so that I may understand</l>
+                  <l n="560">what is the strange plan of the Greeks that you know.</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="561">Pursuers are on the way in search of you with a fleet. They are the aged
+                     Phoenix and the sons of Theseus.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="563">To bring me back by force, or through persuasion?</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="564">I do not know; but I have come to tell you what I did hear.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="565">Are Phoenix and his comrades really so eager to do this favor for the
+                     Atreids?</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="567">Be sure that it is being done, and without delay.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="568">Then why was Odysseus not ready to sail on this mission, and bring the
+                     message himself? Or did some fear hold him back?</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="570">Oh, he and the son of Tydeus were readying for pursuit of another man,
+                     just as I was leaving port.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="572">Who is this other after whom Odysseus himself was sailing?</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="573">There was a man. . . . But tell me first who that is over there. And
+                     whatever you say, do speak quietly.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="575">There, sir, before your eyes is the renowned Philoctetes.</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="576">Then do not question me further, but get yourself out of here as quickly
+                     as possible and sail away.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="578">What is he saying, boy? Why does the sailor traffic with you about me in
+                     these dark whispers?</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="580">His meaning yet eludes me. But, whatever he will say, he must say
+                     openly—to you, me and my men here.</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="582">Seed of Achilles, do not stir the army’s resentment against me for saying
+                     what I should not. I receive many benefits for what services I do them, as a poor
+                     man may.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="585">I am the enemy of the Atreids, and this man is my closest friend precisely
+                     because he hates them. Since, then, you have come kindly disposed towards me, you
+                     must not hide from us any part of their plans that you have heard.</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="589" part="I">Beware of what you are doing, boy.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="589a" part="F">I am well aware.</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="590" part="I">I will hold you accountable.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="590a" part="F">Do so, but speak.</l>
+               </sp>
+               <milestone unit="card" n="591" />
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="591">I will. It is after this man that those two whom I named to you, Diomedes
+                     and forceful Odysseus, are sailing. They are oath-bound to retrieve him, either by
+                     winning words or by overpowering might.</l>
+                  <l n="595">And all the Achaeans heard this clearly from the mouth Odysseus, for his
+                     confidence of success in this action was higher than his comrade’s.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="598">And for the sake of what did the Atreids after so long a time turn their
+                     thoughts so urgently towards this man,</l>
+                  <l n="600">whom they were long since keeping an outcast? What was the desire that
+                     came over them, or what force? What avenging spirit sent by the gods to exact
+                     payment for evil deeds?</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="603">I will inform you of all that, since it seems that you have not heard.
+                     There was a seer of noble birth,</l>
+                  <l n="605">a son of Priam, called Helenus, whom that man, out on a solitary night
+                     raid—that deceitful Odysseus, whose repute is all shame and dishonor—captured.
+                     Leading him back in bonds, he displayed him publicly to the Achaeans as his
+                     glorious prey.</l>
+                  <l n="610">Helenus then prophesied for them whatever matter they asked, and,
+                     pertaining to <placeName key="perseus,Troy">Troy</placeName>, he foretold that
+                     they would never sack its towers, unless by winning words they should bring
+                     Philoctetes here from the island where he now dwells. And, as soon as he heard the
+                     seer prophecy this, <placeName key="perseus,Laertes">Laertes</placeName>’ son</l>
+                  <l n="615">immediately promised that he would bring the man and show him to the
+                     Achaeans. He thought it most likely that he would get him willingly, but, if
+                     unwilling, then by force, and he added that, were he to fail in this, whoever
+                     wished it might sever his head.</l>
+                  <l n="620">You have heard everything, boy, and I advise speed for you, and for any
+                     man for whom you care.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="622">Alas! Has he, the utter plague, sworn to fetch me back to the Achaeans by
+                     persuasion? For if that were to happen, I could be persuaded, when dead, to come
+                     back up</l>
+                  <l n="625">from Hades into the light, as his father did!</l>
+               </sp>
+               <sp>
+                  <speaker>Merchant</speaker>
+                  <l n="626">I know nothing about that. But for my part I must return to ship, while
+                     for you I pray that god may help you in every possible way. <stage rend="italic">Exit
+                     Merchant.</stage>
+                  </l>
+               </sp>
+               <milestone unit="card" n="628" />
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="628">Now is it not astounding, boy, that Odysseus would ever have expected by
+                     means of soft words</l>
+                  <l n="630">to lead me from his ship and show me in the middle of the Greeks? No! I
+                     would sooner listen to that greatest and worst of my enemies, the viper which made
+                     me crippled as I am! But there is nothing that he would not say or dare. And now I
+                     know that he is coming here.</l>
+                  <l n="635">Come, son, let us be moving, so that a wide sea may part us from the ship
+                     of Odysseus. Let us go! Good speed in good season brings sleep and rest when toil
+                     is finished.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="639">Then as soon as the wind is not at our prow,</l>
+                  <l n="640">we will sail. At present it blows against us.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="641">The sailing is always fair, when you flee trouble.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="642">Not so; this weather is against them also.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="643">No wind stands in the way of pirates who sense a chance to steal and
+                     plunder by force.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="645">Well, if you are so resolved, let us go, once you have taken from the cave
+                     whatever you need or desire most.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="647">Yes, there are some things that I need, though the choice is not large.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="648">What is there that will not be available on board my ship?</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="649">I have a store of a certain herb, whereby I can always</l>
+                  <l n="650">best lull this wound, until it is wholly tamed.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="651">Fetch it, then. Now, what else do you wish to take?</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="652">Any of these arrows that may have been forgotten, and may have slipped
+                     away from me, so that I not leave it for another to take.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="654">Is that indeed the famous bow which you hold?</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="655">This, and no other, that I carry in my hand.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="656">Is there any way that I might have a closer view of it—and handle it, and
+                     salute it as divine?</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="658">To you alone, my son, this shall be granted, along with anything else in
+                     my power that is in your interest.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="660">I do indeed crave to touch it, but my craving takes this form: if it is
+                     lawful, I would be glad. If not, think no more of it.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="662">Your words are reverent, son, and your wish is lawful. For you alone have
+                     given to my eyes the light of life and the hope of seeing the land of Oeta, of
+                     seeing</l>
+                  <l n="665">my aged father and my friends; and you alone, when I lay beneath the feet
+                     of my enemies, have lifted me beyond their reach. Be bold. The bow shall be yours
+                     to handle and to return to the hand that gave it, and you will be able to boast
+                     aloud that in reward for your goodness, you alone of mortals have touched it.</l>
+                  <l n="670">Yes, it was by a good deed that I myself won it.</l>
+               </sp>
+               <sp>
+                  <speaker>Neoptolemus</speaker>
+                  <l n="671">I am not sorry that I found you and have gained your friendship, since
+                     whoever knows how to render benefit for a benefit received must prove a friend
+                     more valuable than any possession. Please, do go inside.</l>
+               </sp>
+               <sp>
+                  <speaker>Philoctetes</speaker>
+                  <l n="674a" part="F">Agreed, and I will bring you also.</l>
+                  <l n="675">My sickness craves the comfort of your presence. <stage rend="italic">Philoctetes
+                     and Neoptolemus enter the cave.</stage>
+                  </l>
+               </sp>
+            </div>
          </div>
          <milestone unit="card" n="676" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (676-729)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1301,7 +1307,7 @@
             </div>
          </div>
          <milestone unit="card" n="730" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (730-864)">
             <sp>
                <speaker>Neoptolemus</speaker>
                <l n="730">Please, come on. Why so silent with no apparent cause? And why are you
@@ -1533,9 +1539,9 @@
                   from his heel.</l>
                <l n="825">Come, friends, let us leave him in quietness, so that he may fall asleep.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="827" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1583,7 +1589,7 @@
             </div>
          </div>
          <milestone unit="card" n="865" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (865-1216)">
             <sp>
                <speaker>Neoptolemus</speaker>
                <l n="865">Quiet, I say, and do not abandon your wits—the man is opening his eyes and
@@ -1998,9 +2004,9 @@
                   Odysseus and Neoptolemus.</stage>
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1081" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Philoctetes</speaker>
@@ -2206,7 +2212,7 @@
             </div>
          </div>
          <milestone unit="card" n="1218" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1218-1471)">
             <sp>
                <speaker>Chorus</speaker>
                <l n="1218">Long ago I would have left you to go to my ship, had I not seen</l>
