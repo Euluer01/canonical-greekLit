@@ -70,7 +70,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -126,7 +131,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg007.perseus-eng2">
          <milestone unit="card" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-116)">
             <sp>
                <speaker>Oedipus</speaker>
                <l n="1">Child of a blind old man, Antigone, to what region have we come, or to what
@@ -370,7 +375,7 @@
             </sp>
          </div>
          <milestone unit="card" n="118" />
-         <div type="choral">
+         <div type="choral" n="Parados (117-253)">
             <div n="1" type="strophe">
                <stage rend="italic">The Chorus of elders of <placeName key="perseus,Colonus">Colonus</placeName>
                   enters the orchestra.</stage>
@@ -686,7 +691,7 @@
             </div>
          </div>
          <milestone unit="card" n="254" />
-         <div type="episode">
+         <div type="episode" n="First Episode (254-667)">
             <sp>
                <speaker>Chorus</speaker>
                <l n="254">Feel sure, daughter of Oedipus, that we pity you and him alike</l>
@@ -1194,9 +1199,9 @@
                   exits.</stage>
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="510" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1367,282 +1372,283 @@
                      Pure before the law, without knowledge of my act, I have come to this!</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="549" />
-         <div type="episode">
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="549">Look, there comes our lord, Theseus son of Aegeus,</l>
-               <l n="550">at the sound of your voice, to do that for which he was summoned.</l>
-            </sp>
-            <stage rend="italic">Enter Theseus.</stage>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="551">Through hearing from many in the past about the bloody marring of your
-                  sight, I recognized it was you, son of Laius; and now on coming here, through
-                  sight I am more fully certain.</l>
-               <l n="555">For your clothing and that heart-rending face alike assure me that it is
-                  you. And in all compassion I ask you, ill-fated Oedipus, with what petition to the
-                  city and to me have you taken your place here, you and the poor maiden at your
-                  side. Declare it. Dire indeed must be the fortune which you tell,</l>
-               <l n="560">for me to stand aloof from it; since I know that I myself also was reared
-                  in exile, just as you, and that in foreign lands I wrestled with perils to my
-                  life, like no other man.</l>
-               <l n="565">Never, then, would I turn aside from a stranger, such as you are now, or
-                  refuse to help in his deliverance. For I know well that I am a man, and that my
-                  portion of tomorrow is no greater than yours.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="569">Theseus, in a few words your nobleness has come to such a point</l>
-               <l n="570">that I need make only a brief reply. You have said who I am, from what
-                  father I am sprung, and from what land I have come; and so nothing else remains
-                  for me but to speak my wish, and the tale is told.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="575">Then inform me of this very thing, so that I may learn it.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="576">I come to offer you my care-worn body as a gift—not one fine to look on,
-                  but the gains from it are better than beauty.</l>
-            </sp>
-            <milestone unit="card" n="579" />
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="579">And what gain do you claim to have brought?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="580">Later you may learn it—but not yet.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="581">At what time, then, will the benefit become clear?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="582">When I am dead, and you have given me burial.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="583">You crave life’s last service; but for all between you have no memory, or
-                  no care.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="585">Indeed, for by that service I gather in all the rest.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="586">Well then, this favor you crave from me is brief indeed.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="587">Yet take care; the struggle here is no light one. No, indeed.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="588">Do you mean in respect to your sons, or to me?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="589">They will compel you to convey me there to <placeName key="perseus,Thebes">
-                  Thebes</placeName>.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="590">But if you are willing, then exile is not becoming.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="591">No, when I was willing, they refused.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="592">Foolish man, anger amidst woes is not suitable.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="593">When you have heard my story, admonish; till then, forbear.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="594">Speak. I must not pronounce without knowledge.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="595">I have suffered, Theseus, terrible woes upon woes.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="596">Will you speak of the ancient trouble of your race?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="597">No, indeed; all Greeks speak of that.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="598">How, then, do you suffer beyond what is mortal?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="599">The circumstance is this: from my country I have been driven by my own
-                  sons;</l>
-               <l n="600">and I may not return, since I am guilty of a father’s blood.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="602">Why would they have you brought back, if you must dwell apart?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="603">The word of the god will compel them.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="604">What suffering do they fear from the oracles?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="605">That they must be struck down in this land.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="606">And how should bitterness come between them and me?</l>
-            </sp>
-            <milestone unit="card" n="607" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="607">Dearest son of Aegeus, to the gods alone old age and death never come, but
-                  everything else sinks into chaos from time which overpowers all.</l>
-               <l n="610">Earth’s strength decays, and so too the strength of the body; trust dies;
-                  distrust is born; and the same spirit is never steadfast among friends, or between
-                  city and city. For some now, for others tomorrow, sweet feelings turn to bitter,
-                  and then once more to being dear.</l>
-               <milestone unit="para" />
-               <l n="615">And if now the sun shines brightly between <placeName key="perseus,Thebes">
-                  Thebes</placeName> and you, yet time in his course gives birth to days and nights
-                  untold, in which from a small cause they will</l>
-               <l n="620">scatter with the spear today’s pledges of concord. Then one day my
-                  slumbering and buried corpse, cold in death, will drink their warm blood, if Zeus
-                  is still Zeus, and Phoebus, the son of Zeus, speaks clear. <milestone unit="para" />But,
-                  since I would not break silence concerning words that must not spoken, allow me to
-                  cease where I began.</l>
-               <l n="625">Only keep your own pledge good, and never will you say that in vain you
-                  welcomed Oedipus to dwell in this land—if indeed the gods do not deceive me.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="629">Lord, from the first this man has shown a</l>
-               <l n="630">will to bring these words, or similar ones, to completion for our land.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="631">Who, then, would reject the goodwill of such a one? To whom, first, the
-                  hearth of a spear-friend is always available on our side, by reciprocal right;
-                  then too he has come as a suppliant to our gods,</l>
-               <l n="635">paying no small recompense to this land and to me. In reverence for these
-                  claims, I will never spurn his favor, and I will establish a dwelling for him as a
-                  citizen in the land. And if it is the pleasure of the stranger to remain here, I
-                  will command you to</l>
-               <l n="640">protect him; or, if it pleases him, to come with me. This choice or that,
-                  Oedipus, you may take; your desire will be mine.</l>
-            </sp>
-            <milestone unit="card" n="642" />
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="642">O Zeus, may you be good to men such as these!</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="643">What is your wish, then? Will you come to my house?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="644">Yes, I would, if it were right. But this is the place—</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="645">What will you do here? Speak, for I will not hinder you.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="646">—Where I will conquer those who cast me out.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="647">The promised gift of your presence would be great.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="648">It shall be, if you keep your pledge with me.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="649">Have courage concerning me; never will I betray you.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="650">I will not bind you with an oath as if an evil man.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="651">Well, you would win nothing more than by my word.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="652" part="I">What will you do, then?</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="652a" part="F">What is it that you fear?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="653" part="I">Men will come—</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="653a" part="F">But these men here will see to that.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="654" part="I">Beware that if you leave me—</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="654a" part="F">Do not instruct me in my duties.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="655" part="I">Fear constrains me—</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="655a" part="F">My heart feels no fear.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="656" part="I">You do not know the threats—</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="656a" part="F">I know that none will lead you from here against my will. Often
-                  threats have blustered in men’s hearts with words loud and vain; but when the mind
-                  comes to itself once more,</l>
-               <l n="660">the threats have vanished. For those men, too, perhaps—yes, even if in
-                  boldness they have spoken dreadful things of bringing you back, the voyage here
-                  will prove long and hard to sail. Now I exhort you, apart from any decision of
-                  mine, to take heart,</l>
-               <l n="665">if indeed Phoebus has been your escort here. Even if I am not present,
-                  still my name, I know, will shield you from harm.</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="549">Look, there comes our lord, Theseus son of Aegeus,</l>
+                  <l n="550">at the sound of your voice, to do that for which he was summoned.</l>
+               </sp>
+               <stage rend="italic">Enter Theseus.</stage>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="551">Through hearing from many in the past about the bloody marring of your
+                     sight, I recognized it was you, son of Laius; and now on coming here, through
+                     sight I am more fully certain.</l>
+                  <l n="555">For your clothing and that heart-rending face alike assure me that it is
+                     you. And in all compassion I ask you, ill-fated Oedipus, with what petition to the
+                     city and to me have you taken your place here, you and the poor maiden at your
+                     side. Declare it. Dire indeed must be the fortune which you tell,</l>
+                  <l n="560">for me to stand aloof from it; since I know that I myself also was reared
+                     in exile, just as you, and that in foreign lands I wrestled with perils to my
+                     life, like no other man.</l>
+                  <l n="565">Never, then, would I turn aside from a stranger, such as you are now, or
+                     refuse to help in his deliverance. For I know well that I am a man, and that my
+                     portion of tomorrow is no greater than yours.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="569">Theseus, in a few words your nobleness has come to such a point</l>
+                  <l n="570">that I need make only a brief reply. You have said who I am, from what
+                     father I am sprung, and from what land I have come; and so nothing else remains
+                     for me but to speak my wish, and the tale is told.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="575">Then inform me of this very thing, so that I may learn it.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="576">I come to offer you my care-worn body as a gift—not one fine to look on,
+                     but the gains from it are better than beauty.</l>
+               </sp>
+               <milestone unit="card" n="579" />
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="579">And what gain do you claim to have brought?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="580">Later you may learn it—but not yet.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="581">At what time, then, will the benefit become clear?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="582">When I am dead, and you have given me burial.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="583">You crave life’s last service; but for all between you have no memory, or
+                     no care.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="585">Indeed, for by that service I gather in all the rest.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="586">Well then, this favor you crave from me is brief indeed.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="587">Yet take care; the struggle here is no light one. No, indeed.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="588">Do you mean in respect to your sons, or to me?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="589">They will compel you to convey me there to <placeName key="perseus,Thebes">
+                     Thebes</placeName>.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="590">But if you are willing, then exile is not becoming.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="591">No, when I was willing, they refused.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="592">Foolish man, anger amidst woes is not suitable.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="593">When you have heard my story, admonish; till then, forbear.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="594">Speak. I must not pronounce without knowledge.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="595">I have suffered, Theseus, terrible woes upon woes.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="596">Will you speak of the ancient trouble of your race?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="597">No, indeed; all Greeks speak of that.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="598">How, then, do you suffer beyond what is mortal?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="599">The circumstance is this: from my country I have been driven by my own
+                     sons;</l>
+                  <l n="600">and I may not return, since I am guilty of a father’s blood.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="602">Why would they have you brought back, if you must dwell apart?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="603">The word of the god will compel them.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="604">What suffering do they fear from the oracles?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="605">That they must be struck down in this land.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="606">And how should bitterness come between them and me?</l>
+               </sp>
+               <milestone unit="card" n="607" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="607">Dearest son of Aegeus, to the gods alone old age and death never come, but
+                     everything else sinks into chaos from time which overpowers all.</l>
+                  <l n="610">Earth’s strength decays, and so too the strength of the body; trust dies;
+                     distrust is born; and the same spirit is never steadfast among friends, or between
+                     city and city. For some now, for others tomorrow, sweet feelings turn to bitter,
+                     and then once more to being dear.</l>
+                  <milestone unit="para" />
+                  <l n="615">And if now the sun shines brightly between <placeName key="perseus,Thebes">
+                     Thebes</placeName> and you, yet time in his course gives birth to days and nights
+                     untold, in which from a small cause they will</l>
+                  <l n="620">scatter with the spear today’s pledges of concord. Then one day my
+                     slumbering and buried corpse, cold in death, will drink their warm blood, if Zeus
+                     is still Zeus, and Phoebus, the son of Zeus, speaks clear. <milestone unit="para" />But,
+                     since I would not break silence concerning words that must not spoken, allow me to
+                     cease where I began.</l>
+                  <l n="625">Only keep your own pledge good, and never will you say that in vain you
+                     welcomed Oedipus to dwell in this land—if indeed the gods do not deceive me.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="629">Lord, from the first this man has shown a</l>
+                  <l n="630">will to bring these words, or similar ones, to completion for our land.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="631">Who, then, would reject the goodwill of such a one? To whom, first, the
+                     hearth of a spear-friend is always available on our side, by reciprocal right;
+                     then too he has come as a suppliant to our gods,</l>
+                  <l n="635">paying no small recompense to this land and to me. In reverence for these
+                     claims, I will never spurn his favor, and I will establish a dwelling for him as a
+                     citizen in the land. And if it is the pleasure of the stranger to remain here, I
+                     will command you to</l>
+                  <l n="640">protect him; or, if it pleases him, to come with me. This choice or that,
+                     Oedipus, you may take; your desire will be mine.</l>
+               </sp>
+               <milestone unit="card" n="642" />
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="642">O Zeus, may you be good to men such as these!</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="643">What is your wish, then? Will you come to my house?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="644">Yes, I would, if it were right. But this is the place—</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="645">What will you do here? Speak, for I will not hinder you.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="646">—Where I will conquer those who cast me out.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="647">The promised gift of your presence would be great.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="648">It shall be, if you keep your pledge with me.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="649">Have courage concerning me; never will I betray you.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="650">I will not bind you with an oath as if an evil man.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="651">Well, you would win nothing more than by my word.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="652" part="I">What will you do, then?</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="652a" part="F">What is it that you fear?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="653" part="I">Men will come—</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="653a" part="F">But these men here will see to that.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="654" part="I">Beware that if you leave me—</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="654a" part="F">Do not instruct me in my duties.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="655" part="I">Fear constrains me—</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="655a" part="F">My heart feels no fear.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="656" part="I">You do not know the threats—</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="656a" part="F">I know that none will lead you from here against my will. Often
+                     threats have blustered in men’s hearts with words loud and vain; but when the mind
+                     comes to itself once more,</l>
+                  <l n="660">the threats have vanished. For those men, too, perhaps—yes, even if in
+                     boldness they have spoken dreadful things of bringing you back, the voyage here
+                     will prove long and hard to sail. Now I exhort you, apart from any decision of
+                     mine, to take heart,</l>
+                  <l n="665">if indeed Phoebus has been your escort here. Even if I am not present,
+                     still my name, I know, will shield you from harm.</l>
+               </sp>
+            </div>
          </div>
          <milestone unit="card" n="668" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (668-719)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1701,7 +1707,7 @@
             </div>
          </div>
          <milestone unit="card" n="720" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (720-1043)">
             <sp>
                <speaker>Antigone</speaker>
                <l n="720">Land that is praised above all lands, now it is your task to make those
@@ -2311,7 +2317,7 @@
             </sp>
          </div>
          <milestone unit="card" n="1044" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (1044-1097)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2366,14 +2372,17 @@
                      swift-footed deer—I wish that they would come, a double help</l>
                   <l n="1095">to this land and to its people.</l>
                </sp>
+            <!-- </div>
+         </div>
+         <div type="episode"> -->
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="1096">Wandering stranger, you will not say your watcher was a false prophet,
+                     for I see your daughters once again drawing near.</l>
+               </sp>
             </div>
          </div>
-         <div type="episode">
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="1096">Wandering stranger, you will not say your watcher was a false prophet,
-                  for I see your daughters once again drawing near.</l>
-            </sp>
+         <div type="episode" n="Third Episode (1098-1210)">
             <milestone unit="card" n="1099" />
             <sp>
                <speaker>Oedipus</speaker>
@@ -2599,7 +2608,7 @@
             </sp>
          </div>
          <milestone unit="card" n="1211" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1211-1248)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2642,7 +2651,7 @@
             </div>
          </div>
          <milestone unit="card" n="1249" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1249-1555)">
             <sp>
                <speaker>Antigone</speaker>
                <l n="1249">Look, the stranger, it seems, is coming here to us.</l>
@@ -2906,9 +2915,9 @@
                   eyes you do not deserve to suffer. <stage rend="italic">Polyneices exits.</stage>
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1448" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2999,95 +3008,96 @@
                      your friends, to receive just return for benefits. Hasten quickly, lord!</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1500" />
-         <div type="episode">
-            <stage rend="italic">Enter Theseus.</stage>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1500">What din is this that once more rings forth from you all, from my people
-                  as clearly as from the stranger? Can a thunderbolt from Zeus be the cause, or
-                  rushing hail in its fierce onset? When the god sends such a storm, forebodings of
-                  every sort may find a place.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1505">Lord, you have appeared at my desire, and to you some god granted noble
-                  fortune at this coming.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1507">And what new thing has now occurred, son of Laius?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1508">My life hangs in the balance; and I wish to die without cheating you and
-                  this city of the promises I made.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1510">And what is the proof of your fate that you depend on?</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1511">The gods themselves herald the news to me, nor do they cheat me of any of
-                  the appointed signs.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1513">What makes these things clear? Tell me, old man.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1514">The thunder, crash after crash; the lightning, flash after flash,</l>
-               <l n="1515">hurled from the unconquered hand.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1516">I am persuaded, for in much I find you a prophet whose voice is not
-                  false. Then say what must be done.</l>
-            </sp>
-            <sp>
-               <speaker>Oedipus</speaker>
-               <l n="1518">I will expound myself, son of Aegeus, the treasures which will be laid up
-                  for this city, such as age can never hurt.</l>
-               <l n="1520">Immediately, with no hand to guide me, I will lead to the place where I
-                  must die. But as to that place, never reveal it to another man, neither where it
-                  is hidden, nor in what region it lies, so that it may be an eternal defence for
-                  you, better than many shields, better than the spear of neighbors which brings
-                  relief.</l>
-               <milestone unit="para" />
-               <l n="1525">But as for mysteries which speech may not profane, you will learn them
-                  yourself when you come to that place alone, since I cannot declare them either to
-                  any of these people, or even to my own children, though I love them.</l>
-               <l n="1530">Reserve them always to yourself, and when you reach the end of life,
-                  reveal them to your eldest son alone, and let him reveal them to his successor in
-                  turn forever. <milestone unit="para" />In this way you will keep this city
-                  unscathed by the men born of the Dragon’s teeth. Countless cities commit outrage</l>
-               <l n="1535">even though their neighbor commits no sin. For the gods are slow to
-                  punish, yet they are sure, when men scorn holiness and turn to frenzy. Do not
-                  desire this, son of Aegeus! But you know such things as these without my teaching.</l>
-               <milestone unit="para" />
-               <l n="1540">Let us now set forth to that place—the divine summons urges me—and
-                  hesitate no longer.</l>
-               <stage rend="italic">As if suddenly inpired, he moves with slow but firm steps
-                  towards the left of the stage, beckoning the others onward.</stage>
-               <l n="1542">Children, follow me. For now in turn it is I that shine forth wondrously
-                  as a leader for you, as you were your father’s. Onward. Do not touch me, but</l>
-               <l n="1545">allow me unaided to find the sacred tomb where it is my fate to be buried
-                  in this land. <milestone unit="para" />This way, here—come this way! Hermes the
-                  Conductor and the goddess of the dead lead me in this direction. <milestone
-                     unit="para" />Light of day, no light to me, once you were mine,</l>
-               <l n="1550">but now my body feels you for the last time! For now I go to hide the end
-                  of my life in the house of Hades. But you, dearest of strangers, may you yourself
-                  be prosperous, and this land, and your followers. In your prosperity,</l>
-               <l n="1555">remember me in my death, and be fortunate evermore. <stage rend="italic">He
-                  exits, followed by his daughters, Theseus, and attendants.</stage>
-               </l>
-            </sp>
+            <div type="dialogue">
+               <stage rend="italic">Enter Theseus.</stage>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="1500">What din is this that once more rings forth from you all, from my people
+                     as clearly as from the stranger? Can a thunderbolt from Zeus be the cause, or
+                     rushing hail in its fierce onset? When the god sends such a storm, forebodings of
+                     every sort may find a place.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1505">Lord, you have appeared at my desire, and to you some god granted noble
+                     fortune at this coming.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="1507">And what new thing has now occurred, son of Laius?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1508">My life hangs in the balance; and I wish to die without cheating you and
+                     this city of the promises I made.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="1510">And what is the proof of your fate that you depend on?</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1511">The gods themselves herald the news to me, nor do they cheat me of any of
+                     the appointed signs.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="1513">What makes these things clear? Tell me, old man.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1514">The thunder, crash after crash; the lightning, flash after flash,</l>
+                  <l n="1515">hurled from the unconquered hand.</l>
+               </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="1516">I am persuaded, for in much I find you a prophet whose voice is not
+                     false. Then say what must be done.</l>
+               </sp>
+               <sp>
+                  <speaker>Oedipus</speaker>
+                  <l n="1518">I will expound myself, son of Aegeus, the treasures which will be laid up
+                     for this city, such as age can never hurt.</l>
+                  <l n="1520">Immediately, with no hand to guide me, I will lead to the place where I
+                     must die. But as to that place, never reveal it to another man, neither where it
+                     is hidden, nor in what region it lies, so that it may be an eternal defence for
+                     you, better than many shields, better than the spear of neighbors which brings
+                     relief.</l>
+                  <milestone unit="para" />
+                  <l n="1525">But as for mysteries which speech may not profane, you will learn them
+                     yourself when you come to that place alone, since I cannot declare them either to
+                     any of these people, or even to my own children, though I love them.</l>
+                  <l n="1530">Reserve them always to yourself, and when you reach the end of life,
+                     reveal them to your eldest son alone, and let him reveal them to his successor in
+                     turn forever. <milestone unit="para" />In this way you will keep this city
+                     unscathed by the men born of the Dragon’s teeth. Countless cities commit outrage</l>
+                  <l n="1535">even though their neighbor commits no sin. For the gods are slow to
+                     punish, yet they are sure, when men scorn holiness and turn to frenzy. Do not
+                     desire this, son of Aegeus! But you know such things as these without my teaching.</l>
+                  <milestone unit="para" />
+                  <l n="1540">Let us now set forth to that place—the divine summons urges me—and
+                     hesitate no longer.</l>
+                  <stage rend="italic">As if suddenly inpired, he moves with slow but firm steps
+                     towards the left of the stage, beckoning the others onward.</stage>
+                  <l n="1542">Children, follow me. For now in turn it is I that shine forth wondrously
+                     as a leader for you, as you were your father’s. Onward. Do not touch me, but</l>
+                  <l n="1545">allow me unaided to find the sacred tomb where it is my fate to be buried
+                     in this land. <milestone unit="para" />This way, here—come this way! Hermes the
+                     Conductor and the goddess of the dead lead me in this direction. <milestone
+                        unit="para" />Light of day, no light to me, once you were mine,</l>
+                  <l n="1550">but now my body feels you for the last time! For now I go to hide the end
+                     of my life in the house of Hades. But you, dearest of strangers, may you yourself
+                     be prosperous, and this land, and your followers. In your prosperity,</l>
+                  <l n="1555">remember me in my death, and be fortunate evermore. <stage rend="italic">He
+                     exits, followed by his daughters, Theseus, and attendants.</stage>
+                  </l>
+               </sp>
+            </div>
          </div>
          <milestone unit="card" n="1556" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (1556-1578)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -3114,7 +3124,7 @@
             </div>
          </div>
          <milestone unit="card" n="1579" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1579-1779)">
             <sp>
                <speaker>Messenger</speaker>
                <l n="1579">Citizens, my news might be summed up most briefly thus: Oedipus is dead.</l>
@@ -3219,9 +3229,9 @@
                <l n="1668">Not far away; the sounds of mourning show plainly that they are
                   approaching.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1670" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Antigone</speaker>
@@ -3428,63 +3438,64 @@
                   <l n="1750">To what last hope does the divinity now drive us?</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1751" />
-         <div type="episode">
-            <stage rend="italic">Enter Theseus.</stage>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1751">Cease your lament, children! Where the favor of the nether night is
-                  stored up, there is no room for sorrow; divine retribution would follow.</l>
-            </sp>
-            <sp>
-               <speaker>Antigone</speaker>
-               <l n="1754">Son of Aegeus, we supplicate you!</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1755">To obtain what desire, my children?</l>
-            </sp>
-            <sp>
-               <speaker>Antigone</speaker>
-               <l n="1756">We want look with our own eyes upon our father’s tomb.</l>
-            </sp>
-            <sp>
-               <speaker>Theseus</speaker>
-               <l n="1758">It is not right to go there.</l>
-            </sp>
-            <sp>
-               <speaker>Antigone</speaker>
-               <l n="1759">What do you mean, lord, ruler of <placeName key="perseus,Athens">Athens</placeName>
-                  ?</l>
-            </sp>
-            <div type="anapests">
+            <div type="dialogue">
+               <stage rend="italic">Enter Theseus.</stage>
                <sp>
                   <speaker>Theseus</speaker>
-                  <l n="1760">Children, he told me that no one should draw near that place, or
-                     approach with prayer the sacred tomb in which he sleeps. He said that, so long
-                     as I saw to this, I would always keep the country free from pain.</l>
-                  <l n="1765">The divinity heard me say these things, as did the all-seeing Oath of
-                     Zeus.</l>
+                  <l n="1751">Cease your lament, children! Where the favor of the nether night is
+                     stored up, there is no room for sorrow; divine retribution would follow.</l>
                </sp>
                <sp>
                   <speaker>Antigone</speaker>
-                  <l n="1768">If this is his intention, we must be content with it.</l>
-                  <l n="1770">Send us to ancient <placeName key="perseus,Thebes">Thebes</placeName>,
-                     in case we may somehow stop the bloodshed that threatens our brothers.</l>
+                  <l n="1754">Son of Aegeus, we supplicate you!</l>
                </sp>
                <sp>
                   <speaker>Theseus</speaker>
-                  <l n="1773">I will do both this and whatever other favorable service I can, for
-                     you</l>
-                  <l n="1775">and for the newly-departed under the earth, according to the gratitude
-                     I owe. I am bound to spare no pains.</l>
+                  <l n="1755">To obtain what desire, my children?</l>
                </sp>
                <sp>
-                  <speaker>Chorus</speaker>
-                  <l n="1777">Cease; raise up the lamentation no further. These things are
-                     established firm and fixed.</l>
+                  <speaker>Antigone</speaker>
+                  <l n="1756">We want look with our own eyes upon our father’s tomb.</l>
                </sp>
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l n="1758">It is not right to go there.</l>
+               </sp>
+               <sp>
+                  <speaker>Antigone</speaker>
+                  <l n="1759">What do you mean, lord, ruler of <placeName key="perseus,Athens">Athens</placeName>
+                     ?</l>
+               </sp>
+               <div type="anapests">
+                  <sp>
+                     <speaker>Theseus</speaker>
+                     <l n="1760">Children, he told me that no one should draw near that place, or
+                        approach with prayer the sacred tomb in which he sleeps. He said that, so long
+                        as I saw to this, I would always keep the country free from pain.</l>
+                     <l n="1765">The divinity heard me say these things, as did the all-seeing Oath of
+                        Zeus.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Antigone</speaker>
+                     <l n="1768">If this is his intention, we must be content with it.</l>
+                     <l n="1770">Send us to ancient <placeName key="perseus,Thebes">Thebes</placeName>,
+                        in case we may somehow stop the bloodshed that threatens our brothers.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Theseus</speaker>
+                     <l n="1773">I will do both this and whatever other favorable service I can, for
+                        you</l>
+                     <l n="1775">and for the newly-departed under the earth, according to the gratitude
+                        I owe. I am bound to spare no pains.</l>
+                  </sp>
+                  <sp>
+                     <speaker>Chorus</speaker>
+                     <l n="1777">Cease; raise up the lamentation no further. These things are
+                        established firm and fixed.</l>
+                  </sp>
+               </div>
             </div>
          </div>
       </body>
