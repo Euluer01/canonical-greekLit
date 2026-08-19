@@ -69,7 +69,8 @@
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure delim=":"
                   match="div[@type]"
-                  use="@n"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  unit="scene"
                   n="chunk" />
             </citeStructure>
          </refsDecl>
