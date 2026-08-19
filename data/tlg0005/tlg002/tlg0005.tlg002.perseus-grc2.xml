@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release" cert="high" notBefore="2002">Perseus 3.0</date>
             <idno type="filename">tlg0005.tlg002.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0005.tlg002.perseus-grc2</idno>
          </publicationStmt>
@@ -39,7 +41,9 @@
                      <date>1901-1919</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/details/idyllsoftheocrit00theouoft/page/174/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/idyllsoftheocrit00theouoft/page/174/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
@@ -51,22 +55,25 @@
             </correction>
          </editorialDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
                <p>This pointer pattern extracts poem and line.</p>
             </cRefPattern>
-            <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="poem" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts poem.</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure match="div[@type='poem']" use="@n" unit="poem" delim=":"><citeStructure unit="line" delim="." match="l" use="@n"/>
-            </citeStructure></citeStructure>
+               <citeStructure match="div[@type='poem']" use="@n" unit="poem" delim=":" n="chunk">
+               </citeStructure>
+            </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -74,7 +81,8 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="2023-02-03" who="Lisa Cerrato">CTS and EpiDoc conversion review; header updates</change>
+         <change when="2023-02-03" who="Lisa Cerrato">CTS and EpiDoc conversion review; header
+            updates</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
          <change when="2002-07-29" who="AEM">initial markup</change>
@@ -93,7 +101,7 @@
             <l n="5">βωμὸν δʼ αἱμαξεῖ κεραὸς τράγος οὗτος ὁ μαλός, </l>
             <l rend="align(indent)" n="6">τερμίνθου τρώγων ἔσχατον ἀκρεμόνα.</l>
          </div>
-         <pb n="175"/>
+         <pb n="175" />
          <div n="2" type="poem">
             <head rend="align(right)">
                <bibl n="AP 6.177" xml:lang="lat">A. Pal. vi. 177</bibl>
@@ -101,8 +109,8 @@
             <l n="1">Δάφνις ὁ λευκόχρως, ὁ καλᾷ σύριγγι μελίσδων </l>
             <l rend="align(indent)" n="2">βουκολικοὺς ὕμνους, ἄνθετο Πανὶ τάδε, </l>
             <l n="3">τοὺς τρητοὺς δόνακας, τὸ λαγωβόλον, ὀξὺν ἄκοντα, </l>
-            <l rend="align(indent)" n="4">νεβρίδα, τὰν πήραν, ᾇ ποκʼ ἐμαλοφόρει. 
-</l>
+            <l rend="align(indent)" n="4">νεβρίδα, τὰν πήραν, ᾇ ποκʼ ἐμαλοφόρει.
+            </l>
          </div>
          <div n="3" type="poem">
             <head rend="align(right)">
@@ -113,8 +121,8 @@
             <l n="3">ἀγρεύει δέ τυ Πὰν καὶ ὁ τὸν κροκόεντα Πρίηπος </l>
             <l rend="align(indent)" n="4">κισσὸν ἐφʼ ἱμερτῷ κρατὶ καθαπτόμενος, </l>
             <l n="5">ἄντρον ἔσω στείχοντες ὁμόρροθοι. ἀλλὰ τὺ φεῦγε, </l>
-            <l rend="align(indent)" n="6">φεῦγε μεθεὶς ὕπνου κῶμα καταγρόμενον. 
-</l>
+            <l rend="align(indent)" n="6">φεῦγε μεθεὶς ὕπνου κῶμα καταγρόμενον.
+            </l>
          </div>
          <div n="4" type="poem">
             <head rend="align(right)">
@@ -132,14 +140,14 @@
             <l rend="align(indent)" n="10">κόσσυφοι ἀχεῦσιν ποικιλότραυλα μέλη. </l>
             <l n="11">ξουθαὶ δʼ ἀδονίδες μινυρίσμασιν ἀνταχεῦσι </l>
             <l rend="align(indent)" n="12">μέλπουσαι στόμασιν τὰν μελίγαρυν ὄπα.</l>
-            <pb n="176"/>
+            <pb n="176" />
             <l n="13">ἕζεο δὴ τηνεῖ καὶ τῷ χαρίεντι Πριήπῳ </l>
             <l rend="align(indent)" n="14">εὔχεʼ ἀποστέρξαι τοὺς Δάφνιδός με πόθους, </l>
             <l n="15">κεὐθὺς ἐπιρρέξειν χίμαρον καλόν. ἢν δʼ ἀνανεύσῃ, </l>
             <l rend="align(indent)" n="16">τοῦδε τυχὼν ἐθέλω τρισσὰ θύη τελέσαι· </l>
             <l n="17">ῥέξω γὰρ δαμάλαν, λάσιον τράγον, ἄρνα τὸν ἴσχω </l>
-            <l rend="align(indent)" n="18">σακίταν. ἀίοι δʼ εὐμενέως ὁ θεός. 
-</l>
+            <l rend="align(indent)" n="18">σακίταν. ἀίοι δʼ εὐμενέως ὁ θεός.
+            </l>
          </div>
          <div n="5" type="poem">
             <head rend="align(right)">
@@ -150,8 +158,8 @@
             <l n="3">ἀρξεῦμαί τι κρέκειν, ὁ δὲ βουκόλος ἄμμιγα θελξεῖ </l>
             <l rend="align(indent)" n="4">Δάφνις, κηροδέτῳ πνεύματι μελπόμενος. </l>
             <l n="5">ἐγγὺς δὲ στάντες λασίας δρυὸς ἄντρου ὄπισθεν </l>
-            <l rend="align(indent)" n="6">Πᾶνα τὸν αἰγιβάταν ὀρφανίσωμες ὕπνου. 
-</l>
+            <l rend="align(indent)" n="6">Πᾶνα τὸν αἰγιβάταν ὀρφανίσωμες ὕπνου.
+            </l>
          </div>
          <div n="6" type="poem">
             <head rend="align(right)">
@@ -162,8 +170,8 @@
             <l n="3">οἴχεται ἁ χίμαρος, τὸ καλὸν τέκος, οἴχετʼ ἐς Ἅιδαν· </l>
             <l rend="align(indent)" n="4">τραχὺς γὰρ χαλαῖς ἀμφεπίαξε λύκος. </l>
             <l n="5">αἱ δὲ κύνες κλαγγεῦντι· τί τὸ πλέον, ἁνίκα τήνας </l>
-            <l rend="align(indent)" n="6">ὀστίον οὐδὲ τέφρα λείπεται οἰχομένας; 
-</l>
+            <l rend="align(indent)" n="6">ὀστίον οὐδὲ τέφρα λείπεται οἰχομένας;
+            </l>
          </div>
          <div n="7" type="poem">
             <head rend="align(right)">
@@ -174,7 +182,7 @@
             <l n="3">σοὶ μὲν ἕδρα θείοισι μετʼ ἀνδράσι· τὸν δὲ πολῖται </l>
             <l rend="align(indent)" n="4">τιμασεῦντι, πατρὸς μνώμενοι ὡς ἀγαθοῦ.</l>
          </div>
-         <pb n="177"/>
+         <pb n="177" />
          <div n="8" type="poem">
             <head rend="align(right)">
                <bibl n="AP 6.337" xml:lang="lat">A. Pal. vi. 337</bibl>
@@ -184,8 +192,8 @@
             <l n="3">Νικίᾳ, ὅς μιν ἐπʼ ἦμαρ ἀεὶ θυέεσσιν ἱκνεῖται, </l>
             <l rend="align(indent)" n="4">καὶ τόδʼ ἀπʼ εὐώδους γλύψατʼ ἄγαλμα κέδρου, </l>
             <l n="5">Ἠετίωνι χάριν γλαφυρᾶς χερὸς ἄκρον ὑποστὰς </l>
-            <l rend="align(indent)" n="6">μισθόν· ὁ δʼ εἰς ἔργον πᾶσαν ἀφῆκε τέχνην. 
-</l>
+            <l rend="align(indent)" n="6">μισθόν· ὁ δʼ εἰς ἔργον πᾶσαν ἀφῆκε τέχνην.
+            </l>
          </div>
          <div n="9" type="poem">
             <head rend="align(right)">
@@ -194,8 +202,8 @@
             <l n="1">ξεῖνε, Συρακόσιός τοι ἀνὴρ τόδʼ ἐφίεται Ὄρθων· </l>
             <l rend="align(indent)" n="2">χειμερίας μεθύων μηδαμὰ νυκτὸς ἴοις. </l>
             <l n="3">καὶ γὰρ ἐγὼ τοιοῦτον ἔχω πότμον· ἀντὶ δὲ πολλᾶς </l>
-            <l rend="align(indent)" n="4">πατρίδος ὀθνείαν κεῖμαι ἐφεσσάμενος. 
-</l>
+            <l rend="align(indent)" n="4">πατρίδος ὀθνείαν κεῖμαι ἐφεσσάμενος.
+            </l>
          </div>
          <div n="10" type="poem">
             <head rend="align(right)">
@@ -204,8 +212,8 @@
             <l n="1">Ὑμῖν τοῦτο θεαὶ κεχαρισμένον ἐννέα πάσαις </l>
             <l rend="align(indent)" n="2">τὤγαλμα Ξενοκλῆς θῆκε τὸ μαρμάρινον, </l>
             <l n="3">μουσικός· οὐχ ἑτέρως τις ἐρεῖ. σοφίῃ δʼ ἐπὶ τῇδε </l>
-            <l rend="align(indent)" n="4">αἶνον ἔχων Μουσέων οὐκ ἐπιλανθάνεται. 
-</l>
+            <l rend="align(indent)" n="4">αἶνον ἔχων Μουσέων οὐκ ἐπιλανθάνεται.
+            </l>
          </div>
          <div n="11" type="poem">
             <head rend="align(right)">
@@ -218,7 +226,7 @@
             <l n="5">πάντων ὧν ἐπέοικεν ἔχειν τεθνεὼς ὁ σοφιστὴς </l>
             <l rend="align(indent)" n="6">καίπερ ἄκικυς ἐὼν εἶχʼ ἄρα κηδεμόνας.</l>
          </div>
-         <pb n="178"/>
+         <pb n="178" />
          <div n="12" type="poem">
             <head rend="align(right)">
                <bibl n="AP 6.339" xml:lang="lat">A. Pal. vi. 339</bibl>
@@ -226,8 +234,8 @@
             <l n="1">Δημομέλης ὁ χορηγός, ὁ τὸν τρίποδʼ ὦ Διόνυσε </l>
             <l rend="align(indent)" n="2">καὶ σὲ τὸν ἥδιστον θεῶν μακάρων ἀναθείς, </l>
             <l n="3">μέτριος ἦν ἐν πᾶσι, χορῷ δʼ ἐκτήσατο νίκην </l>
-            <l rend="align(indent)" n="4">ἀνδρῶν, καὶ τὸ καλὸν καὶ τὸ προσῆκον ὁρῶν. 
-</l>
+            <l rend="align(indent)" n="4">ἀνδρῶν, καὶ τὸ καλὸν καὶ τὸ προσῆκον ὁρῶν.
+            </l>
          </div>
          <div n="13" type="poem">
             <head rend="align(right)">
@@ -238,8 +246,8 @@
             <l n="3">οἴκῳ ἐν Ἀμφικλέους, ᾧ καὶ τέκνα καὶ βίον εἶχε </l>
             <l rend="align(indent)" n="4">ξυνόν. ἀεὶ δέ σφιν λώιον εἰς ἔτος ἦν </l>
             <l n="5">ἐκ σέθεν ἀρχομένοις ὦ πότνια· κηδόμενοι γὰρ </l>
-            <l rend="align(indent)" n="6">ἀθανάτων αὐτοὶ πλεῖον ἔχουσι βροτοί. 
-</l>
+            <l rend="align(indent)" n="6">ἀθανάτων αὐτοὶ πλεῖον ἔχουσι βροτοί.
+            </l>
          </div>
          <div n="14" type="poem">
             <head rend="align(right)">
@@ -248,8 +256,8 @@
             <l n="1">Ἀστοῖς καὶ ξείνοισιν ἴσον νέμει ἥδε τράπεζα· </l>
             <l rend="align(indent)" n="2">θεὶς ἀνελοῦ ψήφου πρὸς λόγον ἐρχομένης. </l>
             <l n="3">ἄλλός τις πρόφασιν λεγέτω· τὰ δʼ ὀθνεῖα Κάικος </l>
-            <l rend="align(indent)" n="4">χρήματα καὶ νυκτὸς βουλομένοις ἀριθμεῖ. 
-</l>
+            <l rend="align(indent)" n="4">χρήματα καὶ νυκτὸς βουλομένοις ἀριθμεῖ.
+            </l>
          </div>
          <div n="15" type="poem">
             <head rend="align(right)">
@@ -264,7 +272,7 @@
                <q rend="merge">κεῖται τῆς ἱερῆς κοῦφος ὑπὲρ κεφαλῆς.</q>
             </l>
          </div>
-         <pb n="179"/>
+         <pb n="179" />
          <div n="16" type="poem">
             <head rend="align(right)">
                <bibl n="AP 7.662" xml:lang="lat">A. Pal. vii. 662</bibl>
@@ -274,8 +282,8 @@
             <l n="3">δειλαίη, ποθέουσα τὸν εἰκοσάμηνον ἀδελφόν, </l>
             <l rend="align(indent)" n="4">νήπιον ἀστόργου γευσάμενον θανάτου. </l>
             <l n="5">αἰαῖ ἐλεινὰ παθοῦσα Περιστερί, ὡς ἐν ἑτοίμῳ </l>
-            <l rend="align(indent)" n="6">ἀνθρώποις δαίμων θῆκε τὰ λυγρότατα. 
-</l>
+            <l rend="align(indent)" n="6">ἀνθρώποις δαίμων θῆκε τὰ λυγρότατα.
+            </l>
          </div>
          <div n="17" type="poem">
             <head rend="align(right)">
@@ -290,8 +298,8 @@
                <q rend="merge">τῶν πρόσθʼ εἴ τι περισσὸν ᾠδοποιοῦ.</q>
             </l>
             <l n="5">προσθεὶς δὲ χὥτι τοῖς νέοισιν ἅδετο, </l>
-            <l rend="align(indent)" n="6">ἐρεῖς ἀτρεκέως ὅλον τὸν ἄνδρα. 
-</l>
+            <l rend="align(indent)" n="6">ἐρεῖς ἀτρεκέως ὅλον τὸν ἄνδρα.
+            </l>
          </div>
          <div n="18" type="poem">
             <head rend="align(right)">
@@ -308,7 +316,7 @@
             <l n="9">πολλὰ γὰρ πὸτ τὰν ζόαν τοῖς πᾶσιν εἶπε χρήσιμα. </l>
             <l rend="align(indent)" n="10">μεγάλα χάρις αὐτῷ.</l>
          </div>
-         <pb n="180"/>
+         <pb n="180" />
          <div n="19" type="poem">
             <head rend="align(right)">
                <bibl n="AP 13.3" xml:lang="lat">A. Pal. xiii. 3</bibl>
@@ -316,8 +324,8 @@
             <l n="1">Ὁ μουσοποιὸς ἐνθάδʼ Ἱππῶναξ κεῖται. </l>
             <l n="2">εἰ μὲν πονηρός, μὴ ποτέρχευ τῷ τύμβῳ· </l>
             <l n="3">εἰ δʼ ἐσσὶ κρήγυός τε καὶ παρὰ χρηστῶν, </l>
-            <l n="4">θαρσέων καθίζευ, κἢν θέλῃς ἀπόβριξον. 
-</l>
+            <l n="4">θαρσέων καθίζευ, κἢν θέλῃς ἀπόβριξον.
+            </l>
          </div>
          <div n="20" type="poem">
             <head rend="align(right)">
@@ -326,8 +334,8 @@
             <l rend="align(indent)" n="1">Ὁ μικκὸς τόδʼ ἔτευξε τᾷ Θραΐσσᾳ </l>
             <l n="2">Μήδειος τὸ μνᾶμʼ ἐπὶ τᾷ ὁδῷ κἠπέγραψε Κλείτας. </l>
             <l rend="align(indent)" n="3">ἑξεῖ τὰν χάριν ἁ γυνὰ ἀντὶ τήνων, </l>
-            <l n="4">ὧν τὸν κοῦρον ἔθρεψε. τί μάν; ἔτι χρησίμα καλεῖται. 
-</l>
+            <l n="4">ὧν τὸν κοῦρον ἔθρεψε. τί μάν; ἔτι χρησίμα καλεῖται.
+            </l>
          </div>
          <div n="21" type="poem">
             <head rend="align(right)">
@@ -338,8 +346,8 @@
             <l rend="align(indent)" n="3">διῆλθε κἠπὶ νύκτα καὶ πρὸς ἀῶ. </l>
             <l n="4">ἦ ῥά νιν αἱ Μοῖσαι καὶ ὁ Δάλιος ἠγάπευν Ἀπόλλων, </l>
             <l rend="align(indent)" n="5">ὡς ἐμμελής τʼ ἔγεντο κἠπιδέξιος </l>
-            <l rend="align(indent)" n="6">ἔπεά τε ποιεῖν πρὸς λύραν τʼ ἀείδειν. 
-</l>
+            <l rend="align(indent)" n="6">ἔπεά τε ποιεῖν πρὸς λύραν τʼ ἀείδειν.
+            </l>
          </div>
          <div n="22" type="poem">
             <head rend="align(right)">
@@ -354,10 +362,11 @@
             <l n="7">ἔστασʼ ἐνθάδε χάλκεον ποιήσας </l>
             <l n="8">πολλοῖς μησὶν ὄπισθε κἠνιαυτοῖς. </l>
          </div>
-         <pb n="181"/>
+         <pb n="181" />
          <div n="23" type="poem">
-            <head rend="align(center)">ἐκ τῆς Βερενίκης <lb/>
-               <bibl xml:lang="lat">Athenaeus vii. 284.</bibl>
+            <head rend="align(center)">ἐκ τῆς Βερενίκης <lb />
+               <bibl xml:lang="lat">Athenaeus vii.
+               284.</bibl>
             </head>
             <l n="1">Καἴ τις ἀνὴρ αἰτεῖται ἐπαγροσύνην τε καὶ ὄλβον, </l>
             <l n="2">ἐξ ἁλὸς ᾧ ζωή, τὰ δὲ δίκτυα κείνῳ ἄροτρα, </l>
@@ -420,7 +429,7 @@
                <q rend="merge">τοὺς μὲν ἐγὼ δύστηνος ἐμοῖς ἴδον ὀφθαλμοῖσι </q>
             </l>
             <l n="18">
-               <q rend="merge">βαλλομένους ὑπὸ πατρί· τὸ δʼ οὐδʼ ὄναρ ἤλυθεν ἄλλῳ· <pb n="182"/>
+               <q rend="merge">βαλλομένους ὑπὸ πατρί· τὸ δʼ οὐδʼ ὄναρ ἤλυθεν ἄλλῳ· <pb n="182" />
                </q>
             </l>
             <l n="19">
@@ -510,7 +519,7 @@
                <q rend="merge">καρτερὸν ἐν στήθεσσι· σὺ δʼ ἠύτε λείβεται ὕδωρ, </q>
             </l>
             <l n="46">
-               <q rend="merge">νύκτας τε κλαίουσα καὶ ἐκ Διὸς ἤμαθʼ ὁπόσσα. <pb n="183"/>
+               <q rend="merge">νύκτας τε κλαίουσα καὶ ἐκ Διὸς ἤμαθʼ ὁπόσσα. <pb n="183" />
                </q>
             </l>
             <l n="47">
@@ -579,7 +588,7 @@
                <q rend="merge">ἄλγεσι μοχθίζουσαν. ἐπιγνώμων δέ τοί εἰμι </q>
             </l>
             <l n="71">
-               <q rend="merge">ἀσχαλάαν, ὅτε δή γε καὶ εὐφροσύνης κόρος ἐστί. <pb n="184"/>
+               <q rend="merge">ἀσχαλάαν, ὅτε δή γε καὶ εὐφροσύνης κόρος ἐστί. <pb n="184" />
                </q>
             </l>
             <l n="72">
@@ -664,7 +673,7 @@
                <q rend="merge">γυμνὸς ἄτερ χλαίνης τε καὶ εὐμίτροιο χιτῶνος. </q>
             </l>
             <l n="99">
-               <q rend="merge">αὐτὰρ ἐπειδὴ παντὸς ἀφίκετο πρὸς τέλος ἔργου <pb n="185"/>
+               <q rend="merge">αὐτὰρ ἐπειδὴ παντὸς ἀφίκετο πρὸς τέλος ἔργου <pb n="185" />
                </q>
             </l>
             <l n="100">

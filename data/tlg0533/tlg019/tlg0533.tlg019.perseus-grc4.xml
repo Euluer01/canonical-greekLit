@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release" notBefore-custom="2002-07" cert="high">Perseus 3.0</date>
             <idno type="filename">tlg0533.tlg019.perseus-grc4.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0533.tlg019.perseus-grc4</idno>
          </publicationStmt>
@@ -38,10 +40,12 @@
                      <pubPlace>Berlin</pubPlace>
                      <date>1897</date>
                   </imprint>
-                  <!--<biblScope unit="volume"/>-->
+                  <!--<biblScope
+                  unit="volume"/>-->
                </monogr>
                <ref target="https://books.google.com/books?id=cFdJ4Zne23YC">Google Books</ref>
-               <ref target="https://archive.org/details/callimachihymni01moegoog/page/36/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/callimachihymni01moegoog/page/36/mode/2up">Internet
+                  Archive</ref>
                <!-- different pub year -->
             </biblStruct>
          </sourceDesc>
@@ -53,33 +57,41 @@
             </correction>
          </editorialDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState n="chunk" unit="section"/>
+            <refState unit="text" />
+            <refState n="chunk" unit="section" />
          </refsDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState n="chunk" unit="poem"/>
-            <refState unit="line"/>
+            <refState unit="text" />
+            <refState n="chunk" unit="poem" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState n="chunk" unit="poem"/>
-            <refState unit="line"/>
+            <refState unit="text" />
+            <refState n="chunk" unit="poem" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line.</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -90,11 +102,13 @@
          <change when="2023-11-16" who="Lisa Cerrato">EpiDoc and CTS Conversion</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
-         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged version</change>
-         <change when="2011-09-07" who="rsingh04">adding rend=displayNum or displayNumAndIdent to lb tags</change>
+         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged
+            version</change>
+         <change when="2011-09-07" who="rsingh04">adding rend=displayNum or displayNumAndIdent to lb
+            tags</change>
          <change when="2011-09-07" who="rsingh04">moved from Aristotle directory</change>
          <change when="2011-01-15" who="gcrane">alternate editions</change>
-         <change when="2011-01-01" who="gcrane">LB milestones instead of L containers  Q tags added</change>
+         <change when="2011-01-01" who="gcrane">LB milestones instead of L containers Q tags added</change>
          <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
          <change when="2009-05-27" who="rsingh04">added/fixed cvs log keyword</change>
          <change when="2002-07-23" who="AEM">Initial markup</change>
@@ -102,6 +116,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0533.tlg019.perseus-grc4">
+         <pb n="45" />
          <head rend="align(center)">εἰς Λουτρά τῆς Παλλάδος</head>
          <l n="1">Όσσαι λωτροχόοι τᾶς Παλλάδος ἔξιτε πᾶσαι,</l>
          <l n="2">ἔξιτε· τᾶν ἵππων ἄρτι φρυασσομενᾶν</l>
@@ -127,7 +142,7 @@
          <l n="22">πολλάκι τὰν αὐτὰν δὶς μετέθηκε κόμαν·</l>
          <l n="23">ἃ δέ, δὶς ἑξήκοντα διαθρέξασα διαύλως,</l>
          <l n="24">οἷα παρʼ Εὐρώται τοὶ Λακεδαιμόνιοι</l>
-         <pb n="46"/>
+         <pb n="46" />
          <l n="25">ἀστέρες, ἐμπεράμως ἐνετρίψατο λιτὰ βαλοῖσα</l>
          <l n="26">χρίματα, τᾶς ἰδίας ἔκγονα φυταλιᾶς·</l>
          <l n="27">ὦ κῶραι, τὸ δʼ ἔρευθος ἀνέδραμε, πρώιον οἵαν</l>
@@ -141,10 +156,10 @@
          <l n="35">ὠθάνα, φέρεται δὲ καὶ ἁ Διομήδεος ἀσπίς,</l>
          <l n="36">ὡς ἔθος Ἀργείων τοῦτο παλαιότερον·</l>
          <l n="36a">
-            <gap reason="lost" rend=". . . . . . . . . . "/>
+            <gap reason="lost" rend=". . . . . . . . . . " />
          </l>
          <l n="36b">
-            <gap reason="lost" rend=". . . . . . . . . . "/>
+            <gap reason="lost" rend=". . . . . . . . . . " />
          </l>
          <l n="37">Εὐμήδης ἐδίδαξε, τεὶν κεχαρισμένος ἱρεύς·</l>
          <l n="38">ὅς ποκα βωλευτὸν γνοὺς ἐπί οἱ θάνατον</l>
@@ -161,7 +176,7 @@
          <l n="49">καὶ γὰρ δὴ χρυσῶι τε καὶ ἄνθεσιν ὕδατα μείξας</l>
          <l n="50" rend="align(indent)">ἡξεῖ φορβαίων Ἴναχος ἐξ ὀρέων</l>
          <l n="51">τἀθάναι τὸ λοετρὸν ἄγων καλόν. ἀλλὰ Πελασγέ</l>
-         <pb n="47"/>
+         <pb n="47" />
          <l n="52">φράζεο μὴ οὐκ ἐθέλων τὰν βασίλειαν ἴδηις.</l>
          <l n="53">ὅς κεν ἴδηι γυμνὰν τὰν Παλλάδα τὰν πολιοῦχον,</l>
          <l n="54">τὦργος ἐσοψεῖται τοῦτο πανυστάτιον.</l>
@@ -185,7 +200,7 @@
          <l n="72">λῶντο· μεσαμβρινὰ δʼ εἶχʼ ὄρος ἁσυχία.</l>
          <l n="73">ἀμφότεραι λώοντο, μεσαμβριναὶ δʼ ἔσαν ὧραι,</l>
          <l n="74">πολλὰ δʼ ἁσυχία τῆνο κατεῖχεν ὄρος.</l>
-         <milestone unit="card" n="75"/>
+         <milestone unit="card" n="75" />
          <l n="75">Τειρεσίας δʼ ἔτι μῶνος ἁμᾶ κυσὶν ἄρτι γένεια</l>
          <l n="76">περκάζων ἱερὸν χῶρον ἀνεστρέφετο·</l>
          <l n="77">διψάσας δʼ ἄφατόν τι ποτὶ ρῥόον ἤλυθε κράνας,</l>
@@ -198,7 +213,7 @@
             <q rend="merge">ὦ Εὐηρείδα, χαλεπὰν ὁδὸν ἄγαγε δαίμων;</q>
          </l>
          <l n="82">ἃ μὲν ἔφα, παιδὸς δʼ ὄμματα νὺξ ἔλαβεν.</l>
-         <pb n="48"/>
+         <pb n="48" />
          <l n="83">ἑστάκη δʼ ἄφθογγος, ἐκόλλασαν γὰρ ἀνῖαι</l>
          <l n="84">γώνατα καὶ φωνὰν ἔσχεν ἀμηχανία.</l>
          <l n="85">ἁ νύμφα δʼ ἐβόασε <q>τί μοι τὸν κῶρον ἔρεξας</q>
@@ -276,7 +291,7 @@
          <l n="112">
             <q rend="merge">ῥυσεῦνται ξυναὶ τᾶμος ἑκαβολίαι,</q>
          </l>
-         <pb n="49"/>
+         <pb n="49" />
          <l n="113">
             <q rend="merge">ὁπ πόκα κοὐκ ἐθέλων περ ἴδηι χαρίεντα λοετρά</q>
          </l>

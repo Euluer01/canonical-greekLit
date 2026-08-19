@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -16,7 +17,7 @@
             </respStmt>
             <funder n="org:Google">Google Digital Humanities Awards Program</funder>
          </titleStmt>
-         <extent/>
+         <extent />
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -24,7 +25,8 @@
             <date type="release" when="2011-01-24">Perseus 4.0</date>
             <idno type="filename">tlg4081.tlg001.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg4081.tlg001.perseus-grc2</idno>
          </publicationStmt>
@@ -42,7 +44,9 @@
                      <date>1928</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/details/oppiancolluthust00oppiuoft/page/542/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/oppiancolluthust00oppiuoft/page/542/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
@@ -63,16 +67,18 @@
       </encodingDesc>
        -->
       <encodingDesc>
-         <p>The rend="displayNum" attribute on the lb tags is used to indicate that line numbers on the line breaks are intended for display</p>
+         <p>The rend="displayNum" attribute on the lb tags is used to indicate that line numbers on
+            the line breaks are intended for display</p>
          <refsDecl xml:id="CTS" n="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -80,12 +86,13 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="2023-03-21" who="Lisa Cerrato">EpiDoc and CTS conversion; header updates and other text regularization</change>
+         <change when="2023-03-21" who="Lisa Cerrato">EpiDoc and CTS conversion; header updates and
+            other text regularization</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg4081.tlg001.perseus-grc2">
-         <pb xml:id="p.542"/>
+         <pb xml:id="p.542" />
          <l n="1">νύμφαι Τρωιάδες, ποταμοῦ Ξάνθοιο γενέθλη,</l>
          <l n="2">αἳ πλοκάμων κρήδεμνα καὶ ἱερὰ παίγνια χειρῶν</l>
          <l n="3">πολλάκι πατρῴῃσιν ἐπὶ ψαμάθοισι λιποῦσαι</l>
@@ -106,12 +113,13 @@
          <l n="18">νυμφιδίων Πηλῆος ἀειδομένων ὑμεναίων</l>
          <l n="19">Ζηνὸς ἐφημοσύνῃσιν ἐῳνοχόει Γανυμήδης·</l>
          <l n="20">πᾶσα δὲ κυδαίνουσα θεῶν ἔσπευδε γενέθλη </l>
-         <pb xml:id="p.544"/>
+         <pb xml:id="p.544" />
          <l n="21">αὐτοκασιγνήτην λευκώλενον Ἀμφιτρίτης,</l>
          <l n="22">Ζεὺς μὲν ἀπʼ Οὐλύμποιο, Ποσειδάων δὲ θαλάσσης·</l>
          <l n="23">ἐκ δὲ Μελισσήεντος ἀπʼ εὐόδμου Ἑλικῶνος</l>
          <l n="24">Μουσάων λιγύφωνον ἄγων χορὸν ἦλθεν Ἀπόλλων·</l>
-         <l n="25">39 χρυσείοις <note resp="editor" anchored="true" xml:lang="eng">Il. 39, 40 were transposed to precede 25 by Graefe.</note> δʼ ἑκάτερθε τινασσόμενος πλοκάμοισι </l>
+         <l n="25">39 χρυσείοις <note resp="editor" anchored="true" xml:lang="eng">Il. 39, 40 were
+            transposed to precede 25 by Graefe.</note> δʼ ἑκάτερθε τινασσόμενος πλοκάμοισι </l>
          <l n="26">40 βότρυς ἀκερσεκόμης ζεφύρῳ στυφελίζετο χαίτης.</l>
          <l n="27">τὸν δὲ μεθʼ ὡμάρτησε κασιγνήτη Διὸς Ἥρη.</l>
          <l n="28">οὐδʼ αὐτὴ βασίλεια καὶ ἁρμονίης Ἀφροδίτη</l>
@@ -135,7 +143,7 @@
          <l n="46">πολλάκι δʼ εὐλάιγγος ἀπὸ κλισμοῖο θοροῦσα</l>
          <l n="47">ἵστατο καὶ παλίνορσος ἐφέζετο· χειρὶ δὲ γαίης</l>
          <l n="48">οὔδεϊ κόλπον ἄραξε καὶ οὐκ ἐφράσσατο πέρην·</l>
-         <pb xml:id="p.546"/>
+         <pb xml:id="p.546" />
          <l n="49">ἤθελεν ὀρφναίων γυάλων κληῖδας ἀνεῖσα,</l>
          <l n="50">ἐκ χθονίων Τιτῆνας ἀναστήσασα βερέθρων </l>
          <l n="51">οὐρανὸν ὑψιμέδοντος ἀιστῶσαι Διὸς ἕδρην.</l>
@@ -162,7 +170,7 @@
          <l n="72">παῖδα Πάριν Πριάμοιο, τὸν ἀγλαὸν ἡβητῆρα,</l>
          <l n="73">Τροίης βουκολέοντα κατʼ οὔρεα, τέκνον, ἀκούεις,</l>
          <l n="74">κείνῳ μῆλον ὄπαζε· διακρίνειν δὲ θεάων</l>
-         <pb xml:id="p.548"/>
+         <pb xml:id="p.548" />
          <l n="75">κέκλεο καὶ βλεφάρων ξυνοχὴν καὶ κύκλα προσώπων. </l>
          <l n="76">ἡ δὲ διακρινθεῖσα φέρειν περίπυστον ὀπώρην</l>
          <l n="77">κάρτος ἀρειοτέρης ἐχέτω καὶ κόσμον Ἐρώτων.</l>
@@ -171,7 +179,9 @@
          <l n="80">εἰς ὁδὸν ἡγεμόνευε καὶ οὐκ ἀμέλησε θεάων. </l>
          <l n="81">πᾶσα δὲ λωιτέρην καὶ ἀμείνονα δίζετο μορφήν.</l>
          <l n="82">Κύπρις μὲν δολόμητις ἀναπτύξασα καλύπτρην</l>
-         <l n="83">λαὶ περόνην θυόεντα <note resp="editor" anchored="true" xml:lang="eng">So inferior MSS., making <foreign xml:lang="grc">θυόεντα</foreign> feminine; <foreign xml:lang="grc">πτερὸν ἐθυνθέντα</foreign> M.</note> διαστήσασα κομάων</l>
+         <l n="83">λαὶ περόνην θυόεντα <note resp="editor" anchored="true" xml:lang="eng">So
+            inferior MSS., making <foreign xml:lang="grc">θυόεντα</foreign> feminine; <foreign
+                  xml:lang="grc">πτερὸν ἐθυνθέντα</foreign> M.</note> διαστήσασα κομάων</l>
          <l n="84">χρυσῷ μὲν πλοκάμους, χρυσῷ δʼ ἐστέψατο χαίτην.</l>
          <l n="85">τοῖα δὲ παῖδας Ἔρωτας ἀνηΰτησεν ἰδοῦσα· </l>
          <l n="86">ἐγγὺς ἀγών, φίλα τέκνα· περιπτύξασθε τιθήνην.</l>
@@ -193,7 +203,7 @@
          <l n="102">ἄρτι μὲν Ἰδαίην ὑπερέδραμον οὔρεος ἄκρην,</l>
          <l n="103">ἔνθα λιθοκρήδεμνον ὑπὸ πρηῶνος ἐρίπνην</l>
          <l n="104">κουρίζων ἐνόμευε Πάρις πατρώια μῆλα.</l>
-         <pb xml:id="p.550"/>
+         <pb xml:id="p.550" />
          <l n="105">ποιμαίνων δʼ ἑκάτερθεν ἐπὶ προχοῇσιν ἀναύρου </l>
          <l n="106">νόσφι μέν ἀγρομένων ἀγέλην πεμπάζετο ταύρων,</l>
          <l n="107">νόσφι δὲ βοσκομένων διεμέτρεε πώεα μήλων·</l>
@@ -225,7 +235,7 @@
          <l n="133">ἦκα διακρίνειν πειρήσατο κάλλος ἑκάστης.</l>
          <l n="134">δέρκετο μὲν γλαυκῶν βλεφάρων σέλας, ἔδρακε δειρὴν</l>
          <l n="135">χρυσῷ δαιδαλέην, ἐφράσσατο κόσμον ἑκάστης </l>
-         <pb xml:id="p.552"/>
+         <pb xml:id="p.552" />
          <l n="136">καὶ πιέρνης μετόπισθε καὶ αὐτῶν ἴχνια ταρσῶν.</l>
          <l n="137">χειρῶν μειδιόωντα δίκης προπάροιθεν ἑλοῦσα</l>
          <l n="138">τοῖον Ἀλεξάνδρῳ μυθήσατο μῦθον Ἀθήνη·</l>
@@ -255,7 +265,7 @@
          <l n="162">ἔργα μόθων οὐκ οἶδα· τί γὰρ σακέων Ἀφροδίτῃ;</l>
          <l n="163">ἀγλαΐῃ πολὺ μᾶλλον ἀριστεύουσι γυναῖκες.</l>
          <l n="164">ἀντὶ μὲν ἠνορέης ἐρατὴν παράκοιτιν ὀπάσσω,</l>
-         <pb xml:id="p.554"/>
+         <pb xml:id="p.554" />
          <l n="165">ἀντὶ δὲ κοιρανίης Ἑλένης ἐπιβήσεο λέκτρων· </l>
          <l n="166">νυμφίον ἀθρήσει σε μετὰ Τροίην Λακεδαίμων</l>
          <l n="167">οὔπω μῦθος ἔληγεν, ὁ δʼ ἀγλαὸν ὤπασε μῆλον,</l>
@@ -283,7 +293,7 @@
          <l n="189">κεκριμένων μελέων οὔτʼ ἄρσενες οὔτε γυναῖκες;</l>
          <l n="190">τοῖον ἐφυβρίζουσα προσέννεπε Κύπρις Ἀθήνην, </l>
          <l n="191">ὣς ἡ μὲν πτολίπορθον ἀέθλιον ἔλλαχε μορφῆς</l>
-         <pb xml:id="p.556"/>
+         <pb xml:id="p.556" />
          <l n="192">Ἥρην ἐξελάσασα καὶ ἀσχαλόωσαν Ἀθήνην·</l>
          <l n="193">ἱμείρων δʼ ὑπʼ ἔρωτι καὶ ἣν οὐκ εἶδε διώκων,</l>
          <l n="194">Δύσπαρις ἀθροίσας ἐπὶ δάσκιον ἤγαγεν ὕλην</l>
@@ -307,7 +317,7 @@
          <l n="212">Ἰσμαρίδος μεθέηκε παραπλώων στόμα λίμνης,</l>
          <l n="213">αἶψα δὲ Θρηικίοιο μετʼ οὔρεα Παγγαίοιο</l>
          <l n="214">Φυλλίδος ἀντέλλοντα φιλήνορος ἔδρακε τύμβον</l>
-         <pb xml:id="p.558"/>
+         <pb xml:id="p.558" />
          <l n="215">καὶ δρόμον ἐννεάκυκλον ἀλήμονος εἶδε κελεύθου, </l>
          <l n="216">ἔνθα διαστείχουσα κινύρεο, Φυλλίς, ἀκοίτην</l>
          <l n="217">δεχνυμένη παλίνορσον ἀπήμονα Δημοφόωντα,</l>
@@ -337,7 +347,7 @@
          <l n="241">οἶκον Ἀμυκλαίοιο παραγνάμψας Ὑακίνθου,</l>
          <l n="242">ὅν ποτε κουρίζοντα σὺν Ἀπόλλωνι νοήσας</l>
          <l n="243">δῆμος Ἀμυκλαίων ἠγάσσατο, μὴ Διὶ Λητὼ</l>
-         <pb xml:id="p.560"/>
+         <pb xml:id="p.560" />
          <l n="244">κυσαμένη καὶ τοῦτον ἀνήγαγεν· αὐτὰρ Ἀπόλλων</l>
          <l n="245">οὐκ ἐκάη Ζεφύρῳ ζηλήμονι παῖδα φυλάσσων. </l>
          <l n="246">γαῖα δὲ δακρύσαντι χαριζομένη βασιλῆι</l>
@@ -364,7 +374,7 @@
          <l n="267">ὀψὲ δὲ θαμβήσασα τόσην ἀνενείκατο φωνήν·</l>
          <l n="268">ξεῖνε, πόθεν τελέθεις; ἐρατὸν γένος εἰπὲ καὶ ἡμῖν.</l>
          <l n="269">ἀγλαΐην μὲν ἔοικας ἀριζήλῳ βασιλῆι,</l>
-         <pb xml:id="p.562"/>
+         <pb xml:id="p.562" />
          <l n="270">ἀλλὰ τεὴν οὐκ οἶδα παρʼ Ἀργείοισι γενέθλην. </l>
          <l n="271">πᾶσαν Δευκαλίωνος ἀμύμονος οἶδα γενέθλην·</l>
          <l n="272">οὐ Πύλον ἠμαθόεσσαν ἔχεις, Νηλήιον οὖδας,</l>
@@ -395,7 +405,7 @@
          <l n="297">ἧς ἕνεκεν τέτληκα καὶ οἴδματα τόσσα περῆσαι.</l>
          <l n="298">δεῦρο γάμον κεράσωμεν, ἐπεὶ Κυθέρεια κελεύει·</l>
          <l n="299">μή με καταισχύνειας, ἐμὴν <add>μὴ</add> Κύπριν ἐλέγξῃς.</l>
-         <pb xml:id="p.564"/>
+         <pb xml:id="p.564" />
          <l n="300">οὐκ ἐρέω· τί δὲ τόσσον ἐπισταμένην σε διδάξω; </l>
          <l n="301">οἶσθα γάρ, ὡς Μενέλαος ἀνάλκιδός ἐστι γενέθλης·</l>
          <l n="302">οὐ τοῖαι γεγάασιν ἐν Ἀργείοισι γυναῖκες,</l>
@@ -426,7 +436,7 @@
          <l n="327">φόρτον ἄγων ἔσπευδεν ἐς Ἴλιον ἰωχμοῖο.</l>
          <l n="328">Ἑρμιόνη δʼ ἀνέμοισιν ἀπορρίψασα καλύπτρην</l>
          <l n="329">ἱσταμένης πολύδακρυς ἀνέστενεν ἠριγενείης,</l>
-         <pb xml:id="p.566"/>
+         <pb xml:id="p.566" />
          <l n="330">πολλάκι δʼ ἀμφιπόλους θαλάμων ἔκτοσθε λαβοῦσα, </l>
          <l n="331">ὀξύτατον βοόωσα τόσην ἀνενείκατο φωνήν·</l>
          <l n="332">παῖδες, πῆ με λιποῦσα πολύστονον ᾤχετο μήτηρ,</l>
@@ -458,7 +468,7 @@
          <l n="358">ἀλλὰ πολυπρέμνων ξυλόχων ὑπὸ δάσκιον ὕλην</l>
          <l n="359">δένδρεα παπτήνασα καὶ αὐτῶν μέχρι πετήλων</l>
          <l n="360">σὸν δέμας οὐκ ἐνόησα· καὶ οὐ νεμεσίζομαι ὕλῃ. </l>
-         <pb xml:id="p.568"/>
+         <pb xml:id="p.568" />
          <l n="361">μὴ διεροῖς στονόεντος ἐπʼ Εὐρώταο ῥεέθροις</l>
          <l n="362">νηχομένην ἐκάλυψεν ὑποβρυχίην σε γαλήνη;</l>
          <l n="363">ἀλλὰ καὶ ἐν ποταμοῖσι καὶ ἐν πελάγεσσι θαλάσσης</l>
@@ -488,7 +498,7 @@
          <l n="387">ὣς ἡ μὲν πολύδακρυς ἐς ἠέρα φωνήσασα,</l>
          <l n="388">μητέρα μαστεύουσα, μάτην ἐπλάζετο κούρη.</l>
          <l n="389">καὶ Κικόνων πτολίεθρα καὶ Αἰολίδος πόρον Ἕλλης</l>
-         <pb xml:id="p.570"/>
+         <pb xml:id="p.570" />
          <l n="390">Δαρδανίης λιμένεσσιν ὁ νυμφίος ἤγαγε νύμφην. </l>
          <l n="391">πυκνὰ δὲ τίλλε κόμην, χρυσέην δʼ ἔρριψε καλύπτρην</l>
          <l n="392">Κασσάνδρη νεόφοιτον ἀπʼ ἀκροπόληος ἰδοῦσα.</l>
