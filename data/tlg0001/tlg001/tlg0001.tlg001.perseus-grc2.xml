@@ -69,7 +69,7 @@
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure match=".//milestone[@unit='card']"
-                     unit="card" delim=":" use="@n" n="chunk" />
+                     unit="card" delim="." use="@n" n="chunk" />
                </citeStructure>
             </citeStructure>
          </refsDecl>
