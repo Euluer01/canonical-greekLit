@@ -49,24 +49,31 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-      <editorialDecl>
-         <quotation marks="none" />
-      </editorialDecl>
-      <refsDecl n="CTS">
-         <cRefPattern n="line" matchPattern="(\w+)"
-            replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
-            <p>This pointer pattern extracts lines</p>
-         </cRefPattern>
-      </refsDecl>
-      <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base">
-            <citeStructure unit="scene" delim=":"
-               match="div[@type]"
-               use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-               n="chunk" />
-            <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-         </citeStructure>
-      </refsDecl>
+         <editorialDecl>
+            <quotation marks="none" />
+         </editorialDecl>
+         <refsDecl n="CTS">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+               <p>This pointer pattern extracts lines</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <catRef scheme="#perseus-genre" target="#drama-line" />
@@ -1450,7 +1457,7 @@
                         anchored="true" n="839" resp="Smyth">This passage has also been taken to
                      deprecate as inauspicious the previous ode (720 ff.) because it was sung during
                      the combat of the brothers: <q type="written">It was for a tomb I framed my
-                     song when, inspired by frenzy, I heard (prophetically) . . . Ill-omened,
+                           song when, inspired by frenzy, I heard (prophetically) . . . Ill-omened,
                      indeed, the contest of the spear to such an accompaniment.</q>
                      </note>
                   </l>

@@ -67,7 +67,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -101,7 +106,7 @@
             <p>Ἄγγελος</p>
             <p>Ἄρτεμις</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-120)">
             <sp>
                <speaker>Ἀφροδίτη</speaker>
                <l rend="indent" n="1">Πολλὴ μὲν ἐν βροτοῖσι κοὐκ ἀνώνυμος,</l>
@@ -311,7 +316,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="121" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Parados (121-169)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -391,7 +396,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="170" unit="card" />
-         <div type="episode">
+         <div type="episode" n="First Episode (170-524)">
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1042,7 +1047,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="525" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (525-564)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1105,7 +1110,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="565" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (656-731)">
             <sp>
                <speaker>Φαίδρα</speaker>
                <l rend="indent" n="565">σιγήσατ’, ὦ γυναῖκες· ἐξειργάσμεθα.</l>
@@ -1442,7 +1447,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="732" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (732-775)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1512,7 +1517,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="776" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (776-1101)">
             <sp>
                <speaker>Τροφός</speaker>
                <stage rend="italic">ἔσωθεν</stage>
@@ -2066,7 +2071,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="1102" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1102-1150)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός Κυνηγῶν</speaker>
@@ -2138,7 +2143,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="1151" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1151-1267)">
             <sp>
                <speaker>Χορός</speaker>
                <l rend="indent" n="1151"> — καὶ μὴν ὀπαδὸν Ἱππολύτου τόνδ’ εἰσορῶ</l>
@@ -2302,7 +2307,7 @@
             </sp>
          </div>
          <milestone resp="perseus" n="1268" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Choral Interlude (1268-1282)">
             <div type="lyric">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2323,7 +2328,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="1283" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1283-1466)">
             <div type="anapests">
                <sp>
                   <speaker>Ἄρτεμις</speaker>

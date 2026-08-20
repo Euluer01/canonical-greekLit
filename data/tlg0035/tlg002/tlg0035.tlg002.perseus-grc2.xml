@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -28,7 +29,8 @@
             <date type="release">2011-09-12</date>
             <idno type="filename">tlg0035.tlg002.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0035.tlg002.perseus-grc2</idno>
          </publicationStmt>
@@ -47,7 +49,8 @@
                         <date>1916</date>
                      </imprint>
                   </monogr>
-                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/428/mode/2up">Internet Archive</ref>
+                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/428/mode/2up">Internet
+                     Archive</ref>
                </biblStruct>
             </listBibl>
          </sourceDesc>
@@ -58,19 +61,21 @@
          </editorialDecl>
          <p>Text encoded in accordance with the latest EpiDoc standards.</p>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@xml:id" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -83,7 +88,7 @@
    </teiHeader>
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0035.tlg002.perseus-grc2">
-         <pb xml:id="p.422"/>
+         <pb xml:id="p.422" />
          <head rend="align(center)">ΕΥΡΩΠΗ</head>
          <l n="1">Εὐρώπῃ ποτὲ Κύπρις ἐπὶ γλυκὺν ἧκεν ὄνειρον,</l>
          <l n="2">νυκτὸς ὅτε τρίτατον λάχος ἵσταται, ἐγγύθι δ’ ἠώς,</l>
@@ -108,7 +113,7 @@
          <l n="21">
             <q>τίς μοι τοιάδε φάσματ’ ἐπουρανίων προΐηλεν;</q>
          </l>
-         <pb xml:id="p.430"/>
+         <pb xml:id="p.430" />
          <l n="22">
             <q rend="merge">ποῖοί με στρωτῶν λεχέων ὕπερ ἐν θαλάμοισιν</q>
          </l>
@@ -148,7 +153,7 @@
          <l n="46">φοιταλέη δὲ πόδεσσιν ἐφ’ ἁλμυρὰ βαῖνε κέλευθα,</l>
          <l n="47">νηχομένῃ ἰκέλη· κυανῆ δ’ ἐτέτυκτο θάλασσα.</l>
          <l n="48">δοιοὶ δ’ ἕστασαν ὑψοῦ ἐπ’ ὀφρύος αἰγιαλοῖο</l>
-         <pb xml:id="p.432"/>
+         <pb xml:id="p.432" />
          <l n="49">φῶτες ἀολλήδην, θηεῦντο δὲ ποντοπόρον βοῦν.</l>
          <l n="50">ἐν δ’ ἦν Ζεὺς Κρονίδης ἐπαφώμενος ἠρέμα χερσὶ </l>
          <l n="51">πόρτιος Ἰναχίης, τὴν δ’ ἑπταπόρῳ παρὰ Νείλῳ</l>
@@ -175,7 +180,7 @@
          <l n="72" rend="align(indent)">οὐ μὴν δηρὸν ἔμελλεν ἐπ’ ἄνθεσι θυμὸν ἰαίνειν,</l>
          <l n="73">οὐδ’ ἄρα παρθενίην μίτρην ἄχραντον ἔρυσθαι.</l>
          <l n="74">ἦ γὰρ δὴ Κρονίδης ὥς μιν φράσαθ̓, ὡς ἐόλητο</l>
-         <pb xml:id="p.434"/>
+         <pb xml:id="p.434" />
          <l n="75">θυμὸν ἀνωίστοισιν ὑποδμηθεὶς βελέεσσι</l>
          <l n="76">Κύπριδος, ἣ μούνη δύναται καὶ Ζῆνα δαμάσσαι.</l>
          <l n="77">δὴ γὰρ ἀλευόμενός τε χόλον ζηλήμονος Ἥρης</l>
@@ -203,7 +208,7 @@
          <l n="99">ὤκλασε δὲ πρὸ ποδοῖιν, ἐδέρκετο δ’ Εὐρώπειαν</l>
          <l n="100">αὐχέν’ ἐπιστρέψας καί οἱ πλατὺ δείκνυε νῶτον. </l>
          <l n="101" rend="align(indent)">ἣ δὲ βαθυπλοκάμοισι μετέννεπε παρθενικῇσι·</l>
-         <pb xml:id="p.436"/>
+         <pb xml:id="p.436" />
          <l n="102" rend="align(indent)">
             <q>δεῦθ’ ἑτάραι φίλιαι καὶ ὁμήλικες, ὄφρ’ ἐπὶ τῷδε</q>
          </l>
@@ -243,7 +248,7 @@
          <l n="126">τῇ μὲν ἔχεν ταύρου δολιχὸν κέρας, ἐν χερὶ δ’ ἄλλῃ</l>
          <l n="127">εἴρυε πορφυρέην κολποῦ πτύχα, ὄφρά κε μή μιν</l>
          <l n="128">δεύοι ἐφελκόμενον πολιῆς ἁλὸς ἄσπετον ὕδωρ.</l>
-         <pb xml:id="p.438"/>
+         <pb xml:id="p.438" />
          <l n="129">κολπώθη δ’ ὤμοισι πέπλος βαθὺς Εὐρωπείης,</l>
          <l n="130">ἱστίον οἷά τε νηός, ἐλαφρίζεσκε δὲ κούρην. </l>
          <l n="131" rend="align(indent)">ἣ δ’ ὅτε δὴ γαίης ἀπὸ πατρίδος ἦεν ἄνευθεν,</l>
@@ -314,7 +319,7 @@
          <l n="156">
             <q rend="merge">ταῦρος· ἐπεὶ δύναμαί γε φανήμεναι ὅττι θέλοιμι.</q>
          </l>
-         <pb xml:id="p.440"/>
+         <pb xml:id="p.440" />
          <l n="157">
             <q rend="merge">σὸς δὲ πόθος μ’ ἀνέηκε τόσην ἅλα μετρήσασθαι</q>
          </l>
