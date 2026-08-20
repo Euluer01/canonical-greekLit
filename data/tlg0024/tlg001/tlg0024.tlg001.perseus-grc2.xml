@@ -72,7 +72,7 @@
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
-                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+                  <citeStructure delim=" " match="pb" use="@xml:id"/>
                </citeStructure>
             </citeStructure>
          </refsDecl>
@@ -92,8 +92,8 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0024.tlg001.perseus-grc2">
-         <pb xml:id="p.2"/>
          <div n="1" type="book">
+            <pb xml:id="p.2"/>
             <l n="1">σοί, μάκαρ, ἀείδω, γαίης ἐρικυδὲς ἔρεισμα,</l>
             <l n="2">φέγγος ἐνυαλίων πολυήρατον Αἰνεαδάων,</l>
             <l n="3">Αὐσονίου Ζηνὸς γλυκερὸν θάλος, Ἀντωνῖνε·</l>
