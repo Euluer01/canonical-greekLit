@@ -67,7 +67,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -101,7 +106,7 @@
             <p>Chorus of Aged Athenians</p>
          </note>
          <pb xml:id="p.153" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-72)">
             <stage rend="italic">Scene.—Before the altar of Zeus at Marathon.</stage>
             <sp>
                <speaker>Iolaus</speaker>
@@ -208,7 +213,7 @@
             </sp>
          </div>
          <milestone n="73" unit="card" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="Parados (73-117)">
             <sp>
                <speaker>Chorus</speaker>
                <l resp="perseus" rend="indent" n="73">Hark, hark! What cry is this that rises near
@@ -312,7 +317,7 @@
             </div>
          </div>
          <milestone n="111" unit="card" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="First Episode (111-352)">
             <sp>
                <speaker>Chorus</speaker>
                <l resp="perseus" rend="indent" n="111">Thou then, shouldst have told the monarch of
@@ -721,7 +726,7 @@
          </div>
          <pb xml:id="p.164" />
          <milestone n="353" unit="card" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (353-380)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -765,7 +770,7 @@
             </div>
          </div>
          <milestone n="381" unit="card" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (381-607)">
             <sp>
                <speaker>Iolaus</speaker>
                <l resp="perseus" rend="indent" n="381">My son, why, prithee, art thou returned with
@@ -1053,7 +1058,7 @@
             </sp>
          </div>
          <milestone n="608" unit="card" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (608-629)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1086,7 +1091,7 @@
             </div>
          </div>
          <milestone n="630" unit="card" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (630-747)">
             <sp>
                <speaker>Servant (of Hyllus)</speaker>
                <l resp="perseus" rend="indent" n="630">All hail, ye children! Where is aged Iolaus?
@@ -1477,7 +1482,7 @@
             </div>
          </div>
          <milestone n="748" unit="card" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (748-783)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1533,7 +1538,7 @@
             </div>
          </div>
          <milestone n="784" unit="card" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (784-891)">
             <sp>
                <speaker>Servant (of Hyllus)</speaker>
                <l resp="perseus" rend="indent" n="784">Mistress, the message that I bring is very
@@ -1684,7 +1689,7 @@
             </sp>
          </div>
          <milestone n="892" unit="card" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (892-927)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1736,7 +1741,7 @@
             </div>
          </div>
          <milestone n="928" unit="card" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="Exodus (928-1055)">
             <sp>
                <speaker>Messenger</speaker>
                <l resp="perseus" rend="indent" n="928">Mistress, though thine eyes see him, yet will

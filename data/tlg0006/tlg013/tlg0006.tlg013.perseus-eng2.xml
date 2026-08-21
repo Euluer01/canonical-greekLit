@@ -69,7 +69,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -129,7 +134,7 @@
          </note>
          <note resp="perseus" place="inline">The work has been heavily adapted and modernized from
             the Coleridge translation.</note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-122)">
             <milestone resp="perseus" unit="card" n="1" />
             <stage rend="italic">On the sea-shore, in the Tauric Chersonese, near a temple of
                Artemis.</stage>
@@ -298,7 +303,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="123" />
-         <div type="choral">
+         <div type="choral" n="Parados (123-235)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -402,7 +407,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="236" />
-         <div type="episode">
+         <div type="episode" n="First Episode (236-391)">
             <sp>
                <speaker>Chorus Leader</speaker>
                <l rend="indent" resp="perseus" n="236">Look, here comes a herdsman, who has left the
@@ -612,7 +617,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="392" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (392-466)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -678,7 +683,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="456" />
-         <div type="episode">
+         <div type="episode" n="First Scene (456-1088)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus Leader</speaker>
@@ -2210,7 +2215,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1089" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (1089-1152)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2276,7 +2281,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1153" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (1153-1233)">
             <sp>
                <speaker>Thoas</speaker>
                <l rend="indent" resp="perseus" n="1153">Where is the gate-keeper of this temple, the
@@ -2699,7 +2704,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1234" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1234-1283)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2746,7 +2751,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1284" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1284-1498)">
             <sp>
                <speaker>Messenger</speaker>
                <l rend="indent" resp="perseus" n="1284">O you that guard the temple and stand by the
