@@ -58,11 +58,16 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
-                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  use="@n"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -115,7 +120,7 @@
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2">
          <milestone n="1" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-63)">
             <sp>
                <speaker>Πυθιάς</speaker>
                <l n="1">πρῶτον μὲν εὐχῇ τῇδε πρεσβεύω θεῶν</l>
@@ -190,6 +195,8 @@
                <l n="62">ἰατρόμαντις δʼ ἐστὶ καὶ τερασκόπος</l>
                <l n="63">καὶ τοῖσιν ἄλλοις δωμάτων καθάρσιος.</l>
             </sp>
+         </div>
+         <div type="episode" n="First Episode (64-142)">
             <milestone n="64" unit="card" />
             <sp>
                <speaker>Ἀπόλλων</speaker>
@@ -320,7 +327,7 @@
             </sp>
          </div>
          <milestone n="143" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (143-178)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -390,7 +397,7 @@
             </div>
          </div>
          <milestone n="178" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Second Episode, Part I (179-243)">
             <sp>
                <speaker>Ἀπόλλων</speaker>
                <l n="179">ἔξω, κελεύω, τῶνδε δωμάτων τάχος</l>
@@ -523,6 +530,8 @@
                <l n="242">πρόσειμι δῶμα καὶ βρέτας τὸ σόν, θεά.</l>
                <l n="243">αὐτοῦ φυλάσσων ἀναμένω τέλος δίκης.</l>
             </sp>
+         </div>
+         <div type="choral" n="Parados (244-275)">
             <sp>
                <speaker>Χορός</speaker>
                <l n="244">εἶεν· τόδʼ ἐστὶ τἀνδρὸς ἐκφανὲς τέκμαρ.</l>
@@ -564,6 +573,8 @@
                <l n="274">ἔνερθε χθονός,</l>
                <l n="275">δελτογράφῳ δὲ πάντʼ ἐπωπᾷ φρενί.</l>
             </sp>
+         </div>
+         <div type="episode" n="Second Episode Part II (276-320)">
             <milestone n="276" unit="card" />
             <sp>
                <speaker>Ὀρέστης</speaker>
@@ -594,9 +605,9 @@
                <l n="297">ἔλθοι—κλύει δὲ καὶ πρόσωθεν ὢν θεός—</l>
                <l n="298">ὅπως γένοιτο τῶνδʼ ἐμοὶ λυτήριος.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone n="299" unit="card" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>Χορός</speaker>
                <l n="299">οὔτοι σʼ Ἀπόλλων οὐδʼ Ἀθηναίας σθένος</l>
@@ -628,6 +639,8 @@
                   <l n="320">αὐτῷ τελέως ἐφάνημεν.</l>
                </sp>
             </div>
+         </div>
+         <div type="choral" n="Second Stasimon (321-395)">
             <milestone n="321" unit="card" />
             <div n="1" type="strophe">
                <sp>
@@ -831,7 +844,7 @@
             </div>
          </div>
          <milestone n="397" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (396-489)">
             <sp>
                <speaker>Ἀθηνᾶ</speaker>
                <l n="397">πρόσωθεν ἐξήκουσα κληδόνος βοὴν</l>
@@ -1002,7 +1015,7 @@
             </sp>
          </div>
          <milestone n="490" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (490-565)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1128,7 +1141,7 @@
             </div>
          </div>
          <milestone n="566" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (566-777)">
             <sp>
                <speaker>Ἀθηνᾶ</speaker>
                <l n="566">κήρυσσε, κῆρυξ, καὶ στρατὸν κατειργαθοῦ,</l>
@@ -1540,7 +1553,7 @@
             </sp>
          </div>
          <milestone n="778" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (778-891)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1692,7 +1705,7 @@
                </sp>
             </div>
          </div>
-         <div type="episode">
+         <div type="episode" n="Fifth Episode (892-915)">
             <sp>
                <speaker>Χορός</speaker>
                <l n="892">ἄνασσʼ Ἀθάνα, τίνα με φὴς ἔχειν ἕδραν;</l>
@@ -1756,7 +1769,7 @@
             </sp>
          </div>
          <milestone n="916" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Exodus (916-1047)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1927,27 +1940,28 @@
                   <l n="1020">ψεσθε συμφορὰς βίου.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone n="1021" unit="card" />
-         <div type="episode">
-            <sp>
-               <speaker>Ἀθηνᾶ</speaker>
-               <l n="1021">αἰνῶ τε μύθους τῶνδε τῶν κατευγμάτων</l>
-               <l n="1022">πέμψω τε φέγγει λαμπάδων σελασφόρων</l>
-               <l n="1023">εἰς τοὺς ἔνερθε καὶ κατὰ χθονὸς τόπους</l>
-               <l n="1024">ξὺν προσπόλοισιν, αἵτε φρουροῦσιν βρέτας</l>
-               <l n="1025">τοὐμὸν δικαίως. ὄμμα γὰρ πάσης χθονὸς</l>
-               <l n="1026">Θησῇδος ἐξίκοιτʼ ἂν εὐκλεὴς λόχος</l>
-               <l n="1027">παίδων, γυναικῶν, καὶ στόλος πρεσβυτίδων.</l>
-               <l n="1028">
-                  <milestone ed="P" unit="para" />φοινικοβάπτοις ἐνδυτοῖς ἐσθήμασι</l>
-               <l n="1029">τιμᾶτε, καὶ τὸ φέγγος ὁρμάσθω πυρός,</l>
-               <l n="1030">ὅπως ἂν εὔφρων ἥδʼ ὁμιλία χθονὸς</l>
-               <l n="1031">τὸ λοιπὸν εὐάνδροισι συμφοραῖς πρέπῃ.</l>
-            </sp>
-         </div>
+         <!-- <div type="episode"> -->
+            <div type="dialogue">
+               <sp>
+                  <speaker>Ἀθηνᾶ</speaker>
+                  <l n="1021">αἰνῶ τε μύθους τῶνδε τῶν κατευγμάτων</l>
+                  <l n="1022">πέμψω τε φέγγει λαμπάδων σελασφόρων</l>
+                  <l n="1023">εἰς τοὺς ἔνερθε καὶ κατὰ χθονὸς τόπους</l>
+                  <l n="1024">ξὺν προσπόλοισιν, αἵτε φρουροῦσιν βρέτας</l>
+                  <l n="1025">τοὐμὸν δικαίως. ὄμμα γὰρ πάσης χθονὸς</l>
+                  <l n="1026">Θησῇδος ἐξίκοιτʼ ἂν εὐκλεὴς λόχος</l>
+                  <l n="1027">παίδων, γυναικῶν, καὶ στόλος πρεσβυτίδων.</l>
+                  <l n="1028">
+                     <milestone ed="P" unit="para" />φοινικοβάπτοις ἐνδυτοῖς ἐσθήμασι</l>
+                  <l n="1029">τιμᾶτε, καὶ τὸ φέγγος ὁρμάσθω πυρός,</l>
+                  <l n="1030">ὅπως ἂν εὔφρων ἥδʼ ὁμιλία χθονὸς</l>
+                  <l n="1031">τὸ λοιπὸν εὐάνδροισι συμφοραῖς πρέπῃ.</l>
+               </sp>
+            </div>
          <milestone n="1032" unit="card" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Προπομποί</speaker>
