@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release" notBefore-custom="2002-07" cert="high">Perseus 3.0</date>
             <idno type="filename">tlg0533.tlg003.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0533.tlg003.perseus-grc2</idno>
          </publicationStmt>
@@ -38,10 +40,14 @@
                      <pubPlace>Berlin</pubPlace>
                      <date>1897</date>
                   </imprint>
-                  <!--<biblScope unit="volume"/>-->
+                  <!--<biblScope
+                  unit="volume"/>-->
                </monogr>
-               <ref target="https://books.google.com/books?id=cFdJ4Zne23YC%26amp;pg=PA55#v=onepage%26amp;q%26amp;f=false">Google Books</ref>
-               <ref target="https://archive.org/details/callimachihymni01moegoog/page/46/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://books.google.com/books?id=cFdJ4Zne23YC%26amp;pg=PA55#v=onepage%26amp;q%26amp;f=false">Google
+                  Books</ref>
+               <ref target="https://archive.org/details/callimachihymni01moegoog/page/46/mode/2up">Internet
+                  Archive</ref>
                <!-- different pub year -->
             </biblStruct>
          </sourceDesc>
@@ -67,22 +73,28 @@
 <refState unit="line"/>
 </refsDecl>-->
          <refsDecl n="CTS">
-            <cRefPattern matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])" n="line">
+            <cRefPattern matchPattern="(\w+).(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])"
+               n="line">
                <p>This pointer pattern extracts epigram and line</p>
             </cRefPattern>
-            <cRefPattern matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" n="epigram">
+            <cRefPattern matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"
+               n="epigram">
                <p>This pointer pattern epigram</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure match="div[@type='epigram']" use="@n" unit="epigram" delim=":"><citeStructure unit="line" delim="." match="l" use="@n"/>
-            </citeStructure></citeStructure>
+               <citeStructure match="div[@type='epigram']" use="@n" unit="epigram" delim=":">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
+               </citeStructure>
+            </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -93,11 +105,13 @@
          <change when="2023-11-13" who="Lisa Cerrato">EpiDoc and CTS Conversion</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
-         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged version</change>
-         <change when="2011-09-07" who="rsingh04">adding rend=displayNum or displayNumAndIdent to lb tags</change>
+         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged
+            version</change>
+         <change when="2011-09-07" who="rsingh04">adding rend=displayNum or displayNumAndIdent to lb
+            tags</change>
          <change when="2011-09-07" who="rsingh04">moved from Aristotle directory</change>
          <change when="2011-01-15" who="gcrane">alternate editions</change>
-         <change when="2011-01-01" who="gcrane">LB milestones instead of L containers  Q tags added</change>
+         <change when="2011-01-01" who="gcrane">LB milestones instead of L containers Q tags added</change>
          <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
          <change when="2009-05-27" who="rsingh04">added/fixed cvs log keyword</change>
          <change when="2002-07-23" who="AEM">Initial markup</change>
@@ -127,7 +141,8 @@
             <l n="10" rend="align(indent)">ἔστρεφον εὐρείηι παῖδες ἐνὶ τριόδωι.</l>
             <l n="11">
                <q rend="single">κείνων ἔρχεο</q> φησὶ <q rend="single">μετʼ ἴχνια</q>. χὠ μὲν ἐπέστη</l>
-            <l n="12" rend="align(indent)">πλησίον· οἳ δʼ ἔλεγον· <q rend="single">τὴν κατὰ σαυτὸν ἔλα</q>.</l>
+            <l n="12" rend="align(indent)">πλησίον· οἳ δʼ ἔλεγον· <q rend="single">τὴν κατὰ σαυτὸν
+               ἔλα</q>.</l>
             <l n="13">ταῦτʼ ἀίων δ̔ ξεῖνος ἒφείσατο μείζονος οἴκου</l>
             <l n="14" rend="align(indent)">δράξασθαι παίδων κληδόνι συνθέμενος.</l>
             <l n="15">τὴν δʼ ὀλίγην ὡς κεῖνος ἐς οἰκίον ἤγετο νύμφην,</l>
@@ -141,7 +156,7 @@
             <l n="5">αἱ δὲ τεαὶ ζώουσιν ἀηδόνες, ἧισιν ὁ πάντων</l>
             <l n="6" rend="align(indent)">ἁρπακτὴς Ἀίδης οὐκ ἐπὶ χεῖρα βαλεῖ. </l>
          </div>
-         <pb n="56"/>
+         <pb n="56" />
          <div n="4" type="epigram">
             <l n="1">Τίμων, οὐ γὰρ ἔτʼ ἐσσί, τί τοι, σκότος ἢ φάος ἐχθρόν;</l>
             <l n="2" rend="align(indent)">
@@ -173,7 +188,7 @@
             <l n="3">ἄλλων μὲν κήρυκες ἐπὶ βραχὺν οὔνομα καιρόν</l>
             <l n="4" rend="align(indent)">φθέγξονται, κείνου δʼ Ἑλλὰς ἀεὶ σοφίην. </l>
          </div>
-         <pb n="57"/>
+         <pb n="57" />
          <div n="8" type="epigram">
             <l n="1">μικρή τις Διόνυσε καλὰ πρήσσοντι ποιητῆι</l>
             <l n="2" rend="align(indent)">ῥῆσις· ὃ μὲν <q rend="single">νικῶ</q> φησὶ τὸ μακρότατον,</l>
@@ -210,7 +225,7 @@
             <l n="2" rend="align(indent)">
                <q rend="single; merge">τοῦ Κυρηναίου παῖδα λέγεις, ὑπʼ ἐμοί.</q>
             </l>
-            <pb n="58"/>
+            <pb n="58" />
             <l n="3">ὦ Χαρίδα, τί τὰ νέρθε; <q rend="single">πολὺ σκότος</q>. αἱ δʼ ἄνοδοι τί;</l>
             <l n="4" rend="align(indent)">
                <q rend="single">ψεῦδος</q>. ὁ δὲ Πλούτων; <q rend="single">μῦθος</q>. ἀπωλόμεθα.</l>
@@ -249,7 +264,7 @@
          <div n="18" type="epigram">
             <l n="1">Νάξιος οὐκ ἐπὶ γῆς ἔθανεν Λύκος, ἀλλʼ ἐνὶ πόντωι</l>
             <l n="2" rend="align(indent)">ναῦν ἅμα καὶ ψυχὴν εἶδεν ἀπολλυμένην, </l>
-            <pb n="59"/>
+            <pb n="59" />
             <l n="3">ἔμπορος Αἰγίνηθεν ὅτʼ ἔπλεε. χὢ μὲν ἐν ὑγρῆι</l>
             <l n="4" rend="align(indent)">νεκρός, ἐγὼ δʼ ἄλλως οὔνομα τύμβος ἔχων</l>
             <l n="5">κηρύσσω πανάληθες ἔπος τόδε <q rend="single">φεῦγε θαλάσσηι</q>
@@ -277,7 +292,7 @@
             <l n="5">οὐ νέμεσις· Μοῦσαι γὰρ ὅσους ἴδον ὄμματι παῖδας</l>
             <l n="6" rend="align(indent)">μὴ λοξῶι, πολιοὺς οὐκ ἀπέθεντο φίλους.</l>
             <l n="7">
-               <gap reason="lost" rend="* * * "/>
+               <gap reason="lost" rend="* * * " />
             </l>
          </div>
          <div n="22" type="epigram">
@@ -286,7 +301,7 @@
             <l n="3">οὐκέτι Δικταίηισιν ὑπὸ δρυσίν, οὐκέτι Δάφνιν</l>
             <l n="4" rend="align(indent)">ποιμένες, Ἀστακίδην δʼ αἰὲν ἀεισόμεθα. </l>
          </div>
-         <pb n="60"/>
+         <pb n="60" />
          <div n="23" type="epigram">
             <l n="1">εἴπας <q rend="single">Ἥλιε χαῖρε</q> Κλεόμβροτος Ὡμβρακιώτης</l>
             <l n="2" rend="align(indent)">ἥλατʼ ἀφʼ ὑψηλοῦ τείχεος εἰς Ἀίδην,</l>
@@ -316,7 +331,7 @@
          <div n="27" type="epigram">
             <l n="1">Ἡσιόδου τό τʼ ἄεισμα καὶ ὁ τρόπος· οὐ τὸν ἀοιδόν</l>
             <l n="2" rend="align(indent)">ἔσχατον, ἀλλʼ ὀκνέω μὴ τὸ μελιχρότατον </l>
-            <pb n="61"/>
+            <pb n="61" />
             <l n="3">τῶν ἐπέων ὁ Σολεὺς ἀπεμάξατο· χαίρετε λεπταί</l>
             <l n="4" rend="align(indent)">ῥήσιες, Ἀρήτου σύμβολον ἀγρυπνίης.</l>
          </div>
@@ -348,7 +363,7 @@
             <l n="3">στείβηι καὶ νιφετῶι κεχαρημένος, ἢν δέ τις εἴπηι</l>
             <l n="4" rend="align(indent)">
                <q rend="single">τῆ, τόδε βέβληται θηρίον</q> οὐκ ἔλαβεν. </l>
-            <pb n="62"/>
+            <pb n="62" />
             <l n="5">χοὐμὸς ἔρως τοιόσδε· τὰ γὰρ φεύγοντα διώκειν</l>
             <l n="6" rend="align(indent)">οἶδε, τὰ δʼ ἐν μέσσωι κείμενα παρπέτεται.</l>
          </div>
@@ -364,7 +379,8 @@
          </div>
          <div n="34" type="epigram">
             <l n="1">τίν με λεοντάγχʼ ὦνα συοκτόνε φήγινον ὄζον</l>
-            <l n="2" rend="align(indent)">θῆκε <q rend="single">τίς</q>; Ἀρχῖνος <q rend="single">ποῖος</q>; ὁ Κρής <q rend="single">δέχομαι</q>.</l>
+            <l n="2" rend="align(indent)">θῆκε <q rend="single">τίς</q>; Ἀρχῖνος <q rend="single">
+               ποῖος</q>; ὁ Κρής <q rend="single">δέχομαι</q>.</l>
          </div>
          <div n="35" type="epigram">
             <l n="1">Βαττιάδεω παρὰ σῆμα φέρεις πόδας εὖ μὲν ἀοιδήν</l>
@@ -384,7 +400,7 @@
             <l n="6" rend="align(indent)">
                <q rend="single; merge">ἔχουσιν ʼΕσπερῖται</q>. </l>
          </div>
-         <pb n="63"/>
+         <pb n="63" />
          <div n="38" type="epigram">
             <l n="1" rend="align(indent)">τὰ δῶρα τἀφροδίτηι</l>
             <l n="2">Σῖμον ἡ περίφοιτος, εἰκόνʼ αὑτῆς,</l>
@@ -403,7 +419,7 @@
          <div n="40" type="epigram">
             <l n="1">Ἱερέη Δήμητρος ἐγώ ποτε καὶ πάλιν Καβείρων,</l>
             <l n="2" rend="align(indent)">ὦνερ, καὶ μετέπειτα Δινδυμήνης</l>
-            <l n="3">ἡ γρῆυς γενόμην, ἡ νῦν κόνις, ἡ Νο <gap reason="lost" rend="....."/>
+            <l n="3">ἡ γρῆυς γενόμην, ἡ νῦν κόνις, ἡ Νο <gap reason="lost" rend="....." />
             </l>
             <l n="4" rend="align(indent)">πολλῶν προστασίη νέων γυναικῶν.</l>
             <l n="5">καί μοι τέχνʼ ἐγένοντο δύʼ ἄρσενα, κἠπέμυσʼ ἐκείνων</l>
@@ -413,11 +429,12 @@
             <l n="1">ἥμισύ μευ ψυχῆς ἔτι τὸ πνέον, ἥμισυ δʼ οὐκ οἶδʼ</l>
             <l n="2" rend="align(indent)">εἴτʼ Ἔρος εἴτʼ Ἀίδης ἥρπασε, πλὴν ἀφανές.</l>
             <l n="3">ἦ ῥά τινʼ ἐς παίδων πάλιν ὤιχετο; καὶ μὲν ἀπεῖπον</l>
-            <l n="4" rend="align(indent)">πολλάκι <q rend="single">τὴν δρῆστιν μὴ ὑποδέχεσθε νέοι</q>.</l>
+            <l n="4" rend="align(indent)">πολλάκι <q rend="single">τὴν δρῆστιν μὴ ὑποδέχεσθε νέοι</q>
+               .</l>
             <l n="5">† ουκισυνιφησον· ἐκεῖσε γὰρ ἡ λιθόλευστος</l>
             <l n="6" rend="align(indent)">κείνη καὶ δύσερως οἶδʼ ὅτι που στρέφεται. </l>
          </div>
-         <pb n="64"/>
+         <pb n="64" />
          <div n="42" type="epigram">
             <l n="1">εἰ μὲν ἑκὼν Ἀρχῖνʼ ἐπεκώμασα, μυρία μέμφου,</l>
             <l n="2" rend="align(indent)">εἰ δʼ ἄκων ἥκω, τὴν προπέτειαν ἔα.</l>
@@ -446,7 +463,7 @@
             <l n="1">
                <q rend="single">Ληφθήσει, περίφευγε Μενέκρατες</q> εἶπα Πανήμου</l>
             <l n="2" rend="align(indent)">εἰκάδι, καὶ Λώιου τῆι τίνι; τῆι δεκάτηι </l>
-            <pb n="65"/>
+            <pb n="65" />
             <l n="3">ἦλθεν ὁ βοῦς ὑπʼ ἄροτρον ἑκούσιος. εὖ γʼ, ἐμὸς Ἑρμῆς,</l>
             <l n="4" rend="align(indent)">εὖ γʼ, ἐμός· οὐ παρὰ τὰς εἴκοσι μεμφόμεθα.</l>
          </div>
@@ -479,7 +496,7 @@
             <l n="6" rend="align(indent)">
                <q rend="single">ἱερὸς δ̔ πλόκαμος</q> τοὐμὸν ὄνειαρ ἐμοί. </l>
          </div>
-         <pb n="66"/>
+         <pb n="66" />
          <div n="49" type="epigram">
             <l n="1">τῆς Ἀγοράνακτός με λέγε ξένε κωμικὸν ὄντως</l>
             <l n="2" rend="align(indent)">ἀγκεῖσθαι νίκης μάρτυρα τοῦ Ῥοδίου</l>
@@ -513,7 +530,7 @@
          <div n="54" type="epigram">
             <l n="1">τὸ χρέος ὡς ἀπέχεις Ἀσκλήπιε, τὸ πρὸ γυναικός</l>
             <l n="2" rend="align(indent)">Δημοδίκης Ἀκέσων ὤφελεν εὐξάμενος, </l>
-            <pb n="67"/>
+            <pb n="67" />
             <l n="3">γινώσκειν, ἤν δʼ ἆρα λάθηι καί † μιν ἀπαιτῆις,</l>
             <l n="4" rend="align(indent)">φησὶ παρέξεσθαι μαετυρίην ὁ πίναξ.</l>
          </div>
@@ -544,7 +561,7 @@
             <l n="2" rend="align(indent)">† λευκαρετανμαν οὐκ ἐμάνη μανίαν</l>
             <l n="3">οὐδʼ ἔλαβʼ ἐξέτασιν τῶ Φωκέος ἅτις ἐλέγχει</l>
             <l n="4" rend="align(indent)">τὸν φίλον, † ἀλλαιχʼ ἓν δρᾶμʼ ἐδίδαξε μόνον· </l>
-            <pb n="68"/>
+            <pb n="68" />
             <l n="5">ἦ τάχα κα τὸν ἑταῖρον ἀπώλεσε τοῦτο ποήσας —</l>
             <l n="6" rend="align(indent)">κἠγὼ τὼς πολλὼς οὐκέτʼ ἔχω Πυλάδας.</l>
          </div>

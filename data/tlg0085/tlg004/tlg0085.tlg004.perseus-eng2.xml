@@ -58,15 +58,21 @@
             <p>This pointer pattern extracts lines</p>
          </cRefPattern>
       </refsDecl>
-      <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base">
-            <citeStructure unit="scene" delim=":"
-               match="div[@type]"
-               use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
-               n="chunk" />
-            <citeStructure unit="line" delim=":" match=".//l" use="@n" />
-         </citeStructure>
-      </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  n="chunk" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <catRef scheme="#perseus-genre" target="#drama-line" />
@@ -123,7 +129,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg004.perseus-eng2">
          <milestone unit="card" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-77)">
             <stage rend="italic">A large gathering of citizens of Thebes. Enter Eteocles with
                attendants.</stage>
             <sp>
@@ -207,7 +213,9 @@
                   Eteocles, with citizens. The Chorus enters in fearful agitation.</stage>
                </l>
             </sp>
+         </div>
             <milestone unit="card" n="78" />
+         <div type="choral" n="Parados (78-180)">
             <div type="lyric">
                <sp>
                   <speaker>Chorus</speaker>
@@ -236,9 +244,9 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="109" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -337,7 +345,7 @@
             </div>
          </div>
          <milestone unit="card" n="181" />
-         <div type="episode">
+         <div type="episode" n="First Episode (181-287)">
             <sp>
                <speaker>Eteocles</speaker>
                <l n="181">You intolerable things! I ask you, is this the best way to save the city?
@@ -360,9 +368,9 @@
                   Am I speaking to the deaf?
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="203" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -462,9 +470,9 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="245" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <sp>
                <speaker>Chorus</speaker>
                <l n="245">Oh, but I hear horses snorting!
@@ -590,7 +598,7 @@
             </sp>
          </div>
          <milestone unit="card" n="288" />
-         <div type="choral">
+         <div type="choral" n="(First Stasimon 288-368)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -693,7 +701,7 @@
             </div>
          </div>
          <milestone unit="card" n="369" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (369-719)">
             <stage rend="italic">The Scout is seen approaching from one side; Eteocles from the
                other.</stage>
             <sp>
@@ -752,9 +760,9 @@
                   Melanippus.</stage>
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="417" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1039,9 +1047,9 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="631" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <sp>
                <speaker>Scout</speaker>
                <l n="631">Last I will tell of the seventh champion, him at the seventh gate,<note
@@ -1110,9 +1118,9 @@
                   held in dishonor.
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="686" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1181,9 +1189,9 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="712" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <sp>
                <speaker>Chorus</speaker>
                <l n="712">Obey us women, although you do not like to.
@@ -1229,7 +1237,7 @@
             </sp>
          </div>
          <milestone unit="card" n="720" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (720-791)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1347,7 +1355,7 @@
             </div>
          </div>
          <milestone unit="card" n="792" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (791-821)">
             <stage rend="italic">Enter Messenger.</stage>
             <sp>
                <speaker>Messenger</speaker>
@@ -1425,7 +1433,7 @@
             </sp>
          </div>
          <milestone unit="card" n="822" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (822-956)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1450,7 +1458,7 @@
                         anchored="true" n="839" resp="Smyth">This passage has also been taken to
                      deprecate as inauspicious the previous ode (720 ff.) because it was sung during
                      the combat of the brothers: <q type="written">It was for a tomb I framed my
-                     song when, inspired by frenzy, I heard (prophetically) . . . Ill-omened,
+                           song when, inspired by frenzy, I heard (prophetically) . . . Ill-omened,
                      indeed, the contest of the spear to such an accompaniment.</q>
                      </note>
                   </l>
@@ -1626,7 +1634,7 @@
             </div>
          </div>
          <milestone unit="card" n="957" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (957-1059)">
             <stage rend="italic">The following antiphonal dirge is sung by the two sisters—Antigone
                standing by the bier of Polynices, Ismene by that of Eteocles.</stage>
             <sp>
@@ -1679,9 +1687,9 @@
                <l n="965">Though you did the killing.
                </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="966" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Antigone</speaker>
@@ -1907,9 +1915,9 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1011" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <stage rend="italic">Enter a Herald.</stage>
             <sp>
                <speaker>Herald</speaker>
@@ -2009,6 +2017,8 @@
                      rend="italic">Exit.</stage>
                </l>
             </sp>
+         </div>
+         <div type="choral" n="Exodus (1059-1084)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -16,7 +17,7 @@
             </respStmt>
             <funder n="org:Google">Google Digital Humanities Awards Program</funder>
          </titleStmt>
-         <extent/>
+         <extent />
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -24,7 +25,8 @@
             <date type="release">2011-01-24</date>
             <idno type="filename">tlg0533.tlg017.perseus-grc3.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0533.tlg017.perseus-grc3</idno>
          </publicationStmt>
@@ -41,9 +43,11 @@
                      <pubPlace>New York</pubPlace>
                      <date>1921</date>
                   </imprint>
-                  <!--<biblScope unit="volume"/>-->
+                  <!--<biblScope
+                  unit="volume"/>-->
                </monogr>
-               <ref target="https://archive.org/details/callimachuslycop00calluoft/page/60/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/callimachuslycop00calluoft/page/60/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
@@ -54,33 +58,35 @@
             </correction>
          </editorialDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState unit="section" n="chunk"/>
+            <refState unit="text" />
+            <refState unit="section" n="chunk" />
          </refsDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState unit="poem" n="chunk"/>
-            <refState unit="line"/>
+            <refState unit="text" />
+            <refState unit="poem" n="chunk" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState unit="poem" n="chunk"/>
-            <refState unit="line"/>
+            <refState unit="text" />
+            <refState unit="poem" n="chunk" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line.</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -90,19 +96,25 @@
       </profileDesc>
       <revisionDesc>
          <change when="2023-11-15" who="Lisa Cerrato">EpiDoc and CTS Conversion</change>
-         <change who="Lisa Cerrato" when="2019-10-01">corrected headers, reimported files due to mislabeling and corrected note languages</change>
+         <change who="Lisa Cerrato" when="2019-10-01">corrected headers, reimported files due to
+            mislabeling and corrected note languages</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
-         <change who="Lisa Cerrato" when="2019-10-01">corrected headers, reimported files due to mislabeling and corrected note languages</change>
+         <change who="Lisa Cerrato" when="2019-10-01">corrected headers, reimported files due to
+            mislabeling and corrected note languages</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0533.tlg017.perseus-grc3">
+         <pb n="63" />
          <l n="1">Ἄρτεμιν (οὐ γὰρ ἐλαφρὸν ἀειδόντεσσι λαθέσθαι)</l>
          <l n="2">ὑμνέομεν, τῇ τόξα λαγωβολίαι τε μέλονται</l>
          <l n="3">καὶ χορὸς ἀμφιλαφὴς καὶ ἐν οὔρεσιν ἑψιάασθαι,</l>
          <l n="4">ἄρχμενοι, <note xml:lang="eng">
-               <foreign xml:lang="grc">ἄρχμενοι</foreign> Blomfield, cf. fr. 9 b and now <title>Aitia</title> iii. 1. 56, Herodian i. p. 471, ii. p. 190 and p. 252 Lentz; <foreign xml:lang="grc">ἀρχόμενοι</foreign> or <foreign xml:lang="grc">ἀρχόμενος</foreign> MSS.</note> ὡς ὅτε πατρὸς ἐφεζομένη γονάτεσσι</l>
+               <foreign xml:lang="grc">ἄρχμενοι</foreign> Blomfield, cf. fr. 9 b and now <title>
+            Aitia</title> iii. 1. 56, Herodian i. p. 471, ii. p. 190 and p. 252 Lentz; <foreign
+                  xml:lang="grc">ἀρχόμενοι</foreign> or <foreign xml:lang="grc">ἀρχόμενος</foreign>
+            MSS.</note> ὡς ὅτε πατρὸς ἐφεζομένη γονάτεσσι</l>
          <l n="5">παῖς ἔτι κουρίζουσα τάδε προσέειπε γονῆα </l>
          <l n="6">
             <q>δός μοι παρθενίην αἰώνιον, ἄππα, φυλάσσειν,</q>
@@ -146,7 +158,7 @@
          <l n="19">
             <q rend="merge">ἥντινα λῇς· σπαρνὸν γὰρ ὅτʼ Ἄρτεμις ἄστυ κάτεισιν·</q>
          </l>
-         <pb n="62"/>
+         <pb n="62" />
          <l n="20">
             <q rend="merge">οὔρεσιν οἰκήσω, πόλεσιν δʼ ἐπιμείξομαι ἀνδρῶν </q>
          </l>
@@ -205,8 +217,10 @@
          <l n="43">πάσας εἰνέτεας, πάσας ἔτι παῖδας ἀμίτρους.</l>
          <l n="44">χαῖρε δὲ Καίρατος ποταμὸς μέγα, χαῖρε δὲ Τηθύς,</l>
          <l n="45">οὕνεκα θυγατέρας Λητωίδι πέμπον <note xml:lang="eng">
-               <foreign xml:lang="grc">πέμπον</foreign> schol. Nicand. Th. 349; <foreign xml:lang="grc">πέμπεν</foreign> or <foreign xml:lang="grc">πέμπειν</foreign>.</note> ἀμορβούς.</l>
-         <pb n="64"/>
+               <foreign xml:lang="grc">πέμπον</foreign> schol. Nicand. Th. 349; <foreign
+                  xml:lang="grc">πέμπεν</foreign> or <foreign xml:lang="grc">πέμπειν</foreign>.</note>
+            ἀμορβούς.</l>
+         <pb n="64" />
          <l n="46">αὖθι δὲ Κύκλωπας μετεκίαθε· τοὺς μὲν ἔτετμε</l>
          <l n="47">νήσῳ ἐνὶ Λιπάρῃ (Λιπάρη νέον, ἀλλὰ τότʼ ἔσκεν</l>
          <l n="48">οὔνομά οἱ Μελιγουνίς) ἐπʼ ἄκμοσιν Ἡφαίστοιο</l>
@@ -214,29 +228,34 @@
          <l n="50">ἱππείην τετύκοντο Ποσειδάωνι ποτίστρην. </l>
          <l n="51">αἱ νύμφαι δʼ ἔδδεισαν, ὅπως ἴδον αἰνὰ πέλωρα</l>
          <l n="52">πρηόσιν Ὀσσαίοισιν <note xml:lang="eng">
-               <foreign xml:lang="grc">ὀσσείοισιν</foreign> (<foreign xml:lang="grc">-ησιν</foreign>); corr. Meineke.</note> ἐοικότα, πᾶσι δʼ ὑπʼ ὀφρὺν</l>
+               <foreign xml:lang="grc">ὀσσείοισιν</foreign> (<foreign xml:lang="grc">-ησιν</foreign>);
+            corr. Meineke.</note> ἐοικότα, πᾶσι δʼ ὑπʼ ὀφρὺν</l>
          <l n="53">φάεα μουνόγληνα σάκει ἴσα τετραβοείῳ</l>
          <l n="54">δεινὸν ὑπογλαύσσοντα, καὶ ὁππότε δοῦπον ἄκουσαν</l>
          <l n="55">ἄκμονος ἠχήσαντος ἐπὶ <note xml:lang="eng">
-               <foreign xml:lang="grc">ἐπὶ</foreign> Bentley ; <foreign xml:lang="grc">ἐπεὶ</foreign>.</note> μέγα πουλύ τʼ ἄημα</l>
+               <foreign xml:lang="grc">ἐπὶ</foreign> Bentley ; <foreign xml:lang="grc">ἐπεὶ</foreign>
+            .</note> μέγα πουλύ τʼ ἄημα</l>
          <l n="56">φυσάων αὐτῶν τε βαρὺν στόνον· αὖε γὰρ Αἴτνη,</l>
          <l n="57">αὖε δὲ Τρινακίη, Σικανῶν ἕδος, αὖε δὲ γείτων</l>
          <l n="58">Ἰταλίη, μεγάλην δὲ βοὴν ἐπὶ Κύρνος ἀύτει,</l>
          <l n="59">εὖθʼ οἵ γε ῥαιστῆρας ἀειράμενοι ὑπὲρ ὤμων</l>
          <l n="60">ἢ χαλκὸν ζείοντα καμινόθεν ἠὲ σίδηρον </l>
          <l n="61">ἀμβολαδὶς τετυπόντες ἐπὶ <note xml:lang="eng">
-               <foreign xml:lang="grc">ἐπὶ</foreign> Stephanus, Bentley; <foreign xml:lang="grc">ἐπεὶ</foreign>.</note> μέγα μοχθήσειαν.</l>
+               <foreign xml:lang="grc">ἐπὶ</foreign> Stephanus, Bentley; <foreign xml:lang="grc">
+            ἐπεὶ</foreign>.</note> μέγα μοχθήσειαν.</l>
          <l n="62">τῶ σφέας οὐκ ἐτάλασσαν ἀκηδέες Ὠκεανῖναι</l>
          <l n="63">οὔτʼ ἄωτην ἰδέειν οὔτε κτύπον οὔασι δέχθαι.</l>
          <l n="64">οὐ νέμεσις· κείνους γε <note xml:lang="eng">
-               <foreign xml:lang="grc">κείνους δὲ</foreign>; corr. Meineke.</note> καὶ αἱ μάλα μηκέτι τυτθαὶ</l>
+               <foreign xml:lang="grc">κείνους δὲ</foreign>; corr. Meineke.</note> καὶ αἱ μάλα
+            μηκέτι τυτθαὶ</l>
          <l n="65">οὐδέποτʼ ἀφρικτὶ μακάρων ὁρόωσι θύγατρες. </l>
          <l n="66">ἀλλʼ ὅτε κουράων τις ἀπειθέα μητέρι τεύχοι,</l>
          <l n="67">μήτηρ μὲν Κύκλωπας ἑῇ ἐπὶ παιδὶ καλιστρεῖ,</l>
          <l n="68">Ἄργην ἢ Στερόπην· ὁ δὲ δώματος ἐκ μυχάτοιο</l>
          <l n="69">ἔρχεται Ἑρμείης σποδιῇ κεχρημένος <note xml:lang="eng">
-               <foreign xml:lang="grc">κεχριμένος</foreign> in marg. e; <foreign xml:lang="grc">κεχρειμένος</foreign> in marg. T(aurinensis).</note> αἰθῇ·</l>
-         <pb n="66"/>
+               <foreign xml:lang="grc">κεχριμένος</foreign> in marg. e; <foreign xml:lang="grc">
+            κεχρειμένος</foreign> in marg. T(aurinensis).</note> αἰθῇ·</l>
+         <pb n="66" />
          <l n="70">αὐτίκα τὴν κούρην μορμύσσεται, ἡ δὲ τεκούσης </l>
          <l n="71">δύνει ἔσω κόλπους θεμένη ἐπὶ φάεσι χεῖρας.</l>
          <l n="72">κοῦρα, σὺ δὲ προτέπω περ, ἔτι τριέτηρος ἐοῦσα,</l>
@@ -252,7 +271,8 @@
          <l n="80">τῶ μάλα θαρσαλέη σφε τάδε προσελέξαο τῆμος </l>
          <l n="81">
             <q>Κύκλωπες, κἠμοί <note xml:lang="eng">
-                  <foreign xml:lang="grc">κἠμοί</foreign> Meineke; <foreign xml:lang="grc">ἢ ἤ μοι</foreign>.</note> τι Κυδώνιον εἰ δʼ ἄγε τόξον</q>
+                  <foreign xml:lang="grc">κἠμοί</foreign> Meineke; <foreign xml:lang="grc">ἢ ἤ μοι</foreign>
+               .</note> τι Κυδώνιον εἰ δʼ ἄγε τόξον</q>
          </l>
          <l n="82">
             <q rend="merge">ἠδʼ ἰοὺς κοίλην τε κατακληῖδα βελέμνων</q>
@@ -271,18 +291,23 @@
          <l n="88">Ἀρκαδικὴν ἔπι Πανός. ὁ δὲ κρέα λυγκὸς ἔταμνε</l>
          <l n="89">Μαιναλίης, ἵνα οἱ τοκάδες κύνες εἶδαρ ἔδοιεν.</l>
          <l n="90">τὶν δʼ ὁ γενειήτης δύο μὲν κύνας ἥμισυ πηγοὺς </l>
-         <pb n="68"/>
+         <pb n="68" />
          <l n="91">τρεῖς δὲ παρουαίους <note xml:lang="eng">
-               <foreign xml:lang="grc">παρουαίους</foreign> Schneider after M. Haupt who conjectured <foreign xml:lang="grc">παρωαίους</foreign>, cf. Hesych. s.vv. <foreign xml:lang="grc">παρωάς </foreign> and <foreign xml:lang="grc">πάρωος</foreign>, Arist. <title>H.A.</title> ix. 45, etc.; <foreign xml:lang="grc">παρουατίους</foreign>.</note> ἕνα δʼ αἰόλον, οἵ ῥα λέοντας</l>
+               <foreign xml:lang="grc">παρουαίους</foreign> Schneider after M. Haupt who conjectured <foreign
+                  xml:lang="grc">παρωαίους</foreign>, cf. Hesych. s.vv. <foreign xml:lang="grc">
+            παρωάς </foreign> and <foreign xml:lang="grc">πάρωος</foreign>, Arist. <title>H.A.</title>
+            ix. 45, etc.; <foreign xml:lang="grc">παρουατίους</foreign>.</note> ἕνα δʼ αἰόλον, οἵ ῥα
+            λέοντας</l>
          <l n="92">αὐτοὺς αὖ ἐρύοντες, ὅτε δράξαιντο δεράων,</l>
          <l n="93">εἷλκον <note xml:lang="eng">
-               <foreign xml:lang="grc">εἷλκον</foreign> e, cf. Nonn. 25. 188; <foreign xml:lang="grc">εἶλον</foreign> A.</note> ἔτι ζώοντας ἐπʼ αὐλίον, ἑπτὰ δʼ ἔδωκε</l>
+               <foreign xml:lang="grc">εἷλκον</foreign> e, cf. Nonn. 25. 188; <foreign
+                  xml:lang="grc">εἶλον</foreign> A.</note> ἔτι ζώοντας ἐπʼ αὐλίον, ἑπτὰ δʼ ἔδωκε</l>
          <l n="94">θάσσονας αὐράων Κυνοσουρίδας, αἵ ῥα διῶξαι</l>
          <l n="95">ὤκισται νεβρούς τε καὶ οὐ μύοντα λαγωόν, </l>
          <l n="96">καὶ κοίτην ἐλάφοιο καὶ ὕστριχος ἔνθα καλιαὶ</l>
          <l n="97">σημῆναι, καὶ ζορκὸς ἐπʼ ἴχνιον ἡγήσασθαι.</l>
          <l n="98">ἔνθεν ἀπερχομένη (μετὰ καὶ κύνες ἐσσεύοντο)</l>
-         <l n="99">εὗρες ἐτί  προμολῇσʼ ὄρεος τοῦ Παρρασίοιο</l>
+         <l n="99">εὗρες ἐτί προμολῇσʼ ὄρεος τοῦ Παρρασίοιο</l>
          <l n="100">σκαιρούσας ἐλάφους, μέγα τι χρέος· αἱ μὲν ἑπʼ ὄχθῃς </l>
          <l n="101">αἰὲν ἐβουκολέοντο μελαμψήφιδος Ἀναύρου,</l>
          <l n="102">μάσσονες ἢ ταῦροι, κεράων δʼ ἀπελάμπετο χρυσός·</l>
@@ -295,10 +320,11 @@
          <l n="107">τὴν δὲ μίαν Κελάδοντος ὑπὲρ ποταμοῖο φυγοῦσαν</l>
          <l n="108">Ἡρης ἐννεσίῃσιν, ἀέθλιον Ἡρακλῆι</l>
          <l n="109">ὕστερον <note xml:lang="eng">
-               <foreign xml:lang="grc">ὕστερον</foreign> schol. Apoll. Rh. i. 996; <foreign xml:lang="grc">ὕστατον</foreign>.</note> ὄφρα γένοιτο, πάγος Κερύνειος ἔδεκτο.</l>
+               <foreign xml:lang="grc">ὕστερον</foreign> schol. Apoll. Rh. i. 996; <foreign
+                  xml:lang="grc">ὕστατον</foreign>.</note> ὄφρα γένοιτο, πάγος Κερύνειος ἔδεκτο.</l>
          <l n="110">Ἄρτεμι Παρθενίη Τιτυοκτόνε, χρύσεα μέν τοι </l>
          <l n="111">ἔντεα καὶ ζώνη, χρύσεον δʼ ἐζεύξαο δίφρον,</l>
-         <pb n="70"/>
+         <pb n="70" />
          <l n="112">ἐν δʼ ἐβάλευ χρύσεια, θεή, κεμάδεσσι χαλινά.</l>
          <l n="113">ποῦ δέ σε τὸ πρῶτον κερόεις ὄχος ἤρξατʼ ἀείρειν;</l>
          <l n="114">Αἵμῳ ἐπὶ Θρήικι, τόθεν βορέαο κατᾶιξ</l>
@@ -319,9 +345,11 @@
          <l n="126">κείρονται δὲ γέροντες ἐφʼ υἱάσιν, αἱ δὲ γυναῖκες</l>
          <l n="127">ἢ βληταὶ θνῄσκουσι λεχωίδες ἠὲ φυγοῦσαι</l>
          <l n="128">τίκτουσιν τῶν <note xml:lang="eng">
-               <foreign xml:lang="grc">τῶν δ᾽</foreign> MSS.; corr. Cobet.</note> οὐδὲν ἐπὶ σφυρὸν ὀρθὸν ἀνέστη.</l>
+               <foreign xml:lang="grc">τῶν δ᾽</foreign> MSS.; corr. Cobet.</note> οὐδὲν ἐπὶ σφυρὸν
+            ὀρθὸν ἀνέστη.</l>
          <l n="129">οἷς <note xml:lang="eng">
-               <foreign xml:lang="grc">οὓς</foreign> d and Paris. 456.</note> δέ κεν εὐμειδής τε καὶ ἵλαος αὐγάσσηαι,</l>
+               <foreign xml:lang="grc">οὓς</foreign> d and Paris. 456.</note> δέ κεν εὐμειδής τε καὶ
+            ἵλαος αὐγάσσηαι,</l>
          <l n="130">κείνοις εὖ μὲν ἄρουρα φέρει στάχυν, εὖ δὲ γενέθλη </l>
          <l n="131">τετραπόδων, εὖ δʼ ὄλβος ἀέξεται· οὐδʼ ἐπὶ σῆμα</l>
          <l n="132">ἔρχονται πλὴν εὖτε πολυχρόνιόν τι φέρωσιν·</l>
@@ -330,7 +358,7 @@
          <l n="135">εἰνάτερες γαλόῳ τε μίαν περὶ δίφρα τίθενται. </l>
          <l n="136">πότνια, τῶν εἴη μὲν ἐμοὶ φίλος ὅστις ἀληθής,</l>
          <l n="137">εἴην δʼ αὐτός, ἄνασσα, μέλοι δέ μοι αἰὲν ἀοιδή·</l>
-         <pb n="72"/>
+         <pb n="72" />
          <l n="138">τῇ ἔνι μὲν Λητοῦς γάμος ἔσσεται, ἐν δὲ σὺ πολλή,</l>
          <l n="139">ἐν δὲ καὶ Ἀπόλλων, ἐν δʼ οἵ σεο πάντες ἄεθλοι,</l>
          <l n="140">ἐν δὲ κύνες καὶ τόξα καὶ ἄντυγες, αἵ τέ σε ῥεῖα </l>
@@ -338,14 +366,16 @@
          <l n="142">ἔνθα τοι ἀντιόωντες ἐνὶ προμολῇσι δέχονται</l>
          <l n="143">ὅπλα μὲν Ἑρμείης Ἀκακήσιος, αὐτὰρ Ἀπόλλων</l>
          <l n="144">θηρίον ὅττι φέρῃσθα· πάροιθέ γέ, <note xml:lang="eng">
-               <foreign xml:lang="grc">γε</foreign> Blomf.; <foreign xml:lang="grc">δέ</foreign>.</note> πρίν περ ἱκέσθαι</l>
+               <foreign xml:lang="grc">γε</foreign> Blomf.; <foreign xml:lang="grc">δέ</foreign>.</note>
+            πρίν περ ἱκέσθαι</l>
          <l n="145">καρτερὸν Ἀλκεΐδην· νῦν δʼ οὐκέτι τοῦτον ἄεθλον </l>
          <l n="146">Φοῖβος ἔχει, τοῖος γὰρ ἀεὶ Τιρύνθιος ἄκμων</l>
          <l n="147">ἕστηκε πρὸ πυλέων ποτιδέγμενος, εἴ τι φέρουσα</l>
          <l n="148">νεῖαι πῖον ἔδεσμα· θεοὶ δʼ ἐπὶ πάντες ἐκείνῳ</l>
          <l n="149">ἄλληκτον γελόωσι, μάλιστα δὲ πενθερὴ αὐτή,</l>
          <l n="150">ταῦρον ὅτʼ ἐκ δίφροιο μάλα μέγαν ἢ ὅ γε <note xml:lang="eng">
-               <foreign xml:lang="grc">ὅ γε</foreign> d; <foreign xml:lang="grc">ὅτε</foreign>.</note> χλούνην </l>
+               <foreign xml:lang="grc">ὅ γε</foreign> d; <foreign xml:lang="grc">ὅτε</foreign>.</note>
+            χλούνην </l>
          <l n="151">κάπρον ὀπισθιδίοιο φέροι ποδὸς ἀσπαίροντα·</l>
          <l n="152">κερδαλέῳ μύθῳ σε, θεή, μάλα τῷδε πινύσκει</l>
          <l n="153">
@@ -353,7 +383,8 @@
          </l>
          <l n="154">
             <q rend="merge">ὡς ἐμὲ κικλήσκωσιν. <note xml:lang="eng">
-                  <foreign xml:lang="grc">κικλήσκωσιν</foreign> F and Voss. 59; <foreign xml:lang="grc">-ουσιν</foreign> AE.</note> ἔα πρόκας ἠδὲ λαγωοὺς</q>
+                  <foreign xml:lang="grc">κικλήσκωσιν</foreign> F and Voss. 59; <foreign
+                     xml:lang="grc">-ουσιν</foreign> AE.</note> ἔα πρόκας ἠδὲ λαγωοὺς</q>
          </l>
          <l n="155">
             <q rend="merge">οὔρεα βόσκεσθαι· τί δέ κεν <note xml:lang="eng">
@@ -367,14 +398,15 @@
          </l>
          <l n="158">ὣς ἔνεπεν, ταχινὸς δὲ μέγαν περὶ θῆρα πονεῖτο.</l>
          <l n="159">οὐ γὰρ ὅ γε Φρυγίῃ περ ὑπὸ δρυὶ γυῖα θεωθεὶς</l>
-         <pb n="74"/>
+         <pb n="74" />
          <l n="160">παύσατʼ ἀδηφαγίης· ἔτι οἱ πάρα νηδὺς ἐκείνη, </l>
          <l n="161">τῇ ποτʼ ἀροτριόωντι συνήντετο Θειοδάμαντι.</l>
          <l n="162">σοὶ δʼ Ἀμνισιάδες μὲν ὑπὸ ζεύγληφι λυθείσας</l>
          <l n="163">ψήχουσιν κεμάδας, παρὰ δέ σφισι πουλὺ νέμεσθαι</l>
          <l n="164">Ἥρης ἐκ λειμῶνος ἀμησάμεναι φορέουσιν</l>
          <l n="165">ὠκύθοον <note xml:lang="eng">
-               <foreign xml:lang="grc">ὠκύθοον</foreign> e, cf. Hesych. s.v.; <foreign xml:lang="grc">ὠκύθεον</foreign>.</note> τριπέτηλον, ὃ καὶ Διὸς ἵπποι ἔδονσιν· </l>
+               <foreign xml:lang="grc">ὠκύθοον</foreign> e, cf. Hesych. s.v.; <foreign
+                  xml:lang="grc">ὠκύθεον</foreign>.</note> τριπέτηλον, ὃ καὶ Διὸς ἵπποι ἔδονσιν· </l>
          <l n="166">ἐν καὶ χρυσείας ὑποληνίδας ἐπλήσαντο</l>
          <l n="167">ὕδατος, ὄφρʼ ἐλάφοισι ποτὸν θυμάρμενον εἴη.</l>
          <l n="168">αὐτὴ δʼ ἐς πατρὸς δόμον ἔρχεαι· οἱ δέ σʼ ἐφʼ ἕδρην</l>
@@ -387,7 +419,7 @@
          <l n="175">μὴ νειὸν τημοῦτος ἐμαὶ βόες εἵνεκα μισθοῦ </l>
          <l n="176">τετράγυον τέμνοιεν ὑπʼ ἀλλοτρίῳ ἀροτῆρι·</l>
          <l n="177">ἦ γάρ κεν γυιαί τε καὶ αὐχένα κεκμηυῖαι</l>
-         <pb n="76"/>
+         <pb n="76" />
          <l n="178">κόπρον ἔπι προγένοιντο, καὶ εἰ Στυμφαιίδες εἶεν</l>
          <l n="179">εἰναετιζόμεναι κεραελκέες, αἳ μέγʼ ἄρισται</l>
          <l n="180">τέμνειν ὦλκα βαθεῖαν· ἐπεὶ θεὸς οὔποτʼ ἐκεῖνον </l>
@@ -412,7 +444,7 @@
          <l n="199">Δικταῖον καλέουσιν, ἀνεστήσαντο δὲ βωμοὺς</l>
          <l n="200">ἱερά τε ῥέζουσι· τὸ δὲ στέφος ἤματι κείνῳ </l>
          <l n="201">ἢ πίτυς ἢ σχῖνος, μύρτοιο δὲ χεῖρες ἄθικτοι· </l>
-         <pb n="78"/>
+         <pb n="78" />
          <l n="202">δὴ τότε γὰρ πέπλοισιν ἐνέσχετο μύρσινος ὄζος</l>
          <l n="203">τῆς κούρης, ὅτʼ ἔφευγεν· ὅθεν μέγα χώσατο μύρτῳ.</l>
          <l n="204">Οὖπι ἄνασσʼ εὐῶπι φαεσφόρε, καὶ δὲ σὲ κείνγς</l>
@@ -438,7 +470,7 @@
          <l n="224">τάων Μαιναλίη νᾶεν φόνῳ ἀκρώρεια.</l>
          <l n="225">πότνια πουλυμέλαθρε, πολύπτολι, χαῖρε Χιτώνη </l>
          <l n="226">Μιλήτῳ ἐπίδημε· σὲ γὰρ ποιήσατο Νηλεὺς </l>
-         <pb n="80"/>
+         <pb n="80" />
          <l n="227">ἡγεμόνην, ὅτε νηυσὶν ἀνήγετο Κεκροπίηθεν.</l>
          <l n="228">Χησιὰς Ἰμβρασίη πρωτόθρονε, σοὶ δʼ Ἀγαμέμνων</l>
          <l n="229">πηδάλιον νηὸς σφετέρης ἐγκάτθετο νηῷ</l>
@@ -448,7 +480,8 @@
          <l n="233">ἦ μέν τοι Προῖτός γε δύω ἐκαθίσσατο νηούς,</l>
          <l n="234">ἄλλον μὲν Κορίης, ὅτι οἱ συνελέξαο κούρας</l>
          <l n="235">οὔρεα πλαζομένας Ἀζήνια, <note xml:lang="eng">
-               <foreign xml:lang="grc">ἀξείνια</foreign> MSS.; corr. Spanheim.</note> τὸν δʼ ἐνὶ Λούσοις </l>
+               <foreign xml:lang="grc">ἀξείνια</foreign> MSS.; corr. Spanheim.</note> τὸν δʼ ἐνὶ
+            Λούσοις </l>
          <l n="236">ἡμέρῃ, οὕνεκα θυμὸν ἀπʼ ἄγριον εἵλεο παίδων.</l>
          <l n="237">σοὶ καὶ Ἀμαζονίδες πολέμου ἐπιθυμήτειραι</l>
          <l n="238">ἔν ποτε παρραλίῃ Ἐφέσῳ βρέτας ἱδρύσαντο</l>
@@ -457,12 +490,13 @@
          <l n="241">πρῶτα μὲν ἐν σακέεσσιν ἐνόπλιον, αὖθι δὲ κύκλῳ</l>
          <l n="242">στησάμεναι χορὸν εὐρύν· ὑπήεισαν δὲ λίγειαι</l>
          <l n="243">λεπταλέον σύριγγες, ἵνα ῥήσσωσιν <note xml:lang="eng">
-               <foreign xml:lang="grc">πλἥσ(σ)ωσιν</foreign> MSS.; <foreign xml:lang="grc">πλίσσωσιν</foreign> Arnaldus; <foreign xml:lang="grc">ῥήσσωσιν</foreign> de Jan.</note> ὁμαρτῇ·</l>
+               <foreign xml:lang="grc">πλἥσ(σ)ωσιν</foreign> MSS.; <foreign xml:lang="grc">πλίσσωσιν</foreign>
+            Arnaldus; <foreign xml:lang="grc">ῥήσσωσιν</foreign> de Jan.</note> ὁμαρτῇ·</l>
          <l n="244">οὐ γάρ πω νέβρεια διʼ ὀστέα τετρήναντο,</l>
          <l n="245">ἔργονʼ Ἀθηναίης ἐλάφῳ κακόν· ἔδραμε δʼ ἠχὼ </l>
          <l n="246">Σάρδιας ἔς τε νομὸν Βερεκύνθιον. αἱ δὲ πόδεσσιν</l>
          <l n="247">οὖλα κατεκροτάλιζον, ἐπεψόφεον δὲ φαρέτραι.</l>
-         <pb n="82"/>
+         <pb n="82" />
          <l n="248">κεῖνο δέ τοι μετέπειτα περὶ βρέτας εὐρὺ θέμειλον</l>
          <l n="249">δωμήθη, τοῦ δʼ οὔτε θεώτερον ὄψεται ἠὼς</l>
          <l n="250">οὐδʼ ἀφνειότερον· ῥέα κεν Πυθῶνα παρέλθοι. </l>
@@ -470,7 +504,8 @@
          <l n="252">Λύγδαμις ὑβριστής· ἐπὶ δὲ στρατὸν ἱππημολγῶν</l>
          <l n="253">ἤγαγε <note xml:lang="eng">
                <foreign xml:lang="grc">ἤλασε</foreign>
-               <title>Et. Gud. Et. M.</title> s. v. <foreign xml:lang="grc">ἴσος</foreign>.</note> Κιμμερίων ψαμάθῳ ἴσον, οἵ ῥα παρʼ αὐτὸν</l>
+               <title>Et. Gud. Et. M.</title> s. v. <foreign
+                  xml:lang="grc">ἴσος</foreign>.</note> Κιμμερίων ψαμάθῳ ἴσον, οἵ ῥα παρʼ αὐτὸν</l>
          <l n="254">κεκλιμένοι ναίουσι βοὸς πόρον Ἰναχιώνης.</l>
          <l n="255">ἆ δειλὸς βασιλέων, ὅσον ἤλιτεν· οὐ γὰρ ἔμελλεν </l>
          <l n="256">οὔτʼ αὐτὸς Σκυθίηνδε παλιμπετὲς οὔτε τις ἄλλος</l>
@@ -479,7 +514,9 @@
          <l n="259">πότνια Μουνιχίη λιμενοσκόπε, χαῖρε Φεραίη.</l>
          <l n="260">μή τις ἀτιμήσῃ τὴν Ἄρτεμιν· οὐδὲ γὰρ Οἰνεῖ </l>
          <l n="261">βωμὸν ἀτιμήσαντι <note xml:lang="eng">
-               <foreign xml:lang="grc">ἀτιμήσαντι</foreign> e and Vindobon. 318; <foreign xml:lang="grc">ἀτιμάσαντι</foreign> Af; <foreign xml:lang="grc">ἀτιμάσσαντι</foreign> Schneider.</note> καλοὶ πόλιν ἦλθον ἀγῶνες·</l>
+               <foreign xml:lang="grc">ἀτιμήσαντι</foreign> e and Vindobon. 318; <foreign
+                  xml:lang="grc">ἀτιμάσαντι</foreign> Af; <foreign xml:lang="grc">ἀτιμάσσαντι</foreign>
+            Schneider.</note> καλοὶ πόλιν ἦλθον ἀγῶνες·</l>
          <l n="262">μηδʼ ἐλαφηβολίην μηδʼ εὐστοχίην ἐριδαίνειν·</l>
          <l n="263">οὐδὲ γὰρ Ἀτρεΐδης ὀλίγῳ ἔπι κόμπασε μισθῷ·</l>
          <l n="264">μηδέ τινα μνᾶσθαι τὴν παρθένον· οὐδὲ γὰρ Ὦτος,</l>
