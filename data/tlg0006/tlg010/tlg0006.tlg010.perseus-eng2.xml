@@ -63,7 +63,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -101,7 +100,7 @@
             <p>Pythian Priestess</p>
             <p>Athena</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-81)">
             <milestone resp="perseus" n="1" unit="card" />
             <stage rend="italic">Scene.—Before Apollo’s temple at <placeName key="perseus,Delphi">
                Delphi</placeName>.</stage>
@@ -187,7 +186,7 @@
             </sp>
          </div>
          <milestone resp="perseus" n="82" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Parados (82-236)">
             <div type="anapests">
                <sp>
                   <speaker>Ion</speaker>
@@ -419,7 +418,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="237" unit="card" />
-         <div type="episode">
+         <div type="episode" n="First Episode (237-451)">
             <sp>
                <speaker>Ion</speaker>
                <l rend="indent" resp="perseus" n="237">Lady, whosoe’er thou art, I see thou art of
@@ -1093,7 +1092,7 @@
             </sp>
          </div>
          <milestone resp="perseus" n="452" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (452-509)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1149,7 +1148,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="510" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (510-675)">
             <div type="trochees">
                <sp>
                   <speaker>Ion</speaker>
@@ -1644,7 +1643,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="676" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (676-724)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1696,7 +1695,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="725" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (725-1047)">
             <sp>
                <speaker>Creusa</speaker>
                <l rend="indent" resp="perseus" n="725">Aged retainer of my father Erechtheus while
@@ -2541,7 +2540,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="1048" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1048-1105)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2602,7 +2601,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="1106" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1106-1228)">
             <sp>
                <speaker>Servant</speaker>
                <l rend="indent" resp="perseus" n="1106">Ladies of another land, where may I find
@@ -2750,6 +2749,8 @@
                   sorrow sped a hapless journey; for, coming to crave the boon of offspring from
                   Phoebus, she hath lost her life and children too.</l>
             </sp>
+         </div>
+         <div type="choral" n="Fourth Stasimon (1229-1249)">
             <milestone resp="perseus" n="1229" unit="card" />
             <div type="lyric">
                <sp>
@@ -2778,6 +2779,8 @@
                      decree?</l>
                </sp>
             </div>
+         </div>
+         <div type="episode" n="Exodus (1250-1620)">
             <milestone resp="perseus" n="1250" unit="card" />
             <div type="trochees">
                <sp>
