@@ -65,7 +65,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -136,7 +135,7 @@
             <p>Ἀχιλλεύς</p>
             <p>Ἄγγελος βʹ</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-163)">
             <sp>
                <speaker>Ἀγαμέμνων</speaker>
                <note resp="perseus">This edition starts with the traditional line 49. Traditional
@@ -424,7 +423,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="164" />
-         <div type="choral">
+         <div type="choral" n="Parados (164-302)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -615,7 +614,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="303" />
-         <div type="episode">
+         <div type="episode" n="First Episode (303-542)">
             <sp>
                <speaker>Πρεσβύτης</speaker>
                <l rend="indent" n="303">Μενέλαε, τολμᾷς δείνʼ, ἅ σʼ οὐ τολμᾶν χρεών.</l>
@@ -1078,7 +1077,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="543" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (543-589)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1147,7 +1146,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="590" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (590-750)">
             <div type="anapests">
                <sp>
                   <speaker>Χορός ανδρων Αργειων</speaker>
@@ -1610,7 +1609,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="751" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (751-800)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1681,7 +1680,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="801" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (801-1035)">
             <sp>
                <speaker>Ἀχιλλεύς</speaker>
                <l rend="indent" n="801">ποῦ τῶν Ἀχαιῶν ἐνθάδʼ ὁ στρατηλάτης;</l>
@@ -2177,7 +2176,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1036" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (1036-1097)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2260,7 +2259,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1098" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1098-1629)">
             <sp>
                <speaker>Κλυταιμήστρα</speaker>
                <l rend="indent" n="1098">ἐξῆλθον οἴκων προσκοπουμένη πόσιν,</l>
@@ -2532,9 +2531,9 @@
                <l n="1274">κἀμοὶ γενέσθαι, μηδὲ βαρβάροις ὕπο</l>
                <l n="1275">Ἕλληνας ὄντας λέκτρα συλᾶσθαι βίᾳ.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" unit="card" n="1276" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div type="lyric">
                <sp>
                   <speaker>Κλυταιμήστρα</speaker>
@@ -2601,14 +2600,15 @@
                   <l n="1335">Δαναΐδαις τιθεῖσα Τυνδαρὶς κόρα.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" unit="card" n="1336" />
-         <div type="episode">
-            <sp>
-               <speaker>Χορός</speaker>
-               <l rend="indent" n="1336">ἐγὼ μὲν οἰκτίρω σε συμφορᾶς κακῆς</l>
-               <l n="1337">τυχοῦσαν, οἵας μήποτʼ ὤφελες τυχεῖν.</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Χορός</speaker>
+                  <l rend="indent" n="1336">ἐγὼ μὲν οἰκτίρω σε συμφορᾶς κακῆς</l>
+                  <l n="1337">τυχοῦσαν, οἵας μήποτʼ ὤφελες τυχεῖν.</l>
+               </sp>
+            </div>
             <milestone resp="perseus" unit="card" n="1338" />
             <div type="trochees">
                <sp>
