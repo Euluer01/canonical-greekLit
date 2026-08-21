@@ -66,9 +66,17 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure use="@n" match="./milestone[@unit='card']" delim=":" unit="card"
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -113,7 +121,7 @@
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0019.tlg003.perseus-grc2">
          <milestone ed="p" n="1" unit="card" />
-         <div type="prologue">
+         <div type="prologue" n="Prologue (1-274)">
             <l resp="perseus" style="hidden" n="0" />
             <sp>
                <speaker>Στρεψιάδης</speaker>
@@ -789,9 +797,9 @@
                <l n="260">λέγειν γενήσει τρῖμμα κρόταλον παιπάλη.</l>
                <l n="261" part="I">ἀλλʼ ἔχʼ ἀτρεμί.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone ed="p" n="261b" unit="card" />
-         <div type="parodos">
+         <!-- <div type="parodos"> -->
             <div type="anapests">
                <sp>
                   <speaker>Στρεψιάδης</speaker>
@@ -822,6 +830,8 @@
                   <l n="274">ὑπακούσατε δεξάμεναι θυσίαν καὶ τοῖς ἱεροῖσι χαρεῖσαι.</l>
                </sp>
             </div>
+         </div>
+         <div type="parodos" n="Parados (275-355)"> 
             <milestone ed="p" n="275" unit="card" />
             <div n="1" type="strophe">
                <sp>
@@ -1023,7 +1033,7 @@
             </div>
          </div>
          <milestone ed="p" n="356" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Syzygy (356-477)">
             <div type="anapests">
                <sp>
                   <speaker>Στρεψιάδης</speaker>
@@ -1278,7 +1288,7 @@
                </sp>
             </div>
          </div>
-         <div type="episode">
+         <div type="episode" n="First Episode (478-509)">
             <sp>
                <speaker>Σωκράτης</speaker>
                <l n="478">ἄγε δὴ κάτειπέ μοι σὺ τὸν σαυτοῦ τρόπον,</l>
@@ -1395,7 +1405,7 @@
             </sp>
          </div>
          <milestone ed="p" n="510" unit="card" />
-         <div type="parabasis">
+         <div type="parabasis" n="First Parabasis (510-626)">
             <div type="prelude">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1550,7 +1560,7 @@
             </div>
          </div>
          <milestone ed="p" n="627" unit="card" />
-         <div type="lyric-scene">
+         <div type="lyric-scene" n="Second Syzygy (627-888)">
             <sp>
                <speaker>Σωκράτης</speaker>
                <l n="627">μὰ τὴν Ἀναπνοὴν μὰ τὸ Χάος μὰ τὸν Ἀέρα</l>
@@ -2373,7 +2383,7 @@
             </div>
          </div>
          <milestone ed="p" n="889" unit="card" />
-         <div type="agon">
+         <div type="agon" n="First Agon (889-1104)">
             <div type="proagon">
                <sp>
                   <speaker>Δίκαιος Λόγος</speaker>
@@ -2889,7 +2899,7 @@
             </div>
          </div>
          <milestone ed="p" n="1105" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (1105-1112)">
             <sp>
                <speaker>Σωκράτης</speaker>
                <l n="1105">τί δῆτα; πότερα τοῦτον ἀπάγεσθαι λαβὼν</l>
@@ -2912,7 +2922,7 @@
             </sp>
          </div>
          <milestone ed="p" n="1113" unit="card" />
-         <div type="parabasis">
+         <div type="parabasis" n="Second Parabasis (1113-1130)">
             <div type="prelude">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2943,7 +2953,7 @@
             </div>
          </div>
          <milestone ed="p" n="1131" unit="card" />
-         <div type="lyric-scene">
+         <div type="lyric-scene" n="Third Episode (1131-1302)">
             <sp>
                <speaker>Στρεψιάδης</speaker>
                <l n="1131">πέμπτη, τετράς, τρίτη, μετὰ ταύτην δευτέρα,</l>
@@ -3446,7 +3456,7 @@
             </div>
          </div>
          <milestone ed="p" n="1303" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (1303-1320)">
             <div type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -3477,7 +3487,7 @@
             </div>
          </div>
          <milestone ed="p" n="1321" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1321-1344)">
             <sp>
                <speaker>Στρεψιάδης</speaker>
                <l n="1321">ἰοὺ ἰού.</l>
@@ -3568,7 +3578,7 @@
             </sp>
          </div>
          <milestone ed="p" n="1345" unit="card" />
-         <div type="agon">
+         <div type="agon" n="Second Agon (1345-1451)">
             <div type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -3824,7 +3834,7 @@
             </div>
          </div>
          <milestone ed="p" n="1452" unit="card" />
-         <div type="episode">
+         <div type="exodus" n="Exodus (1452-1511)">
             <sp>
                <speaker>Στρεψιάδης</speaker>
                <l n="1452">ταυτὶ διʼ ὑμᾶς ὦ Νεθέλαι πέπονθʼ ἐγώ,</l>
@@ -3969,8 +3979,8 @@
                <l n="1508">δίωκε βάλλε παῖε, πολλῶν οὕνεκα,</l>
                <l n="1509">μάλιστα δʼ εἰδὼς τοὺς θεοὺς ὡς ἠδίκουν.</l>
             </sp>
-         </div>
-         <div type="exodus">
+         <!-- </div> -->
+         <!-- <div type="exodus"> -->
             <div type="anapests">
                <sp>
                   <speaker>Χορός</speaker>
