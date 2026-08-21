@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release">2011-09-12</date>
             <idno type="filename">tlg0035.tlg004.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0035.tlg004.perseus-grc2</idno>
          </publicationStmt>
@@ -42,7 +44,8 @@
                         <date>1916</date>
                      </imprint>
                   </monogr>
-                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/466/mode/2up">Internet Archive</ref>
+                  <ref target="https://archive.org/details/greekbucolicpo00theo/page/466/mode/2up">Internet
+                     Archive</ref>
                </biblStruct>
             </listBibl>
          </sourceDesc>
@@ -53,19 +56,21 @@
          </editorialDecl>
          <p>Text encoded in accordance with the latest EpiDoc standards</p>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:l[@n='$1'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@xml:id" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -77,7 +82,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0035.tlg004.perseus-grc2">
-         <pb xml:id="p.466"/>
+         <pb xml:id="p.466" />
          <head rend="align(center)">Μέγαρα</head>
          <l n="1" rend="align(indent)">
             <q>Μῆτερ ἐμή, τίφθ’ ὧδε φίλον κατὰ θυμὸν ἰάπτεις</q>
@@ -139,7 +144,7 @@
          <l n="20">
             <q rend="merge">μητέρ’ ἑήν, ἐπεὶ ἐγγὺς ἀνίκητον κακὸν ἦεν. </q>
          </l>
-         <pb xml:id="p.468"/>
+         <pb xml:id="p.468" />
          <l n="21">
             <q rend="merge">ὡς δ’ ὄρνις δύρηται ἐπὶ σφετέροισι νεοσσοῖς</q>
          </l>
@@ -224,7 +229,7 @@
          <l n="48">
             <q rend="merge">κηδεμόνων· οὐ γάρ σφε δόμων κατὰ τεῖχος ἐέργει·</q>
          </l>
-         <pb xml:id="p.470"/>
+         <pb xml:id="p.470" />
          <l n="49">
             <q rend="merge">καὶ λίην πάντες γε πέρην πιτυώδεος Ἰσθμοῦ</q>
          </l>
@@ -291,7 +296,7 @@
          <l n="74">
             <q rend="merge">ὅσθ’ ἡμῖν ἐφύπερθε κάρης βαρὺς αἰωρεῖται.</q>
          </l>
-         <pb xml:id="p.472"/>
+         <pb xml:id="p.472" />
          <l n="75">
             <q rend="merge">ἴστω γὰρ Κούρη τε καὶ εὐέανος Δημήτηρ,</q>
          </l>
@@ -379,7 +384,7 @@
          <l n="103">
             <q rend="merge">ἐξαπίνης δ’ ἀνελάμψεν ὑπὲρ καπέτοιο βαθείης</q>
          </l>
-         <pb xml:id="p.474"/>
+         <pb xml:id="p.474" />
          <l n="104">
             <q rend="merge">πῦρ ἄμοτον, περὶ δ’ αὐτὸν ἀθέσφατος εἰλεῖτο φλόξ.</q>
          </l>
