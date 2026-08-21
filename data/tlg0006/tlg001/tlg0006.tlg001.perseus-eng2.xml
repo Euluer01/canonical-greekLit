@@ -63,7 +63,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -98,7 +97,7 @@
             <p>Odysseus</p>
             <p>The Cyclops</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-40)">
             <pb xml:id="p.447" />
             <stage rend="italic">Scene. — Mount Aetna in Sicily, before the cave of the Cyclops.</stage>
             <sp>
@@ -140,7 +139,7 @@
             </sp>
          </div>
          <milestone unit="card" n="41" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="Parados (41-81)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -200,7 +199,7 @@
             </div>
          </div>
          <milestone unit="card" n="82" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="First Episode (82-355)">
             <sp>
                <speaker>Silenus</speaker>
                <l resp="perseus" rend="indent" n="82">Hush, children! and bid our servants fold the
@@ -862,7 +861,7 @@
             </sp>
          </div>
          <milestone unit="card" n="356" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (356-374)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -906,7 +905,7 @@
             </div>
          </div>
          <milestone unit="card" n="375" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (375-482)">
             <sp>
                <speaker>Odysseus</speaker>
                <l resp="perseus" rend="indent" n="375">
@@ -1090,7 +1089,7 @@
             </sp>
          </div>
          <milestone unit="card" n="483" resp="perseus" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (483-518)">
             <div type="anapests">
                <sp>
                   <speaker>First Half-Chorus</speaker>
@@ -1153,7 +1152,7 @@
             </div>
          </div>
          <milestone unit="card" n="519" resp="perseus" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (519-607)">
             <sp>
                <speaker>Odysseus</speaker>
                <l resp="perseus" rend="indent" n="519">
@@ -1512,7 +1511,8 @@
                </l>
             </sp>
             <milestone unit="card" n="608" resp="perseus" />
-            <div type="lyric">
+         </div>
+         <div type="choral" n="Third Stasimon (608-623)">
                <sp>
                   <speaker>Chorus</speaker>
                   <l resp="perseus" rend="indent" n="608">Tightly the pincers shall grip the neck </l>
@@ -1525,6 +1525,8 @@
                      see king Bromius, ivy-crowned, the god I sorely miss. Ah! shall I ever come to
                      that?</l>
                </sp>
+         </div>
+         <div type="episode" n="Fourth Episode (624-655)">
                <milestone unit="card" n="624" resp="perseus" />
                <sp>
                   <speaker>Odysseus</speaker>
@@ -1610,9 +1612,9 @@
                   <l resp="perseus" n="655">and as far as encouragement goes, let the Cyclops
                      smoulder.</l>
                </sp>
-            </div>
+         </div>
             <milestone unit="card" n="656" resp="perseus" />
-            <div type="lyric">
+         <div type="choral" n="Fourth Stasimon (656-662)">
                <sp>
                   <speaker>Chorus</speaker>
                   <l resp="perseus" rend="indent" n="656">What ho! my gallants, thrust away, make
@@ -1622,6 +1624,8 @@
                      and be careful lest in his agony he treat thee to some wantonness.</l>
                </sp>
                <milestone unit="card" n="663" resp="perseus" />
+         </div>
+         <div type="episode" n="Fifth Episode (663-709)">
                <sp>
                   <speaker>Cyclops</speaker>
                   <l resp="perseus" rend="indent" n="663">
@@ -1825,7 +1829,7 @@
                   <l resp="perseus" rend="indent" n="708">As for us, henceforth will we be the
                      servants of Bacchus, sharing the voyage of this hero Odysseus.</l>
                </sp>
-            </div>
+            <!-- </div> -->
          </div>
       </body>
    </text>

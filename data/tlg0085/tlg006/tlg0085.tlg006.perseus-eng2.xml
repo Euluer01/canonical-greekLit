@@ -63,7 +63,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -130,7 +129,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg006.perseus-eng2">
          <milestone n="1" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-22)">
             <stage rend="italic">The tomb of Agamemnon. Enter Orestes and Pylades</stage>
             <sp>
                <speaker>Orestes</speaker>
@@ -171,7 +170,7 @@
             </sp>
          </div>
          <milestone n="22" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Parados (22-83)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -272,7 +271,7 @@
             </div>
          </div>
          <milestone n="84" unit="card" />
-         <div type="episode">
+         <div type="episode" n="First Episode (84-584)">
             <sp>
                <speaker>Electra</speaker>
                <l n="84">You handmaidens who set our house in order, since you are here as my
@@ -703,9 +702,9 @@
                      done to him as he does,</q> says the age-old wisdom. </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone n="315" unit="card" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Orestes</speaker>
@@ -1049,225 +1048,226 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone n="479" unit="card" />
-         <div type="episode">
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="479">O father, who perished by a death unbefitting a king,</l>
-               <l n="480">grant in answer to my prayer the lordship over your halls!</l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="481">And I too, father, have a like request of you: to escape when I have
-                  wrought great destruction on Aegisthus.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="483">Yes, for then the customary funeral feasts of men would be established in
-                  your honor. But otherwise, at the rich and savory banquet</l>
-               <l n="485">of burnt offerings made to the earth, you will be without a portion of
-                  honor.</l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="486">And I will likewise at my wedding offer libations to you out of the
-                  fullness of my inheritance from my father’s house, and before all else I will hold
-                  this tomb of yours in the highest honor.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="489">O Earth, send up my father to watch my battle!
-               </l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="490">O Persephone, grant us indeed a glorious victory!</l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="491">Father, remember the bath where you were robbed of life.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="492">And remember how they devised a strange net to cast about you.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="493">You were caught, my father, in fetters forged by no smith’s hand.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="494">And in a fabric shamefully devised.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="495">Father, are you not roused by taunts such as these?</l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="496">Are you not raising that dearest head of yours?
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="497">Either send Justice to battle for those dear to you, or grant us in turn
-                  to get a similar grip<note anchored="true" n="498" resp="Smyth">Orestes prays
-                  that, as Clytaemestra and Aegisthus had <q type="emph">got grip</q> of Agamemnon
-                  by deception, so he may <q type="emph">get like grip</q> of them and kill them.</note>
-                  on them, if indeed after defeat you would in turn win victory. </l>
-            </sp>
-            <sp>
-               <speaker>Electra</speaker>
-               <l n="500">So listen, father, to this last appeal of mine as you behold these
-                  fledglings crouching at your tomb. Have compassion on your offspring, on the woman
-                  and on the man as well, and let not this seed of Pelops’ line be blotted out: for
-                  then, in spite of death, you are not dead.</l>
-               <l n="505">For children are voices of salvation to a man, though he is dead; like
-                  corks, they buoy up the net, saving the flaxen cord from out of the deep. Hear!
-                  For your own sake we make this lament. By honoring this plea of ours you save
-                  yourself.</l>
-            </sp>
-            <milestone n="510" unit="card" />
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="510">In truth you have drawn out this plea of yours to your own content in
-                  showing honor to this unlamented tomb. As for the rest, since your heart is
-                  rightly set on action, put your fortune to the test and get to your work at once.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="514">It will be so. But it is in no way amiss to inquire how, from what motive,</l>
-               <l n="515">she came to send her libations, seeking too late to make amends for an
-                  irremediable deed. They would be a sorry gift to send to the senseless dead: I
-                  cannot guess what they mean. The gifts are too paltry for her offence.</l>
-               <l n="520">For though a man may pour out all he has in atonement for one deed of
-                  blood, it is wasted effort. So the saying goes. If indeed you know, tell me: I
-                  wish to learn.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="523">I know, my child, for I was there. It was because she was shaken by dreams
-                  and wandering terrors of the night</l>
-               <l n="525">that she sent these offerings, godless woman that she is.</l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="526">And have you learned the nature of the dream so as to tell it properly?
-               </l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="527">She dreamed she gave birth to a serpent: that is her own account.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="528">And where does the tale end, and what is its consummation?
-               </l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="529">She laid it to rest as if it were a child, in swaddling clothes.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="530">What food did it crave, the newborn viper?</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="531">In her dream she offered it her own breast.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="532">Surely her nipple was not unwounded by the loathsome beast?
-               </l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="533">No: it drew in clotted blood with the milk.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="534">Truly it is not without meaning: the vision signifies a man!
-               </l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="535">Then from out of her sleep she raised a shriek and awoke appalled, and
-                  many lamps that had been blinded in the darkness flared up in the house to cheer
-                  our mistress. Then she sent these libations for the dead in the hope that they
-                  might be an effective cure for her distress.
-               </l>
-            </sp>
-            <milestone n="540" unit="card" />
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="540">Well then, I pray to this earth and to my father’s grave that this dream
-                  may come to its fulfilment in me. As I understand it, it fits at every point. For
-                  if the snake left the same place as I; if it was furnished with my swaddling
-                  clothes;</l>
-               <l n="545">if it sought to open its mouth to take the breast that nourished me and
-                  mixed the sweet milk with clotted blood while she shrieked for terror at this,
-                  then surely, as she has nourished a portentous thing of horror, she must die by
-                  violence. For I, turned serpent,</l>
-               <l n="550">am her killer, as this dream declares.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l n="551">I choose your reading of this portent. Let it be so. As for the rest, give
-                  your friends their parts. Tell some what to do, others what to leave undone.
-               </l>
-            </sp>
-            <sp>
-               <speaker>Orestes</speaker>
-               <l n="554">It is a simple story. My sister must go inside, and I charge her to keep
-                  concealed this pact with me,</l>
-               <l n="555">so that as by craft they killed a worthy man, so by craft they may
-                  likewise be caught and perish in the very same snare, even as Loxias decreed, lord
-                  Apollo, the prophet who has never before been false.</l>
-               <milestone unit="para" />
-               <l n="560">In the guise of a stranger, one fully equipped,I will come to the outer
-                  gate, and with me Pylades, whom you see here, as a guest and ally of the house.
-                  Both of us will speak the speech of <placeName key="tgn,7011022">Parnassus</placeName>,
-                  imitating the accent of a Phocian tongue. And in case none of the keepers of the
-                  door will give us a hearty welcome</l>
-               <l n="565">on the plea that the house is afflicted with trouble by the gods, then we
-                  will wait so that anyone passing the house will consider and say: <q type="spoken">Why
-                  then does Aegisthus have his door shut on his suppliant, if in fact he is at home
-                  and knows?</q>
-               </l>
-               <milestone unit="para" />
-               <l n="571">But if I indeed pass the outermost threshold of the gate and find that man
-                  sitting on my father’s throne, or if then coming face to face with me he lifts and
-                  casts down his eyes, know well:</l>
-               <l n="575">before he can even say <q type="spoken">Of what land is this stranger?</q>
-                  I will skewer him with my swift sword and lay him dead. The fury that has no fill
-                  of slaughter shall for her third and crowning drink drink unmixed blood! <milestone
-                     unit="para" />Now you, Electra, keep strict watch over what happens inside the
-                  house,</l>
-               <l n="580"> so that our plans may fit together well. You <stage rend="italic">addressing
-                  the Chorus</stage> had best keep a discreet tongue: be silent when there is need
-                  and speak only what the occasion demands. As for the rest, I call on him<note
-                     anchored="true" n="583" resp="Smyth">Apollo, his champion (lines 269, 558),
-                  whose statue stood before the palace (cp.<bibl n="Aesch. Ag. 513">Aesch. Ag. 513</bibl>
-                  ).</note> to cast his glance this way and direct the contest of the sword for me. <stage
-                     rend="italic">Exeunt Orestes, Pylades, and Electra</stage>
-               </l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="479">O father, who perished by a death unbefitting a king,</l>
+                  <l n="480">grant in answer to my prayer the lordship over your halls!</l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="481">And I too, father, have a like request of you: to escape when I have
+                     wrought great destruction on Aegisthus.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="483">Yes, for then the customary funeral feasts of men would be established in
+                     your honor. But otherwise, at the rich and savory banquet</l>
+                  <l n="485">of burnt offerings made to the earth, you will be without a portion of
+                     honor.</l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="486">And I will likewise at my wedding offer libations to you out of the
+                     fullness of my inheritance from my father’s house, and before all else I will hold
+                     this tomb of yours in the highest honor.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="489">O Earth, send up my father to watch my battle!
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="490">O Persephone, grant us indeed a glorious victory!</l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="491">Father, remember the bath where you were robbed of life.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="492">And remember how they devised a strange net to cast about you.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="493">You were caught, my father, in fetters forged by no smith’s hand.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="494">And in a fabric shamefully devised.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="495">Father, are you not roused by taunts such as these?</l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="496">Are you not raising that dearest head of yours?
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="497">Either send Justice to battle for those dear to you, or grant us in turn
+                     to get a similar grip<note anchored="true" n="498" resp="Smyth">Orestes prays
+                     that, as Clytaemestra and Aegisthus had <q type="emph">got grip</q> of Agamemnon
+                     by deception, so he may <q type="emph">get like grip</q> of them and kill them.</note>
+                     on them, if indeed after defeat you would in turn win victory. </l>
+               </sp>
+               <sp>
+                  <speaker>Electra</speaker>
+                  <l n="500">So listen, father, to this last appeal of mine as you behold these
+                     fledglings crouching at your tomb. Have compassion on your offspring, on the woman
+                     and on the man as well, and let not this seed of Pelops’ line be blotted out: for
+                     then, in spite of death, you are not dead.</l>
+                  <l n="505">For children are voices of salvation to a man, though he is dead; like
+                     corks, they buoy up the net, saving the flaxen cord from out of the deep. Hear!
+                     For your own sake we make this lament. By honoring this plea of ours you save
+                     yourself.</l>
+               </sp>
+               <milestone n="510" unit="card" />
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="510">In truth you have drawn out this plea of yours to your own content in
+                     showing honor to this unlamented tomb. As for the rest, since your heart is
+                     rightly set on action, put your fortune to the test and get to your work at once.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="514">It will be so. But it is in no way amiss to inquire how, from what motive,</l>
+                  <l n="515">she came to send her libations, seeking too late to make amends for an
+                     irremediable deed. They would be a sorry gift to send to the senseless dead: I
+                     cannot guess what they mean. The gifts are too paltry for her offence.</l>
+                  <l n="520">For though a man may pour out all he has in atonement for one deed of
+                     blood, it is wasted effort. So the saying goes. If indeed you know, tell me: I
+                     wish to learn.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="523">I know, my child, for I was there. It was because she was shaken by dreams
+                     and wandering terrors of the night</l>
+                  <l n="525">that she sent these offerings, godless woman that she is.</l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="526">And have you learned the nature of the dream so as to tell it properly?
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="527">She dreamed she gave birth to a serpent: that is her own account.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="528">And where does the tale end, and what is its consummation?
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="529">She laid it to rest as if it were a child, in swaddling clothes.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="530">What food did it crave, the newborn viper?</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="531">In her dream she offered it her own breast.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="532">Surely her nipple was not unwounded by the loathsome beast?
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="533">No: it drew in clotted blood with the milk.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="534">Truly it is not without meaning: the vision signifies a man!
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="535">Then from out of her sleep she raised a shriek and awoke appalled, and
+                     many lamps that had been blinded in the darkness flared up in the house to cheer
+                     our mistress. Then she sent these libations for the dead in the hope that they
+                     might be an effective cure for her distress.
+                  </l>
+               </sp>
+               <milestone n="540" unit="card" />
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="540">Well then, I pray to this earth and to my father’s grave that this dream
+                     may come to its fulfilment in me. As I understand it, it fits at every point. For
+                     if the snake left the same place as I; if it was furnished with my swaddling
+                     clothes;</l>
+                  <l n="545">if it sought to open its mouth to take the breast that nourished me and
+                     mixed the sweet milk with clotted blood while she shrieked for terror at this,
+                     then surely, as she has nourished a portentous thing of horror, she must die by
+                     violence. For I, turned serpent,</l>
+                  <l n="550">am her killer, as this dream declares.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l n="551">I choose your reading of this portent. Let it be so. As for the rest, give
+                     your friends their parts. Tell some what to do, others what to leave undone.
+                  </l>
+               </sp>
+               <sp>
+                  <speaker>Orestes</speaker>
+                  <l n="554">It is a simple story. My sister must go inside, and I charge her to keep
+                     concealed this pact with me,</l>
+                  <l n="555">so that as by craft they killed a worthy man, so by craft they may
+                     likewise be caught and perish in the very same snare, even as Loxias decreed, lord
+                     Apollo, the prophet who has never before been false.</l>
+                  <milestone unit="para" />
+                  <l n="560">In the guise of a stranger, one fully equipped,I will come to the outer
+                     gate, and with me Pylades, whom you see here, as a guest and ally of the house.
+                     Both of us will speak the speech of <placeName key="tgn,7011022">Parnassus</placeName>,
+                     imitating the accent of a Phocian tongue. And in case none of the keepers of the
+                     door will give us a hearty welcome</l>
+                  <l n="565">on the plea that the house is afflicted with trouble by the gods, then we
+                     will wait so that anyone passing the house will consider and say: <q type="spoken">Why
+                     then does Aegisthus have his door shut on his suppliant, if in fact he is at home
+                     and knows?</q>
+                  </l>
+                  <milestone unit="para" />
+                  <l n="571">But if I indeed pass the outermost threshold of the gate and find that man
+                     sitting on my father’s throne, or if then coming face to face with me he lifts and
+                     casts down his eyes, know well:</l>
+                  <l n="575">before he can even say <q type="spoken">Of what land is this stranger?</q>
+                     I will skewer him with my swift sword and lay him dead. The fury that has no fill
+                     of slaughter shall for her third and crowning drink drink unmixed blood! <milestone
+                        unit="para" />Now you, Electra, keep strict watch over what happens inside the
+                     house,</l>
+                  <l n="580"> so that our plans may fit together well. You <stage rend="italic">addressing
+                     the Chorus</stage> had best keep a discreet tongue: be silent when there is need
+                     and speak only what the occasion demands. As for the rest, I call on him<note
+                        anchored="true" n="583" resp="Smyth">Apollo, his champion (lines 269, 558),
+                     whose statue stood before the palace (cp.<bibl n="Aesch. Ag. 513">Aesch. Ag. 513</bibl>
+                     ).</note> to cast his glance this way and direct the contest of the sword for me. <stage
+                        rend="italic">Exeunt Orestes, Pylades, and Electra</stage>
+                  </l>
+               </sp>
+            </div>
          </div>
          <milestone n="585" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (585-652)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1392,7 +1392,7 @@
             </div>
          </div>
          <milestone n="652" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (653-782)">
             <stage rend="italic">Enter, with attendants, Orestes and Pylades before the palace</stage>
             <sp>
                <speaker>Orestes</speaker>
@@ -1623,7 +1623,7 @@
             </div>
          </div>
          <milestone n="783" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (783-837)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1742,7 +1742,7 @@
             </div>
          </div>
          <milestone n="838" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (838-934)">
             <stage rend="italic">Enter Aegisthus</stage>
             <sp>
                <speaker>Aegisthus</speaker>
@@ -2009,7 +2009,7 @@
             </div>
          </div>
          <milestone n="935" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (935-972)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2120,7 +2120,7 @@
             </div>
          </div>
          <milestone n="973" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Exodus (973-1076)">
             <stage rend="italic">Orestes with the branch and wreath of a suppliant is disclosed
                standing by the bodies. With him are Pylades and attendants who display the robe of
                Agamemnon</stage>
