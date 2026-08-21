@@ -65,7 +65,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -101,7 +106,7 @@
             <p>Children</p>
             <p>Athena</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-41)">
             <stage rend="italic">Scene.—The Temple of Demeter at <placeName key="perseus,Eleusis">
                Eleusis</placeName>.</stage>
             <sp>
@@ -144,7 +149,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="perseus" n="42" />
-         <div type="choral">
+         <div type="choral" n="Parados (42-86)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -229,7 +234,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="87" />
-         <div type="episode">
+         <div type="episode" n="First Episode (87-364)">
             <sp>
                <speaker>Theseus</speaker>
                <l rend="indent" resp="perseus" n="87">What is this lamentation that I hear, this
@@ -809,7 +814,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="365" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (365-380)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -851,7 +856,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="381" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (381-597)">
             <sp>
                <speaker>Theseus</speaker>
                <l rend="indent" resp="perseus" n="381">
@@ -1175,7 +1180,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="perseus" n="598" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (598-633)">
             <div n="1" type="strophe">
                <stage rend="italic">The following lines between the Semi-Choruses are chanted
                   responsively.</stage>
@@ -1290,7 +1295,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="634" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (634-777)">
             <sp>
                <speaker>Messenger</speaker>
                <l rend="indent" resp="perseus" n="634">Ladies, I bring you tidings of great joy,
@@ -1544,7 +1549,7 @@
             </sp>
          </div>
          <milestone unit="card" resp="perseus" n="778" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (778-793)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1567,6 +1572,8 @@
                      of children dear.</l>
                </sp>
             </div>
+         </div>
+         <div type="episode" n="Fourth Episode (794-954)">
             <milestone unit="card" resp="perseus" n="794" />
             <div type="anapests">
                <sp>
@@ -1713,96 +1720,97 @@
                      is here followed.</note> his house, is come on thee.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" resp="perseus" n="837" />
-         <div type="episode">
-            <sp>
-               <speaker>Theseus</speaker>
-               <l rend="indent" resp="perseus" n="837">
-                  <note>There is some corruption in the three following lines. Nauck’s <foreign
-                        xml:lang="grc">εἴασα</foreign> for the words <foreign xml:lang="grc">ἐς τὰ
-                  σά γε</foreign> makes it possible to extract meaning, but further emendation is
-                  needed. Nauck would omit the word <foreign xml:lang="grc">στρατῷ</foreign> in l.
-                  838 and the whole of l. 839, except the word <foreign xml:lang="grc">γόους</foreign>
-                  .</note> I meant to question thee when thou wert venting thy lamentations to the
-                  host, but I will let it pass; yet, though I dropped the matter then </l>
-               <l resp="perseus" n="840">and left it alone, I now do ask Adrastus, Of what lineage
-                  sprang those youths, to shine so bright in chivalry? Tell it to our younger
-                  citizens of thy fuller wisdom, for thou art skilled to know. Myself beheld their
-                  daring deeds, too high for words to tell, </l>
-               <l resp="perseus" n="845">whereby they thought to capture <placeName
-                     key="perseus,Thebes">Thebes</placeName>. One question will I spare thee, lest I
-                  provoke thy laughter; the foe that each of them encountered in the fray, the spear
-                  from which each received his death-wound. These be idle tales alike for those who
-                  hear </l>
-               <l resp="perseus" n="850">or him who speaks, that any man amid the fray, when clouds
-                  of darts are hurtling before his eyes, should declare for certain who each
-                  champion is. I could not ask such questions, nor yet believe those who dare assert
-                  the like; </l>
-               <l resp="perseus" n="855">for when a man is face to face with the foe, he scarce can
-                  see even that which ’tis his bounden duty to observe.</l>
-            </sp>
-            <sp>
-               <speaker>Adrastus</speaker>
-               <l rend="indent" resp="perseus" n="857">Hearken then. For in giving this task to me
-                  thou <pb xml:id="p.213" /> findest a willing eulogist of friends, whose praise I
-                  would declare in all truth and sincerity. </l>
-               <l resp="perseus" n="860">Dost see yon corpse by Zeus’s bolt transfixed? That is
-                  Capaneus; though he had ample wealth, yet was he the last to boast of his
-                  prosperity; nor would he ever vaunt himself above a poorer neighbour, but shunned
-                  the man whose sumptuous board had puffed him up too high </l>
-               <l resp="perseus" n="865">and made him scorn mere competence, for he held that virtue
-                  lies not in greedy gluttony, but that moderate means suffice. True friend was he,
-                  alike to present or to absent friends the same; of such the number is not great.
-                  His was a guileless character, </l>
-               <l resp="perseus" n="870">a courteous address, that left no promise unperformed
-                  either towards his own household or his fellow-citizens. The next I name is
-                  Eteocles; a master he of other kinds of excellence; young, nor richly dowered with
-                  store, yet high in honour in the Argive land. </l>
-               <l resp="perseus" n="875">And though his friends oft offered gifts of gold, he would
-                  not have it in his house, to make his character its slave by taking wealth’s yoke
-                  upon him. Not his city, but those that sinned against her did he hate, for a city
-                  is no wise to be blamed </l>
-               <l resp="perseus" n="880">if it get an evil name by reason of an evil governor. </l>
-               <milestone unit="card" resp="perseus" n="881" />
-               <l resp="perseus" n="881">Such another was Hippomedon, third of all this band; from
-                  his very boyhood he refrained from turning towards the allurements of the Muses,
-                  to lead a life of ease; his home was in the fields, and gladly would he school his
-                  nature to hardships </l>
-               <l resp="perseus" n="885">with a view to manliness, aye hasting to the chase,
-                  rejoicing in his steeds or straining of his bow, because he would make himself of
-                  use unto his state. Next behold the huntress Atalanta’s son, Parthenopaeus, a
-                  youth of peerless beauty; </l>
-               <l resp="perseus" n="890">from Arcady he came even to the streams of Inachus, and in <placeName
-                     key="perseus,Argos">Argos</placeName> spent his boyhood. There, when he grew to
-                  man’s estate, first, as is the duty of strangers settled in another land, he
-                  showed no pique or jealousy against the state, became no quibbler, chiefest source
-                  of annoyance </l>
-               <l resp="perseus" n="895">citizen or stranger can give, but took his stand amid the
-                  host, and fought for <placeName key="perseus,Argos">Argos</placeName> as he were
-                  her own son, <pb xml:id="p.214" />
-                  <!-- [L. 897–967 --> glad at heart whenso the city prospered, deeply
-                  grieved if e’er reverses came; many<note>Dindorf regards this line as an
-                  interpolation.</note> a lover though he had midst men and maids, </l>
-               <l resp="perseus" n="900">yet was he careful to avoid offence. </l>
-               <l resp="perseus" n="901">Of Tydeus next the lofty praise I will express in brief; no
-                  brilliant spokesman he, but a clever craftsman in the art of war, with many a
-                  shrewd<note>Valckenaer <foreign xml:lang="grc">σοφός</foreign> for MS. <foreign
-                        xml:lang="grc">σοφά</foreign>. Porson condemns the line.</note> device;
-                  inferior in judgment to his brother Meleager, </l>
-               <l resp="perseus" n="905">yet through his warrior skill lending his name to equal
-                  praise, for he had found in arms a perfect science; his was an ambitious nature, a
-                  spirit rich in store of deeds, with words less fully dowered. From this account
-                  then wonder not, </l>
-               <l resp="perseus" n="910">Theseus, that they dared to die before the towers; for
-                  noble nurture carries honour with it, and every man, when once he hath practised
-                  virtue, scorns the name of villain. Courage may be learnt, for even a babe doth
-                  learn </l>
-               <l resp="perseus" n="915">to speak and hear things it cannot comprehend; and
-                  whatso’er a child<note>Reading <foreign xml:lang="grc">παῖς</foreign> with
-                  Valckenaer.</note> hath learnt, this it is his wont to treasure up till he is old.
-                  So train up your children in a virtuous way.</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Theseus</speaker>
+                  <l rend="indent" resp="perseus" n="837">
+                     <note>There is some corruption in the three following lines. Nauck’s <foreign
+                           xml:lang="grc">εἴασα</foreign> for the words <foreign xml:lang="grc">ἐς τὰ
+                     σά γε</foreign> makes it possible to extract meaning, but further emendation is
+                     needed. Nauck would omit the word <foreign xml:lang="grc">στρατῷ</foreign> in l.
+                     838 and the whole of l. 839, except the word <foreign xml:lang="grc">γόους</foreign>
+                     .</note> I meant to question thee when thou wert venting thy lamentations to the
+                     host, but I will let it pass; yet, though I dropped the matter then </l>
+                  <l resp="perseus" n="840">and left it alone, I now do ask Adrastus, Of what lineage
+                     sprang those youths, to shine so bright in chivalry? Tell it to our younger
+                     citizens of thy fuller wisdom, for thou art skilled to know. Myself beheld their
+                     daring deeds, too high for words to tell, </l>
+                  <l resp="perseus" n="845">whereby they thought to capture <placeName
+                        key="perseus,Thebes">Thebes</placeName>. One question will I spare thee, lest I
+                     provoke thy laughter; the foe that each of them encountered in the fray, the spear
+                     from which each received his death-wound. These be idle tales alike for those who
+                     hear </l>
+                  <l resp="perseus" n="850">or him who speaks, that any man amid the fray, when clouds
+                     of darts are hurtling before his eyes, should declare for certain who each
+                     champion is. I could not ask such questions, nor yet believe those who dare assert
+                     the like; </l>
+                  <l resp="perseus" n="855">for when a man is face to face with the foe, he scarce can
+                     see even that which ’tis his bounden duty to observe.</l>
+               </sp>
+               <sp>
+                  <speaker>Adrastus</speaker>
+                  <l rend="indent" resp="perseus" n="857">Hearken then. For in giving this task to me
+                     thou <pb xml:id="p.213" /> findest a willing eulogist of friends, whose praise I
+                     would declare in all truth and sincerity. </l>
+                  <l resp="perseus" n="860">Dost see yon corpse by Zeus’s bolt transfixed? That is
+                     Capaneus; though he had ample wealth, yet was he the last to boast of his
+                     prosperity; nor would he ever vaunt himself above a poorer neighbour, but shunned
+                     the man whose sumptuous board had puffed him up too high </l>
+                  <l resp="perseus" n="865">and made him scorn mere competence, for he held that virtue
+                     lies not in greedy gluttony, but that moderate means suffice. True friend was he,
+                     alike to present or to absent friends the same; of such the number is not great.
+                     His was a guileless character, </l>
+                  <l resp="perseus" n="870">a courteous address, that left no promise unperformed
+                     either towards his own household or his fellow-citizens. The next I name is
+                     Eteocles; a master he of other kinds of excellence; young, nor richly dowered with
+                     store, yet high in honour in the Argive land. </l>
+                  <l resp="perseus" n="875">And though his friends oft offered gifts of gold, he would
+                     not have it in his house, to make his character its slave by taking wealth’s yoke
+                     upon him. Not his city, but those that sinned against her did he hate, for a city
+                     is no wise to be blamed </l>
+                  <l resp="perseus" n="880">if it get an evil name by reason of an evil governor. </l>
+                  <milestone unit="card" resp="perseus" n="881" />
+                  <l resp="perseus" n="881">Such another was Hippomedon, third of all this band; from
+                     his very boyhood he refrained from turning towards the allurements of the Muses,
+                     to lead a life of ease; his home was in the fields, and gladly would he school his
+                     nature to hardships </l>
+                  <l resp="perseus" n="885">with a view to manliness, aye hasting to the chase,
+                     rejoicing in his steeds or straining of his bow, because he would make himself of
+                     use unto his state. Next behold the huntress Atalanta’s son, Parthenopaeus, a
+                     youth of peerless beauty; </l>
+                  <l resp="perseus" n="890">from Arcady he came even to the streams of Inachus, and in <placeName
+                        key="perseus,Argos">Argos</placeName> spent his boyhood. There, when he grew to
+                     man’s estate, first, as is the duty of strangers settled in another land, he
+                     showed no pique or jealousy against the state, became no quibbler, chiefest source
+                     of annoyance </l>
+                  <l resp="perseus" n="895">citizen or stranger can give, but took his stand amid the
+                     host, and fought for <placeName key="perseus,Argos">Argos</placeName> as he were
+                     her own son, <pb xml:id="p.214" />
+                     <!-- [L. 897–967 --> glad at heart whenso the city prospered, deeply
+                     grieved if e’er reverses came; many<note>Dindorf regards this line as an
+                     interpolation.</note> a lover though he had midst men and maids, </l>
+                  <l resp="perseus" n="900">yet was he careful to avoid offence. </l>
+                  <l resp="perseus" n="901">Of Tydeus next the lofty praise I will express in brief; no
+                     brilliant spokesman he, but a clever craftsman in the art of war, with many a
+                     shrewd<note>Valckenaer <foreign xml:lang="grc">σοφός</foreign> for MS. <foreign
+                           xml:lang="grc">σοφά</foreign>. Porson condemns the line.</note> device;
+                     inferior in judgment to his brother Meleager, </l>
+                  <l resp="perseus" n="905">yet through his warrior skill lending his name to equal
+                     praise, for he had found in arms a perfect science; his was an ambitious nature, a
+                     spirit rich in store of deeds, with words less fully dowered. From this account
+                     then wonder not, </l>
+                  <l resp="perseus" n="910">Theseus, that they dared to die before the towers; for
+                     noble nurture carries honour with it, and every man, when once he hath practised
+                     virtue, scorns the name of villain. Courage may be learnt, for even a babe doth
+                     learn </l>
+                  <l resp="perseus" n="915">to speak and hear things it cannot comprehend; and
+                     whatso’er a child<note>Reading <foreign xml:lang="grc">παῖς</foreign> with
+                     Valckenaer.</note> hath learnt, this it is his wont to treasure up till he is old.
+                     So train up your children in a virtuous way.</l>
+               </sp>
+            </div>
             <milestone unit="card" resp="perseus" n="918" />
             <div type="lyric">
                <sp>
@@ -1913,7 +1921,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="955" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (955–979)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1953,7 +1961,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="980" />
-         <div type="episode">
+         <div type="episode" n="Fifth Episode (980-1113)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2221,7 +2229,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="1114" />
-         <div type="choral">
+         <div type="choral" n="Kommos (1114-1164)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2366,7 +2374,7 @@
             </div>
          </div>
          <milestone unit="card" resp="perseus" n="1165" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1165-1234)">
             <sp>
                <speaker>Theseus</speaker>
                <l rend="indent" resp="perseus" n="1165">Adrastus, and ye dames from <placeName

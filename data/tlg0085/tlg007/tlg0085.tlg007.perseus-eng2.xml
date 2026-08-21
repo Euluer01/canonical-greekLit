@@ -63,7 +63,13 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -118,7 +124,7 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg007.perseus-eng2">
          <milestone unit="card" n="1" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-63)">
             <sp>
                <speaker>The Priestess of Pythian Apollo</speaker>
                <l n="1">First, in this prayer of mine, I give the place of highest honor among the
@@ -199,6 +205,8 @@
                   others a purifier of homes. <stage rend="italic">Exit</stage>
                </l>
             </sp>
+         </div>
+         <div type="choral" n="First Episode (64-142)">
             <milestone unit="card" n="64" />
             <stage rend="italic">The interior of the temple is disclosed. Enter, from the inner
                sanctuary, Apollo, who takes his stand beside Orestes at the center-stone. Near the
@@ -335,7 +343,7 @@
             </sp>
          </div>
          <milestone unit="card" n="143" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (143-178)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -407,7 +415,7 @@
             </div>
          </div>
          <milestone unit="card" n="178" />
-         <div type="episode">
+         <div type="episode" n="Second Episode, Part I (179-243)">
             <stage rend="italic">Enters from the inner sanctuary.</stage>
             <sp>
                <speaker>Apollo</speaker>
@@ -574,6 +582,8 @@
                   result of my trial.
                </l>
             </sp>
+         </div>
+         <div type="choral" n="Parados (244-275)">
             <stage rend="italic">The Furies enter dispersedly, hunting Orestes’ trail by scent.</stage>
             <sp>
                <speaker>Chorus</speaker>
@@ -613,6 +623,8 @@
                </l>
             </sp>
             <milestone unit="card" n="276" />
+         </div>
+         <div type="episode" n="Second Episode Part II (276-320)">
             <sp>
                <speaker>Orestes</speaker>
                <l n="276">Taught by misery, I know many purification rituals, and I know where it is
@@ -642,9 +654,9 @@
                   oh, let her come—as a goddess, she hears even from far away—to be my deliverer
                   from distress! </l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="299" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>Chorus</speaker>
                <l n="299">No, neither Apollo nor Athena’s strength</l>
@@ -669,6 +681,8 @@
                      against him to the end, presenting ourselves as upright witnesses for the dead.</l>
                </sp>
             </div>
+         </div>
+         <div type="choral" n="Second Stasimon (321-395)">
             <milestone unit="card" n="321" />
             <div n="1" type="strophe">
                <sp>
@@ -824,7 +838,7 @@
             </div>
          </div>
          <milestone unit="card" n="397" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (396-489)">
             <stage rend="italic">Enter Athena, wearing the aegis.</stage>
             <sp>
                <speaker>Athena</speaker>
@@ -1007,7 +1021,7 @@
             </sp>
          </div>
          <milestone unit="card" n="490" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (490-565)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1105,7 +1119,7 @@
             </div>
          </div>
          <milestone unit="card" n="566" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (566-777)">
             <stage rend="italic">Enter, in procession, Athena, a herald, the jury of the Areopagus,
                a crowd of citizens. Orestes removes to the place appointed for the accused. Apollo
                appears after Athena’s first speech.</stage>
@@ -1572,7 +1586,7 @@
             </sp>
          </div>
          <milestone unit="card" n="778" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (778-891)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1702,7 +1716,7 @@
                </sp>
             </div>
          </div>
-         <div type="episode">
+         <div type="episode" n="Fifth Episode (892-915)">
             <sp>
                <speaker>Chorus</speaker>
                <l n="892">Lady Athena, what place do you say I will have?
@@ -1773,7 +1787,7 @@
             </sp>
          </div>
          <milestone unit="card" n="916" />
-         <div type="choral">
+         <div type="choral" n="Exodus (916-1047)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1940,25 +1954,26 @@
                   <l n="1020">the chances of life.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1021" />
-         <div type="episode">
-            <sp>
-               <speaker>Athena</speaker>
-               <l n="1021">I approve the words of your invocation, and will escort you by the light
-                  of gleaming torches to the places below and beneath the earth, with the attendant
-                  women who guard my image</l>
-               <l n="1025">in duty bound. For the eye of the whole land of Theseus will come forth,
-                  a glorious troop of children, matrons and a band of old women. <milestone
-                     unit="para" />Dress them honorably in robes dyed scarlet, and let the torches’
-                  light move on,</l>
-               <l n="1030">so that this kindly company of visitors to our land may show itself
-                  afterwards in blessings that bring prosperity to men.
-               </l>
-            </sp>
-         </div>
+         <!-- <div type="episode"> -->
+            <div type="dialogue">
+               <sp>
+                  <speaker>Athena</speaker>
+                  <l n="1021">I approve the words of your invocation, and will escort you by the light
+                     of gleaming torches to the places below and beneath the earth, with the attendant
+                     women who guard my image</l>
+                  <l n="1025">in duty bound. For the eye of the whole land of Theseus will come forth,
+                     a glorious troop of children, matrons and a band of old women. <milestone
+                        unit="para" />Dress them honorably in robes dyed scarlet, and let the torches’
+                     light move on,</l>
+                  <l n="1030">so that this kindly company of visitors to our land may show itself
+                     afterwards in blessings that bring prosperity to men.
+                  </l>
+               </sp>
+            </div>
          <milestone unit="card" n="1032" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus of the Processional Escort</speaker>

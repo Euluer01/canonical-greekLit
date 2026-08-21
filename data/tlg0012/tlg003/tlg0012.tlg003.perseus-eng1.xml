@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -29,7 +30,7 @@
             <bibl>
                <author>Homer</author>
                <title>The Homeric Hymns and Homerica with an English Translation
-                        Homeric Hymns</title>
+                  Homeric Hymns</title>
                <editor role="translator">Hugh G. Evelyn-White</editor>
                <pubPlace>London</pubPlace>
                <publisher>William Heinemann, Ltd.</publisher>
@@ -39,31 +40,36 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/hesiodhomerichym00hesiuoft/">Internet Archive</ref>
+               <ref target="https://archive.org/details/hesiodhomerichym00hesiuoft/">Internet
+                  Archive</ref>
             </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
                <p>This pointer pattern extracts epigram and line.</p>
             </cRefPattern>
-            <cRefPattern n="epigram" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="epigram" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
                <p>This pointer pattern extracts epigram.</p>
             </cRefPattern>
          </refsDecl>
          <editorialDecl>
-            <quotation marks="none"/>
+            <quotation marks="none" />
          </editorialDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure match="div[@type='epigram']" use="@n" unit="epigram" delim=":"><citeStructure unit="line" delim="." match="l" use="@n"/>
-            </citeStructure></citeStructure>
+               <citeStructure match="div[@type='epigram']" use="@n" unit="epigram" delim=":"
+                  n="chunk">
+               </citeStructure>
+            </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="eng">English</language>
@@ -78,12 +84,11 @@
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0012.tlg003.perseus-eng1">
          <div n="1" type="epigram">
-            <l n="1" rend="indent">Have<note resp="editor" xml:lang="eng">The Epigrams are
-                            preserved in the pseudo-Herodotean <title>Life of Homer</title>. Nos.
-                            III, XIII, and XVII are also found in the <title>Contest of Homer and
-                                Hesiod</title>, and No. I is also extant at the end of some MSS. of
-                            the <title>Homeric Hymns</title>.</note> reverence for him who needs a
-                        home and stranger’s dole,</l>
+            <l n="1" rend="indent">Have<note resp="editor" xml:lang="eng">The Epigrams are preserved
+               in the pseudo-Herodotean <title>Life of Homer</title>. Nos. III, XIII, and XVII are
+               also found in the <title>Contest of Homer and
+                     Hesiod</title>, and No. I is also extant at the end of some MSS. of the <title>Homeric
+               Hymns</title>.</note> reverence for him who needs a home and stranger’s dole,</l>
             <l n="2">all ye who dwell in the high city of Cyme, the lovely maiden,</l>
             <l n="3">hard by the foothills of lofty Sardene, </l>
             <l n="4">ye who drink the heavenly water of the divine stream,</l>
@@ -110,13 +115,14 @@
             <l n="6">once built the towers of Aeolian Smyrna, wave-shaken neighbor to the sea, </l>
             <l n="7">through which glides the pleasant stream of sacred Meles; </l>
             <l n="8">thence<note resp="editor" xml:lang="eng">
-                  <emph>sc.</emph> from Smyrna,
-                            Homer’s reputed birth-place.</note> arose the daughters of Zeus,
-                        glorious children, </l>
+                  <emph>sc.</emph> from Smyrna, Homer’s reputed birth-place.</note> arose the
+               daughters of Zeus, glorious children, </l>
             <l n="9">and would fain have made famous that fair country and the city of its people.</l>
             <l n="10">But in their folly those men scorned the divine voice and renown of song, </l>
             <l n="11">and in trouble shall one of them remember this hereafter—</l>
-            <l n="12">he who with scornful words to them<note resp="editor" xml:lang="eng">The councillors of Cyme who refused to support Homer at the public expense.</note> contrived my fate. </l>
+            <l n="12">he who with scornful words to them<note resp="editor" xml:lang="eng">The
+               councillors of Cyme who refused to support Homer at the public expense.</note>
+               contrived my fate. </l>
             <l n="13">Yet I will endure the lot which heaven gave me even at my birth, </l>
             <l n="14">bearing my disappointment with a patient heart. </l>
             <l n="15">My dear limbs yearn not to stay in the sacred streets </l>
@@ -124,7 +130,8 @@
             <l n="17">to go unto another country, small though I am.</l>
          </div>
          <div n="5" type="epigram">
-            <l n="1" rend="indent">Thestorides, full many things there are that mortals cannot sound; </l>
+            <l n="1" rend="indent">Thestorides, full many things there are that mortals cannot
+               sound; </l>
             <l n="2">but there is nothing more unfathomable than the heart of man.</l>
          </div>
          <div n="6" type="epigram">
@@ -153,7 +160,9 @@
             <l n="2">but even now take me aboard and you shall make your voyage.</l>
          </div>
          <div n="10" type="epigram">
-            <l n="1" rend="indent">Another sort of pine shall bear a better fruit<note resp="editor" xml:lang="eng">The <q type="mentioned">better fruit</q> is apparently the iron smelted out in fires of pine-wood.</note>
+            <l n="1" rend="indent">Another sort of pine shall bear a better fruit<note resp="editor"
+                  xml:lang="eng">The <q type="mentioned">better fruit</q> is apparently the iron
+               smelted out in fires of pine-wood.</note>
             </l>
             <l n="2">than you upon the heights of furrowed, windy Ida. </l>
             <l n="3">For there shall mortal men get the iron that Ares loves </l>
@@ -166,7 +175,9 @@
             <l n="4">a man approaching and the wild-beast coming to the fence.</l>
          </div>
          <div n="12" type="epigram">
-            <l n="1" rend="indent">Goddess-nurse of the young,<note resp="editor" xml:lang="eng">Hecate: cp. Hesiod, <title>Theogony</title>, 450.</note> give ear to my prayer, and grant that this woman </l>
+            <l n="1" rend="indent">Goddess-nurse of the young,<note resp="editor" xml:lang="eng">Hecate:
+               cp. Hesiod, <title>Theogony</title>, 450.</note> give ear to my prayer, and grant
+               that this woman </l>
             <l n="2">may reject the love-embrace of youth </l>
             <l n="3">and dote on grey-haired old men </l>
             <l n="4">whose powers are dulled, but whose hearts still desire.</l>
@@ -207,27 +218,35 @@
          </div>
          <div n="15" type="epigram">
             <l n="1" rend="indent">
-               <note resp="editor" xml:lang="eng">This song is called by pseudo-Herodotus <foreign xml:lang="grc">Εἰρησιώνη</foreign>. The word properly indicates a garland wound with wool which was worn at harvest-festivals, but came to be applied first to the harvest song and then to any begging song. The present is akin to the Swallow-Song (<foreign xml:lang="grc">Χελιδόνισμα</foreign>), sung at the beginning of spring, and answering to the still surviving English May-Day songs. Cp. Athenaeus, viii. 360 B.</note> Let us betake us to the house of some man of great power,—</l>
+               <note resp="editor" xml:lang="eng">This song is called by pseudo-Herodotus <foreign
+                     xml:lang="grc">Εἰρησιώνη</foreign>. The word properly indicates a garland wound
+               with wool which was worn at harvest-festivals, but came to be applied first to the
+               harvest song and then to any begging song. The present is akin to the Swallow-Song (<foreign
+                     xml:lang="grc">Χελιδόνισμα</foreign>), sung at the beginning of spring, and
+               answering to the still surviving English May-Day songs. Cp. Athenaeus, viii. 360 B.</note>
+               Let us betake us to the house of some man of great power,—</l>
             <l n="2">one who bears great power and is greatly prosperous always. </l>
             <l n="3">Open of yourselves, you doors, for mighty Wealth will enter in, </l>
             <l n="4">and with Wealth comes jolly Mirth </l>
             <l n="5">and gentle Peace. May all the corn-bins be full </l>
             <l n="6">and the mass of dough always overflow the kneading-trough. </l>
             <l n="7">Now (set before us) cheerful barley-pottage, full of sesame </l>
-            <gap reason="lost" rend=". . ."/>
+            <gap reason="lost" rend=". . ." />
             <l n="8" rend="indent">Your son’s wife, driving to this house with strong-hoofed
-                        mules, </l>
-            <l n="9">shall dismount from her carriage to greet you; <note resp="perseus">Lines 8 and 9 do not correspond well with the Greek.</note>
+               mules, </l>
+            <l n="9">shall dismount from her carriage to greet you; <note resp="perseus">Lines 8 and
+               9 do not correspond well with the Greek.</note>
             </l>
             <l n="10">may she be shod with golden shoes as she stands weaving at the loom.</l>
             <l n="11" rend="indent">I come, and I come yearly, like the swallow </l>
             <l n="12">that perches light-footed in the fore-part of your house. But quickly bring </l>
             <l n="13">
-               <gap reason="lost" rend=". . ."/>
+               <gap reason="lost" rend=". . ." />
             </l>
          </div>
          <div n="16" type="epigram">
-            <l n="1" rend="indent">If you will give us anything (well). But if not, we will not wait, </l>
+            <l n="1" rend="indent">If you will give us anything (well). But if not, we will not
+               wait, </l>
             <l n="2">for we are not come here to dwell with you.</l>
          </div>
          <div n="17" type="epigram">
@@ -237,7 +256,10 @@
             </sp>
             <sp>
                <speaker>FISHERMEN</speaker>
-               <l n="2" rend="indent">All that we caught we left behind, and all that we did not catch we carry home.<note resp="editor" xml:lang="eng">The lice which they caught in their clothes they left behind, but carried home in their clothes those which they could not catch.</note>
+               <l n="2" rend="indent">All that we caught we left behind, and all that we did not
+                  catch we carry home.<note resp="editor" xml:lang="eng">The lice which they caught
+                  in their clothes they left behind, but carried home in their clothes those which
+                  they could not catch.</note>
                </l>
             </sp>
             <sp>
