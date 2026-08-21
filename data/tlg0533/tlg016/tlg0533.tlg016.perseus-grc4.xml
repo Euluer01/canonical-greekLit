@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -23,7 +24,8 @@
             <date type="release" notBefore-custom="2002-07" cert="high">Perseus 3.0</date>
             <idno type="filename">tlg0533.tlg016.perseus-grc4.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0533.tlg016.perseus-grc4</idno>
          </publicationStmt>
@@ -38,10 +40,12 @@
                      <pubPlace>Berlin</pubPlace>
                      <date>1897</date>
                   </imprint>
-                  <!--<biblScope unit="volume"/>-->
+                  <!--<biblScope
+                  unit="volume"/>-->
                </monogr>
                <ref target="https://books.google.com/books?id=cFdJ4Zne23YC">Google Books</ref>
-               <ref target="https://archive.org/details/callimachihymni01moegoog/page/12/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/callimachihymni01moegoog/page/12/mode/2up">Internet
+                  Archive</ref>
                <!-- different pub year -->
             </biblStruct>
          </sourceDesc>
@@ -53,33 +57,41 @@
             </correction>
          </editorialDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState n="chunk" unit="section"/>
+            <refState unit="text" />
+            <refState n="chunk" unit="section" />
          </refsDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState n="chunk" unit="poem"/>
-            <refState unit="line"/>
+            <refState unit="text" />
+            <refState n="chunk" unit="poem" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl>
-            <refState unit="text"/>
-            <refState n="chunk" unit="poem"/>
-            <refState unit="line"/>
+            <refState unit="text" />
+            <refState n="chunk" unit="poem" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line.</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
@@ -89,11 +101,13 @@
          <change when="2023-11-15" who="Lisa Cerrato">EpiDoc and CTS Conversion</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
-         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged version</change>
-         <change when="2011-09-07" who="rsingh04">adding rend=displayNum or displayNumAndIdent to lb tags</change>
+         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged
+            version</change>
+         <change when="2011-09-07" who="rsingh04">adding rend=displayNum or displayNumAndIdent to lb
+            tags</change>
          <change when="2011-09-07" who="rsingh04">moved from Aristotle directory</change>
          <change when="2011-01-15" who="gcrane">alternate editions</change>
-         <change when="2011-01-01" who="gcrane">LB milestones instead of L containers  Q tags added</change>
+         <change when="2011-01-01" who="gcrane">LB milestones instead of L containers Q tags added</change>
          <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
          <change when="2009-05-27" who="rsingh04">added/fixed cvs log keyword</change>
          <change when="2002-07-23" who="AEM">Initial markup</change>
@@ -101,6 +115,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0533.tlg016.perseus-grc4">
+         <pb n="21" />
          <head rend="align(center)">εἰς Απόλλωνα</head>
          <l n="1">οἷον ὁ τὠπόλλωνος ἐσείσατο δάφνινος ὅρπηξ, </l>
          <l n="2">οἷα δʼ ὅλον τὸ μέλαθρον· ἑκὰς ἑκὰς ὅστις ἀλιτρός. </l>
@@ -126,7 +141,7 @@
          <l n="22">καὶ μὲν ὁ δακρυόεις ἀναβάλλεται ἄλγεα πέτρος, </l>
          <l n="23">ὅστις ἐνὶ Φρυγίηι διερὸς λίθος ἐστήρικται, </l>
          <l n="24">μάρμαρον ἀντὶ γυναικὸς ὀιζυρόν τι χανούσης.</l>
-         <pb n="22"/>
+         <pb n="22" />
          <l n="25">ἱὴ ἱὴ φθέγγεσθε· κακὸν μακάρεσσιν ἐρίζειν. </l>
          <l n="26">ὃς μάχεται μακάρεσσιν, ἐμῶι βασιλῆι μάχοιτο· </l>
          <l n="27">ὅστις ἐμῶι βασιλῆι, καὶ Ἀπόλλωνι μάχοιτο. </l>
@@ -149,7 +164,7 @@
          <l n="44">(Φοίβωι γὰρ καὶ τόξον ἐπιτρέπεται καὶ ἀοιδή),</l>
          <l n="45">κείνου δὲ θριαὶ καὶ μάντιες· ἐκ δέ νυ Φοίβου </l>
          <l n="46">ἰητροὶ δεδάασιν ἀνάβλησιν θανάτοιο.</l>
-         <milestone unit="card" n="47"/>
+         <milestone unit="card" n="47" />
          <l n="47" rend="align(indent)">Φοῖβον καὶ Νόμιον κικλήσκομεν ἐξέτι κείνου, </l>
          <l n="48">ἐξότʼ ἐπʼ Ἀμφρυσσῶι ζευγίτιδας ἔτρεφεν ἵππους </l>
          <l n="49">ἠιθέου ὑπʼ ἔρωτι κεκαυμένος Ἀδμήτοιο. </l>
@@ -161,7 +176,7 @@
          <l n="55" rend="align(indent)">Φοίβωι δʼ ἑσπόμενοι πόλιας διεμετρήσαντο </l>
          <l n="56">ἄνθρωποι· Φοῖβος γὰρ ἀεὶ πολίεσσι φιληδεῖ </l>
          <l n="57">κτιζομένηισʼ, αὐτὸς δὲ θεμείλια Φοῖβος ὑφαίνει.</l>
-         <pb n="23"/>
+         <pb n="23" />
          <l n="58">τετραέτης τὰ πρῶτα θεμείλια Φοῖβος ἔπηξε </l>
          <l n="59">καλῆι ἐν Ὀρτυγίηι περιηγέος ἐγγύθι λίμνης.</l>
          <l n="60">Ἄρτεμις ἀγρώσσουσα καρήατα συνεχὲς αἰγῶν </l>
@@ -195,7 +210,7 @@
          <l n="88">οἳ δʼ οὔπω πηγῆισι Κύρης ἐδύναντο πελάσσαι </l>
          <l n="89">Δωριέες, πυκινῆν δὲ νάπαις Ἄζιλιν ἔναιον. </l>
          <l n="90">τοὺς μὲν ἄναξ ἴδεν αὐτός, ἑῆι δʼ ἐπεδείξατο νύμφηι</l>
-         <pb n="24"/>
+         <pb n="24" />
          <l n="91">στὰς ἐπὶ Μυρτούσσης κερατώδεος, ἧχι λέοντα </l>
          <l n="92">Ὑψηὶς κατέπεφνε βοῶν σίνιν Εὐρυπύλοιο. </l>
          <l n="93">οὐ κείνου χορὸν εἶδε θεώτερον ἄλλον Ἀπόλλων, </l>
@@ -232,7 +247,7 @@
          <l n="112">
             <q rend="merge">πίδακος ἐξ ἱερῆς ὀλίγη λιβὰς ἄκρον ἄωτον</q>. </l>
          <l n="113">χαῖρς ἄναξ· ὁ δὲ Μῶμος, ἵνʼ ὁ Φθόνος, ἔνθα νέοιτο.</l>
-         <pb n="25"/>
+         <pb n="25" />
       </body>
    </text>
 </TEI>
