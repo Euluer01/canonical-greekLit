@@ -67,7 +67,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -103,7 +108,7 @@
             <p>Pheres</p>
          </note>
          <pb xml:id="p.117" />
-         <div type="episode">
+         <div type="episode" n="Prologue (1-76)">
             <sp>
                <speaker>Apollo</speaker>
                <l resp="perseus" rend="indent" n="1">Halls of Admetus, wherein I steeled my heart to
@@ -293,7 +298,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="77" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Parados (77-135)">
             <div type="anapests">
                <sp>
                   <speaker>First Semichorus</speaker>
@@ -432,7 +437,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="136" unit="card" />
-         <div type="episode">
+         <div type="episode" n="First Episode (136-212)">
             <sp>
                <speaker>Chorus</speaker>
                <l resp="perseus" rend="indent" n="136">Lo! from the house cometh a handmaid weeping;
@@ -557,7 +562,7 @@
             </sp>
          </div>
          <milestone resp="perseus" n="213" unit="card" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (213-237)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -593,6 +598,8 @@
                      passes ’neath the earth to Hades, lord below.</l>
                </sp>
             </div>
+         </div>
+         <div type="episode" n="Second Episode (238-434)">
             <pb xml:id="p.124" />
             <milestone resp="perseus" n="238" unit="card" />
             <div type="anapests">
@@ -691,207 +698,208 @@
                      is what I worship.</l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <pb xml:id="p.125" />
          <milestone resp="perseus" n="280" unit="card" />
-         <div type="episode">
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="280">Admetus, lo! thou seest how it is with me; to
-                  thee I fain would tell my wishes ere I die. Thee I set before myself, and instead
-                  of living have ensured thy life, and so I die, though I need not have died for
-                  thee, </l>
-               <l resp="perseus" n="285">but might have taken for my husband whom I would of the
-                  Thessalians, and have had a home blest with royal power; reft of thee, with my
-                  children orphans, I cared not to live, nor, though crowned with youth’s fair
-                  gifts, wherein I used to joy, did I grudge them. </l>
-               <l resp="perseus" n="290">Yet the father that begat thee, the mother that bare thee,
-                  gave thee up, though they had reached a time of life when to die were well, so
-                  saving thee their child, and winning noble death. For thou wert their only son,
-                  nor had they any hope, when thou wert dead, of other offspring. </l>
-               <l resp="perseus" n="295">And I should have lived and thou the remnant of our days,
-                  nor wouldst thou have wept thy wife’s loss, nor have had an orphan family. But
-                  some god hath caused these things to be even as they are. Enough! Remember thou
-                  the gratitude due to me for this; </l>
-               <l resp="perseus" n="300">yea, for I shall never ask thee for an adequate return, for
-                  naught is prized more highly than our life; but just is my request, as thou
-                  thyself must say, since thou no less than I dost love these children, if so be
-                  thou think’st aright. Be content to let them rule my house, </l>
-               <l resp="perseus" n="305">and do not marry a new wife to be a stepmother to these
-                  children, for she from jealousy, if so she be a woman worse than me, will stretch
-                  out her hand against the children of our union. Then do not this, I do beseech
-                  thee.<note resp="editor">Nauck suspects this line, and Hirzel thinks the two next
-                  are spurious.</note> For the stepmother that succeeds, hateth children </l>
-               <l resp="perseus" n="310">of a former match, cruel as the viper’s are her tender
-                  mercies. A son, ’tis true, hath in his sire a tower of strength, <del>to whom he
-                  speaks and has his answer back</del>;<note resp="editor">Paley encloses this line
-                  in brackets as suspicious. Nauck omits it in his text.</note> but thou, my
-                  daughter, how shall thy maidenhood be passed in honour? What shall thy experience <pb
-                     xml:id="p.126" /> be of thy father’s wife? </l>
-               <l resp="perseus" n="315">She may fasten on thee some foul report in thy youthful
-                  bloom, and frustrate thy marriage. Never shall thy mother lead thee to the bridal
-                  bed, nor by her presence in thy travail hearten thee, my child, when a mother’s
-                  kindness triumphs over all. </l>
-               <l resp="perseus" n="320">No, for I must die; and lo! this evil cometh to me not
-                  to-morrow nor yet on the third day of the month, but in a moment shall I be
-                  counted among the souls that are no more. Fare ye well, be happy; and thou,
-                  husband, canst boast thou hadst a peerless wife, </l>
-               <l resp="perseus" n="325">and you, children, that you had such an one for mother.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l resp="perseus" rend="indent" n="326">Take heart; I do not hesitate to answer for
-                  him; he will perform all this, unless his mind should go astray.</l>
-            </sp>
-            <milestone resp="perseus" n="328" unit="card" />
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="328">It shall be so, fear not, it shall; alive
-                  thou wert the only wife I had, and dead shalt thou, </l>
-               <l resp="perseus" n="330">none else, be called mine; no Thessalian maid shall ever
-                  take thy place and call me lord; not though she spring from lineage high nor
-                  though besides she be the fairest of her sex. Of children I have enough; god grant
-                  I may in them </l>
-               <l resp="perseus" n="335">be blessed! for in thee has it been otherwise. No year-long
-                  mourning will I keep for thee, but all my life through, lady: loathing the mother
-                  that bare me, and hating my father, for they were friends in word but not in deed. </l>
-               <l resp="perseus" n="340">But thou didst give thy dearest for my life and save it.
-                  May I not then mourn to lose a wife like thee? And I will put an end to revelry,
-                  to social gatherings o’er the wine, forego the festal crown and music which once
-                  reigned in my halls. </l>
-               <l resp="perseus" n="345">For nevermore will I touch the lyre nor lift my soul in
-                  song to the Libyan flute, for thou hast taken with thee all my joy in life. But in
-                  my bed thy figure shall be laid full length, by cunning artists fashioned; </l>
-               <l resp="perseus" n="350">thereon will I throw myself and, folding my arms about
-                  thee, call upon thy name, and think I hold my dear wife in my embrace, although I
-                  do not; chill comfort this, no doubt, but still I shall relieve my soul of its sad
-                  weight; and thou wilt come </l>
-               <l resp="perseus" n="355">to me in dreams and gladden <pb xml:id="p.127" /> me. For
-                  sweet it is to see our friends, come they when they will, e’en by night. <milestone
-                     unit="para" />Had I the tongue, the tuneful voice of Orpheus to charm Demeter’s
-                  daughter or her husband by my lay and bring thee back from Hades, </l>
-               <l resp="perseus" n="360">I had gone down, nor Pluto’s hound, nor Charon, ferryman of
-                  souls, whose hand is on the oar, had held me back, till to the light I had
-                  restored thee alive. At least do thou await me there, against the hour I die,
-                  prepare a home for me to be my true wife still. </l>
-               <l resp="perseus" n="365">For in this same cedar coffin I will bid these children lay
-                  me with thee and stretch my limbs by thine; for never even in death may I be
-                  severed from thee, alone found faithful of them all.</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l resp="perseus" rend="indent" n="369">Lo! I too will share with thee thy mourning
-                  for her, friend with friend; </l>
-               <l resp="perseus" n="370">for this is but her due.</l>
-            </sp>
-            <milestone resp="perseus" n="371" unit="card" />
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="371">My children, ye with your own ears have heard
-                  your father’s promise, that he will never wed another wife to set her over you,
-                  nor e’er dishonour me.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="374">Yea, so I promise now, and accomplish it I
-                  will.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="375">On these conditions receive the children from
-                  my hand.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="376">I receive them, dear pledges by a dear hapd
-                  given.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="377">Take thou my place and be a mother to these
-                  babes.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="378">Sore will be their need when they are reft of
-                  thee.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="379">O my children, I am passing to that world
-                  below, when my life was needed most.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="380">Ah me, what can I do bereft of thee?</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="381">Thy sorrow Time will soothe; ’tis the dead
-                  who are as naught.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="382">Take me, O take me, I beseech, with thee
-                  ’neath the earth.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="383">Enough that I in thy stead am dying.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="384">O Destiny! of what a wife art thou despoiling
-                  me!</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="385">Lo! the darkness deepens on my drooping eyes.</l>
-            </sp>
-            <pb xml:id="p.128" />
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="386">Lost indeed am I, if thou, dear wife, wilt
-                  really leave me.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="387">Thou mayst speak of me as naught, as one
-                  whose life is o’er.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="388">Lift up thy face, leave not thy children.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="389">’Tis not my own free will; O my babes,
-                  farewell!</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="390" part="I">Look, look on them but once.</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="390b" part="F">My end is come.</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="391" part="I">What mean’st thou? art leaving us?</l>
-            </sp>
-            <sp>
-               <speaker>Alcestis</speaker>
-               <l resp="perseus" rend="indent" n="391b" part="M">Farewell!</l>
-            </sp>
-            <sp>
-               <speaker>Admetus</speaker>
-               <l resp="perseus" rend="indent" n="391c" part="F">Lost! lost! woe is me!</l>
-            </sp>
-            <sp>
-               <speaker>Chorus</speaker>
-               <l resp="perseus" rend="indent" n="392">She is gone, the wife of Admetus is no more.</l>
-            </sp>
+            <div type="dialogue">
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="280">Admetus, lo! thou seest how it is with me; to
+                     thee I fain would tell my wishes ere I die. Thee I set before myself, and instead
+                     of living have ensured thy life, and so I die, though I need not have died for
+                     thee, </l>
+                  <l resp="perseus" n="285">but might have taken for my husband whom I would of the
+                     Thessalians, and have had a home blest with royal power; reft of thee, with my
+                     children orphans, I cared not to live, nor, though crowned with youth’s fair
+                     gifts, wherein I used to joy, did I grudge them. </l>
+                  <l resp="perseus" n="290">Yet the father that begat thee, the mother that bare thee,
+                     gave thee up, though they had reached a time of life when to die were well, so
+                     saving thee their child, and winning noble death. For thou wert their only son,
+                     nor had they any hope, when thou wert dead, of other offspring. </l>
+                  <l resp="perseus" n="295">And I should have lived and thou the remnant of our days,
+                     nor wouldst thou have wept thy wife’s loss, nor have had an orphan family. But
+                     some god hath caused these things to be even as they are. Enough! Remember thou
+                     the gratitude due to me for this; </l>
+                  <l resp="perseus" n="300">yea, for I shall never ask thee for an adequate return, for
+                     naught is prized more highly than our life; but just is my request, as thou
+                     thyself must say, since thou no less than I dost love these children, if so be
+                     thou think’st aright. Be content to let them rule my house, </l>
+                  <l resp="perseus" n="305">and do not marry a new wife to be a stepmother to these
+                     children, for she from jealousy, if so she be a woman worse than me, will stretch
+                     out her hand against the children of our union. Then do not this, I do beseech
+                     thee.<note resp="editor">Nauck suspects this line, and Hirzel thinks the two next
+                     are spurious.</note> For the stepmother that succeeds, hateth children </l>
+                  <l resp="perseus" n="310">of a former match, cruel as the viper’s are her tender
+                     mercies. A son, ’tis true, hath in his sire a tower of strength, <del>to whom he
+                     speaks and has his answer back</del>;<note resp="editor">Paley encloses this line
+                     in brackets as suspicious. Nauck omits it in his text.</note> but thou, my
+                     daughter, how shall thy maidenhood be passed in honour? What shall thy experience <pb
+                        xml:id="p.126" /> be of thy father’s wife? </l>
+                  <l resp="perseus" n="315">She may fasten on thee some foul report in thy youthful
+                     bloom, and frustrate thy marriage. Never shall thy mother lead thee to the bridal
+                     bed, nor by her presence in thy travail hearten thee, my child, when a mother’s
+                     kindness triumphs over all. </l>
+                  <l resp="perseus" n="320">No, for I must die; and lo! this evil cometh to me not
+                     to-morrow nor yet on the third day of the month, but in a moment shall I be
+                     counted among the souls that are no more. Fare ye well, be happy; and thou,
+                     husband, canst boast thou hadst a peerless wife, </l>
+                  <l resp="perseus" n="325">and you, children, that you had such an one for mother.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l resp="perseus" rend="indent" n="326">Take heart; I do not hesitate to answer for
+                     him; he will perform all this, unless his mind should go astray.</l>
+               </sp>
+               <milestone resp="perseus" n="328" unit="card" />
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="328">It shall be so, fear not, it shall; alive
+                     thou wert the only wife I had, and dead shalt thou, </l>
+                  <l resp="perseus" n="330">none else, be called mine; no Thessalian maid shall ever
+                     take thy place and call me lord; not though she spring from lineage high nor
+                     though besides she be the fairest of her sex. Of children I have enough; god grant
+                     I may in them </l>
+                  <l resp="perseus" n="335">be blessed! for in thee has it been otherwise. No year-long
+                     mourning will I keep for thee, but all my life through, lady: loathing the mother
+                     that bare me, and hating my father, for they were friends in word but not in deed. </l>
+                  <l resp="perseus" n="340">But thou didst give thy dearest for my life and save it.
+                     May I not then mourn to lose a wife like thee? And I will put an end to revelry,
+                     to social gatherings o’er the wine, forego the festal crown and music which once
+                     reigned in my halls. </l>
+                  <l resp="perseus" n="345">For nevermore will I touch the lyre nor lift my soul in
+                     song to the Libyan flute, for thou hast taken with thee all my joy in life. But in
+                     my bed thy figure shall be laid full length, by cunning artists fashioned; </l>
+                  <l resp="perseus" n="350">thereon will I throw myself and, folding my arms about
+                     thee, call upon thy name, and think I hold my dear wife in my embrace, although I
+                     do not; chill comfort this, no doubt, but still I shall relieve my soul of its sad
+                     weight; and thou wilt come </l>
+                  <l resp="perseus" n="355">to me in dreams and gladden <pb xml:id="p.127" /> me. For
+                     sweet it is to see our friends, come they when they will, e’en by night. <milestone
+                        unit="para" />Had I the tongue, the tuneful voice of Orpheus to charm Demeter’s
+                     daughter or her husband by my lay and bring thee back from Hades, </l>
+                  <l resp="perseus" n="360">I had gone down, nor Pluto’s hound, nor Charon, ferryman of
+                     souls, whose hand is on the oar, had held me back, till to the light I had
+                     restored thee alive. At least do thou await me there, against the hour I die,
+                     prepare a home for me to be my true wife still. </l>
+                  <l resp="perseus" n="365">For in this same cedar coffin I will bid these children lay
+                     me with thee and stretch my limbs by thine; for never even in death may I be
+                     severed from thee, alone found faithful of them all.</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l resp="perseus" rend="indent" n="369">Lo! I too will share with thee thy mourning
+                     for her, friend with friend; </l>
+                  <l resp="perseus" n="370">for this is but her due.</l>
+               </sp>
+               <milestone resp="perseus" n="371" unit="card" />
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="371">My children, ye with your own ears have heard
+                     your father’s promise, that he will never wed another wife to set her over you,
+                     nor e’er dishonour me.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="374">Yea, so I promise now, and accomplish it I
+                     will.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="375">On these conditions receive the children from
+                     my hand.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="376">I receive them, dear pledges by a dear hapd
+                     given.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="377">Take thou my place and be a mother to these
+                     babes.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="378">Sore will be their need when they are reft of
+                     thee.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="379">O my children, I am passing to that world
+                     below, when my life was needed most.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="380">Ah me, what can I do bereft of thee?</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="381">Thy sorrow Time will soothe; ’tis the dead
+                     who are as naught.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="382">Take me, O take me, I beseech, with thee
+                     ’neath the earth.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="383">Enough that I in thy stead am dying.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="384">O Destiny! of what a wife art thou despoiling
+                     me!</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="385">Lo! the darkness deepens on my drooping eyes.</l>
+               </sp>
+               <pb xml:id="p.128" />
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="386">Lost indeed am I, if thou, dear wife, wilt
+                     really leave me.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="387">Thou mayst speak of me as naught, as one
+                     whose life is o’er.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="388">Lift up thy face, leave not thy children.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="389">’Tis not my own free will; O my babes,
+                     farewell!</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="390" part="I">Look, look on them but once.</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="390b" part="F">My end is come.</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="391" part="I">What mean’st thou? art leaving us?</l>
+               </sp>
+               <sp>
+                  <speaker>Alcestis</speaker>
+                  <l resp="perseus" rend="indent" n="391b" part="M">Farewell!</l>
+               </sp>
+               <sp>
+                  <speaker>Admetus</speaker>
+                  <l resp="perseus" rend="indent" n="391c" part="F">Lost! lost! woe is me!</l>
+               </sp>
+               <sp>
+                  <speaker>Chorus</speaker>
+                  <l resp="perseus" rend="indent" n="392">She is gone, the wife of Admetus is no more.</l>
+               </sp>
+            </div>
             <milestone resp="perseus" n="393" unit="card" />
             <div n="1" type="strophe">
                <sp>
@@ -949,7 +957,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="435" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (435-475)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1007,7 +1015,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="476" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (476-567)">
             <sp>
                <speaker>Heracles</speaker>
                <l resp="perseus" rend="indent" n="476">Mine hosts, dwellers on this Phersean soil!
@@ -1328,7 +1336,7 @@
             </sp>
          </div>
          <milestone resp="perseus" n="568" unit="card" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (568-605)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1386,7 +1394,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="606" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (606-961)">
             <sp>
                <speaker>Admetus</speaker>
                <l resp="perseus" rend="indent" n="606">Men of Pherae, kindly gathered here, lo! even
@@ -1816,9 +1824,9 @@
                   </l>
                </sp>
             </div>
-         </div>
+         <!-- </div> -->
          <milestone resp="perseus" n="861" unit="card" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <div type="anapests">
                <sp>
                   <speaker>Admetus</speaker>
@@ -2012,6 +2020,8 @@
                      and fortune ruined.</l>
                </sp>
             </div>
+         </div>
+         <div type="choral" n="Fourth Stasimon (962-1005)">
             <milestone resp="perseus" n="962" unit="card" />
             <div n="1" type="strophe">
                <sp>
@@ -2071,7 +2081,7 @@
             </div>
          </div>
          <milestone resp="perseus" n="1006" unit="card" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1006-1163)">
             <sp>
                <speaker>Chorus</speaker>
                <l resp="perseus" rend="indent" n="1006">But see, Admetus! yonder, I believe, comes
