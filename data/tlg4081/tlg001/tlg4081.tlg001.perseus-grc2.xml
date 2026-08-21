@@ -71,7 +71,7 @@
             the line breaks are intended for display</p>
          <refsDecl xml:id="CTS" n="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure use="@n" match="./pb" delim=":" unit="page" n="chunk" />
+               <citeStructure use="@xml:id" match="./pb" delim=":" unit="page" n="chunk" />
                <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
