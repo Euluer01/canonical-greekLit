@@ -64,7 +64,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -122,7 +121,7 @@
             <p>Theseus</p>
             <p>Chorus of Old Men of Thebes</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-106)">
             <milestone resp="perseus" unit="card" n="1" />
             <stage rend="italic">At the entrance of Heracles’ house in Thebes, before the altar of
                Zeus.</stage>
@@ -248,7 +247,7 @@
                   despair is the mark of a coward.</l>
             </sp>
          </div>
-         <div type="choral">
+         <div type="choral" n="Parados (107-137)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -287,7 +286,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="138" />
-         <div type="episode">
+         <div type="episode" n="First Episode (138-347)">
             <sp>
                <speaker>Chorus</speaker>
                <l rend="indent" resp="perseus" n="138">But I see Lycus, the ruler of this land,
@@ -517,7 +516,7 @@
                </l>
             </sp>
          </div>
-         <div type="choral">
+         <div type="choral" n="First Stasimon (348-441)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -661,7 +660,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="442" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (442-636)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus Leader</speaker>
@@ -1056,7 +1055,7 @@
                </sp>
             </div>
          </div>
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (637-700)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1124,7 +1123,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="701" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (701-762)">
             <sp>
                <speaker>Lycus</speaker>
                <l rend="indent" resp="perseus" n="701">Amphitryon, it is high time you came forth
@@ -1208,8 +1207,8 @@
                   penalty of his misdeeds affords pleasurable feelings. </l>
                <stage rend="italic">Exit Amphitryon.</stage>
             </sp>
-         </div>
-         <div type="choral">
+         <!-- </div> -->
+         <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1258,6 +1257,8 @@
                      I desire.</l>
                </sp>
             </div>
+         </div>
+         <div type="choral" n="Third Stasimon (763-814)">
             <milestone resp="perseus" unit="card" n="763" />
             <div n="2" type="strophe">
                <sp>
@@ -1320,7 +1321,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="815" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (815-1015)">
             <stage rend="italic">Catching sight of the spectre of Madness.</stage>
             <sp>
                <speaker>Chorus</speaker>
@@ -1408,8 +1409,8 @@
                      honored course; while I unseen will steal into the halls of Heracles.</l>
                </sp>
             </div>
-         </div>
-         <div type="choral">
+         <!-- </div> -->
+         <!-- <div type="choral"> -->
             <div type="lyric">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1503,8 +1504,8 @@
                      once you did on Enceladus.</l>
                </sp>
             </div>
-         </div>
-         <div type="episode">
+         <!-- </div>
+         <div type="episode"> -->
             <div type="lyric">
                <sp>
                   <speaker>Messenger</speaker>
@@ -1658,7 +1659,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1016" />
-         <div type="choral">
+         <div type="choral" n="Choral Ode (1016-1041)">
             <div type="lyric">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1682,16 +1683,19 @@
                      with many knots about the body of Heracles, and lashed to the stone columns of
                      his house.</l>
                </sp>
-            </div>
+            <!-- </div> -->
+         <!-- </div>
+         <div type="episode"> -->
+               <sp>
+                  <speaker>Chorus Leader</speaker>
+                  <l rend="indent" resp="perseus" n="1039">But he, the aged father, like mother-bird
+                     wailing </l>
+                  <l resp="perseus" n="1040">her unfledged brood, comes hastening here with halting
+                     steps on his bitter journey.</l>
+               </sp>
+           </div>
          </div>
-         <div type="episode">
-            <sp>
-               <speaker>Chorus Leader</speaker>
-               <l rend="indent" resp="perseus" n="1039">But he, the aged father, like mother-bird
-                  wailing </l>
-               <l resp="perseus" n="1040">her unfledged brood, comes hastening here with halting
-                  steps on his bitter journey.</l>
-            </sp>
+         <div type="episode" n="Fifth Episode (1042-1428)">
             <stage rend="italic">The palace doors opening disclose Heracles lying asleep, bound to a
                shattered column.</stage>
             <div type="lyric">
