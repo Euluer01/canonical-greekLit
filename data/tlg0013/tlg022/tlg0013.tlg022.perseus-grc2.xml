@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -40,39 +41,46 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/hesiodhomerichym00hesiuoft/hesiodhomerichym00hesiuoft/page/448/mode/2up?">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/hesiodhomerichym00hesiuoft/hesiodhomerichym00hesiuoft/page/448/mode/2up?">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n=\'$1\'])">
+            <cRefPattern n="line" matchPattern="(\\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n=\'$1\'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl>
-            <refState unit="line"/>
+            <refState unit="line" />
          </refsDecl>
          <!--<refsDecl>
 	<refState n="chunk" unit="card"/>
       </refsDecl>-->
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="./milestone[@unit='card']" delim=":" unit="card"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="1988-01-01" who="Bill Merrill">Text keyboarded in the Philippines.  Basic SGML tagging by Bill Merrill</change>
-         <change when="1993-08-01" who="EM">Go over text, check cardbreaks, and change tags to be more TEI conformant.</change>
+         <change when="1988-01-01" who="Bill Merrill">Text keyboarded in the Philippines. Basic SGML
+            tagging by Bill Merrill</change>
+         <change when="1993-08-01" who="EM">Go over text, check cardbreaks, and change tags to be
+            more TEI conformant.</change>
          <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
          <change when="2014-08-01" who="Stella Dee">edited markup</change>
          <change when="2015-12-11" who="Lisa Cerrato">fixing titles and headers</change>
@@ -82,15 +90,15 @@
    <text xml:lang="grc">
       <body xml:base="urn:cts:greekLit:tlg0013.tlg022.perseus-grc2">
          <head>Εἲς Ποσειδῶνα</head>
-         <milestone unit="card" n="1" ed="P"/>
+         <milestone unit="card" n="1" ed="P" />
          <l n="1">
-            <milestone unit="Para" ed="P"/>ἀμφὶ Ποσειδάωνα, μέγαν θεόν, ἄρχομʼ ἀείδειν, </l>
+            <milestone unit="Para" ed="P" />ἀμφὶ Ποσειδάωνα, μέγαν θεόν, ἄρχομʼ ἀείδειν, </l>
          <l n="2">γαίης κινητῆρα καὶ ἀτρυγέτοιο θαλάσσης, </l>
          <l n="3">πόντιον, ὅσθʼ Ἑλικῶνα καὶ εὐρείας ἔχει Αἰγάς. </l>
          <l n="4">διχθά τοι, Ἐννοσίγαιε, θεοὶ τιμὴν ἐδάσαντο, </l>
          <l n="5">ἵππων τε δμητῆρʼ ἔμεναι σωτῆρά τε νηῶν. </l>
          <l n="6">
-            <milestone unit="Para" ed="P"/>χαῖρε, Ποσείδαον γαιήοχε, κυανοχαῖτα, </l>
+            <milestone unit="Para" ed="P" />χαῖρε, Ποσείδαον γαιήοχε, κυανοχαῖτα, </l>
          <l n="7">καί, μάκαρ, εὐμενὲς ἦτορ ἔχων πλώουσιν ἄρηγε. </l>
       </body>
    </text>
