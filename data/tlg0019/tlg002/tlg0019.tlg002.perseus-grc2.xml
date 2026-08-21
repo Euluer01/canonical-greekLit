@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_drama.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
@@ -15,16 +16,16 @@
                <name>William Merrill</name>
                <name>Elli Mylonas</name>
                <name>David Smith</name>
-               <name/>
+               <name />
             </respStmt>
             <funder n="org:AnnCPB">The Annenberg CPB/Project</funder>
             <respStmt>
                <persName>Aurélien Berra</persName>
-               <orgName/>
+               <orgName />
                <resp>Digital editor</resp>
             </respStmt>
          </titleStmt>
-         <extent/>
+         <extent />
          <publicationStmt>
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
@@ -32,7 +33,8 @@
             <date type="release" when="1996">Perseus 2.0</date>
             <idno type="filename">tlg0019.tlg002.perseus-grc2.xml</idno>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a
+                  Creative Commons Attribution-ShareAlike 4.0 International License</licence>
             </availability>
             <idno type="CTS">urn:cts:greekLit:tlg0019.tlg002.perseus-grc2</idno>
          </publicationStmt>
@@ -50,56 +52,71 @@
                   </imprint>
                   <biblScope unit="volume">1</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/aristophaniscomo01arisuoft/page/n71/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/aristophaniscomo01arisuoft/page/n71/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line.</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
+               <citeStructure use="@n" match=".//milestone[@unit='card']" delim=":" unit="card"
+                  n="chunk" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#drama-line"/>
+            <catRef scheme="#perseus-genre" target="#drama-line" />
          </textClass>
          <langUsage>
             <language ident="grc">Greek</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="2023-03-03" who="Lisa Cerrato">EpiDoc and CTS updates: header compliance and line numbering verification</change>
-         <change who="Aurélien Berra" when="2018-05-12">Convert to TEI P5 and EpiDoc. Test full compliance with CapiTainS CTS via HookTest and revise file: harmonise language @ident to grc and lat, de-duplicate lines where needed adding letters to numbers in @n, fix Latin content in some bibl tags erroneously in Greek, update EpiDoc schema metadata.</change>
-         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory </change>
+         <change when="2023-03-03" who="Lisa Cerrato">EpiDoc and CTS updates: header compliance and
+            line numbering verification</change>
+         <change who="Aurélien Berra" when="2018-05-12">Convert to TEI P5 and EpiDoc. Test full
+            compliance with CapiTainS CTS via HookTest and revise file: harmonise language @ident to
+            grc and lat, de-duplicate lines where needed adding letters to numbers in @n, fix Latin
+            content in some bibl tags erroneously in Greek, update EpiDoc schema metadata.</change>
+         <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing
+            greco-roman collection texts to a Work directory </change>
          <change when="2013-06-13" who="gcrane">tagging now should be compatible with CTS</change>
          <change when="2011-09-07" who="rsingh04">adding rend=displayNum to lb tags</change>
          <change when="2011-01-13" who="gcrane">more refinements making these files SDL compatible</change>
-         <change when="2010-12-25" who="gcrane">base file -- main difference is that this uses LB milestones rather than L tags </change>
-         <change when="2009-10-08" who="rsingh04">began reorganizing texts module by collection. created separate work directory in texts module to keep hopper files separate from in progress files</change>
+         <change when="2010-12-25" who="gcrane">base file -- main difference is that this uses LB
+            milestones rather than L tags </change>
+         <change when="2009-10-08" who="rsingh04">began reorganizing texts module by collection.
+            created separate work directory in texts module to keep hopper files separate from in
+            progress files</change>
          <change when="2005-08-01" who="packel">removed stray item tags</change>
          <change when="2005-07-25" who="packel">Converted to XML</change>
          <change when="2004-04-21" who="mimno">added card 1s</change>
-         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions;
+            minor cleanup (esp. character encodings and typos.)</change>
          <change when="2000-03-06" who="amahoney">remove spurious headers, which mess up short toc</change>
          <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
          <change when="2000-02-01" who="amahoney">bring up to P3</change>
          <change when="1992-10-01" who="Bill Merrill">Replaced LYRIC Meter= tag with SPEECH Meter=</change>
          <change when="1992-09" who="Bill Merrill">Refined tagging</change>
-         <change when="1988" who="EM, Scott Ettinger and Roger Travis">Text scanned at U. Chicago in 1988. Basic SGML tagging by Lowell Bowditch</change>
+         <change when="1988" who="EM, Scott Ettinger and Roger Travis">Text scanned at U. Chicago in
+            1988. Basic SGML tagging by Lowell Bowditch</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:base="urn:cts:greekLit:tlg0019.tlg002.perseus-grc2">
          <div type="prologue">
-            <l resp="perseus" style="hidden" n="0"/>
-            <milestone n="1" unit="card"/>
+            <l resp="perseus" style="hidden" n="0" />
+            <milestone n="1" unit="card" />
             <sp>
                <speaker>Δημοσθένης</speaker>
                <l n="1">ἰατταταιὰξ τῶν κακῶν, ἰατταταῖ.</l>
@@ -247,7 +264,7 @@
                <l n="38">ἐπίδηλον ἡμῖν τοῖς προσώποισιν ποιεῖν,</l>
                <l n="39">ἢν τοῖς ἔπεσι χαίρωσι καὶ τοῖς πράγμασιν.</l>
             </sp>
-            <milestone ed="p" n="40" unit="card"/>
+            <milestone ed="p" n="40" unit="card" />
             <sp>
                <speaker>Δημοσθένης</speaker>
                <l n="40">λέγοιμʼ ἂν ἤδη. νῷν γάρ ἐστι δεσπότης</l>
@@ -316,7 +333,7 @@
                <l n="83">βέλτιστον ἡμῖν αἷμα ταύρειον πιεῖν.</l>
                <l n="84">ὁ Θεμιστοκλέους γὰρ θάνατος αἱρετώτερος.</l>
             </sp>
-            <milestone ed="p" n="85" unit="card"/>
+            <milestone ed="p" n="85" unit="card" />
             <sp>
                <speaker>Δημοσθένης</speaker>
                <l n="85">μὰ Δίʼ ἀλλʼ ἄκρατον οἶνον ἀγαθοῦ δαίμονος.</l>
@@ -461,7 +478,7 @@
                <l n="129">ὡς πρῶτα μὲν στυππειοπώλης γίγνεται,</l>
                <l n="130">ὃς πρῶτος ἕξει τῆς πόλεως τὰ πράγματα.</l>
             </sp>
-            <milestone ed="p" n="131" unit="card"/>
+            <milestone ed="p" n="131" unit="card" />
             <sp>
                <speaker>Νικίας</speaker>
                <l n="131">εἷς οὑτοσὶ πώλης. τί τοὐντεῦθεν; λέγε.</l>
@@ -614,7 +631,7 @@
                <l n="173">ἔτι νῦν τὸν ὀφθαλμὸν παράβαλλʼ ἐς Καρίαν</l>
                <l n="174">τὸν δεξιόν, τὸν δʼ ἕτερον ἐς Καρχηδόνα.</l>
             </sp>
-            <milestone ed="p" n="175" unit="card"/>
+            <milestone ed="p" n="175" unit="card" />
             <sp>
                <speaker>Ἀλλαντοπώλης</speaker>
                <l n="175">εὐδαιμονήσω δʼ εἰ διαστραφήσομαι;</l>
@@ -716,7 +733,7 @@
                <l n="211">τὰ μὲν λόγιʼ αἰκάλλει με· θαυμάζω δʼ ὅπως</l>
                <l n="212">τὸν δῆμον οἷός τʼ ἐπιτροπεύειν εἴμʼ ἐγώ.</l>
             </sp>
-            <milestone ed="p" n="213" unit="card"/>
+            <milestone ed="p" n="213" unit="card" />
             <sp>
                <speaker>Δημοσθένης</speaker>
                <l n="213">φαυλότατον ἔργον· ταῦθʼ ἅπερ ποιεῖς ποίει·</l>
@@ -766,7 +783,7 @@
                <l n="241">ἀλλαντοπῶλα μὴ προδῷς τὰ πράγματα.</l>
             </sp>
          </div>
-         <milestone ed="p" n="242" unit="card"/>
+         <milestone ed="p" n="242" unit="card" />
          <div type="parodos">
             <div type="trochees">
                <sp>
@@ -852,7 +869,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="284" unit="card"/>
+         <milestone ed="p" n="284" unit="card" />
          <div type="agon">
             <div type="proagon">
                <sp>
@@ -920,7 +937,7 @@
                   <l n="302" rend="align(indent)">ἔχοντα κοιλίας.</l>
                </sp>
             </div>
-            <milestone ed="p" n="303" unit="card"/>
+            <milestone ed="p" n="303" unit="card" />
             <div n="1" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -932,7 +949,7 @@
                   <l n="313">κἀπὸ τῶν πετρῶν ἄνωθεν τοὺς φόρους θυννοσκοπῶν.</l>
                </sp>
             </div>
-            <milestone ed="p" n="314" unit="card"/>
+            <milestone ed="p" n="314" unit="card" />
             <div type="trochees">
                <sp>
                   <speaker>Κλέων</speaker>
@@ -952,7 +969,7 @@
                   <l n="321">πρὶν γὰρ εἶναι Περγασῆσιν ἔνεον ἐν ταῖς ἐμβάσιν.</l>
                </sp>
             </div>
-            <milestone ed="p" n="323" unit="card"/>
+            <milestone ed="p" n="323" unit="card" />
             <div n="2" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -967,7 +984,7 @@
                   <l n="332">καὶ κοβαλικεύμασιν.</l>
                </sp>
             </div>
-            <milestone ed="p" n="333" unit="card"/>
+            <milestone ed="p" n="333" unit="card" />
             <div type="katakeleusmos">
                <sp>
                   <speaker>Χορός</speaker>
@@ -975,7 +992,7 @@
                   <l n="334">νῦν δεῖξον ὡς οὐδὲν λέγει τὸ σωφρόνως τραφῆναι.</l>
                </sp>
             </div>
-            <milestone ed="p" n="335" unit="card"/>
+            <milestone ed="p" n="335" unit="card" />
             <div type="epirrheme">
                <sp>
                   <speaker>Ἀλλαντοπώλης</speaker>
@@ -1087,7 +1104,7 @@
                   <l n="366">νὴ τὸν Ποσειδῶ κἀμέ τἄρʼ, ἤνπερ γε τοῦτον ἕλκῃς.</l>
                </sp>
             </div>
-            <milestone ed="p" n="367" unit="card"/>
+            <milestone ed="p" n="367" unit="card" />
             <div type="pnigos">
                <sp>
                   <speaker>Κλέων</speaker>
@@ -1132,19 +1149,20 @@
                   <l n="381" rend="align(indent)">τὸν πρωκτὸν εἰ χαλαζᾷ.</l>
                </sp>
             </div>
-            <milestone ed="p" n="384" unit="card"/>
+            <milestone ed="p" n="384" unit="card" />
             <div n="1" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
                   <l n="384">ἦν ἄρα πυρός γʼ ἕτερα θερμότερα καὶ λόγων</l>
                   <l n="385">ἐν πόλει τῶν ἀναιδῶν ἀναιδέστεροι· καὶ τὸ πρᾶγμʼ</l>
-                  <l n="386">ἦν ἄρʼ οὐ φαῦλον ὧδʼ <gap reason="lost" rend=" . . . "/> ἀλλʼ ἔπιθι καὶ στρόβει,</l>
+                  <l n="386">ἦν ἄρʼ οὐ φαῦλον ὧδʼ <gap reason="lost" rend=" . . . " /> ἀλλʼ ἔπιθι
+                     καὶ στρόβει,</l>
                   <l n="387">μηδὲν ὀλίγον ποίει. νῦν γὰρ ἔχεται μέσος·</l>
                   <l n="388">ὡς ἐὰν νυνὶ μαλάξῃς αὐτὸν ἐν τῇ προσβολῇ,</l>
                   <l n="390">δειλὸν εὑρήσεις· ἐγὼ γὰρ τοὺς τρόπους ἐπίσταμαι.</l>
                </sp>
             </div>
-            <milestone ed="p" n="391" unit="card"/>
+            <milestone ed="p" n="391" unit="card" />
             <div type="trochees">
                <sp>
                   <speaker>Ἀλλαντοπώλης</speaker>
@@ -1159,7 +1177,7 @@
                   <l n="396">καὶ τὸ τοῦ δήμου πρόσωπον μακκοᾷ καθήμενον.</l>
                </sp>
             </div>
-            <milestone ed="p" n="398" unit="card"/>
+            <milestone ed="p" n="398" unit="card" />
             <div n="2" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1176,7 +1194,7 @@
                   </l>
                </sp>
             </div>
-            <milestone ed="p" n="407" unit="line"/>
+            <milestone ed="p" n="407" unit="line" />
             <div type="antikatakeleusmos">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1184,7 +1202,7 @@
                   <l n="408">ἡσθέντʼ ἰηπαιωνίσαι καὶ βακχέβακχον ᾆσαι.</l>
                </sp>
             </div>
-            <milestone ed="p" n="409" unit="card"/>
+            <milestone ed="p" n="409" unit="card" />
             <div type="antepirrheme">
                <sp>
                   <speaker>Κλέων</speaker>
@@ -1269,7 +1287,7 @@
                   <l n="440">ἁνὴρ ἂν ἡδέως λάβοι. τοὺς τερθρίους παρίει·</l>
                </sp>
             </div>
-            <milestone ed="p" n="441" unit="card"/>
+            <milestone ed="p" n="441" unit="card" />
             <div type="pnigos">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1277,7 +1295,7 @@
                </sp>
                <sp>
                   <speaker>Κλέων</speaker>
-                  <l n="442">φεύξει γραφὰς <gap reason="lost" rend=" . . . "/>
+                  <l n="442">φεύξει γραφὰς <gap reason="lost" rend=" . . . " />
                   </l>
                   <l n="442a">ἑκατονταλάντους τέτταρας.</l>
                </sp>
@@ -1329,7 +1347,7 @@
                   <l n="456">χὤπως κολᾷ τὸν ἄνδρα.</l>
                </sp>
             </div>
-            <milestone ed="p" n="457" unit="card"/>
+            <milestone ed="p" n="457" unit="card" />
             <div type="sphragis">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1340,7 +1358,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="461" unit="card"/>
+         <milestone ed="p" n="461" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Κλέων</speaker>
@@ -1434,7 +1452,7 @@
                <l n="497">χὤπως τὰ κάλλαἰ ἀποφαγὼν ἥξεις πάλιν.</l>
             </sp>
          </div>
-         <milestone ed="p" n="498" unit="card"/>
+         <milestone ed="p" n="498" unit="card" />
          <div type="parabasis">
             <div type="prelude">
                <sp>
@@ -1450,7 +1468,7 @@
                   <l n="506">πειραθέντες καθʼ ἑαυτούς.</l>
                </sp>
             </div>
-            <milestone ed="p" n="507" unit="card"/>
+            <milestone ed="p" n="507" unit="card" />
             <div type="parabasis">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1497,7 +1515,7 @@
                   <l n="546">αἴρεσθʼ αὐτῷ πολὺ τὸ ῥόθιον, παραπέμψατʼ ἐφʼ ἕνδεκα κώπαις</l>
                </sp>
             </div>
-            <milestone ed="p" n="547" unit="card"/>
+            <milestone ed="p" n="547" unit="card" />
             <div type="pnigos">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1507,7 +1525,7 @@
                   <l n="550" rend="align(indent)">φαιδρὸς λάμποντι μετώπῳ. </l>
                </sp>
             </div>
-            <milestone ed="p" n="551" unit="card"/>
+            <milestone ed="p" n="551" unit="card" />
             <div rend="align(indent)" type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1526,7 +1544,7 @@
                   <l n="564" rend="align(indent)">πρὸς τὸ παρεστός.</l>
                </sp>
             </div>
-            <milestone ed="p" n="565" unit="card"/>
+            <milestone ed="p" n="565" unit="card" />
             <div type="epirrheme">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1548,7 +1566,7 @@
                   <l n="580">μὴ φθονεῖθʼ ἡμῖν κομῶσι μηδʼ ἀπεστλεγγισμένοις.</l>
                </sp>
             </div>
-            <milestone ed="p" n="581" unit="card"/>
+            <milestone ed="p" n="581" unit="card" />
             <div type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1568,7 +1586,7 @@
                   <l n="594" rend="align(indent)">εἴπερ ποτὲ καὶ νῦν.</l>
                </sp>
             </div>
-            <milestone ed="p" n="595" unit="card"/>
+            <milestone ed="p" n="595" unit="card" />
             <div type="antepirrheme">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1598,7 +1616,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="611" unit="card"/>
+         <milestone ed="p" n="611" unit="card" />
          <div type="lyric-scene">
             <sp>
                <speaker>Χορός</speaker>
@@ -1611,7 +1629,7 @@
                <speaker>Ἀλλαντοπώλης</speaker>
                <l n="615">τί δʼ ἄλλο γʼ εἰ μὴ Νικόβουλος ἐγενόμην;</l>
             </sp>
-            <milestone ed="p" n="616" unit="card"/>
+            <milestone ed="p" n="616" unit="card" />
             <div type="strophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1626,7 +1644,7 @@
                   <l n="623a" rend="align(indent)">ἡδόμεσθά σοι.</l>
                </sp>
             </div>
-            <milestone ed="p" n="624" unit="card"/>
+            <milestone ed="p" n="624" unit="card" />
             <div type="iambics">
                <sp>
                   <speaker>Ἀλλαντοπώλης</speaker>
@@ -1684,7 +1702,7 @@
                      <q rend="merge">εὐαγγέλια θύειν ἑκατὸν βοῦς τῇ θεῷ.</q>
                   </l>
                   <l n="657">ἐπένευσεν εἰς ἐκεῖνον ἡ βουλὴ πάλιν.</l>
-                  <milestone ed="p" n="658" unit="card"/>
+                  <milestone ed="p" n="658" unit="card" />
                   <l n="658">κἄγωγʼ ὅτε δὴ γʼνων τοῖς βολίτοις ἡττημένος,</l>
                   <l n="659">διακοσίαισι βουσὶν ὑπερηκόντισα,</l>
                   <l n="660">τῇ δʼ Ἀγροτέρᾳ κατὰ χιλιῶν παρῄνεσα</l>
@@ -1721,7 +1739,7 @@
                   <l n="682">ὀβολοῦ κοριάννοις ἀναλαβὼν ἐλήλυθα.</l>
                </sp>
             </div>
-            <milestone ed="p" n="683" unit="card"/>
+            <milestone ed="p" n="683" unit="card" />
             <div type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1736,7 +1754,7 @@
                   <l n="690a">ἐπίστασαι πάλαι.</l>
                </sp>
             </div>
-            <milestone ed="p" n="691" unit="card"/>
+            <milestone ed="p" n="691" unit="card" />
             <div type="iambics">
                <sp>
                   <speaker>Ἀλλαντοπώλης</speaker>
@@ -1850,7 +1868,7 @@
                   <l n="726b" part="F">ὦ Δημίδιον <add>ὦ</add> φίλτατον</l>
                   <l n="727">ἔξελθʼ, ἵνʼ εἰδῇς οἷα περιυβρίζομαι.</l>
                </sp>
-               <milestone ed="p" n="728" unit="card"/>
+               <milestone ed="p" n="728" unit="card" />
                <sp>
                   <speaker>Δῆμος</speaker>
                   <l n="728">τίνες οἱ βοῶντες; οὐκ ἄπιτʼ ἀπὸ τῆς θύρας;</l>
@@ -1927,7 +1945,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="756" unit="card"/>
+         <milestone ed="p" n="756" unit="card" />
          <div type="agon">
             <div type="strophe">
                <sp>
@@ -1939,7 +1957,7 @@
                   <l n="760">πρὸς ταῦθʼ ὅπως ἔξει πολὺς καὶ λαμπρὸς ἐς τὸν ἄνδρα.</l>
                </sp>
             </div>
-            <milestone ed="p" n="761" unit="card"/>
+            <milestone ed="p" n="761" unit="card" />
             <div type="katakeleusmos">
                <sp>
                   <speaker>Χορός</speaker>
@@ -1947,7 +1965,7 @@
                   <l n="762">τοὺς δελφῖνας μετεωρίζου καὶ τὴν ἄκατον παραβάλλου.</l>
                </sp>
             </div>
-            <milestone ed="p" n="763" unit="card"/>
+            <milestone ed="p" n="763" unit="card" />
             <div type="epirrheme">
                <sp>
                   <speaker>Κλέων</speaker>
@@ -1997,7 +2015,7 @@
                   <speaker>Ἀλλαντοπώλης</speaker>
                   <l n="789">καὶ σὺ γὰρ αὐτὸν πολὺ μικροτέροις τούτων δελεάσμασιν εἷλες.</l>
                </sp>
-               <milestone ed="p" n="790" unit="card"/>
+               <milestone ed="p" n="790" unit="card" />
                <sp>
                   <speaker>Κλέων</speaker>
                   <l n="790">καὶ μὴν εἴ πού τις ἀνὴρ ἐφάνη τῷ δήμῳ μᾶλλον ἀμύνων</l>
@@ -2061,7 +2079,7 @@
                   <l n="823">μιαρώτατος, ὦ Δημακίδιον, καὶ πλεῖστα πανοῦργα δεδρακώς,</l>
                </sp>
             </div>
-            <milestone ed="p" n="824" unit="card"/>
+            <milestone ed="p" n="824" unit="card" />
             <div type="pnigos">
                <sp>
                   <speaker>Ἀλλαντοπώλης</speaker>
@@ -2085,7 +2103,7 @@
                   <l n="835" rend="align(indent)">πλεῖν ἢ μνᾶς τετταράκοντα.</l>
                </sp>
             </div>
-            <milestone ed="p" n="836" unit="card"/>
+            <milestone ed="p" n="836" unit="card" />
             <div type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2096,7 +2114,7 @@
                   <l n="840">ᾗ πολλὰ χρήματʼ ἐργάσει σείων τε καὶ ταράττων.</l>
                </sp>
             </div>
-            <milestone ed="p" n="841" unit="card"/>
+            <milestone ed="p" n="841" unit="card" />
             <div type="antikatakeleusmos">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2104,7 +2122,7 @@
                   <l n="842">κατεργάσει γὰρ ῥᾳδίως πλευρὰς ἔχων τοιαύτας.</l>
                </sp>
             </div>
-            <milestone ed="p" n="843" unit="card"/>
+            <milestone ed="p" n="843" unit="card" />
             <div type="antepirrheme">
                <sp>
                   <speaker>Κλέων</speaker>
@@ -2184,7 +2202,7 @@
                   <l n="885">καίτοι σοφὸν κἀκεῖνʼ ὁ Πειραιεύς· ἔμοιγε μέντοι</l>
                   <l n="886">οὐ μεῖζον εἶναι φαίνετʼ ἐξεύρημα τοῦ χιτῶνος.</l>
                </sp>
-               <milestone ed="p" n="887" unit="card"/>
+               <milestone ed="p" n="887" unit="card" />
                <sp>
                   <speaker>Κλέων</speaker>
                   <l n="887">οἴμοι τάλας οἵοις πιθηκισμοῖς με περιελαύνεις.</l>
@@ -2263,7 +2281,7 @@
                   <l n="910">ἀπομυξάμενος ὦ Δῆμέ μου πρὸς τὴν κεφαλὴν ἀποψῶ.</l>
                </sp>
             </div>
-            <milestone ed="p" n="911" unit="card"/>
+            <milestone ed="p" n="911" unit="card" />
             <div type="antipnigos">
                <sp>
                   <speaker>Ἀλλαντοπώλης</speaker>
@@ -2322,7 +2340,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="942" unit="card"/>
+         <milestone ed="p" n="942" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Δῆμος</speaker>
@@ -2428,7 +2446,7 @@
                <l n="972b" part="F">ἰδοὺ νὴ τὸν Δίʼ· οὐδὲν κωλύει.</l>
             </sp>
          </div>
-         <milestone ed="p" n="973" unit="card"/>
+         <milestone ed="p" n="973" unit="card" />
          <div type="choral">
             <div type="strophe">
                <sp>
@@ -2447,7 +2465,7 @@
                   <l n="984" rend="align(indent)">δοῖδυξ οὐδὲ τορύνη.</l>
                </sp>
             </div>
-            <milestone ed="p" n="985" unit="card"/>
+            <milestone ed="p" n="985" unit="card" />
             <div rend="align(indent)" type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -2466,7 +2484,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="997" unit="card"/>
+         <milestone ed="p" n="997" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Κλέων</speaker>
@@ -2539,7 +2557,7 @@
                <l n="1012">καὶ τὸν περὶ ἐμοῦ ʼκεῖνον ᾧπερ ἥδομαι,</l>
                <l n="1013">ὡς ἐν νεφέλαισιν αἰετὸς γενήσομαι.</l>
             </sp>
-            <milestone ed="p" n="1014" unit="card"/>
+            <milestone ed="p" n="1014" unit="card" />
             <sp>
                <speaker>Κλέων</speaker>
                <l n="1014">ἄκουε δή νυν καὶ πρόσεχε τὸν νοῦν ἐμοί.</l>
@@ -2646,7 +2664,7 @@
                <speaker>Δῆμος</speaker>
                <l n="1059b" part="F">τί τοῦτο λέγει, πρὸ Πύλοιο;</l>
             </sp>
-            <milestone ed="p" n="1060" unit="card"/>
+            <milestone ed="p" n="1060" unit="card" />
             <sp>
                <speaker>Ἀλλαντοπώλης</speaker>
                <l n="1060">τὰς πυέλους φησὶν καταλήψεσθʼ ἐν βαλανείῳ.</l>
@@ -2786,7 +2804,7 @@
                <l n="1110b" part="F">οὐ δῆτʼ ἀλλʼ ἐγώ.</l>
             </sp>
          </div>
-         <milestone ed="p" n="1111" unit="card"/>
+         <milestone ed="p" n="1111" unit="card" />
          <div type="choral">
             <div n="1" type="strophe">
                <sp>
@@ -2849,7 +2867,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="1151" unit="card"/>
+         <milestone ed="p" n="1151" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Κλέων</speaker>
@@ -2992,7 +3010,7 @@
                <speaker>Κλέων</speaker>
                <l n="1190">λαβέ νυν πλακοῦντος πίονος παρʼ ἐμοῦ τόμον.</l>
             </sp>
-            <milestone ed="p" n="1191" unit="card"/>
+            <milestone ed="p" n="1191" unit="card" />
             <sp>
                <speaker>Ἀλλαντοπώλης</speaker>
                <l n="1191">παρʼ ἐμοῦ δʼ ὅλον γε τὸν πλακοῦντα τουτονί.</l>
@@ -3123,7 +3141,7 @@
                <l n="1229">οὐ δῆτʼ, ἐπεί μοι χρησμός ἐστι Πυθικὸς</l>
                <l n="1230">φράζων ὑφʼ οὗ †δεήσει μʼ† ἡττᾶσθαι μόνου.</l>
             </sp>
-            <milestone ed="p" n="1231" unit="card"/>
+            <milestone ed="p" n="1231" unit="card" />
             <sp>
                <speaker>Ἀλλαντοπώλης</speaker>
                <l n="1231">τοὐμόν γε φράζων ὄνομα καὶ λίαν σαφῶς.</l>
@@ -3208,7 +3226,7 @@
                <l n="1263">ἰδεῖν ἀμείνω τῇ Κεχηναίων πόλει.</l>
             </sp>
          </div>
-         <milestone ed="p" n="1264" unit="card"/>
+         <milestone ed="p" n="1264" unit="card" />
          <div type="parabasis">
             <div type="strophe">
                <sp>
@@ -3221,7 +3239,7 @@
                   <l n="1273">σᾶς ἁπτόμενος φαρέτρας Πυθῶνι δίᾳ μὴ κακῶς πένεσθαι.</l>
                </sp>
             </div>
-            <milestone ed="p" n="1274" unit="card"/>
+            <milestone ed="p" n="1274" unit="card" />
             <div type="epirrheme">
                <sp>
                   <speaker>Χορός</speaker>
@@ -3243,7 +3261,7 @@
                   <l n="1289">οὔ ποτʼ ἐκ ταὐτοῦ μεθʼ ἡμῶν πίεται ποτηρίου.</l>
                </sp>
             </div>
-            <milestone ed="p" n="1290" unit="card"/>
+            <milestone ed="p" n="1290" unit="card" />
             <div type="antistrophe">
                <sp>
                   <speaker>Χορός</speaker>
@@ -3257,7 +3275,7 @@
                   </l>
                </sp>
             </div>
-            <milestone ed="p" n="1300" unit="card"/>
+            <milestone ed="p" n="1300" unit="card" />
             <div type="antepirrheme">
                <sp>
                   <speaker>Χορός</speaker>
@@ -3304,7 +3322,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="1316" unit="card"/>
+         <milestone ed="p" n="1316" unit="card" />
          <div type="choral">
             <div type="anapests">
                <sp>
@@ -3358,7 +3376,7 @@
                </sp>
             </div>
          </div>
-         <milestone ed="p" n="1335" unit="card"/>
+         <milestone ed="p" n="1335" unit="card" />
          <div type="episode">
             <sp>
                <speaker>Δῆμος</speaker>
@@ -3434,7 +3452,7 @@
                </l>
                <l n="1361">τοῦτον τί δράσεις, εἰπέ, τὸν ξυνήγορον;</l>
             </sp>
-            <milestone ed="p" n="1362" unit="card"/>
+            <milestone ed="p" n="1362" unit="card" />
             <sp>
                <speaker>Δῆμος</speaker>
                <l n="1362">ἄρας μετέωρον ἐς τὸ βάραθρον ἐμβαλῶ,</l>
@@ -3460,7 +3478,7 @@
                <l n="1370">οὐδεὶς κατὰ σπουδὰς μετεγγραφήσεται,</l>
                <l n="1371">ἀλλʼ ὥσπερ ἦν τὸ πρῶτον ἐγγεγράψεται.</l>
             </sp>
-            <milestone ed="p" n="1372" unit="card"/>
+            <milestone ed="p" n="1372" unit="card" />
             <sp>
                <speaker>Ἀλλαντοπώλης</speaker>
                <l n="1372">τοῦτʼ ἔδακε τὸν πόρπακα τὸν Κλεωνύμου.</l>
@@ -3514,7 +3532,7 @@
                <l n="1388">φήσεις γʼ, ἐπειδὰν τὰς τριακοντούτιδας</l>
                <l n="1389">σπονδὰς παραδῶ σοι. δεῦρʼ ἴθʼ αἱ Σπονδαὶ ταχύ.</l>
             </sp>
-            <milestone ed="p" n="1390" unit="card"/>
+            <milestone ed="p" n="1390" unit="card" />
             <sp>
                <speaker>Δῆμος</speaker>
                <l n="1390">ὦ Ζεῦ πολυτίμηθʼ ὡς καλαί· πρὸς τῶν θεῶν,</l>
@@ -3551,7 +3569,7 @@
                <l n="1407">κἀκεῖνον ἐκφερέτω τις ὡς ἐπὶ τὴν τέχνην,</l>
                <l n="1408">ἵνʼ ἴδωσιν αὐτὸν οἷς ἐλωβᾶθʼ οἱ ξένοι.</l>
                <l n="1409">
-                  <gap reason="lost" rend=" . . . . . . . "/>
+                  <gap reason="lost" rend=" . . . . . . . " />
                </l>
             </sp>
          </div>
