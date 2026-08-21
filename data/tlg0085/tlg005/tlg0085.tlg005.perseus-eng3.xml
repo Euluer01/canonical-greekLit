@@ -58,9 +58,10 @@
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure use="@n" match="./milestone[@unit='card']" delim=":" unit="card"
+               <citeStructure unit="scene" delim=":"
+                  match="div[@type]"
+                  use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -125,9 +126,8 @@
    </teiHeader>
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0085.tlg005.perseus-eng3">
-         <milestone unit="episode" />
-         <stage rend="italic">Upon the roof of the palace of Agamemnon at <placeName
-               key="tgn,7010720">Argos</placeName>
+         <milestone unit="episode" n="Prologue (1-39)"/>
+         <stage rend="italic">Upon the roof of the palace of Agamemnon at <placeName key="tgn,7010720">Argos</placeName>
          </stage>
          <milestone unit="card" n="1" />
          <sp>
