@@ -70,9 +70,8 @@
             <refsDecl n="CTS" xml:id="CTS">
                 <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
-                        <citeStructure unit="line" delim="." match="div[@type='card']" use="@n"
+                        <citeStructure unit="card" delim="." match="div[@type='card']" use="@n"
                             n="chunk">
-                            <citeStructure unit="line" match=".//milestone[@unit='line']" use="@n" />
                         </citeStructure>
                     </citeStructure>
                 </citeStructure>
