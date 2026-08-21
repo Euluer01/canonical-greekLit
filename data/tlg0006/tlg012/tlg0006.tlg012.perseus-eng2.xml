@@ -69,7 +69,6 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-
             </citeStructure>
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS-card">
@@ -135,7 +134,7 @@
             <p>Clytemnestra</p>
             <p>Dioskouroi</p>
          </note>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-111)">
             <milestone resp="perseus" unit="card" n="1" />
             <stage rend="italic">On the borders of <placeName key="tgn,7002739">Argolis</placeName>.</stage>
             <sp>
@@ -258,7 +257,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="112" />
-         <div type="choral">
+         <div type="choral" n="Parados (112-212)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Electra</speaker>
@@ -376,7 +375,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="213" />
-         <div type="episode">
+         <div type="episode" n="First Episode (213-431)">
             <sp>
                <speaker>Chorus Leader</speaker>
                <l rend="indent" resp="perseus" n="213">Helen, your mother’s sister, is the cause of
@@ -936,7 +935,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="432" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (432-486)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1007,7 +1006,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="487" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (487-698)">
             <sp>
                <speaker>Old man</speaker>
                <l rend="indent" resp="perseus" n="487">Where, where is my young queen and mistress,
@@ -1644,7 +1643,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="699" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (699-746)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1704,7 +1703,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="747" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (747-858)">
             <sp>
                <speaker>Chorus Leader</speaker>
                <l rend="indent" resp="perseus" n="747">Oh, oh! My friends, did you hear a noise—or
@@ -1890,7 +1889,7 @@
             </sp>
          </div>
          <milestone resp="perseus" unit="card" n="859" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (859-879)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1924,7 +1923,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="880" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (880-1146)">
             <sp>
                <speaker>Electra</speaker>
                <l rend="indent" resp="perseus" n="880">O glorious victor, Orestes, son of a father
@@ -2415,7 +2414,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1147" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (1147-1232)">
             <div type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2592,7 +2591,7 @@
             </div>
          </div>
          <milestone resp="perseus" unit="card" n="1233" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1233-1359)">
             <div type="anapests">
                <sp>
                   <speaker>Chorus Leader</speaker>
