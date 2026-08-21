@@ -67,7 +67,12 @@
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -261,7 +266,7 @@
                </person>
             </listPerson>
          </l>
-         <div type="episode">
+         <div type="episode" n="Prologue (1-39)">
             <sp>
                <speaker>WARDER.</speaker>
                <l n="1">The gods I ask deliverance from these labours,</l>
@@ -306,6 +311,8 @@
                <l n="38">To those who know: to who know not — I’m blankness.
 </l>
             </sp>
+         </div>
+         <div type="choral" n="Parados (40-257)">
             <milestone unit="card" n="40" />
             <sp>
                <speaker>CHOROS.</speaker>
@@ -382,9 +389,9 @@
                <l n="102">From soul the insatiate care,</l>
                <l n="103">The sorrow at my breast, devouring there!</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="104" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="104">Empowered am I to sing</l>
@@ -708,7 +715,7 @@
             </sp>
          </div>
          <milestone unit="card" n="258" />
-         <div type="episode">
+         <div type="episode" n="First Episode (258-354)">
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="258">I am come, reverencing power in thee,</l>
@@ -873,6 +880,8 @@
                <l n="354">For, grace that must be paid has crowned our labours.
 </l>
             </sp>
+         </div>
+         <div type="choral" n="First Stasimon (355-487)">
             <milestone unit="card" n="355" />
             <sp>
                <l n="355">O Zeus the king, and friendly Night</l>
@@ -889,9 +898,9 @@
                <l n="365">That neither wide o’ the white</l>
                <l n="366">Nor o’er the stars the foolish dart should light.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="367" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="367">The stroke of Zeus — they have it, as men say!</l>
@@ -1091,7 +1100,7 @@
             </sp>
          </div>
          <milestone unit="card" n="488" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (488-680)">
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="488">Soon shall we know — of these light-bearing torches,</l>
@@ -1404,7 +1413,7 @@
             </sp>
          </div>
          <milestone unit="card" n="681" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (681-781)">
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="681">Who may he have been that named thus wholly with exactitude —</l>
@@ -1538,6 +1547,8 @@
                <l n="780">And to its end directs each thing begun.
 </l>
             </sp>
+         </div>
+         <div type="episode" n="Third Episode (782-974)">
             <milestone unit="card" n="782" />
             <sp>
                <l n="782">Approach then, my monarch, of <placeName key="tgn,7002329">Troia</placeName>
@@ -1565,9 +1576,9 @@
                <l n="801">And in time shalt thou know, by inquiry instructed,</l>
                <l n="802">Who of citizens justly, and who not to purpose, the city conducted.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="810" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <sp>
                <speaker>AGAMEMNON.</speaker>
                <l n="810">First, indeed, <placeName key="tgn,perseus,Argos">Argos</placeName>, and
@@ -1806,7 +1817,7 @@
             </sp>
          </div>
          <milestone unit="card" n="975" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (975-1034)">
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="975">Wherefore to me, this fear —</l>
@@ -1872,7 +1883,7 @@
             </sp>
          </div>
          <milestone unit="card" n="1035" />
-         <div type="episode">
+         <div type="episode" n="Fourth Episode (1035-1330)">
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1035">Take thyself in, thou too — I say, Kassandra!</l>
@@ -1935,9 +1946,9 @@
                <l n="1070">Come, O unhappy one, this car vacating,</l>
                <l n="1071">Yielding to this necessity, prove yoke’s use!</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1072" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1072">Otototoi, Gods, Earth, —</l>
@@ -2185,9 +2196,9 @@
                <l n="1177">And of all this the end</l>
                <l n="1177a">I am without resource to apprehend</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1178" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <sp>
                <speaker>KASSANDRA.</speaker>
                <l n="1178">Well then, the oracle from veils no longer</l>
@@ -2481,6 +2492,8 @@
 </l>
             </sp>
             <milestone unit="card" n="1331" />
+         </div>
+         <div type="choral" n="Choral Anapests (1331-1342)">
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1331">Alas for mortal matters! Happy-fortuned, —</l>
@@ -2505,6 +2518,8 @@
                <l n="1342">Daimon to have been born — who would not, hearing thus?
 </l>
             </sp>
+         </div>
+         <div type="episode" n="Fifth Episode (1343-1576)">
             <milestone unit="card" n="1343" />
             <sp>
                <speaker>AGAMEMNON.</speaker>
@@ -2632,9 +2647,9 @@
                <l n="1405">My husband, dead, the work of the right hand here,</l>
                <l n="1406">Ay, of a just artificer: so things are.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1407" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1407">What evil, O woman, food or drink, earth-bred</l>
@@ -2682,9 +2697,9 @@
                <l n="1429">Yet still, bereft of friends, thy fate</l>
                <l n="1430">Is — blow with blow to expiate!</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1431" />
-         <div type="episode">
+         <!-- <div type="episode"> -->
             <sp>
                <speaker>KLUTAIMNESTRA.</speaker>
                <l n="1431">And this thou hearest — of my oaths, just warrant!</l>
@@ -2706,9 +2721,9 @@
                <l n="1446">She lies, — to him, a sweetheart: me she brought to —</l>
                <l n="1447">My bed’s by-nicety — the whet of dalliance.</l>
             </sp>
-         </div>
+         <!-- </div> -->
          <milestone unit="card" n="1448" />
-         <div type="choral">
+         <!-- <div type="choral"> -->
             <sp>
                <speaker>CHOROS.</speaker>
                <l n="1448">Alas, that some</l>
@@ -2952,7 +2967,7 @@
             </sp>
          </div>
          <milestone unit="card" n="1577" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1577-1673)">
             <sp>
                <speaker>AIGISTHOS.</speaker>
                <l n="1577">O light propitious of day justice-bringing!</l>
