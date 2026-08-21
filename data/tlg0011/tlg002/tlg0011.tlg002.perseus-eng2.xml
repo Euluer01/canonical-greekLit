@@ -61,11 +61,17 @@
             </refsDecl>-->
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="scene" delim=":"
+               <citeStructure delim=":"
                   match="div[@type]"
                   use="concat((.//l)[1]/@n, '-', (.//l)[last()]/@n)"
+                  unit="scene"
                   n="chunk" />
-               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
+            </citeStructure>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS-card">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match=".//milestone[@unit='card']"
+                  unit="card" delim=":" use="@n" n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
@@ -118,7 +124,7 @@
    </teiHeader>
    <text xml:lang="eng">
       <body xml:base="urn:cts:greekLit:tlg0011.tlg002.perseus-eng2">
-         <div type="episode">
+         <div type="episode" n="Prologue (1-99)">
             <milestone unit="card" n="1" />
             <sp>
                <speaker>Antigone</speaker>
@@ -317,7 +323,7 @@
             </sp>
          </div>
          <milestone unit="card" n="100" />
-         <div type="choral">
+         <div type="choral" n="Parados (100-161)">
             <div n="1" type="strophe">
                <stage rend="italic">Enter the Chorus on the right.</stage>
                <sp>
@@ -423,7 +429,7 @@
             </div>
          </div>
          <milestone unit="card" n="162" />
-         <div type="episode">
+         <div type="episode" n="First Episode (162-331)">
             <stage rend="italic">Enter Creon, with two attendants.</stage>
             <sp>
                <speaker>Creon</speaker>
@@ -707,7 +713,7 @@
             </sp>
          </div>
          <milestone unit="card" n="332" />
-         <div type="choral">
+         <div type="choral" n="First Stasimon (332-383)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -784,7 +790,7 @@
             </div>
          </div>
          <milestone unit="card" n="384" />
-         <div type="episode">
+         <div type="episode" n="Second Episode (384-581)">
             <sp>
                <speaker>Guard</speaker>
                <l n="384" resp="p">Here is she, the one who did the deed. </l>
@@ -1240,7 +1246,7 @@
             </div>
          </div>
          <milestone unit="card" n="583" />
-         <div type="choral">
+         <div type="choral" n="Second Stasimon (582-630)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1315,7 +1321,7 @@
             </div>
          </div>
          <milestone unit="card" n="631" />
-         <div type="episode">
+         <div type="episode" n="Third Episode (631-780)">
             <sp>
                <speaker>Creon</speaker>
                <l n="631" resp="p">We will soon know better than seers could tell us.—My son, can it
@@ -1627,7 +1633,7 @@
             </sp>
          </div>
          <milestone unit="card" n="781" />
-         <div type="choral">
+         <div type="choral" n="Third Stasimon (781-805)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1669,7 +1675,7 @@
             </div>
          </div>
          <milestone unit="card" n="806" />
-         <div type="choral">
+         <div type="episode" n="Fourth Episode (806-943)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Antigone</speaker>
@@ -1787,70 +1793,74 @@
                      sun. But for my fate no tear is shed, no friend moans in sorrow.</l>
                </sp>
             </div>
-         </div>
-         <milestone unit="card" n="883" />
-         <div type="episode">
-            <stage rend="italic">Enter Creon.</stage>
-            <sp>
-               <speaker>Creon</speaker>
-               <l n="883" resp="p">Do you not know that dirges and
-                  wailing before death would never be given up, if it were allowed to make
-                  them freely? </l>
-               <l n="885" resp="p">Take her away—now!
-                  And when you have enshrouded her, as I proclaimed, in her covered tomb,
-                  leave her alone, deserted—let her decide whether she wishes to die or to
-                  live entombed in such a home. It makes no difference, since our hands
-                  are clean so far as regards this girl. </l>
-               <l n="890" resp="p">But no matter what, she will be stripped of her home
-                  here above.</l>
-            </sp>
-            <sp>
-               <speaker>Antigone</speaker>
-               <l n="891" resp="p">Tomb, bridal-chamber, deep-dug eternal prison where I go to find
-                  my own,
-                  whom in the greatest numbers destruction has seized and Persephone has
-                  welcomed among the dead! </l>
-               <l n="895" resp="p">Last of
-                  them all and in by far the most shameful circumstances, I will descend,
-                  even before the fated term of my life is spent. But I cherish strong
-                  hopes that I will arrive welcome to my father, and pleasant to you,
-                  Mother, and welcome, dear brother, to you. </l>
-               <l n="900" resp="p">For, when each of you died, with my own hands I washed and
-                  dressed you and poured drink-offerings at your graves. But now, Polyneices, it is
-                  for tending your corpse that I win such reward as this. <del>And yet I honored you
-                  rightly, as the wise understand.</del>
-               </l>
-               <l n="905" resp="p">
-                  <del>Never, if I had been a mother of children, or if a
-                     husband had been rotting after death, would I have taken that burden
-                     upon myself in violation of the citizens’ will. For the sake of what
-                     law, you ask, do I say that? A husband lost, another might have been
-                     found, </del>
-               </l>
-               <l n="910" resp="p">
-                  <del>and if
-                     bereft of a child, there could be a second from some other man. But when
-                     father and mother are hidden in Hades, no brother could ever bloom for
-                     me again. Such was the law whereby I held you first in honor, but for
-                     that Creon judged me guilty of wrongdoing</del>
-               </l>
-               <l n="915" resp="p">
-                  <del>and of dreadful outrage, dear brother! And now he leads
-                     me thus in his hands’ strong grasp, when I have enjoyed no marriage bed
-                     or bridal song and have not received any portion of marriage or the
-                     nurture of children. But deserted by friends, </del>
-               </l>
-               <l n="920" resp="p">
-                  <del>in misery I go living to the hollow graves of the
-                     dead.</del> What law of the gods have I transgressed? Why should I look to the
-                  gods anymore? What ally should I call out to, when by my reverence I have earned a
-                  name for irreverence? </l>
-               <l n="925" resp="p">Well, then, if these events please the gods, once I have suffered
-                  my
-                  doom I will come to know my guilt. But if the guilt lies with my judges,
-                  I could wish for them no greater evils than they inflict unjustly on
-                  me.</l>
-            </sp>
+            <!-- </div> -->
+            <milestone unit="card" n="883" />
+            <div type="dialogue">
+               <stage rend="italic">Enter Creon.</stage>
+               <sp>
+                  <speaker>Creon</speaker>
+                  <l n="883" resp="p">Do you not know that dirges and
+                     wailing before death would never be given up, if it were allowed to make
+                     them freely? </l>
+                  <l n="885" resp="p">Take her away—now!
+                     And when you have enshrouded her, as I proclaimed, in her covered tomb,
+                     leave her alone, deserted—let her decide whether she wishes to die or to
+                     live entombed in such a home. It makes no difference, since our hands
+                     are clean so far as regards this girl. </l>
+                  <l n="890" resp="p">But no matter what, she will be stripped of her home
+                     here above.</l>
+               </sp>
+               <sp>
+                  <speaker>Antigone</speaker>
+                  <l n="891" resp="p">Tomb, bridal-chamber, deep-dug eternal prison where I go to
+                     find
+                     my own,
+                     whom in the greatest numbers destruction has seized and Persephone has
+                     welcomed among the dead! </l>
+                  <l n="895" resp="p">Last of
+                     them all and in by far the most shameful circumstances, I will descend,
+                     even before the fated term of my life is spent. But I cherish strong
+                     hopes that I will arrive welcome to my father, and pleasant to you,
+                     Mother, and welcome, dear brother, to you. </l>
+                  <l n="900" resp="p">For, when each of you died, with my own hands I washed and
+                     dressed you and poured drink-offerings at your graves. But now, Polyneices, it
+                     is for tending your corpse that I win such reward as this. <del>And yet I
+                     honored you
+                        rightly, as the wise understand.</del>
+                  </l>
+                  <l n="905" resp="p">
+                     <del>Never, if I had been a mother of children, or if a
+                        husband had been rotting after death, would I have taken that burden
+                        upon myself in violation of the citizens’ will. For the sake of what
+                        law, you ask, do I say that? A husband lost, another might have been
+                        found, </del>
+                  </l>
+                  <l n="910" resp="p">
+                     <del>and if
+                        bereft of a child, there could be a second from some other man. But when
+                        father and mother are hidden in Hades, no brother could ever bloom for
+                        me again. Such was the law whereby I held you first in honor, but for
+                        that Creon judged me guilty of wrongdoing</del>
+                  </l>
+                  <l n="915" resp="p">
+                     <del>and of dreadful outrage, dear brother! And now he leads
+                        me thus in his hands’ strong grasp, when I have enjoyed no marriage bed
+                        or bridal song and have not received any portion of marriage or the
+                        nurture of children. But deserted by friends, </del>
+                  </l>
+                  <l n="920" resp="p">
+                     <del>in misery I go living to the hollow graves of the
+                        dead.</del> What law of the gods have I transgressed? Why should I look to
+                     the gods anymore? What ally should I call out to, when by my reverence I have
+                     earned a name for irreverence? </l>
+                  <l n="925" resp="p">Well, then, if these events please the gods, once I have
+                     suffered
+                     my
+                     doom I will come to know my guilt. But if the guilt lies with my judges,
+                     I could wish for them no greater evils than they inflict unjustly on
+                     me.</l>
+               </sp>
+            </div>
             <milestone unit="card" n="929" />
             <div type="anapests">
                <sp>
@@ -1888,7 +1898,7 @@
             </div>
          </div>
          <milestone unit="card" n="944" />
-         <div type="choral">
+         <div type="choral" n="Fourth Stasimon (944-987)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -1950,7 +1960,7 @@
             </div>
          </div>
          <milestone unit="card" n="988" />
-         <div type="episode">
+         <div type="episode" n="Fifth Episode (988-1114)">
             <stage rend="italic">Enter Teiresias, led by a boy, on the spectators’ right.</stage>
             <sp>
                <speaker>Teiresias</speaker>
@@ -2198,7 +2208,7 @@
             </sp>
          </div>
          <milestone unit="card" n="1115" />
-         <div type="choral">
+         <div type="choral" n="Fifth Stasimon (1115-1154)">
             <div n="1" type="strophe">
                <sp>
                   <speaker>Chorus</speaker>
@@ -2253,7 +2263,7 @@
             </div>
          </div>
          <milestone unit="card" n="1155" />
-         <div type="episode">
+         <div type="episode" n="Exodus (1155-1353)">
             <stage rend="italic">Enter Messenger, on the spectators’ left.</stage>
             <sp>
                <speaker>Messenger</speaker>
@@ -2433,9 +2443,9 @@
                   <l n="1260" resp="p">was the madness of this error.</l>
                </sp>
             </div>
-         </div>
-         <milestone unit="card" n="1261" />
-         <div type="choral">
+            <!-- </div> -->
+            <milestone unit="card" n="1261" />
+            <!-- <div type="choral"> -->
             <div n="1" type="strophe">
                <sp>
                   <speaker>Creon</speaker>
@@ -2620,9 +2630,9 @@
                      a crushing fate has leapt upon my head.</l>
                </sp>
             </div>
-         </div>
-         <milestone unit="card" n="1347" />
-         <div type="episode">
+            <!-- </div> -->
+            <milestone unit="card" n="1347" />
+            <!-- <div type="episode"> -->
             <div type="anapests">
                <stage rend="italic">As Creon is being conducted into the house, the Chorus Leader
                   speaks the
